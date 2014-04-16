@@ -1,0 +1,12 @@
+{
+  "name": "UnknownMorphProcessor",
+  "version": "1.0",
+  "author": [
+    {
+      "name": "박상원",
+      "email": "hudoni@gmail.com"
+    }
+  ],
+  "description": "형태소 분석 단계 결과 미등록어로 처리된 형태소에 대해서 비서술성명사(ncn) 태그를 부착한다. 미등록어를 처리에는 다양한 접근 방법이 있지만 가장 단순한 방법으로 처리하고 있다.",
+  "type": "MorphemeProcessor" 
+}

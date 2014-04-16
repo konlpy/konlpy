@@ -1,0 +1,143 @@
+@title	KIBSTAGS
+@version	v1.001
+@copyright	(C) kaist, 1995-2010
+@author	김재훈, 최기선, 김덕봉, 최병진, 한영균, 남영준, 박석문, 김진규, 김진수, 이춘택
+@date	1996.7.11
+@editor	이운재, 박상원
+
+TAG	sp		// 쉼표
+TAG	sf		// 마침표
+TAG	sl		// 여는 따옴표 및 묶음표
+TAG	sr		// 닫는 따옴표 및 묶음표
+TAG	sd		// 이음표
+TAG	se		// 줄임표
+TAG	su		// 단위 기호
+TAG	sy		// 기타 기호
+
+TAG	f		// 외국어
+
+TAG	ncpa	// 동작명사 
+TAG	ncps	// 상태명사 
+TAG	ncn		// 비서술성 명사 
+TAG	ncr		// 비서술성 직위 명사
+TAG	nqpa	// 고유명사 -- 성
+TAG	nqpb	// 고유명사 -- 이름
+TAG	nqpc	// 고유명사 -- 성 + 이름
+TAG	nqq		// 고유명사 -- 기타 - 일반
+TAG	nbu		// 단위성 의존명사 
+TAG	nbn		// 비단위성 의존명사 
+TAG	nbs		// 비단위성 의존명사 -- 하다 붙는 것
+TAG	npp		// 인칭대명사 
+TAG	npd		// 지시대명사 
+TAG	nnc		// 양수사 
+TAG	nno		// 서수사 
+TAG	nq		// 사임 추가
+
+TAG	ii		// 감탄사
+
+TAG	pvd		// 지시 동사 
+TAG	pvg		// 일반 동사 
+TAG	pad		// 지시형용사 
+TAG	paa		// 성상형용사 
+TAG	px		// 보조용언 
+
+TAG	mmd		// 지시관형사 
+TAG	mma		// 성상관형사 
+TAG	mad		// 지시부사 
+TAG	maj		// 접속부사 
+TAG	mag		// 일반부사 
+
+TAG	jcs		// 주격조사 
+TAG	jco		// 목적격조사 
+TAG	jcc		// 보격조사 
+TAG	jcm		// 관형격조사 
+TAG	jcv		// 호격조사 
+TAG	jca		// 부사격조사 
+TAG	jcj		// 접속격조사 
+TAG	jct		// 공동격조사 
+TAG	jcr		// 인용격조사 
+TAG	jxc		// 통용보조사 
+TAG	jxf		// 종결보조사 
+TAG	jp		// 서술격조사 
+
+TAG	ep		// 선어말어미 
+TAG	ecc		// 대등적 연결어미 
+TAG	ecs		// 종속적 연결어미 
+TAG	ecx		// 보조적 연결어미 
+TAG	etn		// 명사형 어미 
+TAG	etm		// 관형사형 어미 
+TAG	ef		// 종결어미 
+
+TAG	xp		// 접두사 
+TAG	xsnu	// 명사 파생 접미사 -- 단위 뒤
+TAG	xsnca	// 명사 파생 접미사 -- 일반명사 뒤--동작명사화
+TAG	xsncc	// 명사 파생 접미사 -- 일반명사 뒤
+TAG	xsna	// 명사 파생 접미사 -- 동작성 뒤
+TAG	xsns	// 명사 파생 접미사 -- 상태성 뒤
+TAG	xsnp	// 명사 파생 접미사 -- 인명1,3 뒤
+TAG	xsnx	// 명사 파생 접미사 -- 모든 명사 뒤
+TAG	xsvv	// 동사 파생 접미사 -- 동사 뒤
+TAG	xsva	// 동사 파생 접미사 -- 동작명사 뒤
+TAG	xsvn	// 동사 파생 접미사 -- 일반명사 뒤
+TAG	xsms	// 형용사 파생 접미사 -- 상태명사 뒤
+TAG	xsmn	// 형용사 파생 접미사 -- 일반명사 뒤
+TAG	xsam	// 부사 파생 접미사  -- 형용사 뒤
+TAG	xsas	// 부사 파생 접미사 -- 상태명사 뒤
+TAG	iwg		// for start tag -- wjlee
+TAG	unk		// for unkown tag -- wjlee
+TAG	xsv		// 사임 추가
+TAG	xsn
+TAG	xsm
+TAG	xsa
+
+TSET	s	sp sf sl sr sd se su sy
+TSET	nq	nqpa nqpb nqpc nqq
+TSET	nqp	nqpa nqpb nqpc
+TSET	n	ncpa ncps ncn ncr nq nbu nbn nbs npp npd nnc nno
+TSET	nc	ncpa ncps ncn ncr
+TSET	ncp	ncpa ncps
+TSET	nb	nbu nbn nbs
+TSET	np	npp npd
+TSET	nn	nnc nno
+TSET	p	pvd pvg pad paa px
+TSET	pv	pvd pvg
+TSET	pa	pad paa
+TSET	m	mmd mma mad maj mag
+TSET	mm	mmd mma
+TSET	ma	mad maj mag
+TSET	j	jcs jco jcc jcm jcv jca jcj jct jcr jp jxc jxf
+TSET	jc	jcs jco jcc jcm jcv jca jcj jct jcr
+TSET	jx	jxc jxf
+TSET	e	ep ecc ecs ecx etn etm ef
+TSET	ec	ecc ecs ecx
+TSET	et	etn etm
+TSET	xsnc	xsnca xsncc
+TSET	xsn	xsnu xsnc xsna xsns xsnp xsnx
+TSET	xsv	xsvv xsva xsvn
+TSET	xsm	xsms xsmn
+TSET	xsa	xsam xsas
+TSET	xs	xsn xsv xsm xsa
+TSET	x	xp xs
+TSET	all	s f n ii p m j e x unk
+TSET	index	nc nqpc nqq unk
+TSET	indey	xsncc xsnca
+TSET	unkset	ncn nqq
+
+IRR	irrb			// ㅂ 불규칙
+IRR	irrs			// ㅅ 불규칙
+IRR	irrd			// ㄷ 불규칙
+IRR	irrh			// ㅎ 불규칙
+IRR	irrlu			// 르 불규칙
+IRR	irrle			// 러 불규칙
+IRR	chmust			// 반드시 축약
+IRR	chnot			// 축약 없음
+IRR	chmay			// 축약 가능
+IRR	except			// 예외 (특히 모음조화)
+IRR	irrb_except		// ㅂ 불규칙 & 모음조화 예외 
+IRR	yut				// 사임 첨가
+IRR	gaet
+IRR	et
+IRR	si
+IRR	ss
+IRR	ssyut
+IRR	eu

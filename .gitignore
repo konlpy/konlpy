@@ -1,4 +1,6 @@
+*.classpath
+*.egg-info/
+*.project
+*.pyc
 build/
 dist/
-*.egg-info/
-*.pyc

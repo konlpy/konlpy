@@ -1,0 +1,31 @@
+{
+  "name": "HmmPosTagger",
+  "version": "1.0",
+  "author": [
+    {
+      "name": "박상원",
+      "email": "hudoni@gmail.com"
+    },
+    {
+      "name": "최동현",
+      "email": "cdh4696@gmail.com"
+    },
+    {
+      "name": "신중호",
+      "email": "null"
+    },
+    {
+      "name": "한영석",
+      "email": "null"
+    },
+    {
+      "name": "박영찬",
+      "email": "null"
+    }
+  ],
+  "description": "Hidden Markov Model을 기반으로 형태소 분석 결과 중에서 가장 유력한 분석 결과 하나만을 추출한다. 굴절어인 한국어의 특성을 고려하여 형태소 단위의 전이 뿐만 아니라 어절 구조를 반영한 Hidden Markov Model을 이용한다. 학습 데이터는 언어자원은행(http://bora.or.kr)에 등록된 'Corpus2 정련된 형태소분석 코퍼스'를 기반으로 한다.\n[Reference] 신중호, 한영석, 박영찬, 최기선, '어절구조를 반영한 은닉 마르코프 모델을 이용한 한국어 품사태깅', 한글 및 한국어 정보처리 학술대회, pp. 389-394, 1994.",
+  "type": "PosTagger",
+  "pwt.pos": "data/stat/PWT.pos",
+  "ptt.pos": "data/stat/PTT.pos",
+  "ptt.wp": "data/stat/PTT.wp"
+}

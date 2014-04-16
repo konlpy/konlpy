@@ -1,0 +1,12 @@
+{
+  "name": "SimpleMAResult22",
+  "version": "1.0",
+  "author": [
+    {
+      "name": "박상원",
+      "email": "hudoni@gmail.com"
+    }
+  ],
+  "description": "카이스트 태그셋은 69개의 형태소 태그를 정의하고 있다. 이 플러그인은 보다 간단한 형태소 분석 결과를 제공하기 위하여 총 22개의 품사 태그만을 사용한 결과로 변환한다. 사용하는 품사 태그는 다음과 같다.\n\n - NC(보통명사), NQ(고유명사), NB(의존명사), NP(대명사), NN(수사)\n - PV(동사), PA(형용사), PX(보조용언)\n - MM(관형사), MA(부사)\n - II(감탄사)\n - JC(격조사), JX(보조사), JP(서술격조사)\n - EP(선얼말어미), EC(연결어미), ET(전성어미), EF(종결어미)\n - XP(접두사), XS(접미사)\n - S(기호)\n - F(외국어)\n\n주의사항: 이 플러그인은 HmmPosTagger와 호환되지 않습니다.",
+  "type": "MorphemeProcessor" 
+}

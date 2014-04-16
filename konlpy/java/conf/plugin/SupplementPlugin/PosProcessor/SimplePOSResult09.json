@@ -1,0 +1,12 @@
+{
+  "name": "SimplePOSResult09",
+  "version": "1.0",
+  "author": [
+    {
+      "name": "박상원",
+      "email": "hudoni@gmail.com"
+    }
+  ],
+  "description": "카이스트 태그셋은 69개의 형태소 태그를 정의하고 있다. 이 플러그인은 보다 간단한 품사 태깅 결과를 제공하기 위하여 총 9개의 품사 태그만을 사용한 결과로 변환한다. 사용하는 품사 태그는 다음과 같다.\n\nN(체언), P(용언), M(수식언), I(독립언), J(관계언), E(어미), X(접사), S(기호), F(외국어)\n",
+  "type": "PosProcessor" 
+}

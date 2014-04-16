@@ -1,0 +1,12 @@
+{
+  "name": "NounExtractor",
+  "version": "1.0",
+  "author": [
+    {
+      "name": "박상원",
+      "email": "hudoni@gmail.com"
+    }
+  ],
+  "description": "명사 추출기는 형태소 분석과 품사 태깅 결과 명사로 인식된 형태소만 추출하여 보여준다.",
+  "type": "PosProcessor"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "ChartMorphAnalyzer",
+  "version": "1.0",
+  "author": [
+    {
+      "name": "박상원",
+      "email": "hudoni@gmail.com"
+    },
+    {
+      "name": "최동현",
+      "email": "cdh4696@gmail.com"
+    },
+    {
+      "name": "이운재",
+      "email": "wjlee@world.kaist.ac.kr"
+    },
+    {
+      "name": "김선배",
+      "email": "yuntan@world.kaist.ac.kr"
+    },
+    {
+      "name": "김길연",
+      "email": "gykim@world.kaist.ac.kr"
+    }
+  ],
+  "description": "형태소 분석을 위한 내부 저장 공간으로 Lattice 형태의 차트를 사용한다. 분석기는 283,948개의 단어를 포함하는 시스템 형태소 사전과 사용자가 직접 편집 가능한 사용자 사전을 이용한다. 사전은 형태소 분석기를 위해 고안된 사전 구조인 TDBM(Trie based DBM)의 형태로 이용된다. 음운 변화처리는 어미의 탈락, 어간의 탈락과 같은 자동적 변화와 불규칙 용언에 의한 불규칙 변화, 모음조화 및 축약과 같은 선택적 변화로 나누어 처리한다. 미등록어에 대한 처리를 위해서 형태소 분석 결과가 없는 경우에는 모든 분할 위치에 'unk' 품사를 할당하고 다시 형태소 분석을 실시한다. 내부적으로 사용하는 한글 인코딩 방식은 초성, 중성, 종성 단위의 3바이트 인코딩 방식으로 삼보 KSSM 조합형 코드와 유사한 형태이다. 유니코드와 내부 한글 인코딩의 상호 변환은 코드 변환 모듈을 통해 이루어진다. 형태소 사전, 태그셋, 결합 규칙은 쉽게 편집 가능한 독립적인 파일로 존재하여 프로그램 수정 없이 유연한 변경이 가능하다.\n[Reference] 이운재, 김선배, 김길연, 최기선, '모듈화된 형태소 분석기의 구현', 한국정보과학회 언어공학연구회 학술발표 논문집, pp. 123-136, 1999.",
+  "type": "MorphAnalyzer",
+  "dic_system": "data/kE/dic_system.txt",
+  "dic_user": "data/kE/dic_user.txt",
+  "dic_analyzed": "data/kE/dic_analyzed.txt",
+  "connections": "data/kE/connections.txt",
+  "connections_not": "data/kE/connections_not.txt",
+  "tagset": "data/kE/tag_set.txt"
+}

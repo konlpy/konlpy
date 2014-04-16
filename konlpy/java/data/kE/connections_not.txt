@@ -1,0 +1,10 @@
+@title	connection_not_table
+@version	v1.00
+@copyright	(C) kaist, 1995-2010
+@author	hyoeun
+@date	2010.06.28
+@editor	박상원
+
+CONNECTION_NOT	이 jp 나 ef
+CONNECTION_NOT	이 jp 자 ef
+CONNECTION_NOT	* jca 이 jp
