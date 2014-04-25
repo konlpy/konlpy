@@ -1,1 +1,1 @@
-from nouns import nouns
+from hannanum import Hannanum

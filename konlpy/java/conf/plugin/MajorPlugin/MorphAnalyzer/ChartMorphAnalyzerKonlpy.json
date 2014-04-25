@@ -1,0 +1,11 @@
+{
+  "name": "ChartMorphAnalyzer",
+  "version": "1.0",
+  "type": "MorphAnalyzer",
+  "dic_system": "java/data/kE/dic_system.txt",
+  "dic_user": "java/data/kE/dic_user.txt",
+  "dic_analyzed": "java/data/kE/dic_analyzed.txt",
+  "connections": "java/data/kE/connections.txt",
+  "connections_not": "java/data/kE/connections_not.txt",
+  "tagset": "java/data/kE/tag_set.txt"
+}
