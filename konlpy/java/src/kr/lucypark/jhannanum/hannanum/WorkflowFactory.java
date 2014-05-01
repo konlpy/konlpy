@@ -19,8 +19,8 @@ public class WorkflowFactory {
     public static final int WORKFLOW_NOUN_EXTRACTOR = 0x04;
 
     public static Workflow getPredefinedWorkflow(int workflowFlag) {
-        String chartMorphAnalyzerConf = "java/conf/plugin/MajorPlugin/MorphAnalyzer/ChartMorphAnalyzerKonlpy.json";
-        String hmmTaggerAnalyzerConf = "java/conf/plugin/MajorPlugin/PosTagger/HmmPosTaggerKonlpy.json";
+        String chartMorphAnalyzerConf = "conf/plugin/MajorPlugin/MorphAnalyzer/ChartMorphAnalyzer.json";
+        String hmmTaggerAnalyzerConf = "conf/plugin/MajorPlugin/PosTagger/HmmPosTagger.json";
 
         Workflow workflow = new Workflow();
         workflow.appendPlainTextProcessor(new SentenceSegmentor(), null);

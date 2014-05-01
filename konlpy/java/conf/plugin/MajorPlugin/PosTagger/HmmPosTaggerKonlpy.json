@@ -1,8 +1,0 @@
-{
-  "name": "HmmPosTagger",
-  "version": "1.0",
-  "type": "PosTagger",
-  "pwt.pos": "java/data/stat/PWT.pos",
-  "ptt.pos": "java/data/stat/PTT.pos",
-  "ptt.wp": "java/data/stat/PTT.wp"
-}

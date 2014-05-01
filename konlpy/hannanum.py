@@ -22,34 +22,33 @@ def format_result(result):
 class Hannanum():
 
     def morph(self, phrase):
-        result = self.hi.morphAnalyzer(phrase)
+        result = self.jhi.morphAnalyzer(phrase)
         return format_result(result)
 
     def nouns(self, phrase):
-        return list(self.hi.extractNoun(phrase))
+        return list(self.jhi.extractNoun(phrase))
 
     def pos(self, phrase, ntags=9):
         if ntags==9:
-            result = self.hi.simplePos09(phrase)
+            result = self.jhi.simplePos09(phrase)
         elif ntags==22:
-            result = self.hi.simplePos22(phrase)
+            result = self.jhi.simplePos22(phrase)
         else:
             raise Exception('ntags in [9, 22]')
         return format_result(result)
 
     def __init__(self):
-        print 'Initializing Hannanum...',
-        folder_suffix = ['{0}', '{0}/bin', '{0}/jhannanum.jar']
+        folder_suffix = ['{0}', '{0}/bin', '{0}/jhannanum-0.8.4.jar']
         javadir = '%s/java' % os.path.dirname(os.path.realpath(__file__))
         classpath = ':'.join(f.format(javadir) for f in folder_suffix)
+        os.chdir(javadir)
         jpype.startJVM(jpype.getDefaultJVMPath(),\
                 '-Djava.class.path=%s' % classpath, '-ea')
 
         jhannanum = jpype.JPackage('kr.lucypark.jhannanum.comm')
         HannanumInterface = jhannanum.HannanumInterface
 
-        self.hi = HannanumInterface()
-        print 'done.'
+        self.jhi = HannanumInterface()
 
 
 if __name__=='__main__':
