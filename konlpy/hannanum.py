@@ -7,23 +7,33 @@ import pkgutil
 import jpype
 
 
-def format_result(result):
-    elements = result.strip().split('\n')
-    formatted = {}
-    idx = 0
-    split = [i for i, e in enumerate(elements) if not e]
-    for s in split:
-        tmp = filter(None, elements[idx:s])
-        idx = s
-        formatted[tmp[0]] = [t.strip() for t in tmp[1:]]
-    return formatted
+def parse(result, flatten=False):
+    elems = result.strip().split('\n')
+    index = [i for i, e in enumerate(elems) if not e]
 
+    i = 0
+    formatted = []
+    if flatten:
+        for j in index:
+            token = filter(None, elems[i:j])[1:]
+            fmt = [tuple(u.split('/')) for t in token\
+                    for u in t.strip().split('+')]
+            formatted.extend(fmt)
+            i = j
+    else:
+        for j in index:
+            token = filter(None, elems[i:j])[1:]
+            fmt = [[tuple(u.split('/')) for u in t.strip().split('+')]\
+                    for t in token]
+            formatted.append(fmt)
+            i = j
+    return formatted
 
 class Hannanum():
 
     def morph(self, phrase):
         result = self.jhi.morphAnalyzer(phrase)
-        return format_result(result)
+        return parse(result)
 
     def nouns(self, phrase):
         return list(self.jhi.extractNoun(phrase))
@@ -35,7 +45,7 @@ class Hannanum():
             result = self.jhi.simplePos22(phrase)
         else:
             raise Exception('ntags in [9, 22]')
-        return format_result(result)
+        return parse(result, flatten=True)
 
     def __init__(self):
         folder_suffix = ['{0}', '{0}/bin', '{0}/jhannanum-0.8.4.jar']
@@ -52,7 +62,7 @@ class Hannanum():
 
 
 if __name__=='__main__':
-    phrase = u'다람쥐, 헌 서울대공원 쳇바퀴에 타고파.'
+    phrase = u'롯데마트가 판매하고 있는 흑마늘'
     hi = Hannanum()
 
     from pprint import pprint
