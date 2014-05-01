@@ -17,8 +17,6 @@ Korean morpheme analyzer on Python.
 
 ## Usage
 
-### Hannanum
-
     >>> import konlpy
     >>> hannanum = konlpy.Hannanum()
 
@@ -61,14 +59,6 @@ Korean morpheme analyzer on Python.
      (u'\ud558', u'XS'),
      (u'\u3142\ub2c8\ub2e4', u'EF')]
 
-### KKMA
 
-NotImplementedError
-
-### KOMORAN
-
-NotImplementedError
-
-    
 ## License
 - [Apache v2.0](http://choosealicense.com/licenses/apache/)
