@@ -10,9 +10,14 @@ Korean morpheme analyzer on Python.
 
 ## Install
 
+    # pip install git+https://github.com/e9t/konlpy.git
+
+or
+
     $ git clone git@github.com:e9t/konlpy.git
     $ cd konlpy
     # python setup.py install
+
 
 
 ## Usage
