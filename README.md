@@ -10,8 +10,8 @@ Korean morpheme analyzer on Python.
 
 ## Install
 
-    $ git clone git@github.com:e9t/KoNLPy.git
-    $ cd KoNLPy
+    $ git clone git@github.com:e9t/konlpy.git
+    $ cd konlpy
     # python setup.py install
 
 
@@ -58,6 +58,14 @@ Korean morpheme analyzer on Python.
      (u'\ud589\ubcf5', u'NC'),
      (u'\ud558', u'XS'),
      (u'\u3142\ub2c8\ub2e4', u'EF')]
+
+    
+## Todos
+
+- Add user dic
+- Add function `load_common_dic`
+- nltk 데이터 폴더 구조 참고해서 그처럼 저장하기
+- lucene 형태소 분석기도 넣기
 
 
 ## License
