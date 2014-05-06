@@ -6,6 +6,7 @@ Korean morpheme analyzer on Python.
 ## Requirements
 
 - Python 2.x
+- JRE 1.7 (Use `update-alternatives --config java`)
 
 
 ## Install
