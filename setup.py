@@ -17,7 +17,7 @@ setup(name='konlpy',
         'java/jhannanum-0.8.4.jar',
         'java/bin/kr/lucypark/jhannanum/*/*.class']},
     install_requires=[
-        'JPype1==0.5.5.1',
+        'JPype1>=0.5.5.1',
         'regex==2014.02.19',
     ],
     zip_safe=False)
