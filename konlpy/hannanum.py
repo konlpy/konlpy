@@ -47,13 +47,13 @@ class Hannanum():
             raise Exception('ntags in [9, 22]')
         return parse(result, flatten=True)
 
-    def __init__(self):
+    def __init__(self, jvmpath=None):
         folder_suffix = ['{0}', '{0}/bin', '{0}/jhannanum-0.8.4.jar']
         javadir = '%s/java' % os.path.dirname(os.path.realpath(__file__))
         classpath = ':'.join(f.format(javadir) for f in folder_suffix)
         os.chdir(javadir)
-        jpype.startJVM(jpype.getDefaultJVMPath(),\
-                '-Djava.class.path=%s' % classpath, '-ea')
+        jvmpath = jvmpath or jpype.getDefaultJVMPath()
+        jpype.startJVM(jvmpath, '-Djava.class.path=%s' % classpath, '-ea')
 
         jhannanum = jpype.JPackage('kr.lucypark.jhannanum.comm')
         HannanumInterface = jhannanum.HannanumInterface
