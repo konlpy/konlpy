@@ -19,6 +19,6 @@ setup(name='konlpy',
         'java/src/kr/lucypark/jhannanum/*/*.java']},
     install_requires=[
         'JPype1>=0.5.5.1',
-        'regex==2014.02.19',
+        'regex>=2014.02.19',
     ],
     zip_safe=False)
