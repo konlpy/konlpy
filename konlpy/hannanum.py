@@ -3,6 +3,7 @@
 
 import os
 import pkgutil
+import sys
 
 import jpype
 
@@ -48,9 +49,16 @@ class Hannanum():
         return parse(result, flatten=True)
 
     def __init__(self, jvmpath=None):
-        folder_suffix = ['{0}', '{0}/bin', '{0}/jhannanum-0.8.4.jar']
-        javadir = '%s/java' % os.path.dirname(os.path.realpath(__file__))
-        classpath = ':'.join(f.format(javadir) for f in folder_suffix)
+        if sys.platform.startswith('win'):
+            divchar = '\\'
+        else:
+            divchar = '/'
+        folder_suffix = ['{0}', '{0}{1}bin', '{0}{1}jhannanum-0.8.4.jar']
+        javadir = '%s%sjava'\
+                % (os.path.dirname(os.path.realpath(__file__)), divchar)
+        args = [javadir, divchar]
+        classpath = ':'.join(f.format(*args) for f in folder_suffix)
+
         os.chdir(javadir)
         jvmpath = jvmpath or jpype.getDefaultJVMPath()
         jpype.startJVM(jvmpath, '-Djava.class.path=%s' % classpath, '-ea')
