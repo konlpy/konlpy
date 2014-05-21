@@ -6,7 +6,10 @@ Korean morpheme analyzer on Python.
 ## Requirements
 
 - Python 2.x
-- JRE 1.7 (Use `update-alternatives --config java`)
+- JRE 1.7
+
+        # apt-get install openjdk-7-jre
+        # update-alternatives --config java7-jre
 
 
 ## Install
@@ -19,7 +22,11 @@ or
     $ cd konlpy
     # python setup.py install
 
-
+> **Windows users:**<br>
+> Install the following packages from Christoph Gohlke's [Windows Binaries](http://www.lfd.uci.edu/~gohlke/pythonlibs/):<br>
+> (*win-amd64* for 64-bit Windows, *win32* for 32-bit Windows)<br>
+>    - [jpype1 0.5.5.2](http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype)<br>
+>    - [regex 2014.05.17](http://www.lfd.uci.edu/~gohlke/pythonlibs/#regex)
 
 ## Usage
 
