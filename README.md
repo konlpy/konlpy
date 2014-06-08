@@ -5,17 +5,17 @@ Korean morpheme analyzer on Python.
 
 ## Requirements
 
+- Linux
 - Python 2.x
 - JRE 1.7
 
         # apt-get install openjdk-7-jre
         # update-alternatives --config java7-jre
 
-> **Windows users:**<br>
-> Install the following Python packages from Christoph Gohlke's [Windows Binaries](http://www.lfd.uci.edu/~gohlke/pythonlibs/):<br>
-> (*win-amd64* for 64-bit Windows, *win32* for 32-bit Windows)<br>
->    - [jpype1 0.5.5.2](http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype)<br>
->    - [regex 2014.05.17](http://www.lfd.uci.edu/~gohlke/pythonlibs/#regex)
+### Tested on
+
+- Ubuntu 12.04 with openjdk-7-jdk
+- Ubuntu 13.10 with openjdk-7-jdk
 
 
 ## Install
@@ -28,18 +28,13 @@ or
     $ cd konlpy
     # python setup.py install
 
-### Tested on
-
-- Ubuntu 12.04 with openjdk-7-jdk
-- Ubuntu 13.10 with openjdk-7-jdk
-- Windows 7 with Sun/Oracle JDK 1.7.0
 
 ## Usage
 
     >>> import konlpy
     >>> hannanum = konlpy.Hannanum()
 
-    >>> hannanum.morph(u'롯데마트가 판매하고 있는 흑마늘 양념 치킨이 논란이 되고 있다.)
+    >>> hannanum.morph(u'롯데마트가 판매하고 있는 흑마늘 양념 치킨이 논란이 되고 있다.')
     [[[(u'\ub86f\ub370\ub9c8\ud2b8', u'ncn'), (u'\uac00', u'jcc')],
       [(u'\ub86f\ub370\ub9c8\ud2b8', u'ncn'), (u'\uac00', u'jcs')],
       [(u'\ub86f\ub370\ub9c8\ud2b8\uac00', u'ncn')],
@@ -59,7 +54,7 @@ or
      [[(u'\uc788', u'paa'), (u'\ub2e4', u'ef')],
       [(u'\uc788', u'px'), (u'\ub2e4', u'ef')]]]
 
-    >>> hannanum.nouns(u'다람쥐 헌 쳇바퀴 타고파')
+    >>> hannanum.nouns(u'다람쥐 헌 쳇바퀴에 타고파')
     [u'\ub2e4\ub78c\uc950', u'\uccc7\ubc14\ud034', u'\ud0c0\uace0', u'\ud30c']
 
     >>> hannanum.pos(u'웃으면 더 행복합니다!')
