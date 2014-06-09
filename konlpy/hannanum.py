@@ -29,16 +29,22 @@ def parse(result, flatten=False):
             i = j
     return formatted
 
+def concat(phrase):
+    return phrase.replace('\n', '')
+
 class Hannanum():
 
     def morph(self, phrase):
+        phrase = concat(phrase)
         result = self.jhi.morphAnalyzer(phrase)
         return parse(result)
 
     def nouns(self, phrase):
+        phrase = concat(phrase)
         return list(self.jhi.extractNoun(phrase))
 
     def pos(self, phrase, ntags=9):
+        phrase = concat(phrase)
         if ntags==9:
             result = self.jhi.simplePos09(phrase)
         elif ntags==22:
