@@ -2,6 +2,8 @@ package kr.lucypark.jhannanum.hannanum;
 
 /* Copyright 2014 Lucy Park <me@lucypark.kr> */
 
+import java.io.File;
+
 import kr.ac.kaist.swrc.jhannanum.hannanum.Workflow;
 import kr.ac.kaist.swrc.jhannanum.plugin.MajorPlugin.MorphAnalyzer.ChartMorphAnalyzer.ChartMorphAnalyzer;
 import kr.ac.kaist.swrc.jhannanum.plugin.MajorPlugin.PosTagger.HmmPosTagger.HMMTagger;
@@ -21,8 +23,10 @@ public class WorkflowFactory {
     public static Workflow getPredefinedWorkflow(int workflowFlag) {
         String chartMorphAnalyzerConf = "conf/plugin/MajorPlugin/MorphAnalyzer/ChartMorphAnalyzer.json";
         String hmmTaggerAnalyzerConf = "conf/plugin/MajorPlugin/PosTagger/HmmPosTagger.json";
+        File wf = new File(WorkflowFactory.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+        String wfpath = wf.getParentFile().getPath();
 
-        Workflow workflow = new Workflow();
+        Workflow workflow = new Workflow(wfpath);
         workflow.appendPlainTextProcessor(new SentenceSegmentor(), null);
         workflow.appendPlainTextProcessor(new InformalSentenceFilter(), null);
         workflow.setMorphAnalyzer(new ChartMorphAnalyzer(), chartMorphAnalyzerConf);

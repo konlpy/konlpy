@@ -60,7 +60,6 @@ class Hannanum():
         args = [javadir, os.sep]
         classpath = os.pathsep.join(f.format(*args) for f in folder_suffix)
 
-        os.chdir(javadir)
         jvmpath = jvmpath or jpype.getDefaultJVMPath()
         jpype.startJVM(jvmpath, '-Djava.class.path=%s' % classpath, '-ea')
 
