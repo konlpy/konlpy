@@ -27,8 +27,8 @@ def get_tags(text, h, ntags=50, multiplier=10):
     return [{ 'color': color(), 'tag': n, 'size': c*multiplier }\
                 for n, c in count.most_common(ntags)]
 
-def draw_cloud(tags, filename, fontname='NanumGothic_Coding'):
-    pytagcloud.create_tag_image(tags, filename, fontname=fontname)
+def draw_cloud(tags, filename, fontname='Nanum Gothic Coding', size=(800, 600)):
+    pytagcloud.create_tag_image(tags, filename, fontname=fontname, size=size)
     webbrowser.open(filename)
 
 text = get_bill_text('1904882')
