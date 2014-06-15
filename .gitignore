@@ -1,5 +1,6 @@
 *.classpath
 *.egg-info/
+*.log
 *.project
 *.pyc
 build/
