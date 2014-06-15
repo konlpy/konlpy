@@ -1,5 +1,7 @@
 # KoNLPy
 
+[![Build Status](https://travis-ci.org/e9t/konlpy.svg?branch=master)](https://travis-ci.org/e9t/konlpy)
+
 파이썬으로 한국어 형태소 분석을 할 수 있는 라이브러리입니다.
 
 
@@ -83,6 +85,14 @@ or
 
 - Ubuntu 12.04 with openjdk-7-jdk
 - Ubuntu 13.10 with openjdk-7-jdk
+- Mac OS X with Oracle jdk-8u5
+
+## Todos
+
+- Add user dic
+- Add function `load_common_dic`
+- nltk 데이터 폴더 구조 참고해서 그처럼 저장하기
+- lucene 형태소 분석기, [mecab-ko](https://bitbucket.org/bibreen/mecab-ko)도 넣기
 
 
 ## License
