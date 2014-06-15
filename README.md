@@ -12,11 +12,6 @@ Korean morpheme analyzer on Python.
         # apt-get install openjdk-7-jre
         # update-alternatives --config java7-jre
 
-### Tested on
-
-- Ubuntu 12.04 with openjdk-7-jdk
-- Ubuntu 13.10 with openjdk-7-jdk
-
 
 ## Install
 
@@ -73,6 +68,17 @@ or
      (u'\ud589\ubcf5', u'NC'),
      (u'\ud558', u'XS'),
      (u'\u3142\ub2c8\ub2e4', u'EF')]
+
+
+## Unit test
+
+    cd konlpy
+    py.test
+
+### Tested on
+
+- Ubuntu 12.04 with openjdk-7-jdk
+- Ubuntu 13.10 with openjdk-7-jdk
 
 
 ## License
