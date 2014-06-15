@@ -4,7 +4,7 @@
 from setuptools import setup
 
 setup(name='konlpy',
-    version='0.1',
+    version='0.2',
     description='Korean morpheme analyzer on Python',
     url='http://github.com/e9t/konlpy',
     author='Lucy Park',

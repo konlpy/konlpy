@@ -1,9 +1,6 @@
 #! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
-import os
-import pkgutil
-
 import jpype
 
 
@@ -54,26 +51,20 @@ class Hannanum():
         return parse(result, flatten=True)
 
     def __init__(self, jvmpath=None):
-        folder_suffix = ['{0}', '{0}{1}bin', '{0}{1}jhannanum-0.8.4.jar']
-        javadir = '%s%sjava'\
-                % (os.path.dirname(os.path.realpath(__file__)), os.sep)
-        args = [javadir, os.sep]
-        classpath = os.pathsep.join(f.format(*args) for f in folder_suffix)
-
-        jvmpath = jvmpath or jpype.getDefaultJVMPath()
-        jpype.startJVM(jvmpath, '-Djava.class.path=%s' % classpath, '-ea')
-
-        jhannanum = jpype.JPackage('kr.lucypark.jhannanum.comm')
-        HannanumInterface = jhannanum.HannanumInterface
-
-        self.jhi = HannanumInterface()
+        jhannanumJavaPackage = jpype.JPackage('kr.lucypark.jhannanum.comm')
+        HannanumInterfaceJavaClass = jhannanumJavaPackage.HannanumInterface
+        self.jhi = HannanumInterfaceJavaClass() # Java instance
 
 
 if __name__=='__main__':
+    from init_jvm import init_jvm
+    from pprint import pprint
+
     phrase = u'롯데마트가 판매하고 있는 흑마늘'
+
+    init_jvm()
     hi = Hannanum()
 
-    from pprint import pprint
     print '\nMorph:'; pprint(hi.morph(phrase))
     print '\nNouns:'; pprint(hi.nouns(phrase))
     print '\nPos09:'; pprint(hi.pos(phrase))

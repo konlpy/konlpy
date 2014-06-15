@@ -32,6 +32,7 @@ or
 ## Usage
 
     >>> import konlpy
+    >>> konlpy.init_jvm()
     >>> hannanum = konlpy.Hannanum()
 
     >>> hannanum.morph(u'롯데마트가 판매하고 있는 흑마늘 양념 치킨이 논란이 되고 있다.')
