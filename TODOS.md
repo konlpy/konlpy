@@ -1,0 +1,5 @@
+- Add user dic
+- Add function `load_common_dic`
+- nltk 데이터 폴더 구조 참고해서 그처럼 저장하기
+- lucene 형태소 분석기, [mecab-ko](https://bitbucket.org/bibreen/mecab-ko)도 넣기
+- Employ [pkgutil](https://docs.python.org/2/library/pkgutil.html)
