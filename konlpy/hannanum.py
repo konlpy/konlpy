@@ -26,6 +26,25 @@ def parse(result, flatten=False):
             i = j
     return formatted
 
+def printing_form(src, dpth=0):
+    tabs = lambda n: ' ' * n * 1 # or 2 or 8 or...
+
+    if isinstance(src, list):
+        printing_list = []
+
+        if isinstance(src[0], tuple):
+            [printing_list.append('(%s+%s)' % litem) for litem in src]
+            return "["+",".join(printing_list)+"]"
+        elif isinstance(src[0], unicode):
+            [printing_list.append('(%s)' % litem) for litem in src]
+            return "["+",".join(printing_list)+"]"
+        else:
+            for litem in src:
+                llist = printing_form(litem,dpth+1)
+                if not (llist is None):
+                    printing_list.append(llist+",\n"+tabs(dpth))
+            return "["+"".join(printing_list)+"]"
+
 def concat(phrase):
     return phrase.replace('\n', '')
 
@@ -69,3 +88,7 @@ if __name__=='__main__':
     print '\nNouns:'; pprint(hi.nouns(phrase))
     print '\nPos09:'; pprint(hi.pos(phrase))
     print '\nPos22:'; pprint(hi.pos(phrase, ntags=22))
+
+    print '\n'+printing_form(hi.morph(phrase))
+    print '\n'+printing_form(hi.nouns(phrase))
+    print '\n'+printing_form(hi.pos(phrase))
