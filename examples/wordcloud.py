@@ -31,6 +31,7 @@ def draw_cloud(tags, filename, fontname='Nanum Gothic Coding', size=(800, 600)):
     pytagcloud.create_tag_image(tags, filename, fontname=fontname, size=size)
     webbrowser.open(filename)
 
+konlpy.init_jvm()
 text = get_bill_text('1904882')
 tags = get_tags(text, konlpy.Hannanum())
 draw_cloud(tags, 'wordcloud.png')
