@@ -85,14 +85,6 @@ or
 
 - Ubuntu 12.04 with openjdk-7-jdk
 - Ubuntu 13.10 with openjdk-7-jdk
-- Mac OS X with Oracle jdk-8u5
-
-## Todos
-
-- Add user dic
-- Add function `load_common_dic`
-- nltk 데이터 폴더 구조 참고해서 그처럼 저장하기
-- lucene 형태소 분석기, [mecab-ko](https://bitbucket.org/bibreen/mecab-ko)도 넣기
 
 
 ## License
