@@ -26,6 +26,25 @@ def parse(result, flatten=False):
             i = j
     return formatted
 
+def PrettyPrinter(src, dpth=0):
+    tabs = lambda n: ' ' * n * 1 # or 2 or 8 or...
+
+    if isinstance(src, list):
+        printing_list = []
+
+        if isinstance(src[0], tuple) :
+            [printing_list.append("+".join(litem)) for litem in src]
+            changed_value = ",".join(printing_list)
+        elif isinstance(src[0], unicode) :
+            [printing_list.append("".join(litem)) for litem in src]
+            changed_value = ",".join(printing_list)
+        else:
+            for litem in src:
+                llist = PrettyPrinter(litem,dpth+1)
+                if not (llist is None): printing_list.append(llist+",\n"+tabs(dpth))
+            changed_value = "".join(printing_list)
+        return "["+changed_value+"]"
+
 def concat(phrase):
     return phrase.replace('\n', '')
 
@@ -65,7 +84,12 @@ if __name__=='__main__':
     init_jvm()
     hi = Hannanum()
 
+    print '\n'+PrettyPrinter(hi.morph(phrase))
+    print '\n'+PrettyPrinter(hi.nouns(phrase))
+    print '\n'+PrettyPrinter(hi.pos(phrase))
+
     print '\nMorph:'; pprint(hi.morph(phrase))
     print '\nNouns:'; pprint(hi.nouns(phrase))
     print '\nPos09:'; pprint(hi.pos(phrase))
     print '\nPos22:'; pprint(hi.pos(phrase, ntags=22))
+
