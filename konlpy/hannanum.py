@@ -1,7 +1,6 @@
 #! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
-import os
 import re
 import jpype
 
@@ -11,7 +10,7 @@ import utils
 tag_re = ur'(.+?\/\w+)\+?'
 
 def parse(result, flatten=False):
-    elems = result.strip().split(os.linesep)
+    elems = result.strip().splitlines()
     index = [i for i, e in enumerate(elems) if not e]
 
     i = 0
@@ -32,29 +31,19 @@ def parse(result, flatten=False):
             i = j
     return formatted
 
-def concat(phrase):
-    return phrase.replace(os.linesep, ' ')
-
-def preprocess(phrase):
-    # FIXME: last eojeol gets truncated (hotfixed)
-    # TODO: do not replace unless explicitly noticed + add 'only hangul' option
-    for a, b in utils.replace_set:
-        phrase = phrase.replace(a, b)
-    return phrase + ' .'
-
 class Hannanum():
 
     def morph(self, phrase):
-        phrase = preprocess(concat(phrase))
+        phrase = utils.preprocess(phrase)
         result = self.jhi.morphAnalyzer(phrase)
         return parse(result)
 
     def nouns(self, phrase):
-        phrase = preprocess(concat(phrase))
+        phrase = utils.preprocess(phrase)
         return list(self.jhi.extractNoun(phrase))
 
     def pos(self, phrase, ntags=9):
-        phrase = preprocess(concat(phrase))
+        phrase = utils.preprocess(phrase)
         if ntags==9:
             result = self.jhi.simplePos09(phrase)
         elif ntags==22:

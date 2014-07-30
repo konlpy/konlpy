@@ -1,6 +1,8 @@
 #! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
+import os
+
 replace_set = [
         (u'·', u'/'), # \xb7
         (u'․', u'/'), # \u2024
@@ -14,6 +16,19 @@ replace_set = [
         (u'”', u'"'), # \u201d
         (u'「', u'<'), # \u300c
         (u'」', u'>')] # \u300d
+
+def concat(phrase):
+    return phrase.replace(os.linesep, ' ')
+
+def select(phrase):
+    # FIXME: last eojeol gets truncated (hotfixed)
+    # TODO: do not replace unless explicitly noticed + add 'only hangul' option
+    for a, b in replace_set:
+        phrase = phrase.replace(a, b)
+    return phrase + ' .'
+
+def preprocess(phrase):
+    return select(concat(phrase))
 
 def char2hex(c):
     # u'음' -> '0xc74c'
