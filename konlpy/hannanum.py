@@ -1,11 +1,17 @@
 #! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
+import os
+import re
 import jpype
 
+import utils
+
+
+tag_re = ur'(.+?\/\w+)\+?'
 
 def parse(result, flatten=False):
-    elems = result.strip().split('\n')
+    elems = result.strip().split(os.linesep)
     index = [i for i, e in enumerate(elems) if not e]
 
     i = 0
@@ -13,35 +19,42 @@ def parse(result, flatten=False):
     if flatten:
         for j in index:
             token = filter(None, elems[i:j])[1:]
-            fmt = [tuple(u.split('/')) for t in token\
-                    for u in t.strip().split('+')]
+            fmt = [tuple(u.rsplit('/', 1)) for t in token\
+                    for u in re.findall(tag_re, t.strip())]
             formatted.extend(fmt)
             i = j
     else:
         for j in index:
             token = filter(None, elems[i:j])[1:]
-            fmt = [[tuple(u.split('/')) for u in t.strip().split('+')]\
-                    for t in token]
+            fmt = [[tuple(u.rsplit('/', 1))\
+                    for u in re.findall(tag_re, t.strip())] for t in token]
             formatted.append(fmt)
             i = j
     return formatted
 
 def concat(phrase):
-    return phrase.replace('\n', '')
+    return phrase.replace(os.linesep, ' ')
+
+def preprocess(phrase):
+    # FIXME: last eojeol gets truncated (hotfixed)
+    # TODO: do not replace unless explicitly noticed + add 'only hangul' option
+    for a, b in utils.replace_set:
+        phrase = phrase.replace(a, b)
+    return phrase + ' .'
 
 class Hannanum():
 
     def morph(self, phrase):
-        phrase = concat(phrase)
+        phrase = preprocess(concat(phrase))
         result = self.jhi.morphAnalyzer(phrase)
         return parse(result)
 
     def nouns(self, phrase):
-        phrase = concat(phrase)
+        phrase = preprocess(concat(phrase))
         return list(self.jhi.extractNoun(phrase))
 
     def pos(self, phrase, ntags=9):
-        phrase = concat(phrase)
+        phrase = preprocess(concat(phrase))
         if ntags==9:
             result = self.jhi.simplePos09(phrase)
         elif ntags==22:
@@ -60,7 +73,7 @@ if __name__=='__main__':
     from init_jvm import init_jvm
     from pprint import pprint
 
-    phrase = u'롯데마트가 판매하고 있는 흑마늘'
+    phrase = u'(학교에서조차도) 1/2+3/2이 2이라는 사실을 모르고 있었다!'
 
     init_jvm()
     hi = Hannanum()
