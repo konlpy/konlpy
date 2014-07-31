@@ -15,6 +15,7 @@ before_install:
     - tar zxfv mecab-ko-dic-1.6.1-20140515.tar.gz
     - cd mecab-ko-dic-1.6.1-20140515
     - ./configure
+    - sudo ldconfig
     - make
     - sudo make install
 
