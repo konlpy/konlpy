@@ -27,8 +27,10 @@ or
 
 ### Optional
 
-MeCab 형태소 분석기를 이용하기 위해서는 [mecab-ko, mecab-ko-dic](https://bitbucket.org/eunjeon/mecab-ko-dic)을 설치한다.
+MeCab 형태소 분석기를 이용하기 위해서는 아래를 설치한다.
 
+- [mecab-ko, mecab-ko-dic](https://bitbucket.org/eunjeon/mecab-ko-dic)
+- [mecab-python](https://github.com/HiroyukiHaga/mecab-python)
 
 ## Usage
 
