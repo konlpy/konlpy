@@ -91,7 +91,7 @@ MeCab 형태소 분석기를 이용하기 위해서는 [mecab-ko, mecab-ko-dic](
 
 ## Examples
 
-- [텍스트에서 명사를 추출해서 워드클라우드 그리기](https://github.com/e9t/konlpy/wiki/Ex:-%EC%9B%8C%EB%93%9C%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B7%B8%EB%A6%AC%EA%B8%B0)
+1. [텍스트에서 명사를 추출해서 워드클라우드 그리기](https://github.com/e9t/konlpy/wiki/Ex:-%EC%9B%8C%EB%93%9C%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B7%B8%EB%A6%AC%EA%B8%B0)
 
 
 ## Unit test
