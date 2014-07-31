@@ -5,12 +5,15 @@ python:
     - "2.7"
 
 before_install:
+    - pwd
+    - cd /tmp
     - wget https://bitbucket.org/eunjeon/mecab-ko/downloads/mecab-0.996-ko-0.9.1.tar.gz
     - tar zxfv mecab-0.996-ko-0.9.1.tar.gz
     - cd mecab-0.996-ko-0.9.1
     - ./configure
     - make
     - sudo make install
+    - cd /tmp
     - wget https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-1.6.1-20140515.tar.gz
     - tar zxfv mecab-ko-dic-1.6.1-20140515.tar.gz
     - cd mecab-ko-dic-1.6.1-20140515
@@ -18,6 +21,8 @@ before_install:
     - sudo ldconfig
     - make
     - sudo make install
+    - cd $TRAVIS_BUILD_DIR
+    - pwd
 
 install:
     - python setup.py -q install
