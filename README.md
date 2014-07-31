@@ -29,6 +29,7 @@ or
 
 MeCab 형태소 분석기를 이용하기 위해서는 [mecab-ko, mecab-ko-dic](https://bitbucket.org/eunjeon/mecab-ko-dic)을 설치한다.
 
+
 ## Usage
 
     >>> import konlpy
@@ -42,9 +43,8 @@ MeCab 형태소 분석기를 이용하기 위해서는 [mecab-ko, mecab-ko-dic](
      (u'\uc740', u'JX'),
      (u'\uc5b4\ub5a4', u'MM'),
      (u'\uacf3', u'NNG'),
-     (u'\uc778\uac00', u'VCP+EC'),
-     (u'?', u'SY'),
-     (u'.', u'SF')]
+     (u'\uc778\uac00', u'VCP+EF'),
+     (u'?', u'SF')]
 
     >>> konlpy.init_jvm()
     >>> hannanum = konlpy.Hannanum()
@@ -65,8 +65,7 @@ MeCab 형태소 분석기를 이용하기 위해서는 [mecab-ko, mecab-ko-dic](
        (u'\uc5b4', u'ef'),
        (u'\uace0', u'jcr')]],
         ...
-     [[(u'\uc788', u'paa'), (u'\ub2e4', u'ef')],
-      [(u'\uc788', u'px'), (u'\ub2e4', u'ef')]]]
+      [(u'.', u'sf'), (u'.', u'sy')]]]
 
     >>> hannanum.nouns(u'다람쥐 헌 쳇바퀴에 타고파')
     [u'\ub2e4\ub78c\uc950', u'\uccc7\ubc14\ud034', u'\ud0c0\uace0', u'\ud30c']
@@ -77,7 +76,8 @@ MeCab 형태소 분석기를 이용하기 위해서는 [mecab-ko, mecab-ko-dic](
      (u'\ub354', u'M'),
      (u'\ud589\ubcf5', u'N'),
      (u'\ud558', u'X'),
-     (u'\u3142\ub2c8\ub2e4', u'E')]
+     (u'\u3142\ub2c8\ub2e4', u'E'),
+     (u'!', u'S')]
 
     >>> hannanum.pos(u'웃으면 더 행복합니다!', ntags=22)
     [(u'\uc6c3', u'PV'),
@@ -85,8 +85,10 @@ MeCab 형태소 분석기를 이용하기 위해서는 [mecab-ko, mecab-ko-dic](
      (u'\ub354', u'MA'),
      (u'\ud589\ubcf5', u'NC'),
      (u'\ud558', u'XS'),
-     (u'\u3142\ub2c8\ub2e4', u'EF')]
+     (u'\u3142\ub2c8\ub2e4', u'EF'),
+     (u'!', u'SF')]
      
+
 ## Examples
 
 - [텍스트에서 명사를 추출해서 워드클라우드 그리기](https://github.com/e9t/konlpy/wiki/Examples#%EA%B5%AD%ED%9A%8C-%EB%B0%9C%EC%9D%98-%EC%9D%98%EC%95%88-%EC%9B%8C%EB%93%9C%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B7%B8%EB%A6%AC%EA%B8%B0)
