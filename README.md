@@ -25,13 +25,29 @@ or
     $ cd konlpy
     # python setup.py install
 
+### Optional
+
+MeCab 형태소 분석기를 이용하기 위해서는 [mecab-ko, mecab-ko-dic](https://bitbucket.org/eunjeon/mecab-ko-dic)을 설치한다.
 
 ## Usage
 
     >>> import konlpy
+
+    >>> mecab = konlpy.Mecab() # mecab installation needed
+    >>> mecab.pos(u'자연주의 쇼핑몰은 어떤 곳인가?')
+    [(u'\uc790\uc5f0', u'NNG'),
+     (u'\uc8fc', u'NNG'),
+     (u'\uc758', u'JKG'),
+     (u'\uc1fc\ud551\ubab0', u'NNG'),
+     (u'\uc740', u'JX'),
+     (u'\uc5b4\ub5a4', u'MM'),
+     (u'\uacf3', u'NNG'),
+     (u'\uc778\uac00', u'VCP+EC'),
+     (u'?', u'SY'),
+     (u'.', u'SF')]
+
     >>> konlpy.init_jvm()
     >>> hannanum = konlpy.Hannanum()
-
     >>> hannanum.morph(u'롯데마트가 판매하고 있는 흑마늘 양념 치킨이 논란이 되고 있다.')
     [[[(u'\ub86f\ub370\ub9c8\ud2b8', u'ncn'), (u'\uac00', u'jcc')],
       [(u'\ub86f\ub370\ub9c8\ud2b8', u'ncn'), (u'\uac00', u'jcs')],
