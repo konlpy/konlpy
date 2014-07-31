@@ -31,10 +31,12 @@ def test_hannanum_morph(hannanum_instance, string):
           [(u'\uac00', u'pvg'), (u'\uc790', u'ef')],
           [(u'\uac00', u'px'), (u'\uc790', u'ecc')],
           [(u'\uac00', u'px'), (u'\uc790', u'ecs')],
-          [(u'\uac00', u'px'), (u'\uc790', u'ef')]]]
+          [(u'\uac00', u'px'), (u'\uc790', u'ef')]],
+         [[(u'!', u'sf')]]]
 
 def test_hannanum_nouns(hannanum_instance, string):
-    assert hannanum_instance.nouns(string) == [u"꽃가마", u"강남"]
+    assert hannanum_instance.nouns(string) ==\
+        [u'\uaf43\uac00\ub9c8', u'\uac15\ub0a8']
 
 def test_hannanum_pos_9(hannanum_instance, string):
     assert hannanum_instance.pos(string) ==\
@@ -43,7 +45,8 @@ def test_hannanum_pos_9(hannanum_instance, string):
          (u'\uace0', u'E'),
          (u'\uac15\ub0a8', u'N'),
          (u'\uac00', u'P'),
-         (u'\uc790', u'E')]
+         (u'\uc790', u'E'),
+         (u'!', u'S')]
 
 def test_hannanum_pos_22(hannanum_instance, string):
     assert hannanum_instance.pos(string, ntags=22) ==\
@@ -52,4 +55,5 @@ def test_hannanum_pos_22(hannanum_instance, string):
          (u'\uace0', u'EC'),
          (u'\uac15\ub0a8', u'NC'),
          (u'\uac00', u'PX'),
-         (u'\uc790', u'EC')]
+         (u'\uc790', u'EC'),
+         (u'!', u'SF')]

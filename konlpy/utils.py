@@ -21,11 +21,11 @@ def concat(phrase):
     return phrase.replace(os.linesep, ' ')
 
 def select(phrase):
-    # FIXME: last eojeol gets truncated (hotfixed)
-    # TODO: do not replace unless explicitly noticed + add 'only hangul' option
+    # TODO: do not replace unless explicitly noticed
+    # TODO: add 'only hangul' option
     for a, b in replace_set:
         phrase = phrase.replace(a, b)
-    return phrase + ' .'
+    return phrase
 
 def preprocess(phrase):
     return select(concat(phrase))
@@ -38,3 +38,5 @@ def hex2char(h):
     # 'c74c' or '0xc74c' -> u'음'
     return unichr(int(h, 16))
 
+def partition(list_, indices):
+    return [list_[i:j] for i, j in zip([0]+indices, indices+[None])]

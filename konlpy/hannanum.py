@@ -10,26 +10,21 @@ import utils
 tag_re = ur'(.+?\/\w+)\+?'
 
 def parse(result, flatten=False):
+    def parse_opt(opt):
+        return [tuple(u.rsplit('/', 1))\
+                    for u in re.findall(tag_re, opt.strip())]
+
     elems = result.strip().splitlines()
     index = [i for i, e in enumerate(elems) if not e]
+    parts = utils.partition(elems, index)
 
-    i = 0
-    formatted = []
     if flatten:
-        for j in index:
-            token = filter(None, elems[i:j])[1:]
-            fmt = [tuple(u.rsplit('/', 1)) for t in token\
-                    for u in re.findall(tag_re, t.strip())]
-            formatted.extend(fmt)
-            i = j
+        return sum([parse_opt(opt) for part in parts\
+                for opt in filter(None, part)[1:]], [])
     else:
-        for j in index:
-            token = filter(None, elems[i:j])[1:]
-            fmt = [[tuple(u.rsplit('/', 1))\
-                    for u in re.findall(tag_re, t.strip())] for t in token]
-            formatted.append(fmt)
-            i = j
-    return formatted
+        return [[parse_opt(opt) for opt in filter(None, part)[1:]]\
+                for part in parts]
+
 
 class Hannanum():
 
