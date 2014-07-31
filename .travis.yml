@@ -20,6 +20,7 @@ before_install:
     - ./configure
     - sudo ldconfig
     - make
+    - sudo sh -c 'echo "dicdir=/usr/local/lib/mecab/dic/mecab-ko-dic" > /usr/local/etc/mecabrc'
     - sudo make install
     - cd /tmp
     - git clone https://github.com/HiroyukiHaga/mecab-python.git
