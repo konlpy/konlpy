@@ -1,6 +1,10 @@
 KoNLPy: Korean NLP in Python
 ============================
 
+.. image:: https://travis-ci.org/e9t/konlpy.svg?branch=master
+    :alt: Build status
+    :target: https://travis-ci.org/e9t/konlpy
+
 KoNLPy is a Python package for natural language processing of the Korean language. For installation directions, see :doc:`install`.
 
 
