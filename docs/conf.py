@@ -21,7 +21,7 @@ class Mock(MagicMock):
     def __getattr__(cls, name):
         return Mock()
 
-sys.modules.update((mod, Mock()) for mod in ['jpype'])
+sys.modules.update((mod, Mock) for mod in ['jpype'])
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -192,7 +192,7 @@ latex_elements = {
 #'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
-#'preamble': '',
+'preamble': '\usepackage{kotex}',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -204,17 +204,17 @@ latex_documents = [
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-#latex_logo = None
+latex_logo = '_static/konlpy.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
-#latex_use_parts = False
+latex_use_parts = True
 
 # If true, show page references after internal links.
-#latex_show_pagerefs = False
+latex_show_pagerefs = True
 
 # If true, show URL addresses after external links.
-#latex_show_urls = False
+latex_show_urls = True
 
 # Documents to append as an appendix to all manuals.
 #latex_appendices = []
