@@ -1,8 +1,3 @@
-.. KoNLPy documentation master file, created by
-   sphinx-quickstart on Fri Aug 15 19:24:58 2014.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 KoNLPy: Korean NLP in Python
 ============================
 
@@ -22,14 +17,15 @@ Basic usage
     print hannanum.pos(u'웃으면 더 행복합니다!')
     print hannanum.nouns(u'다람쥐 헌 쳇바퀴에 타고파')
 
-For more on how to use KoNLPy, go see the APIs.
+For more on how to use KoNLPy, go see the :ref:`api`.
 
 
 License
 -------
 
 KoNLPy is `Apache 2.0`_ licensed.
-This means you are allowed to copy, modify and redistribute in both noncommercial and commercial means, as long as you denote the original author -- Lucy Park.
+This means you are allowed to copy, modify and redistribute in both noncommercial and commercial means.
+However if possible, please denote the name of this package and the original author in your work.
 
 .. _Apache 2.0: http://opensource.org/licenses/Apache-2.0
 
@@ -45,15 +41,23 @@ Visit the `KoNLPy GitHub page`_ and `suggest a new issue`_ or `make a pull reque
 .. _make a pull request: https://github.com/e9t/konlpy/pulls
 
 
+User guide
+==========
+
+.. toctree::
+  :glob:
+
+  install
+
+.. _api:
+
 API
 ===
 
 .. toctree::
   :glob:
 
-  api
-  install
-
+  api/konlpy
 
 Indices and tables
 ==================
