@@ -13,12 +13,21 @@
 
 import sys, os
 
+# [read the docs](read-the-docs.readthedocs.org/en/latest/faq.html)
+from mock import Mock as MagicMock
+
+class Mock(MagicMock):
+    @classmethod
+    def __getattr__(cls, name):
+        return Mock()
+
+sys.modules.update((mod, Mock()) for mod in ['jpype'])
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 
 sys.path.insert(0, os.path.abspath('..'))
-import konlpy
 from konlpy import __version__
 
 # -- General configuration -----------------------------------------------------
@@ -258,12 +267,3 @@ gettext_compact = False
 # github
 github_fork = 'e9t/konlpy'
 
-# [read the docs](read-the-docs.readthedocs.org/en/latest/faq.html)
-from unittest.mock import MagicMock
-
-class Mock(MagicMock):
-    @classmethod
-    def __getattr__(cls, name):
-        return Mock()
-
-sys.modules.update((mod, Mock()) for mod in ['jpype'])
