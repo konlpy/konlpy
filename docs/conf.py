@@ -266,4 +266,4 @@ class Mock(MagicMock):
     def __getattr__(cls, name):
         return Mock()
 
-sys.modules.update((mod, Mock() for mod in ['jpype'])
+sys.modules.update((mod, Mock()) for mod in ['jpype'])
