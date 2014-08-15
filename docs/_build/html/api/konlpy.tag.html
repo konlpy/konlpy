@@ -1,0 +1,184 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>tag Package &mdash; KoNLPy 0.3 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/flasky.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="KoNLPy 0.3 documentation" href="../index.html" />
+   
+  
+  <link media="only screen and (max-device-width: 480px)" href="../_static/small_flask.css" type= "text/css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">KoNLPy 0.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="tag-package">
+<h1>tag Package<a class="headerlink" href="#tag-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-konlpy.tag.hannanum">
+<span id="hannanum-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">hannanum</span></tt> Module<a class="headerlink" href="#module-konlpy.tag.hannanum" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="konlpy.tag.hannanum.Hannanum">
+<em class="property">class </em><tt class="descclassname">konlpy.tag.hannanum.</tt><tt class="descname">Hannanum</tt><big>(</big><em>jvmpath=None</em><big>)</big><a class="headerlink" href="#konlpy.tag.hannanum.Hannanum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for Hannanum morphological analyzer.</p>
+<p><a class="reference external" href="http://semanticweb.kaist.ac.kr/home/index.php/HanNanum">Hannanum</a> is a morphological analyzer and a POS tagger written in Java, developed by the <a class="reference external" href="http://semanticweb.kaist.ac.kr/">Semantic Web Research Center (SWRC)</a> in KAIST since 1999.
+It requires a JRE, and therefore requires the user to <a class="reference internal" href="konlpy.html#konlpy.jvm.init_jvm" title="konlpy.jvm.init_jvm"><tt class="xref py py-func docutils literal"><span class="pre">init_jvm()</span></tt></a> e.g.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">konlpy</span> <span class="kn">import</span> <span class="n">init_jvm</span>
+<span class="kn">from</span> <span class="nn">konlpy.tag</span> <span class="kn">import</span> <span class="n">Hannanum</span>
+
+<span class="hll"><span class="n">init_jvm</span><span class="p">()</span>
+</span><span class="n">hannanum</span> <span class="o">=</span> <span class="n">Hannanum</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">hannanum</span><span class="o">.</span><span class="n">morph</span><span class="p">(</span><span class="s">u&#39;롯데마트의 흑마늘 양념 치킨이 논란이 되고 있다.&#39;</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">hannanum</span><span class="o">.</span><span class="n">pos</span><span class="p">(</span><span class="s">u&#39;웃으면 더 행복합니다!&#39;</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">hannanum</span><span class="o">.</span><span class="n">nouns</span><span class="p">(</span><span class="s">u&#39;다람쥐 헌 쳇바퀴에 타고파&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>jvmpath</strong> &#8211; The path of the JVM. If left empty, inferred by jpype.getDefaultJVMPath().</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="konlpy.tag.hannanum.Hannanum.morph">
+<tt class="descname">morph</tt><big>(</big><em>phrase</em><big>)</big><a class="headerlink" href="#konlpy.tag.hannanum.Hannanum.morph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Morphological analyzer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="konlpy.tag.hannanum.Hannanum.nouns">
+<tt class="descname">nouns</tt><big>(</big><em>phrase</em><big>)</big><a class="headerlink" href="#konlpy.tag.hannanum.Hannanum.nouns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Noun extractor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="konlpy.tag.hannanum.Hannanum.pos">
+<tt class="descname">pos</tt><big>(</big><em>phrase</em>, <em>ntags=9</em><big>)</big><a class="headerlink" href="#konlpy.tag.hannanum.Hannanum.pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>POS tagger. The number of tags (<cite>ntags</cite>), can be either 9 or 22.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-konlpy.tag.mecab">
+<span id="mecab-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">mecab</span></tt> Module<a class="headerlink" href="#module-konlpy.tag.mecab" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="konlpy.tag.mecab.Mecab">
+<em class="property">class </em><tt class="descclassname">konlpy.tag.mecab.</tt><tt class="descname">Mecab</tt><big>(</big><em>dicpath='/usr/local/lib/mecab/dic/mecab-ko-dic'</em><big>)</big><a class="headerlink" href="#konlpy.tag.mecab.Mecab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for MeCab-ko morphological analyzer.</p>
+<p><a class="reference external" href="https://code.google.com/p/mecab/">MeCab</a>, originally a Japanese morphological analyzer and a POS tagger developed by the Graduate School of Informatics in Kyoto University, was modified to MeCab-ko by the <a class="reference external" href="http://eunjeon.blogspot.kr/">Eunjeon Project</a> to adapt to the Korean language.
+In order to use MeCab-ko within KoNLPy, follow the directions in <a class="reference internal" href="../install.html#optional-installations"><em>Optional installations</em></a>.:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">konlpy.tag</span> <span class="kn">import</span> <span class="n">Mecab</span> <span class="c"># MeCab installation needed</span>
+<span class="n">mecab</span> <span class="o">=</span> <span class="n">Mecab</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">mecab</span><span class="o">.</span><span class="n">pos</span><span class="p">(</span><span class="s">u&#39;자연주의 쇼핑몰은 어떤 곳인가?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dicpath</strong> &#8211; The path of the MeCab-ko dictionary.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="konlpy.tag.mecab.Mecab.pos">
+<tt class="descname">pos</tt><big>(</big><em>phrase</em>, <em>ntags=43</em><big>)</big><a class="headerlink" href="#konlpy.tag.mecab.Mecab.pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>POS tagger. The number of tags (ntags), can only be 43.</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="admonition-see-also admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1OGAjUvalBuX-oZvZ_-9tEfYD2gQe7hTGsgUpiiBSXI8/edit#gid=0">Korean POS tags comparison chart</a>
+    Compare POS tags between several projects.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/konlpy.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">tag Package</a><ul>
+<li><a class="reference internal" href="#module-konlpy.tag.hannanum"><tt class="docutils literal"><span class="pre">hannanum</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-konlpy.tag.mecab"><tt class="docutils literal"><span class="pre">mecab</span></tt> Module</a></li>
+</ul>
+</li>
+</ul>
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2014, Lucy Park.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-15 19:30\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../index.rst:7
+msgid "Welcome to KoNLPy's documentation!"
+msgstr "KoNLPy의 문서에 오신 것을 환영합니다!"
+
+#: ../../index.rst:9
+msgid "Contents:"
+msgstr "목차:"
+
+#: ../../index.rst:17
+msgid "Indices and tables"
+msgstr "인덱스 및 표"
+
+#: ../../index.rst:19
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../../index.rst:20
+msgid ":ref:`modindex`"
+msgstr ""
+
+#: ../../index.rst:21
+msgid ":ref:`search`"
+msgstr ""
