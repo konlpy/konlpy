@@ -1,7 +1,7 @@
 #! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
-from setuptools import setup
+from setuptools import find_packages, setup
 
 setup(name='konlpy',
     version='0.3-dev',
@@ -10,7 +10,7 @@ setup(name='konlpy',
     author='Lucy Park',
     author_email='me@lucypark.kr',
     license='Apache v2.0',
-    packages=['konlpy'],
+    packages=find_packages(),
     package_data={'konlpy': [
         'java/conf/plugin/*/*/*.json',
         'java/data/*/*',
