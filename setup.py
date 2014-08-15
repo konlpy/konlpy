@@ -3,6 +3,9 @@
 
 from setuptools import find_packages, setup
 
+with open('requirements.txt', 'r') as f:
+    requirements = f.read().splitlines()
+
 setup(name='konlpy',
     version='0.3-dev',
     description='Korean morpheme analyzer on Python',
@@ -17,8 +20,5 @@ setup(name='konlpy',
         'java/jhannanum-0.8.4.jar',
         'java/bin/kr/lucypark/jhannanum/*/*.class',
         'java/src/kr/lucypark/jhannanum/*/*.java']},
-    install_requires=[
-        'JPype1>=0.5.5.1',
-        'regex>=2014.02.19',
-    ],
+    install_requires=requirements,
     zip_safe=False)
