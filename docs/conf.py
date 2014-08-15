@@ -257,3 +257,13 @@ gettext_compact = False
 
 # github
 github_fork = 'e9t/konlpy'
+
+# [read the docs](read-the-docs.readthedocs.org/en/latest/faq.html)
+from unittest.mock import MagicMock
+
+class Mock(MagicMock):
+    @classmethod
+    def __getattr__(cls, name):
+        return Mock()
+
+sys.modules.update((mod, Mock() for mod in ['jpype'])
