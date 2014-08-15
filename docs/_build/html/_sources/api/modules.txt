@@ -1,7 +1,0 @@
-konlpy
-======
-
-.. toctree::
-   :maxdepth: 4
-
-   konlpy
