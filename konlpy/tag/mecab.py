@@ -2,10 +2,12 @@
 # -*- coding: utf-8 -*-
 
 import MeCab
-import utils
+from .. import utils
 
 
-# 참고: https://docs.google.com/spreadsheet/ccc?key=0ApcJghR6UMXxdEdURGY2YzIwb3dSZ290RFpSaUkzZ0E&usp=sharing#gid=6
+__all__ = ['Mecab']
+
+
 attrs = ['tags', # 품사 태그
          'semantic', # 의미 부류
          'has_jongsung', # 종성 유무
@@ -29,8 +31,24 @@ def parse(result, allattrs=False):
     return [split(elem, allattrs=False) for elem in elems[:-1]]
 
 class Mecab():
+    """Wrapper for MeCab-ko morphological analyzer.
+
+    `MeCab`_, originally a Japanese morphological analyzer and a POS tagger developed by the Graduate School of Informatics in Kyoto University, was modified to MeCab-ko by the `Eunjeon Project`_ to adapt to the Korean language.
+    In order to use MeCab-ko within KoNLPy, follow the directions in :ref:`optional-installations`.::
+
+        from konlpy.tag import Mecab # MeCab installation needed
+        mecab = Mecab()
+        print mecab.pos(u'자연주의 쇼핑몰은 어떤 곳인가?')
+
+    :param dicpath: The path of the MeCab-ko dictionary.
+
+    .. _MeCab: https://code.google.com/p/mecab/
+    .. _Eunjeon Project: http://eunjeon.blogspot.kr/
+    """
 
     def pos(self, phrase, ntags=43):
+        """POS tagger. The number of tags (ntags), can only be 43."""
+
         phrase = utils.preprocess(phrase).encode('utf-8')
         result = self.tagger.parse(phrase).decode('utf-8')
         return parse(result)
@@ -40,6 +58,7 @@ class Mecab():
             self.tagger = MeCab.Tagger('-d %s' % dicpath)
         except RuntimeError:
             raise Exception('Invalid MeCab dictionary path: "%s"\nInput the correct path when initiializing class: "Mecab(\'/some/dic/path\')"' % dicpath)
+
 
 if __name__=='__main__':
     from pprint import pprint

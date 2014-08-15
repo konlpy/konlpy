@@ -1,7 +1,8 @@
-from init_jvm import init_jvm
+__title__ = 'KoNLPy'
+__version__ = '0.3'
+__author__ = 'Lucy Park'
+__license__ = 'Apache 2.0'
+__copyright__ = 'Copyright 2014 Lucy Park'
 
-from hannanum import Hannanum
-try:
-    from mecab import Mecab
-except ImportError:
-    pass
+from .jvm import init_jvm
+from . import tag

@@ -6,9 +6,10 @@ import pytest
 
 @pytest.fixture
 def hannanum_instance():
-    import konlpy
-    konlpy.init_jvm()
-    h = konlpy.Hannanum()
+    from konlpy import init_jvm
+    from konlpy.tag import Hannanum
+    init_jvm()
+    h = Hannanum()
     return h
 
 @pytest.fixture

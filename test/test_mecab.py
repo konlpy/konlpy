@@ -6,8 +6,8 @@ import pytest
 
 @pytest.fixture
 def mecab_instance():
-    import konlpy
-    m = konlpy.Mecab()
+    from konlpy.tag import Mecab
+    m = Mecab()
     return m
 
 @pytest.fixture

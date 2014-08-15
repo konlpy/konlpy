@@ -4,7 +4,10 @@
 import re
 import jpype
 
-import utils
+from .. import utils
+
+
+__all__ = ['Hannanum']
 
 
 tag_re = ur'(.+?\/\w+)\+?'
@@ -27,17 +30,47 @@ def parse(result, flatten=False):
 
 
 class Hannanum():
+    """Wrapper for Hannanum morphological analyzer.
+
+    `Hannanum`_ is a morphological analyzer and a POS tagger written in Java, developed by the `Semantic Web Research Center (SWRC)`_ in KAIST since 1999.
+    It requires a JRE, and therefore requires the user to :py:func:`.init_jvm` e.g.
+
+    .. code-block:: python
+        :emphasize-lines: 4
+
+        from konlpy import init_jvm
+        from konlpy.tag import Hannanum
+
+        init_jvm()
+        hannanum = Hannanum()
+
+        print hannanum.morph(u'롯데마트의 흑마늘 양념 치킨이 논란이 되고 있다.')
+        print hannanum.pos(u'웃으면 더 행복합니다!')
+        print hannanum.nouns(u'다람쥐 헌 쳇바퀴에 타고파')
+
+    :param jvmpath: The path of the JVM. If left empty, inferred by jpype.getDefaultJVMPath().
+
+
+    .. _Hannanum: http://semanticweb.kaist.ac.kr/home/index.php/HanNanum
+    .. _Semantic Web Research Center (SWRC): http://semanticweb.kaist.ac.kr/
+    """
 
     def morph(self, phrase):
+        """Morphological analyzer."""
+
         phrase = utils.preprocess(phrase)
         result = self.jhi.morphAnalyzer(phrase)
         return parse(result)
 
     def nouns(self, phrase):
+        """Noun extractor."""
+
         phrase = utils.preprocess(phrase)
         return list(self.jhi.extractNoun(phrase))
 
     def pos(self, phrase, ntags=9):
+        """POS tagger. The number of tags (`ntags`), can be either 9 or 22."""
+
         phrase = utils.preprocess(phrase)
         if ntags==9:
             result = self.jhi.simplePos09(phrase)
