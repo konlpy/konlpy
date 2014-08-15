@@ -264,7 +264,3 @@ intersphinx_mapping = {'http://docs.python.org/': None}
 # i18n
 locale_dirs = ['locale']
 gettext_compact = False
-
-# github
-github_fork = 'e9t/konlpy'
-
