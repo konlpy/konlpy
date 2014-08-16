@@ -4,8 +4,14 @@ python:
     - "2.6"
     - "2.7"
 
+before_install:
+    - pip install -r requirements.txt
+
 install:
     - python setup.py -q install
+
+after_success:
+    - coveralls
 
 script:
     - py.test -k 'not mecab'
