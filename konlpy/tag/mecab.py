@@ -1,7 +1,10 @@
 #! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
-import MeCab
+try:
+    import MeCab
+except ImportError:
+    pass
 from .. import utils
 
 
@@ -56,6 +59,8 @@ class Mecab():
     def __init__(self, dicpath='/usr/local/lib/mecab/dic/mecab-ko-dic'):
         try:
             self.tagger = MeCab.Tagger('-d %s' % dicpath)
+        except NameError:
+            raise Exception('In order to use MeCab, please install it first.')
         except RuntimeError:
             raise Exception('Invalid MeCab dictionary path: "%s"\nInput the correct path when initiializing class: "Mecab(\'/some/dic/path\')"' % dicpath)
 
