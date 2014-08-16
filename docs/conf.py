@@ -263,4 +263,4 @@ intersphinx_mapping = {'http://docs.python.org/': None}
 
 # i18n
 locale_dirs = ['locale']
-gettext_compact = False
+gettext_compact = True

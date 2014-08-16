@@ -151,3 +151,12 @@ doctest:
 	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
+
+extract_i18n:
+	make html
+	make gettext
+	sphinx-intl update -p _build/locale -l ko
+
+update_i18n:
+	sphinx-intl build
+	make -e SPHINXOPTS="-D language='ko'" html
