@@ -2,12 +2,13 @@
 # -*- coding: utf-8 -*-
 
 from setuptools import find_packages, setup
+from konlpy import __version__
 
 with open('requirements.txt', 'r') as f:
     requirements = f.read().splitlines()
 
 setup(name='konlpy',
-    version='1.0',
+    version=__version__,
     description='Korean morpheme analyzer on Python',
     url='http://github.com/e9t/konlpy',
     author='Lucy Park',
