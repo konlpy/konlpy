@@ -18,7 +18,6 @@ tag Package
     :show-inheritance:
 
 .. seealso::
-    `Korean POS tags comparison chart`_
-        Compare POS tags between several projects.
+    `Korean POS tags comparison chart <https://docs.google.com/spreadsheets/d/1OGAjUvalBuX-oZvZ_-9tEfYD2gQe7hTGsgUpiiBSXI8/edit#gid=0>`_
 
-    .. _Korean POS tags comparison chart: https://docs.google.com/spreadsheets/d/1OGAjUvalBuX-oZvZ_-9tEfYD2gQe7hTGsgUpiiBSXI8/edit#gid=0
+        Compare POS tags between several Korean analytic projects. (In Korean)

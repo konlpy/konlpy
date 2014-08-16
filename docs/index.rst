@@ -11,8 +11,7 @@ KoNLPy: Korean NLP in Python
     :target: https://readthedocs.org/projects/konlpy/?badge=latest
     :height: 18px
 
-KoNLPy is a Python package for natural language processing of the Korean language. For installation directions, see :doc:`install`.
-
+KoNLPy is a Python package for natural language processing of the Korean language. For installation directions, see :doc:`here <install>`.
 
 Basic usage
 -----------
@@ -29,26 +28,19 @@ Basic usage
 
 For more on how to use KoNLPy, go see the :ref:`api`.
 
-
 License
 -------
 
-KoNLPy is `Apache 2.0`_ licensed.
+KoNLPy is `Apache 2.0 <http://opensource.org/licenses/Apache-2.0>`_ licensed.
 This means you are allowed to copy, modify and redistribute in both noncommercial and commercial means.
 However if possible, please denote the name of this package and the original author in your work.
-
-.. _Apache 2.0: http://opensource.org/licenses/Apache-2.0
-
 
 Contribute
 ----------
 
 Found a bug? Have a good idea for improving KoNLPy?
-Visit the `KoNLPy GitHub page`_ and `suggest a new issue`_ or `make a pull request`_.
+Visit the `KoNLPy GitHub page <https://github.com/e9t/konlpy>`_ and `suggest a new issue <https://github.com/e9t/konlpy/issues>`_ or `make a pull request <https://github.com/e9t/konlpy/pulls>`_.
 
-.. _KoNLPy GitHub page: https://github.com/e9t/konlpy
-.. _suggest a new issue: https://github.com/e9t/konlpy/issues
-.. _make a pull request: https://github.com/e9t/konlpy/pulls
 
 
 User guide
@@ -61,6 +53,7 @@ User guide
 
 .. _api:
 
+
 API
 ===
 
@@ -68,6 +61,7 @@ API
   :glob:
 
   api/konlpy
+
 
 Indices and tables
 ==================
