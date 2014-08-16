@@ -2,7 +2,10 @@
 # -*- coding: utf-8 -*-
 
 import re
-import jpype
+try:
+    import jpype
+except ImportError:
+    pass
 
 from .. import utils
 

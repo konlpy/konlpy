@@ -3,6 +3,7 @@
 *.log
 *.project
 *.pyc
+*.mo
 build/
 dist/
 docs/_build/

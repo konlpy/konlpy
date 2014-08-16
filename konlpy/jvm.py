@@ -3,7 +3,10 @@
 
 import logging
 import os
-import jpype
+try:
+    import jpype
+except ImportError:
+    pass
 
 
 def init_jvm(jvmpath=None):
