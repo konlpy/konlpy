@@ -7,7 +7,7 @@ with open('requirements.txt', 'r') as f:
     requirements = f.read().splitlines()
 
 setup(name='konlpy',
-    version='0.3',
+    version='1.0',
     description='Korean morpheme analyzer on Python',
     url='http://github.com/e9t/konlpy',
     author='Lucy Park',
