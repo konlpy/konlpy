@@ -14,4 +14,4 @@ after_success:
     - coveralls
 
 script:
-    - py.test -k 'not mecab' --cov konlpy test/
+    - coverage run -m py.test -k 'not mecab'
