@@ -187,7 +187,9 @@ htmlhelp_basename = 'KoNLPydoc'
 
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
+'papersize': 'a4paper',
+'classoptions': ',openany,oneside',
+'babel': '\\usepackage[english]{babel}',
 
 # The font size ('10pt', '11pt' or '12pt').
 #'pointsize': '10pt',
@@ -199,8 +201,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'KoNLPy.tex', u'KoNLPy Documentation',
-   u'Lucy Park', 'manual'),
+  ('index', 'KoNLPy.tex', u'KoNLPy Documentation', u'Lucy Park', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -209,7 +210,7 @@ latex_logo = '_static/konlpy.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
-latex_use_parts = True
+latex_use_parts = False
 
 # If true, show page references after internal links.
 latex_show_pagerefs = True
@@ -229,8 +230,7 @@ latex_show_urls = True
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'konlpy', u'KoNLPy Documentation',
-     [u'Lucy Park'], 1)
+    ('index', 'konlpy', u'KoNLPy Documentation', [u'Lucy Park'], 1)
 ]
 
 # If true, show URL addresses after external links.

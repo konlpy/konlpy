@@ -37,6 +37,7 @@ class Mecab():
     """Wrapper for MeCab-ko morphological analyzer.
 
     `MeCab`_, originally a Japanese morphological analyzer and a POS tagger developed by the Graduate School of Informatics in Kyoto University, was modified to MeCab-ko by the `Eunjeon Project`_ to adapt to the Korean language.
+
     In order to use MeCab-ko within KoNLPy, follow the directions in :ref:`optional-installations`.
 
     .. code-block:: python
