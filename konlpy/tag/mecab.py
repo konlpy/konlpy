@@ -37,9 +37,14 @@ class Mecab():
     """Wrapper for MeCab-ko morphological analyzer.
 
     `MeCab`_, originally a Japanese morphological analyzer and a POS tagger developed by the Graduate School of Informatics in Kyoto University, was modified to MeCab-ko by the `Eunjeon Project`_ to adapt to the Korean language.
-    In order to use MeCab-ko within KoNLPy, follow the directions in :ref:`optional-installations`.::
+    In order to use MeCab-ko within KoNLPy, follow the directions in :ref:`optional-installations`.
 
-        from konlpy.tag import Mecab # MeCab installation needed
+    .. code-block:: python
+        :emphasize-lines: 2
+
+        from konlpy.tag import Mecab
+        # MeCab installation needed
+
         mecab = Mecab()
         print mecab.pos(u'자연주의 쇼핑몰은 어떤 곳인가?')
 
@@ -49,8 +54,8 @@ class Mecab():
     .. _Eunjeon Project: http://eunjeon.blogspot.kr/
     """
 
-    def pos(self, phrase, ntags=43):
-        """POS tagger. The number of tags (ntags), can only be 43."""
+    def pos(self, phrase):
+        """POS tagger."""
 
         phrase = utils.preprocess(phrase).encode('utf-8')
         result = self.tagger.parse(phrase).decode('utf-8')
