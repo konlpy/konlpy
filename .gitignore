@@ -1,9 +1,9 @@
 *.classpath
+*.coverage
 *.egg-info/
 *.log
 *.project
 *.pyc
-*.mo
 build/
 dist/
 docs/_build/
