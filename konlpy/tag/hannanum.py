@@ -7,6 +7,7 @@ try:
 except ImportError:
     pass
 
+from .. import jvm
 from .. import utils
 
 
@@ -33,29 +34,20 @@ def parse(result, flatten=False):
 
 
 class Hannanum():
-    """Wrapper for Hannanum morphological analyzer.
+    """Wrapper for `JHannanum <http://semanticweb.kaist.ac.kr/home/index.php/HanNanum>`_.
 
-    `Hannanum`_ is a morphological analyzer and a POS tagger written in Java, developed by the `Semantic Web Research Center (SWRC)`_ in KAIST since 1999.
-    It requires a JRE, and therefore requires the user to :py:func:`.init_jvm` e.g.
+    JHannanum is a morphological analyzer and POS tagger written in Java, and developed by the `Semantic Web Research Center (SWRC) <http://semanticweb.kaist.ac.kr/>`_ at KAIST since 1999.
 
     .. code-block:: python
-        :emphasize-lines: 4
 
-        from konlpy import init_jvm
         from konlpy.tag import Hannanum
 
-        init_jvm()
         hannanum = Hannanum()
-
         print hannanum.morph(u'롯데마트의 흑마늘 양념 치킨이 논란이 되고 있다.')
         print hannanum.pos(u'웃으면 더 행복합니다!')
         print hannanum.nouns(u'다람쥐 헌 쳇바퀴에 타고파')
 
-    :param jvmpath: The path of the JVM. If left empty, inferred by jpype.getDefaultJVMPath().
-
-
-    .. _Hannanum: http://semanticweb.kaist.ac.kr/home/index.php/HanNanum
-    .. _Semantic Web Research Center (SWRC): http://semanticweb.kaist.ac.kr/
+    :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
     """
 
     def morph(self, phrase):
@@ -84,6 +76,9 @@ class Hannanum():
         return parse(result, flatten=True)
 
     def __init__(self, jvmpath=None):
+        if not jpype.isJVMStarted():
+            jvm.init_jvm(jvmpath)
+
         jhannanumJavaPackage = jpype.JPackage('kr.lucypark.jhannanum.comm')
         HannanumInterfaceJavaClass = jhannanumJavaPackage.HannanumInterface
         self.jhi = HannanumInterfaceJavaClass() # Java instance
