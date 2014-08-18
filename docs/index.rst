@@ -18,10 +18,8 @@ Basic usage
 
 .. sourcecode:: python
 
-    from konlpy import init_jvm
     from konlpy.tag import Hannanum
 
-    init_jvm()
     hannanum = Hannanum()
     print hannanum.pos(u'웃으면 더 행복합니다!')
     print hannanum.nouns(u'다람쥐 헌 쳇바퀴에 타고파')
@@ -31,9 +29,10 @@ For more on how to use KoNLPy, go see the :ref:`api`.
 License
 -------
 
-KoNLPy is `Apache 2.0 <http://opensource.org/licenses/Apache-2.0>`_ licensed.
-This means you are allowed to copy, modify and redistribute in both noncommercial and commercial means.
-However if possible, please denote the name of this package and the original author in your work.
+The majority of KoNLPy is `Apache v2.0 <http://opensource.org/licenses/Apache-2.0>`_ licensed.
+This means you are allowed to copy, modify and redistribute most parts of the package in both noncommercial and commercial means.
+
+However, please note that the :py:mod:`.hannanum`, :py:mod:`.kkma` modules are copylefted, and each are licensed GPL3, GPL2, according to the original license. [#]_ All other parts of the package are free to use.
 
 Contribute
 ----------
@@ -48,6 +47,7 @@ User guide
 
 .. toctree::
   :glob:
+  :maxdepth: 2
 
   install
 
@@ -69,3 +69,5 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+.. [#] The original JHannanum and Kkma projects are licensed `GPL v3 or above <http://gnu.org/licenses/gpl.html>`_, `GPL v2 <http://www.gnu.org/licenses/gpl-2.0.html>`_, respectively.
