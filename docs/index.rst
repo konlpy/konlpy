@@ -18,11 +18,12 @@ Basic usage
 
 .. sourcecode:: python
 
-    from konlpy.tag import Hannanum
+    from konlpy.tag import Kkma
 
-    hannanum = Hannanum()
-    print hannanum.pos(u'웃으면 더 행복합니다!')
-    print hannanum.nouns(u'다람쥐 헌 쳇바퀴에 타고파')
+    kkma = Kkma()
+    print kkma.sentences(u'저는 대학생이구요. 소프트웨어 관련학과 입니다.')
+    print kkma.nouns(u'대학에서 DB, 통계학, 이산수학 등을 배웠지만...')
+    print kkma.pos(u'자주 사용을 안하다보니 모두 까먹은 상태입니다.')
 
 For more on how to use KoNLPy, go see the :ref:`api`.
 
