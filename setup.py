@@ -18,8 +18,8 @@ setup(name='konlpy',
     package_data={'konlpy': [
         'java/conf/plugin/*/*/*.json',
         'java/data/*/*',
-        'java/jhannanum-0.8.4.jar',
-        'java/bin/kr/lucypark/jhannanum/*/*.class',
-        'java/src/kr/lucypark/jhannanum/*/*.java']},
+        'java/jhannanum-0.8.4.jar', 'java/bin/kr/lucypark/jhannanum/*/*.class',
+        'java/kkma-2.0.jar', 'java/bin/kr/lucypark/kkma/*.class',
+        ]},
     install_requires=requirements,
     zip_safe=False)

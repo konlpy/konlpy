@@ -1,10 +1,23 @@
 tag Package
 ===========
 
+
+.. note::
+    Initial runs of each class method may require some time to load dictionaries (< 1 *min*). Second runs should be faster.
+
+
 :mod:`hannanum` Module
 ----------------------
 
 .. automodule:: konlpy.tag.hannanum
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+:mod:`kkma` Module
+----------------------
+
+.. automodule:: konlpy.tag.kkma
     :members:
     :undoc-members:
     :show-inheritance:
