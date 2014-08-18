@@ -18,9 +18,12 @@ replace_set = [
         (u'」', u'>')] # \u300d
 
 def concat(phrase):
+    """Concatenates lines into a unified string."""
     return phrase.replace(os.linesep, ' ')
 
 def select(phrase):
+    """Replaces some ambiguous punctuation marks to simpler ones."""
+    # TODO: document replacements
     # TODO: do not replace unless explicitly noticed
     # TODO: add 'only hangul' option
     for a, b in replace_set:
@@ -28,15 +31,38 @@ def select(phrase):
     return phrase
 
 def preprocess(phrase):
+    """Preprocesses a phrase in the following steps:.
+
+    - :py:func:`.concat`
+    """
     return select(concat(phrase))
 
 def char2hex(c):
-    # u'음' -> '0xc74c'
+    """Converts a unicode character to hex.
+
+    .. code-block:: python
+
+        >>> char2hex(u'음')
+        '0xc74c'
+    """
     return hex(ord(c))
 
 def hex2char(h):
-    # 'c74c' or '0xc74c' -> u'음'
+    """Converts a hex character to unicode.
+
+    .. code-block:: python
+
+        >>> print hex2char('c74c')
+        음
+        >>> print hex2char('0xc74c')
+        음
+    """
     return unichr(int(h, 16))
 
 def partition(list_, indices):
+    """Partitions a list to several parts using indices.
+
+    :param list_: The target list.
+    :param indices: Indices to partition the target list.
+    """
     return [list_[i:j] for i, j in zip([0]+indices, indices+[None])]
