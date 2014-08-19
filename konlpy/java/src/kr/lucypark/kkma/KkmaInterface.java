@@ -2,6 +2,8 @@ package kr.lucypark.kkma;
 
 /* Copyright 2014 Lucy Park <me@lucypark.kr> */
 
+import java.io.OutputStream;
+import java.io.PrintStream;
 import java.util.List;
 
 import org.snu.ids.ha.index.Keyword;
@@ -15,6 +17,8 @@ import org.snu.ids.ha.ma.Sentence;
 public class KkmaInterface {
 
     public List<Sentence> morphAnalyzer(String phrase) throws Exception {
+        System.setOut(new PrintStream(new OutputStream() {
+            public void write(int b) {}}){});
         MorphemeAnalyzer ma = new MorphemeAnalyzer();
         List<MExpression> ret = ma.analyze(phrase);
         ret = ma.postProcess(ret);
@@ -24,6 +28,8 @@ public class KkmaInterface {
     }
 
     public KeywordList extractNoun(String phrase) {
+        System.setOut(new PrintStream(new OutputStream() {
+            public void write(int b) {}}){});
         KeywordExtractor ke = new KeywordExtractor();
         KeywordList kl = ke.extractKeyword(phrase, true);
         return kl;
