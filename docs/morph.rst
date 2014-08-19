@@ -1,11 +1,12 @@
-Morphological analysis
-======================
+Morphological analysis and POS tagging
+======================================
 
 *Morphological analysis* is the identification of the structure of morphemes and other linguistic units, such as root words, affixes, or parts of speech. For example.::
 
     가방에 들어가신다 -> 가방/NNG + 에/JKM + 들어가/VV + 시/EPH + ㄴ다/EFN
 
-In KoNLPy, both ``morph`` and ``pos`` methods of each module in the :doc:`api/konlpy.tag` are eligible for this task, with ``morph`` being more verbose.
+*POS (part-of-speech) tagging* is the process of marking up a word in a phrase, based on its definition, as well as its context.
+
 
 Comparison between modules
 --------------------------
