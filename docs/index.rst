@@ -35,6 +35,8 @@ This means you are allowed to copy, modify and redistribute most parts of the pa
 
 However, please note that the :py:mod:`.hannanum`, :py:mod:`.kkma` modules are copylefted, and each are licensed GPL3, GPL2, according to the original license. [#]_ All other parts of the package are free to use.
 
+Additionally, the document for KoNLPy (this page you are reading) is licensed CC 4.0-by. You can copy, modify and redistribute freely, as long as you mention the author.
+
 Contribute
 ----------
 
@@ -51,6 +53,7 @@ User guide
   :maxdepth: 2
 
   install
+  morph
   examples
   test
 
