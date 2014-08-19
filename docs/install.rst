@@ -23,7 +23,7 @@ or
 
 .. sourcecode:: bash
 
-    $ git clone git@github.com:e9t/konlpy.git
+    $ git clone https://github.com/e9t/konlpy.git
     $ cd konlpy
     $ python setup.py install
 
