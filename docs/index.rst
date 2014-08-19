@@ -51,6 +51,8 @@ User guide
   :maxdepth: 2
 
   install
+  examples
+  test
 
 .. _api:
 

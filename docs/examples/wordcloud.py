@@ -6,9 +6,9 @@ import urllib
 import random
 import webbrowser
 
-import konlpy
+from konlpy.tag import Hannanum
 from lxml import html
-import pytagcloud
+import pytagcloud # requires Korean font support
 
 
 r = lambda: random.randint(0,255)
@@ -21,7 +21,8 @@ def get_bill_text(billnum):
     text = page.xpath(".//div[@id='bill-sections']/pre/text()")[0]
     return text
 
-def get_tags(text, h, ntags=50, multiplier=10):
+def get_tags(text, ntags=50, multiplier=10):
+    h = Hannanum()
     nouns = h.nouns(text)
     count = Counter(nouns)
     return [{ 'color': color(), 'tag': n, 'size': c*multiplier }\
@@ -31,7 +32,9 @@ def draw_cloud(tags, filename, fontname='Noto Sans CJK', size=(800, 600)):
     pytagcloud.create_tag_image(tags, filename, fontname=fontname, size=size)
     webbrowser.open(filename)
 
-konlpy.init_jvm()
-text = get_bill_text('1904882')
-tags = get_tags(text, konlpy.Hannanum())
+
+bill_num = '1904882'
+text = get_bill_text(bill_num)
+tags = get_tags(text)
+print tags
 draw_cloud(tags, 'wordcloud.png')
