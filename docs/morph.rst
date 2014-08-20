@@ -3,7 +3,7 @@ Morphological analysis and POS tagging
 
 *Morphological analysis* is the identification of the structure of morphemes and other linguistic units, such as root words, affixes, or parts of speech.
 
-*POS (part-of-speech) tagging* is the process of marking up a word in a phrase, based on its definition, as well as its context.
+*POS (part-of-speech) tagging* is the process of marking up terms in a phrase, based on their definitions, as well as contexts.
 For example.::
 
     가방에 들어가신다 -> 가방/NNG + 에/JKM + 들어가/VV + 시/EPH + ㄴ다/EFN

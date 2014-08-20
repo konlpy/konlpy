@@ -5,8 +5,8 @@ KoNLPy is not registered in PyPI yet.
 Please install from source until further notice.
 
 - Requirements
-    - Python 2.x
-    - JRE 1.7
+    - Python 2.6 or higher
+    - JRE 1.7 or higher
 
 
 Linux

@@ -11,10 +11,8 @@ KoNLPy: Korean NLP in Python
     :target: https://readthedocs.org/projects/konlpy/?badge=latest
     :height: 18px
 
-KoNLPy is a Python package for natural language processing of the Korean language. For installation directions, see :doc:`here <install>`.
-
-Basic usage
------------
+KoNLPy is a Python package for natural language processing (NLP) of the Korean language.
+For installation directions, see :doc:`here <install>`.
 
 .. sourcecode:: python
 
@@ -27,22 +25,35 @@ Basic usage
 
 For more on how to use KoNLPy, go see the :ref:`api`.
 
+Standing on the shoulders of giants
+-----------------------------------
+
+Korean, the `13th most widely spoken language in the world <http://www.koreatimes.co.kr/www/news/nation/2014/05/116_157214.html>`_, is a beautiful, yet complex language.
+Myriad :doc:`engines` were built by numerous researchers, to computationally extract meaningful features from the labyrinthine text.
+
+KoNLPy is not just to create another, but to unify and build upon their shoulders, and see one step further.
+It is built particularly in the `Python (programming) language <http://python.org>`_, not only because of its its simplicity and elegance, but its powerful string processing modules and applicability to various tasks - including crawling, Web programming, and data analysis.
+
+The three philosophies this project aims to keep are:
+
+- Keep it simple.
+- Make it easy. [#]_
+- `"Democracy on the web works." <https://github.com/e9t/konlpy>`_
+
+Please `report <me@lucypark.kr>`_ when you think any have gone stale.
+
 License
 -------
 
-The majority of KoNLPy is `Apache v2.0 <http://opensource.org/licenses/Apache-2.0>`_ licensed.
-This means you are allowed to copy, modify and redistribute most parts of the package in both noncommercial and commercial means.
-
-However, please note that the :py:mod:`.hannanum`, :py:mod:`.kkma` modules are copylefted, and each are licensed GPL3, GPL2, according to the original license. [#]_ All other parts of the package are free to use.
-
-Additionally, the document for KoNLPy (this page you are reading) is licensed CC 4.0-by. You can copy, modify and redistribute freely, as long as you mention the author.
+- `GPL v3 or above <http://gnu.org/licenses/gpl.html>`_ [#]_
 
 Contribute
 ----------
 
-Found a bug? Have a good idea for improving KoNLPy?
-Visit the `KoNLPy GitHub page <https://github.com/e9t/konlpy>`_ and `suggest a new issue <https://github.com/e9t/konlpy/issues>`_ or `make a pull request <https://github.com/e9t/konlpy/pulls>`_.
+KoNLPy isn't perfect, but it will continuously evolve and you are invited to participate!
 
+Found a bug? Have a good idea for improving KoNLPy?
+Visit the `KoNLPy GitHub page <https://github.com/e9t/konlpy>`_ and `suggest an idea <https://github.com/e9t/konlpy/issues>`_ or `make a pull request <https://github.com/e9t/konlpy/pulls>`_.
 
 
 User guide
@@ -54,11 +65,11 @@ User guide
 
   install
   morph
+  data
   examples
   test
 
 .. _api:
-
 
 API
 ===
@@ -75,5 +86,8 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+* :doc:`changelog`
 
-.. [#] The original JHannanum and Kkma projects are licensed `GPL v3 or above <http://gnu.org/licenses/gpl.html>`_, `GPL v2 <http://www.gnu.org/licenses/gpl-2.0.html>`_, respectively.
+
+.. [#] With `clear and brief <http://echojuliett.tumblr.com/post/32108001510/clarity-brevity>`_ documents.
+.. [#] No, I'm not extremely fond of this either. However, some important depedencies - such as Hannanum, Kkma, MeCab-ko - are GPL licensed, so we wanted to honor their licenses. (Though it was also an inevitable choice. We hope this may change in the future.)

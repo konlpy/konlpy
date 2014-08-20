@@ -16,3 +16,4 @@ To perform a test, enter the code below.
 
     - Ubuntu 12.04 with openjdk-7-jdk
     - Ubuntu 13.10 with openjdk-7-jdk
+    - Window 7 with Sun/Oracle JDK 1.7.0

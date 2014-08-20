@@ -51,7 +51,9 @@ class Hannanum():
     """
 
     def morph(self, phrase):
-        """Morphological analyzer."""
+        """Morphological analyzer.
+
+        This analyzer consists of two parts: 1) Dictionary search (chart), 2) Unclassified term segmentation."""
 
         phrase = utils.preprocess(phrase)
         result = self.jhi.morphAnalyzer(phrase)
@@ -64,7 +66,11 @@ class Hannanum():
         return list(self.jhi.extractNoun(phrase))
 
     def pos(self, phrase, ntags=9):
-        """POS tagger. The number of tags (`ntags`), can be either 9 or 22."""
+        """POS tagger.
+
+        This tagger is HMM based, and calculates the probability of tags.
+
+        :param ntags: The number of tags. It can be either 9 or 22."""
 
         phrase = utils.preprocess(phrase)
         if ntags==9:
