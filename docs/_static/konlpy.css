@@ -3,3 +3,7 @@
 body {
     font-family: Georgia, serif;
 }
+
+td.class {
+    width: 25px;
+}
