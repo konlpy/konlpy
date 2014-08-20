@@ -13,11 +13,7 @@ table.docutils {
 }
 
 table.footnote {
-    margin: 10px 0;
-}
-
-table.footnote:nth-of-type(1) {
-    margin: 50px 0 10px;
+    margin: 10px 0 -11px;
 }
 
 table.footnote td.label {
