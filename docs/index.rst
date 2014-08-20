@@ -29,7 +29,7 @@ Standing on the shoulders of giants
 -----------------------------------
 
 Korean, the `13th most widely spoken language in the world <http://www.koreatimes.co.kr/www/news/nation/2014/05/116_157214.html>`_, is a beautiful, yet complex language.
-Myriad :doc:`engines` were built by numerous researchers, to computationally extract meaningful features from the labyrinthine text.
+Myriad :ref:`engines` were built by numerous researchers, to computationally extract meaningful features from the labyrinthine text.
 
 KoNLPy is not just to create another, but to unify and build upon their shoulders, and see one step further.
 It is built particularly in the `Python (programming) language <http://python.org>`_, not only because of its its simplicity and elegance, but its powerful string processing modules and applicability to various tasks - including crawling, Web programming, and data analysis.
@@ -68,6 +68,7 @@ User guide
   data
   examples
   test
+  references
 
 .. _api:
 
