@@ -11,6 +11,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+from datetime import datetime
 import sys, os
 
 # [read the docs](read-the-docs.readthedocs.org/en/latest/faq.html)
@@ -53,7 +54,11 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'KoNLPy'
-copyright = u'2014, Lucy Park'
+author = u'Lucy Park'
+author_url = u'http://lucypark.kr'
+curyear = datetime.today().year
+
+copyright = u'%s, <a href="%s">%s</a>' % (curyear, author_url, author)
 url = u'http://konlpy.readthedocs.org'
 
 # The version info for the project you're documenting, acts as replacement for
