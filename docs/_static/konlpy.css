@@ -4,6 +4,18 @@ body {
     font-family: Georgia, serif;
 }
 
-td.class {
+.first {
+    margin: 0;
+}
+
+table.docutils {
+    margin: 15px 0;
+}
+
+table.footnote {
+    margin: 10px 0;
+}
+
+table.footnote td.label {
     width: 25px;
 }
