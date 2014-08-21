@@ -36,6 +36,7 @@ class Kkma():
 
         phrase = utils.preprocess(phrase)
         nouns = self.jki.extractNoun(phrase)
+        if not nouns: return []
         return [nouns.get(i).getString() for i in range(nouns.size())]
 
     def pos(self, phrase):
@@ -44,6 +45,7 @@ class Kkma():
         phrase = utils.preprocess(phrase)
         sentences = self.jki.morphAnalyzer(phrase)
         morphemes = []
+        if not sentences: return morphemes
 
         for i in range(sentences.size()):
             sentence = sentences.get(i)
@@ -60,6 +62,7 @@ class Kkma():
 
         phrase = utils.preprocess(phrase)
         sentences = self.jki.morphAnalyzer(phrase)
+        if not sentences: return []
         return [sentences.get(i).getSentence() for i in range(sentences.size())]
 
 

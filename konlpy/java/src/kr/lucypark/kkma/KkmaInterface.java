@@ -17,8 +17,9 @@ import org.snu.ids.ha.ma.Sentence;
 public class KkmaInterface {
 
     public List<Sentence> morphAnalyzer(String phrase) throws Exception {
-        System.setOut(new PrintStream(new OutputStream() {
-            public void write(int b) {}}){});
+        if (phrase == null || phrase == "" || phrase.length()==0) { return null; }
+        System.setOut(new PrintStream(new OutputStream() { public void write(int b) {}}){});
+
         MorphemeAnalyzer ma = new MorphemeAnalyzer();
         List<MExpression> ret = ma.analyze(phrase);
         ret = ma.postProcess(ret);
@@ -28,8 +29,9 @@ public class KkmaInterface {
     }
 
     public KeywordList extractNoun(String phrase) {
-        System.setOut(new PrintStream(new OutputStream() {
-            public void write(int b) {}}){});
+        if (phrase == null || phrase == "" || phrase.length()==0) {return null; }
+        System.setOut(new PrintStream(new OutputStream() { public void write(int b) {}}){});
+
         KeywordExtractor ke = new KeywordExtractor();
         KeywordList kl = ke.extractKeyword(phrase, true);
         return kl;

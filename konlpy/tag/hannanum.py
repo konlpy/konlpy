@@ -21,6 +21,8 @@ def parse(result, flatten=False):
         return [tuple(u.rsplit('/', 1))\
                     for u in re.findall(tag_re, opt.strip())]
 
+    if not result: return []
+
     elems = result.strip().splitlines()
     index = [i for i, e in enumerate(elems) if not e]
     parts = utils.partition(elems, index)

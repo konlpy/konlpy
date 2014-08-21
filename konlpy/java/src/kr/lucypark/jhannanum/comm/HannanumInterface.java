@@ -8,6 +8,7 @@ import java.util.List;
 
 import kr.ac.kaist.swrc.jhannanum.comm.Eojeol;
 import kr.ac.kaist.swrc.jhannanum.comm.Sentence;
+import kr.ac.kaist.swrc.jhannanum.exception.ResultTypeException;
 import kr.ac.kaist.swrc.jhannanum.hannanum.Workflow;
 import kr.lucypark.jhannanum.hannanum.WorkflowFactory;
 
@@ -18,7 +19,8 @@ public class HannanumInterface {
     private Workflow wfPos09 = null;
     private Workflow wfPos22 = null;
 
-    public String morphAnalyzer(String phrase) throws Exception {
+    public String morphAnalyzer(String phrase) {
+        if (phrase == null || phrase == "" || phrase.length()==0) { return null; }
         if (wfMorph == null) {
             wfMorph = WorkflowFactory.getPredefinedWorkflow(WorkflowFactory.WORKFLOW_MORPH_ANALYZER);
             try {
@@ -37,8 +39,11 @@ public class HannanumInterface {
         return morphs;
     }
 
-    public String[] extractNoun(String phrase) throws Exception {
-
+    public String[] extractNoun(String phrase) throws ResultTypeException {
+        if (phrase == null || phrase == "" || phrase.length()==0) {
+            String[] tmp = new String[] {""};
+            return tmp;
+        }
         if (wfNoun == null) {
             wfNoun = WorkflowFactory.getPredefinedWorkflow(WorkflowFactory.WORKFLOW_NOUN_EXTRACTOR);
             try {
@@ -70,6 +75,7 @@ public class HannanumInterface {
     }
 
     public String simplePos09(String phrase) {
+        if (phrase == null || phrase == "" || phrase.length()==0) { return null; }
         if (wfPos09 == null) {
             wfPos09 = WorkflowFactory.getPredefinedWorkflow(WorkflowFactory.WORKFLOW_HMM_POS_TAGGER_09);
             try {
@@ -89,6 +95,7 @@ public class HannanumInterface {
     }
 
     public String simplePos22(String phrase) {
+        if (phrase == null || phrase == "" || phrase.length()==0) { return null; }
         if (wfPos22 == null) {
             wfPos22 = WorkflowFactory.getPredefinedWorkflow(WorkflowFactory.WORKFLOW_HMM_POS_TAGGER_22);
             try {
@@ -111,17 +118,17 @@ public class HannanumInterface {
         HannanumInterface hi = new HannanumInterface();
 
         // Test morphAnalyzer
-        String morphs = hi.morphAnalyzer("성긴털제비꽃은 근무중이다.");
+        String morphs = hi.morphAnalyzer(null);
         System.out.println(morphs);
 
         // Test extractNoun
-        String[] nouns = hi.extractNoun("성긴털제비꽃은 근무중이다.");
+        String[] nouns = hi.extractNoun("");
         for (int i=0; i<nouns.length; i++) {
             System.out.println(nouns[i]);
         }
 
         // Test SimplePOS
-        String pos09 = hi.simplePos09("성긴털제비꽃은 근무중이다.");
+        String pos09 = hi.simplePos09(null);
         System.out.println(pos09);
         String pos22 = hi.simplePos22("성긴털제비꽃은 근무중이다.");
         System.out.println(pos22);
