@@ -4,7 +4,7 @@ Change logs
 `Version 0.3 <https://github.com/e9t/konlpy/releases/tag/v0.3>`_
 ----------------------------------------------------------------
 
-Not released yet.
+Released on Aug 22, 2014.
 
 - Changed API by automatically initializing JVM for Hannanum, Kkma
 - Added Kkma module with Kkma 2.0

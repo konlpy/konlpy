@@ -1,9 +1,9 @@
 Drawing a Word cloud
 ====================
 
-Below shows a code example that crawls a National Assembly bill from the web, extract nouns and draws a word cloud.
+Below shows a code example that crawls a National Assembly bill from the web, extract nouns and draws a word cloud - from head to tail in Python.
 
-You change the bill number (i.e., ``bill_num``), and see how the clouds differ per bill.
+You can change the bill number (i.e., ``bill_num``), and see how the word clouds differ per bill.
 (ex: '1904882', '1904883', 'ZZ19098', etc)
 
 .. literalinclude:: wordcloud.py
