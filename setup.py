@@ -9,11 +9,34 @@ with open('requirements.txt', 'r') as f:
 
 setup(name='konlpy',
     version=__version__,
-    description='Korean morpheme analyzer on Python',
-    url='http://github.com/e9t/konlpy',
+    description='Python package for Korean natural language processing.',
+    long_description = """\
+Korean, the 13th most widely spoken language in the world, is a beautiful, yet complex language. Myriad Korean NLP engines were built by numerous researchers, to computationally extract meaningful features from the labyrinthine text.
+
+KoNLPy is not just to create another, but to unify and build upon their shoulders, and see one step further. It is built particularly in the Python (programming) language, not only because of its its simplicity and elegance, but its powerful string processing modules and applicability to various tasks - including crawling, Web programming, and data analysis.""",
+    url='http://konlpy.readthedocs.org',
     author='Lucy Park',
     author_email='me@lucypark.kr',
-    license='Apache v2.0',
+    keywords = ['NLP', 'natural language processing',
+                'CL', 'computational linguistics',
+                'tagging', 'tokenizing', 'linguistics', 'text analytics'],
+    classifiers = [
+        'Intended Audience :: Developers',
+        'Intended Audience :: Education',
+        'Intended Audience :: Information Technology',
+        'Intended Audience :: Science/Research',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+        'Topic :: Scientific/Engineering',
+        'Topic :: Scientific/Engineering :: Artificial Intelligence',
+        'Topic :: Scientific/Engineering :: Human Machine Interfaces',
+        'Topic :: Scientific/Engineering :: Information Analysis',
+        'Topic :: Text Processing',
+        'Topic :: Text Processing :: Filters',
+        'Topic :: Text Processing :: General',
+        'Topic :: Text Processing :: Indexing',
+        'Topic :: Text Processing :: Linguistic',
+        ],
     packages=find_packages(),
     package_data={'konlpy': [
         'data/*/*.txt',
