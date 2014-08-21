@@ -1,7 +1,7 @@
 Changelog
 =========
 
-`Version 0.3 <https://github.com/e9t/konlpy/releases/tag/v0.1>`_
+`Version 0.3 <https://github.com/e9t/konlpy/releases/tag/v0.3>`_
 ----------------------------------------------------------------
 
 Not released yet.
@@ -9,13 +9,15 @@ Not released yet.
 - Changed API by automatically initializing JVM for Hannanum, Kkma
 - Added Kkma module with Kkma 2.0
 - Added documents using Sphinx and Read the Docs
-- Include license: GPL v3 or above
+- Added license: GPL v3 or above
+- Added noun extractor to Mecab
+- Fixed Hannanum, Kkma module bug where it couldn't handle empty input strings
 
 .. warning::
 
     The versions below do not have documents available, and are not backwards-compatible.
 
-`Version 0.2 <https://github.com/e9t/konlpy/releases/tag/v0.1>`_
+`Version 0.2 <https://github.com/e9t/konlpy/releases/tag/v0.2>`_
 ----------------------------------------------------------------
 
 Released on Aug 1, 2014.

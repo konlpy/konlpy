@@ -1,6 +1,5 @@
 #! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
-
 try:
     from MeCab import Tagger
 except ImportError:
@@ -48,6 +47,7 @@ class Mecab():
 
         mecab = Mecab()
         print mecab.pos(u'자연주의 쇼핑몰은 어떤 곳인가?')
+        print mecab.nouns(u'우리나라에는 무릎 치료를 잘하는 정형외과가 없는가!')
 
     :param dicpath: The path of the MeCab-ko dictionary.
 
@@ -61,6 +61,13 @@ class Mecab():
         phrase = utils.preprocess(phrase).encode('utf-8')
         result = self.tagger.parse(phrase).decode('utf-8')
         return parse(result)
+
+    def nouns(self, phrase):
+        """Noun extractor."""
+
+        tagged = self.pos(phrase)
+        return [s for s, t in tagged if t.startswith('N')]
+
 
     def __init__(self, dicpath='/usr/local/lib/mecab/dic/mecab-ko-dic'):
         try:
