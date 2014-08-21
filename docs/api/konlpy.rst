@@ -24,4 +24,4 @@ Subpackages
 .. toctree::
 
     konlpy.tag
-
+    konlpy.corpus

@@ -8,6 +8,8 @@ try:
 except ImportError:
     pass
 
+from . import utils
+
 
 def init_jvm(jvmpath=None):
     """Initializes the Java virtual machine (JVM).
@@ -23,7 +25,7 @@ def init_jvm(jvmpath=None):
     folder_suffix = ['{0}', '{0}{1}bin',\
             '{0}{1}jhannanum-0.8.4.jar', '{0}{1}kkma-2.0.jar']
     javadir = '%s%sjava'\
-            % (os.path.dirname(os.path.realpath(__file__)), os.sep)
+            % (utils.installpath, os.sep)
     args = [javadir, os.sep]
     classpath = os.pathsep.join(f.format(*args) for f in folder_suffix)
 
