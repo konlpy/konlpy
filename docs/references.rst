@@ -3,12 +3,14 @@ References
 
 .. role:: license
 
+.. note::
+    Please `report <mailto:me@lucypark.kr>`_ if you know any other NLP engines or corpora that are not included in this list.
+    Last updated at |today|.
+
 .. _engines:
 
 Korean NLP engines
 ------------------
-.. note::
-    This list was last updated at |today|.
 
 C/C++
 '''''

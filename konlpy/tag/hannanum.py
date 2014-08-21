@@ -46,8 +46,8 @@ class Hannanum():
 
         hannanum = Hannanum()
         print hannanum.morph(u'롯데마트의 흑마늘 양념 치킨이 논란이 되고 있다.')
-        print hannanum.pos(u'웃으면 더 행복합니다!')
         print hannanum.nouns(u'다람쥐 헌 쳇바퀴에 타고파')
+        print hannanum.pos(u'웃으면 더 행복합니다!')
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
     """
@@ -90,18 +90,3 @@ class Hannanum():
         jhannanumJavaPackage = jpype.JPackage('kr.lucypark.jhannanum.comm')
         HannanumInterfaceJavaClass = jhannanumJavaPackage.HannanumInterface
         self.jhi = HannanumInterfaceJavaClass() # Java instance
-
-
-if __name__=='__main__':
-    from init_jvm import init_jvm
-    from pprint import pprint
-
-    phrase = u'(학교에서조차도) 1/2+3/2이 2이라는 사실을 모르고 있었다!'
-
-    init_jvm()
-    hi = Hannanum()
-
-    print '\nMorph:'; pprint(hi.morph(phrase))
-    print '\nNouns:'; pprint(hi.nouns(phrase))
-    print '\nPos09:'; pprint(hi.pos(phrase))
-    print '\nPos22:'; pprint(hi.pos(phrase, ntags=22))

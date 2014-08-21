@@ -46,8 +46,8 @@ class Mecab():
         # MeCab installation needed
 
         mecab = Mecab()
-        print mecab.pos(u'자연주의 쇼핑몰은 어떤 곳인가?')
         print mecab.nouns(u'우리나라에는 무릎 치료를 잘하는 정형외과가 없는가!')
+        print mecab.pos(u'자연주의 쇼핑몰은 어떤 곳인가?')
 
     :param dicpath: The path of the MeCab-ko dictionary.
 
@@ -74,11 +74,3 @@ class Mecab():
             self.tagger = Tagger('-d %s' % dicpath)
         except RuntimeError:
             raise Exception('Invalid MeCab dictionary path: "%s"\nInput the correct path when initiializing class: "Mecab(\'/some/dic/path\')"' % dicpath)
-
-
-if __name__=='__main__':
-    from pprint import pprint
-
-    phrase = u'자연주의 쇼핑몰은 어떤 곳인가?'
-    mc = Mecab()
-    print '\nPos43:'; pprint(mc.pos(phrase))

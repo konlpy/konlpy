@@ -16,12 +16,34 @@ For installation directions, see :doc:`here <install>`.
 
 .. sourcecode:: python
 
-    from konlpy.tag import Kkma
-
-    kkma = Kkma()
-    print kkma.sentences(u'저는 대학생이구요. 소프트웨어 관련학과 입니다.')
-    print kkma.nouns(u'대학에서 DB, 통계학, 이산수학 등을 배웠지만...')
-    print kkma.pos(u'자주 사용을 안하다보니 모두 까먹은 상태입니다.')
+    >>> from konlpy.tag import Kkma
+    >>> from konlpy.utils import pprint
+    >>> kkma = Kkma()
+    >>> pprint(kkma.sentences(u'저는 대학생이구요. 소프트웨어 관련학과 입니다.'))
+    [저는 대학생이구요.,
+     소프트웨어 관련학과 입니다.]
+    >>> pprint(kkma.nouns(u'대학에서 DB, 통계학, 이산수학 등을 배웠지만...'))
+    [대학,
+     통계학,
+     이산,
+     이산수학,
+     수학,
+     등]
+    >>> pprint(kkma.pos(u'자주 사용을 안하다보니 모두 까먹은 상태입니다.'))
+    [(자주, MAG),
+     (사용, NNG),
+     (을, JKO),
+     (안하, VV),
+     (다, ECS),
+     (보, VXV),
+     (니, ECD),
+     (모두, MAG),
+     (까먹, VV),
+     (은, ETD),
+     (상태, NNG),
+     (이, VCP),
+     (ㅂ니다, EFN),
+     (., SF)]
 
 For more on how to use KoNLPy, go see the :ref:`api`.
 

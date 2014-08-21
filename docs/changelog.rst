@@ -1,5 +1,5 @@
-Changelog
-=========
+Change logs
+===========
 
 `Version 0.3 <https://github.com/e9t/konlpy/releases/tag/v0.3>`_
 ----------------------------------------------------------------
@@ -10,7 +10,7 @@ Not released yet.
 - Added Kkma module with Kkma 2.0
 - Added documents using Sphinx and Read the Docs
 - Added license: GPL v3 or above
-- Added pretty print function for unicode
+- Added pretty print function for Unicode
 - Added noun extractor to Mecab
 - Fixed Hannanum, Kkma module bug where it couldn't handle empty input strings
 
@@ -23,7 +23,7 @@ Not released yet.
 
 Released on Aug 1, 2014.
 
-- Changed API by explicitly initializing JVM for Hannanum (``init_jvm()``)
+- Changed API by explicitly initializing JVM for Hannanum
 - Added Mecab module with MeCab-0.996-ko-0.9.1
 - Added unit tests
 - Added test automation with Travis CI 

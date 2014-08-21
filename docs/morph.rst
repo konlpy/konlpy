@@ -150,7 +150,7 @@ The performance evaluation is replaced with result comparisons for several sampl
     | . / SF                | . / S                 | . / SF                |
     +-----------------------+-----------------------+-----------------------+
 
-.. [1] All time analyses in this document were performed with :py:mod:`time` on a Thinkpad X1 Carbon (2013).
+.. [1] All time analyses in this document were performed with :py:mod:`time` on a Thinkpad X1 Carbon (2013) and KoNLPy v0.3.
 .. [2] Average of five consecutive runs.
 .. [3] Average of ten consecutive runs.
 .. [4] The current hannanum module raises a ``java.lang.ArrayIndexOutOfBoundsException: 10000`` exception if the number of characters is too large.

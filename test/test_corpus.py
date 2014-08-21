@@ -1,8 +1,6 @@
 #! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
-import pytest
-
 
 def test_corpus_kolaw():
     from konlpy.corpus import kolaw

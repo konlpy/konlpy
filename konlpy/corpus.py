@@ -1,21 +1,25 @@
+#! /usr/bin/python2.7
+# -*- coding: utf-8 -*-
+
 import os
 
 from . import utils
 
 
 class CorpusLoader():
-    """Loader for corpuses.
+    """Loader for corpora. The following corpora are currently available:
+
+    - *kolaw*: Korean law corpus.
 
     .. code-block:: python
 
-        from konlpy.corpus import kolaw
-        fids = kolaw.fileids()
-        fobj = kolaw.open(fids[0])
-        print fobj.read(140)
+        >>> from konlpy.corpus import kolaw
+        >>> fids = kolaw.fileids()
+        >>> fobj = kolaw.open(fids[0])
+        >>> print fobj.read(140)
+        대한민국헌법
 
-    List of available corpuses:
-
-    - *kolaw*: Korean law corpus.
+        유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바 바
     """
 
     def abspath(self, filename=None):
