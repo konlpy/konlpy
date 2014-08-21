@@ -8,8 +8,16 @@ For example.::
 
     가방에 들어가신다 -> 가방/NNG + 에/JKM + 들어가/VV + 시/EPH + ㄴ다/EFN
 
-Comparison between modules
---------------------------
+Tagging with KoNLPy
+-------------------
+
+The tagging function of KoNLPy is implemented as a separate subpackage.
+There are several different implementations, but all have the same input-output structure; the input is a phrase, and the output is a list of tagged morphemes.
+
+For detailed usage instructions refer the :doc:`api/konlpy.tag`.
+
+Comparison between tagging modules
+----------------------------------
 
 Now, we do time and performation analysis for executing the ``pos`` method for each of the modules in the :doc:`api/konlpy.tag`.
 
