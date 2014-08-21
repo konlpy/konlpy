@@ -23,6 +23,10 @@ Java
 - `Kkma <http://kkma.snu.ac.kr>`_, Seoul National University :license:`GPL v2`
 - `KOMORAN <http://shineware.tistory.com/tag/KOMORAN>`_, *shineware* :license:`custom`
 
+Python
+''''''
+
+- `KoNLPy <http://konlpy.readthedocs.org>`_, Lucy Park :license:`GPL v3`
 
 Others
 ''''''
@@ -32,7 +36,7 @@ Others
 - `Korean XTAG <http://www.cis.upenn.edu/~xtag/koreantag/>`_, University of Pennsylvania
 - `Speller <http://speller.cs.pusan.ac.kr/>`_, Pusan National University
 - `UTagger <http://203.250.77.242:5900/>`_, University of Ulsan
-- `(No name) <http://cl.korea.ac.kr/Demo/dglee/index.html>`_, University of Korea
+- `(No name) <http://cl.korea.ac.kr/Demo/dglee/index.html>`_, Korea University
 
 .. _corpora:
 

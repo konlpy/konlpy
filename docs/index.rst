@@ -54,7 +54,7 @@ Korean, the `13th most widely spoken language in the world <http://www.koreatime
 Myriad :ref:`engines` were built by numerous researchers, to computationally extract meaningful features from the labyrinthine text.
 
 KoNLPy is not just to create another, but to unify and build upon their shoulders, and see one step further.
-It is built particularly in the `Python (programming) language <http://python.org>`_, not only because of its its simplicity and elegance, but its powerful string processing modules and applicability to various tasks - including crawling, Web programming, and data analysis.
+It is built particularly in the `Python (programming) language <http://python.org>`_, not only because of the language's simplicity and elegance, but also the powerful string processing modules and applicability to various tasks - including crawling, Web programming, and data analysis.
 
 The three philosophies this project aims to maintain are:
 
@@ -113,4 +113,4 @@ Indices and tables
 
 
 .. [#] With `clear and brief <http://echojuliett.tumblr.com/post/32108001510/clarity-brevity>`_ documents.
-.. [#] No, I'm not extremely fond of this either. However, some important depedencies - such as Hannanum, Kkma, MeCab-ko - are GPL licensed, so we wanted to honor their licenses. (Though it was also an inevitable choice. We hope this may change in the future.)
+.. [#] No, I'm not extremely fond of this either. However, some important depedencies - such as Hannanum, Kkma, MeCab-ko - are GPL licensed, and we want to honor their licenses. (It is also an inevitable choice. We hope things may change in the future.)

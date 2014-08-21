@@ -31,13 +31,15 @@ class UnicodePrinter(pp.PrettyPrinter):
 def concordance(phrase, text):
     """Find concordances of a phrase in a text.
 
+    The farmost left numbers are indices, that indicate the location of the phrase in the text (by means of tokens). The following string, is part of the text surrounding the phrase for the given index.
+
     .. code-block:: python
 
         >>> from konlpy.corpus import kolaw
         >>> from konlpy.tag import Mecab
         >>> from konlpy import utils
         >>> constitution = kolaw.open('constitution.txt').read()
-        >>> utils.concordance(u'대한민국', constitution)
+        >>> idx = utils.concordance(u'대한민국', constitution)
         0       대한민국헌법 유구한 역사와
         9       대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에
         98      총강 제1조 ① 대한민국은 민주공화국이다. ②대한민국의
@@ -49,6 +51,8 @@ def concordance(phrase, text):
         787     군무원이 아닌 국민은 대한민국의 영역안에서는 중대한
         1836    파견 또는 외국군대의 대한민국 영역안에서의 주류에
         3620    경제 제119조 ① 대한민국의 경제질서는 개인과
+        >>> idx
+        [0, 9, 98, 100, 110, 126, 133, 147, 787, 1836, 3620]
     """
 
     terms = text.split()
