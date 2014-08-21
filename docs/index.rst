@@ -34,10 +34,10 @@ Myriad :ref:`engines` were built by numerous researchers, to computationally ext
 KoNLPy is not just to create another, but to unify and build upon their shoulders, and see one step further.
 It is built particularly in the `Python (programming) language <http://python.org>`_, not only because of its its simplicity and elegance, but its powerful string processing modules and applicability to various tasks - including crawling, Web programming, and data analysis.
 
-The three philosophies this project aims to keep are:
+The three philosophies this project aims to maintain are:
 
 - Keep it simple.
-- Make it easy. [#]_
+- Make it easy. For humans. [#]_
 - `"Democracy on the web works." <https://github.com/e9t/konlpy>`_
 
 Please `report <me@lucypark.kr>`_ when you think any have gone stale.

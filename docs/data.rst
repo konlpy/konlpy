@@ -2,6 +2,7 @@ Data
 ====
 
 .. _dictionaries:
+
 Dictionaries
 ------------
 
@@ -36,6 +37,7 @@ Dictionaries are used for :doc:`morph`.
 
 
 .. _tags:
+
 Tags
 ----
 

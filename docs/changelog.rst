@@ -8,8 +8,8 @@ Not released yet.
 
 - Changed API by automatically initializing JVM for Hannanum, Kkma
 - Added Kkma module with Kkma 2.0
-- Added documents using Sphinx and Read the Docs.
-- Include license: GPL v3 or above.
+- Added documents using Sphinx and Read the Docs
+- Include license: GPL v3 or above
 
 .. warning::
 

@@ -19,3 +19,15 @@ table.footnote {
 table.footnote td.label {
     width: 25px;
 }
+
+.license {
+    background-color: rgba(86,196,187,0.4);
+    border: 1px solid rgb(86,196,187);
+    font-size: 70%;
+    margin: 0 2px;
+    padding: 1px 3px;
+}
+
+.license:hover {
+    background-color: rgba(86,196,187,0.7);
+}

@@ -8,11 +8,4 @@
 KoNLPy is a Python package for natural language processing of the Korean language. 
 
 
-## Documentation
-
 Documentation is available at http://konlpy.readthedocs.org.
-
-
-## License
-- Most parts, [Apache v2.0](http://choosealicense.com/licenses/apache/)
-- [See here](http://konlpy.readthedocs.org/en/latest/#license) for more information on licensing.
