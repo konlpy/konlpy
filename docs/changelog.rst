@@ -28,7 +28,7 @@ Released on Aug 1, 2014.
 - Added unit tests
 - Added test automation with Travis CI 
 - Fixed Hannanum module parsing error when '/', '+' are in text
-- Fixed Hannanum module text indexing error (results get truncated)
+- Fixed Hannanum module text indexing error (where results get truncated)
 
 `Version 0.1 <https://github.com/e9t/konlpy/releases/tag/v0.1>`_
 ----------------------------------------------------------------
