@@ -3,6 +3,7 @@
 
 import codecs
 import os
+import pprint as pp
 
 
 installpath = os.path.dirname(os.path.realpath(__file__))
@@ -20,6 +21,12 @@ replace_set = [
         (u'「', u'<'), # \u300c
         (u'」', u'>')] # \u300d
 
+class UnicodePrinter(pp.PrettyPrinter):
+    def format(self, object, context, maxlevels, level):
+        """Overrided method to enable Unicode pretty print."""
+        if isinstance(object, unicode):
+            return (object.encode('utf8'), True, False)
+        return pp.PrettyPrinter.format(self, object, context, maxlevels, level)
 
 def concordance(phrase, text):
     """Find concordances of a phrase in a text.
@@ -32,7 +39,6 @@ def concordance(phrase, text):
 
         constitution = kolaw.open('constitution.txt').read()
         utils.concordance(u'대통령', constitution)
-
     """
 
     terms = text.split()
@@ -52,6 +58,19 @@ def partition(list_, indices):
     :param indices: Indices to partition the target list.
     """
     return [list_[i:j] for i, j in zip([0]+indices, indices+[None])]
+
+def pprint(obj):
+    """Unicode pretty printer.
+
+    .. code-block:: python
+
+        >>> import pprint, konlpy
+        >>> pprint.pprint([u"Print", u"유니코드", u"easily"])
+        [u'Print', u'\uc720\ub2c8\ucf54\ub4dc', u'easily']
+        >>> konlpy.utils.pprint([u"Print", u"유니코드", u"easily"])
+        ['Print', '유니코드', 'easily']
+    """
+    return UnicodePrinter().pprint(obj)
 
 def preprocess(phrase):
     """Preprocesses a phrase in the following steps:.
@@ -94,4 +113,5 @@ def hex2char(h):
 
 
 def load_txt(filename):
+    """Text file loader."""
     return codecs.open(filename, encoding='utf-8')

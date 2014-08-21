@@ -10,6 +10,7 @@ Not released yet.
 - Added Kkma module with Kkma 2.0
 - Added documents using Sphinx and Read the Docs
 - Added license: GPL v3 or above
+- Added pretty print function for unicode
 - Added noun extractor to Mecab
 - Fixed Hannanum, Kkma module bug where it couldn't handle empty input strings
 
