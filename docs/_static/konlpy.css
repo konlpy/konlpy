@@ -4,8 +4,13 @@ body {
     font-family: Georgia, serif;
 }
 
-.first {
-    margin: 0;
+a.reference.image-reference {
+    border-bottom: none;
+    display: inline-block;
+}
+
+a.reference.image-reference:hover {
+    border-bottom: none;
 }
 
 table.docutils {
@@ -18,6 +23,17 @@ table.footnote {
 
 table.footnote td.label {
     width: 25px;
+}
+
+.first {
+    margin: 0;
+}
+
+.github {
+    width: 150px;
+    position: fixed;
+    right: 0;
+    top: 0;
 }
 
 .license {
