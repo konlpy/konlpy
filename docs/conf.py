@@ -66,7 +66,7 @@ url = u'http://konlpy.readthedocs.org'
 # built documents.
 #
 # The short X.Y version.
-version = __version__.rsplit('-', 1)[0]
+version = __version__.rsplit('.', 1)[0]
 # The full version, including alpha/beta/rc tags.
 release = __version__
 
