@@ -60,7 +60,7 @@ The three main philosophies of this project are:
 
 - Keep it simple.
 - Make it easy. For humans. [#]_
-- `"Democracy on the web works." <https://github.com/e9t/konlpy>`_
+- :ref:`"Democracy on the web works." <contribute>`
 
 Please `report <me@lucypark.kr>`_ when you think any have gone stale.
 
@@ -68,6 +68,8 @@ License
 -------
 
 - `GPL v3 or above <http://gnu.org/licenses/gpl.html>`_ [#]_
+
+.. _contribute:
 
 Contribute
 ----------
