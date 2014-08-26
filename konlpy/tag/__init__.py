@@ -1,6 +1,6 @@
-from .hannanum import Hannanum
-from .kkma import Kkma
+from ._hannanum import Hannanum
+from ._kkma import Kkma
 try:
-    from .mecab import Mecab
+    from ._mecab import Mecab
 except ImportError:
     pass
