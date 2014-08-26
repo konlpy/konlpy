@@ -1,3 +1,5 @@
+#! /bin/bash
+
 # install mecab-ko
 cd /tmp
 wget https://bitbucket.org/eunjeon/mecab-ko/downloads/mecab-0.996-ko-0.9.1.tar.gz
