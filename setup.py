@@ -12,17 +12,18 @@ def requirements():
 setup(name='konlpy',
     version=__version__,
     description='Python package for Korean natural language processing.',
-    long_description = """\
+    long_description="""\
 Korean, the 13th most widely spoken language in the world, is a beautiful, yet complex language. Myriad Korean NLP engines were built by numerous researchers, to computationally extract meaningful features from the labyrinthine text.
 
 KoNLPy is not just to create another, but to unify and build upon their shoulders, and see one step further. It is built particularly in the Python (programming) language, not only because of its its simplicity and elegance, but its powerful string processing modules and applicability to various tasks - including crawling, Web programming, and data analysis.""",
     url='http://konlpy.readthedocs.org',
     author='Lucy Park',
     author_email='me@lucypark.kr',
-    keywords = ['NLP', 'natural language processing',
-                'CL', 'computational linguistics',
-                'tagging', 'tokenizing', 'linguistics', 'text analytics'],
-    classifiers = [
+    keywords=['Korean', 'CJK',
+              'NLP', 'natural language processing',
+              'CL', 'computational linguistics',
+              'tagging', 'tokenizing', 'linguistics', 'text analytics'],
+    classifiers=[
         'Intended Audience :: Developers',
         'Intended Audience :: Education',
         'Intended Audience :: Information Technology',
@@ -47,5 +48,4 @@ KoNLPy is not just to create another, but to unify and build upon their shoulder
         'java/jhannanum-0.8.4.jar', 'java/bin/kr/lucypark/jhannanum/*/*.class',
         'java/kkma-2.0.jar', 'java/bin/kr/lucypark/kkma/*.class',
         ]},
-    install_requires=requirements(),
-    zip_safe=False)
+    install_requires=requirements())
