@@ -1,11 +1,13 @@
 #! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
+import os
 from setuptools import find_packages, setup
 from konlpy import __version__
 
-with open('requirements.txt', 'r') as f:
-    requirements = f.read().splitlines()
+def requirements():
+    with open(os.path.join(os.path.dirname(__file__), 'requirements.txt')) as f:
+        return f.read().splitlines()
 
 setup(name='konlpy',
     version=__version__,
@@ -45,5 +47,5 @@ KoNLPy is not just to create another, but to unify and build upon their shoulder
         'java/jhannanum-0.8.4.jar', 'java/bin/kr/lucypark/jhannanum/*/*.class',
         'java/kkma-2.0.jar', 'java/bin/kr/lucypark/kkma/*.class',
         ]},
-    install_requires=requirements,
+    install_requires=requirements(),
     zip_safe=False)
