@@ -19,31 +19,34 @@ For installation directions, see :doc:`here <install>`.
     >>> from konlpy.tag import Kkma
     >>> from konlpy.utils import pprint
     >>> kkma = Kkma()
-    >>> pprint(kkma.sentences(u'저는 대학생이구요. 소프트웨어 관련학과 입니다.'))
-    [저는 대학생이구요.,
-     소프트웨어 관련학과 입니다.]
-    >>> pprint(kkma.nouns(u'대학에서 DB, 통계학, 이산수학 등을 배웠지만...'))
-    [대학,
-     통계학,
-     이산,
-     이산수학,
-     수학,
-     등]
-    >>> pprint(kkma.pos(u'자주 사용을 안하다보니 모두 까먹은 상태입니다.'))
-    [(자주, MAG),
-     (사용, NNG),
+    >>> pprint(kkma.sentences(u'네, 안녕하세요. 반갑습니다.'))
+    [네, 안녕하세요..,
+     반갑습니다.]
+    >>> pprint(kkma.nouns(u'질문이나 건의사항은 깃헙 이슈 트래커에 남겨주세요.'))
+    [질문,
+     건의,
+     건의사항,
+     사항,
+     깃헙,
+     이슈,
+     트래커]
+    >>> pprint(kkma.pos(u'오류보고는 실행환경, 에러메세지와함께 설명을 최대한상세히!^^')
+    [(오류, NNG),
+     (보고, NNG),
+     (는, JX),
+     (실행, NNG),
+     (환경, NNG),
+     (,, SP),
+     (에러, NNG),
+     (메세지, NNG),
+     (와, JKM),
+     (함께, MAG),
+     (설명, NNG),
      (을, JKO),
-     (안하, VV),
-     (다, ECS),
-     (보, VXV),
-     (니, ECD),
-     (모두, MAG),
-     (까먹, VV),
-     (은, ETD),
-     (상태, NNG),
-     (이, VCP),
-     (ㅂ니다, EFN),
-     (., SF)]
+     (최대한, NNG),
+     (상세히, MAG),
+     (!, SF),
+     (^^, EMO)]
 
 For more on how to use KoNLPy, go see the :ref:`api`.
 
