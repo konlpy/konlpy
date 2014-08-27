@@ -26,6 +26,7 @@ print 'nchars  :', len(doc)
 print 'ntokens :', len(doc.split())
 print 'nmorphs :', len(set(pos))
 print '\nTop 20 frequent morphemes:'; pprint(cnt.most_common(20))
-print '\nLocations of "대한민국" in the document:'; concordance(u'대한민국', doc)
+print '\nLocations of "대한민국" in the document:'
+concordance(u'대한민국', doc, show=True)
 
 draw_zipf([b for a, b in cnt.items()], 'zipf.png')

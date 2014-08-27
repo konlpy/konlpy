@@ -28,10 +28,14 @@ class UnicodePrinter(pp.PrettyPrinter):
             return (object.encode('utf8'), True, False)
         return pp.PrettyPrinter.format(self, object, context, maxlevels, level)
 
-def concordance(phrase, text):
+def concordance(phrase, text, show=False):
     """Find concordances of a phrase in a text.
 
     The farmost left numbers are indices, that indicate the location of the phrase in the text (by means of tokens). The following string, is part of the text surrounding the phrase for the given index.
+
+    :param phrase: Phrase to search in the document.
+    :param text: Target document.
+    :param show: If ``True``, shows locations of the phrase on the console.
 
     .. code-block:: python
 
@@ -39,7 +43,7 @@ def concordance(phrase, text):
         >>> from konlpy.tag import Mecab
         >>> from konlpy import utils
         >>> constitution = kolaw.open('constitution.txt').read()
-        >>> idx = utils.concordance(u'대한민국', constitution)
+        >>> idx = utils.concordance(u'대한민국', constitution, show=True)
         0       대한민국헌법 유구한 역사와
         9       대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에
         98      총강 제1조 ① 대한민국은 민주공화국이다. ②대한민국의
@@ -57,8 +61,9 @@ def concordance(phrase, text):
 
     terms = text.split()
     indexes = [i for i, term in enumerate(terms) if phrase in term]
-    for i in indexes:
-        print i, ' '.join(terms[max(0, i-3):i+3])
+    if show:
+        for i in indexes:
+            print i, ' '.join(terms[max(0, i-3):i+3])
     return indexes
 
 def concat(phrase):
