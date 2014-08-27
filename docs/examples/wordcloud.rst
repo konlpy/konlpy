@@ -1,4 +1,4 @@
-Drawing a Word cloud
+Drawing a word cloud
 ====================
 
 Below shows a code example that crawls a National Assembly bill from the web, extract nouns and draws a word cloud - from head to tail in Python.
