@@ -31,7 +31,7 @@ Python
 R
 ''
 
-- `KoNLPy <https://github.com/haven-jeon/KoNLP>`_, Heewon Jeon :licence:`GPL v3`
+- `KoNLP <https://github.com/haven-jeon/KoNLP>`_, Heewon Jeon :license:`GPL v3`
 
 Others
 ''''''
