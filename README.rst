@@ -13,7 +13,7 @@ KoNLPy
     :alt: Coverage Status
     :target: https://coveralls.io/r/e9t/konlpy
 
-한국어 자연어처리를 할 수 있는 파이썬 패키지입니다.<br>
-KoNLPy is a Python package for natural language processing of the Korean language. 
+한국어 자연어처리를 할 수 있는 파이썬 패키지입니다.
 
+KoNLPy is a Python package for natural language processing of the Korean language. 
 Documentation is available at http://konlpy.readthedocs.org.
