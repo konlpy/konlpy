@@ -91,7 +91,7 @@ def preprocess(phrase):
 
     - :py:func:`.concat`
     """
-    return select(concat(phrase))
+    return select(concat(phrase).strip())
 
 def select(phrase):
     """Replaces some ambiguous punctuation marks to simpler ones."""
