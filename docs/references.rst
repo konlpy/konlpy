@@ -28,6 +28,11 @@ Python
 
 - `KoNLPy <http://konlpy.readthedocs.org>`_, Lucy Park :license:`GPL v3`
 
+R
+''
+
+- `KoNLPy <https://github.com/haven-jeon/KoNLP>`_, Heewon Jeon :licence:`GPL v3`
+
 Others
 ''''''
 - `K-LIWC <http://k-liwc.ajou.ac.kr/>`_, Ajou University
