@@ -5,3 +5,4 @@ Examples
 
     examples/explore
     examples/wordcloud
+    examples/collocations
