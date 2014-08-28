@@ -45,17 +45,19 @@ class Hannanum():
         from konlpy.tag import Hannanum
 
         hannanum = Hannanum()
-        print hannanum.morph(u'롯데마트의 흑마늘 양념 치킨이 논란이 되고 있다.')
+        print hannanum.analyze(u'롯데마트의 흑마늘 양념 치킨이 논란이 되고 있다.')
         print hannanum.nouns(u'다람쥐 헌 쳇바퀴에 타고파')
         print hannanum.pos(u'웃으면 더 행복합니다!')
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
     """
 
-    def morph(self, phrase):
-        """Morphological analyzer.
+    def analyze(self, phrase):
+        """Phrase analyzer.
 
-        This analyzer consists of two parts: 1) Dictionary search (chart), 2) Unclassified term segmentation."""
+        This analyzer returns various morphological candidates for each token.
+        It consists of two parts: 1) Dictionary search (chart), 2) Unclassified term segmentation.
+        """
 
         phrase = utils.preprocess(phrase)
         result = self.jhi.morphAnalyzer(phrase)
