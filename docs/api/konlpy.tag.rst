@@ -9,7 +9,7 @@ tag Package
 :mod:`hannanum` Module
 ----------------------
 
-.. automodule:: konlpy.tag.hannanum
+.. automodule:: konlpy.tag._hannanum
     :members:
     :undoc-members:
     :show-inheritance:
@@ -17,7 +17,7 @@ tag Package
 :mod:`kkma` Module
 ----------------------
 
-.. automodule:: konlpy.tag.kkma
+.. automodule:: konlpy.tag._kkma
     :members:
     :undoc-members:
     :show-inheritance:
@@ -25,7 +25,7 @@ tag Package
 :mod:`mecab` Module
 -------------------
 
-.. automodule:: konlpy.tag.mecab
+.. automodule:: konlpy.tag._mecab
     :members:
     :undoc-members:
     :show-inheritance:
