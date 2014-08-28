@@ -21,16 +21,12 @@ attrs = ['tags', # 품사 태그
          'indexed'] # 인덱스 표현
 
 def parse(result, allattrs=False):
-    def split(elem, allattrs):
-        if allattrs:
-            s, t = elem.split('\t')
-            return (s, dict(zip(attrs, t.split(','))))
-        else:
-            s, t = elem.split('\t')
-            return (s, t.split(',', 1)[0])
+    def split(elem):
+        if not elem: return ('','SY')
+        s, t = elem.split('\t')
+        return (s, t.split(',', 1)[0])
 
-    elems = result.splitlines()
-    return [split(elem, allattrs=False) for elem in elems[:-1]]
+    return [split(elem) for elem in result.splitlines()[:-1]]
 
 class Mecab():
     """Wrapper for MeCab-ko morphological analyzer.
