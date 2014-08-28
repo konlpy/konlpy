@@ -39,6 +39,16 @@ def test_hannanum_nouns(hannanum_instance, string):
     assert hannanum_instance.nouns(string) ==\
         [u'\uaf43\uac00\ub9c8', u'\uac15\ub0a8']
 
+def test_hannanum_morphs(hannanum_instance, string):
+    assert hannanum_instance.morphs(string) ==\
+        [u'\uaf43\uac00\ub9c8',
+         u'\ud0c0',
+         u'\uace0',
+         u'\uac15\ub0a8',
+         u'\uac00',
+         u'\uc790',
+         u'!']
+
 def test_hannanum_pos_9(hannanum_instance, string):
     assert hannanum_instance.pos(string) ==\
         [(u'\uaf43\uac00\ub9c8', u'N'),

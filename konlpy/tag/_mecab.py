@@ -42,8 +42,9 @@ class Mecab():
         # MeCab installation needed
 
         mecab = Mecab()
-        print mecab.nouns(u'우리나라에는 무릎 치료를 잘하는 정형외과가 없는가!')
         print mecab.pos(u'자연주의 쇼핑몰은 어떤 곳인가?')
+        print mecab.morphs(u'영등포구청역에 있는 맛집 좀 알려주세요.')
+        print mecab.nouns(u'우리나라에는 무릎 치료를 잘하는 정형외과가 없는가!')
 
     :param dicpath: The path of the MeCab-ko dictionary.
 
@@ -57,6 +58,11 @@ class Mecab():
         phrase = utils.preprocess(phrase).encode('utf-8')
         result = self.tagger.parse(phrase).decode('utf-8')
         return parse(result)
+
+    def morphs(self, phrase):
+        """Parse phrase to morphemes."""
+
+        return [s for s, t in self.pos(phrase)]
 
     def nouns(self, phrase):
         """Noun extractor."""

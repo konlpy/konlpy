@@ -48,6 +48,7 @@ class Hannanum():
         print hannanum.analyze(u'롯데마트의 흑마늘 양념 치킨이 논란이 되고 있다.')
         print hannanum.nouns(u'다람쥐 헌 쳇바퀴에 타고파')
         print hannanum.pos(u'웃으면 더 행복합니다!')
+        print hannanum.morphs(u'웃으면 더 행복합니다!')
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
     """
@@ -84,6 +85,11 @@ class Hannanum():
         else:
             raise Exception('ntags in [9, 22]')
         return parse(result, flatten=True)
+
+    def morphs(self, phrase):
+        """Parse phrase to morphemes."""
+
+        return [s for s, t in self.pos(phrase)]
 
     def __init__(self, jvmpath=None):
         if not jpype.isJVMStarted():
