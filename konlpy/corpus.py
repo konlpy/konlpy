@@ -10,6 +10,7 @@ class CorpusLoader():
     """Loader for corpora. The following corpora are currently available:
 
     - *kolaw*: Korean law corpus.
+    - *kobill*: Korean National Assembly bill corpus. The file ID corresponds to the bill number.
 
     .. code-block:: python
 
@@ -54,3 +55,4 @@ class CorpusLoader():
 
 
 kolaw = CorpusLoader('kolaw')
+kobill = CorpusLoader('kobill')
