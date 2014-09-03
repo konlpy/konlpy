@@ -1,7 +1,7 @@
 __title__ = 'KoNLPy'
-__version__ = '0.3.0'
+__version__ = '0.3.1'
 __author__ = 'Lucy Park'
-__license__ = 'Apache 2.0'
+__license__ = 'GPL v3'
 __copyright__ = 'Copyright 2014 Lucy Park'
 
 from .jvm import init_jvm
