@@ -9,7 +9,9 @@ Released on Sep 4, 2014.
 - Fixed JPype class loading error for Mac OS X
     - Contributed by `combacsa <https://github.com/combacsa>`_
     - JPype is not compatible with JDK >= 1.7 in Mac OS X
-    - Hannanum raises `java.lang.OutOfMemoryError` in Mac OS X if heap memory is to small
+- Fixed Kkma memory error for Mac OS X
+    - Contributed by `combacsa <https://github.com/combacsa>`_
+    - `java.lang.OutOfMemoryError` in Mac OS X if heap memory is to small
 
 `Version 0.3.1 <https://github.com/e9t/konlpy/releases/tag/v0.3.1>`_
 ----------------------------------------------------------------
