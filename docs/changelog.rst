@@ -1,7 +1,7 @@
 Change logs
 ===========
 
-`Version 0.3.2 <https://github.com/e9t/konlpy/releases/tag/v0.3.1>`_
+`Version 0.3.2 <https://github.com/e9t/konlpy/releases/tag/v0.3.2>`_
 ----------------------------------------------------------------
 
 Released on Sep 4, 2014.
