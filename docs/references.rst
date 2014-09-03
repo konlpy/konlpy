@@ -31,7 +31,7 @@ Java
 - `Hannanum <http://semanticweb.kaist.ac.kr/home/index.php/HanNanum>`_ (1999) :license:`GPL v3`
     - By Prof. Key-Sun Choi Key's research team (KAIST)
     - `code <http://kldp.net/projects/hannanum/src>`_, `docs <http://semanticweb.kaist.ac.kr/research/hannanum/j/javadoc/>`_
-- `Kkma <http://kkma.snu.ac.kr>`_ (2010) :license:`GPL v2`
+- `KKMA <http://kkma.snu.ac.kr>`_ (2010) :license:`GPL v2`
     - By Prof. Sang-goo Lee's research team (서울대)
 - `KOMORAN <http://shineware.tistory.com/tag/KOMORAN>`_ (2013) :license:`custom`
     - By *shineware*

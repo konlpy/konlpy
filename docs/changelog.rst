@@ -1,6 +1,19 @@
 Change logs
 ===========
 
+`Version 0.3.1 <https://github.com/e9t/konlpy/releases/tag/v0.3.1>`_
+----------------------------------------------------------------
+
+Released on Sep 4, 2014.
+
+- Added MeCab installer script
+- Fixed Morph modules to handle strings with whitespaces only
+- Fixed data inclusion error for Hannanum
+- Modified tagger filenames with underscore prefixes
+- Modified concordance function not to print results by default
+- Modified Hannanum `morph` method to `analyze`
+- Uploaded `KoNLPy to PyPI <https://pypi.python.org/pypi/konlpy>`_
+
 `Version 0.3.0 <https://github.com/e9t/konlpy/releases/tag/v0.3.0>`_
 ----------------------------------------------------------------
 
