@@ -41,7 +41,7 @@ Python
 
 - `KoNLPy <http://konlpy.readthedocs.org>`_ (2014) :license:`GPL v3`
     - By Lucy Park (서울대)
-- `UMorpheme <http://pypi.python.org>`_ (2014) :license:`MIT`
+- `UMorpheme <https://pypi.python.org/pypi/UMorpheme>`_ (2014) :license:`MIT`
     - By Kyunghoon Kim (UNIST)
 
 R
