@@ -1,3 +1,4 @@
 include requirements.txt
 recursive-include konlpy/data *
 recursive-include konlpy/java *.class *.jar *.json
+recursive-include konlpy/java/data *
