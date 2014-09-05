@@ -14,7 +14,7 @@ from .. import utils
 __all__ = ['Hannanum']
 
 
-tag_re = ur'(.+?\/\w+)\+?'
+tag_re = u'(.+?\\/\\w+)\\+?'
 
 def parse(result, flatten=False):
     def parse_opt(opt):
@@ -29,9 +29,9 @@ def parse(result, flatten=False):
 
     if flatten:
         return sum([parse_opt(opt) for part in parts\
-                for opt in filter(None, part)[1:]], [])
+                for opt in list(filter(None, part))[1:]], [])
     else:
-        return [[parse_opt(opt) for opt in filter(None, part)[1:]]\
+        return [[parse_opt(opt) for opt in list(filter(None, part))[1:]]\
                 for part in parts]
 
 
