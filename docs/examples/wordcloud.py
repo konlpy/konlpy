@@ -9,6 +9,12 @@ import webbrowser
 from konlpy.tag import Hannanum
 from lxml import html
 import pytagcloud # requires Korean font support
+import sys
+
+if sys.version_info[0] >= 3:
+    urlopen = urllib.request.urlopen
+else:
+    urlopen = urllib.urlopen
 
 
 r = lambda: random.randint(0,255)
@@ -16,7 +22,7 @@ color = lambda: (r(), r(), r())
 
 def get_bill_text(billnum):
     url = 'http://pokr.kr/bill/%s/text' % billnum
-    response = urllib.urlopen(url).read().decode('utf-8')
+    response = urlopen(url).read().decode('utf-8')
     page = html.fromstring(response)
     text = page.xpath(".//div[@id='bill-sections']/pre/text()")[0]
     return text
@@ -36,5 +42,5 @@ def draw_cloud(tags, filename, fontname='Noto Sans CJK', size=(800, 600)):
 bill_num = '1904882'
 text = get_bill_text(bill_num)
 tags = get_tags(text)
-print tags
+print(tags)
 draw_cloud(tags, 'wordcloud.png')
