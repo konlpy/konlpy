@@ -11,7 +11,7 @@ from lxml import html
 import pytagcloud # requires Korean font support
 import sys
 
-if sys.version_info.major >= 3:
+if sys.version_info[0] >= 3:
     urlopen = urllib.request.urlopen
 else:
     urlopen = urllib.urlopen

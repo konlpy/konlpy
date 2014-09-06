@@ -9,7 +9,7 @@ from konlpy import __version__
 def requirements():
     with open(os.path.join(os.path.dirname(__file__), 'requirements.txt')) as f:
         requirements_text = f.read()
-        if sys.version_info.major >= 3:
+        if sys.version_info[0] >= 3:
             requirements_text = requirements_text.replace('JPype1', 'JPype1-py3')
 
         return requirements_text.splitlines()

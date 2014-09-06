@@ -22,7 +22,7 @@ replace_set = [
         (u'「', u'<'), # \u300c
         (u'」', u'>')] # \u300d
 
-if sys.version_info.major < 3:
+if sys.version_info[0] < 3:
     class UnicodePrinter(pp.PrettyPrinter):
         def format(self, object, context, maxlevels, level):
             """Overrided method to enable Unicode pretty print."""
@@ -80,7 +80,7 @@ def partition(list_, indices):
     """
     return [list_[i:j] for i, j in zip([0]+indices, indices+[None])]
 
-if sys.version_info.major < 3:
+if sys.version_info[0] < 3:
     def pprint(obj):
         """Unicode pretty printer.
 
@@ -123,7 +123,7 @@ def char2hex(c):
     """
     return hex(ord(c))
 
-if sys.version_info.major >= 3:
+if sys.version_info[0] >= 3:
     unichr = chr
 
 def hex2char(h):
