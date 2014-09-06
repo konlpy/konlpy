@@ -20,8 +20,8 @@ Dictionaries
 Dictionaries are used for :doc:`morph`,
 and are built with :ref:`corpora`.
 
-:py:mod:`.hannanum` *system dictionary*
-'''''''''''''''''''''''''''''''''''''''
+:py:class:`.Hannanum` *system dictionary*
+'''''''''''''''''''''''''''''''''''''''''
 
 A dictionary created with the KAIST corpus. (4.7MB)
 
@@ -51,7 +51,7 @@ Part of this file is shown below.::
 
 You can add your own terms, modify ``./konlpy/java/data/kE/dic_user.txt``.
 
-:py:mod:`.kkma` *system dictionary*
+:py:class:`.Kkma` *system dictionary*
 '''''''''''''''''''''''''''''''''''
 
 A dictionary created with the Sejong corpus. (32MB)
@@ -73,8 +73,8 @@ Part of ``kcc.dic`` is shown below.::
     하지만/MAC
     ...
 
-:py:mod:`.mecab` *system dictionary*
-''''''''''''''''''''''''''''''''''''
+:py:class:`.Mecab` *system dictionary*
+''''''''''''''''''''''''''''''''''''''
 
 A CSV formatted dictionary created with the Sejong corpus. (346MB)
 

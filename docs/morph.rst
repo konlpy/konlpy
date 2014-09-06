@@ -16,27 +16,27 @@ All have the same input-output structure; the input is a phrase, and the output 
 
 For detailed usage instructions see the :doc:`api/konlpy.tag`.
 
-Comparison between tagging modules
+Comparison between tagging classes
 ----------------------------------
 
-Now, we do time and performation analysis for executing the ``pos`` method for each of the modules in the :doc:`api/konlpy.tag`.
+Now, we do time and performation analysis for executing the ``pos`` method for each of the classes in the :doc:`api/konlpy.tag`.
 
 Time analysis [1]_
 ''''''''''''''''''
 
-1. *Loading time*: Module loading time, including dictionary loads. [2]_
+1. *Loading time*: Class loading time, including dictionary loads. [2]_
 
-    - :py:mod:`.kkma`: 13.2913 *secs*
-    - :py:mod:`.hannanum`: 2.2950 *secs*
-    - :py:mod:`.mecab`: 0.0002 *secs*
+    - :py:class:`.Kkma`: 13.2913 *secs*
+    - :py:class:`.Hannanum`: 2.2950 *secs*
+    - :py:class:`.Mecab`: 0.0002 *secs*
 
-2. *Execution time*: Time for executing the ``pos`` method for each module, with 100K characters. [3]_
+2. *Execution time*: Time for executing the ``pos`` method for each class, with 100K characters. [3]_
 
-    - :py:mod:`.kkma`: 14.6882 *secs*
-    - :py:mod:`.hannanum`: 2.6872 *secs*
-    - :py:mod:`.mecab`: 0.0594 *secs*
+    - :py:class:`.Kkma`: 14.6882 *secs*
+    - :py:class:`.Hannanum`: 2.6872 *secs*
+    - :py:class:`.Mecab`: 0.0594 *secs*
 
-    If we test among a various number of characters, all modules' execution times increase in an exponential manner. [4]_
+    If we test among a various number of characters, all classes' execution times increase in an exponential manner. [4]_
 
     .. image:: images/time.png
 
@@ -49,7 +49,7 @@ The performance evaluation is replaced with result comparisons for several sampl
 1. "저는 대학생이구요. 소프트웨어 관련학과 입니다."
 
     +-----------------------+-----------------------+-----------------------+
-    | :py:mod:`.kkma`       | :py:mod:`.hannanum`   | :py:mod:`.mecab`      |
+    | :py:class:`.Kkma`     | :py:class:`.Hannanum` | :py:class:`.Mecab`    |
     +=======================+=======================+=======================+
     | 저 / NP               | 저 / N                | 저 / NP               |
     +-----------------------+-----------------------+-----------------------+
@@ -81,7 +81,7 @@ The performance evaluation is replaced with result comparisons for several sampl
 2. "아버지가방에들어가신다"
 
     +-----------------------+-----------------------+-----------------------+
-    | :py:mod:`.kkma`       | :py:mod:`.hannanum`   | :py:mod:`.mecab`      |
+    | :py:class:`.Kkma`     | :py:class:`.Hannanum` | :py:class:`.Mecab`    |
     +=======================+=======================+=======================+
     | 아버지 / NNG          | 아버지가방에들어가 / N| 아버지 / NNG          |
     +-----------------------+-----------------------+-----------------------+
@@ -101,7 +101,7 @@ The performance evaluation is replaced with result comparisons for several sampl
 3. "140823 Tofu Music Festival 존잘러에서 귀요미들로 변신ㅋㅋ #GOT7"
 
     +-----------------------+-----------------------+-----------------------+
-    | :py:mod:`.kkma`       | :py:mod:`.hannanum`   | :py:mod:`.mecab`      |
+    | :py:class:`.Kkma`     | :py:class:`.Hannanum` | :py:class:`.Mecab`    |
     +=======================+=======================+=======================+
     | 140823 / NR           | 140823 / N            | 140823 / SN           |
     +-----------------------+-----------------------+-----------------------+
@@ -139,4 +139,4 @@ The performance evaluation is replaced with result comparisons for several sampl
 .. [1] All time analyses in this document were performed with :py:mod:`time` on a Thinkpad X1 Carbon (2013) and KoNLPy v0.3.
 .. [2] Average of five consecutive runs.
 .. [3] Average of ten consecutive runs.
-.. [4] The current hannanum module raises a ``java.lang.ArrayIndexOutOfBoundsException: 10000`` exception if the number of characters is too large.
+.. [4] The current Hannanum class raises a ``java.lang.ArrayIndexOutOfBoundsException: 10000`` exception if the number of characters is too large.

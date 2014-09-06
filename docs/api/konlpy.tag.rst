@@ -6,24 +6,24 @@ tag Package
     Initial runs of each class method may require some time to load dictionaries (< 1 *min*). Second runs should be faster.
 
 
-:mod:`hannanum` Module
-----------------------
+:class:`Hannanum` Class
+-----------------------
 
 .. automodule:: konlpy.tag._hannanum
     :members:
     :undoc-members:
     :show-inheritance:
 
-:mod:`kkma` Module
-----------------------
+:class:`Kkma` Class
+-------------------
 
 .. automodule:: konlpy.tag._kkma
     :members:
     :undoc-members:
     :show-inheritance:
 
-:mod:`mecab` Module
--------------------
+:class:`Mecab` Class
+--------------------
 
 .. warning:: Mecab is not supported for Python 3 and Windows 7.
 
