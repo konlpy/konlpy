@@ -2,7 +2,7 @@ Change logs
 ===========
 
 `Version 0.3.2 <https://github.com/e9t/konlpy/releases/tag/v0.3.2>`_
-----------------------------------------------------------------
+--------------------------------------------------------------------
 
 Released on Sep 4, 2014.
 
@@ -14,7 +14,7 @@ Released on Sep 4, 2014.
     - `java.lang.OutOfMemoryError` in Mac OS X if heap memory is to small
 
 `Version 0.3.1 <https://github.com/e9t/konlpy/releases/tag/v0.3.1>`_
-----------------------------------------------------------------
+--------------------------------------------------------------------
 
 Released on Sep 4, 2014.
 
@@ -27,7 +27,7 @@ Released on Sep 4, 2014.
 - Uploaded `KoNLPy to PyPI <https://pypi.python.org/pypi/konlpy>`_
 
 `Version 0.3.0 <https://github.com/e9t/konlpy/releases/tag/v0.3.0>`_
-----------------------------------------------------------------
+--------------------------------------------------------------------
 
 Released on Aug 25, 2014.
 

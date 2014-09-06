@@ -16,7 +16,6 @@ C/C++
 '''''
 - `KTS <http://wiki.kldp.org/wiki.php/KTS>`_ (1995) :license:`GPL v2`
     - By 이상호, 서정연, 오영환 (KAIST & 서강대)
-
     - `code <https://github.com/suapapa/kts>`_
 - `MACH <http://cs.sungshin.ac.kr/~shim/demo/mach.html>`_ (2002) :license:`custom`
     - By Prof. Kwangseob Shim (성신여대)

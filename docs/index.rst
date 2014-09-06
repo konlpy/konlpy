@@ -65,7 +65,7 @@ The three main philosophies of this project are:
 - Make it easy. For humans. [#]_
 - :ref:`"Democracy on the web works." <contribute>`
 
-Please `report <me@lucypark.kr>`_ when you think any have gone stale.
+Please `report <https://github.com/e9t/konlpy/issues>`_ when you think any have gone stale.
 
 License
 -------
@@ -79,8 +79,12 @@ Contribute
 
 KoNLPy isn't perfect, but it will continuously evolve and you are invited to participate!
 
-Found a bug? Have a good idea for improving KoNLPy?
+Found a bug?
+Have a good idea for improving KoNLPy?
+Are there questions?
 Visit the `KoNLPy GitHub page <https://github.com/e9t/konlpy>`_ and `suggest an idea <https://github.com/e9t/konlpy/issues>`_ or `make a pull request <https://github.com/e9t/konlpy/pulls>`_.
+
+You are also welcome to join the ``#koreannlp`` channel at the `ozinger <http://ozinger.org>`_ IRC network.
 
 
 User guide
