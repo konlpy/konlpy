@@ -25,6 +25,8 @@ tag Package
 :mod:`mecab` Module
 -------------------
 
+.. warning:: Mecab is not supported for Python 3 and Windows 7.
+
 .. automodule:: konlpy.tag._mecab
     :members:
     :undoc-members:
