@@ -77,15 +77,26 @@ License
 Contribute
 ----------
 
-KoNLPy isn't perfect, but it will continuously evolve and you are invited to participate!
+KoNLPy isn't perfect,
+but it will continuously evolve and you are invited to participate!
 
 Found a bug?
 Have a good idea for improving KoNLPy?
-Are there questions?
-Visit the `KoNLPy GitHub page <https://github.com/e9t/konlpy>`_ and `suggest an idea <https://github.com/e9t/konlpy/issues>`_ or `make a pull request <https://github.com/e9t/konlpy/pulls>`_.
+Visit the `KoNLPy GitHub page <https://github.com/e9t/konlpy>`_
+and `suggest an idea <https://github.com/e9t/konlpy/issues>`_
+or `make a pull request <https://github.com/e9t/konlpy/pulls>`_.
 
-You are also welcome to join the ``#koreannlp`` channel at the `ozinger <http://ozinger.org>`_ IRC network.
+You are also welcome to join
+the ``#koreannlp`` channel at the `Ozinger IRC Network <http://ozinger.org>`_,
+and the `mailing list <https://groups.google.com/forum/#!topic/konlpy>`_.
+The IRC channel is more focused on development discussions
+and the mailing list is a better place to ask questions,
+but nobody stops you from going the other way around.
 
+Please note that
+*asking questions through these channels is also a great contribution*,
+because it give the community feedback as well as ideas.
+Don't hesitate to ask.
 
 User guide
 ==========

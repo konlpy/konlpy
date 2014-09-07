@@ -1,12 +1,13 @@
 Change logs
 ===========
 
-Version 0.3.3
--------------
+`Version 0.3.3 <https://github.com/e9t/konlpy/releases/tag/v0.3.3>`_
+--------------------------------------------------------------------
 
-In development.
+Released on Sep 7, 2014.
 
 - Added Python 3 support [:issue:`17` by :committer:`hyeshik`]
+- Created `KoNLPy mailing list at Google Groups <https://groups.google.com/forum/#!forum/konlpy>`_
 
 `Version 0.3.2 <https://github.com/e9t/konlpy/releases/tag/v0.3.2>`_
 --------------------------------------------------------------------
@@ -14,7 +15,7 @@ In development.
 Released on Sep 4, 2014.
 
 - Fixed JPype class loading error for Mac OS X [:issue:`6` by :committer:`combacsa`]
-    - JPype is not compatible with JDK >= 1.7 in Mac OS X
+    - JPype 0.5.5.4 is not compatible with JDK 1.7 in Mac OS X 10.9
 - Fixed Kkma memory error for Mac OS X [:issue:`13` by :committer:`combacsa`]
     - `java.lang.OutOfMemoryError` in Mac OS X if heap memory is too small
 
