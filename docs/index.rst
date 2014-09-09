@@ -30,7 +30,7 @@ For installation directions, see :doc:`here <install>`.
      깃헙,
      이슈,
      트래커]
-    >>> pprint(kkma.pos(u'오류보고는 실행환경, 에러메세지와함께 설명을 최대한상세히!^^')
+    >>> pprint(kkma.pos(u'오류보고는 실행환경, 에러메세지와함께 설명을 최대한상세히!^^'))
     [(오류, NNG),
      (보고, NNG),
      (는, JX),

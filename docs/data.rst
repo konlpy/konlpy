@@ -52,7 +52,7 @@ Part of this file is shown below.::
 You can add your own terms, modify ``./konlpy/java/data/kE/dic_user.txt``.
 
 :py:class:`.Kkma` *system dictionary*
-'''''''''''''''''''''''''''''''''''
+'''''''''''''''''''''''''''''''''''''
 
 A dictionary created with the Sejong corpus. (32MB)
 
