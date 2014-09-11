@@ -25,6 +25,26 @@ table.footnote td.label {
     width: 25px;
 }
 
+.example {
+    border: 1px solid #eee;
+    display: inline-block;
+    height: 200px;
+    margin: 5px;
+    margin-right: 10px;
+    overflow: hidden;
+    padding: 5px;
+    text-align: center;
+    width: 300px;
+}
+
+.example p {
+    margin: 0;
+}
+
+.example img {
+    max-height: 100%;
+}
+
 .first {
     margin: 0;
 }
