@@ -38,7 +38,9 @@ sudo make install
 
 # install mecab-python
 cd /tmp
-git clone https://github.com/HiroyukiHaga/mecab-python.git
-cd mecab-python
+git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
+cd mecab-python-0.996
 python setup.py build
 sudo python setup.py install
+python3 setup.py build
+sudo python3 setup.py install

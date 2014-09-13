@@ -1,5 +1,8 @@
 #! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
+
+import sys
+
 try:
     from MeCab import Tagger
 except ImportError:
@@ -54,9 +57,12 @@ class Mecab():
 
     def pos(self, phrase):
         """POS tagger."""
-
-        phrase = utils.preprocess(phrase).encode('utf-8')
-        result = self.tagger.parse(phrase).decode('utf-8')
+        if sys.version_info[0] < 3:
+            phrase = utils.preprocess(phrase).encode('utf-8')
+            result = self.tagger.parse(phrase).decode('utf-8')
+        else:
+            phrase = utils.preprocess(phrase)
+            result = self.tagger.parse(phrase)
         return parse(result)
 
     def morphs(self, phrase):
