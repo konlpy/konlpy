@@ -32,6 +32,9 @@ Java
     - `code <http://kldp.net/projects/hannanum/src>`_, `docs <http://semanticweb.kaist.ac.kr/research/hannanum/j/javadoc/>`_
 - `KKMA <http://kkma.snu.ac.kr>`_ (2010) :license:`GPL v2`
     - By Prof. Sang-goo Lee's research team (서울대)
+    - Generates morpheme candidates using dynamic programming
+    - Tags morphemes by checking neighbors, and employing some heuristics and HMM models
+    - Developer blog: `Dongjoo Lee <http://therocks.tistory.com>`_
 - `KOMORAN <http://shineware.tistory.com/tag/KOMORAN>`_ (2013) :license:`custom`
     - By *shineware*
 
@@ -77,13 +80,17 @@ Language parser
 Corpora
 -------
 
+- Yonsei Corpus, 연세대, 1987.
+    - 42M tokens of Korean since the 1960s
+- Korea University Korean Corpus, 1995.
+    - 10M tokens of Korean of 1970-90s
 - `HANTEC 2.0 <http://www.kristalinfo.com/download/#hantec>`_, KISTI & 충남대, 1998-2003.
     - 120,000 test documents (237MB)
     - 50 TREC-type questions for QA (48KB)
 - `HKIB-40075 <http://www.kristalinfo.com/TestCollections/readme_hkib.html>`_, KISTI & 한국일보, 2002.
     - 40,075 test documents for text categorization (88 MB)
-- `KAIST corpus <http://semanticweb.kaist.ac.kr/home/index.php/KAIST_Corpus>`_, KAIST, 1997-2005.
-- `Sejong corpus <http://www.sejong.or.kr/>`_, National Institute of the Korean Language, 1998-2007.
+- `KAIST Corpus <http://semanticweb.kaist.ac.kr/home/index.php/KAIST_Corpus>`_, KAIST, 1997-2005.
+- `Sejong Corpus <http://www.sejong.or.kr/>`_, National Institute of the Korean Language, 1998-2007.
 
 General NLP resources
 ---------------------
@@ -92,3 +99,5 @@ General NLP resources
 - `Lingpipe <http://alias-i.com/lingpipe/>`_
 - `Microsoft NLP group (Redmond) <http://research.microsoft.com/en-us/groups/nlp/>`_
 - `부산대 NLP 관련사이트 목록 <http://borame.cs.pusan.ac.kr/ai_home/site/site1.html>`_
+- `Sejong semantic search system <http://sejong21.org>`_
+- `한국어학회 <http://koling.org>`_

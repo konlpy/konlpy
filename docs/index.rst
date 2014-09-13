@@ -88,7 +88,7 @@ or `make a pull request <https://github.com/e9t/konlpy/pulls>`_.
 
 You are also welcome to join
 the ``#koreannlp`` channel at the `Ozinger IRC Network <http://ozinger.org>`_,
-and the `mailing list <https://groups.google.com/forum/#!topic/konlpy>`_.
+and the `mailing list <https://groups.google.com/forum/#!forum/konlpy>`_.
 The IRC channel is more focused on development discussions
 and the mailing list is a better place to ask questions,
 but nobody stops you from going the other way around.
