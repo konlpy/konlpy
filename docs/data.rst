@@ -12,6 +12,21 @@ Tags
         Compare POS tags between several Korean analytic projects. (In Korean)
 
 
+.. _corpora:
+
+Corpora
+-------
+
+The following corpora are currently available:
+
+1. *kolaw*: Korean law corpus.
+    - constitution.txt*
+2. *kobill*: Korean National Assembly bill corpus. The file ID corresponds to the bill number.
+    - 1809890.txt - 1809899.txt*
+
+Files with astericks (*) are installed by default.
+Other files can be installed with :py:mod:`.konlpy.download()`.
+
 .. _dictionaries:
 
 Dictionaries

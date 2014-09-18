@@ -7,10 +7,8 @@ from . import utils
 
 
 class CorpusLoader():
-    """Loader for corpora. The following corpora are currently available:
-
-    - *kolaw*: Korean law corpus.
-    - *kobill*: Korean National Assembly bill corpus. The file ID corresponds to the bill number.
+    """Loader for corpora.
+    For a complete list of corpora available in KoNLPy, refer to :ref:`corpora`.
 
     .. code-block:: python
 
@@ -29,7 +27,7 @@ class CorpusLoader():
 
         :param filename: Name of a particular file in the corpus.
         """
-        basedir = '%s/data/%s' % (utils.installpath, self.name)
+        basedir = '%s/data/corpus/%s' % (utils.installpath, self.name)
         if filename:
             return '%s/%s' % (basedir, filename)
         else:

@@ -47,7 +47,7 @@ KoNLPy is not just to create another, but to unify and build upon their shoulder
         ],
     packages=find_packages(),
     package_data={'konlpy': [
-        'data/*/*.txt',
+        'data/*/*/*.txt',
         'java/conf/plugin/*/*/*.json',
         'java/data/*/*',
         'java/jhannanum-0.8.4.jar', 'java/bin/kr/lucypark/jhannanum/*/*.class',
