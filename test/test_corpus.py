@@ -12,4 +12,4 @@ def test_corpus_kolaw():
 
     assert kolaw.name == 'kolaw'
     assert kolaw.open('constitution.txt').read(10) ==\
-            u'\ub300\ud55c\ubbfc\uad6d\ud5cc\ubc95\r\n\r\n\uc720\uad6c'
+            u'\ub300\ud55c\ubbfc\uad6d\ud5cc\ubc95\n\n\uc720\uad6c'
