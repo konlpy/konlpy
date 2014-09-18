@@ -8,7 +8,8 @@ To perform a test, use the code below.
 
     $ pip install pytest
     $ cd konlpy
-    $ py.test
+    $ python -m pytest test/* # for Python 2.x
+    $ python3 -m pytest test/* # for Python 3.x
 
 KoNLPy was tested on the below environments:
 
