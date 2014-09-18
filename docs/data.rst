@@ -1,16 +1,8 @@
 Data
 ====
 
-.. _tags:
-
-Tags
-----
-
-.. seealso::
-    `Korean POS tags comparison chart <https://docs.google.com/spreadsheets/d/1OGAjUvalBuX-oZvZ_-9tEfYD2gQe7hTGsgUpiiBSXI8/edit#gid=0>`_
-
-        Compare POS tags between several Korean analytic projects. (In Korean)
-
+Files with astericks (*) are installed by default.
+Other files can be installed with :py:func:`.download`.
 
 .. _corpora:
 
@@ -19,13 +11,20 @@ Corpora
 
 The following corpora are currently available:
 
-1. *kolaw*: Korean law corpus.
-    - constitution.txt*
-2. *kobill*: Korean National Assembly bill corpus. The file ID corresponds to the bill number.
-    - 1809890.txt - 1809899.txt*
+*kolaw*
+'''''''
 
-Files with astericks (*) are installed by default.
-Other files can be installed with :py:mod:`.konlpy.download()`.
+Korean law corpus.
+
+- constitution.txt*
+
+*kobill*
+''''''''
+
+Korean National Assembly bill corpus. The file ID corresponds to the bill number.
+
+- 1809890.txt - 1809899.txt*
+
 
 .. _dictionaries:
 

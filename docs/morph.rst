@@ -16,6 +16,11 @@ All have the same input-output structure; the input is a phrase, and the output 
 
 For detailed usage instructions see the :doc:`api/konlpy.tag`.
 
+.. seealso::
+    `Korean POS tags comparison chart <https://docs.google.com/spreadsheets/d/1OGAjUvalBuX-oZvZ_-9tEfYD2gQe7hTGsgUpiiBSXI8/edit#gid=0>`_
+
+        Compare POS tags between several Korean analytic projects. (In Korean)
+
 Comparison between tagging classes
 ----------------------------------
 

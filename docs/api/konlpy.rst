@@ -1,6 +1,29 @@
 konlpy Package
 ==============
 
+Subpackages
+-----------
+
+.. toctree::
+
+    konlpy.tag
+    konlpy.corpus
+
+:mod:`data` Module
+------------------
+
+.. automodule:: konlpy.data
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+:mod:`downloader` Module
+------------------------
+
+.. automodule:: konlpy.downloader
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 :mod:`jvm` Module
 ----------------------
@@ -17,11 +40,3 @@ konlpy Package
     :members:
     :undoc-members:
     :show-inheritance:
-
-Subpackages
------------
-
-.. toctree::
-
-    konlpy.tag
-    konlpy.corpus
