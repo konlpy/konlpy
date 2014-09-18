@@ -1,7 +1,7 @@
 #! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
-import codecs
+import io
 import os
 import pprint as pp
 import sys
@@ -138,7 +138,13 @@ def hex2char(h):
     """
     return unichr(int(h, 16))
 
+def load_txt(filename, encoding='utf-8'):
+    """Text file loader.
+    To read a file, use ``read_txt()``instead.
+    """
+    return io.open(filename, 'r', encoding=encoding)
 
-def load_txt(filename):
-    """Text file loader."""
-    return codecs.open(filename, encoding='utf-8')
+def read_txt(filename, encoding='utf-8'):
+    """Text file reader."""
+    with io.open(filename, 'r', encoding=encoding) as f:
+        return f.read()
