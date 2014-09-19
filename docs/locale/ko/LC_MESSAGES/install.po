@@ -1,0 +1,63 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../install.rst:2
+msgid "Installation"
+msgstr ""
+
+#: ../../install.rst:5
+msgid "Linux/Mac OS"
+msgstr ""
+
+#: ../../install.rst:15
+msgid "Windows"
+msgstr ""
+
+#: ../../install.rst:17
+msgid ""
+"Download and install `jpype "
+"<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ [#]_"
+msgstr ""
+
+#: ../../install.rst:19
+msgid "From the command prompt, install KoNLPy."
+msgstr ""
+
+#: ../../install.rst:25
+msgid ""
+"(Optional) Download, extract [#]_, and install the most recent version of "
+"MeCab from the following links:"
+msgstr ""
+
+#: ../../install.rst:27
+msgid "`mecab-ko <https://bitbucket.org/eunjeon/mecab-ko/downloads>`_"
+msgstr ""
+
+#: ../../install.rst:28
+msgid "`mecab-ko-dic <https://bitbucket.org/eunjeon/mecab-ko-dic/downloads>`_"
+msgstr ""
+
+#: ../../install.rst:29
+msgid ""
+"`mecab-python <https://code.google.com/p/mecab/downloads/list?q=python>`_"
+msgstr ""
+
+#: ../../install.rst:31
+msgid "`win-amd64` for 64-bit Windows, `win32` for 32-bit Windows."
+msgstr ""
+
+#: ../../install.rst:32
+msgid ""
+"Having MinGW/MSYS or Cygwin installed may be more convenient. Otherwise, you"
+" can use `7zip <http://7-zip.org>`_ for the extraction of `tar` files."
+msgstr ""

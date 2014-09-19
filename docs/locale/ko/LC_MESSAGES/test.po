@@ -1,0 +1,52 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../test.rst:2
+msgid "Running tests"
+msgstr ""
+
+#: ../../test.rst:4
+msgid ""
+"KoNLPy has tests to evaulate its quality. To perform a test, use the code "
+"below."
+msgstr ""
+
+#: ../../test.rst:14
+msgid "KoNLPy was tested on the below environments:"
+msgstr ""
+
+#: ../../test.rst:16
+msgid "Mac OS X 10.9 with Sun/Oracle 1.6.0"
+msgstr ""
+
+#: ../../test.rst:17
+msgid "Ubuntu 12.04 with openjdk-7-jdk"
+msgstr ""
+
+#: ../../test.rst:18
+msgid "Ubuntu 13.10 with openjdk-7-jdk"
+msgstr ""
+
+#: ../../test.rst:19
+msgid "Ubuntu 14.04 with openjdk-7-jdk"
+msgstr ""
+
+#: ../../test.rst:20
+msgid "Window 7 with Sun/Oracle JDK 1.7.0"
+msgstr ""
+
+#: ../../test.rst:24
+msgid ""
+"To see known bugs/issues, see `here "
+"<https://github.com/e9t/konlpy/labels/bug>`_."
+msgstr ""

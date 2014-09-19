@@ -1,0 +1,189 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/konlpy.rst:2
+msgid "konlpy Package"
+msgstr ""
+
+#: ../../api/konlpy.rst:5
+msgid "Subpackages"
+msgstr ""
+
+#: ../../api/konlpy.rst:13
+msgid ":mod:`data` Module"
+msgstr ""
+
+#: ../../../konlpy/data.pydocstring of konlpy.data.find:1
+msgid ""
+"Find the path of a given resource URL by searching through directories in "
+"``konlpy.data.path``. If the given resource is not found, raise a "
+"``LookupError``, whose message gives a pointer to the installation "
+"instructions for ``konlpy.download()``."
+msgstr ""
+
+#: ../../../konlpy/data.pydocstring of konlpy.data.find:6
+msgid ""
+"The URL of the resource to search for. URLs are posix-style relative path "
+"names, such as ``corpora/kolaw``. In particular, directory names should "
+"always be separated by the forward slash character (i.e., '/'), which will "
+"be automatically converted to a platform-appropriate path separator by "
+"KoNLPy."
+msgstr ""
+
+#: ../../../konlpy/data.pydocstring of konlpy.data.load:1
+msgid ""
+"Load a given resource from the KoNLPy data package. If no format is "
+"specified, ``load()`` will attempt to determine a format based on the "
+"resource name's file extension. If that fails, ``load()`` will raise a "
+"``ValueError`` exception."
+msgstr ""
+
+#: ../../../konlpy/data.pydocstring of konlpy.data.load:7
+msgid "A URL specifying where the resource should be loaded from."
+msgstr ""
+
+#: ../../../konlpy/data.pydocstring of konlpy.data.load:8
+msgid "Format type of resource."
+msgstr ""
+
+#: ../../../konlpy/data.pydocstring of konlpy.data.path:1
+msgid ""
+"A list of directories where the KoNLPy data package might reside. These "
+"directories will be checked in order when looking for a resource. Note that "
+"this allows users to substitute their own versions of resources."
+msgstr ""
+
+#: ../../<autodoc>:1
+msgid "Bases: :class:`konlpy.data.PathPointer`, :class:`str`"
+msgstr ""
+
+#: ../../../konlpy/data.pydocstring of konlpy.data.FileSystemPathPointer:1
+msgid "A path pointer that identifies a file by an absolute path."
+msgstr ""
+
+#: ../../<autodoc>:1
+msgid "Bases: :class:`object`"
+msgstr ""
+
+#: ../../../konlpy/data.pydocstring of konlpy.data.PathPointer:1
+msgid ""
+"An abstract base class for path pointers. One subclass exists: 1. "
+"``FileSystemPathPointer``: Identifies a file by an absolute path."
+msgstr ""
+
+#: ../../api/konlpy.rst:21
+msgid ":mod:`downloader` Module"
+msgstr ""
+
+#: ../../../konlpy/downloader.pydocstring of konlpy.downloader.download:1
+msgid ""
+"The KoNLPy data downloader. With this module you can download corpora, "
+"models and other data packages that can be used with KoNLPy."
+msgstr ""
+
+#: ../../api/konlpy.rst:29
+msgid ":mod:`jvm` Module"
+msgstr ""
+
+#: ../../../konlpy/jvm.pydocstring of konlpy.jvm.init_jvm:1
+msgid "Initializes the Java virtual machine (JVM)."
+msgstr ""
+
+#: ../../../konlpy/jvm.pydocstring of konlpy.jvm.init_jvm:3
+msgid ""
+"The path of the JVM. If left empty, inferred by "
+":py:func:`jpype.getDefaultJVMPath`."
+msgstr ""
+
+#: ../../api/konlpy.rst:37
+msgid ":mod:`utils` Module"
+msgstr ""
+
+#: ../../<autodoc>:1
+msgid "Bases: :class:`pprint.PrettyPrinter`"
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.UnicodePrinter.format:1
+msgid "Overrided method to enable Unicode pretty print."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.char2hex:1
+msgid "Converts a unicode character to hex."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.concat:1
+msgid "Concatenates lines into a unified string."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.concordance:1
+msgid "Find concordances of a phrase in a text."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.concordance:3
+msgid ""
+"The farmost left numbers are indices, that indicate the location of the "
+"phrase in the text (by means of tokens). The following string, is part of "
+"the text surrounding the phrase for the given index."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.concordance:5
+msgid "Phrase to search in the document."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.concordance:6
+msgid "Target document."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.concordance:7
+msgid "If ``True``, shows locations of the phrase on the console."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.hex2char:1
+msgid "Converts a hex character to unicode."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.load_txt:1
+msgid "Text file loader. To read a file, use ``read_txt()``instead."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.partition:1
+msgid "Partitions a list to several parts using indices."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.partition:3
+msgid "The target list."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.partition:4
+msgid "Indices to partition the target list."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.pprint:1
+msgid "Unicode pretty printer."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.preprocess:1
+msgid "Preprocesses a phrase in the following steps:."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.preprocess:3
+msgid ":py:func:`.concat`"
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.read_txt:1
+msgid "Text file reader."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.select:1
+msgid "Replaces some ambiguous punctuation marks to simpler ones."
+msgstr ""

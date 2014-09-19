@@ -1,0 +1,467 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../morph.rst:2
+msgid "Morphological analysis and POS tagging"
+msgstr ""
+
+#: ../../morph.rst:4
+msgid ""
+"*Morphological analysis* is the identification of the structure of morphemes"
+" and other linguistic units, such as root words, affixes, or parts of "
+"speech."
+msgstr ""
+
+#: ../../morph.rst:6
+msgid ""
+"*POS (part-of-speech) tagging* is the process of marking up morphemes in a "
+"phrase, based on their definitions and contexts. For example.::"
+msgstr ""
+
+#: ../../morph.rst:12
+msgid "Tagging with KoNLPy"
+msgstr ""
+
+#: ../../morph.rst:14
+msgid ""
+"In KoNLPy, there are several different options you can choose for POS "
+"tagging. All have the same input-output structure; the input is a phrase, "
+"and the output is a list of tagged morphemes."
+msgstr ""
+
+#: ../../morph.rst:17
+msgid "For detailed usage instructions see the :doc:`api/konlpy.tag`."
+msgstr ""
+
+#: ../../morph.rst:20
+msgid ""
+"`Korean POS tags comparison chart <https://docs.google.com/spreadsheets/d"
+"/1OGAjUvalBuX-oZvZ_-9tEfYD2gQe7hTGsgUpiiBSXI8/edit#gid=0>`_"
+msgstr ""
+
+#: ../../morph.rst:22
+msgid "Compare POS tags between several Korean analytic projects. (In Korean)"
+msgstr ""
+
+#: ../../morph.rst:25
+msgid "Comparison between tagging classes"
+msgstr ""
+
+#: ../../morph.rst:27
+msgid ""
+"Now, we do time and performation analysis for executing the ``pos`` method "
+"for each of the classes in the :doc:`api/konlpy.tag`."
+msgstr ""
+
+#: ../../morph.rst:30
+msgid "Time analysis [1]_"
+msgstr ""
+
+#: ../../morph.rst:32
+msgid "*Loading time*: Class loading time, including dictionary loads. [2]_"
+msgstr ""
+
+#: ../../morph.rst:34
+msgid ":py:class:`.Kkma`: 13.2913 *secs*"
+msgstr ""
+
+#: ../../morph.rst:35
+msgid ":py:class:`.Hannanum`: 2.2950 *secs*"
+msgstr ""
+
+#: ../../morph.rst:36
+msgid ":py:class:`.Mecab`: 0.0002 *secs*"
+msgstr ""
+
+#: ../../morph.rst:38
+msgid ""
+"*Execution time*: Time for executing the ``pos`` method for each class, with"
+" 100K characters. [3]_"
+msgstr ""
+
+#: ../../morph.rst:40
+msgid ":py:class:`.Kkma`: 14.6882 *secs*"
+msgstr ""
+
+#: ../../morph.rst:41
+msgid ":py:class:`.Hannanum`: 2.6872 *secs*"
+msgstr ""
+
+#: ../../morph.rst:42
+msgid ":py:class:`.Mecab`: 0.0594 *secs*"
+msgstr ""
+
+#: ../../morph.rst:44
+msgid ""
+"If we test among a various number of characters, all classes' execution "
+"times increase in an exponential manner. [4]_"
+msgstr ""
+
+#: ../../morph.rst:50
+msgid "Performance analysis"
+msgstr ""
+
+#: ../../morph.rst:52
+msgid ""
+"The performance evaluation is replaced with result comparisons for several "
+"sample sentences."
+msgstr ""
+
+#: ../../morph.rst:54
+msgid "\"저는 대학생이구요. 소프트웨어 관련학과 입니다.\""
+msgstr ""
+
+#: ../../morph.rst:57 ../../morph.rst:89 ../../morph.rst:109
+msgid ":py:class:`.Kkma`"
+msgstr ""
+
+#: ../../morph.rst:57 ../../morph.rst:89 ../../morph.rst:109
+msgid ":py:class:`.Hannanum`"
+msgstr ""
+
+#: ../../morph.rst:57 ../../morph.rst:89 ../../morph.rst:109
+msgid ":py:class:`.Mecab`"
+msgstr ""
+
+#: ../../morph.rst:59 ../../morph.rst:59
+msgid "저 / NP"
+msgstr ""
+
+#: ../../morph.rst:59
+msgid "저 / N"
+msgstr ""
+
+#: ../../morph.rst:61 ../../morph.rst:61
+msgid "는 / JX"
+msgstr ""
+
+#: ../../morph.rst:61
+msgid "는 / J"
+msgstr ""
+
+#: ../../morph.rst:63
+msgid "대학생 / NNG"
+msgstr ""
+
+#: ../../morph.rst:63
+msgid "대학생이구요 / N"
+msgstr ""
+
+#: ../../morph.rst:63
+msgid "대학 / NNG"
+msgstr ""
+
+#: ../../morph.rst:65
+msgid "생 / XSN"
+msgstr ""
+
+#: ../../morph.rst:67 ../../morph.rst:67 ../../morph.rst:79
+msgid "이 / VCP"
+msgstr ""
+
+#: ../../morph.rst:69
+msgid "구요 / EFN"
+msgstr ""
+
+#: ../../morph.rst:69
+msgid "구요 / EF"
+msgstr ""
+
+#: ../../morph.rst:71 ../../morph.rst:71 ../../morph.rst:83 ../../morph.rst:83
+msgid ". / SF"
+msgstr ""
+
+#: ../../morph.rst:71 ../../morph.rst:83
+msgid ". / S"
+msgstr ""
+
+#: ../../morph.rst:73 ../../morph.rst:73
+msgid "소프트웨어 / NNG"
+msgstr ""
+
+#: ../../morph.rst:73
+msgid "소프트웨어 / N"
+msgstr ""
+
+#: ../../morph.rst:75 ../../morph.rst:75
+msgid "관련 / NNG"
+msgstr ""
+
+#: ../../morph.rst:75
+msgid "관련학과 / N"
+msgstr ""
+
+#: ../../morph.rst:77 ../../morph.rst:77
+msgid "학과 / NNG"
+msgstr ""
+
+#: ../../morph.rst:79
+msgid "일 / P"
+msgstr ""
+
+#: ../../morph.rst:79
+msgid "입니다 / VCP+EF"
+msgstr ""
+
+#: ../../morph.rst:81
+msgid "ㅂ니다 / EFN"
+msgstr ""
+
+#: ../../morph.rst:81
+msgid "ㅂ니다 / E"
+msgstr ""
+
+#: ../../morph.rst:86
+msgid "\"아버지가방에들어가신다\""
+msgstr ""
+
+#: ../../morph.rst:91 ../../morph.rst:91
+msgid "아버지 / NNG"
+msgstr ""
+
+#: ../../morph.rst:91
+msgid "아버지가방에들어가 / N"
+msgstr ""
+
+#: ../../morph.rst:93
+msgid "가방 / NNG"
+msgstr ""
+
+#: ../../morph.rst:93
+msgid "이 / J"
+msgstr ""
+
+#: ../../morph.rst:93
+msgid "가 / JKS"
+msgstr ""
+
+#: ../../morph.rst:95
+msgid "에 / JKM"
+msgstr ""
+
+#: ../../morph.rst:95
+msgid "방 / NNG"
+msgstr ""
+
+#: ../../morph.rst:97
+msgid "에 / JKB"
+msgstr ""
+
+#: ../../morph.rst:99 ../../morph.rst:101
+msgid "들어가 / VV"
+msgstr ""
+
+#: ../../morph.rst:101
+msgid "시 / EPH"
+msgstr ""
+
+#: ../../morph.rst:101
+msgid "시ㄴ다 / E"
+msgstr ""
+
+#: ../../morph.rst:103
+msgid "ㄴ다 / EFN"
+msgstr ""
+
+#: ../../morph.rst:103
+msgid "신다 / EP+EC"
+msgstr ""
+
+#: ../../morph.rst:106
+msgid "\"140823 Tofu Music Festival 존잘러에서 귀요미들로 변신ㅋㅋ #GOT7\""
+msgstr ""
+
+#: ../../morph.rst:111
+msgid "140823 / NR"
+msgstr ""
+
+#: ../../morph.rst:111
+msgid "140823 / N"
+msgstr ""
+
+#: ../../morph.rst:111
+msgid "140823 / SN"
+msgstr ""
+
+#: ../../morph.rst:113
+msgid "Tofu / OL"
+msgstr ""
+
+#: ../../morph.rst:113
+msgid "Tofu / F"
+msgstr ""
+
+#: ../../morph.rst:113
+msgid "Tofu / SL"
+msgstr ""
+
+#: ../../morph.rst:115
+msgid "Music / OL"
+msgstr ""
+
+#: ../../morph.rst:115
+msgid "Music / F"
+msgstr ""
+
+#: ../../morph.rst:115
+msgid "Music / SL"
+msgstr ""
+
+#: ../../morph.rst:117
+msgid "Festival / OL"
+msgstr ""
+
+#: ../../morph.rst:117
+msgid "Festival / F"
+msgstr ""
+
+#: ../../morph.rst:117
+msgid "Festival / SL"
+msgstr ""
+
+#: ../../morph.rst:119
+msgid "존 / NNP"
+msgstr ""
+
+#: ../../morph.rst:119
+msgid "존잘러 / N"
+msgstr ""
+
+#: ../../morph.rst:119
+msgid "존 / VA+JX"
+msgstr ""
+
+#: ../../morph.rst:121
+msgid "잘 / MAG"
+msgstr ""
+
+#: ../../morph.rst:121
+msgid "잘 / VA"
+msgstr ""
+
+#: ../../morph.rst:123
+msgid "러 / NNP"
+msgstr ""
+
+#: ../../morph.rst:123
+msgid "러 / EC"
+msgstr ""
+
+#: ../../morph.rst:125
+msgid "에서 / JKM"
+msgstr ""
+
+#: ../../morph.rst:125
+msgid "에서 / J"
+msgstr ""
+
+#: ../../morph.rst:125
+msgid "에서 / JKB"
+msgstr ""
+
+#: ../../morph.rst:127
+msgid "귀요 / NNG"
+msgstr ""
+
+#: ../../morph.rst:127
+msgid "귀요미들 / N"
+msgstr ""
+
+#: ../../morph.rst:127
+msgid "귀요미 / NNG"
+msgstr ""
+
+#: ../../morph.rst:129
+msgid "미들 / NNG"
+msgstr ""
+
+#: ../../morph.rst:129
+msgid "들 / XSN"
+msgstr ""
+
+#: ../../morph.rst:131
+msgid "로 / JKM"
+msgstr ""
+
+#: ../../morph.rst:131
+msgid "로 / J"
+msgstr ""
+
+#: ../../morph.rst:131
+msgid "로 / JKB"
+msgstr ""
+
+#: ../../morph.rst:133 ../../morph.rst:133
+msgid "변신 / NNG"
+msgstr ""
+
+#: ../../morph.rst:133
+msgid "변신ㅋㅋ / N"
+msgstr ""
+
+#: ../../morph.rst:135
+msgid "ㅋㅋ / EMO"
+msgstr ""
+
+#: ../../morph.rst:135
+msgid "ㅋㅋ / UNKNOWN"
+msgstr ""
+
+#: ../../morph.rst:137
+msgid "# / SW"
+msgstr ""
+
+#: ../../morph.rst:137
+msgid "#GOT7 / N"
+msgstr ""
+
+#: ../../morph.rst:137
+msgid "# / SY"
+msgstr ""
+
+#: ../../morph.rst:139
+msgid "GOT / OL"
+msgstr ""
+
+#: ../../morph.rst:139
+msgid "GOT / SL"
+msgstr ""
+
+#: ../../morph.rst:141
+msgid "7 / NR"
+msgstr ""
+
+#: ../../morph.rst:141
+msgid "7 / SN"
+msgstr ""
+
+#: ../../morph.rst:144
+msgid ""
+"All time analyses in this document were performed with :py:mod:`time` on a "
+"Thinkpad X1 Carbon (2013) and KoNLPy v0.3."
+msgstr ""
+
+#: ../../morph.rst:145
+msgid "Average of five consecutive runs."
+msgstr ""
+
+#: ../../morph.rst:146
+msgid "Average of ten consecutive runs."
+msgstr ""
+
+#: ../../morph.rst:147
+msgid ""
+"The current Hannanum class raises a "
+"``java.lang.ArrayIndexOutOfBoundsException: 10000`` exception if the number "
+"of characters is too large."
+msgstr ""

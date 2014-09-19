@@ -1,0 +1,40 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../examples/explore.rst:2
+msgid "Exploring a document"
+msgstr ""
+
+#: ../../examples/explore.rst:4
+msgid "Exploring a document can consist of various components:"
+msgstr ""
+
+#: ../../examples/explore.rst:6
+msgid "Counts (characters, words, etc.)"
+msgstr ""
+
+#: ../../examples/explore.rst:7
+msgid "Checking Zipf's laws: :math:`fr=k`"
+msgstr ""
+
+#: ../../examples/explore.rst:8
+msgid "Concordances"
+msgstr ""
+
+#: ../../examples/explore.rst:13
+msgid "Console::"
+msgstr ""
+
+#: ../../examples/explore.rst:55
+msgid "zipf.png:"
+msgstr ""

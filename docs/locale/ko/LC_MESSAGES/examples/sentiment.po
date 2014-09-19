@@ -1,0 +1,23 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../examples/sentiment.rst:2
+msgid "Twitter sentiment analysis"
+msgstr ""
+
+#: ../../examples/sentiment.rst:4
+msgid ""
+"http://www.laurentluce.com/posts/twitter-sentiment-analysis-using-python-"
+"and-nltk/ http://www.sjwhitworth.com/sentiment-analysis-in-python-using-"
+"nltk/"
+msgstr ""

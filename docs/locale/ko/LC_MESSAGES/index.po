@@ -1,0 +1,156 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Lucy Park <me@lucypark.kr>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../index.rst:2
+msgid "KoNLPy: Korean NLP in Python"
+msgstr "KoNLPy: 파이썬 한국어 NLP"
+
+#: ../../index.rst:14
+msgid ""
+"KoNLPy (pronounced *\"ko en el PIE\"*) is a Python package for natural "
+"language processing (NLP) of the Korean language. For installation "
+"directions, see :doc:`here <install>`."
+msgstr "KoNLPy(\"코엔엘파이\"라고 읽습니다)는 한국어 자연어처리를 위한 파이썬 패키지입니다. 설치법은 :doc:`이 곳을 <install>` 참고해주세요."
+
+#: ../../index.rst:51
+msgid "For more on how to use KoNLPy, go see the :ref:`api`."
+msgstr "KoNLPy의 더 자세한 사용법은 :ref:`api` 를 참고하시기 바랍니다."
+
+#: ../../index.rst:54
+msgid "Standing on the shoulders of giants"
+msgstr "거인의 어깨 위에 서기"
+
+#: ../../index.rst:56
+msgid ""
+"Korean, the `13th most widely spoken language in the world "
+"<http://www.koreatimes.co.kr/www/news/nation/2014/05/116_157214.html>`_, is "
+"a beautiful, yet complex language. Myriad :ref:`engines` were built by "
+"numerous researchers, to computationally extract meaningful features from "
+"the labyrinthine text."
+msgstr ""
+
+#: ../../index.rst:59
+msgid ""
+"KoNLPy is not just to create another, but to unify and build upon their "
+"shoulders, and see one step further. It is built particularly in the `Python"
+" (programming) language <http://python.org>`_, not only because of the "
+"language's simplicity and elegance, but also the powerful string processing "
+"modules and applicability to various tasks - including crawling, Web "
+"programming, and data analysis."
+msgstr ""
+
+#: ../../index.rst:62
+msgid "The three main philosophies of this project are:"
+msgstr "이 프로젝트에는 세 가지 철학이 있습니다:"
+
+#: ../../index.rst:64
+msgid "Keep it simple."
+msgstr "사용법이 간단해야 한다."
+
+#: ../../index.rst:65
+msgid "Make it easy. For humans. [#]_"
+msgstr "누구나 쉽게 이용할 수 있어야 한다. [#]_"
+
+#: ../../index.rst:66
+msgid ":ref:`\"Democracy on the web works.\" <contribute>`"
+msgstr ":ref:`\"인터넷 민주주의는 효과적이다.\" <contribute>`"
+
+#: ../../index.rst:68
+msgid ""
+"Please `report <https://github.com/e9t/konlpy/issues>`_ when you think any "
+"have gone stale."
+msgstr "위의 항목 중 하나라도 어긋나는 것이 있다면 `제보 부탁드립니다. <https://github.com/e9t/konlpy/issues>`_"
+
+#: ../../index.rst:71
+msgid "License"
+msgstr "라이센스"
+
+#: ../../index.rst:73
+msgid "`GPL v3 or above <http://gnu.org/licenses/gpl.html>`_ [#]_"
+msgstr "`GPL v3 또는 그 이상 <http://gnu.org/licenses/gpl.html>`_ [#]_"
+
+#: ../../index.rst:78
+msgid "Contribute"
+msgstr "참여하기"
+
+#: ../../index.rst:80
+msgid ""
+"KoNLPy isn't perfect, but it will continuously evolve and you are invited to"
+" participate!"
+msgstr "KoNLPy는 완벽하진 않지만 지속적으로 발전할 예정입니다. 그리고 당신도 참여할 수 있습니다!"
+
+#: ../../index.rst:83
+msgid ""
+"Found a bug? Have a good idea for improving KoNLPy? Visit the `KoNLPy GitHub"
+" page <https://github.com/e9t/konlpy>`_ and `suggest an idea "
+"<https://github.com/e9t/konlpy/issues>`_ or `make a pull request "
+"<https://github.com/e9t/konlpy/pulls>`_."
+msgstr "버그를 찾으셨나요? KoNLPy를 발전시킬 좋은 방법이 떠오르시나요? `KoNLPy 깃헙 페이지 <https://github.com/e9t/konlpy>`_ 를 방문해서 `아이디어를 제안하거나 <https://github.com/e9t/konlpy/issues>`_ 하거나 `풀리퀘스트를 보내주세요. <https://github.com/e9t/konlpy/pulls>`_"
+
+#: ../../index.rst:89
+msgid ""
+"You are also welcome to join the ``#koreannlp`` channel at the `Ozinger IRC "
+"Network <http://ozinger.org>`_, and the `mailing list "
+"<https://groups.google.com/forum/#!forum/konlpy>`_. The IRC channel is more "
+"focused on development discussions and the mailing list is a better place to"
+" ask questions, but nobody stops you from going the other way around."
+msgstr ""
+
+#: ../../index.rst:96
+msgid ""
+"Please note that *asking questions through these channels is also a great "
+"contribution*, because it give the community feedback as well as ideas. "
+"Don't hesitate to ask."
+msgstr ""
+
+#: ../../index.rst:102
+msgid "User guide"
+msgstr "사용하기"
+
+#: ../../index.rst:118
+msgid "API"
+msgstr ""
+
+#: ../../index.rst:127
+msgid "Indices and tables"
+msgstr "인덱스와 표"
+
+#: ../../index.rst:129
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../../index.rst:130
+msgid ":ref:`modindex`"
+msgstr ""
+
+#: ../../index.rst:131
+msgid ":ref:`search`"
+msgstr ""
+
+#: ../../index.rst:132
+msgid ":doc:`changelog`"
+msgstr ""
+
+#: ../../index.rst:135
+msgid ""
+"With `clear and brief <http://echojuliett.tumblr.com/post/32108001510"
+"/clarity-brevity>`_ documents."
+msgstr ""
+
+#: ../../index.rst:136
+msgid ""
+"No, I'm not extremely fond of this either. However, some important "
+"depedencies - such as Hannanum, Kkma, MeCab-ko - are GPL licensed, and we "
+"want to honor their licenses. (It is also an inevitable choice. We hope "
+"things may change in the future.)"
+msgstr ""

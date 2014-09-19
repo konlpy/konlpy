@@ -1,0 +1,307 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../references.rst:2
+msgid "References"
+msgstr ""
+
+#: ../../references.rst:7
+msgid ""
+"Please `modify this document "
+"<https://github.com/e9t/konlpy/blob/master/docs/references.rst>`_ if "
+"anything is erroneous or not included. Last updated at |today|."
+msgstr ""
+
+#: ../../references.rst:13
+msgid "Korean morpheme analyzer tools"
+msgstr ""
+
+#: ../../references.rst:16
+msgid "C/C++"
+msgstr ""
+
+#: ../../references.rst:18
+msgid "`KTS <http://wiki.kldp.org/wiki.php/KTS>`_ (1995) :license:`GPL v2`"
+msgstr ""
+
+#: ../../references.rst:18
+msgid "By 이상호, 서정연, 오영환 (KAIST & 서강대)"
+msgstr ""
+
+#: ../../references.rst:19
+msgid "`code <https://github.com/suapapa/kts>`_"
+msgstr ""
+
+#: ../../references.rst:20
+msgid ""
+"`MACH <http://cs.sungshin.ac.kr/~shim/demo/mach.html>`_ (2002) "
+":license:`custom`"
+msgstr ""
+
+#: ../../references.rst:21
+msgid "By Prof. Kwangseob Shim (성신여대)"
+msgstr ""
+
+#: ../../references.rst:23
+msgid ""
+"`MeCab-ko <https://bitbucket.org/eunjeon/mecab-ko/>`_ (2013) :license:`GPL` "
+":license:`LGPL` :license:`BSD`"
+msgstr ""
+
+#: ../../references.rst:23
+msgid "By Yong-woon Lee and Youngho Yoo"
+msgstr ""
+
+#: ../../references.rst:26
+msgid "Java"
+msgstr ""
+
+#: ../../references.rst:28
+msgid ""
+"`Arirang <http://cafe.naver.com/korlucene>`_ (2009) :license:`Apache v2`"
+msgstr ""
+
+#: ../../references.rst:28
+msgid "By SooMyung Lee"
+msgstr ""
+
+#: ../../references.rst:29
+msgid "`code <http://sourceforge.net/projects/lucenekorean>`_"
+msgstr ""
+
+#: ../../references.rst:31
+msgid ""
+"`Hannanum <http://semanticweb.kaist.ac.kr/home/index.php/HanNanum>`_ (1999) "
+":license:`GPL v3`"
+msgstr ""
+
+#: ../../references.rst:31
+msgid "By Prof. Key-Sun Choi Key's research team (KAIST)"
+msgstr ""
+
+#: ../../references.rst:32
+msgid ""
+"`code <http://kldp.net/projects/hannanum/src>`_, `docs "
+"<http://semanticweb.kaist.ac.kr/research/hannanum/j/javadoc/>`_"
+msgstr ""
+
+#: ../../references.rst:36
+msgid "`KKMA <http://kkma.snu.ac.kr>`_ (2010) :license:`GPL v2`"
+msgstr ""
+
+#: ../../references.rst:34
+msgid "By Prof. Sang-goo Lee's research team (서울대)"
+msgstr ""
+
+#: ../../references.rst:35
+msgid "Generates morpheme candidates using dynamic programming"
+msgstr ""
+
+#: ../../references.rst:36
+msgid ""
+"Tags morphemes by checking neighbors, and employing some heuristics and HMM "
+"models"
+msgstr ""
+
+#: ../../references.rst:37
+msgid "Developer blog: `Dongjoo Lee <http://therocks.tistory.com>`_"
+msgstr ""
+
+#: ../../references.rst:39
+msgid ""
+"`KOMORAN <http://shineware.tistory.com/tag/KOMORAN>`_ (2013) "
+":license:`custom`"
+msgstr ""
+
+#: ../../references.rst:39
+msgid "By *shineware*"
+msgstr ""
+
+#: ../../references.rst:42
+msgid "Python"
+msgstr ""
+
+#: ../../references.rst:44
+msgid "`KoNLPy <http://konlpy.readthedocs.org>`_ (2014) :license:`GPL v3`"
+msgstr ""
+
+#: ../../references.rst:45
+msgid "By Lucy Park (서울대)"
+msgstr ""
+
+#: ../../references.rst:47
+msgid ""
+"`UMorpheme <https://pypi.python.org/pypi/UMorpheme>`_ (2014) :license:`MIT`"
+msgstr ""
+
+#: ../../references.rst:47
+msgid "By Kyunghoon Kim (UNIST)"
+msgstr ""
+
+#: ../../references.rst:50
+msgid "R"
+msgstr ""
+
+#: ../../references.rst:53
+msgid ""
+"`KoNLP <https://github.com/haven-jeon/KoNLP>`_ (2011) :license:`GPL v3`"
+msgstr ""
+
+#: ../../references.rst:53
+msgid "By Heewon Jeon"
+msgstr ""
+
+#: ../../references.rst:56
+msgid "Others"
+msgstr ""
+
+#: ../../references.rst:58
+msgid "`K-LIWC <http://k-liwc.ajou.ac.kr/>`_ (아주대)"
+msgstr ""
+
+#: ../../references.rst:59
+msgid "`KRISTAL-IRMS <http://www.kristalinfo.com/>`_ (KISTI)"
+msgstr ""
+
+#: ../../references.rst:60
+msgid "`Development history <http://spasis.egloos.com/9507>`_"
+msgstr ""
+
+#: ../../references.rst:61
+msgid "`Korean XTAG <http://www.cis.upenn.edu/~xtag/koreantag/>`_ (UPenn)"
+msgstr ""
+
+#: ../../references.rst:62
+msgid "`HAM <http://nlp.kookmin.ac.kr/HAM/kor/ham-intr.html>`_ (국민대)"
+msgstr ""
+
+#: ../../references.rst:63
+msgid ""
+"`POSTAG/K <http://nlp.postech.ac.kr/~project/DownLoad/k_api.html>`_ (포스텍)"
+msgstr ""
+
+#: ../../references.rst:64
+msgid "`Speller <http://speller.cs.pusan.ac.kr/>`_ (부산대)"
+msgstr ""
+
+#: ../../references.rst:65
+msgid "`UTagger <http://203.250.77.242:5900/>`_ (울산대)"
+msgstr ""
+
+#: ../../references.rst:66
+msgid "`(No name) <http://cl.korea.ac.kr/Demo/dglee/index.html>`_ (고려대)"
+msgstr ""
+
+#: ../../references.rst:70
+msgid "Other NLP tools"
+msgstr ""
+
+#: ../../references.rst:73
+msgid "Language parser"
+msgstr ""
+
+#: ../../references.rst:75
+msgid ""
+"`KoreanParser <http://semanticweb.kaist.ac.kr/home/index.php/KoreanParser>`_"
+"       - By DongHyun Choi, Jungyeul Park, Key-Sun Choi (KAIST)"
+msgstr ""
+
+#: ../../references.rst:81
+msgid "Corpora"
+msgstr ""
+
+#: ../../references.rst:83
+msgid "Yonsei Corpus, 연세대, 1987."
+msgstr ""
+
+#: ../../references.rst:84
+msgid "42M tokens of Korean since the 1960s"
+msgstr ""
+
+#: ../../references.rst:85
+msgid "Korea University Korean Corpus, 1995."
+msgstr ""
+
+#: ../../references.rst:86
+msgid "10M tokens of Korean of 1970-90s"
+msgstr ""
+
+#: ../../references.rst:88
+msgid ""
+"`HANTEC 2.0 <http://www.kristalinfo.com/download/#hantec>`_, KISTI & 충남대, "
+"1998-2003."
+msgstr ""
+
+#: ../../references.rst:88
+msgid "120,000 test documents (237MB)"
+msgstr ""
+
+#: ../../references.rst:89
+msgid "50 TREC-type questions for QA (48KB)"
+msgstr ""
+
+#: ../../references.rst:90
+msgid ""
+"`HKIB-40075 <http://www.kristalinfo.com/TestCollections/readme_hkib.html>`_,"
+" KISTI & 한국일보, 2002."
+msgstr ""
+
+#: ../../references.rst:91
+msgid "40,075 test documents for text categorization (88 MB)"
+msgstr ""
+
+#: ../../references.rst:92
+msgid ""
+"`KAIST Corpus "
+"<http://semanticweb.kaist.ac.kr/home/index.php/KAIST_Corpus>`_, KAIST, "
+"1997-2005."
+msgstr ""
+
+#: ../../references.rst:93
+msgid ""
+"`Sejong Corpus <http://www.sejong.or.kr/>`_, National Institute of the "
+"Korean Language, 1998-2007."
+msgstr ""
+
+#: ../../references.rst:96
+msgid "General NLP resources"
+msgstr ""
+
+#: ../../references.rst:98
+msgid ""
+"`Google NLP publications "
+"<http://research.google.com/pubs/NaturalLanguageProcessing.html>`_"
+msgstr ""
+
+#: ../../references.rst:99
+msgid "`Lingpipe <http://alias-i.com/lingpipe/>`_"
+msgstr ""
+
+#: ../../references.rst:100
+msgid ""
+"`Microsoft NLP group (Redmond) <http://research.microsoft.com/en-"
+"us/groups/nlp/>`_"
+msgstr ""
+
+#: ../../references.rst:101
+msgid ""
+"`부산대 NLP 관련사이트 목록 <http://borame.cs.pusan.ac.kr/ai_home/site/site1.html>`_"
+msgstr ""
+
+#: ../../references.rst:102
+msgid "`Sejong semantic search system <http://sejong21.org>`_"
+msgstr ""
+
+#: ../../references.rst:103
+msgid "`한국어학회 <http://koling.org>`_"
+msgstr ""

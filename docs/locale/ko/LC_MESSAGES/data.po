@@ -1,0 +1,142 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../data.rst:2
+msgid "Data"
+msgstr ""
+
+#: ../../data.rst:4
+msgid ""
+"Files with astericks (*) are installed by default. Other files can be "
+"installed with :py:func:`.download`."
+msgstr ""
+
+#: ../../data.rst:10
+msgid "Corpora"
+msgstr ""
+
+#: ../../data.rst:12
+msgid "The following corpora are currently available:"
+msgstr ""
+
+#: ../../data.rst:15
+msgid "*kolaw*"
+msgstr ""
+
+#: ../../data.rst:17
+msgid "Korean law corpus."
+msgstr ""
+
+#: ../../data.rst:19
+msgid "constitution.txt*"
+msgstr ""
+
+#: ../../data.rst:22
+msgid "*kobill*"
+msgstr ""
+
+#: ../../data.rst:24
+msgid ""
+"Korean National Assembly bill corpus. The file ID corresponds to the bill "
+"number."
+msgstr ""
+
+#: ../../data.rst:26
+msgid "1809890.txt - 1809899.txt*"
+msgstr ""
+
+#: ../../data.rst:32
+msgid "Dictionaries"
+msgstr ""
+
+#: ../../data.rst:34
+msgid ""
+"Dictionaries are used for :doc:`morph`, and are built with :ref:`corpora`."
+msgstr ""
+
+#: ../../data.rst:38
+msgid ":py:class:`.Hannanum` *system dictionary*"
+msgstr ""
+
+#: ../../data.rst:40
+msgid "A dictionary created with the KAIST corpus. (4.7MB)"
+msgstr ""
+
+#: ../../data.rst:42
+msgid ""
+"Located at ``./konlpy/java/data/kE/dic_system.txt``. Part of this file is "
+"shown below.::"
+msgstr ""
+
+#: ../../data.rst:66
+msgid ""
+"You can add your own terms, modify ``./konlpy/java/data/kE/dic_user.txt``."
+msgstr ""
+
+#: ../../data.rst:69
+msgid ":py:class:`.Kkma` *system dictionary*"
+msgstr ""
+
+#: ../../data.rst:71
+msgid "A dictionary created with the Sejong corpus. (32MB)"
+msgstr ""
+
+#: ../../data.rst:73
+msgid ""
+"It is included within the Kkma ``.jar`` file, so in order to see dictionary "
+"files, check out the `KKMA's mirror "
+"<https://github.com/e9t/kkma/tree/master/dic>`_. Part of ``kcc.dic`` is "
+"shown below.::"
+msgstr ""
+
+#: ../../data.rst:91
+msgid ":py:class:`.Mecab` *system dictionary*"
+msgstr ""
+
+#: ../../data.rst:93
+msgid "A CSV formatted dictionary created with the Sejong corpus. (346MB)"
+msgstr ""
+
+#: ../../data.rst:95
+msgid ""
+"The compiled version is located at ``/usr/local/lib/mecab/dic/mecab-ko-dic``"
+" (or the path you assigned during installation), and you can see the "
+"original files in the `source code <https://bitbucket.org/eunjeon/mecab-ko-"
+"dic/src/ce04f82ab0083fb24e4e542e69d9e88a672c3325/seed/?at=master>`_. Part of"
+" ``CoinedWord.csv`` is shown below.::"
+msgstr ""
+
+#: ../../data.rst:112
+msgid ""
+"To add your own terms, see `here <https://bitbucket.org/eunjeon/mecab-ko-"
+"dic/src/ce04f82ab0083fb24e4e542e69d9e88a672c3325/final/user-"
+"dic/?at=master>`_."
+msgstr ""
+
+#: ../../data.rst:117
+msgid ""
+"You can add new words either to the system dictionaries or user "
+"dictionaries. However, there is a slight difference in the two choices.:"
+msgstr ""
+
+#: ../../data.rst:119
+msgid ""
+"*Adding to the system dictionary*: When dictionary updates are not frequent,"
+" when you do not want to drop the analysis speed."
+msgstr ""
+
+#: ../../data.rst:120
+msgid ""
+"*Adding to the user dictionary*: When dictionary updates are not frequent, "
+"when you do not have ``root`` access."
+msgstr ""

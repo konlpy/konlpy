@@ -1,0 +1,59 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../examples/stopwords.rst:2
+msgid "Generating corpus specific stopwords"
+msgstr ""
+
+#: ../../examples/stopwords.rst:4
+msgid ""
+"As far as Korean NLP goes, eliminating stopwords may not be as important nor"
+" useful as it is in English NLP. However there are some cases where it "
+"becomes beneficial:"
+msgstr ""
+
+#: ../../examples/stopwords.rst:7
+msgid "To identify stopwords in a corpus-specific, or domain-specific manner"
+msgstr ""
+
+#: ../../examples/stopwords.rst:8
+msgid "To reduce computation in later tasks (such as topic modeling)"
+msgstr ""
+
+#: ../../examples/stopwords.rst:10
+msgid ""
+"An expert with domain knowledge can define such stopwords herself, but there"
+" are numerous other computational ways that can easily be employed. One of "
+"them is to use the traditional `TF-IDF "
+"<http://en.wikipedia.org/wiki/Tf%E2%80%93idf>`_ calculations. TF-IDF was "
+"originally developed in order to score and rank a document's relevance to a "
+"given query in search engines. However, given its ability in ranking highly "
+"significant words of a document, it can also be applied to finding "
+"stopwords; just by reversing the list of words."
+msgstr ""
+
+#: ../../examples/stopwords.rst:20
+msgid ""
+"In this perspective, the example below derives the top 10 most and least "
+"significant words of a corpus using TF-IDF. Particularly, the TF-IDF "
+"statistics are calculated with the `Gensim "
+"<http://radimrehurek.com/gensim/>`_."
+msgstr ""
+
+#: ../../examples/stopwords.rst:26
+msgid "This is a code made easy for instruction and not thorougly optimized."
+msgstr ""
+
+#: ../../examples/stopwords.rst:31
+msgid "Console::"
+msgstr ""
