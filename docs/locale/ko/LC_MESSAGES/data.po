@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../data.rst:2
 msgid "Data"
-msgstr ""
+msgstr "데이터"
 
 #: ../../data.rst:4
 msgid ""
@@ -23,11 +23,11 @@ msgstr ""
 
 #: ../../data.rst:10
 msgid "Corpora"
-msgstr ""
+msgstr "말뭉치"
 
 #: ../../data.rst:12
 msgid "The following corpora are currently available:"
-msgstr ""
+msgstr "다음의 말뭉치(corpus)를 사용할 수 있습니다:"
 
 #: ../../data.rst:15
 msgid "*kolaw*"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../data.rst:17
 msgid "Korean law corpus."
-msgstr ""
+msgstr "한국 법률 말뭉치."
 
 #: ../../data.rst:19
 msgid "constitution.txt*"
@@ -57,7 +57,7 @@ msgstr ""
 
 #: ../../data.rst:32
 msgid "Dictionaries"
-msgstr ""
+msgstr "사전"
 
 #: ../../data.rst:34
 msgid ""
