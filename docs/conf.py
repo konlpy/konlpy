@@ -60,7 +60,7 @@ author_url = u'http://lucypark.kr'
 curyear = datetime.today().year
 
 copyright = u'%s, <a href="%s">%s</a>' % (curyear, author_url, author)
-url = u'http://konlpy.readthedocs.org'
+url = u'http://konlpy.org'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

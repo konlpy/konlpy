@@ -131,10 +131,6 @@ msgstr ""
 msgid "Python"
 msgstr ""
 
-#: ../../references.rst:44
-msgid "`KoNLPy <http://konlpy.readthedocs.org>`_ (2014) :license:`GPL v3`"
-msgstr ""
-
 #: ../../references.rst:45
 msgid "By Lucy Park (서울대)"
 msgstr ""
@@ -305,3 +301,10 @@ msgstr ""
 #: ../../references.rst:103
 msgid "`한국어학회 <http://koling.org>`_"
 msgstr ""
+
+#: ../../references.rst:44
+msgid "`KoNLPy <http://konlpy.org>`_ (2014) :license:`GPL v3`"
+msgstr ""
+
+#~ msgid "`KoNLPy <http://konlpy.readthedocs.org>`_ (2014) :license:`GPL v3`"
+#~ msgstr ""
