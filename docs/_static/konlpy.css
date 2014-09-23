@@ -67,3 +67,7 @@ table.footnote td.label {
 .license:hover {
     background-color: rgba(86,196,187,0.7);
 }
+
+#disqus_thread {
+    margin-top: 50px;
+}
