@@ -8,8 +8,8 @@ For example.::
 
     가방에 들어가신다 -> 가방/NNG + 에/JKM + 들어가/VV + 시/EPH + ㄴ다/EFN
 
-Tagging with KoNLPy
--------------------
+POS tagging with KoNLPy
+-----------------------
 
 In KoNLPy, there are several different options you can choose for POS tagging.
 All have the same input-output structure; the input is a phrase, and the output is a list of tagged morphemes.
@@ -21,10 +21,10 @@ For detailed usage instructions see the :doc:`api/konlpy.tag`.
 
         Compare POS tags between several Korean analytic projects. (In Korean)
 
-Comparison between tagging classes
-----------------------------------
+Comparison between POS tagging classes
+--------------------------------------
 
-Now, we do time and performation analysis for executing the ``pos`` method for each of the classes in the :doc:`api/konlpy.tag`.
+Now, we do time and performation analysis for executing the ``pos`` class for each of the classes in the :doc:`api/konlpy.tag`.
 
 Time analysis [1]_
 ''''''''''''''''''
@@ -35,7 +35,7 @@ Time analysis [1]_
     - :py:class:`.Hannanum`: 2.2950 *secs*
     - :py:class:`.Mecab`: 0.0002 *secs*
 
-2. *Execution time*: Time for executing the ``pos`` method for each class, with 100K characters. [3]_
+2. *Execution time*: Time for executing the ``pos`` class for each class, with 100K characters. [3]_
 
     - :py:class:`.Kkma`: 14.6882 *secs*
     - :py:class:`.Hannanum`: 2.6872 *secs*

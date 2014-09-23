@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../references.rst:2
 msgid "References"
-msgstr ""
+msgstr "참고문헌"
 
 #: ../../references.rst:7
 msgid ""
@@ -21,10 +21,13 @@ msgid ""
 "<https://github.com/e9t/konlpy/blob/master/docs/references.rst>`_ if "
 "anything is erroneous or not included. Last updated at |today|."
 msgstr ""
+"이 문서에 오류가 있거나 포함되지 않은 사항이 있는 경우 `직접 수정하실 수 있습니다 "
+"<https://github.com/e9t/konlpy/blob/master/docs/references.rst>`_. (마지막 "
+"업데이트: |today|)"
 
 #: ../../references.rst:13
 msgid "Korean morpheme analyzer tools"
-msgstr ""
+msgstr "한국어 형태소 분석기"
 
 #: ../../references.rst:16
 msgid "C/C++"
@@ -36,7 +39,7 @@ msgstr ""
 
 #: ../../references.rst:18
 msgid "By 이상호, 서정연, 오영환 (KAIST & 서강대)"
-msgstr ""
+msgstr "이상호, 서정연, 오영환 (KAIST & 서강대)"
 
 #: ../../references.rst:19
 msgid "`code <https://github.com/suapapa/kts>`_"
@@ -50,7 +53,7 @@ msgstr ""
 
 #: ../../references.rst:21
 msgid "By Prof. Kwangseob Shim (성신여대)"
-msgstr ""
+msgstr "심광섭 (성신여대)"
 
 #: ../../references.rst:23
 msgid ""
@@ -60,20 +63,20 @@ msgstr ""
 
 #: ../../references.rst:23
 msgid "By Yong-woon Lee and Youngho Yoo"
-msgstr ""
+msgstr "이용운, 유영호"
 
 #: ../../references.rst:26
 msgid "Java"
-msgstr ""
+msgstr "자바"
 
 #: ../../references.rst:28
 msgid ""
 "`Arirang <http://cafe.naver.com/korlucene>`_ (2009) :license:`Apache v2`"
-msgstr ""
+msgstr "`아리랑 <http://cafe.naver.com/korlucene>`_ (2009) :license:`Apache v2`"
 
 #: ../../references.rst:28
 msgid "By SooMyung Lee"
-msgstr ""
+msgstr "이수명"
 
 #: ../../references.rst:29
 msgid "`code <http://sourceforge.net/projects/lucenekorean>`_"
@@ -84,10 +87,12 @@ msgid ""
 "`Hannanum <http://semanticweb.kaist.ac.kr/home/index.php/HanNanum>`_ (1999) "
 ":license:`GPL v3`"
 msgstr ""
+"`한나눔 <http://semanticweb.kaist.ac.kr/home/index.php/HanNanum>`_ (1999) "
+":license:`GPL v3`"
 
 #: ../../references.rst:31
 msgid "By Prof. Key-Sun Choi Key's research team (KAIST)"
-msgstr ""
+msgstr "KAIST 최기선 교수 연구팀"
 
 #: ../../references.rst:32
 msgid ""
@@ -97,25 +102,25 @@ msgstr ""
 
 #: ../../references.rst:36
 msgid "`KKMA <http://kkma.snu.ac.kr>`_ (2010) :license:`GPL v2`"
-msgstr ""
+msgstr "`꼬꼬마 <http://kkma.snu.ac.kr>`_ (2010) :license:`GPL v2`"
 
 #: ../../references.rst:34
 msgid "By Prof. Sang-goo Lee's research team (서울대)"
-msgstr ""
+msgstr "서울대 이상구 교수 연구팀"
 
 #: ../../references.rst:35
 msgid "Generates morpheme candidates using dynamic programming"
-msgstr ""
+msgstr "동적 프로그래밍을 이용해 형태소 후보를 찾음"
 
 #: ../../references.rst:36
 msgid ""
 "Tags morphemes by checking neighbors, and employing some heuristics and HMM "
 "models"
-msgstr ""
+msgstr "형태소의 주변을 확인하고, 몇몇 휴리스틱을 사용하고, HMM을 사용하는 방식으로 품사를 태깅함"
 
 #: ../../references.rst:37
 msgid "Developer blog: `Dongjoo Lee <http://therocks.tistory.com>`_"
-msgstr ""
+msgstr "개발자 블로그: `이동주 <http://therocks.tistory.com>`_"
 
 #: ../../references.rst:39
 msgid ""
@@ -129,11 +134,11 @@ msgstr ""
 
 #: ../../references.rst:42
 msgid "Python"
-msgstr ""
+msgstr "파이썬"
 
 #: ../../references.rst:45
 msgid "By Lucy Park (서울대)"
-msgstr ""
+msgstr "박은정 (서울대)"
 
 #: ../../references.rst:47
 msgid ""
@@ -142,7 +147,7 @@ msgstr ""
 
 #: ../../references.rst:47
 msgid "By Kyunghoon Kim (UNIST)"
-msgstr ""
+msgstr "김경훈 (UNIST)"
 
 #: ../../references.rst:50
 msgid "R"
@@ -155,11 +160,11 @@ msgstr ""
 
 #: ../../references.rst:53
 msgid "By Heewon Jeon"
-msgstr ""
+msgstr "전희원"
 
 #: ../../references.rst:56
 msgid "Others"
-msgstr ""
+msgstr "그 외"
 
 #: ../../references.rst:58
 msgid "`K-LIWC <http://k-liwc.ajou.ac.kr/>`_ (아주대)"
@@ -171,7 +176,7 @@ msgstr ""
 
 #: ../../references.rst:60
 msgid "`Development history <http://spasis.egloos.com/9507>`_"
-msgstr ""
+msgstr "`개발 후기 <http://spasis.egloos.com/9507>`_"
 
 #: ../../references.rst:61
 msgid "`Korean XTAG <http://www.cis.upenn.edu/~xtag/koreantag/>`_ (UPenn)"
@@ -200,11 +205,11 @@ msgstr ""
 
 #: ../../references.rst:70
 msgid "Other NLP tools"
-msgstr ""
+msgstr "다른 NLP 도구"
 
 #: ../../references.rst:73
 msgid "Language parser"
-msgstr ""
+msgstr "언어 파서"
 
 #: ../../references.rst:75
 msgid ""
@@ -214,23 +219,23 @@ msgstr ""
 
 #: ../../references.rst:81
 msgid "Corpora"
-msgstr ""
+msgstr "말뭉치"
 
 #: ../../references.rst:83
 msgid "Yonsei Corpus, 연세대, 1987."
-msgstr ""
+msgstr "연세 말뭉치, 연세대, 1987."
 
 #: ../../references.rst:84
 msgid "42M tokens of Korean since the 1960s"
-msgstr ""
+msgstr "1960년 이후 한국어에 대한 4200만 어절"
 
 #: ../../references.rst:85
 msgid "Korea University Korean Corpus, 1995."
-msgstr ""
+msgstr "고려대학교 한국어 말뭉치, 1995"
 
 #: ../../references.rst:86
 msgid "10M tokens of Korean of 1970-90s"
-msgstr ""
+msgstr "1970-90년대 한국어에 대한 1000만 어절"
 
 #: ../../references.rst:88
 msgid ""
@@ -240,20 +245,16 @@ msgstr ""
 
 #: ../../references.rst:88
 msgid "120,000 test documents (237MB)"
-msgstr ""
+msgstr "12만 개의 테스트 문서 (237MB)"
 
 #: ../../references.rst:89
 msgid "50 TREC-type questions for QA (48KB)"
-msgstr ""
+msgstr "QA를 위한 50개의 TREC 형태 질의"
 
 #: ../../references.rst:90
 msgid ""
 "`HKIB-40075 <http://www.kristalinfo.com/TestCollections/readme_hkib.html>`_,"
 " KISTI & 한국일보, 2002."
-msgstr ""
-
-#: ../../references.rst:91
-msgid "40,075 test documents for text categorization (88 MB)"
 msgstr ""
 
 #: ../../references.rst:92
@@ -305,6 +306,17 @@ msgstr ""
 #: ../../references.rst:44
 msgid "`KoNLPy <http://konlpy.org>`_ (2014) :license:`GPL v3`"
 msgstr ""
+
+#: ../../references.rst:91
+msgid "40,075 test documents for text categorization (88MB)"
+msgstr "텍스트 분류를 위한 40,075 테스트 문서 (88MB)"
+
+#: ../../references.rst:104
+msgid "한글 및 한국어 정보처리 학술대회"
+msgstr ""
+
+#~ msgid "40,075 test documents for text categorization (88 MB)"
+#~ msgstr "텍스트 분류를 위한 40,075 테스트 문서 (88MB)"
 
 #~ msgid "`KoNLPy <http://konlpy.readthedocs.org>`_ (2014) :license:`GPL v3`"
 #~ msgstr ""

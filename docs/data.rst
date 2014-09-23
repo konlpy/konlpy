@@ -117,4 +117,4 @@ To add your own terms, see `here <https://bitbucket.org/eunjeon/mecab-ko-dic/src
     You can add new words either to the system dictionaries or user dictionaries. However, there is a slight difference in the two choices.:
 
     - *Adding to the system dictionary*: When dictionary updates are not frequent, when you do not want to drop the analysis speed.
-    - *Adding to the user dictionary*: When dictionary updates are not frequent, when you do not have ``root`` access.
+    - *Adding to the user dictionary*: When dictionary updates are frequent, when you do not have ``root`` access.

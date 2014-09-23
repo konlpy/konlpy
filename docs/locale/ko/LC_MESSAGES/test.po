@@ -13,17 +13,17 @@ msgstr ""
 
 #: ../../test.rst:2
 msgid "Running tests"
-msgstr ""
+msgstr "테스트하기"
 
 #: ../../test.rst:4
 msgid ""
 "KoNLPy has tests to evaulate its quality. To perform a test, use the code "
 "below."
-msgstr ""
+msgstr "KoNLPy 결과물의 정합성을 확인하기 위한 테스트가 몇 가지 있습니다. 테스트를 수행하기 위해서는 다음의 코드를 실행해주세요."
 
 #: ../../test.rst:14
 msgid "KoNLPy was tested on the below environments:"
-msgstr ""
+msgstr "KoNLPy는 다음의 환경에서 사용이 확인되었습니다:"
 
 #: ../../test.rst:16
 msgid "Mac OS X 10.9 with Sun/Oracle 1.6.0"
@@ -49,4 +49,5 @@ msgstr ""
 msgid ""
 "To see known bugs/issues, see `here "
 "<https://github.com/e9t/konlpy/labels/bug>`_."
-msgstr ""
+msgstr "알려진 버그와 이슈를 보기 위해서 는 `이 곳 <https://github.com/e9t/konlpy/labels/bug>`_ 을 방문하여 확인해주시기 바랍니다."
+

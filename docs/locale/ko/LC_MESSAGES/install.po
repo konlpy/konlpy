@@ -13,51 +13,51 @@ msgstr ""
 
 #: ../../install.rst:2
 msgid "Installation"
-msgstr ""
+msgstr "설치하기"
 
 #: ../../install.rst:5
 msgid "Linux/Mac OS"
-msgstr ""
+msgstr "리눅스/맥 OS"
 
 #: ../../install.rst:15
 msgid "Windows"
-msgstr ""
+msgstr "윈도우"
 
 #: ../../install.rst:17
 msgid ""
 "Download and install `jpype "
 "<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ [#]_"
-msgstr ""
+msgstr "`jpype <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ 다운로드 및 설치하기 [#]_"
 
 #: ../../install.rst:19
 msgid "From the command prompt, install KoNLPy."
-msgstr ""
+msgstr "명령 프롬프트로 KoNLPy 설치하기"
 
 #: ../../install.rst:25
 msgid ""
 "(Optional) Download, extract [#]_, and install the most recent version of "
 "MeCab from the following links:"
-msgstr ""
+msgstr "(선택사항) 아래의 링크를 클릭해서 MeCab의 가장 최신 버젼을 다운로드한 후, 압축을 풀고, 설치하기"
 
 #: ../../install.rst:27
 msgid "`mecab-ko <https://bitbucket.org/eunjeon/mecab-ko/downloads>`_"
-msgstr ""
+msgstr "`mecab-ko <https://bitbucket.org/eunjeon/mecab-ko/downloads>`_"
 
 #: ../../install.rst:28
 msgid "`mecab-ko-dic <https://bitbucket.org/eunjeon/mecab-ko-dic/downloads>`_"
-msgstr ""
+msgstr "`mecab-ko-dic <https://bitbucket.org/eunjeon/mecab-ko-dic/downloads>`_"
 
 #: ../../install.rst:29
 msgid ""
 "`mecab-python <https://code.google.com/p/mecab/downloads/list?q=python>`_"
-msgstr ""
+msgstr "`mecab-python <https://code.google.com/p/mecab/downloads/list?q=python>`_"
 
 #: ../../install.rst:31
 msgid "`win-amd64` for 64-bit Windows, `win32` for 32-bit Windows."
-msgstr ""
+msgstr "62비트 윈도우에는 `win-amd62`, 32비트 윈도우에는 `win32`라고 쓰여진 파일을 사용합니다."
 
 #: ../../install.rst:32
 msgid ""
 "Having MinGW/MSYS or Cygwin installed may be more convenient. Otherwise, you"
 " can use `7zip <http://7-zip.org>`_ for the extraction of `tar` files."
-msgstr ""
+msgstr "애초에 MinGW/MSYS 또는 Cygwin을 설치해서 사용하거나, `7zip <http://7-zip.org>`_ 을 쓰시면 `tar` 파일의 압축을 손쉽게 푸실 수 있습니다."

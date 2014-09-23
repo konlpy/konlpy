@@ -13,56 +13,56 @@ msgstr ""
 
 #: ../../examples.rst:2
 msgid "Examples"
-msgstr ""
+msgstr "사용 예시"
 
 #: ../../examples.rst:4
 msgid "Below are a set of example tasks using KoNLPy."
-msgstr ""
+msgstr "다음은 KoNLPy를 이용해 수행할 수 있는 몇몇 사용 예시입니다."
 
-#: ../../examples.rst:8
+#: ../../examples.rst:20
 msgid ":doc:`examples/explore`"
 msgstr ""
 
-#: ../../examples.rst:14
+#: ../../examples.rst:26
 msgid ":doc:`examples/wordcloud`"
 msgstr ""
 
-#: ../../examples.rst:20
+#: ../../examples.rst:32
 msgid ":doc:`examples/collocations`"
 msgstr ""
 
 #: ../../examples/collocations.rst:2
 msgid "Finding collocations"
-msgstr ""
+msgstr "연어(collocation) 찾기"
 
 #: ../../examples/collocations.rst:4
 msgid "We can find collocations with the help of `NLTK <http://nltk.org>`_."
-msgstr ""
+msgstr "`NLTK <http://nltk.org>`_ 를 같이 활용하여 연어(collocation)을 찾을 수 있습니다."
 
 #: ../../examples/collocations.rst:9 ../../examples/explore.rst:13
 #: ../../examples/stopwords.rst:31
 msgid "Console::"
-msgstr ""
+msgstr "출력 결과::"
 
 #: ../../examples/explore.rst:2
 msgid "Exploring a document"
-msgstr ""
+msgstr "문서 탐색하기"
 
 #: ../../examples/explore.rst:4
 msgid "Exploring a document can consist of various components:"
-msgstr ""
+msgstr "처음 문서를 탐색할 때는 다양한 것을 확인해볼 수 있습니다:"
 
 #: ../../examples/explore.rst:6
 msgid "Counts (characters, words, etc.)"
-msgstr ""
+msgstr "개수 세기 (문자, 단어 등)"
 
 #: ../../examples/explore.rst:7
 msgid "Checking Zipf's laws: :math:`fr=k`"
-msgstr ""
+msgstr "지프의 법칙(Zipf's laws) 확인해보기: :math:`fr=k`"
 
 #: ../../examples/explore.rst:8
 msgid "Concordances"
-msgstr ""
+msgstr "용례 찾기"
 
 #: ../../examples/explore.rst:55
 msgid "zipf.png:"
@@ -70,7 +70,7 @@ msgstr ""
 
 #: ../../examples/sentiment.rst:2
 msgid "Twitter sentiment analysis"
-msgstr ""
+msgstr "트위터 센티멘트 분석"
 
 #: ../../examples/sentiment.rst:4
 msgid ""
@@ -124,19 +124,21 @@ msgstr ""
 
 #: ../../examples/wordcloud.rst:2
 msgid "Drawing a word cloud"
-msgstr ""
+msgstr "워드클라우드 그리기"
 
 #: ../../examples/wordcloud.rst:4
 msgid ""
 "Below shows a code example that crawls a National Assembly bill from the "
 "web, extract nouns and draws a word cloud - from head to tail in Python."
-msgstr ""
+msgstr "다음은 파이썬만으로 웹에서 국회 의안의 내용을 수집해서 이용해 명사를 추출한 후, 워드클라우드를 그리는 예시입니다."
 
 #: ../../examples/wordcloud.rst:6
 msgid ""
 "You can change the bill number (i.e., ``bill_num``), and see how the word "
 "clouds differ per bill. (ex: '1904882', '1904883', 'ZZ19098', etc)"
 msgstr ""
+"의안 번호(i.e., ``bill_num``)를 바꿔가며 워드클라우드가 어떻게 달라지는지 확인할수도 있습니다. (ex: '1904882', "
+"'1904883', 'ZZ19098', etc)"
 
 #: ../../examples/wordcloud.rst:13
 msgid ""
@@ -145,3 +147,14 @@ msgid ""
 "eligible fonts - that support the Korean language - manually, or install the"
 " Korean supported version `here <https://github.com/e9t/PyTagCloud>`_."
 msgstr ""
+"PyPI에 업로드되어 있는 `PyTagCloud <https://pypi.python.org/pypi/pytagcloud>`_ 를 "
+"이용하면 워드클라우드에 한글이 제대로 표시되지 않을 수 있습니다. 이 경우, 직접 소스코드에 한글 폰트를 추가하거나, `이 곳 "
+"<https://github.com/e9t/PyTagCloud>`_ 에서 미리 폰트가 추가된 버젼을 다운받아 사용하시면 됩니다."
+
+#: ../../examples.rst:7
+msgid "Contents"
+msgstr "목록보기"
+
+#: ../../examples.rst:16
+msgid "Thumbnails"
+msgstr "썸네일"

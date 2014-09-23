@@ -48,7 +48,8 @@ For installation directions, see :doc:`here <install>`.
      (!, SF),
      (^^, EMO)]
 
-For more on how to use KoNLPy, go see the :ref:`api`.
+For step-by-step instructions, follow the :ref:`guide`.
+For specific descriptions of each module, go see the :ref:`api` documents.
 
 Standing on the shoulders of giants
 -----------------------------------
@@ -97,6 +98,8 @@ Please note that
 *asking questions through these channels is also a great contribution*,
 because it give the community feedback as well as ideas.
 Don't hesitate to ask.
+
+.. _guide:
 
 User guide
 ==========

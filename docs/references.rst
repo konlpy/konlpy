@@ -88,7 +88,7 @@ Corpora
     - 120,000 test documents (237MB)
     - 50 TREC-type questions for QA (48KB)
 - `HKIB-40075 <http://www.kristalinfo.com/TestCollections/readme_hkib.html>`_, KISTI & 한국일보, 2002.
-    - 40,075 test documents for text categorization (88 MB)
+    - 40,075 test documents for text categorization (88MB)
 - `KAIST Corpus <http://semanticweb.kaist.ac.kr/home/index.php/KAIST_Corpus>`_, KAIST, 1997-2005.
 - `Sejong Corpus <http://www.sejong.or.kr/>`_, National Institute of the Korean Language, 1998-2007.
 
@@ -101,3 +101,4 @@ General NLP resources
 - `부산대 NLP 관련사이트 목록 <http://borame.cs.pusan.ac.kr/ai_home/site/site1.html>`_
 - `Sejong semantic search system <http://sejong21.org>`_
 - `한국어학회 <http://koling.org>`_
+- 한글 및 한국어 정보처리 학술대회

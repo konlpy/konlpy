@@ -3,6 +3,18 @@ Examples
 
 Below are a set of example tasks using KoNLPy.
 
+Contents
+--------
+
+.. toctree::
+
+    examples/explore
+    examples/wordcloud
+    examples/collocations
+
+Thumbnails
+----------
+
 .. container:: example
 
     :doc:`examples/explore`
