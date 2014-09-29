@@ -71,7 +71,25 @@ Please `report <https://github.com/e9t/konlpy/issues>`_ when you think any have 
 License
 -------
 
+KoNLPy is Open Source Software, and is released under the license below:
+
 - `GPL v3 or above <http://gnu.org/licenses/gpl.html>`_ [#]_
+
+You are welcome to use the code under the terms of the license, however please acknowledge its use with a citation.
+
+- Eunjeong L. Park, Sungzoon Cho. "`KoNLPy: Korean natural language processing in Python <http://dmlab.snu.ac.kr/~lucypark/docs/2014-10-10-hclt.pdf>`_", Proceedings of the 26th Annual Conference on Human & Cognitive Language Technology, Chuncheon, Korea, Oct 2014.
+
+Here is a BibTeX entry.::
+
+    @inproceedings{park2014konlpy,
+      title={KoNLPy: Korean natural language processing in Python},
+      author={Park, Eunjeong L. and Cho, Sungzoon},
+      booktitle={Proceedings of the 26th Annual Conference on Human & Cognitive Language Technology},
+      address={Chuncheon, Korea},
+      month={October},
+      year={2014}
+    }
+
 
 .. _contribute:
 
