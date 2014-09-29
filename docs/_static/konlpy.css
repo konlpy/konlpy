@@ -13,6 +13,10 @@ a.reference.image-reference:hover {
     border-bottom: none;
 }
 
+div.sphinxsidebar #searchbox input[type="submit"] {
+    width: inherit;
+}
+
 table.docutils {
     margin: 15px 0;
 }
