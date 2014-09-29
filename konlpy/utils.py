@@ -65,7 +65,7 @@ def concordance(phrase, text, show=False):
     indexes = [i for i, term in enumerate(terms) if phrase in term]
     if show:
         for i in indexes:
-            print(i, ' '.join(terms[max(0, i-3):i+3]))
+            print('%d\t%s' % (i, ' '.join(terms[max(0, i-3):i+3])))
     return indexes
 
 def concat(phrase):
