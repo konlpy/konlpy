@@ -26,7 +26,7 @@ class Kkma():
         kkma = Kkma()
         print kkma.sentences(u'저는 대학생이구요. 소프트웨어 관련학과 입니다.')
         print kkma.nouns(u'대학에서 DB, 통계학, 이산수학 등을 배웠지만...')
-        print kkma.morph(u'자주 사용을 안하다보니 모두 까먹은 상태입니다.')
+        print kkma.morphs(u'자주 사용을 안하다보니 모두 까먹은 상태입니다.')
         print kkma.pos(u'어쩌면 좋죠?')
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
