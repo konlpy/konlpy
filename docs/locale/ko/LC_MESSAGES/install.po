@@ -54,7 +54,7 @@ msgstr "`mecab-python <https://code.google.com/p/mecab/downloads/list?q=python>`
 
 #: ../../install.rst:31
 msgid "`win-amd64` for 64-bit Windows, `win32` for 32-bit Windows."
-msgstr "62비트 윈도우에는 `win-amd62`, 32비트 윈도우에는 `win32`라고 쓰여진 파일을 사용합니다."
+msgstr "64비트 윈도우에는 `win-amd64`, 32비트 윈도우에는 `win32`라고 쓰여진 파일을 사용합니다."
 
 #: ../../install.rst:32
 msgid ""
