@@ -1,7 +1,35 @@
 @import url(flasky.css);
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Myeongjo';
+  font-style: normal;
+  font-weight: 600;
+  src: url(//fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Bold.eot);
+  src: url(//fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Bold.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Bold.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Bold.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Bold.ttf) format('truetype');
+}
 
 body {
-    font-family: Georgia, serif;
+    font-family: 'PT Sans', 'Helvetica Neue', 'Arial', 'Nanum Gothic', sans-serif;
+}
+
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5 {
+    font-family: 'Garamond', 'Georgia', 'Nanum Myeongjo', serif;
 }
 
 a.reference.image-reference {
