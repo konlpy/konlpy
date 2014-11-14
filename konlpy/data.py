@@ -32,7 +32,7 @@ if os.path.expanduser('~/') != '~/':
 # Windows common locations
 if sys.platform.startswith('win'):
     path += [
-            r'C:\konlpy_data', r'D:\konlpy_data', r'E:konlpy_data',
+            r'C:\konlpy_data', r'D:\konlpy_data', r'E:\konlpy_data',
             os.path.join(sys.prefix, 'konlpy_data'),
             os.path.join(sys.prefix, 'lib', 'konlpy_data'),
             os.path.join(os.environ.get('APPDATA', 'C:\\'), 'konlpy_data')]
