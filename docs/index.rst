@@ -114,7 +114,7 @@ but nobody stops you from going the other way around.
 
 Please note that
 *asking questions through these channels is also a great contribution*,
-because it give the community feedback as well as ideas.
+because it gives the community feedback as well as ideas.
 Don't hesitate to ask.
 
 .. _guide:
