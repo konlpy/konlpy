@@ -15,6 +15,23 @@
 # limitations under the License.
 #
 
+
+os=$(uname)
+if [ $os == "Linux" ]
+then
+    echo "Installing MeCab-ko"
+elif [ $os == "Darwin" ]
+then
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    brew install wget
+    echo "Installing MeCab-ko"
+else
+    echo "This script does not support this OS."
+    echo "Try consulting https://github.com/e9t/konlpy/blob/master/scripts/mecab.sh"
+    exit 0
+fi
+
+
 # install mecab-ko
 cd /tmp
 wget https://bitbucket.org/eunjeon/mecab-ko/downloads/mecab-0.996-ko-0.9.1.tar.gz
