@@ -6,6 +6,7 @@ Change logs
 
 Version in development.
 
+- Added nonflattened results for POS taggers
 - Change dependency version of mecab-python from 0.993 to 0.996 [:issue:`19` with comments by Yong-woon Lee]
 
 `Version 0.3.3 <https://github.com/e9t/konlpy/releases/tag/v0.3.3>`_
