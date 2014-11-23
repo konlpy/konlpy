@@ -40,7 +40,7 @@ class Kkma():
         if not nouns: return []
         return [nouns.get(i).getString() for i in range(nouns.size())]
 
-    def pos(self, phrase):
+    def pos(self, phrase, flatten=True):
         """POS tagger."""
 
         phrase = utils.preprocess(phrase)
@@ -52,9 +52,13 @@ class Kkma():
             sentence = sentences.get(i)
             for j in range(sentence.size()):
                 eojeol = sentence.get(j)
-                for k in range(eojeol.size()):
-                    morpheme = eojeol.get(k)
-                    morphemes.append((morpheme.getString(), morpheme.getTag()))
+                if flatten:
+                    for k in range(eojeol.size()):
+                        morpheme = eojeol.get(k)
+                        morphemes.append((morpheme.getString(), morpheme.getTag()))
+                else:
+                    morphemes.append([(eojeol.get(k).getString(), eojeol.get(k).getTag())\
+                                     for k in range(eojeol.size())])
 
         return morphemes
 

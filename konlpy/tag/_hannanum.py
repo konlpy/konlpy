@@ -70,7 +70,7 @@ class Hannanum():
         phrase = utils.preprocess(phrase)
         return list(self.jhi.extractNoun(phrase))
 
-    def pos(self, phrase, ntags=9):
+    def pos(self, phrase, ntags=9, flatten=True):
         """POS tagger.
 
         This tagger is HMM based, and calculates the probability of tags.
@@ -84,7 +84,7 @@ class Hannanum():
             result = self.jhi.simplePos22(phrase)
         else:
             raise Exception('ntags in [9, 22]')
-        return parse(result, flatten=True)
+        return parse(result, flatten=flatten)
 
     def morphs(self, phrase):
         """Parse phrase to morphemes."""
