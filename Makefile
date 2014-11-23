@@ -32,6 +32,11 @@ testall:
 	python -m pytest test/*
 	python3 -m pytest test/*
 
+init_i18n:
+	pip install mock sphinx sphinx-intl
+	git submodule init
+	git submodule update
+
 extract_i18n:
 	cd docs\
 	    && make gettext\

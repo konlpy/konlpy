@@ -40,7 +40,6 @@ msgid "We can find collocations with the help of `NLTK <http://nltk.org>`_."
 msgstr "`NLTK <http://nltk.org>`_ 를 같이 활용하여 연어(collocation)을 찾을 수 있습니다."
 
 #: ../../examples/collocations.rst:9 ../../examples/explore.rst:13
-#: ../../examples/stopwords.rst:31
 msgid "Console::"
 msgstr "출력 결과::"
 
@@ -68,60 +67,6 @@ msgstr "용례 찾기"
 msgid "zipf.png:"
 msgstr ""
 
-#: ../../examples/sentiment.rst:2
-msgid "Twitter sentiment analysis"
-msgstr "트위터 센티멘트 분석"
-
-#: ../../examples/sentiment.rst:4
-msgid ""
-"http://www.laurentluce.com/posts/twitter-sentiment-analysis-using-python-"
-"and-nltk/ http://www.sjwhitworth.com/sentiment-analysis-in-python-using-"
-"nltk/"
-msgstr ""
-
-#: ../../examples/stopwords.rst:2
-msgid "Generating corpus specific stopwords"
-msgstr ""
-
-#: ../../examples/stopwords.rst:4
-msgid ""
-"As far as Korean NLP goes, eliminating stopwords may not be as important nor"
-" useful as it is in English NLP. However there are some cases where it "
-"becomes beneficial:"
-msgstr ""
-
-#: ../../examples/stopwords.rst:7
-msgid "To identify stopwords in a corpus-specific, or domain-specific manner"
-msgstr ""
-
-#: ../../examples/stopwords.rst:8
-msgid "To reduce computation in later tasks (such as topic modeling)"
-msgstr ""
-
-#: ../../examples/stopwords.rst:10
-msgid ""
-"An expert with domain knowledge can define such stopwords herself, but there"
-" are numerous other computational ways that can easily be employed. One of "
-"them is to use the traditional `TF-IDF "
-"<http://en.wikipedia.org/wiki/Tf%E2%80%93idf>`_ calculations. TF-IDF was "
-"originally developed in order to score and rank a document's relevance to a "
-"given query in search engines. However, given its ability in ranking highly "
-"significant words of a document, it can also be applied to finding "
-"stopwords; just by reversing the list of words."
-msgstr ""
-
-#: ../../examples/stopwords.rst:20
-msgid ""
-"In this perspective, the example below derives the top 10 most and least "
-"significant words of a corpus using TF-IDF. Particularly, the TF-IDF "
-"statistics are calculated with the `Gensim "
-"<http://radimrehurek.com/gensim/>`_."
-msgstr ""
-
-#: ../../examples/stopwords.rst:26
-msgid "This is a code made easy for instruction and not thorougly optimized."
-msgstr ""
-
 #: ../../examples/wordcloud.rst:2
 msgid "Drawing a word cloud"
 msgstr "워드클라우드 그리기"
@@ -137,8 +82,8 @@ msgid ""
 "You can change the bill number (i.e., ``bill_num``), and see how the word "
 "clouds differ per bill. (ex: '1904882', '1904883', 'ZZ19098', etc)"
 msgstr ""
-"의안 번호(i.e., ``bill_num``)를 바꿔가며 워드클라우드가 어떻게 달라지는지 확인할수도 있습니다. (ex: '1904882', "
-"'1904883', 'ZZ19098', etc)"
+"의안 번호(i.e., ``bill_num``)를 바꿔가며 워드클라우드가 어떻게 달라지는지 확인할수도 있습니다. (ex: "
+"'1904882', '1904883', 'ZZ19098', etc)"
 
 #: ../../examples/wordcloud.rst:13
 msgid ""
@@ -158,3 +103,48 @@ msgstr "목록보기"
 #: ../../examples.rst:16
 msgid "Thumbnails"
 msgstr "썸네일"
+
+#~ msgid "Twitter sentiment analysis"
+#~ msgstr "트위터 센티멘트 분석"
+
+#~ msgid ""
+#~ "http://www.laurentluce.com/posts/twitter-sentiment-analysis-using-python-"
+#~ "and-nltk/ http://www.sjwhitworth.com/sentiment-analysis-in-python-using-"
+#~ "nltk/"
+#~ msgstr ""
+
+#~ msgid "Generating corpus specific stopwords"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As far as Korean NLP goes, eliminating stopwords may not be as important nor"
+#~ " useful as it is in English NLP. However there are some cases where it "
+#~ "becomes beneficial:"
+#~ msgstr ""
+
+#~ msgid "To identify stopwords in a corpus-specific, or domain-specific manner"
+#~ msgstr ""
+
+#~ msgid "To reduce computation in later tasks (such as topic modeling)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "An expert with domain knowledge can define such stopwords herself, but there"
+#~ " are numerous other computational ways that can easily be employed. One of "
+#~ "them is to use the traditional `TF-IDF "
+#~ "<http://en.wikipedia.org/wiki/Tf%E2%80%93idf>`_ calculations. TF-IDF was "
+#~ "originally developed in order to score and rank a document's relevance to a "
+#~ "given query in search engines. However, given its ability in ranking highly "
+#~ "significant words of a document, it can also be applied to finding "
+#~ "stopwords; just by reversing the list of words."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this perspective, the example below derives the top 10 most and least "
+#~ "significant words of a corpus using TF-IDF. Particularly, the TF-IDF "
+#~ "statistics are calculated with the `Gensim "
+#~ "<http://radimrehurek.com/gensim/>`_."
+#~ msgstr ""
+
+#~ msgid "This is a code made easy for instruction and not thorougly optimized."
+#~ msgstr ""

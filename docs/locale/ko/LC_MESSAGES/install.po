@@ -15,49 +15,63 @@ msgstr ""
 msgid "Installation"
 msgstr "설치하기"
 
-#: ../../install.rst:5
-msgid "Linux/Mac OS"
-msgstr "리눅스/맥 OS"
-
-#: ../../install.rst:15
+#: ../../install.rst:19
 msgid "Windows"
 msgstr "윈도우"
 
-#: ../../install.rst:17
+#: ../../install.rst:21
 msgid ""
 "Download and install `jpype "
 "<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ [#]_"
-msgstr "`jpype <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ 다운로드 및 설치하기 [#]_"
+msgstr ""
+"`jpype <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ 다운로드 및 설치하기 [#]_"
 
-#: ../../install.rst:19
+#: ../../install.rst:8 ../../install.rst:23
 msgid "From the command prompt, install KoNLPy."
 msgstr "명령 프롬프트로 KoNLPy 설치하기"
 
-#: ../../install.rst:25
+#: ../../install.rst:29
 msgid ""
 "(Optional) Download, extract [#]_, and install the most recent version of "
 "MeCab from the following links:"
 msgstr "(선택사항) 아래의 링크를 클릭해서 MeCab의 가장 최신 버젼을 다운로드한 후, 압축을 풀고, 설치하기"
 
-#: ../../install.rst:27
+#: ../../install.rst:31
 msgid "`mecab-ko <https://bitbucket.org/eunjeon/mecab-ko/downloads>`_"
 msgstr "`mecab-ko <https://bitbucket.org/eunjeon/mecab-ko/downloads>`_"
 
-#: ../../install.rst:28
+#: ../../install.rst:32
 msgid "`mecab-ko-dic <https://bitbucket.org/eunjeon/mecab-ko-dic/downloads>`_"
-msgstr "`mecab-ko-dic <https://bitbucket.org/eunjeon/mecab-ko-dic/downloads>`_"
+msgstr ""
+"`mecab-ko-dic <https://bitbucket.org/eunjeon/mecab-ko-dic/downloads>`_"
 
-#: ../../install.rst:29
+#: ../../install.rst:33
 msgid ""
 "`mecab-python <https://code.google.com/p/mecab/downloads/list?q=python>`_"
-msgstr "`mecab-python <https://code.google.com/p/mecab/downloads/list?q=python>`_"
+msgstr ""
+"`mecab-python <https://code.google.com/p/mecab/downloads/list?q=python>`_"
 
-#: ../../install.rst:31
+#: ../../install.rst:35
 msgid "`win-amd64` for 64-bit Windows, `win32` for 32-bit Windows."
 msgstr "64비트 윈도우에는 `win-amd64`, 32비트 윈도우에는 `win32`라고 쓰여진 파일을 사용합니다."
 
-#: ../../install.rst:32
+#: ../../install.rst:36
 msgid ""
 "Having MinGW/MSYS or Cygwin installed may be more convenient. Otherwise, you"
 " can use `7zip <http://7-zip.org>`_ for the extraction of `tar` files."
-msgstr "애초에 MinGW/MSYS 또는 Cygwin을 설치해서 사용하거나, `7zip <http://7-zip.org>`_ 을 쓰시면 `tar` 파일의 압축을 손쉽게 푸실 수 있습니다."
+msgstr ""
+"애초에 MinGW/MSYS 또는 Cygwin을 설치해서 사용하거나, `7zip <http://7-zip.org>`_ 을 쓰시면 `tar`"
+" 파일의 압축을 손쉽게 푸실 수 있습니다."
+
+#: ../../install.rst:5
+msgid "Linux"
+msgstr ""
+
+#: ../../install.rst:7
+msgid ""
+"`Set JAVA_HOME "
+"<http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html>`_."
+msgstr ""
+
+#~ msgid "Linux/Mac OS"
+#~ msgstr "리눅스/맥 OS"

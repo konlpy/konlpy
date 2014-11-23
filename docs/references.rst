@@ -12,6 +12,9 @@ References
 Korean morpheme analyzer tools
 ------------------------------
 
+When you're analyzing Korean text, the most basic task you need to perform is morphological analysis.
+There are several libraries in various programming languages to achieve this:
+
 C/C++
 '''''
 - `KTS <http://wiki.kldp.org/wiki.php/KTS>`_ (1995) :license:`GPL v2`
