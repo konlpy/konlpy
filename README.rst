@@ -20,46 +20,53 @@ KoNLPy is a Python package for natural language processing of the Korean languag
 - English documentation: http://konlpy.org/en
 - 한국어 문서: http://konlpy.org/ko
 
-To modify docs
---------------
+Contributing
+""""""""""""
 
-Setup
-'''''
+Documentation
+-------------
 
-1. Include the following lines in `~/.bashrc`
+Setup docs
+''''''''''
 
-        export LC_ALL=en_US.UTF-8
-        export LANG=en_US.UTF-8
+1. Fork and clone KoNLPy::
 
-2. Install dependencies
+    git clone git@github.com:[your_github_id]/konlpy.git
+    
+1. Include the following lines in your `~/.bashrc`::
 
-        $ make init_i18n
+    export LC_ALL=en_US.UTF-8
+    export LANG=en_US.UTF-8
 
-Modify
-''''''
+2. Install dependencies::
 
-1. Modify a document file
+    $ make init_i18n
 
-Move to the `docs` folder and modify the corresponding `*.rst` files
+Modify and push docs
+''''''''''''''''''''
 
-        $ cd docs
-        $ vi some_file.rst
+1. Modify a document file::
 
-2. Build docs
+    $ cd docs             # Move to the `docs` folder
+    $ vi some_file.rst    # Modify corresponding `*.rst` files
 
-        $ make html
+2. Build docs::
 
-3. Extract translation phrases
+    $ make html
 
-        $ make extract_i18n
+3. Extract translation phrases::
 
-4. Modify translations
+    $ make extract_i18n
 
-        $ cd locale/ko/LC_MESSAGES
-        $ vi some_file.po
+4. Modify translations::
 
-5. Update translations
+    $ cd locale/ko/LC_MESSAGES
+    $ vi some_file.po
 
-        $ make update_i18n
+5. Update translations::
 
-6. Commit and push to the repository
+    $ make update_i18n
+
+6. Commit and push your repository
+
+7. Send a pull request
