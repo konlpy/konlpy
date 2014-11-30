@@ -1,5 +1,6 @@
 *.classpath
 *.coverage
+*.DS_Store
 *.egg-info/
 *.log
 *.project
