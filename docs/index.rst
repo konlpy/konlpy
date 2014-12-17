@@ -14,6 +14,10 @@ KoNLPy: Korean NLP in Python
 KoNLPy (pronounced *"ko en el PIE"*) is a Python package for natural language processing (NLP) of the Korean language.
 For installation directions, see :doc:`here <install>`.
 
+For users new to NLP, go to :ref:`start`.
+For step-by-step instructions, follow the :ref:`guide`.
+For specific descriptions of each module, go see the :ref:`api` documents.
+
 .. sourcecode:: python
 
     >>> from konlpy.tag import Kkma
@@ -48,8 +52,6 @@ For installation directions, see :doc:`here <install>`.
      (!, SF),
      (^^, EMO)]
 
-For step-by-step instructions, follow the :ref:`guide`.
-For specific descriptions of each module, go see the :ref:`api` documents.
 
 Standing on the shoulders of giants
 -----------------------------------
@@ -116,6 +118,17 @@ Please note that
 *asking questions through these channels is also a great contribution*,
 because it gives the community feedback as well as ideas.
 Don't hesitate to ask.
+
+.. _start:
+
+Getting started
+===============
+
+.. toctree::
+  :glob:
+  :maxdepth: 2
+
+  start
 
 .. _guide:
 
