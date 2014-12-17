@@ -38,7 +38,7 @@ Java
     - Generates morpheme candidates using dynamic programming
     - Tags morphemes by checking neighbors, and employing some heuristics and HMM models
     - Developer blog: `Dongjoo Lee <http://therocks.tistory.com>`_
-- `KOMORAN <http://shineware.tistory.com/tag/KOMORAN>`_ (2013) :license:`custom`
+- `KOMORAN <http://shineware.tistory.com/tag/KOMORAN>`_ (2013) :license:`Apache v2`
     - By *shineware*
 
 Python
