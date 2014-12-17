@@ -3,23 +3,12 @@ Examples
 
 Below are a set of example tasks using KoNLPy.
 
-Contents
---------
-
-.. toctree::
-
-    examples/explore
-    examples/wordcloud
-    examples/collocations
-
-Thumbnails
-----------
 
 .. container:: example
 
     :doc:`examples/explore`
 
-    .. figure:: examples/zipf.png
+    .. figure:: examples/explore.png
 
 .. container:: example
 
@@ -32,3 +21,20 @@ Thumbnails
     :doc:`examples/collocations`
 
     .. figure:: examples/collocations.png
+
+.. container:: example
+
+    :doc:`examples/generate`
+
+    .. figure:: examples/generate.png
+
+
+Contents
+--------
+
+.. toctree::
+
+    examples/explore
+    examples/wordcloud
+    examples/collocations
+    examples/generate
