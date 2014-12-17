@@ -1,0 +1,129 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-17 20:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../start.rst:2
+msgid "What is NLP?"
+msgstr ""
+
+#: ../../start.rst:4
+msgid ""
+"NLP (Natural Language Processing) is a set of techniques for analyzing and "
+"extracting, and understanding meaninful information text."
+msgstr ""
+
+#: ../../start.rst:6
+msgid "We have various NLP applications in our lives. For example:"
+msgstr ""
+
+#: ../../start.rst:8
+msgid "Text summarization (ex: `Summly <http://www.summly.com/index.html>`_)"
+msgstr ""
+
+#: ../../start.rst:9
+msgid ""
+"Question answering (ex: `Wolfram Alpha "
+"<http://www.wolframalpha.com/input/?i=what+is+the+meaning+of+life&lk=4&num=1>`_)"
+msgstr ""
+
+#: ../../start.rst:10
+msgid "Dialogue systems (ex: `Apple Siri <https://www.apple.com/ios/siri/>`_)"
+msgstr ""
+
+#: ../../start.rst:11
+msgid ""
+"Machine translation (ex: `Google Translate <http://translate.google.com>`_)"
+msgstr ""
+
+#: ../../start.rst:13
+msgid ""
+"And obviously information retrieval systems such as Web search engines. For "
+"a better understanding of NLP techniques, consider referring the so-called "
+"\"bibles\":"
+msgstr ""
+
+#: ../../start.rst:16
+msgid ""
+"Jurafsky et al., `Speech and Language Processing "
+"<https://www.goodreads.com/book/show/908048>`_, 2nd Edition, 2008."
+msgstr ""
+
+#: ../../start.rst:17
+msgid ""
+"Manning and Schutze, `Foundations of Statistical Natural Language Processing"
+" <https://www.goodreads.com/book/show/776349>`_, 1999."
+msgstr ""
+
+#: ../../start.rst:19
+msgid ""
+"KoNLPy will help you to actually carry out some fundamental NLP tasks with "
+"Korean text. In case you're interested in handling English text, check out "
+"`NLTK <http://nltk.org>`_."
+msgstr ""
+
+#: ../../start.rst:24
+msgid "What do I need to get started?"
+msgstr ""
+
+#: ../../start.rst:26
+msgid "You have some prerequisites to use KoNLPy."
+msgstr ""
+
+#: ../../start.rst:28
+msgid ""
+"Deep interest in natural languages and some familiarity with the Korean "
+"language"
+msgstr ""
+
+#: ../../start.rst:29
+msgid "Understanding of basic Python programming [#]_"
+msgstr ""
+
+#: ../../start.rst:30
+msgid "A \"good\" text editor and terminal (or Python IDE) [#]_"
+msgstr ""
+
+#: ../../start.rst:31
+msgid ""
+"A `Python installation "
+"<https://wiki.python.org/moin/BeginnersGuide/Download>`_"
+msgstr ""
+
+#: ../../start.rst:32
+msgid "`pip <https://pypi.python.org/pypi/pip>`_, the Python package manager"
+msgstr ""
+
+#: ../../start.rst:34
+msgid ""
+"We assume you have some knowledge of Python and programming, but no "
+"knowledge whatsoever of data science, machine learning, or predictive "
+"modeling. (But some familiarity to statistics will help.)"
+msgstr ""
+
+#: ../../start.rst:38
+msgid ""
+"If you're new to Python, this tutorial should get you through in minutes: "
+"http://learnxinyminutes.com/docs/python/. If you're up to putting in some "
+"more time, try `The Hitchhiker's Guide <http://docs.python-"
+"guide.org/en/latest/>`_ or `How to Think Like a Computer Scientist "
+"<http://openbookproject.net/thinkcs/python/english2e/>`_."
+msgstr ""
+
+#: ../../start.rst:39
+msgid ""
+"Many use `Sublime Text 2 <http://www.sublimetext.com/>`_ for Python "
+"programming. Some others use Vim and Terminal. But other than these, there "
+"are numerous great `text editors <http://tutorialzine.com/2012/07/battle-of-"
+"the-tools-which-is-the-best-code-editor/>`_ and `Python IDEs "
+"<http://pedrokroger.net/choosing-best-python-ide/>`_ out there, so take your"
+" pick!"
+msgstr ""

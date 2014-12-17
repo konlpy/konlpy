@@ -24,11 +24,11 @@ msgstr ""
 "KoNLPy(\"코엔엘파이\"라고 읽습니다)는 한국어 정보처리를 위한 파이썬 패키지입니다. 설치법은 :doc:`이 곳을 "
 "<install>` 참고해주세요."
 
-#: ../../index.rst:55
+#: ../../index.rst:57
 msgid "Standing on the shoulders of giants"
 msgstr "거인의 어깨 위에 서기"
 
-#: ../../index.rst:57
+#: ../../index.rst:59
 msgid ""
 "Korean, the `13th most widely spoken language in the world "
 "<http://www.koreatimes.co.kr/www/news/nation/2014/05/116_157214.html>`_, is "
@@ -41,7 +41,7 @@ msgstr ""
 "복잡미묘한 한국어 텍스트에서 유용한 특성을 추출하기 위해 그 동안 :ref:`수많은 한국어 정보처리 도구가 <engines>` 개발되기도"
 " 했습니다."
 
-#: ../../index.rst:60
+#: ../../index.rst:62
 msgid ""
 "KoNLPy is not just to create another, but to unify and build upon their "
 "shoulders, and see one step further. It is built particularly in the `Python"
@@ -55,23 +55,23 @@ msgstr ""
 "만들어졌는데, 그것은 파이썬이 간결하고 우아한 문법구조, 강력한 스트링 연산 기능을 가지고 있을 뿐 아니라 크롤링, 웹프로그래밍, 그리고"
 " 데이터 분석을 수행할 수 있는 다양한 패키지를 사용할 수 있는 언어이기 때문입니다."
 
-#: ../../index.rst:63
+#: ../../index.rst:65
 msgid "The three main philosophies of this project are:"
 msgstr "이 프로젝트에는 세 가지 철학이 있습니다:"
 
-#: ../../index.rst:65
+#: ../../index.rst:67
 msgid "Keep it simple."
 msgstr "사용법이 간단해야 한다."
 
-#: ../../index.rst:66
+#: ../../index.rst:68
 msgid "Make it easy. For humans. [#]_"
 msgstr "누구나 쉽게 이용할 수 있어야 한다. [#]_"
 
-#: ../../index.rst:67
+#: ../../index.rst:69
 msgid ":ref:`\"Democracy on the web works.\" <contribute>`"
 msgstr ":ref:`\"인터넷 민주주의는 효과적이다.\" <contribute>`"
 
-#: ../../index.rst:69
+#: ../../index.rst:71
 msgid ""
 "Please `report <https://github.com/e9t/konlpy/issues>`_ when you think any "
 "have gone stale."
@@ -79,25 +79,25 @@ msgstr ""
 "위의 항목 중 하나라도 어긋나는 것이 있다면 `제보 부탁드립니다. "
 "<https://github.com/e9t/konlpy/issues>`_"
 
-#: ../../index.rst:72
+#: ../../index.rst:74
 msgid "License"
 msgstr "라이센스"
 
-#: ../../index.rst:76
+#: ../../index.rst:78
 msgid "`GPL v3 or above <http://gnu.org/licenses/gpl.html>`_ [#]_"
 msgstr "`GPL v3 또는 그 이상 <http://gnu.org/licenses/gpl.html>`_ [#]_"
 
-#: ../../index.rst:97
+#: ../../index.rst:99
 msgid "Contribute"
 msgstr "참여하기"
 
-#: ../../index.rst:99
+#: ../../index.rst:101
 msgid ""
 "KoNLPy isn't perfect, but it will continuously evolve and you are invited to"
 " participate!"
 msgstr "KoNLPy는 완벽하지 않습니다. 하지만 조금씩 지속적으로 발전시킬 예정이며, 누구나 개발 과정에 참여할 수 있습니다."
 
-#: ../../index.rst:102
+#: ../../index.rst:104
 msgid ""
 "Found a bug? Have a good idea for improving KoNLPy? Visit the `KoNLPy GitHub"
 " page <https://github.com/e9t/konlpy>`_ and `suggest an idea "
@@ -109,7 +109,7 @@ msgstr ""
 "<https://github.com/e9t/konlpy/issues>`_ `풀리퀘스트를 보내주세요. "
 "<https://github.com/e9t/konlpy/pulls>`_"
 
-#: ../../index.rst:108
+#: ../../index.rst:110
 msgid ""
 "You are also welcome to join the ``#koreannlp`` channel at the `Ozinger IRC "
 "Network <http://ozinger.org>`_, and the `mailing list "
@@ -122,35 +122,35 @@ msgstr ""
 "<https://groups.google.com/forum/#!forum/konlpy>`_ 가입해서 관련 정보를 받아보거나 궁금한 것에 "
 "대한 질문을 할 수도 있습니다."
 
-#: ../../index.rst:123
+#: ../../index.rst:136
 msgid "User guide"
 msgstr "사용하기"
 
-#: ../../index.rst:139
+#: ../../index.rst:152
 msgid "API"
 msgstr "API"
 
-#: ../../index.rst:148
+#: ../../index.rst:161
 msgid "Indices and tables"
 msgstr "인덱스와 표"
 
-#: ../../index.rst:150
+#: ../../index.rst:163
 msgid ":ref:`genindex`"
 msgstr ":ref:`genindex`"
 
-#: ../../index.rst:151
+#: ../../index.rst:164
 msgid ":ref:`modindex`"
 msgstr ":ref:`modindex`"
 
-#: ../../index.rst:152
+#: ../../index.rst:165
 msgid ":ref:`search`"
 msgstr ":ref:`search`"
 
-#: ../../index.rst:153
+#: ../../index.rst:166
 msgid ":doc:`changelog`"
 msgstr ":doc:`changelog`"
 
-#: ../../index.rst:156
+#: ../../index.rst:169
 msgid ""
 "With `clear and brief <http://echojuliett.tumblr.com/post/32108001510"
 "/clarity-brevity>`_ documents."
@@ -158,7 +158,7 @@ msgstr ""
 "`간단하고 명료한 <http://echojuliett.tumblr.com/post/32108001510/clarity-brevity>`_"
 " 문서화로."
 
-#: ../../index.rst:157
+#: ../../index.rst:170
 msgid ""
 "No, I'm not extremely fond of this either. However, some important "
 "depedencies - such as Hannanum, Kkma, MeCab-ko - are GPL licensed, and we "
@@ -168,30 +168,22 @@ msgstr ""
 "GPL이 항상 최선은 아니지만, 몇몇 중요한 dependency가 GPL 라이센스를 채택하고 있기 때문에 그것을 계승하는 차원에서 "
 "선택하였습니다. (차후에는 이런 상황이 바뀔 수도 있다고 생각합니다.)"
 
-#: ../../index.rst:51
-msgid ""
-"For step-by-step instructions, follow the :ref:`guide`. For specific "
-"descriptions of each module, go see the :ref:`api` documents."
-msgstr ""
-"기초적인 사용법을 익히기 위해서는 :ref:`guide` 를, 각 모듈에 대한 구체적인 사항을 확인해보고 싶을 때는 :ref:`api` "
-"문서를 확인해주시기 바랍니다."
-
-#: ../../index.rst:74
+#: ../../index.rst:76
 msgid ""
 "KoNLPy is Open Source Software, and is released under the license below:"
 msgstr "KoNLPy는 오픈소스 소프트웨어이며, 아래의 라이센스를 채택하고 있습니다:"
 
-#: ../../index.rst:82
+#: ../../index.rst:84
 msgid "Here is a BibTeX entry.::"
 msgstr "BibTeX는 아래의 코드를 사용하시면 됩니다.::"
 
-#: ../../index.rst:78
+#: ../../index.rst:80
 msgid ""
 "You are welcome to use the code under the terms of the license, however "
 "please acknowledge its use with a citation."
 msgstr "라이센스에 따라 자유롭게 코드를 이용하실 수 있으며, 연구에 KoNLPy를 사용하신 경우 아래 논문을 인용해주시기 바랍니다."
 
-#: ../../index.rst:80
+#: ../../index.rst:82
 msgid ""
 "Eunjeong L. Park, Sungzoon Cho. \"`KoNLPy: Korean natural language "
 "processing in Python "
@@ -203,12 +195,41 @@ msgstr ""
 "<http://dmlab.snu.ac.kr/~lucypark/docs/2014-10-10-hclt.pdf>`_\", 제 26회 한글 및 "
 "한국어 정보처리 학술대회 논문집, 2014."
 
-#: ../../index.rst:115
+#: ../../index.rst:117
 msgid ""
 "Please note that *asking questions through these channels is also a great "
 "contribution*, because it gives the community feedback as well as ideas. "
 "Don't hesitate to ask."
 msgstr ""
+"무엇보다, 질문하는 것만으로도 엄청난 기여라는 점을 알아주세요!질문은 개발 커뮤니티에 피드백을 주는 가장 직접적이면서도 쉬운 방법이고, "
+"아이디어의 원천도 됩니다."
+
+#: ../../index.rst:125
+msgid "Getting started"
+msgstr "시작하기"
+
+#: ../../index.rst:17
+msgid ""
+"For users new to NLP, go to :ref:`start`. For step-by-step instructions, "
+"follow the :ref:`guide`. For specific descriptions of each module, go see "
+"the :ref:`api` documents."
+msgstr ""
+
+#~ msgid ""
+#~ "For users new to NLP, go to :ref:`starting`. For step-by-step instructions, "
+#~ "follow the :ref:`guide`. For specific descriptions of each module, go see "
+#~ "the :ref:`api` documents."
+#~ msgstr ""
+#~ "본격적으로 들어가기 전에 NLP의 기본기를 다지고 싶은 분은 :ref:`starting` 를, KoNLPy의 사용법을 바로 익히기 "
+#~ "위해서는 :ref:`guide` 를, 각 모듈에 대한 구체적인 사항을 확인해보고 싶을 때는 :ref:`api` 문서를 확인해주시기 "
+#~ "바랍니다."
+
+#~ msgid ""
+#~ "For step-by-step instructions, follow the :ref:`guide`. For specific "
+#~ "descriptions of each module, go see the :ref:`api` documents."
+#~ msgstr ""
+#~ "기초적인 사용법을 익히기 위해서는 :ref:`guide` 를, 각 모듈에 대한 구체적인 사항을 확인해보고 싶을 때는 :ref:`api` "
+#~ "문서를 확인해주시기 바랍니다."
 
 #~ msgid ""
 #~ "Please note that *asking questions through these channels is also a great "

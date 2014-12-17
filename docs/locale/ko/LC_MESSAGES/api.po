@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../api.rst:2
+#: ../../../../../../../dev/my/konlpy/docs/api.rst:2
 msgid "API"
 msgstr ""
 
@@ -192,32 +192,38 @@ msgstr ""
 msgid "Replaces some ambiguous punctuation marks to simpler ones."
 msgstr ""
 
-#: ../../api/konlpy.corpus.rst:2
+#: ../../../../../../../dev/my/konlpy/docs/api/konlpy.corpus.rst:2
 msgid "corpus Package"
 msgstr ""
 
-#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader:1
+#: ../../../../../../../dev/my/konlpy/konlpy/corpus.pydocstring of
+#: konlpy.corpus.CorpusLoader:1
 msgid ""
 "Loader for corpora. For a complete list of corpora available in KoNLPy, "
 "refer to :ref:`corpora`."
 msgstr ""
 
-#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader.abspath:1
+#: ../../../../../../../dev/my/konlpy/konlpy/corpus.pydocstring of
+#: konlpy.corpus.CorpusLoader.abspath:1
 msgid ""
 "Absolute path of corpus file. If ``filename`` is *None*, returns absolute "
 "path of corpus."
 msgstr ""
 
-#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader.abspath:4
-#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader.open:4
+#: ../../../../../../../dev/my/konlpy/konlpy/corpus.pydocstring of
+#: konlpy.corpus.CorpusLoader.abspath:4
+#: ../../../../../../../dev/my/konlpy/konlpy/corpus.pydocstring of
+#: konlpy.corpus.CorpusLoader.open:4
 msgid "Name of a particular file in the corpus."
 msgstr ""
 
-#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader.fileids:1
+#: ../../../../../../../dev/my/konlpy/konlpy/corpus.pydocstring of
+#: konlpy.corpus.CorpusLoader.fileids:1
 msgid "List of file IDs in the corpus."
 msgstr ""
 
-#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader.open:1
+#: ../../../../../../../dev/my/konlpy/konlpy/corpus.pydocstring of
+#: konlpy.corpus.CorpusLoader.open:1
 msgid "Method to open a file in the corpus. Returns a file object."
 msgstr ""
 
