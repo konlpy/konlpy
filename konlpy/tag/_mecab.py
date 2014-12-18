@@ -58,6 +58,7 @@ class Mecab():
     # TODO: check whether flattened results equal non-flattened
     def pos(self, phrase, flatten=True):
         """POS tagger."""
+
         if sys.version_info[0] < 3:
             phrase = utils.preprocess(phrase).encode('utf-8')
             if flatten:

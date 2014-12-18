@@ -1,13 +1,23 @@
 Change logs
 ===========
 
-`Version 0.3.4 <https://github.com/e9t/konlpy/releases/tag/v0.3.4>`_
---------------------------------------------------------------------
+Version 0.5.0
+--------------
 
 Version in development.
 
+- Added konlpy.data, konlpy.downloader [:issue:`4`]
+
+`Version 0.4.0 <https://github.com/e9t/konlpy/releases/tag/v0.3.4>`_
+--------------------------------------------------------------------
+
+Released on Dec 19, 2014.
+
+- Added :py:mod:`utils.read_txt()`
 - Added nonflattened results for POS taggers
+- Added Komoran module with KOMORAN 2.0 [Courtesy to :committer:`shineware`]
 - Change dependency version of mecab-python from 0.993 to 0.996 [:issue:`19` with comments by Yong-woon Lee]
+- Fixed concordance bug for Python2 [:commit:`6caa929`]
 
 `Version 0.3.3 <https://github.com/e9t/konlpy/releases/tag/v0.3.3>`_
 --------------------------------------------------------------------
