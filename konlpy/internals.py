@@ -5,6 +5,13 @@
 import os
 import stat
 
+from . import data
+
+
+def get_datadir():
+    for konlpydir in data.path:
+        if (os.path.exists(konlpydir) and is_writable(konlpydir)):
+            return konlpydir
 
 def is_writable(path):
     if not os.path.exists(path):

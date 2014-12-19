@@ -20,10 +20,10 @@ def test_komoran_nouns(komoran_instance, string):
 
 def test_komoran_pos(komoran_instance, string):
     assert komoran_instance.pos(string) ==\
-        [[u'\uaf43\uac00\ub9c8', u'NNG'],
-         [u'\ud0c0', u'VV'],
-         [u'\uace0', u'EC'],
-         [u'\uac15\ub0a8', u'NNP'],
-         [u'\uac00', u'VV'],
-         [u'\uc790', u'EF'],
-         [u'!', u'SF']]
+        [(u'\uaf43\uac00\ub9c8', u'NNG'),
+         (u'\ud0c0', u'VV'),
+         (u'\uace0', u'EC'),
+         (u'\uac15\ub0a8', u'NNP'),
+         (u'\uac00', u'VV'),
+         (u'\uc790', u'EF'),
+         (u'!', u'SF')]

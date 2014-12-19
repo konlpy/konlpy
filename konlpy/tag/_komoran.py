@@ -1,6 +1,10 @@
 #! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
+import os
+import re
+import sys
+
 try:
     import jpype
 except ImportError:
@@ -8,16 +12,24 @@ except ImportError:
 
 from .. import jvm
 from .. import utils
+from .. import internals
 
 
 __all__ = ['Komoran']
 
 
-def parse(result, flatten=False):
-    if flatten:
-        return [r.rsplit('/', 1) for sublist in result for r in sublist]
+def parse(result, flatten):
+    def _parse(token):
+        return [tuple(s[1:].rsplit('/', 1)) for s in re.findall('\+.+?/[A-Z]+', token)]
+
+    if sys.version_info[0] < 3:
+        parsed = [[tuple(r.rsplit('/', 1)) for r in sublist] for sublist in result]
     else:
-        return [[r.rsplit('/', 1) for r in sublist] for sublist in result]
+        parsed = [_parse(i) for i in result[1:-1].split(', ')]
+
+    if flatten:
+        return sum(parsed, [])
+    return parsed
 
 
 class Komoran():
@@ -42,15 +54,20 @@ class Komoran():
         # TODO: consider Python version
 
         phrase = utils.preprocess(phrase)
-        result = self.jki.analyzeMorphs(phrase, self.dicpath)
+        if sys.version_info[0] < 3:
+            result = self.jki.analyzeMorphs(phrase, self.dicpath)
+        else:
+            result = self.jki.analyzeMorphs3(phrase, self.dicpath).toString()
 
         return parse(result, flatten)
+
 
     def nouns(self, phrase):
         """Noun extractor."""
 
         tagged = self.pos(phrase)
         return [s for s, t in tagged if t.startswith('N')]
+
 
     def __init__(self, jvmpath=None, dicpath='%s/java/data/models' % utils.installpath):
         if not jpype.isJVMStarted():
@@ -59,4 +76,4 @@ class Komoran():
         komoranJavaPackage = jpype.JPackage('kr.lucypark.komoran')
         KomoranInterfaceJavaClass = komoranJavaPackage.KomoranInterface
         self.jki = KomoranInterfaceJavaClass()
-        self.dicpath = dicpath
+        self.dicpath = os.path.join(internals.get_datadir(), 'dictionaries', 'komoran-dic')

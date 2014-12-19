@@ -13,7 +13,6 @@ if sys.version_info[0] < 3:
 else:
     import urllib.request as urllib
 
-from . import data
 from . import internals
 
 
@@ -33,9 +32,7 @@ def default_download_dir():
     ``/usr/lib/konlpy_data``, ``/usr/local/lib/konlpy_data``, ``~/konlpy_data``.
     """
 
-    for konlpydir in data.path:
-        if (os.path.exists(konlpydir) and internals.is_writable(konlpydir)):
-            return konlpydir
+    konlpydir = internals.get_datadir()
 
     # On Windows, use %APPDATA%
     if sys.platform=='win32' and 'APPDATA' in os.environ:
