@@ -12,8 +12,8 @@ KoNLPy는 오픈소스 프로젝트입니다.
 
 - 홈페이지: http://konlpy.org
 - 이슈트래커: http://github.com/e9t/konlpy/issues
-- 메일링 리스트: `konlpy@googlegroups.com <http://groups.google.com/forum/#!forum/konlpy>`
-- IRC: `irc.ozinger.org #koreannlp <http://webchat.ozinger.org/?channels=koreannlp>`
+- 메일링 리스트: `konlpy@googlegroups.com <http://groups.google.com/forum/#!forum/konlpy>`_
+- IRC: `irc.ozinger.org #koreannlp <http://webchat.ozinger.org/?channels=koreannlp>`_
 
 
 2. 궁금증 해결하기
@@ -33,11 +33,11 @@ KoNLPy는 오픈소스 프로젝트입니다.
 - 기여하신 부분에 대해 정확한 attribution을 할 수 있도록, 가능하다면 pull request를 보내주시기 바랍니다.
 - 코드를 작성할 때는 다음에 유의해주세요.
     1. 탭 대신 공백 4개 사용
-    1. 문서에서 특별히 언급되지 않은 사항은 일단 코드의 다른 부분들을 참고해서 작성 (+ 다른 분들의 편의를 위해 이 문서를 업데이트 해주세요)
-    1. 커밋 로그는 설명력 있게 작성
-    1. PR을 보내면 해당 코드는 KoNLPy의 오픈소스 라이센스를 따름
-    1. PR을 보낼 때 커밋은 하나가 되게 함
-    1. PR를 보낸 후 코드의 일부를 변경하도록 요청될 경우, ``git commit --amend`` 로 커밋을 수정
+    2. 문서에서 특별히 언급되지 않은 사항은 일단 코드의 다른 부분들을 참고해서 작성 (+ 다른 분들의 편의를 위해 이 문서를 업데이트 해주세요)
+    3. 커밋 로그는 설명력 있게 작성
+    4. PR을 보내면 해당 코드는 KoNLPy의 오픈소스 라이센스를 따름
+    5. PR을 보낼 때 커밋은 하나가 되게 함
+    6. PR를 보낸 후 코드의 일부를 변경하도록 요청될 경우, ``git commit --amend`` 로 커밋을 수정
 
 
 4. 문서 수정하기
