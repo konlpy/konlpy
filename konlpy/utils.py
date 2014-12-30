@@ -27,7 +27,7 @@ if sys.version_info[0] < 3:
         def format(self, object, context, maxlevels, level):
             """Overrided method to enable Unicode pretty print."""
             if isinstance(object, unicode):
-                return (object.encode('utf8'), True, False)
+                return (object.encode(sys.stdout.encoding), True, False)
             return pp.PrettyPrinter.format(self, object, context, maxlevels, level)
 
 def concordance(phrase, text, show=False):
