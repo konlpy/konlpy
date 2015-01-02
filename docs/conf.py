@@ -55,12 +55,13 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'KoNLPy'
+url = u'http://konlpy.org'
+
 author = u'Lucy Park'
 author_url = u'http://lucypark.kr'
-curyear = datetime.today().year
 
-copyright = u'%s, <a href="%s">%s</a>' % (curyear, author_url, author)
-url = u'http://konlpy.org'
+curyear = datetime.today().year
+copyright = u'%s, %s (GPL license)' % (curyear, project)
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
