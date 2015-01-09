@@ -1,4 +1,4 @@
-#! /usr/bin/python2.7
+#! /usr/bin/python
 # -*- coding: utf-8 -*-
 
 import os
@@ -72,7 +72,6 @@ class Komoran():
     def __init__(self, jvmpath=None, dicpath='%s/java/data/models' % utils.installpath):
         if not jpype.isJVMStarted():
             jvm.init_jvm(jvmpath)
-
         komoranJavaPackage = jpype.JPackage('kr.lucypark.komoran')
         KomoranInterfaceJavaClass = komoranJavaPackage.KomoranInterface
         self.jki = KomoranInterfaceJavaClass()
