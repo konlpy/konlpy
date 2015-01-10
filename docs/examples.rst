@@ -20,14 +20,19 @@ Below are a set of example tasks using KoNLPy.
 
     :doc:`examples/collocations`
 
-    .. figure:: examples/collocations.png
+    .. figure:: examples/shoes.png
 
 .. container:: example
 
     :doc:`examples/generate`
 
-    .. figure:: examples/generate.png
+    .. figure:: examples/babel.png
 
+.. container:: example
+
+    :doc:`examples/multithreading`
+
+    .. figure:: examples/multithreading.png
 
 Contents
 --------
@@ -38,3 +43,4 @@ Contents
     examples/wordcloud
     examples/collocations
     examples/generate
+    examples/multithreading
