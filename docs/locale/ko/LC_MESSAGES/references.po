@@ -123,12 +123,6 @@ msgid "Developer blog: `Dongjoo Lee <http://therocks.tistory.com>`_"
 msgstr "개발자 블로그: `이동주 <http://therocks.tistory.com>`_"
 
 #: ../../references.rst:42
-msgid ""
-"`KOMORAN <http://shineware.tistory.com/tag/KOMORAN>`_ (2013) "
-":license:`custom`"
-msgstr ""
-
-#: ../../references.rst:42
 msgid "By *shineware*"
 msgstr ""
 
@@ -320,7 +314,20 @@ msgid ""
 "When you're analyzing Korean text, the most basic task you need to perform "
 "is morphological analysis. There are several libraries in various "
 "programming languages to achieve this:"
-msgstr "한국어 텍스트를 분석할 때 가장 기본적으로 행해야하는 것은 형태소 분석입니다. 이를 위해 다양한 프로그래밍 언어로 된 여러 라이브러리가 있습니다:"
+msgstr ""
+"한국어 텍스트를 분석할 때 가장 기본적으로 행해야하는 것은 형태소 분석입니다. 이를 위해 다양한 프로그래밍 언어로 된 여러 라이브러리가 "
+"있습니다:"
+
+#: ../../references.rst:42
+msgid ""
+"`KOMORAN <http://shineware.tistory.com/tag/KOMORAN>`_ (2013) "
+":license:`Apache v2`"
+msgstr ""
+
+#~ msgid ""
+#~ "`KOMORAN <http://shineware.tistory.com/tag/KOMORAN>`_ (2013) "
+#~ ":license:`custom`"
+#~ msgstr ""
 
 #~ msgid "40,075 test documents for text categorization (88 MB)"
 #~ msgstr "텍스트 분류를 위한 40,075 테스트 문서 (88MB)"

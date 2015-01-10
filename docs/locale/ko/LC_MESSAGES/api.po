@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../../../../../../dev/my/konlpy/docs/api.rst:2
+#: ../../api.rst:2
 msgid "API"
 msgstr ""
 
@@ -75,7 +75,7 @@ msgstr ""
 msgid "A path pointer that identifies a file by an absolute path."
 msgstr ""
 
-#: ../../<autodoc>:1
+#: ../../<autodoc>:1 ../../<autodoc>:1
 msgid "Bases: :class:`object`"
 msgstr ""
 
@@ -89,7 +89,8 @@ msgstr ""
 msgid ":mod:`downloader` Module"
 msgstr ""
 
-#: ../../../konlpy/downloader.pydocstring of konlpy.downloader.download:1
+#: ../../../konlpy/downloader.pydocstring of
+#: konlpy.downloader.Downloader.download:1
 msgid ""
 "The KoNLPy data downloader. With this module you can download corpora, "
 "models and other data packages that can be used with KoNLPy."
@@ -192,38 +193,32 @@ msgstr ""
 msgid "Replaces some ambiguous punctuation marks to simpler ones."
 msgstr ""
 
-#: ../../../../../../../dev/my/konlpy/docs/api/konlpy.corpus.rst:2
+#: ../../api/konlpy.corpus.rst:2
 msgid "corpus Package"
 msgstr ""
 
-#: ../../../../../../../dev/my/konlpy/konlpy/corpus.pydocstring of
-#: konlpy.corpus.CorpusLoader:1
+#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader:1
 msgid ""
 "Loader for corpora. For a complete list of corpora available in KoNLPy, "
 "refer to :ref:`corpora`."
 msgstr ""
 
-#: ../../../../../../../dev/my/konlpy/konlpy/corpus.pydocstring of
-#: konlpy.corpus.CorpusLoader.abspath:1
+#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader.abspath:1
 msgid ""
 "Absolute path of corpus file. If ``filename`` is *None*, returns absolute "
 "path of corpus."
 msgstr ""
 
-#: ../../../../../../../dev/my/konlpy/konlpy/corpus.pydocstring of
-#: konlpy.corpus.CorpusLoader.abspath:4
-#: ../../../../../../../dev/my/konlpy/konlpy/corpus.pydocstring of
-#: konlpy.corpus.CorpusLoader.open:4
+#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader.abspath:4
+#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader.open:4
 msgid "Name of a particular file in the corpus."
 msgstr ""
 
-#: ../../../../../../../dev/my/konlpy/konlpy/corpus.pydocstring of
-#: konlpy.corpus.CorpusLoader.fileids:1
+#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader.fileids:1
 msgid "List of file IDs in the corpus."
 msgstr ""
 
-#: ../../../../../../../dev/my/konlpy/konlpy/corpus.pydocstring of
-#: konlpy.corpus.CorpusLoader.open:1
+#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader.open:1
 msgid "Method to open a file in the corpus. Returns a file object."
 msgstr ""
 
@@ -363,4 +358,55 @@ msgstr ""
 
 #: ../../api/konlpy.tag.rst:38
 msgid "Compare POS tags between several Korean analytic projects. (In Korean)"
+msgstr ""
+
+#: ../../../konlpy/downloader.pydocstring of konlpy.downloader.Downloader:1
+msgid ""
+"A class used to access the KoNLPy data server, which can be used to download"
+" packages."
+msgstr ""
+
+#: ../../../konlpy/downloader.pydocstring of
+#: konlpy.downloader.Downloader.download:8
+msgid ""
+"Individual packages can be downloaded by passing a single argument, the "
+"package identifier for the package that should be downloaded:"
+msgstr ""
+
+#: ../../../konlpy/downloader.pydocstring of
+#: konlpy.downloader.Downloader.download:14
+msgid ""
+"To download all packages, simply call ``download`` with the argument 'all':"
+msgstr ""
+
+#: ../../../konlpy/downloader.pydocstring of
+#: konlpy.downloader.Downloader.status:1
+msgid ""
+"Return a constant describing the local status of the given package. Status "
+"can be one of ``INSTALLED``, ``NOT_INSTALLED``, or ``STALE``."
+msgstr ""
+
+#: ../../../konlpy/downloader.pydocstring of
+#: konlpy.downloader.default_download_dir:1
+msgid ""
+"Returns the directory to which packages will be downloaded by default. This "
+"value can be overriden using the constructor, or on a case-by-case basis "
+"using the ``download_dir`` argument when calling ``download()``."
+msgstr ""
+
+#: ../../../konlpy/downloader.pydocstring of
+#: konlpy.downloader.default_download_dir:6
+msgid ""
+"On Windows, the default download directory is ``PYTHONHOME/lib/konlpy``, "
+"where *PYTHONHOME* is the directory containing Python e.g., "
+"``C:\\Python27``."
+msgstr ""
+
+#: ../../../konlpy/downloader.pydocstring of
+#: konlpy.downloader.default_download_dir:9
+msgid ""
+"On all other platforms, the default directory is the first of the following "
+"which exists or which can be created with write permission: "
+"``/usr/share/konlpy_data``, ``/usr/local/share/konlpy_data``, "
+"``/usr/lib/konlpy_data``, ``/usr/local/lib/konlpy_data``, ``~/konlpy_data``."
 msgstr ""

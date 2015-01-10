@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../start.rst:2
 msgid "What is NLP?"
-msgstr ""
+msgstr "NLP란 무엇인가요?"
 
 #: ../../start.rst:4
 msgid ""
@@ -72,7 +72,7 @@ msgstr ""
 
 #: ../../start.rst:24
 msgid "What do I need to get started?"
-msgstr ""
+msgstr "이제 무엇을 준비하면 되나요?"
 
 #: ../../start.rst:26
 msgid "You have some prerequisites to use KoNLPy."

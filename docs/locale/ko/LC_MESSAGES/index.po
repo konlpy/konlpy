@@ -213,7 +213,7 @@ msgid ""
 "For users new to NLP, go to :ref:`start`. For step-by-step instructions, "
 "follow the :ref:`guide`. For specific descriptions of each module, go see "
 "the :ref:`api` documents."
-msgstr ""
+msgstr "NLP를 처음 시작하시는 분들은 :ref:`start` 에서 가볍게 기본 지식을 습득할 수 있으며, KoNLPy의 사용법 가이드는 :ref:`guide`, 각 모듈의 상세사항은 :ref:`api` 문서에서 보실 수 있습니다."
 
 #~ msgid ""
 #~ "For users new to NLP, go to :ref:`starting`. For step-by-step instructions, "

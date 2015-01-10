@@ -39,47 +39,46 @@ msgstr "연어(collocation) 찾기"
 msgid "We can find collocations with the help of `NLTK <http://nltk.org>`_."
 msgstr "`NLTK <http://nltk.org>`_ 를 같이 활용하여 연어(collocation)을 찾을 수 있습니다."
 
-#: ../../examples/collocations.rst:11
-#: ../../../../../../../dev/my/konlpy/docs/examples/explore.rst:13
-#: ../../examples/generate.rst:43
+#: ../../examples/collocations.rst:11 ../../examples/explore.rst:13
+#: ../../examples/generate.rst:43 ../../examples/multithreading.rst:12
 msgid "Console::"
 msgstr "출력 결과::"
 
-#: ../../../../../../../dev/my/konlpy/docs/examples/explore.rst:2
+#: ../../examples/explore.rst:2
 msgid "Exploring a document"
 msgstr "문서 탐색하기"
 
-#: ../../../../../../../dev/my/konlpy/docs/examples/explore.rst:4
+#: ../../examples/explore.rst:4
 msgid "Exploring a document can consist of various components:"
 msgstr "처음 문서를 탐색할 때는 다양한 것을 확인해볼 수 있습니다:"
 
-#: ../../../../../../../dev/my/konlpy/docs/examples/explore.rst:6
+#: ../../examples/explore.rst:6
 msgid "Counts (characters, words, etc.)"
 msgstr "개수 세기 (문자, 단어 등)"
 
-#: ../../../../../../../dev/my/konlpy/docs/examples/explore.rst:7
+#: ../../examples/explore.rst:7
 msgid "Checking Zipf's laws: :math:`fr=k`"
 msgstr "지프의 법칙(Zipf's laws) 확인해보기: :math:`fr=k`"
 
-#: ../../../../../../../dev/my/konlpy/docs/examples/explore.rst:8
+#: ../../examples/explore.rst:8
 msgid "Concordances"
 msgstr "용례 찾기"
 
-#: ../../../../../../../dev/my/konlpy/docs/examples/explore.rst:55
+#: ../../examples/explore.rst:55
 msgid "zipf.png:"
 msgstr ""
 
-#: ../../../../../../../dev/my/konlpy/docs/examples/wordcloud.rst:2
+#: ../../examples/wordcloud.rst:2
 msgid "Drawing a word cloud"
 msgstr "워드클라우드 그리기"
 
-#: ../../../../../../../dev/my/konlpy/docs/examples/wordcloud.rst:4
+#: ../../examples/wordcloud.rst:4
 msgid ""
 "Below shows a code example that crawls a National Assembly bill from the "
 "web, extract nouns and draws a word cloud - from head to tail in Python."
 msgstr "다음은 파이썬만으로 웹에서 국회 의안의 내용을 수집해서 이용해 명사를 추출한 후, 워드클라우드를 그리는 예시입니다."
 
-#: ../../../../../../../dev/my/konlpy/docs/examples/wordcloud.rst:6
+#: ../../examples/wordcloud.rst:6
 msgid ""
 "You can change the bill number (i.e., ``bill_num``), and see how the word "
 "clouds differ per bill. (ex: '1904882', '1904883', 'ZZ19098', etc)"
@@ -87,7 +86,7 @@ msgstr ""
 "의안 번호(i.e., ``bill_num``)를 바꿔가며 워드클라우드가 어떻게 달라지는지 확인할수도 있습니다. (ex: "
 "'1904882', '1904883', 'ZZ19098', etc)"
 
-#: ../../../../../../../dev/my/konlpy/docs/examples/wordcloud.rst:13
+#: ../../examples/wordcloud.rst:13
 msgid ""
 "The `PyTagCloud <https://pypi.python.org/pypi/pytagcloud>`_ installed in "
 "PyPI may not be sufficient for drawing wordclouds in Korean. You may add "
@@ -98,7 +97,7 @@ msgstr ""
 "이용하면 워드클라우드에 한글이 제대로 표시되지 않을 수 있습니다. 이 경우, 직접 소스코드에 한글 폰트를 추가하거나, `이 곳 "
 "<https://github.com/e9t/PyTagCloud>`_ 에서 미리 폰트가 추가된 버젼을 다운받아 사용하시면 됩니다."
 
-#: ../../examples.rst:33
+#: ../../examples.rst:38
 msgid "Contents"
 msgstr "목록보기"
 
@@ -143,8 +142,8 @@ msgid ""
 "The code below works with Python3, and not with Python2! You can run the "
 "code by typing `python3 generate.py` on your terminal."
 msgstr ""
-"아래 코드는 파이썬3로 작동하고 파이썬2에서는 작동하지 않습니다. 터미널에서 `python3 generate.py` 를 입력하면 실행할 수"
-" 있습니다."
+"아래 코드는 파이썬3로 작동하고 파이썬2에서는 작동하지 않습니다. 터미널에서 `python3 generate.py` 를 입력하면 실행할 "
+"수 있습니다."
 
 #: ../../examples/generate.rst:51
 msgid ""
@@ -157,16 +156,19 @@ msgid ""
 " `initstr`. Other than that, there are much more ways to improve this model!"
 " Feel free to experiment."
 msgstr ""
-"아직 많이 부족하지만 처음에 고양이가 타이핑했던 것보다는 훨씬 나아졌네요! 특히 형태소와 형태소 사이에 공백이 있어서 덜 예뻐보이지만, 그 정도는 충분히 개선할 수 "
-"있을 것 같아요. 게다가 이 모델은 단 하나의 문서를 기반으로 구축한 것이지만, 보다 큰 말뭉치를 이용하는 "
-"경우에는 굳이 형태소 분석도 필요하지 않을테고요. 그 외에도 이 모델을 발전시킬 수 있는 여지는 무궁무진하게 많습니다! 상상력을 발휘하여 다양하게 실험해보세요."
+"아직 많이 부족하지만 처음에 고양이가 타이핑했던 것보다는 훨씬 나아졌네요! 특히 형태소와 형태소 사이에 공백이 있어서 덜 예뻐보이지만, "
+"그 정도는 충분히 개선할 수 있을 것 같아요. 게다가 이 모델은 단 하나의 문서를 기반으로 구축한 것이지만, 보다 큰 말뭉치를 이용하는 "
+"경우에는 굳이 형태소 분석도 필요하지 않을테고요. 그 외에도 이 모델을 발전시킬 수 있는 여지는 무궁무진하게 많습니다! 상상력을 발휘하여"
+" 다양하게 실험해보세요."
 
 #: ../../examples/generate.rst:58
 msgid ""
 "For more on generating text, you can refer to Jon Bently's `Programming "
 "Pearls (Section 15.3) <http://www.cs.bell-"
 "labs.com/cm/cs/pearls/sec153.html>`_."
-msgstr "텍스트 생성에 대한 더 자세한 설명은 존 벤틀리의 `생각하는 프로그래밍 (15장 3절) <http://www.cs.bell-labs.com/cm/cs/pearls/sec153.html>`_ 의 내용을 참고해주세요."
+msgstr ""
+"텍스트 생성에 대한 더 자세한 설명은 존 벤틀리의 `생각하는 프로그래밍 (15장 3절) <http://www.cs.bell-"
+"labs.com/cm/cs/pearls/sec153.html>`_ 의 내용을 참고해주세요."
 
 #: ../../examples/generate.rst:63
 msgid ""
@@ -184,8 +186,8 @@ msgid ""
 "\"ㅋㅋㅋ\") So now we educate our cat to type syllables::"
 msgstr ""
 "하지만 이렇게 글자를 무작위로 나열하는 것은 아무런 의미를 가지지 않습니다.  일반적으로 한국어 텍스트는 초성, 중성, 종성으로 구성된 "
-"낱개의 음절들이 모여 단어를 이루고 [#]_ 이 단어들이 다시 모여 문장을 이루는데, 글자들을 랜덤으로 타이핑해서는 음절이나 단어를 이룰 수 있는"
-" 확률은 극히 희박하겠죠. 그래서 이번에는 고양이에게 음절을 타이핑하는 방법을 (어떻게든) 가르쳐봅니다::"
+"낱개의 음절들이 모여 단어를 이루고 [#]_ 이 단어들이 다시 모여 문장을 이루는데, 글자들을 랜덤으로 타이핑해서는 음절이나 단어를 이룰"
+" 수 있는 확률은 극히 희박하겠죠. 그래서 이번에는 고양이에게 음절을 타이핑하는 방법을 (어떻게든) 가르쳐봅니다::"
 
 #: ../../examples/generate.rst:19
 msgid ""
@@ -216,7 +218,45 @@ msgid ""
 "<http://en.wikipedia.org/wiki/Language_model>`_, you can evaluate your "
 "random texts and figure out whether they actually make sense in a "
 "statistical point of view."
-msgstr "한 걸음 더 나아가기 위해서는 `언어 모델 <http://en.wikipedia.org/wiki/Language_model>`_ 을 이용해 생성한 랜덤 텍스트가 통계적인 관점에서 얼마나 말이 되는지 평가해볼 수 있습니다."
+msgstr ""
+"한 걸음 더 나아가기 위해서는 `언어 모델 <http://en.wikipedia.org/wiki/Language_model>`_ 을 "
+"이용해 생성한 랜덤 텍스트가 통계적인 관점에서 얼마나 말이 되는지 평가해볼 수 있습니다."
+
+#: ../../examples.rst:33
+msgid ":doc:`examples/multithreading`"
+msgstr ""
+
+#: ../../examples/multithreading.rst:2
+msgid "Multithreading with KoNLPy"
+msgstr ""
+
+#: ../../examples/multithreading.rst:4
+msgid ""
+"Sometimes it gets boring to wait for tagging jobs to end. How about using "
+"some concurrency tricks? Python supports multithreading and multiprocessing "
+"out-of-the-box, and you can use them with KoNLPy as well. Here's an example "
+"using multithreading."
+msgstr ""
+
+#: ../../examples/multithreading.rst:22
+msgid "Check out how much faster it gets!"
+msgstr ""
+
+#: ../../examples/multithreading.rst:26
+msgid "Some useful references on concurrency with Python:"
+msgstr ""
+
+#: ../../examples/multithreading.rst:26
+msgid ""
+"장혜식, `\"파이썬은 멀티코어 줘도 쓰잘데기가 없나요?\"에 대한 파이썬 2.6의 대답 "
+"<http://openlook.org/blog/2008/06/28/python-multiprocessing/>`_, 2008."
+msgstr ""
+
+#: ../../examples/multithreading.rst:27
+msgid ""
+"하용호, `파이썬으로 클라우드 하고 싶어요 <http://www.slideshare.net/devparan/h3-2011-c6"
+"-python-and-cloud>`_, 2011."
+msgstr ""
 
 #~ msgid ""
 #~ "Furthermore, if you use language models, you can evaluate your random texts "

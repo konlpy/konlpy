@@ -11,42 +11,42 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../../../../../../dev/my/konlpy/docs/test.rst:2
+#: ../../test.rst:2
 msgid "Running tests"
 msgstr "테스트하기"
 
-#: ../../../../../../../dev/my/konlpy/docs/test.rst:4
+#: ../../test.rst:4
 msgid ""
 "KoNLPy has tests to evaulate its quality. To perform a test, use the code "
 "below."
 msgstr ""
 "KoNLPy 결과물의 정합성을 확인하기 위한 테스트가 몇 가지 있습니다. 테스트를 수행하기 위해서는 다음의 코드를 실행해주세요."
 
-#: ../../../../../../../dev/my/konlpy/docs/test.rst:14
+#: ../../test.rst:14
 msgid "KoNLPy was tested on the below environments:"
 msgstr "KoNLPy는 다음의 환경에서 사용이 확인되었습니다:"
 
-#: ../../../../../../../dev/my/konlpy/docs/test.rst:16
+#: ../../test.rst:16
 msgid "Mac OS X 10.9 with Sun/Oracle 1.6.0"
 msgstr ""
 
-#: ../../../../../../../dev/my/konlpy/docs/test.rst:17
+#: ../../test.rst:17
 msgid "Ubuntu 12.04 with openjdk-7-jdk"
 msgstr ""
 
-#: ../../../../../../../dev/my/konlpy/docs/test.rst:18
+#: ../../test.rst:18
 msgid "Ubuntu 13.10 with openjdk-7-jdk"
 msgstr ""
 
-#: ../../../../../../../dev/my/konlpy/docs/test.rst:19
+#: ../../test.rst:19
 msgid "Ubuntu 14.04 with openjdk-7-jdk"
 msgstr ""
 
-#: ../../../../../../../dev/my/konlpy/docs/test.rst:20
+#: ../../test.rst:20
 msgid "Window 7 with Sun/Oracle JDK 1.7.0"
 msgstr ""
 
-#: ../../../../../../../dev/my/konlpy/docs/test.rst:24
+#: ../../test.rst:24
 msgid ""
 "To see known bugs/issues, see `here "
 "<https://github.com/e9t/konlpy/labels/bug>`_."
