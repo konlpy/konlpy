@@ -7,12 +7,12 @@ from setuptools import find_packages, setup
 from konlpy import __version__
 
 def requirements():
-    with open(os.path.join(os.path.dirname(__file__), 'requirements.txt')) as f:
-        requirements_text = f.read()
-        if sys.version_info[0] >= 3:
-            requirements_text = requirements_text.replace('JPype1', 'JPype1-py3')
-
-        return requirements_text.splitlines()
+    if sys.version_info[0] < 3:
+        reqfile = 'requirements.txt'
+    else:
+        reqfile = 'requirements-py3.txt'
+    with open(os.path.join(os.path.dirname(__file__), reqfile)) as f:
+        return f.read().splitlines()
 
 setup(name='konlpy',
     version=__version__,
