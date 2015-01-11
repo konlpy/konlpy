@@ -1,6 +1,7 @@
 #! /usr/bin/python
 # -*- coding: utf-8 -*-
 
+from __future__ import unicode_literals
 import io
 import os
 import pprint as pp
@@ -9,18 +10,18 @@ import sys
 
 installpath = os.path.dirname(os.path.realpath(__file__))
 replace_set = [
-        (u'·', u'/'), # \xb7
-        (u'․', u'/'), # \u2024
-        (u'ㆍ', u'/'), # \u318d (hangul letter araea)
-        (u'･', u'/'), # \uff65 (katakana)
-        (u'～', u'~'), # \uff5e
-        (u'❑', u'-'), # \u2751
-        (u'‘', u"'"), # \u2018
-        (u'’', u"'"), # \u2019
-        (u'“', u'"'), # \u201c
-        (u'”', u'"'), # \u201d
-        (u'「', u'<'), # \u300c
-        (u'」', u'>')] # \u300d
+        ('·', '/'), # \xb7
+        ('․', '/'), # \u2024
+        ('ㆍ', '/'), # \u318d (hangul letter araea)
+        ('･', '/'), # \uff65 (katakana)
+        ('～', '~'), # \uff5e
+        ('❑', '-'), # \u2751
+        ('‘', "'"), # \u2018
+        ('’', "'"), # \u2019
+        ('“', '"'), # \u201c
+        ('”', '"'), # \u201d
+        ('「', '<'), # \u300c
+        ('」', '>')] # \u300d
 
 if sys.version_info[0] < 3:
     class UnicodePrinter(pp.PrettyPrinter):

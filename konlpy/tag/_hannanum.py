@@ -1,6 +1,7 @@
 #! /usr/bin/python
 # -*- coding: utf-8 -*-
 
+from __future__ import unicode_literals
 import re
 try:
     import jpype
@@ -14,7 +15,7 @@ from .. import utils
 __all__ = ['Hannanum']
 
 
-tag_re = u'(.+?\\/\\w+)\\+?'
+tag_re = '(.+?\\/\\w+)\\+?'
 
 def parse(result, flatten=False):
     def parse_opt(opt):
