@@ -15,63 +15,99 @@ msgstr ""
 msgid "Installation"
 msgstr "설치하기"
 
-#: ../../install.rst:19
+#: ../../install.rst:48
 msgid "Windows"
 msgstr "윈도우"
 
-#: ../../install.rst:21
-msgid ""
-"Download and install `jpype "
-"<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ [#]_"
-msgstr ""
-"`jpype <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ 다운로드 및 설치하기 [#]_"
-
-#: ../../install.rst:8 ../../install.rst:23
+#: ../../install.rst:16 ../../install.rst:34 ../../install.rst:57
 msgid "From the command prompt, install KoNLPy."
 msgstr "명령 프롬프트로 KoNLPy 설치하기"
 
-#: ../../install.rst:29
-msgid ""
-"(Optional) Download, extract [#]_, and install the most recent version of "
-"MeCab from the following links:"
-msgstr "(선택사항) 아래의 링크를 클릭해서 MeCab의 가장 최신 버젼을 다운로드한 후, 압축을 풀고, 설치하기"
-
-#: ../../install.rst:31
+#: ../../install.rst:65
 msgid "`mecab-ko <https://bitbucket.org/eunjeon/mecab-ko/downloads>`_"
 msgstr "`mecab-ko <https://bitbucket.org/eunjeon/mecab-ko/downloads>`_"
 
-#: ../../install.rst:32
+#: ../../install.rst:66
 msgid "`mecab-ko-dic <https://bitbucket.org/eunjeon/mecab-ko-dic/downloads>`_"
 msgstr ""
 "`mecab-ko-dic <https://bitbucket.org/eunjeon/mecab-ko-dic/downloads>`_"
 
-#: ../../install.rst:33
+#: ../../install.rst:67
 msgid ""
 "`mecab-python <https://code.google.com/p/mecab/downloads/list?q=python>`_"
 msgstr ""
 "`mecab-python <https://code.google.com/p/mecab/downloads/list?q=python>`_"
 
-#: ../../install.rst:35
+#: ../../install.rst:69
 msgid "`win-amd64` for 64-bit Windows, `win32` for 32-bit Windows."
 msgstr "64비트 윈도우에는 `win-amd64`, 32비트 윈도우에는 `win32`라고 쓰여진 파일을 사용합니다."
 
-#: ../../install.rst:36
-msgid ""
-"Having MinGW/MSYS or Cygwin installed may be more convenient. Otherwise, you"
-" can use `7zip <http://7-zip.org>`_ for the extraction of `tar` files."
-msgstr ""
-"애초에 MinGW/MSYS 또는 Cygwin을 설치해서 사용하거나, `7zip <http://7-zip.org>`_ 을 쓰시면 `tar`"
-" 파일의 압축을 손쉽게 푸실 수 있습니다."
-
-#: ../../install.rst:5
+#: ../../install.rst:14
 msgid "Linux"
 msgstr ""
 
-#: ../../install.rst:7
+#: ../../install.rst:6
 msgid ""
-"`Set JAVA_HOME "
-"<http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html>`_."
+"For troubleshooting information, see these pages: `Linux "
+"<https://github.com/konlpy/konlpy/issues?q=label%3Alinux>`_. `Mac OS "
+"<https://github.com/konlpy/konlpy/issues?q=label%3A\"mac+os\">`_. `Windows "
+"<https://github.com/konlpy/konlpy/issues?q=label%3Awindows>`_. Please record"
+" a `\"New Issue\" <https://github.com/konlpy/konlpy/issues/new>`_ if you "
+"have an error that is not listed. You can also see testing logs `here "
+"<https://docs.google.com/spreadsheets/d/1Ii_L9NF9gSLbsJOGqsf-"
+"zfqTtyhhthmJWNC2kgUDIsU/edit#gid=0>`_."
 msgstr ""
+
+#: ../../install.rst:24 ../../install.rst:41
+msgid "Install MeCab (*optional*)"
+msgstr ""
+
+#: ../../install.rst:32
+msgid "Mac OS"
+msgstr ""
+
+#: ../../install.rst:50
+msgid ""
+"Download and install `JPype1 "
+"<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ (>=0.5.7) [#]_"
+msgstr ""
+
+#: ../../install.rst:63
+msgid ""
+"Download, extract [#]_, and install the most recent version of MeCab from "
+"the following links (*optional*):"
+msgstr ""
+
+#: ../../install.rst:70
+msgid ""
+"Having MinGW/MSYS or Cygwin installed may be more convenient. If you plan to"
+" use Git, `Git BASH <https://msysgit.github.io/>`_ is another good option. "
+"Otherwise, you can use `7zip <http://7-zip.org>`_ for the extraction of "
+"`tar` files."
+msgstr ""
+
+#~ msgid ""
+#~ "Download and install `jpype "
+#~ "<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ [#]_"
+#~ msgstr ""
+#~ "`jpype <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ 다운로드 및 설치하기 [#]_"
+
+#~ msgid ""
+#~ "(Optional) Download, extract [#]_, and install the most recent version of "
+#~ "MeCab from the following links:"
+#~ msgstr "(선택사항) 아래의 링크를 클릭해서 MeCab의 가장 최신 버젼을 다운로드한 후, 압축을 풀고, 설치하기"
+
+#~ msgid ""
+#~ "Having MinGW/MSYS or Cygwin installed may be more convenient. Otherwise, you"
+#~ " can use `7zip <http://7-zip.org>`_ for the extraction of `tar` files."
+#~ msgstr ""
+#~ "애초에 MinGW/MSYS 또는 Cygwin을 설치해서 사용하거나, `7zip <http://7-zip.org>`_ 을 쓰시면 `tar`"
+#~ " 파일의 압축을 손쉽게 푸실 수 있습니다."
+
+#~ msgid ""
+#~ "`Set JAVA_HOME "
+#~ "<http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html>`_."
+#~ msgstr ""
 
 #~ msgid "Linux/Mac OS"
 #~ msgstr "리눅스/맥 OS"
