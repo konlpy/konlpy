@@ -5,6 +5,7 @@
 import hashlib
 import json
 import os
+import subprocess
 import sys
 import tarfile
 import zipfile
@@ -52,7 +53,8 @@ class Downloader(object):
     A class used to access the KoNLPy data server, which can be used to download packages.
     """
 
-    PACKAGE_URL = 'http://konlpy.github.io/konlpy-data/packages/%s'
+    PACKAGE_URL = 'http://konlpy.github.io/konlpy-data/packages/%s.%s'
+    SCRIPT_URL = 'http://konlpy.github.io/konlpy-data/packages/%s.sh'
     INDEX_URL = 'http://konlpy.github.io/konlpy-data/index.json'
 
     INSTALLED = 'installed'
@@ -112,7 +114,7 @@ class Downloader(object):
 
         if download_dir is None: download_dir = self._download_dir
 
-        filepath = os.path.join(download_dir, info['filepath'])
+        filepath = os.path.join(download_dir, info['filepath'], info['ext'])
 
         return self._pkg_status(info, filepath)
 
@@ -134,6 +136,10 @@ class Downloader(object):
 
         # TODO: Check if file has been properly unzipped
 
+        # TODO: Check if file has been properly installed
+        if info.get('install'):
+            return self.NOT_INSTALLED
+
         # Otherwise, everything looks good
         return self.INSTALLED
 
@@ -148,7 +154,8 @@ class Downloader(object):
             return
 
         # Check for (and remove) any old/stale version
-        filepath = os.path.join(download_dir, info['filepath'])
+        filepath = os.path.join(download_dir,\
+                                '%s.%s' % (info['filepath'], info['ext']))
         if os.path.exists(filepath):
             if status==self.STALE:
                 yield "[konlpy_data] This file is stale"
@@ -162,7 +169,7 @@ class Downloader(object):
             os.mkdir(subdir)
 
         # Download the file. This will raise an IOError if the URL is not found.
-        url = self.PACKAGE_URL % info['filepath']
+        url = self.PACKAGE_URL % (info['filepath'], info['ext'])
         try:
             yield "[konlpy_data] Downloading package '%s'..." % info['id']
             # TODO: progress bar
@@ -178,8 +185,18 @@ class Downloader(object):
             yield "[konlpy_data] Unzipping file %s" % filepath
             self._unzip_file(filepath, ext)
 
+        # If it says to install, use a shell script for installation
+        if info.get('install'):
+            url = self.SCRIPT_URL % info['filepath']
+            shpath = os.path.join(download_dir, '%s.sh' % info['filepath'])
+            self._exec_shell(url, shpath, download_dir)
+
         yield "Done"
 
+    def _exec_shell(self, url, shpath, download_dir):
+        urllib.urlretrieve(url, shpath)
+        internals.chmod(shpath)
+        subprocess.call(['sudo', shpath, download_dir])
 
     def _unzip_file(self, filepath, ext):
         try:

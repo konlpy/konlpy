@@ -36,3 +36,6 @@ def is_writable(path):
             return False
     # Otherwise, we'll assume it's writable.
     return True
+
+def chmod(path):
+    os.chmod(path, os.stat(path).st_mode | stat.S_IEXEC)
