@@ -74,5 +74,9 @@ class Komoran():
             jvm.init_jvm(jvmpath)
         komoranJavaPackage = jpype.JPackage('kr.lucypark.komoran')
         KomoranInterfaceJavaClass = komoranJavaPackage.KomoranInterface
-        self.jki = KomoranInterfaceJavaClass()
+        try:
+            self.jki = KomoranInterfaceJavaClass()
+        except TypeError: # Package kr.lucypark.komoran.KomoranInterface is not Callable
+            raise IOError("Please download komoran-dic: `konlpy.download('komoran-dic')`")
+
         self.dicpath = os.path.join(internals.get_datadir(), 'dictionaries', 'komoran-dic')
