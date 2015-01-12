@@ -1,7 +1,7 @@
 Change logs
 ===========
 
-`Version 0.4.0 <https://github.com/e9t/konlpy/releases/tag/v0.4.0>`_
+`Version 0.4.0 <https://github.com/konlpy/konlpy/releases/tag/v0.4.0>`_
 --------------------------------------------------------------------
 
 Released on Dec 20, 2014.
@@ -13,7 +13,7 @@ Released on Dec 20, 2014.
 - Change dependency version of mecab-python from 0.993 to 0.996 [:issue:`19` with comments by Yong-woon Lee]
 - Fixed concordance bug for Python2 [:commit:`6caa929`]
 
-`Version 0.3.3 <https://github.com/e9t/konlpy/releases/tag/v0.3.3>`_
+`Version 0.3.3 <https://github.com/konlpy/konlpy/releases/tag/v0.3.3>`_
 --------------------------------------------------------------------
 
 Released on Sep 7, 2014.
@@ -21,7 +21,7 @@ Released on Sep 7, 2014.
 - Added Python 3 support [:issue:`17` by :committer:`hyeshik`]
 - Created `KoNLPy mailing list at Google Groups <https://groups.google.com/forum/#!forum/konlpy>`_
 
-`Version 0.3.2 <https://github.com/e9t/konlpy/releases/tag/v0.3.2>`_
+`Version 0.3.2 <https://github.com/konlpy/konlpy/releases/tag/v0.3.2>`_
 --------------------------------------------------------------------
 
 Released on Sep 4, 2014.
@@ -31,7 +31,7 @@ Released on Sep 4, 2014.
 - Fixed Kkma memory error for Mac OS X [:issue:`13` by :committer:`combacsa`]
     - `java.lang.OutOfMemoryError` in Mac OS X if heap memory is too small
 
-`Version 0.3.1 <https://github.com/e9t/konlpy/releases/tag/v0.3.1>`_
+`Version 0.3.1 <https://github.com/konlpy/konlpy/releases/tag/v0.3.1>`_
 --------------------------------------------------------------------
 
 Released on Sep 4, 2014.
@@ -44,7 +44,7 @@ Released on Sep 4, 2014.
 - Modified Hannanum `morph` method to `analyze`
 - Uploaded `KoNLPy to PyPI <https://pypi.python.org/pypi/konlpy>`_
 
-`Version 0.3.0 <https://github.com/e9t/konlpy/releases/tag/v0.3.0>`_
+`Version 0.3.0 <https://github.com/konlpy/konlpy/releases/tag/v0.3.0>`_
 --------------------------------------------------------------------
 
 Released on Aug 25, 2014.
@@ -61,7 +61,7 @@ Released on Aug 25, 2014.
 
     The versions below do not have documents available, and are not backwards-compatible.
 
-`Version 0.2 <https://github.com/e9t/konlpy/releases/tag/v0.2>`_
+`Version 0.2 <https://github.com/konlpy/konlpy/releases/tag/v0.2>`_
 ----------------------------------------------------------------
 
 Released on Aug 1, 2014.
@@ -73,7 +73,7 @@ Released on Aug 1, 2014.
 - Fixed Hannanum module parsing error when '/', '+' are in text
 - Fixed Hannanum module text indexing error (where results get truncated)
 
-`Version 0.1 <https://github.com/e9t/konlpy/releases/tag/v0.1>`_
+`Version 0.1 <https://github.com/konlpy/konlpy/releases/tag/v0.1>`_
 ----------------------------------------------------------------
 
 Released on Jun 15, 2014.

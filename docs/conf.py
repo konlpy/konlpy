@@ -270,9 +270,9 @@ texinfo_documents = [
 intersphinx_mapping = {'http://docs.python.org/': None}
 
 extlinks = {
-    'commit': ('https://github.com/e9t/konlpy/commit/%s', ''),
+    'commit': ('https://github.com/konlpy/konlpy/commit/%s', ''),
     'committer': ('https://github.com/%s', ''),
-    'issue': ('https://github.com/e9t/konlpy/issues/%s', '#'),
+    'issue': ('https://github.com/konlpy/konlpy/issues/%s', '#'),
 }
 
 html_context = {

@@ -4,7 +4,7 @@ References
 .. role:: license
 
 .. note::
-    Please `modify this document <https://github.com/e9t/konlpy/blob/master/docs/references.rst>`_ if anything is erroneous or not included.
+    Please `modify this document <https://github.com/konlpy/konlpy/blob/master/docs/references.rst>`_ if anything is erroneous or not included.
     Last updated at |today|.
 
 .. _engines:

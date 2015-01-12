@@ -17,4 +17,4 @@ To perform a test, use the code below.
 
 .. note::
 
-    To see known bugs/issues, see `here <https://github.com/e9t/konlpy/labels/bug>`_.
+    To see known bugs/issues, see `here <https://github.com/konlpy/konlpy/labels/bug>`_.

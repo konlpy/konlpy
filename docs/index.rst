@@ -1,9 +1,9 @@
 KoNLPy: Korean NLP in Python
 ============================
 
-.. image:: https://travis-ci.org/e9t/konlpy.svg?branch=master
+.. image:: https://travis-ci.org/konlpy/konlpy.svg?branch=master
     :alt: Build status
-    :target: https://travis-ci.org/e9t/konlpy
+    :target: https://travis-ci.org/konlpy/konlpy
     :height: 18px
 
 .. image:: https://readthedocs.org/projects/konlpy/badge/?version=latest
@@ -68,7 +68,7 @@ The three main philosophies of this project are:
 - Make it easy. For humans. [#]_
 - :ref:`"Democracy on the web works." <contribute>`
 
-Please `report <https://github.com/e9t/konlpy/issues>`_ when you think any have gone stale.
+Please `report <https://github.com/konlpy/konlpy/issues>`_ when you think any have gone stale.
 
 License
 -------
@@ -103,9 +103,9 @@ but it will continuously evolve and you are invited to participate!
 
 Found a bug?
 Have a good idea for improving KoNLPy?
-Visit the `KoNLPy GitHub page <https://github.com/e9t/konlpy>`_
-and `suggest an idea <https://github.com/e9t/konlpy/issues>`_
-or `make a pull request <https://github.com/e9t/konlpy/pulls>`_.
+Visit the `KoNLPy GitHub page <https://github.com/konlpy/konlpy>`_
+and `suggest an idea <https://github.com/konlpy/konlpy/issues>`_
+or `make a pull request <https://github.com/konlpy/konlpy/pulls>`_.
 
 You are also welcome to join
 the ``#koreannlp`` channel at the `Ozinger IRC Network <http://ozinger.org>`_,

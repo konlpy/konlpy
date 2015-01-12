@@ -11,7 +11,7 @@ KoNLPy는 오픈소스 프로젝트입니다.
 다음의 채널들을 통해 궁금한 점을 해소할 수 있습니다.
 
 - 홈페이지: http://konlpy.org
-- 이슈트래커: http://github.com/e9t/konlpy/issues
+- 이슈트래커: http://github.com/konlpy/konlpy/issues
 - 메일링 리스트: `konlpy@googlegroups.com <http://groups.google.com/forum/#!forum/konlpy>`_
 - IRC: `irc.ozinger.org #koreannlp <http://webchat.ozinger.org/?channels=koreannlp>`_
 
@@ -19,7 +19,7 @@ KoNLPy는 오픈소스 프로젝트입니다.
 2. 궁금증 해결하기
 ------------------
 
-1. KoNLPy를 사용하다가 막히는 부분이 있다면 먼저 `이슈가 제기되었는지 확인 <http://github.com/e9t/konlpy/issues>`_ 해봅니다.
+1. KoNLPy를 사용하다가 막히는 부분이 있다면 먼저 `이슈가 제기되었는지 확인 <http://github.com/konlpy/konlpy/issues>`_ 해봅니다.
 2. 같은 이슈가 이미 제기되었고,
     - 이슈가 해결되었다면(closed): 최신 릴리즈에서 문제가 해결되었을 가능성이 높습니다. 쓰레드에서 다른 분들이 어떻게 해결했는지 파악해보는 것도 좋은 방법입니다.
     - 이슈가 아직 해결되지 않았다면(open): 댓글로 문제 상황을 설명해주세요. 같은 상황을 겪고 있는 사람들이 많이 모여야
@@ -29,7 +29,7 @@ KoNLPy는 오픈소스 프로젝트입니다.
 3. 이슈 제안/해결하기
 ---------------------
 
-- `깃헙 이슈 <https://github.com/e9t/konlpy/issues>`_ 에 코드를 개선할 수 있는 방법을 제안하거나, 제안된 이슈에 대해 토론/해결하실 수 있습니다.
+- `깃헙 이슈 <https://github.com/konlpy/konlpy/issues>`_ 에 코드를 개선할 수 있는 방법을 제안하거나, 제안된 이슈에 대해 토론/해결하실 수 있습니다.
 - 기여하신 부분에 대해 정확한 attribution을 할 수 있도록, 가능하다면 pull request를 보내주시기 바랍니다.
 - 코드를 작성할 때는 다음에 유의해주세요.
     1. 탭 대신 공백 4개 사용
