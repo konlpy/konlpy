@@ -51,8 +51,6 @@ class Komoran():
     def pos(self, phrase, flatten=True):
         """POS tagger."""
 
-        # TODO: consider Python version
-
         phrase = utils.preprocess(phrase)
         if sys.version_info[0] < 3:
             result = self.jki.analyzeMorphs(phrase, self.dicpath)
@@ -79,4 +77,9 @@ class Komoran():
         except TypeError: # Package kr.lucypark.komoran.KomoranInterface is not Callable
             raise IOError("Please download komoran-dic: `konlpy.download('komoran-dic')`")
 
-        self.dicpath = os.path.join(internals.get_datadir(), 'dictionaries', 'komoran-dic')
+        if dicpath:
+            self.dicpath = dicpath
+        else:
+            # FIXME: Cannot execute without sudoing
+            # java.lang.NoClassDefFoundErrorPyRaisable: java.lang.NoClassDefFoundError: kr/co/shineware/nlp/komoran/core/analyzer/Komoran
+            self.dicpath = os.path.join(utils.installpath, java, data, models)
