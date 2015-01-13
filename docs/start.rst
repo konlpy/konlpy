@@ -31,9 +31,8 @@ You have some prerequisites to use KoNLPy.
 4. A `Python installation <https://wiki.python.org/moin/BeginnersGuide/Download>`_
 5. `pip <https://pypi.python.org/pypi/pip>`_, the Python package manager
 
-We assume you have some knowledge of Python and programming,
-but no knowledge whatsoever of data science, machine learning, or predictive modeling.
-(But some familiarity to statistics will help.)
+Got 'em all?
+Then let's go.
 
 .. [#] If you're new to Python, this tutorial should get you through in minutes: http://learnxinyminutes.com/docs/python/. If you're up to putting in some more time, try `The Hitchhiker's Guide <http://docs.python-guide.org/en/latest/>`_ or `How to Think Like a Computer Scientist <http://openbookproject.net/thinkcs/python/english2e/>`_.
 .. [#] Many use `Sublime Text 2 <http://www.sublimetext.com/>`_ for Python programming. Some others use Vim and Terminal. But other than these, there are numerous great `text editors <http://tutorialzine.com/2012/07/battle-of-the-tools-which-is-the-best-code-editor/>`_ and `Python IDEs <http://pedrokroger.net/choosing-best-python-ide/>`_ out there, so take your pick!
