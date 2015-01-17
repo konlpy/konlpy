@@ -45,7 +45,7 @@ class Komoran():
         print komoran.pos(u'우왕 코모란도 오픈소스가 되었어요')
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
-    :param dicpath: The path of dictionary files.
+    :param dicpath: The path of dictionary files. The KOMORAN system dictionary is loaded by default.
     """
 
     def pos(self, phrase, flatten=True):
@@ -67,7 +67,7 @@ class Komoran():
         return [s for s, t in tagged if t.startswith('N')]
 
 
-    def __init__(self, jvmpath=None, dicpath='%s/java/data/models' % utils.installpath):
+    def __init__(self, jvmpath=None, dicpath=None):
         if not jpype.isJVMStarted():
             jvm.init_jvm(jvmpath)
         komoranJavaPackage = jpype.JPackage('kr.lucypark.komoran')
@@ -82,4 +82,4 @@ class Komoran():
         else:
             # FIXME: Cannot execute without sudoing
             # java.lang.NoClassDefFoundErrorPyRaisable: java.lang.NoClassDefFoundError: kr/co/shineware/nlp/komoran/core/analyzer/Komoran
-            self.dicpath = os.path.join(utils.installpath, java, data, models)
+            self.dicpath = os.path.join(utils.installpath, 'java', 'data', 'models')
