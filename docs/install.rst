@@ -71,7 +71,7 @@ You may have to upgrade your `pip` version in order to install the downloaded `.
 
 .. warning::
 
-    - KoNLPy only supports ``Kkma()`` on Windows machines. ``Mecab()``, ``Komoran()``, ``Hannanum()`` are not supported.
+    - KoNLPy only supports ``Kkma()``, ``Komoran()`` on Windows machines. ``Mecab()``, ``Hannanum()`` are not supported.
     - Are you having trouble installing MeCab-ko to your Windows machine? Refer to this blog post by Kim YungYi: `mecab-ko 윈도우에서 빌드하기 <https://yungyikim.atlassian.net/wiki/pages/viewpage.action?pageId=2916362>`_ (In Korean).
 
 .. [#] `win-amd64` for 64-bit Windows, `win32` for 32-bit Windows.
