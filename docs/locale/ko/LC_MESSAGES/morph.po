@@ -55,423 +55,722 @@ msgstr ""
 msgid "Compare POS tags between several Korean analytic projects. (In Korean)"
 msgstr "각종 한국어 형태소 분석기의 품사 태그를 비교해 보세요."
 
-#: ../../morph.rst:30
-msgid "Time analysis [1]_"
-msgstr "시간 분석 [1]_"
-
-#: ../../morph.rst:32
-msgid "*Loading time*: Class loading time, including dictionary loads. [2]_"
-msgstr "**로딩 시간**: 사전 로딩을 포함해서, 클래스 전체를 로딩하는데 소요되는 시간. [2]_"
-
-#: ../../morph.rst:34
-msgid ":py:class:`.Kkma`: 13.2913 *secs*"
-msgstr ":py:class:`.Kkma`: 13.2913 초"
-
-#: ../../morph.rst:35
-msgid ":py:class:`.Hannanum`: 2.2950 *secs*"
-msgstr ":py:class:`.Hannanum`: 2.2950 초"
-
-#: ../../morph.rst:36
-msgid ":py:class:`.Mecab`: 0.0002 *secs*"
-msgstr ":py:class:`.Mecab`: 0.0002 초"
-
-#: ../../morph.rst:40
-msgid ":py:class:`.Kkma`: 14.6882 *secs*"
-msgstr ":py:class:`.Kkma`: 14.6882 초"
-
-#: ../../morph.rst:41
-msgid ":py:class:`.Hannanum`: 2.6872 *secs*"
-msgstr ":py:class:`.Hannanum`: 2.6872 초"
-
-#: ../../morph.rst:42
-msgid ":py:class:`.Mecab`: 0.0594 *secs*"
-msgstr ":py:class:`.Mecab`: 0.0594 초"
-
-#: ../../morph.rst:44
-msgid ""
-"If we test among a various number of characters, all classes' execution "
-"times increase in an exponential manner. [4]_"
-msgstr "문구의 문자 수가 증가할 때, 모든 클래스의 수행시간은 지수함수적으로 증가합니다. [4]_"
-
-#: ../../morph.rst:50
+#: ../../morph.rst:52
 msgid "Performance analysis"
 msgstr "성능 분석"
 
-#: ../../morph.rst:52
+#: ../../morph.rst:54
 msgid ""
 "The performance evaluation is replaced with result comparisons for several "
 "sample sentences."
 msgstr "성능 검증은 몇 개의 샘플 문장을 비교하는 것으로 대체합니다."
 
-#: ../../morph.rst:54
-msgid "\"저는 대학생이구요. 소프트웨어 관련학과 입니다.\""
-msgstr ""
-
-#: ../../morph.rst:57 ../../morph.rst:89 ../../morph.rst:109
-msgid ":py:class:`.Kkma`"
-msgstr ""
-
-#: ../../morph.rst:57 ../../morph.rst:89 ../../morph.rst:109
-msgid ":py:class:`.Hannanum`"
-msgstr ""
-
-#: ../../morph.rst:57 ../../morph.rst:89 ../../morph.rst:109
-msgid ":py:class:`.Mecab`"
-msgstr ""
-
-#: ../../morph.rst:59 ../../morph.rst:59
-msgid "저 / NP"
-msgstr ""
-
-#: ../../morph.rst:59
-msgid "저 / N"
-msgstr ""
-
-#: ../../morph.rst:61 ../../morph.rst:61
+#: ../../morph-1.csv:1 ../../morph-1.csv:1 ../../morph-1.csv:1
+#: ../../morph-2.csv:1 ../../morph-2.csv:1
 msgid "는 / JX"
 msgstr ""
 
-#: ../../morph.rst:61
+#: ../../morph-1.csv:1 ../../morph-2.csv:1
 msgid "는 / J"
 msgstr ""
 
-#: ../../morph.rst:63
-msgid "대학생 / NNG"
-msgstr ""
-
-#: ../../morph.rst:63
-msgid "대학생이구요 / N"
-msgstr ""
-
-#: ../../morph.rst:63
-msgid "대학 / NNG"
-msgstr ""
-
-#: ../../morph.rst:65
-msgid "생 / XSN"
-msgstr ""
-
-#: ../../morph.rst:67 ../../morph.rst:67 ../../morph.rst:79
-msgid "이 / VCP"
-msgstr ""
-
-#: ../../morph.rst:69
-msgid "구요 / EFN"
-msgstr ""
-
-#: ../../morph.rst:69
-msgid "구요 / EF"
-msgstr ""
-
-#: ../../morph.rst:71 ../../morph.rst:71 ../../morph.rst:83 ../../morph.rst:83
-msgid ". / SF"
-msgstr ""
-
-#: ../../morph.rst:71 ../../morph.rst:83
-msgid ". / S"
-msgstr ""
-
-#: ../../morph.rst:73 ../../morph.rst:73
-msgid "소프트웨어 / NNG"
-msgstr ""
-
-#: ../../morph.rst:73
-msgid "소프트웨어 / N"
-msgstr ""
-
-#: ../../morph.rst:75 ../../morph.rst:75
-msgid "관련 / NNG"
-msgstr ""
-
-#: ../../morph.rst:75
-msgid "관련학과 / N"
-msgstr ""
-
-#: ../../morph.rst:77 ../../morph.rst:77
-msgid "학과 / NNG"
-msgstr ""
-
-#: ../../morph.rst:79
-msgid "일 / P"
-msgstr ""
-
-#: ../../morph.rst:79
-msgid "입니다 / VCP+EF"
-msgstr ""
-
-#: ../../morph.rst:81
-msgid "ㅂ니다 / EFN"
-msgstr ""
-
-#: ../../morph.rst:81
-msgid "ㅂ니다 / E"
-msgstr ""
-
-#: ../../morph.rst:86
-msgid "\"아버지가방에들어가신다\""
-msgstr ""
-
-#: ../../morph.rst:91 ../../morph.rst:91
+#: ../../morph-0.csv:1 ../../morph-0.csv:1
 msgid "아버지 / NNG"
 msgstr ""
 
-#: ../../morph.rst:91
+#: ../../morph-0.csv:1
 msgid "아버지가방에들어가 / N"
 msgstr ""
 
-#: ../../morph.rst:93
+#: ../../morph-0.csv:1
 msgid "가방 / NNG"
 msgstr ""
 
-#: ../../morph.rst:93
+#: ../../morph-0.csv:1
 msgid "이 / J"
 msgstr ""
 
-#: ../../morph.rst:93
+#: ../../morph-0.csv:1 ../../morph-3.csv:1
 msgid "가 / JKS"
 msgstr ""
 
-#: ../../morph.rst:95
+#: ../../morph-0.csv:1
 msgid "에 / JKM"
 msgstr ""
 
-#: ../../morph.rst:95
+#: ../../morph-0.csv:1
 msgid "방 / NNG"
 msgstr ""
 
-#: ../../morph.rst:97
+#: ../../morph-0.csv:1
 msgid "에 / JKB"
 msgstr ""
 
-#: ../../morph.rst:99 ../../morph.rst:101
+#: ../../morph-0.csv:1 ../../morph-0.csv:1
 msgid "들어가 / VV"
 msgstr ""
 
-#: ../../morph.rst:101
+#: ../../morph-0.csv:1
 msgid "시 / EPH"
 msgstr ""
 
-#: ../../morph.rst:101
+#: ../../morph-0.csv:1
 msgid "시ㄴ다 / E"
 msgstr ""
 
-#: ../../morph.rst:103
+#: ../../morph-0.csv:1
 msgid "ㄴ다 / EFN"
 msgstr ""
 
-#: ../../morph.rst:103
+#: ../../morph-0.csv:1
 msgid "신다 / EP+EC"
 msgstr ""
 
-#: ../../morph.rst:106
-msgid "\"140823 Tofu Music Festival 존잘러에서 귀요미들로 변신ㅋㅋ #GOT7\""
-msgstr ""
-
-#: ../../morph.rst:111
-msgid "140823 / NR"
-msgstr ""
-
-#: ../../morph.rst:111
-msgid "140823 / N"
-msgstr ""
-
-#: ../../morph.rst:111
-msgid "140823 / SN"
-msgstr ""
-
-#: ../../morph.rst:113
-msgid "Tofu / OL"
-msgstr ""
-
-#: ../../morph.rst:113
-msgid "Tofu / F"
-msgstr ""
-
-#: ../../morph.rst:113
-msgid "Tofu / SL"
-msgstr ""
-
-#: ../../morph.rst:115
-msgid "Music / OL"
-msgstr ""
-
-#: ../../morph.rst:115
-msgid "Music / F"
-msgstr ""
-
-#: ../../morph.rst:115
-msgid "Music / SL"
-msgstr ""
-
-#: ../../morph.rst:117
-msgid "Festival / OL"
-msgstr ""
-
-#: ../../morph.rst:117
-msgid "Festival / F"
-msgstr ""
-
-#: ../../morph.rst:117
-msgid "Festival / SL"
-msgstr ""
-
-#: ../../morph.rst:119
-msgid "존 / NNP"
-msgstr ""
-
-#: ../../morph.rst:119
-msgid "존잘러 / N"
-msgstr ""
-
-#: ../../morph.rst:119
-msgid "존 / VA+JX"
-msgstr ""
-
-#: ../../morph.rst:121
-msgid "잘 / MAG"
-msgstr ""
-
-#: ../../morph.rst:121
-msgid "잘 / VA"
-msgstr ""
-
-#: ../../morph.rst:123
-msgid "러 / NNP"
-msgstr ""
-
-#: ../../morph.rst:123
-msgid "러 / EC"
-msgstr ""
-
-#: ../../morph.rst:125
+#: ../../morph-3.csv:1
 msgid "에서 / JKM"
 msgstr ""
 
-#: ../../morph.rst:125
+#: ../../morph-3.csv:1
 msgid "에서 / J"
 msgstr ""
 
-#: ../../morph.rst:125
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
 msgid "에서 / JKB"
 msgstr ""
-
-#: ../../morph.rst:127
-msgid "귀요 / NNG"
-msgstr ""
-
-#: ../../morph.rst:127
-msgid "귀요미들 / N"
-msgstr ""
-
-#: ../../morph.rst:127
-msgid "귀요미 / NNG"
-msgstr ""
-
-#: ../../morph.rst:129
-msgid "미들 / NNG"
-msgstr ""
-
-#: ../../morph.rst:129
-msgid "들 / XSN"
-msgstr ""
-
-#: ../../morph.rst:131
-msgid "로 / JKM"
-msgstr ""
-
-#: ../../morph.rst:131
-msgid "로 / J"
-msgstr ""
-
-#: ../../morph.rst:131
-msgid "로 / JKB"
-msgstr ""
-
-#: ../../morph.rst:133 ../../morph.rst:133
-msgid "변신 / NNG"
-msgstr ""
-
-#: ../../morph.rst:133
-msgid "변신ㅋㅋ / N"
-msgstr ""
-
-#: ../../morph.rst:135
-msgid "ㅋㅋ / EMO"
-msgstr ""
-
-#: ../../morph.rst:135
-msgid "ㅋㅋ / UNKNOWN"
-msgstr ""
-
-#: ../../morph.rst:137
-msgid "# / SW"
-msgstr ""
-
-#: ../../morph.rst:137
-msgid "#GOT7 / N"
-msgstr ""
-
-#: ../../morph.rst:137
-msgid "# / SY"
-msgstr ""
-
-#: ../../morph.rst:139
-msgid "GOT / OL"
-msgstr ""
-
-#: ../../morph.rst:139
-msgid "GOT / SL"
-msgstr ""
-
-#: ../../morph.rst:141
-msgid "7 / NR"
-msgstr ""
-
-#: ../../morph.rst:141
-msgid "7 / SN"
-msgstr ""
-
-#: ../../morph.rst:144
-msgid ""
-"All time analyses in this document were performed with :py:mod:`time` on a "
-"Thinkpad X1 Carbon (2013) and KoNLPy v0.3."
-msgstr ""
-"시간 분석은 2013년 Thinkpad X1 Carbon에서 :py:mod:`time`을 이용하여 KoNLPy v0.3을 대상으로 "
-"수행하였습니다."
-
-#: ../../morph.rst:145
-msgid "Average of five consecutive runs."
-msgstr "5회 연속 수행의 평균값"
-
-#: ../../morph.rst:146
-msgid "Average of ten consecutive runs."
-msgstr "10회 연속 수행의 평균값"
-
-#: ../../morph.rst:147
-msgid ""
-"The current Hannanum class raises a "
-"``java.lang.ArrayIndexOutOfBoundsException: 10000`` exception if the number "
-"of characters is too large."
-msgstr ""
-"현재 Hannanum 클래스는 문구가 길 경우 ``java.lang.ArrayIndexOutOfBoundsException: "
-"10000`` 에러를 출력합니다."
 
 #: ../../morph.rst:25
 msgid "Comparison between POS tagging classes"
 msgstr "품사 태깅 클래스 간 비교"
 
-#: ../../morph.rst:27
-msgid ""
-"Now, we do time and performation analysis for executing the ``pos`` class "
-"for each of the classes in the :doc:`api/konlpy.tag`."
-msgstr "이제 :doc:`api/konlpy.tag` 에 있는 품사 태깅 클래스들의 시간 및 성능 분석을 수행해보겠습니다."
-
-#: ../../morph.rst:38
-msgid ""
-"*Execution time*: Time for executing the ``pos`` class for each class, with "
-"100K characters. [3]_"
-msgstr "**수행 시간** : 10만 개 문자로 구성된 문자열로 ``pos`` 클래스를 수행하는데 드는 시간 [3]_"
-
 #: ../../morph.rst:12
 msgid "POS tagging with KoNLPy"
 msgstr "KoNLPy로 품사 태깅하기"
+
+#: ../../morph.rst:27
+msgid ""
+"Now, we do time and performation analysis for executing the ``pos`` method "
+"for each of the classes in the :doc:`api/konlpy.tag`. The experiments were "
+"carried out on a Intel i7 CPU with 4 cores, Python 2.7, and KoNLPy 0.4.0."
+msgstr ""
+
+#: ../../morph.rst:30
+msgid "Time analysis"
+msgstr ""
+
+#: ../../morph.rst:32
+msgid "*Loading time*: Class loading time, including dictionary loads."
+msgstr ""
+
+#: ../../morph.rst:34
+msgid ":py:class:`.Kkma`: 5.1032 *secs*"
+msgstr ""
+
+#: ../../morph.rst:35
+msgid ":py:class:`.Komoran`: 4.6852 *secs*"
+msgstr ""
+
+#: ../../morph.rst:36
+msgid ":py:class:`.Hannanum`: 0.5736 *secs*"
+msgstr ""
+
+#: ../../morph.rst:37
+msgid ":py:class:`.Mecab`: 0.0007 *secs*"
+msgstr ""
+
+#: ../../morph.rst:39
+msgid ""
+"*Execution time*: Time for executing the ``pos`` method for each class, with"
+" 100K characters."
+msgstr ""
+
+#: ../../morph.rst:41
+msgid ":py:class:`.Kkma`: 32.7300 *secs*"
+msgstr ""
+
+#: ../../morph.rst:42
+msgid ":py:class:`.Komoran`: 22.3639 *secs*"
+msgstr ""
+
+#: ../../morph.rst:43
+msgid ":py:class:`.Hannanum`: 9.1881 *secs*"
+msgstr ""
+
+#: ../../morph.rst:44
+msgid ":py:class:`.Mecab`: 0.3137 *secs*"
+msgstr ""
+
+#: ../../morph.rst:46
+msgid ""
+"If we test among a various number of characters, all classes' execution "
+"times increase in an exponential manner."
+msgstr ""
+
+#: ../../morph.rst:56
+msgid "*\"아버지가방에들어가신다\"*"
+msgstr ""
+
+#: ../../morph.rst:58
+msgid ""
+"We can check the spacing algorithm through this example. Desirably, an "
+"analyzer would parse this sentence to \"아버지가 방에 들어가신다\" (My father enters "
+"the room), rather than \"아버지 가방에 들어가신다\" (My father goes in the bag). "
+":py:class:`.Hannanum` and :py:class:`.Komoran` are careful in spacing "
+"uncertain terms, and defaults the whole phrase to nouns. :py:class:`.Kkma` "
+"is more confident, but gets undesirable results. For this result, "
+":py:class:`.Mecab` shows the best results."
+msgstr ""
+
+#: ../../morph-0.csv:1 ../../morph-1.csv:1 ../../morph-2.csv:1
+#: ../../morph-3.csv:1
+msgid "Hannanum"
+msgstr ""
+
+#: ../../morph-0.csv:1 ../../morph-1.csv:1 ../../morph-2.csv:1
+#: ../../morph-3.csv:1
+msgid "Kkma"
+msgstr ""
+
+#: ../../morph-0.csv:1 ../../morph-1.csv:1 ../../morph-2.csv:1
+#: ../../morph-3.csv:1
+msgid "Komoran"
+msgstr ""
+
+#: ../../morph-0.csv:1 ../../morph-1.csv:1 ../../morph-2.csv:1
+#: ../../morph-3.csv:1
+msgid "Mecab"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "아버지가방에들어가신다 / NNP"
+msgstr ""
+
+#: ../../morph.rst:64
+msgid "*\"나는 밥을 먹는다\" vs \"하늘을 나는 자동차\"*"
+msgstr ""
+
+#: ../../morph.rst:66
+msgid ""
+"If we focus on \"나는\" in both sentences, we can see whether an analyzer "
+"considers the context of words. \"나는\" in the first sentence should be \"나/N"
+" + 는/J\", and in the second sentence \"나(-ㄹ다)/V + 는/E\". :py:`.Kkma` "
+"properly understands the latter \"나는\" as a verb, wheras the rest observe it"
+" as nouns."
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-2.csv:1
+msgid "나 / N"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-1.csv:1 ../../morph-1.csv:1
+#: ../../morph-2.csv:1 ../../morph-2.csv:1
+msgid "나 / NP"
+msgstr ""
+
+#: ../../morph-1.csv:1
+msgid "밥 / N"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-1.csv:1 ../../morph-1.csv:1
+msgid "밥 / NNG"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-2.csv:1
+msgid "을 / J"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-1.csv:1 ../../morph-1.csv:1
+#: ../../morph-2.csv:1 ../../morph-2.csv:1 ../../morph-2.csv:1
+msgid "을 / JKO"
+msgstr ""
+
+#: ../../morph-1.csv:1
+msgid "먹 / P"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-1.csv:1 ../../morph-1.csv:1
+msgid "먹 / VV"
+msgstr ""
+
+#: ../../morph-1.csv:1
+msgid "는다 / E"
+msgstr ""
+
+#: ../../morph-1.csv:1
+msgid "는 / EPT"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-1.csv:1
+msgid "는다 / EC"
+msgstr ""
+
+#: ../../morph-1.csv:1
+msgid "다 / EFN"
+msgstr ""
+
+#: ../../morph-2.csv:1
+msgid "하늘 / N"
+msgstr ""
+
+#: ../../morph-2.csv:1 ../../morph-2.csv:1 ../../morph-2.csv:1
+msgid "하늘 / NNG"
+msgstr ""
+
+#: ../../morph-2.csv:1
+msgid "날 / VV"
+msgstr ""
+
+#: ../../morph-2.csv:1
+msgid "는 / ETD"
+msgstr ""
+
+#: ../../morph-2.csv:1
+msgid "자동차 / N"
+msgstr ""
+
+#: ../../morph-2.csv:1 ../../morph-2.csv:1 ../../morph-2.csv:1
+msgid "자동차 / NNG"
+msgstr ""
+
+#: ../../morph.rst:76
+msgid "*\"아이폰 기다리다 지쳐 애플공홈에서 언락폰질러버렸다 6+ 128기가실버ㅋ\"*"
+msgstr ""
+
+#: ../../morph.rst:78
+msgid ""
+"How do each of the analyzers deal with slang, or terms that are not included"
+" in the dictionary?"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "아이폰 / N"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "아이 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "아이폰 / NNP"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "기다리 / P"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1 ../../morph-3.csv:1
+#: ../../morph-3.csv:1
+msgid "폰 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "기다리 / VV"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "다 / E"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1 ../../morph-3.csv:1
+#: ../../morph-3.csv:1
+msgid "다 / EC"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "지치 / P"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "다 / ECS"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "지치 / VV"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "지쳐 / VV+EC"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "어 / E"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "어 / EC"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "애플 / NNP"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "애플공홈 / N"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "어 / ECS"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "공 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "홈 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "언락폰질러버렸다 / N"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "6+ / N"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "언락 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "128기가실벜 / N"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "언 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "락 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "질러버렸 / VV+EC+VX+EP"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "질르 / VV"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "지르 / VV"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "6 / SN"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "/ SY"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "버리 / VXV"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "버리 / VX"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "128 / SN"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "었 / EPT"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "었 / EP"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "기 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "6 / NR"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "실버 / NNP"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "/ SW"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "ㅋ / UNKNOWN"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "128 / NR"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "128기가실벜 / NA"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "기가 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "실버 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "ㅋ / UN"
+msgstr ""
+
+#~ msgid "Time analysis [1]_"
+#~ msgstr "시간 분석 [1]_"
+
+#~ msgid "*Loading time*: Class loading time, including dictionary loads. [2]_"
+#~ msgstr "**로딩 시간**: 사전 로딩을 포함해서, 클래스 전체를 로딩하는데 소요되는 시간. [2]_"
+
+#~ msgid ":py:class:`.Kkma`: 13.2913 *secs*"
+#~ msgstr ":py:class:`.Kkma`: 13.2913 초"
+
+#~ msgid ":py:class:`.Hannanum`: 2.2950 *secs*"
+#~ msgstr ":py:class:`.Hannanum`: 2.2950 초"
+
+#~ msgid ":py:class:`.Mecab`: 0.0002 *secs*"
+#~ msgstr ":py:class:`.Mecab`: 0.0002 초"
+
+#~ msgid ":py:class:`.Kkma`: 14.6882 *secs*"
+#~ msgstr ":py:class:`.Kkma`: 14.6882 초"
+
+#~ msgid ":py:class:`.Hannanum`: 2.6872 *secs*"
+#~ msgstr ":py:class:`.Hannanum`: 2.6872 초"
+
+#~ msgid ":py:class:`.Mecab`: 0.0594 *secs*"
+#~ msgstr ":py:class:`.Mecab`: 0.0594 초"
+
+#~ msgid ""
+#~ "If we test among a various number of characters, all classes' execution "
+#~ "times increase in an exponential manner. [4]_"
+#~ msgstr "문구의 문자 수가 증가할 때, 모든 클래스의 수행시간은 지수함수적으로 증가합니다. [4]_"
+
+#~ msgid "\"저는 대학생이구요. 소프트웨어 관련학과 입니다.\""
+#~ msgstr ""
+
+#~ msgid ":py:class:`.Kkma`"
+#~ msgstr ""
+
+#~ msgid ":py:class:`.Hannanum`"
+#~ msgstr ""
+
+#~ msgid ":py:class:`.Mecab`"
+#~ msgstr ""
+
+#~ msgid "저 / NP"
+#~ msgstr ""
+
+#~ msgid "저 / N"
+#~ msgstr ""
+
+#~ msgid "대학생 / NNG"
+#~ msgstr ""
+
+#~ msgid "대학생이구요 / N"
+#~ msgstr ""
+
+#~ msgid "대학 / NNG"
+#~ msgstr ""
+
+#~ msgid "생 / XSN"
+#~ msgstr ""
+
+#~ msgid "이 / VCP"
+#~ msgstr ""
+
+#~ msgid "구요 / EFN"
+#~ msgstr ""
+
+#~ msgid "구요 / EF"
+#~ msgstr ""
+
+#~ msgid ". / SF"
+#~ msgstr ""
+
+#~ msgid ". / S"
+#~ msgstr ""
+
+#~ msgid "소프트웨어 / NNG"
+#~ msgstr ""
+
+#~ msgid "소프트웨어 / N"
+#~ msgstr ""
+
+#~ msgid "관련 / NNG"
+#~ msgstr ""
+
+#~ msgid "관련학과 / N"
+#~ msgstr ""
+
+#~ msgid "학과 / NNG"
+#~ msgstr ""
+
+#~ msgid "일 / P"
+#~ msgstr ""
+
+#~ msgid "입니다 / VCP+EF"
+#~ msgstr ""
+
+#~ msgid "ㅂ니다 / EFN"
+#~ msgstr ""
+
+#~ msgid "ㅂ니다 / E"
+#~ msgstr ""
+
+#~ msgid "\"아버지가방에들어가신다\""
+#~ msgstr ""
+
+#~ msgid "\"140823 Tofu Music Festival 존잘러에서 귀요미들로 변신ㅋㅋ #GOT7\""
+#~ msgstr ""
+
+#~ msgid "140823 / NR"
+#~ msgstr ""
+
+#~ msgid "140823 / N"
+#~ msgstr ""
+
+#~ msgid "140823 / SN"
+#~ msgstr ""
+
+#~ msgid "Tofu / OL"
+#~ msgstr ""
+
+#~ msgid "Tofu / F"
+#~ msgstr ""
+
+#~ msgid "Tofu / SL"
+#~ msgstr ""
+
+#~ msgid "Music / OL"
+#~ msgstr ""
+
+#~ msgid "Music / F"
+#~ msgstr ""
+
+#~ msgid "Music / SL"
+#~ msgstr ""
+
+#~ msgid "Festival / OL"
+#~ msgstr ""
+
+#~ msgid "Festival / F"
+#~ msgstr ""
+
+#~ msgid "Festival / SL"
+#~ msgstr ""
+
+#~ msgid "존 / NNP"
+#~ msgstr ""
+
+#~ msgid "존잘러 / N"
+#~ msgstr ""
+
+#~ msgid "존 / VA+JX"
+#~ msgstr ""
+
+#~ msgid "잘 / MAG"
+#~ msgstr ""
+
+#~ msgid "잘 / VA"
+#~ msgstr ""
+
+#~ msgid "러 / NNP"
+#~ msgstr ""
+
+#~ msgid "러 / EC"
+#~ msgstr ""
+
+#~ msgid "귀요 / NNG"
+#~ msgstr ""
+
+#~ msgid "귀요미들 / N"
+#~ msgstr ""
+
+#~ msgid "귀요미 / NNG"
+#~ msgstr ""
+
+#~ msgid "미들 / NNG"
+#~ msgstr ""
+
+#~ msgid "들 / XSN"
+#~ msgstr ""
+
+#~ msgid "로 / JKM"
+#~ msgstr ""
+
+#~ msgid "로 / J"
+#~ msgstr ""
+
+#~ msgid "로 / JKB"
+#~ msgstr ""
+
+#~ msgid "변신 / NNG"
+#~ msgstr ""
+
+#~ msgid "변신ㅋㅋ / N"
+#~ msgstr ""
+
+#~ msgid "ㅋㅋ / EMO"
+#~ msgstr ""
+
+#~ msgid "ㅋㅋ / UNKNOWN"
+#~ msgstr ""
+
+#~ msgid "# / SW"
+#~ msgstr ""
+
+#~ msgid "#GOT7 / N"
+#~ msgstr ""
+
+#~ msgid "# / SY"
+#~ msgstr ""
+
+#~ msgid "GOT / OL"
+#~ msgstr ""
+
+#~ msgid "GOT / SL"
+#~ msgstr ""
+
+#~ msgid "7 / NR"
+#~ msgstr ""
+
+#~ msgid "7 / SN"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "All time analyses in this document were performed with :py:mod:`time` on a "
+#~ "Thinkpad X1 Carbon (2013) and KoNLPy v0.3."
+#~ msgstr ""
+#~ "시간 분석은 2013년 Thinkpad X1 Carbon에서 :py:mod:`time`을 이용하여 KoNLPy v0.3을 대상으로 "
+#~ "수행하였습니다."
+
+#~ msgid "Average of five consecutive runs."
+#~ msgstr "5회 연속 수행의 평균값"
+
+#~ msgid "Average of ten consecutive runs."
+#~ msgstr "10회 연속 수행의 평균값"
+
+#~ msgid ""
+#~ "The current Hannanum class raises a "
+#~ "``java.lang.ArrayIndexOutOfBoundsException: 10000`` exception if the number "
+#~ "of characters is too large."
+#~ msgstr ""
+#~ "현재 Hannanum 클래스는 문구가 길 경우 ``java.lang.ArrayIndexOutOfBoundsException: "
+#~ "10000`` 에러를 출력합니다."
+
+#~ msgid ""
+#~ "Now, we do time and performation analysis for executing the ``pos`` class "
+#~ "for each of the classes in the :doc:`api/konlpy.tag`."
+#~ msgstr "이제 :doc:`api/konlpy.tag` 에 있는 품사 태깅 클래스들의 시간 및 성능 분석을 수행해보겠습니다."
+
+#~ msgid ""
+#~ "*Execution time*: Time for executing the ``pos`` class for each class, with "
+#~ "100K characters. [3]_"
+#~ msgstr "**수행 시간** : 10만 개 문자로 구성된 문자열로 ``pos`` 클래스를 수행하는데 드는 시간 [3]_"

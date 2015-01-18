@@ -15,107 +15,62 @@ msgstr ""
 msgid "Data"
 msgstr "데이터"
 
-#: ../../data.rst:4
-msgid ""
-"Files with astericks (*) are installed by default. Other files can be "
-"installed with :py:func:`.download`."
-msgstr ""
-"별표(*)가 달린 파일은 기본으로 설치되어 있습니다. 그 외의 파일은 :py:func:`.download` 를 이용해 설치할 수 "
-"있습니다."
-
-#: ../../data.rst:10
+#: ../../data.rst:7
 msgid "Corpora"
 msgstr "말뭉치"
 
-#: ../../data.rst:12
+#: ../../data.rst:9
 msgid "The following corpora are currently available:"
 msgstr "다음의 말뭉치(corpus)를 사용할 수 있습니다:"
 
-#: ../../data.rst:15
-msgid "*kolaw*"
-msgstr ""
-
-#: ../../data.rst:17
-msgid "Korean law corpus."
-msgstr "한국 법률 말뭉치."
-
-#: ../../data.rst:19
-msgid "constitution.txt*"
-msgstr ""
-
-#: ../../data.rst:22
-msgid "*kobill*"
-msgstr ""
-
-#: ../../data.rst:24
-msgid ""
-"Korean National Assembly bill corpus. The file ID corresponds to the bill "
-"number."
-msgstr "대한민국 국회 의안 말뭉치. 파일 ID는 의안 번호입니다."
-
-#: ../../data.rst:26
-msgid "1809890.txt - 1809899.txt*"
-msgstr ""
-
-#: ../../data.rst:32
+#: ../../data.rst:35
 msgid "Dictionaries"
 msgstr "사전"
 
-#: ../../data.rst:34
+#: ../../data.rst:37
 msgid ""
 "Dictionaries are used for :doc:`morph`, and are built with :ref:`corpora`."
 msgstr "사전은 대부분 :ref:`corpora` 를 이용해 구축되었으며 :doc:`morph` 를 하는데 사용됩니다."
 
-#: ../../data.rst:38
+#: ../../data.rst:41
 msgid ":py:class:`.Hannanum` *system dictionary*"
 msgstr ":py:class:`.Hannanum` 시스템 사전"
 
-#: ../../data.rst:40
+#: ../../data.rst:43
 msgid "A dictionary created with the KAIST corpus. (4.7MB)"
 msgstr "KAIST 말뭉치를 이용해 생성된 사전. (4.7MB)"
 
-#: ../../data.rst:42
+#: ../../data.rst:45
 msgid ""
 "Located at ``./konlpy/java/data/kE/dic_system.txt``. Part of this file is "
 "shown below.::"
 msgstr ""
 "``./konlpy/java/data/kE/dic_system.txt`` 에 위치해있으며, 아래에서 파일의 일부를 보실 수 있습니다.::"
 
-#: ../../data.rst:66
+#: ../../data.rst:69
 msgid ""
 "You can add your own terms, modify ``./konlpy/java/data/kE/dic_user.txt``."
 msgstr ""
 "사용자 사전에 새로운 항목을 추가하기 위해서는 ``./konlpy/java/data/kE/dic_user.txt`` 를 수정하시면 "
 "됩니다."
 
-#: ../../data.rst:69
+#: ../../data.rst:72
 msgid ":py:class:`.Kkma` *system dictionary*"
 msgstr ":py:class:`.Kkma` 시스템 사전"
 
-#: ../../data.rst:71
+#: ../../data.rst:74
 msgid "A dictionary created with the Sejong corpus. (32MB)"
 msgstr "세종 말뭉치를 이용해 생성된 사전. (32MB)"
 
-#: ../../data.rst:73
-msgid ""
-"It is included within the Kkma ``.jar`` file, so in order to see dictionary "
-"files, check out the `KKMA's mirror "
-"<https://github.com/e9t/kkma/tree/master/dic>`_. Part of ``kcc.dic`` is "
-"shown below.::"
-msgstr ""
-"꼬꼬마 형태소 분석기의 ``.jar`` 파일 안에 위치해 있습니다. 사전 파일을 직접 보기 위해서는 `꼬꼬마 미러 "
-"<https://github.com/e9t/kkma/tree/master/dic>`_ 를 확인해보시기 바랍니다. ``kcc.dic`` 는"
-" 다음과 같은 형태를 가집니다.:"
-
-#: ../../data.rst:91
+#: ../../data.rst:94
 msgid ":py:class:`.Mecab` *system dictionary*"
 msgstr ":py:class:`.Mecab` 시스템 사전"
 
-#: ../../data.rst:93
+#: ../../data.rst:96
 msgid "A CSV formatted dictionary created with the Sejong corpus. (346MB)"
 msgstr "세종 말뭉치로 만들어진 CSV 형태의 사전. (346MB)"
 
-#: ../../data.rst:95
+#: ../../data.rst:98
 msgid ""
 "The compiled version is located at ``/usr/local/lib/mecab/dic/mecab-ko-dic``"
 " (or the path you assigned during installation), and you can see the "
@@ -128,7 +83,7 @@ msgstr ""
 "dic/src/ce04f82ab0083fb24e4e542e69d9e88a672c3325/seed/?at=master>`_ 에서 확인하실 "
 "수 있습니다. ``CoinedWord.csv`` 파일의 일부를 아래에서 보실 수 있습니다.::"
 
-#: ../../data.rst:112
+#: ../../data.rst:115
 msgid ""
 "To add your own terms, see `here <https://bitbucket.org/eunjeon/mecab-ko-"
 "dic/src/ce04f82ab0083fb24e4e542e69d9e88a672c3325/final/user-"
@@ -138,23 +93,91 @@ msgstr ""
 "dic/src/ce04f82ab0083fb24e4e542e69d9e88a672c3325/final/user-"
 "dic/?at=master>`_ 을 참고해주시기 바랍니다."
 
-#: ../../data.rst:117
+#: ../../data.rst:120
 msgid ""
 "You can add new words either to the system dictionaries or user "
 "dictionaries. However, there is a slight difference in the two choices.:"
 msgstr "시스템 사전과 사용자 사전 모두에 새로운 항목을 추가할 수 있지만, 두 경우에는 약간의 차이가 있습니다."
 
-#: ../../data.rst:119
+#: ../../data.rst:122
 msgid ""
 "*Adding to the system dictionary*: When dictionary updates are not frequent,"
 " when you do not want to drop the analysis speed."
 msgstr "시스템 사전에 항목 추가하기: 사전 업데이트가 잦지 않은 경우, 속도 저하를 원하지 않는 경우."
 
-#: ../../data.rst:120
+#: ../../data.rst:123
 msgid ""
 "*Adding to the user dictionary*: When dictionary updates are frequent, when "
 "you do not have ``root`` access."
 msgstr "사용자 사전에 항목 추가하기: 사전 업데이트가 잦은 경우, 관리자(root) 권한이 없는 경우."
+
+#: ../../data.rst:11
+msgid "``kolaw``: Korean law corpus."
+msgstr ""
+
+#: ../../data.rst:12
+msgid "constitution.txt"
+msgstr ""
+
+#: ../../data.rst:14
+msgid ""
+"``kobill``: Korean National Assembly bill corpus. The file ID corresponds to"
+" the bill number."
+msgstr ""
+
+#: ../../data.rst:14
+msgid "1809890.txt - 1809899.txt"
+msgstr ""
+
+#: ../../data.rst:16
+msgid ""
+"For more detailed usage of the corpora, see the :doc:`api/konlpy.corpus`."
+msgstr ""
+
+#: ../../data.rst:76
+msgid ""
+"It is included within the Kkma ``.jar`` file, so in order to see dictionary "
+"files, check out the `KKMA's mirror "
+"<https://github.com/konlpy/kkma/tree/master/dic>`_. Part of ``kcc.dic`` is "
+"shown below.::"
+msgstr ""
+
+#~ msgid ""
+#~ "Files with astericks (*) are installed by default. Other files can be "
+#~ "installed with :py:func:`.download`."
+#~ msgstr ""
+#~ "별표(*)가 달린 파일은 기본으로 설치되어 있습니다. 그 외의 파일은 :py:func:`.download` 를 이용해 설치할 수 "
+#~ "있습니다."
+
+#~ msgid "*kolaw*"
+#~ msgstr ""
+
+#~ msgid "Korean law corpus."
+#~ msgstr "한국 법률 말뭉치."
+
+#~ msgid "constitution.txt*"
+#~ msgstr ""
+
+#~ msgid "*kobill*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Korean National Assembly bill corpus. The file ID corresponds to the bill "
+#~ "number."
+#~ msgstr "대한민국 국회 의안 말뭉치. 파일 ID는 의안 번호입니다."
+
+#~ msgid "1809890.txt - 1809899.txt*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is included within the Kkma ``.jar`` file, so in order to see dictionary "
+#~ "files, check out the `KKMA's mirror "
+#~ "<https://github.com/e9t/kkma/tree/master/dic>`_. Part of ``kcc.dic`` is "
+#~ "shown below.::"
+#~ msgstr ""
+#~ "꼬꼬마 형태소 분석기의 ``.jar`` 파일 안에 위치해 있습니다. 사전 파일을 직접 보기 위해서는 `꼬꼬마 미러 "
+#~ "<https://github.com/e9t/kkma/tree/master/dic>`_ 를 확인해보시기 바랍니다. ``kcc.dic`` 는"
+#~ " 다음과 같은 형태를 가집니다.:"
 
 #~ msgid ""
 #~ "*Adding to the user dictionary*: When dictionary updates are not frequent, "

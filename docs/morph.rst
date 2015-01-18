@@ -53,13 +53,17 @@ Performance analysis
 
 The performance evaluation is replaced with result comparisons for several sample sentences.
 
-1. "아버지가방에들어가신다": We can check the spacing algorithm through this example. Desirably, an analyzer would parse this sentence to "아버지가 방에 들어가신다" (My father enters the room), rather than "아버지 가방에 들어가신다" (My father goes in the bag). :py:class:`.Hannanum` and :py:class:`.Komoran` are careful in spacing uncertain terms, and defaults the whole phrase to nouns. :py:class:`.Kkma` is more confident, but gets undesirable results. For this result, :py:class:`.Mecab` shows the best results.
+1. *"아버지가방에들어가신다"*
+
+   We can check the spacing algorithm through this example. Desirably, an analyzer would parse this sentence to "아버지가 방에 들어가신다" (My father enters the room), rather than "아버지 가방에 들어가신다" (My father goes in the bag). :py:class:`.Hannanum` and :py:class:`.Komoran` are careful in spacing uncertain terms, and defaults the whole phrase to nouns. :py:class:`.Kkma` is more confident, but gets undesirable results. For this result, :py:class:`.Mecab` shows the best results.
 
 .. csv-table::
     :header-rows: 1
     :file: morph-0.csv
 
-3. "나는 밥을 먹는다" vs "하늘을 나는 자동차": If we focus on "나는" in both sentences, we can see whether an analyzer considers the context of words. "나는" in the first sentence should be "나/N + 는/J", and in the second sentence "나(-ㄹ다)/V + 는/E". :py:`.Kkma` properly understands the latter "나는" as a verb, wheras the rest observe it as nouns.
+2. *"나는 밥을 먹는다" vs "하늘을 나는 자동차"*
+
+   If we focus on "나는" in both sentences, we can see whether an analyzer considers the context of words. "나는" in the first sentence should be "나/N + 는/J", and in the second sentence "나(-ㄹ다)/V + 는/E". :py:`.Kkma` properly understands the latter "나는" as a verb, wheras the rest observe it as nouns.
 
 .. csv-table::
     :header-rows: 1
@@ -69,7 +73,9 @@ The performance evaluation is replaced with result comparisons for several sampl
     :header-rows: 1
     :file: morph-2.csv
 
-4. "아이폰 기다리다 지쳐 애플공홈에서 언락폰질러버렸다 6+ 128기가실버ㅋ": How do each of the analyzers deal with slang, or terms that are not included in the dictionary?
+3. *"아이폰 기다리다 지쳐 애플공홈에서 언락폰질러버렸다 6+ 128기가실버ㅋ"*
+
+   How do each of the analyzers deal with slang, or terms that are not included in the dictionary?
 
 .. csv-table::
     :header-rows: 1

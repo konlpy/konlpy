@@ -9,6 +9,8 @@ tag Package
 :class:`Hannanum` Class
 -----------------------
 
+.. warning:: ``Hannanum()`` is not supported on ``Windows 7`` [:issue:`7`].
+
 .. automodule:: konlpy.tag._hannanum
     :members:
     :undoc-members:
@@ -25,6 +27,8 @@ tag Package
 :class:`Komoran` Class
 -------------------
 
+.. warning:: ``Komoran()`` is not supported on ``Python 2 + Mac OS`` [:issue:`40`].
+
 .. automodule:: konlpy.tag._komoran
     :members:
     :undoc-members:
@@ -33,7 +37,7 @@ tag Package
 :class:`Mecab` Class
 --------------------
 
-.. warning:: Mecab is not supported for Python 3 and Windows 7.
+.. warning:: ``Mecab()`` is not supported on ``Windows 7``.
 
 .. automodule:: konlpy.tag._mecab
     :members:

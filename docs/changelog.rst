@@ -4,14 +4,17 @@ Change logs
 `Version 0.4.0 <https://github.com/konlpy/konlpy/releases/tag/v0.4.0>`_
 --------------------------------------------------------------------
 
-Released on Dec 20, 2014.
+Released on Jan 18, 2015.
 
-- Added konlpy.data, konlpy.downloader [:issue:`4`]
-- Added :py:mod:`utils.read_txt()`
+- Added :py:mod:`.data`, :py:mod:`.downloader` [:issue:`4`]
+- Added :py:func:`.utils.csvread`, :py:func:`.utils.csvwrite`
+- Added :py:func:`.utils.read_txt()`
 - Added nonflattened results for POS taggers
-- Added Komoran module with KOMORAN 2.0
+- Added Komoran module with KOMORAN 2.4
+- Change dependency version of JPype1 to 0.5.7+
 - Change dependency version of mecab-python from 0.993 to 0.996 [:issue:`19` with comments by Yong-woon Lee]
 - Fixed concordance bug for Python2 [:commit:`6caa929`]
+- Fixed pprint bug on Windows [:issue:`37`]
 
 `Version 0.3.3 <https://github.com/konlpy/konlpy/releases/tag/v0.3.3>`_
 --------------------------------------------------------------------

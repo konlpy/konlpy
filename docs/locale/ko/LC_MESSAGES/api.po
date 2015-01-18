@@ -253,7 +253,8 @@ msgstr ""
 
 #: ../../../konlpy/tag/_hannanum.pydocstring of
 #: konlpy.tag._hannanum.Hannanum:15 ../../../konlpy/tag/_kkma.pydocstring of
-#: konlpy.tag._kkma.Kkma:15
+#: konlpy.tag._kkma.Kkma:15 ../../../konlpy/tag/_komoran.pydocstring of
+#: konlpy.tag._komoran.Komoran:12
 msgid "The path of the JVM passed to :py:func:`.init_jvm`."
 msgstr ""
 
@@ -279,14 +280,16 @@ msgstr ""
 
 #: ../../../konlpy/tag/_hannanum.pydocstring of
 #: konlpy.tag._hannanum.Hannanum.nouns:1 ../../../konlpy/tag/_kkma.pydocstring
-#: of konlpy.tag._kkma.Kkma.nouns:1 ../../../konlpy/tag/_mecab.pydocstring of
-#: konlpy.tag._mecab.Mecab.nouns:1
+#: of konlpy.tag._kkma.Kkma.nouns:1 ../../../konlpy/tag/_komoran.pydocstring
+#: of konlpy.tag._komoran.Komoran.nouns:1
+#: ../../../konlpy/tag/_mecab.pydocstring of konlpy.tag._mecab.Mecab.nouns:1
 msgid "Noun extractor."
 msgstr ""
 
 #: ../../../konlpy/tag/_hannanum.pydocstring of
 #: konlpy.tag._hannanum.Hannanum.pos:1 ../../../konlpy/tag/_kkma.pydocstring
-#: of konlpy.tag._kkma.Kkma.pos:1 ../../../konlpy/tag/_mecab.pydocstring of
+#: of konlpy.tag._kkma.Kkma.pos:1 ../../../konlpy/tag/_komoran.pydocstring of
+#: konlpy.tag._komoran.Komoran.pos:1 ../../../konlpy/tag/_mecab.pydocstring of
 #: konlpy.tag._mecab.Mecab.pos:1
 msgid "POS tagger."
 msgstr ""
@@ -320,11 +323,11 @@ msgstr ""
 msgid "Sentence detection."
 msgstr ""
 
-#: ../../api/konlpy.tag.rst:26
+#: ../../api/konlpy.tag.rst:34
 msgid ":class:`Mecab` Class"
 msgstr ""
 
-#: ../../api/konlpy.tag.rst:28
+#: ../../api/konlpy.tag.rst:36
 msgid "Mecab is not supported for Python 3 and Windows 7."
 msgstr ""
 
@@ -350,13 +353,13 @@ msgstr ""
 msgid "The path of the MeCab-ko dictionary."
 msgstr ""
 
-#: ../../api/konlpy.tag.rst:36
+#: ../../api/konlpy.tag.rst:44
 msgid ""
 "`Korean POS tags comparison chart <https://docs.google.com/spreadsheets/d"
 "/1OGAjUvalBuX-oZvZ_-9tEfYD2gQe7hTGsgUpiiBSXI8/edit#gid=0>`_"
 msgstr ""
 
-#: ../../api/konlpy.tag.rst:38
+#: ../../api/konlpy.tag.rst:46
 msgid "Compare POS tags between several Korean analytic projects. (In Korean)"
 msgstr ""
 
@@ -409,4 +412,42 @@ msgid ""
 "which exists or which can be created with write permission: "
 "``/usr/share/konlpy_data``, ``/usr/local/share/konlpy_data``, "
 "``/usr/lib/konlpy_data``, ``/usr/local/lib/konlpy_data``, ``~/konlpy_data``."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.csvread:1
+msgid "Reads a csv file."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.csvread:3
+msgid "File object."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.csvwrite:1
+msgid "Writes a csv file."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.csvwrite:3
+msgid "A list of list."
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:26
+msgid ":class:`Komoran` Class"
+msgstr ""
+
+#: ../../../konlpy/tag/_komoran.pydocstring of konlpy.tag._komoran.Komoran:1
+msgid ""
+"Wrapper for `KOMORAN <http://shineware.tistory.com/entry/KOMORAN-ver-24>`_."
+msgstr ""
+
+#: ../../../konlpy/tag/_komoran.pydocstring of konlpy.tag._komoran.Komoran:3
+msgid ""
+"KOMORAN is a relatively new open source Korean morphological analyzer "
+"written in Java, developed by `Shineware <http://shineware.co.kr>`_, since "
+"2013."
+msgstr ""
+
+#: ../../../konlpy/tag/_komoran.pydocstring of konlpy.tag._komoran.Komoran:13
+msgid ""
+"The path of dictionary files. The KOMORAN system dictionary is loaded by "
+"default."
 msgstr ""

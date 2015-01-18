@@ -102,14 +102,7 @@ msgstr ""
 msgid "`pip <https://pypi.python.org/pypi/pip>`_, the Python package manager"
 msgstr ""
 
-#: ../../start.rst:34
-msgid ""
-"We assume you have some knowledge of Python and programming, but no "
-"knowledge whatsoever of data science, machine learning, or predictive "
-"modeling. (But some familiarity to statistics will help.)"
-msgstr ""
-
-#: ../../start.rst:38
+#: ../../start.rst:37
 msgid ""
 "If you're new to Python, this tutorial should get you through in minutes: "
 "http://learnxinyminutes.com/docs/python/. If you're up to putting in some "
@@ -118,7 +111,7 @@ msgid ""
 "<http://openbookproject.net/thinkcs/python/english2e/>`_."
 msgstr ""
 
-#: ../../start.rst:39
+#: ../../start.rst:38
 msgid ""
 "Many use `Sublime Text 2 <http://www.sublimetext.com/>`_ for Python "
 "programming. Some others use Vim and Terminal. But other than these, there "
@@ -127,3 +120,13 @@ msgid ""
 "<http://pedrokroger.net/choosing-best-python-ide/>`_ out there, so take your"
 " pick!"
 msgstr ""
+
+#: ../../start.rst:34
+msgid "Got 'em all? Then let's go."
+msgstr ""
+
+#~ msgid ""
+#~ "We assume you have some knowledge of Python and programming, but no "
+#~ "knowledge whatsoever of data science, machine learning, or predictive "
+#~ "modeling. (But some familiarity to statistics will help.)"
+#~ msgstr ""

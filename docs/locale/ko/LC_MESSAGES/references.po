@@ -15,16 +15,6 @@ msgstr ""
 msgid "References"
 msgstr "참고문헌"
 
-#: ../../references.rst:7
-msgid ""
-"Please `modify this document "
-"<https://github.com/e9t/konlpy/blob/master/docs/references.rst>`_ if "
-"anything is erroneous or not included. Last updated at |today|."
-msgstr ""
-"이 문서에 오류가 있거나 포함되지 않은 사항이 있는 경우 `직접 수정하실 수 있습니다 "
-"<https://github.com/e9t/konlpy/blob/master/docs/references.rst>`_. (마지막 "
-"업데이트: |today|)"
-
 #: ../../references.rst:13
 msgid "Korean morpheme analyzer tools"
 msgstr "한국어 형태소 분석기"
@@ -323,6 +313,22 @@ msgid ""
 "`KOMORAN <http://shineware.tistory.com/tag/KOMORAN>`_ (2013) "
 ":license:`Apache v2`"
 msgstr ""
+
+#: ../../references.rst:7
+msgid ""
+"Please `modify this document "
+"<https://github.com/konlpy/konlpy/blob/master/docs/references.rst>`_ if "
+"anything is erroneous or not included. Last updated at |today|."
+msgstr ""
+
+#~ msgid ""
+#~ "Please `modify this document "
+#~ "<https://github.com/e9t/konlpy/blob/master/docs/references.rst>`_ if "
+#~ "anything is erroneous or not included. Last updated at |today|."
+#~ msgstr ""
+#~ "이 문서에 오류가 있거나 포함되지 않은 사항이 있는 경우 `직접 수정하실 수 있습니다 "
+#~ "<https://github.com/e9t/konlpy/blob/master/docs/references.rst>`_. (마지막 "
+#~ "업데이트: |today|)"
 
 #~ msgid ""
 #~ "`KOMORAN <http://shineware.tistory.com/tag/KOMORAN>`_ (2013) "
