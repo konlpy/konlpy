@@ -35,6 +35,8 @@ KoNLPy is not just to create another, but to unify and build upon their shoulder
         'Intended Audience :: Science/Research',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
         'Topic :: Scientific/Engineering',
         'Topic :: Scientific/Engineering :: Artificial Intelligence',
         'Topic :: Scientific/Engineering :: Human Machine Interfaces',
