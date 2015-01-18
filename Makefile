@@ -1,4 +1,5 @@
 # Deployment instructions
+# 0. Fill in `pypirc.sample`, and `cp pypirc.sample ~/.pypirc`
 # 1. Check changelogs.rst
 # 2. Check translations at docs/locale/ko/LC_MESSAGES/*.po
 # 3. Check version at konlpy/__init__.py
