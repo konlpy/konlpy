@@ -7,7 +7,6 @@ import os
 import pprint as pp
 import sys
 
-
 installpath = os.path.dirname(os.path.realpath(__file__))
 replace_set = [
         ('·', '/'), # \xb7
@@ -73,6 +72,37 @@ def concordance(phrase, text, show=False):
 def concat(phrase):
     """Concatenates lines into a unified string."""
     return phrase.replace(os.linesep, ' ')
+
+if sys.version_info[0] < 3:
+    from . import csvutils
+    def csvread(f, encoding='utf-8'):
+        """Reads a csv file.
+
+        :param f: File object.
+
+        .. code-block:: python
+
+            >>> from konlpy.utils import csvread
+            >>> with open('some.csv', 'r') as f:
+                    print csvread(f)
+            [[u'\uc774 / NR', u'\ucc28 / NNB'], [u'\ub098\uac00 / VV', u'\ub124 / EFN']]
+        """
+        reader = csvutils.UnicodeReader(f)
+        return [row for row in reader]
+
+    def csvwrite(data, f):
+        """Writes a csv file.
+
+        :param data: A list of list.
+
+        .. code-block:: python
+
+            >>> from konlpy.utils import csvwrite
+            >>> d = [[u'\uc774 / NR', u'\ucc28 / NNB'], [u'\ub098\uac00 / VV', u'\ub124 / EFN']]
+            >>> with open('some.csv', 'w') as f:
+                    csvwrite(d, f)
+        """
+        return csvutils.UnicodeWriter(f).writerows(data)
 
 def partition(list_, indices):
     """Partitions a list to several parts using indices.
