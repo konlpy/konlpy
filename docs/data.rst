@@ -74,7 +74,7 @@ You can add your own terms, modify ``./konlpy/java/data/kE/dic_user.txt``.
 A dictionary created with the Sejong corpus. (32MB)
 
 It is included within the Kkma ``.jar`` file,
-so in order to see dictionary files, check out the `KKMA's mirror <https://github.com/konlpy/kkma/tree/master/dic>`_.
+so in order to see dictionary files, check out the `KKMA's mirror <https://github.com/e9t/kkma/tree/master/dic>`_.
 Part of ``kcc.dic`` is shown below.::
 
     아니/IC

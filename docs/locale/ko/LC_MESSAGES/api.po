@@ -304,7 +304,7 @@ msgstr ""
 msgid "The number of tags. It can be either 9 or 22."
 msgstr ""
 
-#: ../../api/konlpy.tag.rst:18
+#: ../../api/konlpy.tag.rst:20
 msgid ":class:`Kkma` Class"
 msgstr ""
 
@@ -323,12 +323,8 @@ msgstr ""
 msgid "Sentence detection."
 msgstr ""
 
-#: ../../api/konlpy.tag.rst:34
+#: ../../api/konlpy.tag.rst:38
 msgid ":class:`Mecab` Class"
-msgstr ""
-
-#: ../../api/konlpy.tag.rst:36
-msgid "Mecab is not supported for Python 3 and Windows 7."
 msgstr ""
 
 #: ../../../konlpy/tag/_mecab.pydocstring of konlpy.tag._mecab.Mecab:1
@@ -353,13 +349,13 @@ msgstr ""
 msgid "The path of the MeCab-ko dictionary."
 msgstr ""
 
-#: ../../api/konlpy.tag.rst:44
+#: ../../api/konlpy.tag.rst:48
 msgid ""
 "`Korean POS tags comparison chart <https://docs.google.com/spreadsheets/d"
 "/1OGAjUvalBuX-oZvZ_-9tEfYD2gQe7hTGsgUpiiBSXI8/edit#gid=0>`_"
 msgstr ""
 
-#: ../../api/konlpy.tag.rst:46
+#: ../../api/konlpy.tag.rst:50
 msgid "Compare POS tags between several Korean analytic projects. (In Korean)"
 msgstr ""
 
@@ -430,7 +426,7 @@ msgstr ""
 msgid "A list of list."
 msgstr ""
 
-#: ../../api/konlpy.tag.rst:26
+#: ../../api/konlpy.tag.rst:28
 msgid ":class:`Komoran` Class"
 msgstr ""
 
@@ -451,3 +447,18 @@ msgid ""
 "The path of dictionary files. The KOMORAN system dictionary is loaded by "
 "default."
 msgstr ""
+
+#: ../../api/konlpy.tag.rst:12
+msgid "``Hannanum()`` is not supported on ``Windows 7`` [:issue:`7`]."
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:30
+msgid "``Komoran()`` is not supported on ``Python 2 + Mac OS`` [:issue:`40`]."
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:40
+msgid "``Mecab()`` is not supported on ``Windows 7``."
+msgstr ""
+
+#~ msgid "Mecab is not supported for Python 3 and Windows 7."
+#~ msgstr ""

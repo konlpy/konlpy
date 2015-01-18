@@ -1,7 +1,7 @@
 What is NLP?
 ============
 
-NLP (Natural Language Processing) is a set of techniques for analyzing and extracting, and understanding meaninful information text.
+NLP (Natural Language Processing) is a set of techniques for analyzing and extracting, and understanding meaningful information text.
 
 We have various NLP applications in our lives. For example:
 
@@ -34,5 +34,5 @@ You have some prerequisites to use KoNLPy.
 Got 'em all?
 Then let's go.
 
-.. [#] If you're new to Python, this tutorial should get you through in minutes: http://learnxinyminutes.com/docs/python/. If you're up to putting in some more time, try `The Hitchhiker's Guide <http://docs.python-guide.org/en/latest/>`_ or `How to Think Like a Computer Scientist <http://openbookproject.net/thinkcs/python/english2e/>`_.
+.. [#] If you're new to Python, this tutorial should get you through in minutes: http://learnxinyminutes.com/docs/python/. If you're up to putting in some more time, try `The Hitchhiker's Guide <http://docs.python-guide.org/en/latest/>`_ or `Learn Python the hard way <http://learnpythonthehardway.org/book/>`_.
 .. [#] Many use `Sublime Text 2 <http://www.sublimetext.com/>`_ for Python programming. Some others use Vim and Terminal. But other than these, there are numerous great `text editors <http://tutorialzine.com/2012/07/battle-of-the-tools-which-is-the-best-code-editor/>`_ and `Python IDEs <http://pedrokroger.net/choosing-best-python-ide/>`_ out there, so take your pick!

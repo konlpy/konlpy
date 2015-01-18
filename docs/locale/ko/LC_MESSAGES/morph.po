@@ -151,15 +151,15 @@ msgid ""
 "Now, we do time and performation analysis for executing the ``pos`` method "
 "for each of the classes in the :doc:`api/konlpy.tag`. The experiments were "
 "carried out on a Intel i7 CPU with 4 cores, Python 2.7, and KoNLPy 0.4.0."
-msgstr ""
+msgstr "이제 :doc:`api/konlpy.tag` 에 있는 태거들의 성능을 확인해볼까요? 실험은 인텔 4개의 코어가 있는 i7 CPU, 파이썬 2.7, KoNLPy 0.4.0을 이용해 수행되었습니다."
 
 #: ../../morph.rst:30
 msgid "Time analysis"
-msgstr ""
+msgstr "시간 분석"
 
 #: ../../morph.rst:32
 msgid "*Loading time*: Class loading time, including dictionary loads."
-msgstr ""
+msgstr "로딩 시간: 사전 로딩을 포함하여 클래스를 로딩하는 시간."
 
 #: ../../morph.rst:34
 msgid ":py:class:`.Kkma`: 5.1032 *secs*"
@@ -181,7 +181,7 @@ msgstr ""
 msgid ""
 "*Execution time*: Time for executing the ``pos`` method for each class, with"
 " 100K characters."
-msgstr ""
+msgstr "실행시간: 10만 문자의 문서를 대상으로 각 클래스의 ``pos`` 메소드를 실행하는데 소요되는 시간."
 
 #: ../../morph.rst:41
 msgid ":py:class:`.Kkma`: 32.7300 *secs*"
@@ -203,7 +203,7 @@ msgstr ""
 msgid ""
 "If we test among a various number of characters, all classes' execution "
 "times increase in an exponential manner."
-msgstr ""
+msgstr "문자의 개수를 늘려감에 따라 모든 클래스의 실행 시간은 기하급수적으로 증가합니다."
 
 #: ../../morph.rst:56
 msgid "*\"아버지가방에들어가신다\"*"
@@ -218,7 +218,7 @@ msgid ""
 "uncertain terms, and defaults the whole phrase to nouns. :py:class:`.Kkma` "
 "is more confident, but gets undesirable results. For this result, "
 ":py:class:`.Mecab` shows the best results."
-msgstr ""
+msgstr "이 예시를 통해 띄어쓰기 알고리즘의 성능을 확인해볼 수 있습니다. 이상적인 경우, 이 예시에 대해서는 \"아버지 가방에 들어가신다\"로 해석하기보다는 \"아버지가 방에 들어가신다\"로 해석하는 것이 더 바람직하겠지요."
 
 #: ../../morph-0.csv:1 ../../morph-1.csv:1 ../../morph-2.csv:1
 #: ../../morph-3.csv:1
@@ -255,7 +255,7 @@ msgid ""
 " + 는/J\", and in the second sentence \"나(-ㄹ다)/V + 는/E\". :py:`.Kkma` "
 "properly understands the latter \"나는\" as a verb, wheras the rest observe it"
 " as nouns."
-msgstr ""
+msgstr "두 문장에서 \"나는\"에 집중해서 본다면, 각 분석기가 태깅할 때 단어의 의미와 주변부를 잘 살피는지 확인해볼 수 있습니다. 첫번째 문장에서 \"나는\"은 \"나/N + 는/J\", 두번째 문장에서는 \"나(-ㄹ다)/V + 는/E\"이 되는 것이 바람직합니다."
 
 #: ../../morph-1.csv:1 ../../morph-2.csv:1
 msgid "나 / N"
@@ -339,7 +339,7 @@ msgstr ""
 msgid ""
 "How do each of the analyzers deal with slang, or terms that are not included"
 " in the dictionary?"
-msgstr ""
+msgstr "각 분석기가 사전에 포함되지 않은 단어를 어떻게 해결하는지 확인해볼까요?"
 
 #: ../../morph-3.csv:1
 msgid "아이폰 / N"

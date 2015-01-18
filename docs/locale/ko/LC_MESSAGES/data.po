@@ -113,7 +113,7 @@ msgstr "사용자 사전에 항목 추가하기: 사전 업데이트가 잦은 �
 
 #: ../../data.rst:11
 msgid "``kolaw``: Korean law corpus."
-msgstr ""
+msgstr "``kolaw``: 한국 법률 말뭉치."
 
 #: ../../data.rst:12
 msgid "constitution.txt"
@@ -123,7 +123,7 @@ msgstr ""
 msgid ""
 "``kobill``: Korean National Assembly bill corpus. The file ID corresponds to"
 " the bill number."
-msgstr ""
+msgstr "``kobill``: 대한민국 국회 의안 말뭉치. 파일 ID는 의안 번호를 의미합니다."
 
 #: ../../data.rst:14
 msgid "1809890.txt - 1809899.txt"
@@ -132,15 +132,25 @@ msgstr ""
 #: ../../data.rst:16
 msgid ""
 "For more detailed usage of the corpora, see the :doc:`api/konlpy.corpus`."
-msgstr ""
+msgstr "KoNLPy에 포함된 말뭉치의 사용은 :doc:`api/konlpy.corpus` 에서 더 자세하게 확인해볼 수 있습니다."
 
 #: ../../data.rst:76
 msgid ""
 "It is included within the Kkma ``.jar`` file, so in order to see dictionary "
 "files, check out the `KKMA's mirror "
-"<https://github.com/konlpy/kkma/tree/master/dic>`_. Part of ``kcc.dic`` is "
+"<https://github.com/e9t/kkma/tree/master/dic>`_. Part of ``kcc.dic`` is "
 "shown below.::"
 msgstr ""
+"꼬꼬마 형태소 분석기의 ``.jar`` 파일 안에 위치해 있습니다. 사전 파일을 직접 보기 위해서는 `꼬꼬마 미러 "
+"<https://github.com/e9t/kkma/tree/master/dic>`_ 를 확인해보시기 바랍니다. ``kcc.dic`` 는"
+" 다음과 같은 형태를 가집니다.:"
+
+#~ msgid ""
+#~ "It is included within the Kkma ``.jar`` file, so in order to see dictionary "
+#~ "files, check out the `KKMA's mirror "
+#~ "<https://github.com/konlpy/kkma/tree/master/dic>`_. Part of ``kcc.dic`` is "
+#~ "shown below.::"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "Files with astericks (*) are installed by default. Other files can be "
@@ -168,16 +178,6 @@ msgstr ""
 
 #~ msgid "1809890.txt - 1809899.txt*"
 #~ msgstr ""
-
-#~ msgid ""
-#~ "It is included within the Kkma ``.jar`` file, so in order to see dictionary "
-#~ "files, check out the `KKMA's mirror "
-#~ "<https://github.com/e9t/kkma/tree/master/dic>`_. Part of ``kcc.dic`` is "
-#~ "shown below.::"
-#~ msgstr ""
-#~ "꼬꼬마 형태소 분석기의 ``.jar`` 파일 안에 위치해 있습니다. 사전 파일을 직접 보기 위해서는 `꼬꼬마 미러 "
-#~ "<https://github.com/e9t/kkma/tree/master/dic>`_ 를 확인해보시기 바랍니다. ``kcc.dic`` 는"
-#~ " 다음과 같은 형태를 가집니다.:"
 
 #~ msgid ""
 #~ "*Adding to the user dictionary*: When dictionary updates are not frequent, "

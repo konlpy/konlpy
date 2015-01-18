@@ -110,7 +110,7 @@ msgid ""
 "In order to find trigram collocations, replace `BigramAssocMeasures` with "
 "`TrigramAssocMeasures`, and `BigramCollocationFinder` with "
 "`TrigramCollocationFinder`."
-msgstr ""
+msgstr "3 음절 연어를 찾기 위해서는 `BigramAssocMeasures` 를 `TrigramAssocMeasures` 로 바꾸고, `BigramCollocationFinder` 를 `TrigramCollocationFinder` 로 바꾸시면 됩니다."
 
 #: ../../examples/generate.rst:2
 msgid "Generating random text"
@@ -228,7 +228,7 @@ msgstr ""
 
 #: ../../examples/multithreading.rst:2
 msgid "Multithreading with KoNLPy"
-msgstr ""
+msgstr "KoNLPy를 이용한 멀티쓰레딩"
 
 #: ../../examples/multithreading.rst:4
 msgid ""
@@ -236,15 +236,15 @@ msgid ""
 "some concurrency tricks? Python supports multithreading and multiprocessing "
 "out-of-the-box, and you can use them with KoNLPy as well. Here's an example "
 "using multithreading."
-msgstr ""
+msgstr "시간이 오래 걸리는 태깅 작업을 수행하다보면 지루해지곤합니다. 그럴 때는 병렬처리 기법을 적용해보면 어떨까요? 파이썬은 멀티쓰레딩과 멀티프로세싱을 지원하며, 물론 그를 KoNLPy에 적용할 수 있습니다. 다음은 멀티쓰레딩을 활용한 예시입니다."
 
 #: ../../examples/multithreading.rst:22
 msgid "Check out how much faster it gets!"
-msgstr ""
+msgstr "얼마나 빨라지는지 보세요!"
 
 #: ../../examples/multithreading.rst:26
 msgid "Some useful references on concurrency with Python:"
-msgstr ""
+msgstr "파이썬 병렬처리와 관련된 좋은 레퍼런스 몇 개:"
 
 #: ../../examples/multithreading.rst:26
 msgid ""

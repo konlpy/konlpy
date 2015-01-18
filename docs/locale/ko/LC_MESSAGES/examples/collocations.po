@@ -13,12 +13,12 @@ msgstr ""
 
 #: ../../examples/collocations.rst:2
 msgid "Finding collocations"
-msgstr ""
+msgstr "연어(collocation) 찾기"
 
 #: ../../examples/collocations.rst:4
 msgid "We can find collocations with the help of `NLTK <http://nltk.org>`_."
-msgstr ""
+msgstr "`NLTK <http://nltk.org>`_ 의 힘을 빌어 연어를 찾아봅시다."
 
 #: ../../examples/collocations.rst:9
 msgid "Console::"
-msgstr ""
+msgstr "콘솔::"
