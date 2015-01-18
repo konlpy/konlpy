@@ -22,6 +22,14 @@ tag Package
     :undoc-members:
     :show-inheritance:
 
+:class:`Komoran` Class
+-------------------
+
+.. automodule:: konlpy.tag._komoran
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 :class:`Mecab` Class
 --------------------
 

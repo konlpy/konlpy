@@ -1,0 +1,24 @@
+Hannanum,Kkma,Komoran,Mecab
+아이폰 / N,아이 / NNG,아이폰 / NNP,아이폰 / NNP
+기다리 / P,폰 / NNG,기다리 / VV,기다리 / VV
+다 / E,기다리 / VV,다 / EC,다 / EC
+지치 / P,다 / ECS,지치 / VV,지쳐 / VV+EC
+어 / E,지치 / VV,어 / EC,애플 / NNP
+애플공홈 / N,어 / ECS,애플 / NNP,공 / NNG
+에서 / J,애플 / NNP,공 / NNG,홈 / NNG
+언락폰질러버렸다 / N,공 / NNG,홈 / NNG,에서 / JKB
+6+ / N,홈 / NNG,에서 / JKB,언락 / NNG
+128기가실벜 / N,에서 / JKM,언 / NNG,폰 / NNG
+,언락 / NNG,락 / NNG,질러버렸 / VV+EC+VX+EP
+,폰 / NNG,폰 / NNG,다 / EC
+,질르 / VV,지르 / VV,6 / SN
+,어 / ECS,어 / EC,+ / SY
+,버리 / VXV,버리 / VX,128 / SN
+,었 / EPT,었 / EP,기 / NNG
+,다 / ECS,다 / EC,가 / JKS
+,6 / NR,6 / SN,실버 / NNP
+,+ / SW,+ / SW,ㅋ / UNKNOWN
+,128 / NR,128기가실벜 / NA,
+,기가 / NNG,,
+,실버 / NNG,,
+,ㅋ / UN,,
