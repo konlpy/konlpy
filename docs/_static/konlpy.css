@@ -88,6 +88,18 @@ table.footnote td.label {
     top: 0;
 }
 
+.language {
+    background-color: rgba(186,96,187,0.4);
+    border: 1px solid rgb(186,96,187);
+    font-size: 70%;
+    margin: 0 2px;
+    padding: 1px 3px;
+}
+
+.language:hover {
+    background-color: rgba(186,96,187,0.7);
+}
+
 .license {
     background-color: rgba(86,196,187,0.4);
     border: 1px solid rgb(86,196,187);

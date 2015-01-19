@@ -3,6 +3,8 @@ References
 
 .. role:: license
 
+.. role:: language
+
 .. note::
     Please `modify this document <https://github.com/konlpy/konlpy/blob/master/docs/references.rst>`_ if anything is erroneous or not included.
     Last updated at |today|.
@@ -72,11 +74,14 @@ Others
 Other NLP tools
 ---------------
 
-Language parser
-'''''''''''''''
-
-- `KoreanParser <http://semanticweb.kaist.ac.kr/home/index.php/KoreanParser>`_       - By DongHyun Choi, Jungyeul Park, Key-Sun Choi (KAIST)
-
+- `Hangulize <http://www.hangulize.org/>`_ - By Heungsub Lee :language:`Python`
+    - Hangul transcription tool to 38+ languages
+- `Hanja <https://github.com/suminb/hanja>`_ - By Sumin Byeon :language:`Python`
+    - Hanja to hangul transcriptor
+- `KoreanParser <http://semanticweb.kaist.ac.kr/home/index.php/KoreanParser>`_ - By DongHyun Choi, Jungyeul Park, Key-Sun Choi (KAIST) :language:`Java`
+    - Language parser
+- `Korean <http://pythonhosted.org/korean>`_ - By Heungsub Lee :language:`Python`
+    - Package for attaching particles (josa) in sentences
 
 .. _corpora:
 

@@ -4,7 +4,7 @@
 # 2. Check translations at docs/locale/ko/LC_MESSAGES/*.po
 # 3. Check version at konlpy/__init__.py
 # 4. $ sudo make testpypi
-# 5. $ sudo make pypi
+# 5. $ sudo make pypi # Beware not to change the version number at this stage!!!
 # 6. Push tag
 # 7. Document update at RTD
 #
