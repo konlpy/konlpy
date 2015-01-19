@@ -8,9 +8,11 @@ import kr.co.shineware.nlp.komoran.core.analyzer.Komoran;
 import kr.co.shineware.util.common.model.Pair;
 
 public class KomoranInterface {
-
+	private static Komoran komoran = null;
     public List<ArrayList<String>> analyzeMorphs(String phrase, String dicpath) {
-        Komoran komoran = new Komoran(dicpath);
+        if(komoran == null){
+        	komoran = new Komoran(dicpath);
+        }
         List<List<Pair<String,String>>> result = komoran.analyze(phrase);
 
         List<ArrayList<String>> list = new ArrayList<ArrayList<String>>();
@@ -27,7 +29,9 @@ public class KomoranInterface {
     }
 
     public List<String> analyzeMorphs3(String phrase, String dicpath) {
-        Komoran komoran = new Komoran(dicpath);
+        if(komoran == null){
+        	komoran = new Komoran(dicpath);
+        }
         List<List<Pair<String,String>>> result = komoran.analyze(phrase);
 
         List<String> list = new ArrayList<String>();
