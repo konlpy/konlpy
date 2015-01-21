@@ -17,13 +17,14 @@
 
 
 os=$(uname)
-if [ $os == "Linux" ]
-then
+if [ $os == "Linux" ] then
     echo "Installing MeCab-ko"
-elif [ $os == "Darwin" ]
-then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    brew install wget
+elif [ $os == "Darwin" ] then
+    wgetpath=`command -v wget`
+    if [ ! -x wgetpath ] then
+        echo "Installing wget"
+        echo "You must install wget first."
+        exit 0
     echo "Installing MeCab-ko"
 else
     echo "This script does not support this OS."

@@ -78,6 +78,8 @@ Other NLP tools
     - Hangul transcription tool to 38+ languages
 - `Hanja <https://github.com/suminb/hanja>`_ - By Sumin Byeon :language:`Python`
     - Hanja to hangul transcriptor
+- `Jamo <http://github.com/JDong820/python-jamo>`_ - By Joshua Dong :language:`Python`
+    - Hangul syllable decomposition and synthesis
 - `KoreanParser <http://semanticweb.kaist.ac.kr/home/index.php/KoreanParser>`_ - By DongHyun Choi, Jungyeul Park, Key-Sun Choi (KAIST) :language:`Java`
     - Language parser
 - `Korean <http://pythonhosted.org/korean>`_ - By Heungsub Lee :language:`Python`
