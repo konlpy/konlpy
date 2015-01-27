@@ -52,8 +52,8 @@ KoNLPy is not just to create another, but to unify and build upon their shoulder
         'data/*/*/*.txt',
         'java/conf/plugin/*/*/*.json',
         'java/data/*/*',
-        'java/jhannanum-0.8.4.jar', 'java/bin/kr/lucypark/jhannanum/*/*.class',
-        'java/kkma-2.0.jar', 'java/bin/kr/lucypark/kkma/*.class',
-        'java/komoran-2.4-e.jar', 'java/shineware-common-2.0.jar', 'java/shineware-ds-1.0.jar', 'java/bin/kr/lucypark/komoran/*.class',
+        'java/*.jar',
+        'java/bin/kr/lucypark/*/*.class',
+        'java/bin/kr/lucypark/*/*/*.class',
         ]},
     install_requires=requirements())

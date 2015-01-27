@@ -27,6 +27,7 @@ def init_jvm(jvmpath=None):
             '{0}{1}kkma-2.0.jar',\
             '{0}{1}komoran-2.4-e.jar',\
             '{0}{1}shineware-common-2.0.jar', '{0}{1}shineware-ds-1.0.jar',\
+            '{0}{1}snakeyaml-1.12.jar', '{0}{1}scala-library-2.11.4.jar', '{0}{1}twitter-korean-text-2.4.3.jar', '{0}{1}twitter-text-1.10.1.jar',\
             '{0}{1}*']
 
     javadir = '%s%sjava' % (utils.installpath, os.sep)
