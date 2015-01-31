@@ -23,10 +23,15 @@ class Twitter():
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
     """
 
-    def pos(self, phrase):
+    def pos(self, phrase, norm=True, stem=False):
         phrase = utils.preprocess(phrase)
-        result = [p for p in self.jki.parser(phrase).toArray()]
-        return [tuple(r.rsplit('/', 1)) for r in result]
+        tokens  = self.jki.tokenize(phrase,\
+                jpype.java.lang.Boolean(norm), jpype.java.lang.Boolean(stem)).toArray()
+        return [tuple(t.rsplit('/', 1)) for t in tokens]
+
+    def phrases(self, phrase):
+        phrase = utils.preprocess(phrase)
+        return [p for p in self.jki.phrases(phrase).toArray()]
 
     def __init__(self, jvmpath=None):
         if not jpype.isJVMStarted():

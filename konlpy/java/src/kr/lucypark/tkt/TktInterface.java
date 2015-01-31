@@ -3,15 +3,28 @@ package kr.lucypark.tkt;
 import java.util.ArrayList;
 import java.util.List;
 
-import kr.co.shineware.util.common.model.Pair;
-
 import com.twitter.penguin.korean.TwitterKoreanProcessorJava;
 import com.twitter.penguin.korean.tokenizer.KoreanTokenizer;
 
+
 public class TktInterface {
 
-    public List<String> parser(String string) {
-        TwitterKoreanProcessorJava processor = new TwitterKoreanProcessorJava.Builder().build();
+    TwitterKoreanProcessorJava processor = null;
+
+    public List<String> tokenize(String string, Boolean norm, Boolean stem) {
+
+        if (norm && stem) {
+            processor = new TwitterKoreanProcessorJava.Builder().build();
+        } else if (norm && ! stem) {
+            processor = new TwitterKoreanProcessorJava.Builder().disableStemmer().build();
+        } else if (! norm && stem) {
+            processor = new TwitterKoreanProcessorJava.Builder().disableNormalizer().build();
+        } else if (! norm && ! stem) {
+            processor = new TwitterKoreanProcessorJava.Builder()
+                        .disableStemmer().disableNormalizer()
+                        .build();
+        }
+
         List<KoreanTokenizer.KoreanToken> tokens = processor.tokenize(string);
 
         List<String> list = new ArrayList<>();
@@ -22,13 +35,25 @@ public class TktInterface {
         return list;
     }
 
+    public List<CharSequence> phrases(String string) {
+        processor = new TwitterKoreanProcessorJava.Builder()
+            .disableNormalizer()
+            .disableStemmer()
+            .enablePhraseExtractorSpamFilter()
+            .build();
+        return processor.extractPhrases(string);
+    }
+
     public static void main(String[] args) throws Exception {
         TktInterface ti = new TktInterface();
 
-        List<String> result = ti.parser("아버지가 방에 들어가신다.");
-        for (String word : result) {
-            System.out.println(word);
+        List<String> tokens = ti.tokenize("아버지가 방에 들어가신다.", false, false);
+        for (String token : tokens) {
+            System.out.println(token);
         }
         System.out.println();
+
+        List<CharSequence> phrases = ti.phrases("아버지가 방에 들어가신다.");
+        System.out.println(phrases);
     }
 }
