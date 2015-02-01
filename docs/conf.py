@@ -267,7 +267,10 @@ texinfo_documents = [
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'http://docs.python.org/': None}
+intersphinx_mapping = {
+    'nltk': ('http://nltk.org', None),
+    'python': ('http://docs.python.org/', None),
+}
 
 extlinks = {
     'commit': ('https://github.com/konlpy/konlpy/commit/%s', ''),

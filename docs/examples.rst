@@ -12,15 +12,15 @@ Below are a set of example tasks using KoNLPy.
 
 .. container:: example
 
-    :doc:`examples/wordcloud`
-
-    .. figure:: examples/wordcloud.png
-
-.. container:: example
-
     :doc:`examples/collocations`
 
     .. figure:: examples/shoes.png
+
+.. container:: example
+
+    :doc:`examples/chunking`
+
+    .. figure:: examples/chunking_thumb.png
 
 .. container:: example
 
@@ -30,9 +30,16 @@ Below are a set of example tasks using KoNLPy.
 
 .. container:: example
 
+    :doc:`examples/wordcloud`
+
+    .. figure:: examples/wordcloud.png
+
+.. container:: example
+
     :doc:`examples/multithreading`
 
     .. figure:: examples/multithreading.png
+
 
 Contents
 --------
@@ -40,7 +47,8 @@ Contents
 .. toctree::
 
     examples/explore
-    examples/wordcloud
     examples/collocations
+    examples/chunking
     examples/generate
+    examples/wordcloud
     examples/multithreading
