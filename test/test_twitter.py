@@ -9,8 +9,8 @@ import pytest
 
 @pytest.fixture
 def tkorean_instance():
-    from konlpy.tag import TwitterKorean
-    t = TwitterKorean()
+    from konlpy.tag import Twitter
+    t = Twitter()
     return t
 
 @pytest.fixture
@@ -23,5 +23,5 @@ def test_tkorean_pos(tkorean_instance, string):
          (u'\uac00\ub9c8', u'Noun'),
          (u'\ud0c0\uace0', u'Noun'),
          (u'\uac15\ub0a8', u'Noun'),
-         (u'\uac00\ub2e4', u'Verb'),
+         (u'\uac00\uc790', u'Verb'),
          (u'!', u'Punctuation')]
