@@ -16,14 +16,25 @@ The result is a tree, which we can print on the console, or display graphically 
 
 - Console::
   
+
+    # Print whole tree
     (S
-      (NP man/Noun 6/Number se/Noun iha/Noun)
-      yi/Josa
-      (NP codeunghaggyo/Noun cwihag/Noun jeon/Noun janyeo/Noun)
-      reul/Josa
-      (NP yangyug/Noun)
-      (VP hagi/Verb wihaeseo/Verb)
-      neun/Eomi)
+      (NP 만/Noun 6/Number 세/Noun 이하/Noun)
+      의/Josa
+      (NP 초등학교/Noun 취학/Noun 전/Noun 자녀/Noun)
+      를/Josa
+      (NP 양육/Noun)
+      (VP 하기/Verb 위해서/Verb)
+      는/Eomi)
+
+    # Print noun phrases only
+    # Print noun phrases only
+    만 6 세 이하
+    (NP 만/Noun 6/Number 세/Noun 이하/Noun)
+    초등학교 취학 전 자녀
+    (NP 초등학교/Noun 취학/Noun 전/Noun 자녀/Noun)
+    양육
+    (NP 양육/Noun)
 
 - chunking.png
     .. image:: chunking.png
