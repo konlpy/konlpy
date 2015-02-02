@@ -17,8 +17,9 @@ Ubuntu
 
 .. sourcecode:: bash
 
-    $ sudo apt-get install python-dev python3-dev
+    $ sudo apt-get install python-dev g++
     $ pip install konlpy    # Python 2.x
+    $ sudo apt-get install python3-dev
     $ pip3 install konlpy   # Python 3.x
 
 2. Install MeCab (*optional*)
