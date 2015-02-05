@@ -65,16 +65,9 @@ You may have to upgrade your `pip` version in order to install the downloaded `.
 
     > pip install konlpy
 
-4. Download, extract [#]_, and install the most recent version of MeCab from the following links (*optional*):
-
-    - `mecab-ko <https://bitbucket.org/eunjeon/mecab-ko/downloads>`_
-    - `mecab-ko-dic <https://bitbucket.org/eunjeon/mecab-ko-dic/downloads>`_
-    - `mecab-python <https://bitbucket.org/eunjeon/mecab-python-0.996/downloads>`_
-
 .. warning::
 
-    - KoNLPy only supports ``Kkma()``, ``Komoran()`` on Windows machines. ``Mecab()``, ``Hannanum()`` are not supported.
-    - Are you having trouble installing MeCab-ko to your Windows machine? Refer to this blog post by Kim YungYi: `mecab-ko 윈도우에서 빌드하기 <https://yungyikim.atlassian.net/wiki/pages/viewpage.action?pageId=2916362>`_ (In Korean).
+    - KoNLPy's ``Mecab()`` class is not supported on Windows machines.
 
 .. [#] `win-amd64` for 64-bit Windows, `win32` for 32-bit Windows.
 .. [#] Having MinGW/MSYS or Cygwin installed may be more convenient. If you plan to use Git, `Git BASH <https://msysgit.github.io/>`_ is another good option. Otherwise, you can use `7zip <http://7-zip.org>`_ for the extraction of `tar` files.
