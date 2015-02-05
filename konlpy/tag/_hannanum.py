@@ -65,12 +65,6 @@ class Hannanum():
         result = self.jhi.morphAnalyzer(phrase)
         return parse(result)
 
-    def nouns(self, phrase):
-        """Noun extractor."""
-
-        phrase = utils.preprocess(phrase)
-        return list(self.jhi.extractNoun(phrase))
-
     def pos(self, phrase, ntags=9, flatten=True):
         """POS tagger.
 
@@ -86,6 +80,12 @@ class Hannanum():
         else:
             raise Exception('ntags in [9, 22]')
         return parse(result, flatten=flatten)
+
+    def nouns(self, phrase):
+        """Noun extractor."""
+
+        tagged = self.pos(phrase)
+        return [s for s, t in tagged if t.startswith('N')]
 
     def morphs(self, phrase):
         """Parse phrase to morphemes."""
