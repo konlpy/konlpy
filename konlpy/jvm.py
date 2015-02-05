@@ -37,6 +37,8 @@ def init_jvm(jvmpath=None):
 
     jvmpath = jvmpath or jpype.getDefaultJVMPath()
     if jvmpath:
-        jpype.startJVM(jvmpath, '-Djava.class.path=%s' % classpath, '-ea', '-Xmx768m')
+        jpype.startJVM(jvmpath, '-Djava.class.path=%s' % classpath,\
+                                '-Dfile.encoding=UTF8',\
+                                '-ea', '-Xmx768m')
     else:
         raise ValueError("Please specify the JVM path.")
