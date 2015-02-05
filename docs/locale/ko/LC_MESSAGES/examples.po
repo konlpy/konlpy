@@ -23,11 +23,11 @@ msgstr "다음은 KoNLPy를 이용해 수행할 수 있는 몇몇 사용 예시�
 msgid ":doc:`examples/explore`"
 msgstr ""
 
-#: ../../examples.rst:15
+#: ../../examples.rst:33
 msgid ":doc:`examples/wordcloud`"
 msgstr ""
 
-#: ../../examples.rst:21
+#: ../../examples.rst:15
 msgid ":doc:`examples/collocations`"
 msgstr ""
 
@@ -39,8 +39,9 @@ msgstr "연어(collocation) 찾기"
 msgid "We can find collocations with the help of `NLTK <http://nltk.org>`_."
 msgstr "`NLTK <http://nltk.org>`_ 를 같이 활용하여 연어(collocation)을 찾을 수 있습니다."
 
-#: ../../examples/collocations.rst:11 ../../examples/explore.rst:13
-#: ../../examples/generate.rst:43 ../../examples/multithreading.rst:12
+#: ../../examples/chunking.rst:17 ../../examples/collocations.rst:11
+#: ../../examples/explore.rst:13 ../../examples/generate.rst:43
+#: ../../examples/multithreading.rst:12
 msgid "Console::"
 msgstr "출력 결과::"
 
@@ -97,7 +98,7 @@ msgstr ""
 "이용하면 워드클라우드에 한글이 제대로 표시되지 않을 수 있습니다. 이 경우, 직접 소스코드에 한글 폰트를 추가하거나, `이 곳 "
 "<https://github.com/e9t/PyTagCloud>`_ 에서 미리 폰트가 추가된 버젼을 다운받아 사용하시면 됩니다."
 
-#: ../../examples.rst:38
+#: ../../examples.rst:45
 msgid "Contents"
 msgstr "목록보기"
 
@@ -110,7 +111,9 @@ msgid ""
 "In order to find trigram collocations, replace `BigramAssocMeasures` with "
 "`TrigramAssocMeasures`, and `BigramCollocationFinder` with "
 "`TrigramCollocationFinder`."
-msgstr "3 음절 연어를 찾기 위해서는 `BigramAssocMeasures` 를 `TrigramAssocMeasures` 로 바꾸고, `BigramCollocationFinder` 를 `TrigramCollocationFinder` 로 바꾸시면 됩니다."
+msgstr ""
+"3 음절 연어를 찾기 위해서는 `BigramAssocMeasures` 를 `TrigramAssocMeasures` 로 바꾸고, "
+"`BigramCollocationFinder` 를 `TrigramCollocationFinder` 로 바꾸시면 됩니다."
 
 #: ../../examples/generate.rst:2
 msgid "Generating random text"
@@ -222,7 +225,7 @@ msgstr ""
 "한 걸음 더 나아가기 위해서는 `언어 모델 <http://en.wikipedia.org/wiki/Language_model>`_ 을 "
 "이용해 생성한 랜덤 텍스트가 통계적인 관점에서 얼마나 말이 되는지 평가해볼 수 있습니다."
 
-#: ../../examples.rst:33
+#: ../../examples.rst:39
 msgid ":doc:`examples/multithreading`"
 msgstr ""
 
@@ -236,7 +239,9 @@ msgid ""
 "some concurrency tricks? Python supports multithreading and multiprocessing "
 "out-of-the-box, and you can use them with KoNLPy as well. Here's an example "
 "using multithreading."
-msgstr "시간이 오래 걸리는 태깅 작업을 수행하다보면 지루해지곤합니다. 그럴 때는 병렬처리 기법을 적용해보면 어떨까요? 파이썬은 멀티쓰레딩과 멀티프로세싱을 지원하며, 물론 그를 KoNLPy에 적용할 수 있습니다. 다음은 멀티쓰레딩을 활용한 예시입니다."
+msgstr ""
+"시간이 오래 걸리는 태깅 작업을 수행하다보면 지루해지곤합니다. 그럴 때는 병렬처리 기법을 적용해보면 어떨까요? 파이썬은 멀티쓰레딩과 "
+"멀티프로세싱을 지원하며, 물론 그를 KoNLPy에 적용할 수 있습니다. 다음은 멀티쓰레딩을 활용한 예시입니다."
 
 #: ../../examples/multithreading.rst:22
 msgid "Check out how much faster it gets!"
@@ -256,6 +261,47 @@ msgstr ""
 msgid ""
 "하용호, `파이썬으로 클라우드 하고 싶어요 <http://www.slideshare.net/devparan/h3-2011-c6"
 "-python-and-cloud>`_, 2011."
+msgstr ""
+
+#: ../../examples.rst:21
+msgid ":doc:`examples/chunking`"
+msgstr ""
+
+#: ../../examples/chunking.rst:2
+msgid "Chunking"
+msgstr ""
+
+#: ../../examples/chunking.rst:4
+msgid ""
+"After tagging a sentence with part of speech, we can segment it into several"
+" higher level multitoken sequences, or \"chunks\"."
+msgstr ""
+
+#: ../../examples/chunking.rst:6
+msgid ""
+"Here we demonstrate a way to easily chunk a sentence, and find noun, verb "
+"and adjective phrases in Korean text, using "
+":py:class:`nltk:nltk.chunk.regexp.RegexpParser`."
+msgstr ""
+
+#: ../../examples/chunking.rst:11
+msgid ""
+"According to the chunk grammer defined above, we have three rules to "
+"extracted phrases from our sentence. First, we have a rule to extract noun "
+"phrases (NP), where our chunker finds a serial of nouns, followed with an "
+"optional Suffix. (Note that these rules can be modified for your purpose, "
+"and that they should differ for each morphological analyzer.) Then we have "
+"two more rules, each defining verb phrases (VP) and adjective phrases (AP)."
+msgstr ""
+
+#: ../../examples/chunking.rst:15
+msgid ""
+"The result is a tree, which we can print on the console, or display "
+"graphically as follows."
+msgstr ""
+
+#: ../../examples/chunking.rst:40
+msgid "chunking.png"
 msgstr ""
 
 #~ msgid ""

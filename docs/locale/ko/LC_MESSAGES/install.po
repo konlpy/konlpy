@@ -15,26 +15,26 @@ msgstr ""
 msgid "Installation"
 msgstr "설치하기"
 
-#: ../../install.rst:49
+#: ../../install.rst:54
 msgid "Windows"
 msgstr "윈도우"
 
-#: ../../install.rst:16 ../../install.rst:34 ../../install.rst:60
+#: ../../install.rst:16 ../../install.rst:38 ../../install.rst:65
 msgid "From the command prompt, install KoNLPy."
 msgstr "명령 프롬프트로 KoNLPy 설치하기"
 
-#: ../../install.rst:68
+#: ../../install.rst:73
 msgid "`mecab-ko <https://bitbucket.org/eunjeon/mecab-ko/downloads>`_"
 msgstr "`mecab-ko <https://bitbucket.org/eunjeon/mecab-ko/downloads>`_"
 
-#: ../../install.rst:69
+#: ../../install.rst:74
 msgid "`mecab-ko-dic <https://bitbucket.org/eunjeon/mecab-ko-dic/downloads>`_"
 msgstr ""
 "`mecab-ko-dic <https://bitbucket.org/eunjeon/mecab-ko-dic/downloads>`_"
 
-#: ../../install.rst:77
+#: ../../install.rst:82
 msgid "`win-amd64` for 64-bit Windows, `win32` for 32-bit Windows."
-msgstr "64비트 윈도우에는 `win-amd64`, 32비트 윈도우에는 `win32`라고 쓰여진 파일을 사용합니다."
+msgstr "64비트 윈도우에는 `win-amd64`, 32비트 윈도우에는 `win32` 라고 쓰여진 파일을 사용합니다."
 
 #: ../../install.rst:6
 msgid ""
@@ -46,74 +46,110 @@ msgid ""
 "have an error that is not listed. You can also see testing logs `here "
 "<https://docs.google.com/spreadsheets/d/1Ii_L9NF9gSLbsJOGqsf-"
 "zfqTtyhhthmJWNC2kgUDIsU/edit#gid=0>`_."
-msgstr "설치 및 사용 도중 문제가 발생하는 경우 다음 페이지들을 참고해주세요: `리눅스 <https://github.com/konlpy/konlpy/issues?q=label%3Alinux>`_. `맥 OS "
+msgstr ""
+"설치 및 사용 도중 문제가 발생하는 경우 다음 페이지들을 참고해주세요: `리눅스 "
+"<https://github.com/konlpy/konlpy/issues?q=label%3Alinux>`_. `맥 OS "
 "<https://github.com/konlpy/konlpy/issues?q=label%3A\"mac+os\">`_. `윈도우 "
-"<https://github.com/konlpy/konlpy/issues?q=label%3Awindows>`_."
-" 발생한 문제가 어디에도 없는 경우"
-" `\"New Issue\" <https://github.com/konlpy/konlpy/issues/new>`_ 버튼을 눌러 새로운 이슈를 생성해주시기 바랍니다. 각 머신 별 테스팅 로그는 `이 곳 "
+"<https://github.com/konlpy/konlpy/issues?q=label%3Awindows>`_. 발생한 문제가 어디에도 "
+"없는 경우 `\"New Issue\" <https://github.com/konlpy/konlpy/issues/new>`_ 버튼을 눌러 "
+"새로운 이슈를 생성해주시기 바랍니다. 각 머신 별 테스팅 로그는 `이 곳 "
 "<https://docs.google.com/spreadsheets/d/1Ii_L9NF9gSLbsJOGqsf-"
 "zfqTtyhhthmJWNC2kgUDIsU/edit#gid=0>`_ 에서 보실 수 있습니다."
 
-#: ../../install.rst:24 ../../install.rst:41
+#: ../../install.rst:28 ../../install.rst:45
 msgid "Install MeCab (*optional*)"
 msgstr "MeCab 설치하기 (*선택사항*)"
 
-#: ../../install.rst:32
+#: ../../install.rst:36
 msgid "Mac OS"
 msgstr "맥 OS"
 
-#: ../../install.rst:66
+#: ../../install.rst:71
 msgid ""
 "Download, extract [#]_, and install the most recent version of MeCab from "
 "the following links (*optional*):"
 msgstr "아래의 링크에서 MeCab의 가장 최신 버젼을 다운받고 압축을 푼다 (*선택사항*) [#]_:"
 
-#: ../../install.rst:78
+#: ../../install.rst:83
 msgid ""
 "Having MinGW/MSYS or Cygwin installed may be more convenient. If you plan to"
 " use Git, `Git BASH <https://msysgit.github.io/>`_ is another good option. "
 "Otherwise, you can use `7zip <http://7-zip.org>`_ for the extraction of "
 "`tar` files."
-msgstr "MinGW/MSYS 또는 Cygwin을 설치한 후 압축을 푸실 수 있습니다. Git을 같이 사용하시는 경우 `Git BASH <https://msysgit.github.io>`_ 가 좋은 옵션일 수 있습니다. 또는 `7zip <http://7-zip.org>`_ 을 이용해 `tar` 파일의 압축을 푸실 수 있습니다."
+msgstr ""
+"MinGW/MSYS 또는 Cygwin을 설치한 후 압축을 푸실 수 있습니다. Git을 같이 사용하시는 경우 `Git BASH "
+"<https://msysgit.github.io>`_ 가 좋은 옵션일 수 있습니다. 또는 `7zip <http://7-zip.org>`_"
+" 을 이용해 `tar` 파일의 압축을 푸실 수 있습니다."
 
-#: ../../install.rst:51
+#: ../../install.rst:56
 msgid ""
 "Set `JAVA_HOME "
 "<http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html>`_."
-msgstr "`JAVA_HOME <http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html>`_ 설정하기"
+msgstr ""
+"`JAVA_HOME "
+"<http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html>`_"
+" 설정하기"
 
-#: ../../install.rst:52
+#: ../../install.rst:57
 msgid ""
 "2. Download and install `JPype1 "
 "<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ (>=0.5.7). [#]_ You may"
 " have to upgrade your `pip` version in order to install the downloaded "
 "`.whl` file."
-msgstr "2. `JPype1 (>=0.5.7) 다운받고 <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ 설치하기. 다운받으신 `.whl` 파일을 설치하기 위해서는 아래와 같이 `pip` 의 버젼을 업그레이드 해야할 수 있습니다."
+msgstr ""
+"2. `JPype1 (>=0.5.7) 다운받고 "
+"<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ 설치하기. 다운받으신 `.whl` 파일을 "
+"설치하기 위해서는 아래와 같이 `pip` 의 버젼을 업그레이드 해야할 수 있습니다."
 
-#: ../../install.rst:70
+#: ../../install.rst:75
 msgid ""
 "`mecab-python <https://bitbucket.org/eunjeon/mecab-python-0.996/downloads>`_"
 msgstr ""
 
-#: ../../install.rst:75
+#: ../../install.rst:80
 msgid ""
 "Are you having trouble installing MeCab-ko to your Windows machine? Refer to"
 " this blog post by Kim YungYi: `mecab-ko 윈도우에서 빌드하기 "
 "<https://yungyikim.atlassian.net/wiki/pages/viewpage.action?pageId=2916362>`_"
 " (In Korean)."
-msgstr "윈도우에 MeCab-ko를 설치하는데 어려움을 겪고 계신다면 Kim YungYi님의 `mecab-ko 윈도우에서 빌드하기 "
-"<https://yungyikim.atlassian.net/wiki/pages/viewpage.action?pageId=2916362>`_ 를 참고해주시기 바랍니다."
+msgstr ""
+"윈도우에 MeCab-ko를 설치하는데 어려움을 겪고 계신다면 Kim YungYi님의 `mecab-ko 윈도우에서 빌드하기 "
+"<https://yungyikim.atlassian.net/wiki/pages/viewpage.action?pageId=2916362>`_"
+" 를 참고해주시기 바랍니다."
 
-#: ../../install.rst:74
+#: ../../install.rst:79
 msgid ""
 "KoNLPy only supports ``Kkma()``, ``Komoran()`` on Windows machines. "
 "``Mecab()``, ``Hannanum()`` are not supported."
-msgstr "현재 KoNLPy는 윈도우에서 ``Kkma()``, ``Komoran()``만 지원합니다. ``Mecab()``, ``Hannanum()`` 는 지원되지 않습니다."
-
+msgstr ""
+"현재 KoNLPy는 윈도우에서 ``Kkma()``, ``Komoran()`` 만 지원합니다. ``Mecab()``, "
+"``Hannanum()`` 는 지원되지 않습니다."
 
 #: ../../install.rst:14
 msgid "Ubuntu"
 msgstr "우분투"
+
+#: ../../install.rst:48
+msgid "Install ``wget``"
+msgstr ""
+
+#: ../../install.rst:48
+msgid ""
+"Method 1. Install `Homebrew <http://brew.sh/>`_ then execute ``brew install "
+"wget``"
+msgstr ""
+
+#: ../../install.rst:49
+msgid ""
+"Method 2: `Install wget without Homebrew <http://osxdaily.com/2012/05/22"
+"/install-wget-mac-os-x/>`_"
+msgstr ""
+
+#: ../../install.rst:50
+msgid ""
+"``bash <(curl -s "
+"https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)``"
+msgstr ""
 
 #~ msgid "Linux"
 #~ msgstr "리눅스"

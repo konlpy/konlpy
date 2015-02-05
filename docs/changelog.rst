@@ -7,6 +7,7 @@ Change logs
 Version in development.
 
 - Added :py:class:`.tag.Twitter`
+- Fixed bash script syntax error [:issue:`42` by :committer:`re4lfl0w`]
 
 `Version 0.4.0 <https://github.com/konlpy/konlpy/releases/tag/v0.4.0>`_
 --------------------------------------------------------------------

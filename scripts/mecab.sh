@@ -58,7 +58,9 @@ sudo make install
 cd /tmp
 git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
 cd mecab-python-0.996
+
 python setup.py build
 sudo python setup.py install
+# TODO: check if python3 is installed
 python3 setup.py build
 sudo python3 setup.py install
