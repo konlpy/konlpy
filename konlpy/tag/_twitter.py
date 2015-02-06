@@ -24,13 +24,11 @@ class Twitter():
     """
 
     def pos(self, phrase, norm=True, stem=False):
-        phrase = utils.preprocess(phrase)
         tokens  = self.jki.tokenize(phrase,\
                 jpype.java.lang.Boolean(norm), jpype.java.lang.Boolean(stem)).toArray()
         return [tuple(t.rsplit('/', 1)) for t in tokens]
 
     def phrases(self, phrase):
-        phrase = utils.preprocess(phrase)
         return [p for p in self.jki.phrases(phrase).toArray()]
 
     def __init__(self, jvmpath=None):

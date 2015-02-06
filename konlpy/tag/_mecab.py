@@ -60,7 +60,7 @@ class Mecab():
         """POS tagger."""
 
         if sys.version_info[0] < 3:
-            phrase = utils.preprocess(phrase).encode('utf-8')
+            phrase = phrase.encode('utf-8')
             if flatten:
                 result = self.tagger.parse(phrase).decode('utf-8')
                 return parse(result)
@@ -68,7 +68,6 @@ class Mecab():
                 return [parse(self.tagger.parse(eojeol).decode('utf-8'))\
                         for eojeol in phrase.split()]
         else:
-            phrase = utils.preprocess(phrase)
             if flatten:
                 result = self.tagger.parse(phrase)
                 return parse(result)

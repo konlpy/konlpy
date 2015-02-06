@@ -51,7 +51,6 @@ class Komoran():
     def pos(self, phrase, flatten=True):
         """POS tagger."""
 
-        phrase = utils.preprocess(phrase)
         if sys.version_info[0] < 3:
             result = self.jki.analyzeMorphs(phrase, self.dicpath)
         else:

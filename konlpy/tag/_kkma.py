@@ -35,7 +35,6 @@ class Kkma():
     def nouns(self, phrase):
         """Noun extractor."""
 
-        phrase = utils.preprocess(phrase)
         nouns = self.jki.extractNoun(phrase)
         if not nouns: return []
         return [nouns.get(i).getString() for i in range(nouns.size())]
@@ -43,7 +42,6 @@ class Kkma():
     def pos(self, phrase, flatten=True):
         """POS tagger."""
 
-        phrase = utils.preprocess(phrase)
         sentences = self.jki.morphAnalyzer(phrase)
         morphemes = []
         if not sentences: return morphemes
@@ -70,7 +68,6 @@ class Kkma():
     def sentences(self, phrase):
         """Sentence detection."""
 
-        phrase = utils.preprocess(phrase)
         sentences = self.jki.morphAnalyzer(phrase)
         if not sentences: return []
         return [sentences.get(i).getSentence() for i in range(sentences.size())]

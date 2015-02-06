@@ -69,9 +69,6 @@ def concordance(phrase, text, show=False):
             print('%d\t%s' % (i, ' '.join(terms[max(0, i-3):i+3])))
     return indexes
 
-def concat(phrase):
-    """Concatenates lines into a unified string."""
-    return phrase.replace(os.linesep, ' ')
 
 if sys.version_info[0] < 3:
     from . import csvutils
@@ -128,12 +125,6 @@ if sys.version_info[0] < 3:
 else:
     pprint = pp.pprint
 
-def preprocess(phrase):
-    """Preprocesses a phrase in the following steps:.
-
-    - :py:func:`.concat`
-    """
-    return select(concat(phrase).strip())
 
 def select(phrase):
     """Replaces some ambiguous punctuation marks to simpler ones."""

@@ -61,7 +61,6 @@ class Hannanum():
         It consists of two parts: 1) Dictionary search (chart), 2) Unclassified term segmentation.
         """
 
-        phrase = utils.preprocess(phrase)
         result = self.jhi.morphAnalyzer(phrase)
         return parse(result)
 
@@ -72,7 +71,6 @@ class Hannanum():
 
         :param ntags: The number of tags. It can be either 9 or 22."""
 
-        phrase = utils.preprocess(phrase)
         if ntags==9:
             result = self.jhi.simplePos09(phrase)
         elif ntags==22:
