@@ -17,7 +17,7 @@ Ubuntu
 
 .. sourcecode:: bash
 
-    $ sudo apt-get install python-dev g++
+    $ sudo apt-get install python-dev g++ openjdk-7-jdk
     $ pip install konlpy    # Python 2.x
     $ sudo apt-get install python3-dev
     $ pip3 install konlpy   # Python 3.x
@@ -45,6 +45,10 @@ Mac OS
         - Method 1. Install `Homebrew <http://brew.sh/>`_ then execute ``brew install wget``
         - Method 2: `Install wget without Homebrew <http://osxdaily.com/2012/05/22/install-wget-mac-os-x/>`_
     2. ``bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)``
+
+.. warning::
+
+    - KoNLPy's ``Komoran()`` class is not supported with Python 2.x on Windows machines.
 
 
 Windows
