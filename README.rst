@@ -2,16 +2,16 @@ KoNLPy
 ======
 
 .. image:: https://travis-ci.org/konlpy/konlpy.svg?branch=master
-    :alt: Build Status
     :target: https://travis-ci.org/konlpy/konlpy
+    :alt: Build Status
 
 .. image:: https://readthedocs.org/projects/konlpy/badge/?version=latest
-    :alt: Documentation Status
     :target: https://readthedocs.org/projects/konlpy/?badge=latest
+    :alt: Documentation Status
 
 .. image:: https://coveralls.io/repos/konlpy/konlpy/badge.png
-    :alt: Coverage Status
     :target: https://coveralls.io/r/konlpy/konlpy
+    :alt: Coverage Status
 
 .. image:: https://pypip.in/version/konlpy/badge.svg?text=version
     :target: https://pypi.python.org/pypi/konlpy/
@@ -24,6 +24,11 @@ KoNLPy
 .. image:: https://pypip.in/status/konlpy/badge.svg
     :target: https://pypi.python.org/pypi/konlpy/
     :alt: Development Status
+
+.. image:: https://pypip.in/license/konlpy/badge.svg
+    :target: http://www.gnu.org/copyleft/gpl.html
+    :alt: License
+
 
 한국어 자연어처리를 할 수 있는 파이썬 패키지입니다.
 
