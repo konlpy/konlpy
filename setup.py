@@ -46,6 +46,7 @@ KoNLPy is not just to create another, but to unify and build upon their shoulder
         'Topic :: Text Processing :: General',
         'Topic :: Text Processing :: Indexing',
         'Topic :: Text Processing :: Linguistic',
+        'Development Status :: 4 - Beta',
         ],
     packages=find_packages(),
     package_data={'konlpy': [

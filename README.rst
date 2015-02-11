@@ -13,6 +13,18 @@ KoNLPy
     :alt: Coverage Status
     :target: https://coveralls.io/r/konlpy/konlpy
 
+.. image:: https://pypip.in/version/konlpy/badge.svg?text=version
+    :target: https://pypi.python.org/pypi/konlpy/
+    :alt: Latest Version
+
+.. image:: https://pypip.in/py_versions/konlpy/badge.svg
+    :target: https://pypi.python.org/pypi/konlpy/
+    :alt: Supported Python versions
+
+.. image:: https://pypip.in/status/konlpy/badge.svg
+    :target: https://pypi.python.org/pypi/konlpy/
+    :alt: Development Status
+
 한국어 자연어처리를 할 수 있는 파이썬 패키지입니다.
 
 KoNLPy is a Python package for natural language processing of the Korean language. 
