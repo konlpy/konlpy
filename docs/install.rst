@@ -54,8 +54,9 @@ Mac OS
 Windows
 -------
 
-1. Set `JAVA_HOME <http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html>`_.
-2. Download and install `JPype1 <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ (>=0.5.7). [#]_
+1. Do you have Java 1.7+ installed?
+2. Set `JAVA_HOME <http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html>`_.
+3. Download and install `JPype1 <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ (>=0.5.7). [#]_
 You may have to upgrade your `pip` version in order to install the downloaded `.whl` file.
 
 .. sourcecode:: guess
@@ -63,7 +64,7 @@ You may have to upgrade your `pip` version in order to install the downloaded `.
     > pip install --upgrade pip
     > pip install JPype1-0.5.7-cp27-none-win_amd64.whl
 
-3. From the command prompt, install KoNLPy.
+4. From the command prompt, install KoNLPy.
 
 .. sourcecode:: guess
 
