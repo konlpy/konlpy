@@ -3,6 +3,23 @@
 
 import csv, codecs, cStringIO
 
+def _stringify(s, encoding="utf-8"):
+    if s is None:
+        return ''
+    elif isinstance(s, unicode):
+        return s.encode(encoding)
+    elif isinstance(s, (int, float)):
+        return s # let csv.QUOTE_NONNUMERIC do its thing
+    elif not isinstance(s, str):
+        return str(s)
+    return s
+
+def _stringify_list(l, encoding="utf-8"):
+    try:
+        return [_stringify(s, encoding) for s in iter(l)]
+    except TypeError as e:
+        raise csv.Error(str(e))
+
 class UTF8Recoder:
     """
     Iterator that reads an encoded stream and reencodes the input to UTF-8
@@ -46,8 +63,8 @@ class UnicodeWriter:
         self.stream = f
         self.encoder = codecs.getincrementalencoder(encoding)()
 
-    def writerow(self, row):
-        self.writer.writerow([s.encode("utf-8") for s in row])
+    def writerow(self, row, encoding='utf-8'):
+        self.writer.writerow(_stringify_list(row, encoding))
         # Fetch UTF-8 output from the queue ...
         data = self.queue.getvalue()
         data = data.decode("utf-8")
