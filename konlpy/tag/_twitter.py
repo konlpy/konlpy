@@ -23,7 +23,7 @@ class Twitter():
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
     """
 
-    def pos(self, phrase, norm=True, stem=False):
+    def pos(self, phrase, norm=False, stem=False):
         tokens  = self.jki.tokenize(phrase,\
                 jpype.java.lang.Boolean(norm), jpype.java.lang.Boolean(stem)).toArray()
         return [tuple(t.rsplit('/', 1)) for t in tokens]
