@@ -9,8 +9,6 @@ tag Package
 :class:`Hannanum` Class
 -----------------------
 
-.. warning:: ``Hannanum()`` is not supported on ``Windows 7`` [:issue:`7`].
-
 .. automodule:: konlpy.tag._hannanum
     :members:
     :undoc-members:
@@ -25,9 +23,7 @@ tag Package
     :show-inheritance:
 
 :class:`Komoran` Class
--------------------
-
-.. warning:: ``Komoran()`` is not supported on ``Python 2 + Mac OS`` [:issue:`40`].
+----------------------
 
 .. automodule:: konlpy.tag._komoran
     :members:
@@ -45,7 +41,7 @@ tag Package
     :show-inheritance:
 
 :class:`Twitter` Class
---------------------
+----------------------
 
 .. automodule:: konlpy.tag._twitter
     :members:

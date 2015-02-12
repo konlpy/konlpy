@@ -39,15 +39,17 @@ class Mecab():
     In order to use MeCab-ko within KoNLPy, follow the directions in :ref:`optional-installations`.
 
     .. code-block:: python
-        :emphasize-lines: 2
+        :emphasize-lines: 1
 
-        from konlpy.tag import Mecab
-        # MeCab installation needed
-
-        mecab = Mecab()
-        print mecab.pos(u'자연주의 쇼핑몰은 어떤 곳인가?')
-        print mecab.morphs(u'영등포구청역에 있는 맛집 좀 알려주세요.')
-        print mecab.nouns(u'우리나라에는 무릎 치료를 잘하는 정형외과가 없는가!')
+        >>> # MeCab installation needed
+        >>> from konlpy.tag import Mecab
+        >>> mecab = Mecab()
+        >>> print(mecab.morphs(u'영등포구청역에 있는 맛집 좀 알려주세요.'))
+        ['영등포구', '청역', '에', '있', '는', '맛집', '좀', '알려', '주', '세요', '.']
+        >>> print(mecab.nouns(u'우리나라에는 무릎 치료를 잘하는 정형외과가 없는가!'))
+        ['우리', '나라', '무릎', '치료', '정형외과']
+        >>> print(mecab.pos(u'자연주의 쇼핑몰은 어떤 곳인가?'))
+        [('자연', 'NNG'), ('주', 'NNG'), ('의', 'JKG'), ('쇼핑몰', 'NNG'), ('은', 'JX'), ('어떤', 'MM'), ('곳', 'NNG'), ('인가', 'VCP+EF'), ('?', 'SF')]
 
     :param dicpath: The path of the MeCab-ko dictionary.
 
@@ -57,7 +59,10 @@ class Mecab():
 
     # TODO: check whether flattened results equal non-flattened
     def pos(self, phrase, flatten=True):
-        """POS tagger."""
+        """POS tagger.
+
+        :param flatten: If False, preserves eojeols.
+        """
 
         if sys.version_info[0] < 3:
             phrase = phrase.encode('utf-8')

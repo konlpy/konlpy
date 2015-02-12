@@ -46,11 +46,6 @@ Mac OS
         - Method 2: `Install wget without Homebrew <http://osxdaily.com/2012/05/22/install-wget-mac-os-x/>`_
     2. ``bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)``
 
-.. warning::
-
-    - KoNLPy's ``Komoran()`` class is not supported with Python 2.x on Windows machines.
-
-
 Windows
 -------
 

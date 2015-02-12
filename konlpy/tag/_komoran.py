@@ -39,17 +39,23 @@ class Komoran():
 
     .. code-block:: python
 
-        from konlpy.tag import Komoran
-
-        komoran = Komoran()
-        print komoran.pos(u'우왕 코모란도 오픈소스가 되었어요')
+        >>> from konlpy.tag import Komoran
+        >>> komoran = Komoran()
+        >>> print(komoran.morphs(u'우왕 코모란도 오픈소스가 되었어요'))
+        ['우왕', '코', '모란', '도', '오픈소스', '가', '되', '었', '어요']
+        >>> print(komoran.nouns(u'오픈소스에 관심 많은 멋진 개발자님들!'))
+        ['오픈소스', '관심', '개발자']
+        >>> print(komoran.pos(u'원칙이나 기체 설계와 엔진·레이더·항법장비 등'))
+        [('원칙', 'NNG'), ('이나', 'JC'), ('기체', 'NNG'), ('설계', 'NNG'), ('와', 'JC'), ('엔진', 'NNG'), ('·', 'SP'), ('레이더', 'NNG'), ('·', 'SP'), ('항법', 'NNP'), ('장비', 'NNG'), ('등', 'NNB')]
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
     :param dicpath: The path of dictionary files. The KOMORAN system dictionary is loaded by default.
     """
 
     def pos(self, phrase, flatten=True):
-        """POS tagger."""
+        """POS tagger.
+
+        :param flatten: If False, preserves eojeols."""
 
         if sys.version_info[0] < 3:
             result = self.jki.analyzeMorphs(phrase, self.dicpath)
@@ -63,7 +69,13 @@ class Komoran():
         """Noun extractor."""
 
         tagged = self.pos(phrase)
-        return [s for s, t in tagged if t.startswith('N')]
+        return [s for s, t in tagged if t.startswith('NN')]
+
+
+    def morphs(self, phrase):
+        """Parse phrase to morphemes."""
+
+        return [s for s, t in self.pos(phrase)]
 
 
     def __init__(self, jvmpath=None, dicpath=None):
