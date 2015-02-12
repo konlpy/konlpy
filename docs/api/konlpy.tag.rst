@@ -44,6 +44,15 @@ tag Package
     :undoc-members:
     :show-inheritance:
 
+:class:`Twitter` Class
+--------------------
+
+.. automodule:: konlpy.tag._twitter
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
 .. seealso::
     `Korean POS tags comparison chart <https://docs.google.com/spreadsheets/d/1OGAjUvalBuX-oZvZ_-9tEfYD2gQe7hTGsgUpiiBSXI8/edit#gid=0>`_
 

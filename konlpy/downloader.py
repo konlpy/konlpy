@@ -96,6 +96,7 @@ class Downloader(object):
 
 
     def status(self, info_or_id=None, download_dir=None):
+        self.index = json.loads(urllib.urlopen(self.INDEX_URL).read().decode())
         """
         Return a constant describing the local status of the given package.
         Status can be one of ``INSTALLED``, ``NOT_INSTALLED``, or ``STALE``.
@@ -213,6 +214,7 @@ class Downloader(object):
 
 
     def _get_info(self, id):
+        self.index = json.loads(urllib.urlopen(self.INDEX_URL).read().decode())
         if self.index.get(id):
             return self.index.get(id)
         else:
@@ -221,7 +223,6 @@ class Downloader(object):
 
     def __init__(self, download_dir=None):
         self._download_dir = download_dir
-        self.index = json.loads(urllib.urlopen(self.INDEX_URL).read().decode())
 
 # Aliases
 _downloader = Downloader(default_download_dir())
