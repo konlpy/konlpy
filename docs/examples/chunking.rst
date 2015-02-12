@@ -1,7 +1,7 @@
 Chunking
 ========
 
-After tagging a sentence with part of speech, we can segment it into several higher level multitoken sequences, or "chunks".
+After :doc:`tagging a sentence with part of speech </morph>`, we can segment it into several higher level multitoken sequences, or "chunks".
 
 Here we demonstrate a way to easily chunk a sentence, and find noun, verb and adjective phrases in Korean text, using :py:class:`nltk:nltk.chunk.regexp.RegexpParser`.
 

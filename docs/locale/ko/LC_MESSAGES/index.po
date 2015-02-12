@@ -181,7 +181,7 @@ msgid ""
 "contribution*, because it gives the community feedback as well as ideas. "
 "Don't hesitate to ask."
 msgstr ""
-"무엇보다, 질문하는 것만으로도 엄청난 기여라는 점을 알아주세요!질문은 개발 커뮤니티에 피드백을 주는 가장 직접적이면서도 쉬운 방법이고, "
+"무엇보다, 질문하는 것만으로도 엄청난 기여라는 점을 알아주세요! 질문은 개발 커뮤니티에 피드백을 주는 가장 직접적이면서도 쉬운 방법이고, "
 "아이디어의 원천도 됩니다."
 
 #: ../../index.rst:125

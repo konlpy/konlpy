@@ -126,10 +126,6 @@ msgstr ""
 msgid "Converts a unicode character to hex."
 msgstr ""
 
-#: ../../../konlpy/utils.pydocstring of konlpy.utils.concat:1
-msgid "Concatenates lines into a unified string."
-msgstr ""
-
 #: ../../../konlpy/utils.pydocstring of konlpy.utils.concordance:1
 msgid "Find concordances of a phrase in a text."
 msgstr ""
@@ -175,14 +171,6 @@ msgstr ""
 
 #: ../../../konlpy/utils.pydocstring of konlpy.utils.pprint:1
 msgid "Unicode pretty printer."
-msgstr ""
-
-#: ../../../konlpy/utils.pydocstring of konlpy.utils.preprocess:1
-msgid "Preprocesses a phrase in the following steps:."
-msgstr ""
-
-#: ../../../konlpy/utils.pydocstring of konlpy.utils.preprocess:3
-msgid ":py:func:`.concat`"
 msgstr ""
 
 #: ../../../konlpy/utils.pydocstring of konlpy.utils.read_txt:1
@@ -252,9 +240,10 @@ msgid ""
 msgstr ""
 
 #: ../../../konlpy/tag/_hannanum.pydocstring of
-#: konlpy.tag._hannanum.Hannanum:15 ../../../konlpy/tag/_kkma.pydocstring of
-#: konlpy.tag._kkma.Kkma:15 ../../../konlpy/tag/_komoran.pydocstring of
-#: konlpy.tag._komoran.Komoran:12
+#: konlpy.tag._hannanum.Hannanum:18 ../../../konlpy/tag/_kkma.pydocstring of
+#: konlpy.tag._kkma.Kkma:18 ../../../konlpy/tag/_komoran.pydocstring of
+#: konlpy.tag._komoran.Komoran:16 ../../../konlpy/tag/_twitter.pydocstring of
+#: konlpy.tag._twitter.Twitter:23
 msgid "The path of the JVM passed to :py:func:`.init_jvm`."
 msgstr ""
 
@@ -274,7 +263,11 @@ msgstr ""
 #: ../../../konlpy/tag/_hannanum.pydocstring of
 #: konlpy.tag._hannanum.Hannanum.morphs:1
 #: ../../../konlpy/tag/_kkma.pydocstring of konlpy.tag._kkma.Kkma.morphs:1
-#: ../../../konlpy/tag/_mecab.pydocstring of konlpy.tag._mecab.Mecab.morphs:1
+#: ../../../konlpy/tag/_komoran.pydocstring of
+#: konlpy.tag._komoran.Komoran.morphs:1 ../../../konlpy/tag/_mecab.pydocstring
+#: of konlpy.tag._mecab.Mecab.morphs:1
+#: ../../../konlpy/tag/_twitter.pydocstring of
+#: konlpy.tag._twitter.Twitter.morphs:1
 msgid "Parse phrase to morphemes."
 msgstr ""
 
@@ -283,6 +276,8 @@ msgstr ""
 #: of konlpy.tag._kkma.Kkma.nouns:1 ../../../konlpy/tag/_komoran.pydocstring
 #: of konlpy.tag._komoran.Komoran.nouns:1
 #: ../../../konlpy/tag/_mecab.pydocstring of konlpy.tag._mecab.Mecab.nouns:1
+#: ../../../konlpy/tag/_twitter.pydocstring of
+#: konlpy.tag._twitter.Twitter.nouns:1
 msgid "Noun extractor."
 msgstr ""
 
@@ -304,7 +299,7 @@ msgstr ""
 msgid "The number of tags. It can be either 9 or 22."
 msgstr ""
 
-#: ../../api/konlpy.tag.rst:20
+#: ../../api/konlpy.tag.rst:18
 msgid ":class:`Kkma` Class"
 msgstr ""
 
@@ -323,7 +318,7 @@ msgstr ""
 msgid "Sentence detection."
 msgstr ""
 
-#: ../../api/konlpy.tag.rst:38
+#: ../../api/konlpy.tag.rst:34
 msgid ":class:`Mecab` Class"
 msgstr ""
 
@@ -345,17 +340,17 @@ msgid ""
 ":`optional-installations`."
 msgstr ""
 
-#: ../../../konlpy/tag/_mecab.pydocstring of konlpy.tag._mecab.Mecab:18
+#: ../../../konlpy/tag/_mecab.pydocstring of konlpy.tag._mecab.Mecab:20
 msgid "The path of the MeCab-ko dictionary."
 msgstr ""
 
-#: ../../api/konlpy.tag.rst:48
+#: ../../api/konlpy.tag.rst:53
 msgid ""
 "`Korean POS tags comparison chart <https://docs.google.com/spreadsheets/d"
 "/1OGAjUvalBuX-oZvZ_-9tEfYD2gQe7hTGsgUpiiBSXI8/edit#gid=0>`_"
 msgstr ""
 
-#: ../../api/konlpy.tag.rst:50
+#: ../../api/konlpy.tag.rst:55
 msgid "Compare POS tags between several Korean analytic projects. (In Korean)"
 msgstr ""
 
@@ -376,13 +371,6 @@ msgstr ""
 #: konlpy.downloader.Downloader.download:14
 msgid ""
 "To download all packages, simply call ``download`` with the argument 'all':"
-msgstr ""
-
-#: ../../../konlpy/downloader.pydocstring of
-#: konlpy.downloader.Downloader.status:1
-msgid ""
-"Return a constant describing the local status of the given package. Status "
-"can be one of ``INSTALLED``, ``NOT_INSTALLED``, or ``STALE``."
 msgstr ""
 
 #: ../../../konlpy/downloader.pydocstring of
@@ -426,7 +414,7 @@ msgstr ""
 msgid "A list of list."
 msgstr ""
 
-#: ../../api/konlpy.tag.rst:28
+#: ../../api/konlpy.tag.rst:26
 msgid ":class:`Komoran` Class"
 msgstr ""
 
@@ -442,23 +430,82 @@ msgid ""
 "2013."
 msgstr ""
 
-#: ../../../konlpy/tag/_komoran.pydocstring of konlpy.tag._komoran.Komoran:13
+#: ../../../konlpy/tag/_komoran.pydocstring of konlpy.tag._komoran.Komoran:17
 msgid ""
 "The path of dictionary files. The KOMORAN system dictionary is loaded by "
 "default."
 msgstr ""
 
-#: ../../api/konlpy.tag.rst:12
-msgid "``Hannanum()`` is not supported on ``Windows 7`` [:issue:`7`]."
-msgstr ""
-
-#: ../../api/konlpy.tag.rst:30
-msgid "``Komoran()`` is not supported on ``Python 2 + Mac OS`` [:issue:`40`]."
-msgstr ""
-
-#: ../../api/konlpy.tag.rst:40
+#: ../../api/konlpy.tag.rst:36
 msgid "``Mecab()`` is not supported on ``Windows 7``."
 msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum.pos:6 ../../../konlpy/tag/_kkma.pydocstring
+#: of konlpy.tag._kkma.Kkma.pos:3 ../../../konlpy/tag/_komoran.pydocstring of
+#: konlpy.tag._komoran.Komoran.pos:3 ../../../konlpy/tag/_mecab.pydocstring of
+#: konlpy.tag._mecab.Mecab.pos:3
+msgid "If False, preserves eojeols."
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:44
+msgid ":class:`Twitter` Class"
+msgstr ""
+
+#: ../../../konlpy/tag/_twitter.pydocstring of konlpy.tag._twitter.Twitter:1
+msgid ""
+"Wrapper for `Twitter Korean Text <https://github.com/twitter/twitter-korean-"
+"text>`_."
+msgstr ""
+
+#: ../../../konlpy/tag/_twitter.pydocstring of konlpy.tag._twitter.Twitter:3
+msgid ""
+"Twitter Korean Text is an open source Korean tokenizer written in Scala, "
+"developed by Will Hohyon Ryu."
+msgstr ""
+
+#: ../../../konlpy/tag/_twitter.pydocstring of
+#: konlpy.tag._twitter.Twitter.phrases:1
+msgid "Phrase extractor."
+msgstr ""
+
+#: ../../../konlpy/tag/_twitter.pydocstring of
+#: konlpy.tag._twitter.Twitter.pos:1
+msgid ""
+"POS tagger. In contrast to other classes in this subpackage, this POS tagger"
+" doesn't have a `flatten` option, but has `norm` and `stem` options. Check "
+"the parameter list below."
+msgstr ""
+
+#: ../../../konlpy/tag/_twitter.pydocstring of
+#: konlpy.tag._twitter.Twitter.pos:6
+msgid "If True, normalize tokens."
+msgstr ""
+
+#: ../../../konlpy/tag/_twitter.pydocstring of
+#: konlpy.tag._twitter.Twitter.pos:7
+msgid "If True, stem tokens."
+msgstr ""
+
+#~ msgid "Concatenates lines into a unified string."
+#~ msgstr ""
+
+#~ msgid "Preprocesses a phrase in the following steps:."
+#~ msgstr ""
+
+#~ msgid ":py:func:`.concat`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Return a constant describing the local status of the given package. Status "
+#~ "can be one of ``INSTALLED``, ``NOT_INSTALLED``, or ``STALE``."
+#~ msgstr ""
+
+#~ msgid "``Hannanum()`` is not supported on ``Windows 7`` [:issue:`7`]."
+#~ msgstr ""
+
+#~ msgid "``Komoran()`` is not supported on ``Python 2 + Mac OS`` [:issue:`40`]."
+#~ msgstr ""
 
 #~ msgid "Mecab is not supported for Python 3 and Windows 7."
 #~ msgstr ""

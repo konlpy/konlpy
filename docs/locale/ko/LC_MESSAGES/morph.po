@@ -55,11 +55,11 @@ msgstr ""
 msgid "Compare POS tags between several Korean analytic projects. (In Korean)"
 msgstr "각종 한국어 형태소 분석기의 품사 태그를 비교해 보세요."
 
-#: ../../morph.rst:52
+#: ../../morph.rst:54
 msgid "Performance analysis"
 msgstr "성능 분석"
 
-#: ../../morph.rst:54
+#: ../../morph.rst:56
 msgid ""
 "The performance evaluation is replaced with result comparisons for several "
 "sample sentences."
@@ -146,13 +146,6 @@ msgstr "품사 태깅 클래스 간 비교"
 msgid "POS tagging with KoNLPy"
 msgstr "KoNLPy로 품사 태깅하기"
 
-#: ../../morph.rst:27
-msgid ""
-"Now, we do time and performation analysis for executing the ``pos`` method "
-"for each of the classes in the :doc:`api/konlpy.tag`. The experiments were "
-"carried out on a Intel i7 CPU with 4 cores, Python 2.7, and KoNLPy 0.4.0."
-msgstr "이제 :doc:`api/konlpy.tag` 에 있는 태거들의 성능을 확인해볼까요? 실험은 인텔 4개의 코어가 있는 i7 CPU, 파이썬 2.7, KoNLPy 0.4.0을 이용해 수행되었습니다."
-
 #: ../../morph.rst:30
 msgid "Time analysis"
 msgstr "시간 분석"
@@ -161,55 +154,27 @@ msgstr "시간 분석"
 msgid "*Loading time*: Class loading time, including dictionary loads."
 msgstr "로딩 시간: 사전 로딩을 포함하여 클래스를 로딩하는 시간."
 
-#: ../../morph.rst:34
-msgid ":py:class:`.Kkma`: 5.1032 *secs*"
-msgstr ""
-
-#: ../../morph.rst:35
-msgid ":py:class:`.Komoran`: 4.6852 *secs*"
-msgstr ""
-
-#: ../../morph.rst:36
-msgid ":py:class:`.Hannanum`: 0.5736 *secs*"
-msgstr ""
-
-#: ../../morph.rst:37
+#: ../../morph.rst:38
 msgid ":py:class:`.Mecab`: 0.0007 *secs*"
 msgstr ""
 
-#: ../../morph.rst:39
+#: ../../morph.rst:40
 msgid ""
 "*Execution time*: Time for executing the ``pos`` method for each class, with"
 " 100K characters."
 msgstr "실행시간: 10만 문자의 문서를 대상으로 각 클래스의 ``pos`` 메소드를 실행하는데 소요되는 시간."
 
-#: ../../morph.rst:41
-msgid ":py:class:`.Kkma`: 32.7300 *secs*"
-msgstr ""
-
-#: ../../morph.rst:42
-msgid ":py:class:`.Komoran`: 22.3639 *secs*"
-msgstr ""
-
-#: ../../morph.rst:43
-msgid ":py:class:`.Hannanum`: 9.1881 *secs*"
-msgstr ""
-
-#: ../../morph.rst:44
-msgid ":py:class:`.Mecab`: 0.3137 *secs*"
-msgstr ""
-
-#: ../../morph.rst:46
+#: ../../morph.rst:48
 msgid ""
 "If we test among a various number of characters, all classes' execution "
 "times increase in an exponential manner."
 msgstr "문자의 개수를 늘려감에 따라 모든 클래스의 실행 시간은 기하급수적으로 증가합니다."
 
-#: ../../morph.rst:56
+#: ../../morph.rst:58
 msgid "*\"아버지가방에들어가신다\"*"
 msgstr ""
 
-#: ../../morph.rst:58
+#: ../../morph.rst:60
 msgid ""
 "We can check the spacing algorithm through this example. Desirably, an "
 "analyzer would parse this sentence to \"아버지가 방에 들어가신다\" (My father enters "
@@ -218,7 +183,9 @@ msgid ""
 "uncertain terms, and defaults the whole phrase to nouns. :py:class:`.Kkma` "
 "is more confident, but gets undesirable results. For this result, "
 ":py:class:`.Mecab` shows the best results."
-msgstr "이 예시를 통해 띄어쓰기 알고리즘의 성능을 확인해볼 수 있습니다. 이상적인 경우, 이 예시에 대해서는 \"아버지 가방에 들어가신다\"로 해석하기보다는 \"아버지가 방에 들어가신다\"로 해석하는 것이 더 바람직하겠지요."
+msgstr ""
+"이 예시를 통해 띄어쓰기 알고리즘의 성능을 확인해볼 수 있습니다. 이상적인 경우, 이 예시에 대해서는 \"아버지 가방에 들어가신다\"로 "
+"해석하기보다는 \"아버지가 방에 들어가신다\"로 해석하는 것이 더 바람직하겠지요."
 
 #: ../../morph-0.csv:1 ../../morph-1.csv:1 ../../morph-2.csv:1
 #: ../../morph-3.csv:1
@@ -244,18 +211,20 @@ msgstr ""
 msgid "아버지가방에들어가신다 / NNP"
 msgstr ""
 
-#: ../../morph.rst:64
+#: ../../morph.rst:66
 msgid "*\"나는 밥을 먹는다\" vs \"하늘을 나는 자동차\"*"
 msgstr ""
 
-#: ../../morph.rst:66
+#: ../../morph.rst:68
 msgid ""
 "If we focus on \"나는\" in both sentences, we can see whether an analyzer "
 "considers the context of words. \"나는\" in the first sentence should be \"나/N"
 " + 는/J\", and in the second sentence \"나(-ㄹ다)/V + 는/E\". :py:`.Kkma` "
 "properly understands the latter \"나는\" as a verb, wheras the rest observe it"
 " as nouns."
-msgstr "두 문장에서 \"나는\"에 집중해서 본다면, 각 분석기가 태깅할 때 단어의 의미와 주변부를 잘 살피는지 확인해볼 수 있습니다. 첫번째 문장에서 \"나는\"은 \"나/N + 는/J\", 두번째 문장에서는 \"나(-ㄹ다)/V + 는/E\"이 되는 것이 바람직합니다."
+msgstr ""
+"두 문장에서 \"나는\"에 집중해서 본다면, 각 분석기가 태깅할 때 단어의 의미와 주변부를 잘 살피는지 확인해볼 수 있습니다. 첫번째 "
+"문장에서 \"나는\"은 \"나/N + 는/J\", 두번째 문장에서는 \"나(-ㄹ다)/V + 는/E\"이 되는 것이 바람직합니다."
 
 #: ../../morph-1.csv:1 ../../morph-2.csv:1
 msgid "나 / N"
@@ -331,11 +300,11 @@ msgstr ""
 msgid "자동차 / NNG"
 msgstr ""
 
-#: ../../morph.rst:76
+#: ../../morph.rst:78
 msgid "*\"아이폰 기다리다 지쳐 애플공홈에서 언락폰질러버렸다 6+ 128기가실버ㅋ\"*"
 msgstr ""
 
-#: ../../morph.rst:78
+#: ../../morph.rst:80
 msgid ""
 "How do each of the analyzers deal with slang, or terms that are not included"
 " in the dictionary?"
@@ -460,10 +429,6 @@ msgid "6 / SN"
 msgstr ""
 
 #: ../../morph-3.csv:1
-msgid "/ SY"
-msgstr ""
-
-#: ../../morph-3.csv:1
 msgid "버리 / VXV"
 msgstr ""
 
@@ -495,10 +460,6 @@ msgstr ""
 msgid "실버 / NNP"
 msgstr ""
 
-#: ../../morph-3.csv:1 ../../morph-3.csv:1
-msgid "/ SW"
-msgstr ""
-
 #: ../../morph-3.csv:1
 msgid "ㅋ / UNKNOWN"
 msgstr ""
@@ -522,6 +483,214 @@ msgstr ""
 #: ../../morph-3.csv:1
 msgid "ㅋ / UN"
 msgstr ""
+
+#: ../../morph.rst:27
+msgid ""
+"Now, we do time and performation analysis for executing the ``pos`` method "
+"for each of the classes in the :doc:`api/konlpy.tag`. The experiments were "
+"carried out on a Intel i7 CPU with 4 cores, Python 2.7, and KoNLPy 0.4.1."
+msgstr ""
+
+#: ../../morph.rst:34
+msgid ":py:class:`.Kkma`: 5.6988 *secs*"
+msgstr ""
+
+#: ../../morph.rst:35
+msgid ":py:class:`.Komoran`: 5.4866  *secs*"
+msgstr ""
+
+#: ../../morph.rst:36
+msgid ":py:class:`.Hannanum`: 0.6591  *secs*"
+msgstr ""
+
+#: ../../morph.rst:37
+msgid ":py:class:`.Twitter`: 1.4870 *secs*"
+msgstr ""
+
+#: ../../morph.rst:42
+msgid ":py:class:`.Kkma`: 35.7163 *secs*"
+msgstr ""
+
+#: ../../morph.rst:43
+msgid ":py:class:`.Komoran`: 25.6008 *secs*"
+msgstr ""
+
+#: ../../morph.rst:44
+msgid ":py:class:`.Hannanum`: 8.8251 *secs*"
+msgstr ""
+
+#: ../../morph.rst:45
+msgid ":py:class:`.Twitter`: 2.4714 *secs*"
+msgstr ""
+
+#: ../../morph.rst:46
+msgid ":py:class:`.Mecab`: 0.2838 *secs*"
+msgstr ""
+
+#: ../../morph-0.csv:1 ../../morph-1.csv:1 ../../morph-2.csv:1
+#: ../../morph-3.csv:1
+msgid "Twitter"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "아버지 / Noun"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "가방 / Noun"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "에 / Josa"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "들어가신 / Verb"
+msgstr ""
+
+#: ../../morph-0.csv:1 ../../morph-1.csv:1 ../../morph-3.csv:1
+#: ../../morph-3.csv:1
+msgid "다 / Eomi"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-2.csv:1
+msgid "나 / Noun"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-2.csv:1
+msgid "는 / Josa"
+msgstr ""
+
+#: ../../morph-1.csv:1
+msgid "밥 / Noun"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-2.csv:1
+msgid "을 / Josa"
+msgstr ""
+
+#: ../../morph-1.csv:1
+msgid "먹는 / Verb"
+msgstr ""
+
+#: ../../morph-2.csv:1
+msgid "하늘 / Noun"
+msgstr ""
+
+#: ../../morph-2.csv:1
+msgid "자동차 / Noun"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "아이폰 / Noun"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "기다리 / Verb"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "지쳐 / Verb"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "애플 / Noun"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "공홈 / Noun"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "에서 / Josa"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "언락폰 / Noun"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "질 / Verb"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "러 / Eomi"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "버렸 / Verb"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "6 / Number"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "\\+ / SY"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "\\+ / Punctuation"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "128 / Number"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "기 / Noun"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "가 / Josa"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "실버 / Noun"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "\\+ / SW"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "ㅋ / KoreanParticle"
+msgstr ""
+
+#~ msgid ""
+#~ "Now, we do time and performation analysis for executing the ``pos`` method "
+#~ "for each of the classes in the :doc:`api/konlpy.tag`. The experiments were "
+#~ "carried out on a Intel i7 CPU with 4 cores, Python 2.7, and KoNLPy 0.4.0."
+#~ msgstr ""
+#~ "이제 :doc:`api/konlpy.tag` 에 있는 태거들의 성능을 확인해볼까요? 실험은 인텔 4개의 코어가 있는 i7 CPU, 파이썬"
+#~ " 2.7, KoNLPy 0.4.0을 이용해 수행되었습니다."
+
+#~ msgid ":py:class:`.Kkma`: 5.1032 *secs*"
+#~ msgstr ""
+
+#~ msgid ":py:class:`.Komoran`: 4.6852 *secs*"
+#~ msgstr ""
+
+#~ msgid ":py:class:`.Hannanum`: 0.5736 *secs*"
+#~ msgstr ""
+
+#~ msgid ":py:class:`.Kkma`: 32.7300 *secs*"
+#~ msgstr ""
+
+#~ msgid ":py:class:`.Komoran`: 22.3639 *secs*"
+#~ msgstr ""
+
+#~ msgid ":py:class:`.Hannanum`: 9.1881 *secs*"
+#~ msgstr ""
+
+#~ msgid ":py:class:`.Mecab`: 0.3137 *secs*"
+#~ msgstr ""
+
+#~ msgid "/ SY"
+#~ msgstr ""
+
+#~ msgid "/ SW"
+#~ msgstr ""
 
 #~ msgid "Time analysis [1]_"
 #~ msgstr "시간 분석 [1]_"
