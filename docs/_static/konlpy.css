@@ -115,3 +115,19 @@ table.footnote td.label {
 #disqus_thread {
     margin-top: 50px;
 }
+
+#related-pages.affix-top {
+    position: static;
+    margin-top: 0px;
+    width: 200px;
+}
+
+#related-pages.affix {
+    position: fixed;
+    top: 0px;
+    width: 200px;
+}
+
+.affix, .affix-top {
+   position: static;
+}
