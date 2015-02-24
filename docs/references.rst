@@ -110,5 +110,4 @@ General NLP resources
 - `Microsoft NLP group (Redmond) <http://research.microsoft.com/en-us/groups/nlp/>`_
 - `부산대 NLP 관련사이트 목록 <http://borame.cs.pusan.ac.kr/ai_home/site/site1.html>`_
 - `Sejong semantic search system <http://sejong21.org>`_
-- `한국어학회 <http://koling.org>`_
-- 한글 및 한국어 정보처리 학술대회
+- `한글 및 한국어 정보처리 학술대회 <http://cs.kangwon.ac.kr/~hclt2014/>`_
