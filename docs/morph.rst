@@ -26,8 +26,8 @@ Comparison between POS tagging classes
 
 Now, we do time and performation analysis for executing the ``pos`` method for each of the classes in the :doc:`api/konlpy.tag`. The experiments were carried out on a Intel i7 CPU with 4 cores, Python 2.7, and KoNLPy 0.4.1.
 
-Time analysis
-'''''''''''''
+Time analysis [#]_
+''''''''''''''''''
 
 1. *Loading time*: Class loading time, including dictionary loads.
 
@@ -82,3 +82,5 @@ The performance evaluation is replaced with result comparisons for several sampl
 .. csv-table::
     :header-rows: 1
     :file: morph-3.csv
+
+.. [#] Please note that these are comparisons among KoNLPy classes, and not the original distributions.

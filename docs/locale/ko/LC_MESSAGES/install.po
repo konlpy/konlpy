@@ -15,15 +15,15 @@ msgstr ""
 msgid "Installation"
 msgstr "설치하기"
 
-#: ../../install.rst:50
+#: ../../install.rst:49
 msgid "Windows"
 msgstr "윈도우"
 
-#: ../../install.rst:16 ../../install.rst:35 ../../install.rst:62
+#: ../../install.rst:16 ../../install.rst:35 ../../install.rst:61
 msgid "From the command prompt, install KoNLPy."
 msgstr "명령 프롬프트로 KoNLPy 설치하기"
 
-#: ../../install.rst:72
+#: ../../install.rst:71
 msgid "`win-amd64` for 64-bit Windows, `win32` for 32-bit Windows."
 msgstr "64비트 윈도우에는 `win-amd64`, 32비트 윈도우에는 `win32` 라고 쓰여진 파일을 사용합니다."
 
@@ -55,7 +55,7 @@ msgstr "MeCab 설치하기 (*선택사항*)"
 msgid "Mac OS"
 msgstr "맥 OS"
 
-#: ../../install.rst:73
+#: ../../install.rst:72
 msgid ""
 "Having MinGW/MSYS or Cygwin installed may be more convenient. If you plan to"
 " use Git, `Git BASH <https://msysgit.github.io/>`_ is another good option. "
@@ -66,7 +66,7 @@ msgstr ""
 "<https://msysgit.github.io>`_ 가 좋은 옵션일 수 있습니다. 또는 `7zip <http://7-zip.org>`_"
 " 을 이용해 `tar` 파일의 압축을 푸실 수 있습니다."
 
-#: ../../install.rst:53
+#: ../../install.rst:52
 msgid ""
 "Set `JAVA_HOME "
 "<http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html>`_."
@@ -79,45 +79,44 @@ msgstr ""
 msgid "Ubuntu"
 msgstr "우분투"
 
-#: ../../install.rst:45
-msgid "Install ``wget``"
-msgstr "``wget`` 설치하기"
-
-#: ../../install.rst:45
-msgid ""
-"Method 1. Install `Homebrew <http://brew.sh/>`_ then execute ``brew install "
-"wget``"
-msgstr "방법 1. `Homebrew <http://brew.sh'>`_ 를 설치한 후 ``brew install wget`` 을 실행"
-
-#: ../../install.rst:46
-msgid ""
-"Method 2: `Install wget without Homebrew <http://osxdaily.com/2012/05/22"
-"/install-wget-mac-os-x/>`_"
-msgstr "방법 2: `Homebrew 없이 wget 설치 <http://osxdaily.com/2012/05/22"
-"/install-wget-mac-os-x/>`_"
-
-
-#: ../../install.rst:47
-msgid ""
-"``bash <(curl -s "
-"https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)``"
-msgstr ""
-
-#: ../../install.rst:70
+#: ../../install.rst:69
 msgid "KoNLPy's ``Mecab()`` class is not supported on Windows machines."
 msgstr "KoNLPy의 ``Mecab()`` 클래스는 윈도우에서 지원되지 않습니다."
 
-#: ../../install.rst:52
+#: ../../install.rst:51
 msgid "Do you have Java 1.7+ installed?"
 msgstr "자바 1.7+이 설치되어 있나요?"
 
-#: ../../install.rst:54
+#: ../../install.rst:53
 msgid ""
 "3. Download and install `JPype1 "
 "<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ (>=0.5.7). [#]_ You may"
 " have to upgrade your `pip` version in order to install the downloaded "
 "`.whl` file."
-msgstr "`JPype1 <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ (>=0.5.7)을 다운로드 받고 설치. 다운 받은 `.whl` 파일을 설치하기 위해서는 `pip`을 업그레이드 해야할 수 있습니다."
+msgstr ""
+"`JPype1 <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ (>=0.5.7)을 다운로드"
+" 받고 설치. 다운 받은 `.whl` 파일을 설치하기 위해서는 `pip`을 업그레이드 해야할 수 있습니다."
+
+#~ msgid "Install ``wget``"
+#~ msgstr "``wget`` 설치하기"
+
+#~ msgid ""
+#~ "Method 1. Install `Homebrew <http://brew.sh/>`_ then execute ``brew install "
+#~ "wget``"
+#~ msgstr ""
+#~ "방법 1. `Homebrew <http://brew.sh'>`_ 를 설치한 후 ``brew install wget`` 을 실행"
+
+#~ msgid ""
+#~ "Method 2: `Install wget without Homebrew <http://osxdaily.com/2012/05/22"
+#~ "/install-wget-mac-os-x/>`_"
+#~ msgstr ""
+#~ "방법 2: `Homebrew 없이 wget 설치 <http://osxdaily.com/2012/05/22/install-wget-mac-"
+#~ "os-x/>`_"
+
+#~ msgid ""
+#~ "``bash <(curl -s "
+#~ "https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)``"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "2. Download and install `JPype1 "

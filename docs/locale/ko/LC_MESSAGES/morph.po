@@ -146,10 +146,6 @@ msgstr "품사 태깅 클래스 간 비교"
 msgid "POS tagging with KoNLPy"
 msgstr "KoNLPy로 품사 태깅하기"
 
-#: ../../morph.rst:30
-msgid "Time analysis"
-msgstr "시간 분석"
-
 #: ../../morph.rst:32
 msgid "*Loading time*: Class loading time, including dictionary loads."
 msgstr "로딩 시간: 사전 로딩을 포함하여 클래스를 로딩하는 시간."
@@ -214,17 +210,6 @@ msgstr ""
 #: ../../morph.rst:66
 msgid "*\"나는 밥을 먹는다\" vs \"하늘을 나는 자동차\"*"
 msgstr ""
-
-#: ../../morph.rst:68
-msgid ""
-"If we focus on \"나는\" in both sentences, we can see whether an analyzer "
-"considers the context of words. \"나는\" in the first sentence should be \"나/N"
-" + 는/J\", and in the second sentence \"나(-ㄹ다)/V + 는/E\". :py:`.Kkma` "
-"properly understands the latter \"나는\" as a verb, wheras the rest observe it"
-" as nouns."
-msgstr ""
-"두 문장에서 \"나는\"에 집중해서 본다면, 각 분석기가 태깅할 때 단어의 의미와 주변부를 잘 살피는지 확인해볼 수 있습니다. 첫번째 "
-"문장에서 \"나는\"은 \"나/N + 는/J\", 두번째 문장에서는 \"나(-ㄹ다)/V + 는/E\"이 되는 것이 바람직합니다."
 
 #: ../../morph-1.csv:1 ../../morph-2.csv:1
 msgid "나 / N"
@@ -490,6 +475,8 @@ msgid ""
 "for each of the classes in the :doc:`api/konlpy.tag`. The experiments were "
 "carried out on a Intel i7 CPU with 4 cores, Python 2.7, and KoNLPy 0.4.1."
 msgstr ""
+"이제 :doc:`api/konlpy.tag` 에 있는 태거들의 성능을 확인해볼까요? 실험은 인텔 4개의 코어가 있는 i7 CPU, 파이썬"
+" 2.7, KoNLPy 0.4.1을 이용해 수행되었습니다."
 
 #: ../../morph.rst:34
 msgid ":py:class:`.Kkma`: 5.6988 *secs*"
@@ -656,6 +643,39 @@ msgstr ""
 #: ../../morph-3.csv:1
 msgid "ㅋ / KoreanParticle"
 msgstr ""
+
+#: ../../morph.rst:68
+msgid ""
+"If we focus on \"나는\" in both sentences, we can see whether an analyzer "
+"considers the context of words. \"나는\" in the first sentence should be \"나/N"
+" + 는/J\", and in the second sentence \"나(-ㄹ다)/V + 는/E\". :py:class:`.Kkma` "
+"properly understands the latter \"나는\" as a verb, wheras the rest observe it"
+" as nouns."
+msgstr "두 문장에서 \"나는\"에 집중해서 본다면, 각 분석기가 태깅할 때 단어의 의미와 주변부를 잘 살피는지 확인해볼 수 있습니다. 첫번째 "
+"문장에서 \"나는\"은 \"나/N + 는/J\", 두번째 문장에서는 \"나(-ㄹ다)/V + 는/E\"이 되는 것이 바람직합니다."
+
+#: ../../morph.rst:30
+msgid "Time analysis [#]_"
+msgstr ""
+
+#: ../../morph.rst:86
+msgid ""
+"Please note that these are comparisons among KoNLPy classes, and not the "
+"original distributions."
+msgstr "각 형태소 분석기 배포판이 아닌, KoNLPy 내부 모듈 간 비교임에 유의해주시기 바랍니다."
+
+#~ msgid "Time analysis"
+#~ msgstr "시간 분석"
+
+#~ msgid ""
+#~ "If we focus on \"나는\" in both sentences, we can see whether an analyzer "
+#~ "considers the context of words. \"나는\" in the first sentence should be \"나/N"
+#~ " + 는/J\", and in the second sentence \"나(-ㄹ다)/V + 는/E\". :py:`.Kkma` "
+#~ "properly understands the latter \"나는\" as a verb, wheras the rest observe it"
+#~ " as nouns."
+#~ msgstr ""
+#~ "두 문장에서 \"나는\"에 집중해서 본다면, 각 분석기가 태깅할 때 단어의 의미와 주변부를 잘 살피는지 확인해볼 수 있습니다. 첫번째 "
+#~ "문장에서 \"나는\"은 \"나/N + 는/J\", 두번째 문장에서는 \"나(-ㄹ다)/V + 는/E\"이 되는 것이 바람직합니다."
 
 #~ msgid ""
 #~ "Now, we do time and performation analysis for executing the ``pos`` method "

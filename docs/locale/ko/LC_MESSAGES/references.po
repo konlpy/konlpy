@@ -250,7 +250,7 @@ msgstr ""
 
 #: ../../references.rst:106
 msgid "General NLP resources"
-msgstr ""
+msgstr "NLP 관련 사이트"
 
 #: ../../references.rst:108
 msgid ""
@@ -277,10 +277,6 @@ msgstr ""
 msgid "`Sejong semantic search system <http://sejong21.org>`_"
 msgstr ""
 
-#: ../../references.rst:113
-msgid "`한국어학회 <http://koling.org>`_"
-msgstr ""
-
 #: ../../references.rst:49
 msgid "`KoNLPy <http://konlpy.org>`_ (2014) :license:`GPL v3`"
 msgstr ""
@@ -288,10 +284,6 @@ msgstr ""
 #: ../../references.rst:101
 msgid "40,075 test documents for text categorization (88MB)"
 msgstr "텍스트 분류를 위한 40,075 테스트 문서 (88MB)"
-
-#: ../../references.rst:114
-msgid "한글 및 한국어 정보처리 학술대회"
-msgstr ""
 
 #: ../../references.rst:17
 msgid ""
@@ -360,6 +352,16 @@ msgstr ""
 #: ../../references.rst:86
 msgid "Package for attaching particles (josa) in sentences"
 msgstr ""
+
+#: ../../references.rst:113
+msgid "`한글 및 한국어 정보처리 학술대회 <http://cs.kangwon.ac.kr/~hclt2014/>`_"
+msgstr ""
+
+#~ msgid "`한국어학회 <http://koling.org>`_"
+#~ msgstr ""
+
+#~ msgid "한글 및 한국어 정보처리 학술대회"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "`KoreanParser <http://semanticweb.kaist.ac.kr/home/index.php/KoreanParser>`_"
