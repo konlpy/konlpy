@@ -154,8 +154,8 @@ html_style = 'konlpy.css'
 
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
-    'index': ['github-banner.html', 'sidebar-header.html', 'localtoc.html', 'sidebar-footer.html', 'searchbox.html'],
-    '**'   : ['github-banner.html', 'localtoc.html', 'relations.html', 'searchbox.html']
+    'index': ['github-banner.html', 'sidebar-header.html', 'localtoc.html', 'translations.html', 'sidebar-footer.html', 'searchbox.html'],
+    '**'   : ['github-banner.html', 'localtoc.html', 'translations.html', 'relations.html', 'searchbox.html']
 }
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
