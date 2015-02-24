@@ -20,12 +20,6 @@ os=$(uname)
 if [ $os == "Linux" ]; then
     echo "Installing MeCab-ko"
 elif [ $os == "Darwin" ]; then
-    wgetpath=`command -v wget`
-    if [ ! -x $wgetpath ]; then
-        echo "Installing wget"
-        echo "You must install wget first."
-        exit 0
-    fi
     echo "Installing MeCab-ko"
 else
     echo "This script does not support this OS."
@@ -33,10 +27,9 @@ else
     exit 0
 fi
 
-
 # install mecab-ko
 cd /tmp
-wget https://bitbucket.org/eunjeon/mecab-ko/downloads/mecab-0.996-ko-0.9.1.tar.gz
+curl -LO https://bitbucket.org/eunjeon/mecab-ko/downloads/mecab-0.996-ko-0.9.1.tar.gz
 tar zxfv mecab-0.996-ko-0.9.1.tar.gz
 cd mecab-0.996-ko-0.9.1
 ./configure
@@ -46,7 +39,7 @@ sudo make install
 
 # install mecab-ko-dic
 cd /tmp
-wget https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-1.6.1-20140814.tar.gz
+curl -LO https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-1.6.1-20140814.tar.gz
 tar zxfv mecab-ko-dic-1.6.1-20140814.tar.gz
 cd mecab-ko-dic-1.6.1-20140814
 ./configure

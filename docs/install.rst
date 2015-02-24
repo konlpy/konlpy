@@ -41,10 +41,9 @@ Mac OS
 
 2. Install MeCab (*optional*)
 
-    1. Install ``wget``
-        - Method 1. Install `Homebrew <http://brew.sh/>`_ then execute ``brew install wget``
-        - Method 2: `Install wget without Homebrew <http://osxdaily.com/2012/05/22/install-wget-mac-os-x/>`_
-    2. ``bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)``
+.. sourcecode:: bash
+
+    $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
 
 Windows
 -------
