@@ -1,6 +1,13 @@
 Change logs
 ===========
 
+`Version 0.4.2 <https://github.com/konlpy/konlpy/releases/tag/v0.4.2>`_
+--------------------------------------------------------------------
+
+Released on Feb 25, 2015.
+
+- Update Korean documents (i.e., include missing .mo files)
+
 `Version 0.4.1 <https://github.com/konlpy/konlpy/releases/tag/v0.4.1>`_
 --------------------------------------------------------------------
 
