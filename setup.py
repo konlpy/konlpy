@@ -49,6 +49,7 @@ KoNLPy is not just to create another, but to unify and build upon their shoulder
         'Development Status :: 4 - Beta',
         'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
         ],
+    license='GPL v3+',
     packages=find_packages(),
     package_data={'konlpy': [
         'data/*/*/*.txt',
