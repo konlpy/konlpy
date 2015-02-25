@@ -9,16 +9,22 @@
 # 7. Document update at RTD
 #
 
+check:
+	check-manifest
+	pyroma dist/konlpy-*tar.gz
+
 testpypi:
 	./reinstall
 	python setup.py register -r pypitest
 	python setup.py sdist --formats=gztar,zip upload -r pypitest
+	python setup.py bdist_wheel upload -r pypitest
 	pip install -i https://testpypi.python.org/pypi konlpy --upgrade
 
 pypi:
 	./reinstall
 	python setup.py register -r pypi
 	python setup.py sdist --formats=gztar,zip upload -r pypi
+	python setup.py bdist_wheel upload -r pypi
 	pip install konlpy --upgrade
 
 jcc:
