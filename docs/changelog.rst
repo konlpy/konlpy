@@ -7,6 +7,7 @@ Change logs
 Released on Feb 25, 2015.
 
 - Added :py:class:`.tag.Twitter`
+- Added wheel files to pypi [:issue:`48`]
 - Fixed bash script syntax error [:issue:`42` by :committer:`re4lfl0w`]
 - Fixed pip3 installation error [:issue:`43`]
 - Include Komoran dictionaries in package [:commit:`796c156`]
