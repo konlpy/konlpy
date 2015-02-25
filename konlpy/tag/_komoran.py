@@ -86,7 +86,7 @@ class Komoran():
         try:
             self.jki = KomoranInterfaceJavaClass()
         except TypeError: # Package kr.lucypark.komoran.KomoranInterface is not Callable
-            raise IOError("Please download komoran-dic: `konlpy.download('komoran-dic')`")
+            raise IOError("Cannot access komoran-dic. Please leave an issue at https://github.com/konlpy/konlpy/issues")
 
         if dicpath:
             self.dicpath = dicpath

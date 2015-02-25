@@ -9,6 +9,7 @@ Released on Feb 25, 2015.
 - Added :py:class:`.tag.Twitter`
 - Fixed bash script syntax error [:issue:`42` by :committer:`re4lfl0w`]
 - Fixed pip3 installation error [:issue:`43`]
+- Include Komoran dictionaries in package [:commit:`796c156`]
 
 `Version 0.4.0 <https://github.com/konlpy/konlpy/releases/tag/v0.4.0>`_
 --------------------------------------------------------------------
