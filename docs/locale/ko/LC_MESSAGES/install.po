@@ -19,11 +19,11 @@ msgstr "설치하기"
 msgid "Windows"
 msgstr "윈도우"
 
-#: ../../install.rst:16 ../../install.rst:35 ../../install.rst:61
+#: ../../install.rst:16 ../../install.rst:35 ../../install.rst:60
 msgid "From the command prompt, install KoNLPy."
 msgstr "명령 프롬프트로 KoNLPy 설치하기"
 
-#: ../../install.rst:71
+#: ../../install.rst:70
 msgid "`win-amd64` for 64-bit Windows, `win32` for 32-bit Windows."
 msgstr "64비트 윈도우에는 `win-amd64`, 32비트 윈도우에는 `win32` 라고 쓰여진 파일을 사용합니다."
 
@@ -55,7 +55,7 @@ msgstr "MeCab 설치하기 (*선택사항*)"
 msgid "Mac OS"
 msgstr "맥 OS"
 
-#: ../../install.rst:72
+#: ../../install.rst:71
 msgid ""
 "Having MinGW/MSYS or Cygwin installed may be more convenient. If you plan to"
 " use Git, `Git BASH <https://msysgit.github.io/>`_ is another good option. "
@@ -79,148 +79,18 @@ msgstr ""
 msgid "Ubuntu"
 msgstr "우분투"
 
-#: ../../install.rst:69
+#: ../../install.rst:68
 msgid "KoNLPy's ``Mecab()`` class is not supported on Windows machines."
 msgstr "KoNLPy의 ``Mecab()`` 클래스는 윈도우에서 지원되지 않습니다."
 
 #: ../../install.rst:51
 msgid "Do you have Java 1.7+ installed?"
-msgstr "자바 1.7+이 설치되어 있나요?"
+msgstr "Java 1.7+이 설치되어 있나요?"
 
 #: ../../install.rst:53
 msgid ""
-"3. Download and install `JPype1 "
-"<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ (>=0.5.7). [#]_ You may"
-" have to upgrade your `pip` version in order to install the downloaded "
-"`.whl` file."
-msgstr ""
-"`JPype1 <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ (>=0.5.7)을 다운로드"
-" 받고 설치. 다운 받은 `.whl` 파일을 설치하기 위해서는 `pip`을 업그레이드 해야할 수 있습니다."
-
-#~ msgid "Install ``wget``"
-#~ msgstr "``wget`` 설치하기"
-
-#~ msgid ""
-#~ "Method 1. Install `Homebrew <http://brew.sh/>`_ then execute ``brew install "
-#~ "wget``"
-#~ msgstr ""
-#~ "방법 1. `Homebrew <http://brew.sh'>`_ 를 설치한 후 ``brew install wget`` 을 실행"
-
-#~ msgid ""
-#~ "Method 2: `Install wget without Homebrew <http://osxdaily.com/2012/05/22"
-#~ "/install-wget-mac-os-x/>`_"
-#~ msgstr ""
-#~ "방법 2: `Homebrew 없이 wget 설치 <http://osxdaily.com/2012/05/22/install-wget-mac-"
-#~ "os-x/>`_"
-
-#~ msgid ""
-#~ "``bash <(curl -s "
-#~ "https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)``"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "2. Download and install `JPype1 "
-#~ "<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ (>=0.5.7). [#]_ You may"
-#~ " have to upgrade your `pip` version in order to install the downloaded "
-#~ "`.whl` file."
-#~ msgstr ""
-#~ "2. `JPype1(>=0.5.7)를 다운받고 "
-#~ "<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ 설치하기. 다운받으신 `.whl` 파일을 "
-#~ "설치하기 위해서는 아래와 같이 `pip` 의 버젼을 업그레이드 해야할 수 있습니다."
-
-#~ msgid ""
-#~ "Would you still like to try installing MeCab-ko to your Windows machine? "
-#~ "Refer to this blog post by Kim YungYi: `mecab-ko 윈도우에서 빌드하기 "
-#~ "<https://yungyikim.atlassian.net/wiki/pages/viewpage.action?pageId=2916362>`_"
-#~ " (In Korean)."
-#~ msgstr ""
-
-#~ msgid "``Mecab()`` is not supported on Windows machines."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Would you like to try installing MeCab-ko to your Windows machine? Refer to "
-#~ "this blog post by Kim YungYi: `mecab-ko 윈도우에서 빌드하기 "
-#~ "<https://yungyikim.atlassian.net/wiki/pages/viewpage.action?pageId=2916362>`_"
-#~ " (In Korean)."
-#~ msgstr ""
-
-#~ msgid "`mecab-ko <https://bitbucket.org/eunjeon/mecab-ko/downloads>`_"
-#~ msgstr "`mecab-ko <https://bitbucket.org/eunjeon/mecab-ko/downloads>`_"
-
-#~ msgid "`mecab-ko-dic <https://bitbucket.org/eunjeon/mecab-ko-dic/downloads>`_"
-#~ msgstr ""
-#~ "`mecab-ko-dic <https://bitbucket.org/eunjeon/mecab-ko-dic/downloads>`_"
-
-#~ msgid ""
-#~ "Download, extract [#]_, and install the most recent version of MeCab from "
-#~ "the following links (*optional*):"
-#~ msgstr "아래의 링크에서 MeCab의 가장 최신 버젼을 다운받고 압축을 푼다 (*선택사항*) [#]_:"
-
-#~ msgid ""
-#~ "`mecab-python <https://bitbucket.org/eunjeon/mecab-python-0.996/downloads>`_"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Are you having trouble installing MeCab-ko to your Windows machine? Refer to"
-#~ " this blog post by Kim YungYi: `mecab-ko 윈도우에서 빌드하기 "
-#~ "<https://yungyikim.atlassian.net/wiki/pages/viewpage.action?pageId=2916362>`_"
-#~ " (In Korean)."
-#~ msgstr ""
-#~ "윈도우에 MeCab-ko를 설치하는데 어려움을 겪고 계신다면 Kim YungYi님의 `mecab-ko 윈도우에서 빌드하기 "
-#~ "<https://yungyikim.atlassian.net/wiki/pages/viewpage.action?pageId=2916362>`_"
-#~ " 를 참고해주시기 바랍니다."
-
-#~ msgid "KoNLPy ``Mecab()`` is not supported on Windows machines."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "KoNLPy only supports ``Kkma()``, ``Komoran()`` on Windows machines. "
-#~ "``Mecab()``, ``Hannanum()`` are not supported."
-#~ msgstr ""
-#~ "현재 KoNLPy는 윈도우에서 ``Kkma()``, ``Komoran()`` 만 지원합니다. ``Mecab()``, "
-#~ "``Hannanum()`` 는 지원되지 않습니다."
-
-#~ msgid "Linux"
-#~ msgstr "리눅스"
-
-#~ msgid ""
-#~ "KoNLPy only supports ``Kkma()`` on Windows machines. ``Mecab()``, "
-#~ "``Komoran()``, ``Hannanum()`` are not supported."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "`mecab-python <https://code.google.com/p/mecab/downloads/list?q=python>`_"
-#~ msgstr ""
-#~ "`mecab-python <https://code.google.com/p/mecab/downloads/list?q=python>`_"
-
-#~ msgid ""
-#~ "Download and install `JPype1 "
-#~ "<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ (>=0.5.7) [#]_"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Download and install `jpype "
-#~ "<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ [#]_"
-#~ msgstr ""
-#~ "`jpype <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ 다운로드 및 설치하기 [#]_"
-
-#~ msgid ""
-#~ "(Optional) Download, extract [#]_, and install the most recent version of "
-#~ "MeCab from the following links:"
-#~ msgstr "(선택사항) 아래의 링크를 클릭해서 MeCab의 가장 최신 버젼을 다운로드한 후, 압축을 풀고, 설치하기"
-
-#~ msgid ""
-#~ "Having MinGW/MSYS or Cygwin installed may be more convenient. Otherwise, you"
-#~ " can use `7zip <http://7-zip.org>`_ for the extraction of `tar` files."
-#~ msgstr ""
-#~ "애초에 MinGW/MSYS 또는 Cygwin을 설치해서 사용하거나, `7zip <http://7-zip.org>`_ 을 쓰시면 `tar`"
-#~ " 파일의 압축을 손쉽게 푸실 수 있습니다."
-
-#~ msgid ""
-#~ "`Set JAVA_HOME "
-#~ "<http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html>`_."
-#~ msgstr ""
-
-#~ msgid "Linux/Mac OS"
-#~ msgstr "리눅스/맥 OS"
+"Download and install `JPype1 (>=0.5.7) "
+"<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_. [#]_ You may have to "
+"upgrade your `pip` version in order to install the downloaded `.whl` file."
+msgstr "`JPype1 (>=0.5.7)을 다운로드 <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_"
+" 받고 설치. 다운 받은 `.whl` 파일을 설치하기 위해서는 `pip` 을 업그레이드 해야할 수 있습니다."

@@ -28,7 +28,6 @@ The result is a tree, which we can print on the console, or display graphically 
       는/Eomi)
 
     # Print noun phrases only
-    # Print noun phrases only
     만 6 세 이하
     (NP 만/Noun 6/Number 세/Noun 이하/Noun)
     초등학교 취학 전 자녀

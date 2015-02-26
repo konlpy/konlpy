@@ -57,7 +57,7 @@ The performance evaluation is replaced with result comparisons for several sampl
 
 1. *"아버지가방에들어가신다"*
 
-   We can check the spacing algorithm through this example. Desirably, an analyzer would parse this sentence to "아버지가 방에 들어가신다" (My father enters the room), rather than "아버지 가방에 들어가신다" (My father goes in the bag). :py:class:`.Hannanum` and :py:class:`.Komoran` are careful in spacing uncertain terms, and defaults the whole phrase to nouns. :py:class:`.Kkma` is more confident, but gets undesirable results. For this result, :py:class:`.Mecab` shows the best results.
+   We can check the spacing algorithm through this example. Desirably, an analyzer would parse this sentence to ``아버지가 + 방에 + 들어가신다`` (My father enters the room), rather than ``아버지 + 가방에 + 들어가신다`` (My father goes in the bag). :py:class:`.Hannanum` and :py:class:`.Komoran` are careful in spacing uncertain terms, and defaults the whole phrase to nouns. :py:class:`.Kkma` is more confident, but gets undesirable results. For this result, :py:class:`.Mecab` shows the best results.
 
 .. csv-table::
     :header-rows: 1
@@ -65,7 +65,7 @@ The performance evaluation is replaced with result comparisons for several sampl
 
 2. *"나는 밥을 먹는다" vs "하늘을 나는 자동차"*
 
-   If we focus on "나는" in both sentences, we can see whether an analyzer considers the context of words. "나는" in the first sentence should be "나/N + 는/J", and in the second sentence "나(-ㄹ다)/V + 는/E". :py:class:`.Kkma` properly understands the latter "나는" as a verb, wheras the rest observe it as nouns.
+   If we focus on "나는" in both sentences, we can see whether an analyzer considers the context of words. "나는" in the first sentence should be ``나/N + 는/J``, and in the second sentence ``나(-ㄹ다)/V + 는/E``. :py:class:`.Kkma` properly understands the latter "나는" as a verb, wheras the rest observe it as nouns.
 
 .. csv-table::
     :header-rows: 1
@@ -82,5 +82,9 @@ The performance evaluation is replaced with result comparisons for several sampl
 .. csv-table::
     :header-rows: 1
     :file: morph-3.csv
+
+.. note::
+
+    If you would like to run the experiments yourself, run `this code <https://github.com/konlpy/konlpy/blob/master/docs/morph.py>`_ from your local machine.
 
 .. [#] Please note that these are comparisons among KoNLPy classes, and not the original distributions.

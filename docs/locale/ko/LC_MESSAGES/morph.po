@@ -170,19 +170,6 @@ msgstr "문자의 개수를 늘려감에 따라 모든 클래스의 실행 시�
 msgid "*\"아버지가방에들어가신다\"*"
 msgstr ""
 
-#: ../../morph.rst:60
-msgid ""
-"We can check the spacing algorithm through this example. Desirably, an "
-"analyzer would parse this sentence to \"아버지가 방에 들어가신다\" (My father enters "
-"the room), rather than \"아버지 가방에 들어가신다\" (My father goes in the bag). "
-":py:class:`.Hannanum` and :py:class:`.Komoran` are careful in spacing "
-"uncertain terms, and defaults the whole phrase to nouns. :py:class:`.Kkma` "
-"is more confident, but gets undesirable results. For this result, "
-":py:class:`.Mecab` shows the best results."
-msgstr ""
-"이 예시를 통해 띄어쓰기 알고리즘의 성능을 확인해볼 수 있습니다. 이상적인 경우, 이 예시에 대해서는 \"아버지 가방에 들어가신다\"로 "
-"해석하기보다는 \"아버지가 방에 들어가신다\"로 해석하는 것이 더 바람직하겠지요."
-
 #: ../../morph-0.csv:1 ../../morph-1.csv:1 ../../morph-2.csv:1
 #: ../../morph-3.csv:1
 msgid "Hannanum"
@@ -475,7 +462,7 @@ msgid ""
 "for each of the classes in the :doc:`api/konlpy.tag`. The experiments were "
 "carried out on a Intel i7 CPU with 4 cores, Python 2.7, and KoNLPy 0.4.1."
 msgstr ""
-"이제 :doc:`api/konlpy.tag` 에 있는 태거들의 성능을 확인해볼까요? 실험은 인텔 4개의 코어가 있는 i7 CPU, 파이썬"
+"이제 :doc:`api/konlpy.tag` 에 있는 태거들의 성능을 확인해볼까요? 실험은 4개의 코어가 있는 인텔 i7 CPU, 파이썬"
 " 2.7, KoNLPy 0.4.1을 이용해 수행되었습니다."
 
 #: ../../morph.rst:34
@@ -644,322 +631,41 @@ msgstr ""
 msgid "ㅋ / KoreanParticle"
 msgstr ""
 
-#: ../../morph.rst:68
-msgid ""
-"If we focus on \"나는\" in both sentences, we can see whether an analyzer "
-"considers the context of words. \"나는\" in the first sentence should be \"나/N"
-" + 는/J\", and in the second sentence \"나(-ㄹ다)/V + 는/E\". :py:class:`.Kkma` "
-"properly understands the latter \"나는\" as a verb, wheras the rest observe it"
-" as nouns."
-msgstr "두 문장에서 \"나는\"에 집중해서 본다면, 각 분석기가 태깅할 때 단어의 의미와 주변부를 잘 살피는지 확인해볼 수 있습니다. 첫번째 "
-"문장에서 \"나는\"은 \"나/N + 는/J\", 두번째 문장에서는 \"나(-ㄹ다)/V + 는/E\"이 되는 것이 바람직합니다."
-
 #: ../../morph.rst:30
 msgid "Time analysis [#]_"
 msgstr ""
 
-#: ../../morph.rst:86
+#: ../../morph.rst:90
 msgid ""
 "Please note that these are comparisons among KoNLPy classes, and not the "
 "original distributions."
 msgstr "각 형태소 분석기 배포판이 아닌, KoNLPy 내부 모듈 간 비교임에 유의해주시기 바랍니다."
 
-#~ msgid "Time analysis"
-#~ msgstr "시간 분석"
-
-#~ msgid ""
-#~ "If we focus on \"나는\" in both sentences, we can see whether an analyzer "
-#~ "considers the context of words. \"나는\" in the first sentence should be \"나/N"
-#~ " + 는/J\", and in the second sentence \"나(-ㄹ다)/V + 는/E\". :py:`.Kkma` "
-#~ "properly understands the latter \"나는\" as a verb, wheras the rest observe it"
-#~ " as nouns."
-#~ msgstr ""
-#~ "두 문장에서 \"나는\"에 집중해서 본다면, 각 분석기가 태깅할 때 단어의 의미와 주변부를 잘 살피는지 확인해볼 수 있습니다. 첫번째 "
-#~ "문장에서 \"나는\"은 \"나/N + 는/J\", 두번째 문장에서는 \"나(-ㄹ다)/V + 는/E\"이 되는 것이 바람직합니다."
-
-#~ msgid ""
-#~ "Now, we do time and performation analysis for executing the ``pos`` method "
-#~ "for each of the classes in the :doc:`api/konlpy.tag`. The experiments were "
-#~ "carried out on a Intel i7 CPU with 4 cores, Python 2.7, and KoNLPy 0.4.0."
-#~ msgstr ""
-#~ "이제 :doc:`api/konlpy.tag` 에 있는 태거들의 성능을 확인해볼까요? 실험은 인텔 4개의 코어가 있는 i7 CPU, 파이썬"
-#~ " 2.7, KoNLPy 0.4.0을 이용해 수행되었습니다."
-
-#~ msgid ":py:class:`.Kkma`: 5.1032 *secs*"
-#~ msgstr ""
-
-#~ msgid ":py:class:`.Komoran`: 4.6852 *secs*"
-#~ msgstr ""
-
-#~ msgid ":py:class:`.Hannanum`: 0.5736 *secs*"
-#~ msgstr ""
-
-#~ msgid ":py:class:`.Kkma`: 32.7300 *secs*"
-#~ msgstr ""
-
-#~ msgid ":py:class:`.Komoran`: 22.3639 *secs*"
-#~ msgstr ""
-
-#~ msgid ":py:class:`.Hannanum`: 9.1881 *secs*"
-#~ msgstr ""
-
-#~ msgid ":py:class:`.Mecab`: 0.3137 *secs*"
-#~ msgstr ""
-
-#~ msgid "/ SY"
-#~ msgstr ""
-
-#~ msgid "/ SW"
-#~ msgstr ""
-
-#~ msgid "Time analysis [1]_"
-#~ msgstr "시간 분석 [1]_"
-
-#~ msgid "*Loading time*: Class loading time, including dictionary loads. [2]_"
-#~ msgstr "**로딩 시간**: 사전 로딩을 포함해서, 클래스 전체를 로딩하는데 소요되는 시간. [2]_"
-
-#~ msgid ":py:class:`.Kkma`: 13.2913 *secs*"
-#~ msgstr ":py:class:`.Kkma`: 13.2913 초"
-
-#~ msgid ":py:class:`.Hannanum`: 2.2950 *secs*"
-#~ msgstr ":py:class:`.Hannanum`: 2.2950 초"
-
-#~ msgid ":py:class:`.Mecab`: 0.0002 *secs*"
-#~ msgstr ":py:class:`.Mecab`: 0.0002 초"
-
-#~ msgid ":py:class:`.Kkma`: 14.6882 *secs*"
-#~ msgstr ":py:class:`.Kkma`: 14.6882 초"
-
-#~ msgid ":py:class:`.Hannanum`: 2.6872 *secs*"
-#~ msgstr ":py:class:`.Hannanum`: 2.6872 초"
-
-#~ msgid ":py:class:`.Mecab`: 0.0594 *secs*"
-#~ msgstr ":py:class:`.Mecab`: 0.0594 초"
-
-#~ msgid ""
-#~ "If we test among a various number of characters, all classes' execution "
-#~ "times increase in an exponential manner. [4]_"
-#~ msgstr "문구의 문자 수가 증가할 때, 모든 클래스의 수행시간은 지수함수적으로 증가합니다. [4]_"
-
-#~ msgid "\"저는 대학생이구요. 소프트웨어 관련학과 입니다.\""
-#~ msgstr ""
-
-#~ msgid ":py:class:`.Kkma`"
-#~ msgstr ""
-
-#~ msgid ":py:class:`.Hannanum`"
-#~ msgstr ""
-
-#~ msgid ":py:class:`.Mecab`"
-#~ msgstr ""
-
-#~ msgid "저 / NP"
-#~ msgstr ""
-
-#~ msgid "저 / N"
-#~ msgstr ""
-
-#~ msgid "대학생 / NNG"
-#~ msgstr ""
-
-#~ msgid "대학생이구요 / N"
-#~ msgstr ""
-
-#~ msgid "대학 / NNG"
-#~ msgstr ""
-
-#~ msgid "생 / XSN"
-#~ msgstr ""
-
-#~ msgid "이 / VCP"
-#~ msgstr ""
-
-#~ msgid "구요 / EFN"
-#~ msgstr ""
-
-#~ msgid "구요 / EF"
-#~ msgstr ""
-
-#~ msgid ". / SF"
-#~ msgstr ""
-
-#~ msgid ". / S"
-#~ msgstr ""
-
-#~ msgid "소프트웨어 / NNG"
-#~ msgstr ""
-
-#~ msgid "소프트웨어 / N"
-#~ msgstr ""
-
-#~ msgid "관련 / NNG"
-#~ msgstr ""
-
-#~ msgid "관련학과 / N"
-#~ msgstr ""
-
-#~ msgid "학과 / NNG"
-#~ msgstr ""
-
-#~ msgid "일 / P"
-#~ msgstr ""
-
-#~ msgid "입니다 / VCP+EF"
-#~ msgstr ""
-
-#~ msgid "ㅂ니다 / EFN"
-#~ msgstr ""
-
-#~ msgid "ㅂ니다 / E"
-#~ msgstr ""
-
-#~ msgid "\"아버지가방에들어가신다\""
-#~ msgstr ""
-
-#~ msgid "\"140823 Tofu Music Festival 존잘러에서 귀요미들로 변신ㅋㅋ #GOT7\""
-#~ msgstr ""
-
-#~ msgid "140823 / NR"
-#~ msgstr ""
-
-#~ msgid "140823 / N"
-#~ msgstr ""
-
-#~ msgid "140823 / SN"
-#~ msgstr ""
-
-#~ msgid "Tofu / OL"
-#~ msgstr ""
-
-#~ msgid "Tofu / F"
-#~ msgstr ""
-
-#~ msgid "Tofu / SL"
-#~ msgstr ""
-
-#~ msgid "Music / OL"
-#~ msgstr ""
-
-#~ msgid "Music / F"
-#~ msgstr ""
-
-#~ msgid "Music / SL"
-#~ msgstr ""
-
-#~ msgid "Festival / OL"
-#~ msgstr ""
-
-#~ msgid "Festival / F"
-#~ msgstr ""
-
-#~ msgid "Festival / SL"
-#~ msgstr ""
-
-#~ msgid "존 / NNP"
-#~ msgstr ""
-
-#~ msgid "존잘러 / N"
-#~ msgstr ""
-
-#~ msgid "존 / VA+JX"
-#~ msgstr ""
-
-#~ msgid "잘 / MAG"
-#~ msgstr ""
-
-#~ msgid "잘 / VA"
-#~ msgstr ""
-
-#~ msgid "러 / NNP"
-#~ msgstr ""
-
-#~ msgid "러 / EC"
-#~ msgstr ""
-
-#~ msgid "귀요 / NNG"
-#~ msgstr ""
-
-#~ msgid "귀요미들 / N"
-#~ msgstr ""
-
-#~ msgid "귀요미 / NNG"
-#~ msgstr ""
-
-#~ msgid "미들 / NNG"
-#~ msgstr ""
-
-#~ msgid "들 / XSN"
-#~ msgstr ""
-
-#~ msgid "로 / JKM"
-#~ msgstr ""
-
-#~ msgid "로 / J"
-#~ msgstr ""
-
-#~ msgid "로 / JKB"
-#~ msgstr ""
-
-#~ msgid "변신 / NNG"
-#~ msgstr ""
-
-#~ msgid "변신ㅋㅋ / N"
-#~ msgstr ""
-
-#~ msgid "ㅋㅋ / EMO"
-#~ msgstr ""
-
-#~ msgid "ㅋㅋ / UNKNOWN"
-#~ msgstr ""
-
-#~ msgid "# / SW"
-#~ msgstr ""
-
-#~ msgid "#GOT7 / N"
-#~ msgstr ""
-
-#~ msgid "# / SY"
-#~ msgstr ""
-
-#~ msgid "GOT / OL"
-#~ msgstr ""
-
-#~ msgid "GOT / SL"
-#~ msgstr ""
-
-#~ msgid "7 / NR"
-#~ msgstr ""
-
-#~ msgid "7 / SN"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "All time analyses in this document were performed with :py:mod:`time` on a "
-#~ "Thinkpad X1 Carbon (2013) and KoNLPy v0.3."
-#~ msgstr ""
-#~ "시간 분석은 2013년 Thinkpad X1 Carbon에서 :py:mod:`time`을 이용하여 KoNLPy v0.3을 대상으로 "
-#~ "수행하였습니다."
-
-#~ msgid "Average of five consecutive runs."
-#~ msgstr "5회 연속 수행의 평균값"
-
-#~ msgid "Average of ten consecutive runs."
-#~ msgstr "10회 연속 수행의 평균값"
-
-#~ msgid ""
-#~ "The current Hannanum class raises a "
-#~ "``java.lang.ArrayIndexOutOfBoundsException: 10000`` exception if the number "
-#~ "of characters is too large."
-#~ msgstr ""
-#~ "현재 Hannanum 클래스는 문구가 길 경우 ``java.lang.ArrayIndexOutOfBoundsException: "
-#~ "10000`` 에러를 출력합니다."
-
-#~ msgid ""
-#~ "Now, we do time and performation analysis for executing the ``pos`` class "
-#~ "for each of the classes in the :doc:`api/konlpy.tag`."
-#~ msgstr "이제 :doc:`api/konlpy.tag` 에 있는 품사 태깅 클래스들의 시간 및 성능 분석을 수행해보겠습니다."
-
-#~ msgid ""
-#~ "*Execution time*: Time for executing the ``pos`` class for each class, with "
-#~ "100K characters. [3]_"
-#~ msgstr "**수행 시간** : 10만 개 문자로 구성된 문자열로 ``pos`` 클래스를 수행하는데 드는 시간 [3]_"
+#: ../../morph.rst:88
+msgid ""
+"If you would like to run the experiments yourself, run `this code "
+"<https://github.com/konlpy/konlpy/blob/master/docs/morph.py>`_ from your "
+"local machine."
+msgstr ""
+"`이 코드를 "
+"<https://github.com/konlpy/konlpy/blob/master/docs/morph.py>`_ 컴퓨터에서 실행하시면 위 비교 실험을 직접 수행하실 수 있습니다."
+
+#: ../../morph.rst:60
+msgid ""
+"We can check the spacing algorithm through this example. Desirably, an "
+"analyzer would parse this sentence to ``아버지가 + 방에 + 들어가신다`` (My father "
+"enters the room), rather than ``아버지 + 가방에 + 들어가신다`` (My father goes in the "
+"bag). :py:class:`.Hannanum` and :py:class:`.Komoran` are careful in spacing "
+"uncertain terms, and defaults the whole phrase to nouns. :py:class:`.Kkma` "
+"is more confident, but gets undesirable results. For this result, "
+":py:class:`.Mecab` shows the best results."
+msgstr "이 예시를 통해 띄어쓰기 알고리즘의 성능을 확인해볼 수 있습니다. 이상적인 경우, 이 예시에 대해서는 ``아버지 + 가방에 + 들어가신다`` 보다는 ``아버지가 + 방에 + 들어가신다`` 로 해석하는 것이 더 바람직하겠지요."
+
+#: ../../morph.rst:68
+msgid ""
+"If we focus on \"나는\" in both sentences, we can see whether an analyzer "
+"considers the context of words. \"나는\" in the first sentence should be ``나/N"
+" + 는/J``, and in the second sentence ``나(-ㄹ다)/V + 는/E``. :py:class:`.Kkma` "
+"properly understands the latter \"나는\" as a verb, wheras the rest observe it"
+" as nouns."
+msgstr "두 문장에서 \"나는\"에 집중해서 본다면, 각 분석기가 태깅할 때 단어의 의미와 주변부를 잘 살피는지 확인해볼 수 있습니다. 첫번째 문장에서 \"나는\"은 ``나/N + 는/J``, 두번째 문장에서는 ``나(-ㄹ다)/V + 는/E`` 이 되는 것이 바람직합니다."

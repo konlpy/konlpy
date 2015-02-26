@@ -50,8 +50,7 @@ Windows
 
 1. Do you have Java 1.7+ installed?
 2. Set `JAVA_HOME <http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html>`_.
-3. Download and install `JPype1 <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ (>=0.5.7). [#]_
-You may have to upgrade your `pip` version in order to install the downloaded `.whl` file.
+3. Download and install `JPype1 (>=0.5.7) <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_. [#]_ You may have to upgrade your `pip` version in order to install the downloaded `.whl` file.
 
 .. sourcecode:: guess
 

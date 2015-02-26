@@ -5,8 +5,9 @@
 # 3. Check version at konlpy/__init__.py
 # 4. $ sudo make testpypi
 # 5. $ sudo make pypi # Beware not to change the version number at this stage!!!
-# 6. Push tag
-# 7. Document update at RTD
+# 6. Document update at RTD (latest)
+# 7. Push tag
+# 8. Document update at RTD (current version)
 #
 
 check:
