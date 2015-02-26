@@ -17,10 +17,9 @@ Ubuntu
 
 .. sourcecode:: bash
 
-    $ sudo apt-get install python-dev g++ openjdk-7-jdk
-    $ pip install konlpy    # Python 2.x
-    $ sudo apt-get install python3-dev
-    $ pip3 install konlpy   # Python 3.x
+    $ sudo apt-get install g++ openjdk-7-jdk # Install Java 1.7+
+    $ sudo apt-get install python-dev; pip install konlpy     # Python 2.x
+    $ sudo apt-get install python3-dev; pip3 install konlpy   # Python 3.x
 
 2. Install MeCab (*optional*)
 
