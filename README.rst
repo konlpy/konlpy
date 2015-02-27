@@ -17,14 +17,6 @@ KoNLPy
     :target: https://coveralls.io/r/konlpy/konlpy
     :alt: Coverage Status
 
-.. image:: https://pypip.in/version/konlpy/badge.svg?text=version
-    :target: https://pypi.python.org/pypi/konlpy/
-    :alt: Latest Version
-
-.. image:: https://pypip.in/py_versions/konlpy/badge.svg
-    :target: https://pypi.python.org/pypi/konlpy/
-    :alt: Supported Python versions
-
 .. image:: https://pypip.in/status/konlpy/badge.svg
     :target: https://pypi.python.org/pypi/konlpy/
     :alt: Development Status
