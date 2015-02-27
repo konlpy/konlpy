@@ -7,12 +7,17 @@ from setuptools import find_packages, setup
 from konlpy import __version__
 
 def requirements():
-    if sys.version_info[0] < 3:
-        reqfile = 'requirements.txt'
-    else:
-        reqfile = 'requirements-py3.txt'
-    with open(os.path.join(os.path.dirname(__file__), reqfile)) as f:
-        return f.read().splitlines()
+    def _openreq(reqfile):
+        with open(os.path.join(os.path.dirname(__file__), reqfile)) as f:
+            return f.read().splitlines()
+
+    def _genver(major, minorlist):
+        return ':%s' % ' or '.join('python_version=="%s.%s"' % (major, i) for i in minorlist)
+
+    return {
+        _genver(2, [6,7]): _openreq('requirements.txt'),
+        _genver(3, range(5)): _openreq('requirements-py3.txt')
+    }
 
 setup(name='konlpy',
     version=__version__,
@@ -59,4 +64,4 @@ KoNLPy is not just to create another, but to unify and build upon their shoulder
         'java/bin/kr/lucypark/*/*.class',
         'java/bin/kr/lucypark/*/*/*.class',
         ]},
-    install_requires=requirements())
+    extras_require=requirements())
