@@ -15,15 +15,15 @@ msgstr ""
 msgid "Installation"
 msgstr "설치하기"
 
-#: ../../install.rst:49
+#: ../../install.rst:48
 msgid "Windows"
 msgstr "윈도우"
 
-#: ../../install.rst:16 ../../install.rst:35 ../../install.rst:60
+#: ../../install.rst:16 ../../install.rst:34 ../../install.rst:59
 msgid "From the command prompt, install KoNLPy."
 msgstr "명령 프롬프트로 KoNLPy 설치하기"
 
-#: ../../install.rst:70
+#: ../../install.rst:69
 msgid "`win-amd64` for 64-bit Windows, `win32` for 32-bit Windows."
 msgstr "64비트 윈도우에는 `win-amd64`, 32비트 윈도우에는 `win32` 라고 쓰여진 파일을 사용합니다."
 
@@ -47,15 +47,15 @@ msgstr ""
 "<https://docs.google.com/spreadsheets/d/1Ii_L9NF9gSLbsJOGqsf-"
 "zfqTtyhhthmJWNC2kgUDIsU/edit#gid=0>`_ 에서 보실 수 있습니다."
 
-#: ../../install.rst:25 ../../install.rst:42
+#: ../../install.rst:24 ../../install.rst:41
 msgid "Install MeCab (*optional*)"
 msgstr "MeCab 설치하기 (*선택사항*)"
 
-#: ../../install.rst:33
+#: ../../install.rst:32
 msgid "Mac OS"
 msgstr "맥 OS"
 
-#: ../../install.rst:71
+#: ../../install.rst:70
 msgid ""
 "Having MinGW/MSYS or Cygwin installed may be more convenient. If you plan to"
 " use Git, `Git BASH <https://msysgit.github.io/>`_ is another good option. "
@@ -66,7 +66,7 @@ msgstr ""
 "<https://msysgit.github.io>`_ 가 좋은 옵션일 수 있습니다. 또는 `7zip <http://7-zip.org>`_"
 " 을 이용해 `tar` 파일의 압축을 푸실 수 있습니다."
 
-#: ../../install.rst:52
+#: ../../install.rst:51
 msgid ""
 "Set `JAVA_HOME "
 "<http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html>`_."
@@ -79,18 +79,19 @@ msgstr ""
 msgid "Ubuntu"
 msgstr "우분투"
 
-#: ../../install.rst:68
+#: ../../install.rst:67
 msgid "KoNLPy's ``Mecab()`` class is not supported on Windows machines."
 msgstr "KoNLPy의 ``Mecab()`` 클래스는 윈도우에서 지원되지 않습니다."
 
-#: ../../install.rst:51
+#: ../../install.rst:50
 msgid "Do you have Java 1.7+ installed?"
 msgstr "Java 1.7+이 설치되어 있나요?"
 
-#: ../../install.rst:53
+#: ../../install.rst:52
 msgid ""
 "Download and install `JPype1 (>=0.5.7) "
 "<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_. [#]_ You may have to "
 "upgrade your `pip` version in order to install the downloaded `.whl` file."
-msgstr "`JPype1 (>=0.5.7)을 다운로드 <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_"
+msgstr ""
+"`JPype1 (>=0.5.7)을 다운로드 <http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_"
 " 받고 설치. 다운 받은 `.whl` 파일을 설치하기 위해서는 `pip` 을 업그레이드 해야할 수 있습니다."

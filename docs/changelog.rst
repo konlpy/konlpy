@@ -2,7 +2,7 @@ Change logs
 ===========
 
 `Version 0.4.3 <https://github.com/konlpy/konlpy/releases/tag/v0.4.3>`_
---------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 Released on Feb 27, 2015.
 
@@ -10,14 +10,14 @@ Released on Feb 27, 2015.
 
 
 `Version 0.4.2 <https://github.com/konlpy/konlpy/releases/tag/v0.4.2>`_
---------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 Released on Feb 25, 2015.
 
 - Update Korean documents (i.e., include missing .mo files)
 
 `Version 0.4.1 <https://github.com/konlpy/konlpy/releases/tag/v0.4.1>`_
---------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 Released on Feb 25, 2015.
 
@@ -28,7 +28,7 @@ Released on Feb 25, 2015.
 - Include Komoran dictionaries in package [:commit:`796c156`]
 
 `Version 0.4.0 <https://github.com/konlpy/konlpy/releases/tag/v0.4.0>`_
---------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 Released on Jan 18, 2015.
 
@@ -43,7 +43,7 @@ Released on Jan 18, 2015.
 - Fixed pprint bug on Windows [:issue:`37`]
 
 `Version 0.3.3 <https://github.com/konlpy/konlpy/releases/tag/v0.3.3>`_
---------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 Released on Sep 7, 2014.
 
@@ -51,7 +51,7 @@ Released on Sep 7, 2014.
 - Created `KoNLPy mailing list at Google Groups <https://groups.google.com/forum/#!forum/konlpy>`_
 
 `Version 0.3.2 <https://github.com/konlpy/konlpy/releases/tag/v0.3.2>`_
---------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 Released on Sep 4, 2014.
 
@@ -61,7 +61,7 @@ Released on Sep 4, 2014.
     - `java.lang.OutOfMemoryError` in Mac OS X if heap memory is too small
 
 `Version 0.3.1 <https://github.com/konlpy/konlpy/releases/tag/v0.3.1>`_
---------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 Released on Sep 4, 2014.
 
@@ -74,7 +74,7 @@ Released on Sep 4, 2014.
 - Uploaded `KoNLPy to PyPI <https://pypi.python.org/pypi/konlpy>`_
 
 `Version 0.3.0 <https://github.com/konlpy/konlpy/releases/tag/v0.3.0>`_
---------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 Released on Aug 25, 2014.
 
@@ -91,7 +91,7 @@ Released on Aug 25, 2014.
     The versions below do not have documents available, and are not backwards-compatible.
 
 `Version 0.2 <https://github.com/konlpy/konlpy/releases/tag/v0.2>`_
-----------------------------------------------------------------
+-------------------------------------------------------------------
 
 Released on Aug 1, 2014.
 
@@ -103,7 +103,7 @@ Released on Aug 1, 2014.
 - Fixed Hannanum module text indexing error (where results get truncated)
 
 `Version 0.1 <https://github.com/konlpy/konlpy/releases/tag/v0.1>`_
-----------------------------------------------------------------
+-------------------------------------------------------------------
 
 Released on Jun 15, 2014.
 Initial release of KoNLPy.
