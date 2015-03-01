@@ -3,8 +3,8 @@
 # 1. Check changelogs.rst
 # 2. Check translations at docs/locale/ko/LC_MESSAGES/*.po
 # 3. Check version at konlpy/__init__.py
-# 4. $ sudo make testpypi
-# 5. $ sudo make pypi # Beware not to change the version number at this stage!!!
+# 4. $ make testpypi
+# 5. $ make pypi # Beware not to change the version number at this stage!!!
 # 6. Document update at RTD (latest)
 # 7. Push tag
 # 8. Document update at RTD (current version)
@@ -15,18 +15,24 @@ check:
 	pyroma dist/konlpy-*tar.gz
 
 testpypi:
-	./reinstall
-	python setup.py register -r pypitest
-	python setup.py sdist --formats=gztar,zip upload -r pypitest
-	python setup.py bdist_wheel upload -r pypitest
-	pip install -i https://testpypi.python.org/pypi konlpy --upgrade
+	sudo python setup.py register -r pypitest
+	sudo python setup.py sdist --formats=gztar,zip upload -r pypitest
+	sudo python setup.py bdist_wheel upload -r pypitest
+	# Execute below manually
+	# 	cd /tmp
+	# 	virtualenv venv
+	# 	source venv/bin/activate
+	# 	pip install -i https://testpypi.python.org/pypi konlpy
+	# 	deactivate
+	# 	virtualenv-3.4 venv3
+	# 	source venv3/bin/activate
+	# 	pip3 install -i https://testpypi.python.org/pypi konlpy
+	# 	deactivate
 
 pypi:
-	./reinstall
-	python setup.py register -r pypi
-	python setup.py sdist --formats=gztar,zip upload -r pypi
-	python setup.py bdist_wheel upload -r pypi
-	pip install konlpy --upgrade
+	sudo python setup.py register -r pypi
+	sudo python setup.py sdist --formats=gztar,zip upload -r pypi
+	sudo python setup.py bdist_wheel upload -r pypi
 
 jcc:
 	python -m jcc \
