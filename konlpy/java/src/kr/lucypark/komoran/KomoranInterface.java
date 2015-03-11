@@ -9,9 +9,17 @@ import kr.co.shineware.util.common.model.Pair;
 
 public class KomoranInterface {
 
+	private Komoran komoran = null;
+
+	private void initKomoran(String dicpath){
+		if(komoran == null){
+			komoran = new Komoran(dicpath);
+		}
+	}
+	
     public List<ArrayList<String>> analyzeMorphs(String phrase, String dicpath) {
-        Komoran komoran = new Komoran(dicpath);
-        List<List<Pair<String,String>>> result = komoran.analyze(phrase);
+		initKomoran(dicpath);
+		List<List<Pair<String,String>>> result = komoran.analyze(phrase);
 
         List<ArrayList<String>> list = new ArrayList<ArrayList<String>>();
 
@@ -27,7 +35,7 @@ public class KomoranInterface {
     }
 
     public List<String> analyzeMorphs3(String phrase, String dicpath) {
-        Komoran komoran = new Komoran(dicpath);
+		initKomoran(dicpath);
         List<List<Pair<String,String>>> result = komoran.analyze(phrase);
 
         List<String> list = new ArrayList<String>();
