@@ -40,6 +40,12 @@ Below are a set of example tasks using KoNLPy.
 
     .. figure:: examples/multithreading.png
 
+.. container:: example
+
+    :doc:`examples/corpus`
+
+    .. figure:: examples/heap_thumb.png
+
 
 Contents
 --------
@@ -52,3 +58,4 @@ Contents
     examples/generate
     examples/wordcloud
     examples/multithreading
+    examples/corpus
