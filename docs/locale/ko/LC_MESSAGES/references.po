@@ -354,36 +354,6 @@ msgid "Package for attaching particles (josa) in sentences"
 msgstr ""
 
 #: ../../references.rst:113
-msgid "`한글 및 한국어 정보처리 학술대회 <http://cs.kangwon.ac.kr/~hclt2014/>`_"
+msgid ""
+"`한글 및 한국어 정보처리 학술대회 <http://sites.google.com/site/sighclt/gongjisahang>`_"
 msgstr ""
-
-#~ msgid "`한국어학회 <http://koling.org>`_"
-#~ msgstr ""
-
-#~ msgid "한글 및 한국어 정보처리 학술대회"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "`KoreanParser <http://semanticweb.kaist.ac.kr/home/index.php/KoreanParser>`_"
-#~ "       - By DongHyun Choi, Jungyeul Park, Key-Sun Choi (KAIST)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Please `modify this document "
-#~ "<https://github.com/e9t/konlpy/blob/master/docs/references.rst>`_ if "
-#~ "anything is erroneous or not included. Last updated at |today|."
-#~ msgstr ""
-#~ "이 문서에 오류가 있거나 포함되지 않은 사항이 있는 경우 `직접 수정하실 수 있습니다 "
-#~ "<https://github.com/e9t/konlpy/blob/master/docs/references.rst>`_. (마지막 "
-#~ "업데이트: |today|)"
-
-#~ msgid ""
-#~ "`KOMORAN <http://shineware.tistory.com/tag/KOMORAN>`_ (2013) "
-#~ ":license:`custom`"
-#~ msgstr ""
-
-#~ msgid "40,075 test documents for text categorization (88 MB)"
-#~ msgstr "텍스트 분류를 위한 40,075 테스트 문서 (88MB)"
-
-#~ msgid "`KoNLPy <http://konlpy.readthedocs.org>`_ (2014) :license:`GPL v3`"
-#~ msgstr ""

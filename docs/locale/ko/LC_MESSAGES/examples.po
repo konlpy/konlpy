@@ -98,7 +98,7 @@ msgstr ""
 "이용하면 워드클라우드에 한글이 제대로 표시되지 않을 수 있습니다. 이 경우, 직접 소스코드에 한글 폰트를 추가하거나, `이 곳 "
 "<https://github.com/e9t/PyTagCloud>`_ 에서 미리 폰트가 추가된 버젼을 다운받아 사용하시면 됩니다."
 
-#: ../../examples.rst:45
+#: ../../examples.rst:51
 msgid "Contents"
 msgstr "목록보기"
 
@@ -309,98 +309,38 @@ msgid ""
 " it into several higher level multitoken sequences, or \"chunks\"."
 msgstr ":doc:`문장에 품사를 부착한 후에는 </morph>` 품사들을 조금 더 큰 단위의 묶음, 즉 구문으로 묶을 수 있습니다."
 
-#~ msgid ""
-#~ "After :doc:`tagging a sentence with part of speech <morph>`, we can segment "
-#~ "it into several higher level multitoken sequences, or \"chunks\"."
-#~ msgstr ""
+#: ../../examples.rst:45
+msgid ":doc:`examples/corpus`"
+msgstr ""
 
-#~ msgid ""
-#~ "After tagging a sentence with part of speech, we can segment it into several"
-#~ " higher level multitoken sequences, or \"chunks\"."
-#~ msgstr ""
+#: ../../examples/corpus.rst:2
+msgid "Exploring a corpus"
+msgstr "말뭉치 탐색하기"
 
-#~ msgid ""
-#~ "Furthermore, if you use language models, you can evaluate your random texts "
-#~ "and figure out whether they actually make sense in a statistical point of "
-#~ "view."
-#~ msgstr ""
+#: ../../examples/corpus.rst:4
+msgid "A corpus is a set of documents."
+msgstr "말뭉치(corpus)는 여러 문서의 집합체입니다."
 
-#~ msgid ""
-#~ "But then, this still doesn't make any sense because the syllables don't form"
-#~ " words. Rather than generating each syllable independently, we can generate "
-#~ "a syllable base on its precedent so that after '하' follows '다', and after "
-#~ "'그' we get '리' and '고'. In mathematical terms, this process is better known "
-#~ "as a *Markov chain*::"
-#~ msgstr ""
-#~ "그렇게 해도, 얻은 문자열은 온전한 문장이 아니네요. 그렇다면 각의 음절을 독립적으로(independently) 생성하지 말고, 선행하는"
-#~ " 음절이 무엇이냐에 따라 현재의 음절을 생성해보면 어떨까요? 그러면 '하'라는 음절 다음에는 '에'보다는 '다'가 자주 등장할 것이고, "
-#~ "'그' 다음에는 '리'와 '고'가 연속적으로 등장할 가능성이 높아질 수 있을테니 우리가 실제로 쓰는 단어도 나올 수 있지 않을까요? 이런"
-#~ " 과정을 수학적 용어로는 **마코프 체인** 이라고 합니다::"
+#: ../../examples/corpus.rst:6
+msgid ""
+"Below is a way of exploring unique tokens of a corpus, namely the `Heap's "
+"Law <http://en.wikipedia.org/wiki/Heaps%27_law>`_."
+msgstr "다음은 말뭉치의 크기를 늘려갈수록 등장하는 토큰의 개수가 로그함수적으로 늘어간다는 `힙의 법칙(Heap's Law) <http://en.wikipedia.org/wiki/Heaps%27_law>`_ 을 관찰하는 방법입니다."
 
-#~ msgid ""
-#~ "However a sequence of random letters like this does not make any sense. "
-#~ "Normally, Korean text is formed with a sequence of words, formed by a "
-#~ "sequence of syllables, which are each formed with two to three types of the "
-#~ "keyboard, each uniquely called choseong, jungseong, jongseong [#]_. (though "
-#~ "in casual chatting, just one type of the keyboard is common as well, ex: "
-#~ "\"ㅋㅋㅋ\")::"
-#~ msgstr ""
-#~ "하지만 이렇게 글자를 무작위로 나열하는 것은 아무런 의미를 가지지 않습니다.  일반적으로 한국어 텍스트는 초성, 중성, 종성으로 구성된 "
-#~ "낱개의 음절들이 모여 단어를 이루고, 이 단어들이 다시 모여 문장을 이루는데 전혀 랜덤으로 타이핑해서는 전혀 음절이나 단어를 이룰 수 "
-#~ "없죠."
+#: ../../examples/corpus.rst:14
+msgid "heap.png:"
+msgstr ""
 
-#~ msgid ""
-#~ "Moreover in Korean, the syllable '이' is more frequently used than '로' and "
-#~ "definitely much more than '꿻' or '굷'. If our cat knew that, he would have "
-#~ "typed something like this::"
-#~ msgstr ""
-#~ "한국어 텍스트에서는 '이'라는 음절은 '로'보다 빈번히 등장하고, '꿻', '굷'보다는 훨씬 자주 등장한다. 우리 고양이가 그 사실을 "
-#~ "알았다면, 아래와 같은 문자열을 쳤겠지::"
+#: ../../examples/corpus.rst:16
+msgid ""
+"But why is our image not log-function shaped, as generally known? That is "
+"because the corpus we used is very small, and contains only 10 documents. To"
+" observe the Heap's law's log-function formatted curve, try experimenting "
+"with a larger corpus. Below is an image drawn from 1,000 Korean news "
+"articles. Of course, the curve will become smoother with a much larger "
+"corpus."
+msgstr ""
 
-#~ msgid "Thumbnails"
-#~ msgstr "썸네일"
-
-#~ msgid "Twitter sentiment analysis"
-#~ msgstr "트위터 센티멘트 분석"
-
-#~ msgid ""
-#~ "http://www.laurentluce.com/posts/twitter-sentiment-analysis-using-python-"
-#~ "and-nltk/ http://www.sjwhitworth.com/sentiment-analysis-in-python-using-"
-#~ "nltk/"
-#~ msgstr ""
-
-#~ msgid "Generating corpus specific stopwords"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "As far as Korean NLP goes, eliminating stopwords may not be as important nor"
-#~ " useful as it is in English NLP. However there are some cases where it "
-#~ "becomes beneficial:"
-#~ msgstr ""
-
-#~ msgid "To identify stopwords in a corpus-specific, or domain-specific manner"
-#~ msgstr ""
-
-#~ msgid "To reduce computation in later tasks (such as topic modeling)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "An expert with domain knowledge can define such stopwords herself, but there"
-#~ " are numerous other computational ways that can easily be employed. One of "
-#~ "them is to use the traditional `TF-IDF "
-#~ "<http://en.wikipedia.org/wiki/Tf%E2%80%93idf>`_ calculations. TF-IDF was "
-#~ "originally developed in order to score and rank a document's relevance to a "
-#~ "given query in search engines. However, given its ability in ranking highly "
-#~ "significant words of a document, it can also be applied to finding "
-#~ "stopwords; just by reversing the list of words."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "In this perspective, the example below derives the top 10 most and least "
-#~ "significant words of a corpus using TF-IDF. Particularly, the TF-IDF "
-#~ "statistics are calculated with the `Gensim "
-#~ "<http://radimrehurek.com/gensim/>`_."
-#~ msgstr ""
-
-#~ msgid "This is a code made easy for instruction and not thorougly optimized."
-#~ msgstr ""
+#: ../../examples/corpus.rst:24
+msgid "heap-1000.png:"
+msgstr ""
