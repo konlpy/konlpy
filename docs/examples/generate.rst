@@ -5,7 +5,7 @@ Say you want to generate random text in Korean.
 How would you do it?
 
 The easiest way would probably be to have your cat walk across your keyboard
-which would result in something like this::
+which would result in something like this [#]_::
 
     ㅕ키ㅔ츄ㅑㅋ응아 ㅝㄴㅇ 쿄ㅛㅍㄹㅎ튜허ㅓㅎㅠㅅㄴ마
 
@@ -60,4 +60,5 @@ For more on generating text, you can refer to Jon Bently's `Programming Pearls (
 Furthermore, if you use `language models <http://en.wikipedia.org/wiki/Language_model>`_, you can evaluate your random texts and figure out whether they actually make sense in a statistical point of view.
 
 
+.. [#] This story would actually feature a monkey instead of a cat. Namely by the `Infinite monkey theorem <http://en.wikipedia.org/wiki/Infinite_monkey_theorem>`_.
 .. [#] Please refer to the Hangul Jamo in `Unicode character code charts <http://www.unicode.org/charts/>`_.
