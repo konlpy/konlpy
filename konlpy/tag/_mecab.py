@@ -95,5 +95,6 @@ class Mecab():
     def __init__(self, dicpath='/usr/local/lib/mecab/dic/mecab-ko-dic'):
         try:
             self.tagger = Tagger('-d %s' % dicpath)
+            self.tagset = utils.read_json('%s/data/tagset/mecab.json' % utils.installpath)
         except RuntimeError:
             raise Exception('Invalid MeCab dictionary path: "%s"\nInput the correct path when initiializing class: "Mecab(\'/some/dic/path\')"' % dicpath)

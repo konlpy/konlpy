@@ -101,3 +101,4 @@ class Hannanum():
         jhannanumJavaPackage = jpype.JPackage('kr.lucypark.jhannanum.comm')
         HannanumInterfaceJavaClass = jhannanumJavaPackage.HannanumInterface
         self.jhi = HannanumInterfaceJavaClass() # Java instance
+        self.tagset = utils.read_json('%s/data/tagset/hannanum.json' % utils.installpath)

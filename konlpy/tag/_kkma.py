@@ -85,3 +85,4 @@ class Kkma():
         kkmaJavaPackage = jpype.JPackage('kr.lucypark.kkma')
         KkmaInterfaceJavaClass = kkmaJavaPackage.KkmaInterface
         self.jki = KkmaInterfaceJavaClass() # Java instance
+        self.tagset = utils.read_json('%s/data/tagset/kkma.json' % utils.installpath)

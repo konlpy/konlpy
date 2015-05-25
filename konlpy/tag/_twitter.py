@@ -70,3 +70,4 @@ class Twitter():
         tktJavaPackage = jpype.JPackage('kr.lucypark.tkt')
         TktInterfaceJavaClass = tktJavaPackage.TktInterface
         self.jki = TktInterfaceJavaClass()
+        self.tagset = utils.read_json('%s/data/tagset/twitter.json' % utils.installpath)

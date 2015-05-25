@@ -3,6 +3,7 @@
 
 from __future__ import unicode_literals
 import io
+import json
 import os
 import pprint as pp
 import sys
@@ -171,3 +172,8 @@ def read_txt(filename, encoding='utf-8'):
     """Text file reader."""
     with io.open(filename, 'r', encoding=encoding) as f:
         return f.read()
+
+def read_json(filename, encoding='utf-8'):
+    """JSON file reader."""
+    with io.open(filename, 'r', encoding=encoding) as f:
+        return json.load(f)
