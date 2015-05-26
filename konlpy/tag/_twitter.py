@@ -53,7 +53,7 @@ class Twitter():
         tagged = self.pos(phrase)
         return [s for s, t in tagged if t=='Noun']
 
-    def morphs(self, phrase):
+    def morphs(self, phrase, norm=False, stem=False):
         """Parse phrase to morphemes."""
 
         return [s for s, t in self.pos(phrase)]
