@@ -5,10 +5,7 @@ import os
 import re
 import sys
 
-try:
-    import jpype
-except ImportError:
-    pass
+import jpype
 
 from .. import jvm
 from .. import utils
