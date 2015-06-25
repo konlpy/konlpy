@@ -11,18 +11,18 @@ import sys
 
 installpath = os.path.dirname(os.path.realpath(__file__))
 replace_set = [
-        ('·', '/'),     # \xb7
-        ('․', '/'),     # \u2024
-        ('ㆍ', '/'),    # \u318d (hangul letter araea)
-        ('･', '/'),     # \uff65 (katakana)
-        ('～', '~'),    # \uff5e
-        ('❑', '-'),     # \u2751
-        ('‘', "'"),     # \u2018
-        ('’', "'"),     # \u2019
-        ('“', '"'),     # \u201c
-        ('”', '"'),     # \u201d
-        ('「', '<'),    # \u300c
-        ('」', '>')]    # \u300d
+    ('·', '/'),     # \xb7
+    ('․', '/'),     # \u2024
+    ('ㆍ', '/'),    # \u318d (hangul letter araea)
+    ('･', '/'),     # \uff65 (katakana)
+    ('～', '~'),    # \uff5e
+    ('❑', '-'),     # \u2751
+    ('‘', "'"),     # \u2018
+    ('’', "'"),     # \u2019
+    ('“', '"'),     # \u201c
+    ('”', '"'),     # \u201d
+    ('「', '<'),    # \u300c
+    ('」', '>')]    # \u300d
 
 
 if sys.version_info[0] < 3:
@@ -73,7 +73,7 @@ def concordance(phrase, text, show=False):
     indexes = [i for i, term in enumerate(terms) if phrase in term]
     if show:
         for i in indexes:
-            print('%d\t%s' % (i, ' '.join(terms[max(0, i-3):i+3])))
+            print('%d\t%s' % (i, ' '.join(terms[max(0, i - 3):i + 3])))
     return indexes
 
 
@@ -116,7 +116,7 @@ def partition(list_, indices):
     :param list_: The target list.
     :param indices: Indices to partition the target list.
     """
-    return [list_[i:j] for i, j in zip([0]+indices, indices+[None])]
+    return [list_[i:j] for i, j in zip([0] + indices, indices + [None])]
 
 if sys.version_info[0] < 3:
     def pprint(obj):

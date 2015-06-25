@@ -33,18 +33,18 @@ if os.path.expanduser('~/') != '~/':
 # Windows common locations
 if sys.platform.startswith('win'):
     path += [
-            r'C:\konlpy_data', r'D:\konlpy_data', r'E:\konlpy_data',
-            os.path.join(sys.prefix, 'konlpy_data'),
-            os.path.join(sys.prefix, 'lib', 'konlpy_data'),
-            os.path.join(os.environ.get('APPDATA', 'C:\\'), 'konlpy_data')]
+        r'C:\konlpy_data', r'D:\konlpy_data', r'E:\konlpy_data',
+        os.path.join(sys.prefix, 'konlpy_data'),
+        os.path.join(sys.prefix, 'lib', 'konlpy_data'),
+        os.path.join(os.environ.get('APPDATA', 'C:\\'), 'konlpy_data')]
 
 # UNIX & OS X common locations
 else:
     path += [
-            '/usr/share/konlpy_data',
-            '/usr/local/share/konlpy_data',
-            '/usr/lib/konlpy_data',
-            '/usr/local/lib/konlpy_data']
+        '/usr/share/konlpy_data',
+        '/usr/local/share/konlpy_data',
+        '/usr/lib/konlpy_data',
+        '/usr/local/lib/konlpy_data']
 
 # Include KoNLPy installpath
 path += ['%s/data' % utils.installpath]
@@ -70,12 +70,12 @@ def find(resource_url):
             return FileSystemPathPointer(f)
 
     # Display message if the resource wasn't found
-    sep = '*'*70
+    sep = '*' * 70
     msg = textwrap.fill(
-            'Resource %s not found. Please use the KoNLPy data downloader to obtain the resource: >>> konlpy.download()' % resource_url,
-            initial_indent='  ',
-            subsequent_indent='  ',
-            width=66)
+        'Resource %s not found. Please use the KoNLPy data downloader to obtain the resource: >>> konlpy.download()' % resource_url,
+        initial_indent='  ',
+        subsequent_indent='  ',
+        width=66)
     msg += '\n  Searched in:' + ''.join('\n  - %s' % p for p in path)
     raise LookupError('\n%s\n%s\n%s' % (sep, msg, sep))
 
