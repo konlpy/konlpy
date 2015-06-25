@@ -36,13 +36,13 @@ def default_download_dir():
     konlpydir = internals.get_datadir()
 
     # On Windows, use %APPDATA%
-    if sys.platform=='win32' and 'APPDATA' in os.environ:
+    if sys.platform == 'win32' and 'APPDATA' in os.environ:
         homedir = os.environ['APPDATA']
 
     # Otherwise, install in the user's home directory
     else:
         homedir = os.path.expanduser('~/')
-        if homedir=='~/':
+        if homedir == '~/':
             raise ValueError("Could not find a default download directory")
 
     return os.path.join(homedir, 'konlpy_data')
@@ -83,17 +83,17 @@ class Downloader(object):
         ...
 
         """
-        if download_dir is None: download_dir = self._download_dir
+        if download_dir is None:
+            download_dir = self._download_dir
 
         if id is None:
             raise ValueError("Please specify a package to download. To download all available packages, pass 'all' to the argument: ``konlpy.download('all')``.")
-        elif id=='all':
+        elif id == 'all':
             raise NotImplementedError("This function is not implemented yet. Please download each package individually until further notice.")
         else:
             info = self._get_info(id)
             for msg in self._download_package(info, download_dir):
                 print(msg)
-
 
     def status(self, info_or_id=None, download_dir=None):
         self.index = json.loads(urllib.urlopen(self.INDEX_URL).read().decode())
@@ -113,26 +113,29 @@ class Downloader(object):
             except KeyError:
                 raise ValueError("Package does not exist. Please check the package name.")
 
-        if download_dir is None: download_dir = self._download_dir
+        if download_dir is None:
+            download_dir = self._download_dir
 
         filepath = os.path.join(download_dir, info['filepath'], info['ext'])
 
         return self._pkg_status(info, filepath)
-
 
     def _pkg_status(self, info, filepath):
         if not os.path.exists(filepath):
             return self.NOT_INSTALLED
 
         # Check if the file has the correct size
-        try: filestat = os.stat(filepath)
-        except OSError: return self.NOT_INSTALLED
-        if filestat.st_size!=int(info['size']):
+        try:
+            filestat = os.stat(filepath)
+        except OSError:
+            return self.NOT_INSTALLED
+
+        if filestat.st_size != int(info['size']):
             return self.STALE
 
         # Check if the file's checksum matches
         checksum = hashlib.md5(open(filepath, 'rb').read()).hexdigest()
-        if checksum!=info['checksum']:
+        if checksum != info['checksum']:
             return self.STALE
 
         # TODO: Check if file has been properly unzipped
@@ -144,21 +147,19 @@ class Downloader(object):
         # Otherwise, everything looks good
         return self.INSTALLED
 
-
     def _download_package(self, info, download_dir, force=False):
         yield "KoNLPy downloader"
 
         # Do we already have the current version?
         status = self.status(info, download_dir)
-        if not force and status==self.INSTALLED:
+        if not force and status == self.INSTALLED:
             yield "[konlpy_data] '%s' is already installed" % info['id']
             return
 
         # Check for (and remove) any old/stale version
-        filepath = os.path.join(download_dir,\
-                                '%s.%s' % (info['filepath'], info['ext']))
+        filepath = os.path.join(download_dir, '%s.%s' % (info['filepath'], info['ext']))
         if os.path.exists(filepath):
-            if status==self.STALE:
+            if status == self.STALE:
                 yield "[konlpy_data] This file is stale"
             os.remove(filepath)
 
@@ -169,7 +170,7 @@ class Downloader(object):
         if not os.path.exists(subdir):
             os.mkdir(subdir)
 
-        # Download the file. This will raise an IOError if the URL is not found.
+        # Download file. This will raise an IOError if the URL is not found.
         url = self.PACKAGE_URL % (info['filepath'], info['ext'])
         try:
             yield "[konlpy_data] Downloading package '%s'..." % info['id']
@@ -201,17 +202,16 @@ class Downloader(object):
 
     def _unzip_file(self, filepath, ext):
         try:
-            if ext=='.zip':
+            if ext == '.zip':
                 zf = zipfile.ZipFile(filepath)
                 zf.extractall(os.path.dirname(filepath))
                 zf.close()
-            elif ext=='.tar':
+            elif ext == '.tar':
                 tf = tarfile.open(filepath)
                 tf.extractall(os.path.dirname(filepath))
                 tf.close()
         except Exception as e:
             raise ValueError('Error reading file %r!\n%s' % (filepath, e))
-
 
     def _get_info(self, id):
         self.index = json.loads(urllib.urlopen(self.INDEX_URL).read().decode())
@@ -219,7 +219,6 @@ class Downloader(object):
             return self.index.get(id)
         else:
             raise ValueError("Could not find a matching item to download")
-
 
     def __init__(self, download_dir=None):
         self._download_dir = download_dir

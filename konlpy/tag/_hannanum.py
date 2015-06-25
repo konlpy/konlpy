@@ -15,29 +15,34 @@ __all__ = ['Hannanum']
 
 tag_re = '(.+?\\/\\w+)\\+?'
 
+
 def parse(result, flatten=False):
     def parse_opt(opt):
-        return [tuple(u.rsplit('/', 1))\
-                    for u in re.findall(tag_re, opt.strip())]
+        return [tuple(u.rsplit('/', 1)) for u in re.findall(tag_re, opt.strip())]
 
-    if not result: return []
+    if not result:
+        return []
 
     elems = result.strip().splitlines()
     index = [i for i, e in enumerate(elems) if not e]
     parts = utils.partition(elems, index)
 
     if flatten:
-        return sum([parse_opt(opt) for part in parts\
-                for opt in list(filter(None, part))[1:]], [])
+        return sum([parse_opt(opt) for part in parts
+                    for opt in list(filter(None, part))[1:]], [])
     else:
-        return [[parse_opt(opt) for opt in list(filter(None, part))[1:]]\
+        return [[parse_opt(opt) for opt in list(filter(None, part))[1:]]
                 for part in parts]
 
 
 class Hannanum():
-    """Wrapper for `JHannanum <http://semanticweb.kaist.ac.kr/home/index.php/HanNanum>`_.
+    """
+    Wrapper for `JHannanum <http://semanticweb.kaist.ac.kr/home/index.php/HanNanum>`_.
 
-    JHannanum is a morphological analyzer and POS tagger written in Java, and developed by the `Semantic Web Research Center (SWRC) <http://semanticweb.kaist.ac.kr/>`_ at KAIST since 1999.
+    JHannanum is a morphological analyzer and POS tagger written in Java,
+    and developed by the
+    `Semantic Web Research Center (SWRC) <http://semanticweb.kaist.ac.kr/>`_
+    at KAIST since 1999.
 
     .. code-block:: python
 
@@ -59,7 +64,8 @@ class Hannanum():
         """Phrase analyzer.
 
         This analyzer returns various morphological candidates for each token.
-        It consists of two parts: 1) Dictionary search (chart), 2) Unclassified term segmentation.
+        It consists of two parts: 1) Dictionary search (chart),
+        2) Unclassified term segmentation.
         """
 
         result = self.jhi.morphAnalyzer(phrase)
@@ -73,9 +79,9 @@ class Hannanum():
         :param ntags: The number of tags. It can be either 9 or 22.
         :param flatten: If False, preserves eojeols."""
 
-        if ntags==9:
+        if ntags == 9:
             result = self.jhi.simplePos09(phrase)
-        elif ntags==22:
+        elif ntags == 22:
             result = self.jhi.simplePos22(phrase)
         else:
             raise Exception('ntags in [9, 22]')
@@ -98,5 +104,5 @@ class Hannanum():
 
         jhannanumJavaPackage = jpype.JPackage('kr.lucypark.jhannanum.comm')
         HannanumInterfaceJavaClass = jhannanumJavaPackage.HannanumInterface
-        self.jhi = HannanumInterfaceJavaClass() # Java instance
+        self.jhi = HannanumInterfaceJavaClass()  # Java instance
         self.tagset = utils.read_json('%s/data/tagset/hannanum.json' % utils.installpath)

@@ -1,7 +1,10 @@
 #! /usr/bin/python
 # -*- coding: utf-8 -*-
 
-import csv, codecs, cStringIO
+import csv
+import codecs
+import cStringIO
+
 
 def _stringify(s, encoding="utf-8"):
     if s is None:
@@ -9,16 +12,18 @@ def _stringify(s, encoding="utf-8"):
     elif isinstance(s, unicode):
         return s.encode(encoding)
     elif isinstance(s, (int, float)):
-        return s # let csv.QUOTE_NONNUMERIC do its thing
+        return s  # let csv.QUOTE_NONNUMERIC do its thing
     elif not isinstance(s, str):
         return str(s)
     return s
+
 
 def _stringify_list(l, encoding="utf-8"):
     try:
         return [_stringify(s, encoding) for s in iter(l)]
     except TypeError as e:
         raise csv.Error(str(e))
+
 
 class UTF8Recoder:
     """
@@ -32,6 +37,7 @@ class UTF8Recoder:
 
     def next(self):
         return self.reader.next().encode("utf-8")
+
 
 class UnicodeReader:
     """
@@ -49,6 +55,7 @@ class UnicodeReader:
 
     def __iter__(self):
         return self
+
 
 class UnicodeWriter:
     """

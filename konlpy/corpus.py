@@ -8,7 +8,8 @@ from . import utils
 
 class CorpusLoader():
     """Loader for corpora.
-    For a complete list of corpora available in KoNLPy, refer to :ref:`corpora`.
+    For a complete list of corpora available in KoNLPy,
+    refer to :ref:`corpora`.
 
     .. code-block:: python
 

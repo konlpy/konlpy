@@ -15,7 +15,9 @@ __all__ = ['Kkma']
 class Kkma():
     """Wrapper for `Kkma <http://kkma.snu.ac.kr>`_.
 
-    Kkma is a morphological analyzer and natural language processing system written in Java, developed by the Intelligent Data Systems (IDS) Laboratory at `SNU <http://snu.ac.kr>`_.
+    Kkma is a morphological analyzer and natural language processing
+    system written in Java, developed by the Intelligent Data Systems (IDS)
+    Laboratory at `SNU <http://snu.ac.kr>`_.
 
     .. code-block:: python
 
@@ -47,7 +49,8 @@ class Kkma():
 
         sentences = self.jki.morphAnalyzer(phrase)
         morphemes = []
-        if not sentences: return morphemes
+        if not sentences:
+            return morphemes
 
         for i in range(sentences.size()):
             sentence = sentences.get(i)
@@ -58,7 +61,7 @@ class Kkma():
                         morpheme = eojeol.get(k)
                         morphemes.append((morpheme.getString(), morpheme.getTag()))
                 else:
-                    morphemes.append([(eojeol.get(k).getString(), eojeol.get(k).getTag())\
+                    morphemes.append([(eojeol.get(k).getString(), eojeol.get(k).getTag())
                                      for k in range(eojeol.size())])
 
         return morphemes
@@ -75,12 +78,11 @@ class Kkma():
         if not sentences: return []
         return [sentences.get(i).getSentence() for i in range(sentences.size())]
 
-
     def __init__(self, jvmpath=None):
         if not jpype.isJVMStarted():
             jvm.init_jvm(jvmpath)
 
         kkmaJavaPackage = jpype.JPackage('kr.lucypark.kkma')
         KkmaInterfaceJavaClass = kkmaJavaPackage.KkmaInterface
-        self.jki = KkmaInterfaceJavaClass() # Java instance
+        self.jki = KkmaInterfaceJavaClass()  # Java instance
         self.tagset = utils.read_json('%s/data/tagset/kkma.json' % utils.installpath)

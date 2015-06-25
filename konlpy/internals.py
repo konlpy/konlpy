@@ -13,6 +13,7 @@ def get_datadir():
         if (os.path.exists(konlpydir) and is_writable(konlpydir)):
             return konlpydir
 
+
 def is_writable(path):
     if not os.path.exists(path):
         return False
@@ -28,14 +29,14 @@ def is_writable(path):
         elif statdata.st_uid == os.getuid() and (perm & 0o200):
             return True
         # are we in a group that can write to it?
-        elif (statdata.st_gid in [os.getgid()] + os.getgroups()) \
-            and (perm & 0o020):
+        elif (statdata.st_gid in [os.getgid()] + os.getgroups()) and (perm & 0o020):
             return True
         # otherwise, we can't write to it.
         else:
             return False
     # Otherwise, we'll assume it's writable.
     return True
+
 
 def chmod(path):
     os.chmod(path, os.stat(path).st_mode | stat.S_IEXEC)

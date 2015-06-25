@@ -8,20 +8,22 @@ import os
 import pprint as pp
 import sys
 
+
 installpath = os.path.dirname(os.path.realpath(__file__))
 replace_set = [
-        ('·', '/'), # \xb7
-        ('․', '/'), # \u2024
-        ('ㆍ', '/'), # \u318d (hangul letter araea)
-        ('･', '/'), # \uff65 (katakana)
-        ('～', '~'), # \uff5e
-        ('❑', '-'), # \u2751
-        ('‘', "'"), # \u2018
-        ('’', "'"), # \u2019
-        ('“', '"'), # \u201c
-        ('”', '"'), # \u201d
-        ('「', '<'), # \u300c
-        ('」', '>')] # \u300d
+        ('·', '/'),     # \xb7
+        ('․', '/'),     # \u2024
+        ('ㆍ', '/'),    # \u318d (hangul letter araea)
+        ('･', '/'),     # \uff65 (katakana)
+        ('～', '~'),    # \uff5e
+        ('❑', '-'),     # \u2751
+        ('‘', "'"),     # \u2018
+        ('’', "'"),     # \u2019
+        ('“', '"'),     # \u201c
+        ('”', '"'),     # \u201d
+        ('「', '<'),    # \u300c
+        ('」', '>')]    # \u300d
+
 
 if sys.version_info[0] < 3:
     class UnicodePrinter(pp.PrettyPrinter):
@@ -32,10 +34,14 @@ if sys.version_info[0] < 3:
                 return (object.encode(encoding), True, False)
             return pp.PrettyPrinter.format(self, object, context, maxlevels, level)
 
+
 def concordance(phrase, text, show=False):
     """Find concordances of a phrase in a text.
 
-    The farmost left numbers are indices, that indicate the location of the phrase in the text (by means of tokens). The following string, is part of the text surrounding the phrase for the given index.
+    The farmost left numbers are indices, that indicate the location
+    of the phrase in the text (by means of tokens).
+    The following string, is part of the text surrounding the phrase
+    for the given index.
 
     :param phrase: Phrase to search in the document.
     :param text: Target document.
@@ -73,6 +79,7 @@ def concordance(phrase, text, show=False):
 
 if sys.version_info[0] < 3:
     from . import csvutils
+
     def csvread(f, encoding='utf-8'):
         """Reads a csv file.
 
@@ -101,6 +108,7 @@ if sys.version_info[0] < 3:
                     csvwrite(d, f)
         """
         return csvutils.UnicodeWriter(f).writerows(data)
+
 
 def partition(list_, indices):
     """Partitions a list to several parts using indices.
@@ -147,8 +155,10 @@ def char2hex(c):
     """
     return hex(ord(c))
 
+
 if sys.version_info[0] >= 3:
     unichr = chr
+
 
 def hex2char(h):
     """Converts a hex character to unicode.
@@ -162,16 +172,19 @@ def hex2char(h):
     """
     return unichr(int(h, 16))
 
+
 def load_txt(filename, encoding='utf-8'):
     """Text file loader.
     To read a file, use ``read_txt()``instead.
     """
     return io.open(filename, 'r', encoding=encoding)
 
+
 def read_txt(filename, encoding='utf-8'):
     """Text file reader."""
     with io.open(filename, 'r', encoding=encoding) as f:
         return f.read()
+
 
 def read_json(filename, encoding='utf-8'):
     """JSON file reader."""

@@ -13,6 +13,8 @@
 check:
 	check-manifest
 	pyroma dist/konlpy-*tar.gz
+	pep8 konlpy/*.py
+	pep8 konlpy/*/*.py
 
 testpypi:
 	sudo python setup.py register -r pypitest

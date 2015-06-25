@@ -61,19 +61,16 @@ class Komoran():
 
         return parse(result, flatten)
 
-
     def nouns(self, phrase):
         """Noun extractor."""
 
         tagged = self.pos(phrase)
         return [s for s, t in tagged if t.startswith('NN')]
 
-
     def morphs(self, phrase):
         """Parse phrase to morphemes."""
 
         return [s for s, t in self.pos(phrase)]
-
 
     def __init__(self, jvmpath=None, dicpath=None):
         if not jpype.isJVMStarted():
@@ -82,7 +79,7 @@ class Komoran():
         KomoranInterfaceJavaClass = komoranJavaPackage.KomoranInterface
         try:
             self.jki = KomoranInterfaceJavaClass()
-        except TypeError: # Package kr.lucypark.komoran.KomoranInterface is not Callable
+        except TypeError:  # Package kr.lucypark.komoran.KomoranInterface is not Callable
             raise IOError("Cannot access komoran-dic. Please leave an issue at https://github.com/konlpy/konlpy/issues")
 
         if dicpath:

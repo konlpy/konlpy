@@ -13,30 +13,36 @@ from .. import utils
 __all__ = ['Mecab']
 
 
-attrs = ['tags', # 품사 태그
-         'semantic', # 의미 부류
-         'has_jongsung', # 종성 유무
-         'read', # 읽기
-         'type', # 타입
-         'first_pos', # 첫번째 품사
-         'last_pos', # 마지막 품사
-         'original', # 원형
-         'indexed'] # 인덱스 표현
+attrs = ['tags',        # 품사 태그
+         'semantic',    # 의미 부류
+         'has_jongsung',  # 종성 유무
+         'read',        # 읽기
+         'type',        # 타입
+         'first_pos',   # 첫번째 품사
+         'last_pos',    # 마지막 품사
+         'original',    # 원형
+         'indexed']     # 인덱스 표현
+
 
 def parse(result, allattrs=False):
     def split(elem):
-        if not elem: return ('','SY')
+        if not elem: return ('', 'SY')
         s, t = elem.split('\t')
         return (s, t.split(',', 1)[0])
 
     return [split(elem) for elem in result.splitlines()[:-1]]
 
+
 class Mecab():
     """Wrapper for MeCab-ko morphological analyzer.
 
-    `MeCab`_, originally a Japanese morphological analyzer and a POS tagger developed by the Graduate School of Informatics in Kyoto University, was modified to MeCab-ko by the `Eunjeon Project`_ to adapt to the Korean language.
+    `MeCab`_, originally a Japanese morphological analyzer and POS tagger
+    developed by the Graduate School of Informatics in Kyoto University,
+    was modified to MeCab-ko by the `Eunjeon Project`_
+    to adapt to the Korean language.
 
-    In order to use MeCab-ko within KoNLPy, follow the directions in :ref:`optional-installations`.
+    In order to use MeCab-ko within KoNLPy, follow the directions in
+    :ref:`optional-installations`.
 
     .. code-block:: python
         :emphasize-lines: 1
@@ -70,14 +76,14 @@ class Mecab():
                 result = self.tagger.parse(phrase).decode('utf-8')
                 return parse(result)
             else:
-                return [parse(self.tagger.parse(eojeol).decode('utf-8'))\
+                return [parse(self.tagger.parse(eojeol).decode('utf-8'))
                         for eojeol in phrase.split()]
         else:
             if flatten:
                 result = self.tagger.parse(phrase)
                 return parse(result)
             else:
-                return [parse(self.tagger.parse(eojeol).decode('utf-8'))\
+                return [parse(self.tagger.parse(eojeol).decode('utf-8'))
                         for eojeol in phrase.split()]
 
     def morphs(self, phrase):
@@ -90,7 +96,6 @@ class Mecab():
 
         tagged = self.pos(phrase)
         return [s for s, t in tagged if t.startswith('N')]
-
 
     def __init__(self, dicpath='/usr/local/lib/mecab/dic/mecab-ko-dic'):
         try:

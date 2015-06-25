@@ -8,7 +8,8 @@ from .. import utils
 
 
 class Twitter():
-    """Wrapper for `Twitter Korean Text <https://github.com/twitter/twitter-korean-text>`_.
+    """
+    Wrapper for `Twitter Korean Text <https://github.com/twitter/twitter-korean-text>`_.
 
     Twitter Korean Text is an open source Korean tokenizer written in Scala,
     developed by Will Hohyon Ryu.
@@ -36,22 +37,25 @@ class Twitter():
     def pos(self, phrase, norm=False, stem=False):
         """POS tagger.
         In contrast to other classes in this subpackage,
-        this POS tagger doesn't have a `flatten` option, but has `norm` and `stem` options.
+        this POS tagger doesn't have a `flatten` option,
+        but has `norm` and `stem` options.
         Check the parameter list below.
 
         :param norm: If True, normalize tokens.
         :param stem: If True, stem tokens.
         """
 
-        tokens  = self.jki.tokenize(phrase,\
-                jpype.java.lang.Boolean(norm), jpype.java.lang.Boolean(stem)).toArray()
+        tokens = self.jki.tokenize(
+                    phrase,
+                    jpype.java.lang.Boolean(norm),
+                    jpype.java.lang.Boolean(stem)).toArray()
         return [tuple(t.rsplit('/', 1)) for t in tokens]
 
     def nouns(self, phrase):
         """Noun extractor."""
 
         tagged = self.pos(phrase)
-        return [s for s, t in tagged if t=='Noun']
+        return [s for s, t in tagged if t == 'Noun']
 
     def morphs(self, phrase, norm=False, stem=False):
         """Parse phrase to morphemes."""
