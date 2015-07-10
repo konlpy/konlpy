@@ -9,6 +9,7 @@
 # 7. Push tag
 # 8. Document update at RTD (current version)
 #
+# TODO: use flake8 and/or pylint
 
 check:
 	check-manifest
@@ -45,8 +46,8 @@ jcc:
 	    --build --install
 
 testall:
-	python -m pytest test/*
-	python3 -m pytest test/*
+	python -m pytest --cov konlpy test/*
+	python3 -m pytest --cov konlpy test/*
 
 init_i18n:
 	pip install mock sphinx sphinx-intl
