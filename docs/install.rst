@@ -28,6 +28,11 @@ Ubuntu
     $ sudo apt-get install curl
     $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
 
+.. note::
+
+    If you get an `ImportError: No module named jpype` with `import konlpy`, try again after running `sudo pip install JPype1`.
+
+
 Mac OS
 ------
 
