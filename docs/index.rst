@@ -108,10 +108,10 @@ and `suggest an idea <https://github.com/konlpy/konlpy/issues>`_
 or `make a pull request <https://github.com/konlpy/konlpy/pulls>`_.
 
 You are also welcome to join
-the ``#koreannlp`` channel at the `Ozinger IRC Network <http://ozinger.org>`_,
+our `gitter <https://gitter.im/konlpy/konlpy>`_
 and the `mailing list <https://groups.google.com/forum/#!forum/konlpy>`_.
-The IRC channel is more focused on development discussions
-and the mailing list is a better place to ask questions,
+Gitter is more focused on development discussions
+while the mailing list is a better place to ask questions,
 but nobody stops you from going the other way around.
 
 Please note that

@@ -123,12 +123,6 @@ msgstr "랜덤 텍스트 생성하기"
 msgid "Say you want to generate random text in Korean. How would you do it?"
 msgstr "한국어로 랜덤 텍스트를 생성해봅시다. 어떻게 할 수 있을까요?"
 
-#: ../../examples/generate.rst:7
-msgid ""
-"The easiest way would probably be to have your cat walk across your keyboard"
-" which would result in something like this::"
-msgstr "가장 간단하게는 고양이 한 마리가 키보드를 밟고 지나가게 할 수 있습니다. 그렇게 하면 이와 유사한 결과가 나오겠죠::"
-
 #: ../../examples/generate.rst:30
 msgid ""
 "Our \"sentence\" above was generated with \"bigrams\", or \"2-grams\". If we"
@@ -173,7 +167,7 @@ msgstr ""
 "텍스트 생성에 대한 더 자세한 설명은 존 벤틀리의 `생각하는 프로그래밍 (15장 3절) <http://www.cs.bell-"
 "labs.com/cm/cs/pearls/sec153.html>`_ 의 내용을 참고해주세요."
 
-#: ../../examples/generate.rst:63
+#: ../../examples/generate.rst:64
 msgid ""
 "Please refer to the Hangul Jamo in `Unicode character code charts "
 "<http://www.unicode.org/charts/>`_."
@@ -325,7 +319,9 @@ msgstr "말뭉치(corpus)는 여러 문서의 집합체입니다."
 msgid ""
 "Below is a way of exploring unique tokens of a corpus, namely the `Heap's "
 "Law <http://en.wikipedia.org/wiki/Heaps%27_law>`_."
-msgstr "다음은 말뭉치의 크기를 늘려갈수록 등장하는 토큰의 개수가 로그함수적으로 늘어간다는 `힙의 법칙(Heap's Law) <http://en.wikipedia.org/wiki/Heaps%27_law>`_ 을 관찰하는 방법입니다."
+msgstr ""
+"다음은 말뭉치의 크기를 늘려갈수록 등장하는 토큰의 개수가 로그함수적으로 늘어간다는 `힙의 법칙(Heap's Law) "
+"<http://en.wikipedia.org/wiki/Heaps%27_law>`_ 을 관찰하는 방법입니다."
 
 #: ../../examples/corpus.rst:14
 msgid "heap.png:"
@@ -343,4 +339,17 @@ msgstr ""
 
 #: ../../examples/corpus.rst:24
 msgid "heap-1000.png:"
+msgstr ""
+
+#: ../../examples/generate.rst:7
+msgid ""
+"The easiest way would probably be to have your cat walk across your keyboard"
+" which would result in something like this [#]_::"
+msgstr "가장 간단하게는 고양이 한 마리가 키보드를 밟고 지나가게 할 수 있습니다. 그렇게 하면 이와 유사한 결과가 나오겠죠 [#]_::"
+
+#: ../../examples/generate.rst:63
+msgid ""
+"This story would actually feature a monkey instead of a cat. Namely by the "
+"`Infinite monkey theorem "
+"<http://en.wikipedia.org/wiki/Infinite_monkey_theorem>`_."
 msgstr ""
