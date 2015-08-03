@@ -13,13 +13,20 @@ Installation
 Ubuntu
 ------
 
-1. From the command prompt, install KoNLPy.
+1. Install dependencies
 
 .. sourcecode:: bash
 
-    $ sudo apt-get install g++ openjdk-7-jdk # Install Java 1.7+
-    $ sudo apt-get install python-dev; pip install konlpy     # Python 2.x
-    $ sudo apt-get install python3-dev; pip3 install konlpy   # Python 3.x
+    $ sudo apt-get install g++ openjdk-7-jdk python-dev python3-dev   # Install Java 1.7 or up
+    $ pip install JPype1        # Python 2.x
+    $ pip3 install JPype1-py3   # Python 3.x
+
+1. Install KoNLPy
+
+.. sourcecode:: bash
+
+    $ pip install konlpy        # Python 2.x
+    $ pip3 install konlpy       # Python 3.x
 
 2. Install MeCab (*optional*)
 
@@ -28,30 +35,36 @@ Ubuntu
     $ sudo apt-get install curl
     $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
 
-.. note::
-
-    If you get an `ImportError: No module named jpype` with `import konlpy`, try again after running `sudo pip install JPype1`.
-
-Centos
+CentOS
 ------
 
-1. From the command prompt, install KoNLPy (Centos6.4).
+
+1. Install dependencies
 
 .. sourcecode:: bash
 
-    $ sudo yum install gcc-c++ java-1.7.0-openjdk-devel
-    $ sudo yum install python-devel
-    $ wget http://peak.telecommunity.com/dist/ez_setup.py # Python 2.x
+    $ sudo yum install gcc-c++ java-1.7.0-openjdk-devel python-devel
+
+    $ wget http://peak.telecommunity.com/dist/ez_setup.py               # Python 2.x
     $ sudo python ez_setup.py
     $ sudo easy_install pip
-    $ sudo pip install konlpy
-    $ wget https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz # download Python 3.x
+
+    $ wget https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz  # Python 3.x
     $ tar xf Python-3.* 
     $ cd Python-3.*
-    $ ./configure  # Prepare compilation
+    $ ./configure
     $ make # Build
-    $ sudo make altinstall # Install
-    $ pip3.4 install konlpy
+    $ sudo make altinstall
+
+    $ pip install JPype1        # Python 2.x
+    $ pip3 install JPype1-py3   # Python 3.x
+
+1. Install KoNLPy
+
+.. sourcecode:: bash
+
+    $ pip install konlpy        # Python 2.x
+    $ pip3.4 install konlpy     # Python 3.x
 
 2. Install MeCab (*optional*)
 
@@ -63,12 +76,19 @@ Centos
 Mac OS
 ------
 
-1. From the command prompt, install KoNLPy.
+1. Install dependencies
 
 .. sourcecode:: bash
 
-   $ pip install konlpy     # Python 2.x
-   $ pip3 install konlpy    # Python 3.x
+   $ pip install JPype1         # Python 2.x
+   $ pip3 install JPype1-py3    # Python 3.x
+
+1. Install KoNLPy
+
+.. sourcecode:: bash
+
+   $ pip install konlpy         # Python 2.x
+   $ pip3 install konlpy        # Python 3.x
 
 2. Install MeCab (*optional*)
 
