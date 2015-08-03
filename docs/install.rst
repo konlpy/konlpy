@@ -32,6 +32,33 @@ Ubuntu
 
     If you get an `ImportError: No module named jpype` with `import konlpy`, try again after running `sudo pip install JPype1`.
 
+Centos
+------
+
+1. From the command prompt, install KoNLPy (Centos6.4).
+
+.. sourcecode:: bash
+
+    $ sudo yum install gcc-c++ java-1.7.0-openjdk-devel
+    $ sudo yum install python-devel
+    $ wget http://peak.telecommunity.com/dist/ez_setup.py # Python 2.x
+    $ sudo python ez_setup.py
+    $ sudo easy_install pip
+    $ sudo pip install konlpy
+    $ wget https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz # download Python 3.x
+    $ tar xf Python-3.* 
+    $ cd Python-3.*
+    $ ./configure  # Prepare compilation
+    $ make # Build
+    $ sudo make altinstall # Install
+    $ pip3.4 install konlpy
+
+2. Install MeCab (*optional*)
+
+.. sourcecode:: bash
+
+    $ sudo yum install curl
+    $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
 
 Mac OS
 ------
