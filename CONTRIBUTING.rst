@@ -13,7 +13,7 @@ KoNLPy는 오픈소스 프로젝트입니다.
 - 홈페이지: http://konlpy.org
 - 이슈트래커: http://github.com/konlpy/konlpy/issues
 - 메일링 리스트: `konlpy@googlegroups.com <http://groups.google.com/forum/#!forum/konlpy>`_
-- IRC: `irc.ozinger.org #koreannlp <http://webchat.ozinger.org/?channels=koreannlp>`_
+- 토론방: http://gitter.im/konlpy/konlpy
 
 
 2. 궁금증 해결하기
