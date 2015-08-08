@@ -278,10 +278,6 @@ extlinks = {
     'issue': ('https://github.com/konlpy/konlpy/issues/%s', '#'),
 }
 
-html_context = {
-    'disqus_shortname': 'konlpy',
-}
-
 # i18n
 locale_dirs = ['locale']
 gettext_compact = True
