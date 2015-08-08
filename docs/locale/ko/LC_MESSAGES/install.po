@@ -15,15 +15,15 @@ msgstr ""
 msgid "Installation"
 msgstr "설치하기"
 
-#: ../../install.rst:53
+#: ../../install.rst:100
 msgid "Windows"
 msgstr "윈도우"
 
-#: ../../install.rst:16 ../../install.rst:39 ../../install.rst:75
+#: ../../install.rst:122
 msgid "From the command prompt, install KoNLPy."
 msgstr "명령 프롬프트로 KoNLPy 설치하기"
 
-#: ../../install.rst:85
+#: ../../install.rst:132
 msgid "`win-amd64` for 64-bit Windows, `win32` for 32-bit Windows."
 msgstr "64비트 윈도우에는 `win-amd64`, 32비트 윈도우에는 `win32` 라고 쓰여진 파일을 사용합니다."
 
@@ -47,15 +47,15 @@ msgstr ""
 "<https://docs.google.com/spreadsheets/d/1Ii_L9NF9gSLbsJOGqsf-"
 "zfqTtyhhthmJWNC2kgUDIsU/edit#gid=0>`_ 에서 보실 수 있습니다."
 
-#: ../../install.rst:24 ../../install.rst:46
+#: ../../install.rst:31 ../../install.rst:69 ../../install.rst:93
 msgid "Install MeCab (*optional*)"
 msgstr "MeCab 설치하기 (*선택사항*)"
 
-#: ../../install.rst:37
+#: ../../install.rst:77
 msgid "Mac OS"
 msgstr "맥 OS"
 
-#: ../../install.rst:86
+#: ../../install.rst:133
 msgid ""
 "Having MinGW/MSYS or Cygwin installed may be more convenient. If you plan to"
 " use Git, `Git BASH <https://msysgit.github.io/>`_ is another good option. "
@@ -66,7 +66,7 @@ msgstr ""
 "<https://msysgit.github.io>`_ 가 좋은 옵션일 수 있습니다. 또는 `7zip <http://7-zip.org>`_"
 " 을 이용해 `tar` 파일의 압축을 푸실 수 있습니다."
 
-#: ../../install.rst:56
+#: ../../install.rst:103
 msgid ""
 "Set `JAVA_HOME "
 "<http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html>`_."
@@ -79,11 +79,11 @@ msgstr ""
 msgid "Ubuntu"
 msgstr "우분투"
 
-#: ../../install.rst:83
+#: ../../install.rst:130
 msgid "KoNLPy's ``Mecab()`` class is not supported on Windows machines."
 msgstr "KoNLPy의 ``Mecab()`` 클래스는 윈도우에서 지원되지 않습니다."
 
-#: ../../install.rst:55
+#: ../../install.rst:102
 msgid ""
 "Do you have Java 1.7+ installed? If not, `download and install JDK "
 "<http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_."
@@ -91,7 +91,7 @@ msgstr ""
 "자바(Java) 1.7 이상이 설치되어 있는지 확인해봅시다. 만일 설치되어 있지 않다면 `JDK를 다운로드 받고 설치해주세요 "
 "<http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_."
 
-#: ../../install.rst:66
+#: ../../install.rst:113
 msgid ""
 "Does your Python installation bit version match your Windows OS? If you're "
 "using a 64 bit Windows, you need a 64 bit Python, rather than a 32 bit "
@@ -100,15 +100,15 @@ msgstr ""
 "내 시스템에 설치된 파이썬이 OS의 비트 수와 일치하는지 확인해주세요. 예를 들어, 64비트 윈도우를 사용하고 있다면 64비트 파이썬이 "
 "설치되어 있어야 합니다."
 
-#: ../../install.rst:58
+#: ../../install.rst:105
 msgid "How to check your Windows bit version"
 msgstr "윈도우 비트 수 확인하는 법"
 
-#: ../../install.rst:63
+#: ../../install.rst:110
 msgid "How to check your Python bit version"
 msgstr "파이썬 비트 수 확인하는 법"
 
-#: ../../install.rst:68
+#: ../../install.rst:115
 msgid ""
 "Download and install `JPype1 (>=0.5.7) "
 "<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_. [#]_ You may have to "
@@ -119,8 +119,14 @@ msgstr ""
 " 받고 설치. 다운 받은 `.whl` 파일을 설치하기 위해서는 `pip 을 업그레이드 "
 "<https://pip.pypa.io/en/stable/installing.html#upgrade-pip>`_ 해야할 수 있습니다."
 
-#: ../../install.rst:33
-msgid ""
-"If you get an `ImportError: No module named jpype` with `import konlpy`, try"
-" again after running `sudo pip install JPype1`."
+#: ../../install.rst:16 ../../install.rst:42 ../../install.rst:79
+msgid "Install dependencies"
+msgstr ""
+
+#: ../../install.rst:24 ../../install.rst:62 ../../install.rst:86
+msgid "Install KoNLPy"
+msgstr ""
+
+#: ../../install.rst:39
+msgid "CentOS"
 msgstr ""

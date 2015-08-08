@@ -63,10 +63,6 @@ msgstr "이 프로젝트에는 세 가지 철학이 있습니다:"
 msgid "Keep it simple."
 msgstr "사용법이 간단해야 한다."
 
-#: ../../index.rst:68
-msgid "Make it easy. For humans. [#]_"
-msgstr "누구나 쉽게 이용할 수 있어야 한다. [#]_"
-
 #: ../../index.rst:69
 msgid ":ref:`\"Democracy on the web works.\" <contribute>`"
 msgstr ":ref:`\"인터넷 민주주의는 효과적이다.\" <contribute>`"
@@ -74,10 +70,6 @@ msgstr ":ref:`\"인터넷 민주주의는 효과적이다.\" <contribute>`"
 #: ../../index.rst:74
 msgid "License"
 msgstr "라이센스"
-
-#: ../../index.rst:78
-msgid "`GPL v3 or above <http://gnu.org/licenses/gpl.html>`_ [#]_"
-msgstr "`GPL v3 또는 그 이상 <http://gnu.org/licenses/gpl.html>`_ [#]_"
 
 #: ../../index.rst:99
 msgid "Contribute"
@@ -116,24 +108,6 @@ msgstr ":ref:`search`"
 #: ../../index.rst:166
 msgid ":doc:`changelog`"
 msgstr ":doc:`changelog`"
-
-#: ../../index.rst:169
-msgid ""
-"With `clear and brief <http://echojuliett.tumblr.com/post/32108001510"
-"/clarity-brevity>`_ documents."
-msgstr ""
-"`간단하고 명료한 <http://echojuliett.tumblr.com/post/32108001510/clarity-brevity>`_"
-" 문서화로."
-
-#: ../../index.rst:170
-msgid ""
-"No, I'm not extremely fond of this either. However, some important "
-"depedencies - such as Hannanum, Kkma, MeCab-ko - are GPL licensed, and we "
-"want to honor their licenses. (It is also an inevitable choice. We hope "
-"things may change in the future.)"
-msgstr ""
-"GPL이 항상 최선은 아니지만, 몇몇 중요한 dependency가 GPL 라이센스를 채택하고 있기 때문에 그것을 계승하는 차원에서 "
-"선택하였습니다. (차후에는 이런 상황이 바뀔 수도 있다고 생각합니다.)"
 
 #: ../../index.rst:76
 msgid ""
@@ -211,7 +185,15 @@ msgid ""
 "Gitter is more focused on development discussions while the mailing list is "
 "a better place to ask questions, but nobody stops you from going the other "
 "way around."
-msgstr "또, `gitter <https://gitter.im/konlpy/konlpy>`_ 의"
-" 대화에 참여하시거나, `KoNLPy 메일링리스트에 "
-"<https://groups.google.com/forum/#!forum/konlpy>`_ 가입해서 관련 정보를 받아보거나 궁금한 것에 "
-"대한 질문을 할 수도 있습니다."
+msgstr ""
+"또, `gitter <https://gitter.im/konlpy/konlpy>`_ 의 대화에 참여하시거나, `KoNLPy 메일링리스트에"
+" <https://groups.google.com/forum/#!forum/konlpy>`_ 가입해서 관련 정보를 받아보거나 궁금한 것에"
+" 대한 질문을 할 수도 있습니다."
+
+#: ../../index.rst:68
+msgid "Make it easy. For humans."
+msgstr "누구나 쉽게 이용할 수 있어야 한다."
+
+#: ../../index.rst:78
+msgid "`GPL v3 or above <http://gnu.org/licenses/gpl.html>`_"
+msgstr "`GPL v3 또는 그 이상 <http://gnu.org/licenses/gpl.html>`_"
