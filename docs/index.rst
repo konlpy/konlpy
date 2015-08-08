@@ -65,7 +65,7 @@ It is built particularly in the `Python (programming) language <http://python.or
 The three main philosophies of this project are:
 
 - Keep it simple.
-- Make it easy. For humans. [#]_
+- Make it easy. For humans.
 - :ref:`"Democracy on the web works." <contribute>`
 
 Please `report <https://github.com/konlpy/konlpy/issues>`_ when you think any have gone stale.
@@ -75,7 +75,7 @@ License
 
 KoNLPy is Open Source Software, and is released under the license below:
 
-- `GPL v3 or above <http://gnu.org/licenses/gpl.html>`_ [#]_
+- `GPL v3 or above <http://gnu.org/licenses/gpl.html>`_
 
 You are welcome to use the code under the terms of the license, however please acknowledge its use with a citation.
 
@@ -165,6 +165,18 @@ Indices and tables
 * :ref:`search`
 * :doc:`changelog`
 
+.. raw:: html
 
-.. [#] With `clear and brief <http://echojuliett.tumblr.com/post/32108001510/clarity-brevity>`_ documents.
-.. [#] No, I'm not extremely fond of this either. However, some important depedencies - such as Hannanum, Kkma, MeCab-ko - are GPL licensed, and we want to honor their licenses. (It is also an inevitable choice. We hope things may change in the future.)
+    <iframe id="forum_embed"
+      src="javascript:void(0)"
+      scrolling="no"
+      frameborder="0"
+      width="900"
+      height="700">
+    </iframe>
+    <script type="text/javascript">
+      document.getElementById('forum_embed').src =
+         'https://groups.google.com/forum/embed/?place=forum/konlpy'
+         + '&showsearch=true&showpopout=true&showtabs=false'
+         + '&parenturl=' + encodeURIComponent(window.location.href);
+    </script>
