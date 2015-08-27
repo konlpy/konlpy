@@ -32,6 +32,10 @@ class Kkma():
         >>> print(kkma.sentences(u'그래도 계속 공부합니다. 재밌으니까!'))
         ['그래도 계속 공부합니다.', '재밌으니까!']
 
+    .. warning::
+
+        There are reports that ``Kkma()`` is weak for long strings with no spaces between words. See issue :issue:`73` for details.
+
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
     """
 
