@@ -130,4 +130,3 @@ Windows
     - KoNLPy's ``Mecab()`` class is not supported on Windows machines.
 
 .. [#] `win-amd64` for 64-bit Windows, `win32` for 32-bit Windows.
-.. [#] Having MinGW/MSYS or Cygwin installed may be more convenient. If you plan to use Git, `Git BASH <https://msysgit.github.io/>`_ is another good option. Otherwise, you can use `7zip <http://7-zip.org>`_ for the extraction of `tar` files.
