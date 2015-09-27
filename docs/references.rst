@@ -20,34 +20,43 @@ There are several libraries in various programming languages to achieve this:
 C/C++
 '''''
 - `KTS <http://wiki.kldp.org/wiki.php/KTS>`_ (1995) :license:`GPL v2`
-    - By 이상호, 서정연, 오영환 (KAIST & 서강대)
-    - `code <https://github.com/suapapa/kts>`_
+    - By 이상호, 서정연*, 오영환 (KAIST & Seogang University)
+    - `code <http://kldp.net/projects/kts/src>`_
 - `MACH <http://cs.sungshin.ac.kr/~shim/demo/mach.html>`_ (2002) :license:`custom`
-    - By Prof. Kwangseob Shim (성신여대)
+    - By Kwangseob Shim* (성신여대)
+    - Kwangseob Shim, Jaehyung Yang, `MACH: A Supersonic Korean Morphological Analyzer <http://www.aclweb.org/anthology/C02-1092>`_, ACL, 2002.
 - `MeCab-ko <https://bitbucket.org/eunjeon/mecab-ko/>`_ (2013) :license:`GPL` :license:`LGPL` :license:`BSD`
     - By Yong-woon Lee and Youngho Yoo
 
-Java
-''''
+Go
+''
+
+- `go_hangul <https://github.com/suapapa/go_hangul>`_ (2012) :license:`BSD`
+
+Java/Scala
+''''''''''
+
+- `twitter-korean-text <https://github.com/twitter/twitter-korean-text/>`_ (2014) :license:`Apache v2`
+    - By Will Hohyon Ryu (Twitter)
+- `KOMORAN <http://shineware.tistory.com/tag/KOMORAN>`_ (2013) :license:`Apache v2`
+    - By *shineware*
+- `KKMA <http://kkma.snu.ac.kr>`_ (2010) :license:`GPL v2`
+    - By Sang-goo Lee* et al. (Seoul National University)
+    - Generates morpheme candidates using dynamic programming
+    - Tags morphemes by checking neighbors, and employing some heuristics and HMM models
+    - Developer blog: `Dongjoo Lee <http://therocks.tistory.com>`_
 - `Arirang <http://cafe.naver.com/korlucene>`_ (2009) :license:`Apache v2`
     - By SooMyung Lee
     - `code <http://sourceforge.net/projects/lucenekorean>`_
 - `Hannanum <http://semanticweb.kaist.ac.kr/home/index.php/HanNanum>`_ (1999) :license:`GPL v3`
-    - By Prof. Key-Sun Choi Key's research team (KAIST)
+    - By Key-Sun Choi* et al. (KAIST)
     - `code <http://kldp.net/projects/hannanum/src>`_, `docs <http://semanticweb.kaist.ac.kr/research/hannanum/j/javadoc/>`_
-- `KKMA <http://kkma.snu.ac.kr>`_ (2010) :license:`GPL v2`
-    - By Prof. Sang-goo Lee's research team (서울대)
-    - Generates morpheme candidates using dynamic programming
-    - Tags morphemes by checking neighbors, and employing some heuristics and HMM models
-    - Developer blog: `Dongjoo Lee <http://therocks.tistory.com>`_
-- `KOMORAN <http://shineware.tistory.com/tag/KOMORAN>`_ (2013) :license:`Apache v2`
-    - By *shineware*
 
 Python
 ''''''
 
 - `KoNLPy <http://konlpy.org>`_ (2014) :license:`GPL v3`
-    - By Lucy Park (서울대)
+    - By Lucy Park (Seoul National University)
 - `UMorpheme <https://pypi.python.org/pypi/UMorpheme>`_ (2014) :license:`MIT`
     - By Kyunghoon Kim (UNIST)
 
@@ -65,10 +74,10 @@ Others
     - `Development history <http://spasis.egloos.com/9507>`_
 - `Korean XTAG <http://www.cis.upenn.edu/~xtag/koreantag/>`_ (UPenn)
 - `HAM <http://nlp.kookmin.ac.kr/HAM/kor/ham-intr.html>`_ (국민대)
-- `POSTAG/K <http://nlp.postech.ac.kr/~project/DownLoad/k_api.html>`_ (포스텍)
+- `POSTAG/K <http://nlp.postech.ac.kr/~project/DownLoad/k_api.html>`_ (POSTECH)
 - `Speller <http://speller.cs.pusan.ac.kr/>`_ (부산대)
 - `UTagger <http://203.250.77.242:5900/>`_ (울산대)
-- `(No name) <http://cl.korea.ac.kr/Demo/dglee/index.html>`_ (고려대)
+- `(No name) <http://cl.korea.ac.kr/Demo/dglee/index.html>`_ (Korea University)
 
 
 Other NLP tools
@@ -84,6 +93,7 @@ Other NLP tools
     - Language parser
 - `Korean <http://pythonhosted.org/korean>`_ - By Heungsub Lee :language:`Python`
     - Package for attaching particles (josa) in sentences
+- `BoRA 언어자원은행 <http://semanticweb.kaist.ac.kr/org/bora/>`_ - By KAIST
 
 .. _corpora:
 
