@@ -167,7 +167,7 @@ msgstr ""
 "텍스트 생성에 대한 더 자세한 설명은 존 벤틀리의 `생각하는 프로그래밍 (15장 3절) <http://www.cs.bell-"
 "labs.com/cm/cs/pearls/sec153.html>`_ 의 내용을 참고해주세요."
 
-#: ../../examples/generate.rst:64
+#: ../../examples/generate.rst:68
 msgid ""
 "Please refer to the Hangul Jamo in `Unicode character code charts "
 "<http://www.unicode.org/charts/>`_."
@@ -345,11 +345,19 @@ msgstr ""
 msgid ""
 "The easiest way would probably be to have your cat walk across your keyboard"
 " which would result in something like this [#]_::"
-msgstr "가장 간단하게는 고양이 한 마리가 키보드를 밟고 지나가게 할 수 있습니다. 그렇게 하면 이와 유사한 결과가 나오겠죠 [#]_::"
+msgstr ""
+"가장 간단하게는 고양이 한 마리가 키보드를 밟고 지나가게 할 수 있습니다. 그렇게 하면 이와 유사한 결과가 나오겠죠 [#]_::"
 
-#: ../../examples/generate.rst:63
+#: ../../examples/generate.rst:67
 msgid ""
 "This story would actually feature a monkey instead of a cat. Namely by the "
 "`Infinite monkey theorem "
 "<http://en.wikipedia.org/wiki/Infinite_monkey_theorem>`_."
+msgstr ""
+
+#: ../../examples/generate.rst:62
+msgid ""
+"http://alexhwoods.com/2015/08/05/generating-text-using-a-markov-model/ "
+"Generating text using bigrams -> Shannon's Method로 불림 (SLP 4장 참고) - Bigram, "
+"Trigram 이용 보여주기"
 msgstr ""

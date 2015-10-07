@@ -241,7 +241,7 @@ msgstr ""
 
 #: ../../../konlpy/tag/_hannanum.pydocstring of
 #: konlpy.tag._hannanum.Hannanum:21 ../../../konlpy/tag/_kkma.pydocstring of
-#: konlpy.tag._kkma.Kkma:20 ../../../konlpy/tag/_komoran.pydocstring of
+#: konlpy.tag._kkma.Kkma:24 ../../../konlpy/tag/_komoran.pydocstring of
 #: konlpy.tag._komoran.Komoran:16 ../../../konlpy/tag/_twitter.pydocstring of
 #: konlpy.tag._twitter.Twitter:23
 msgid "The path of the JVM passed to :py:func:`.init_jvm`."
@@ -489,4 +489,10 @@ msgid ""
 "developed by the Graduate School of Informatics in Kyoto University, was "
 "modified to MeCab-ko by the `Eunjeon Project`_ to adapt to the Korean "
 "language."
+msgstr ""
+
+#: ../../../konlpy/tag/_kkma.pydocstring of konlpy.tag._kkma.Kkma:22
+msgid ""
+"There are reports that ``Kkma()`` is weak for long strings with no spaces "
+"between words. See issue :issue:`73` for details."
 msgstr ""

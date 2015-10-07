@@ -55,17 +55,6 @@ msgstr "MeCab 설치하기 (*선택사항*)"
 msgid "Mac OS"
 msgstr "맥 OS"
 
-#: ../../install.rst:133
-msgid ""
-"Having MinGW/MSYS or Cygwin installed may be more convenient. If you plan to"
-" use Git, `Git BASH <https://msysgit.github.io/>`_ is another good option. "
-"Otherwise, you can use `7zip <http://7-zip.org>`_ for the extraction of "
-"`tar` files."
-msgstr ""
-"MinGW/MSYS 또는 Cygwin을 설치한 후 압축을 푸실 수 있습니다. Git을 같이 사용하시는 경우 `Git BASH "
-"<https://msysgit.github.io>`_ 가 좋은 옵션일 수 있습니다. 또는 `7zip <http://7-zip.org>`_"
-" 을 이용해 `tar` 파일의 압축을 푸실 수 있습니다."
-
 #: ../../install.rst:103
 msgid ""
 "Set `JAVA_HOME "
@@ -130,3 +119,13 @@ msgstr ""
 #: ../../install.rst:39
 msgid "CentOS"
 msgstr ""
+
+#~ msgid ""
+#~ "Having MinGW/MSYS or Cygwin installed may be more convenient. If you plan to"
+#~ " use Git, `Git BASH <https://msysgit.github.io/>`_ is another good option. "
+#~ "Otherwise, you can use `7zip <http://7-zip.org>`_ for the extraction of "
+#~ "`tar` files."
+#~ msgstr ""
+#~ "MinGW/MSYS 또는 Cygwin을 설치한 후 압축을 푸실 수 있습니다. Git을 같이 사용하시는 경우 `Git BASH "
+#~ "<https://msysgit.github.io>`_ 가 좋은 옵션일 수 있습니다. 또는 `7zip <http://7-zip.org>`_"
+#~ " 을 이용해 `tar` 파일의 압축을 푸실 수 있습니다."
