@@ -354,10 +354,3 @@ msgid ""
 "`Infinite monkey theorem "
 "<http://en.wikipedia.org/wiki/Infinite_monkey_theorem>`_."
 msgstr ""
-
-#: ../../examples/generate.rst:62
-msgid ""
-"http://alexhwoods.com/2015/08/05/generating-text-using-a-markov-model/ "
-"Generating text using bigrams -> Shannon's Method로 불림 (SLP 4장 참고) - Bigram, "
-"Trigram 이용 보여주기"
-msgstr ""

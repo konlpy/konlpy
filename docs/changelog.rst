@@ -1,13 +1,19 @@
 Change logs
 ===========
 
+`Version 0.4.4 <https://github.com/konlpy/konlpy/releases/tag/v0.4.4>`_
+-----------------------------------------------------------------------
+
+Released on Oct 25, 2015.
+
+- Include tagsets for each morpheme analyzer [:commit:`26a39d7`]
+
 `Version 0.4.3 <https://github.com/konlpy/konlpy/releases/tag/v0.4.3>`_
 -----------------------------------------------------------------------
 
 Released on Feb 27, 2015.
 
 - Fix conditional requirement bug for pip3 [:issue:`50`]
-
 
 `Version 0.4.2 <https://github.com/konlpy/konlpy/releases/tag/v0.4.2>`_
 -----------------------------------------------------------------------
