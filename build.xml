@@ -1,0 +1,21 @@
+<project name="konlpy-java">
+    <property name="project-name" value="konlpy-java" />
+    <property name="bin" value="konlpy/java/bin" />
+    <property name="lib" value="konlpy/java" />
+    <property name="src" value="konlpy/java/src" />
+    <path id="master-classpath">
+        <fileset dir="${lib}">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+    <target name="compile">
+        <mkdir dir="${bin}"/>
+        <javac srcdir="${src}"
+               destdir="${bin}"
+               includeantruntime="false">
+            <classpath refid="master-classpath" />
+        </javac>
+    </target>
+    <target name="run">
+    </target>
+</project>

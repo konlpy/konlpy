@@ -37,6 +37,9 @@ pypi:
 	sudo python setup.py sdist --formats=gztar,zip upload -r pypi
 	sudo python setup.py bdist_wheel upload -r pypi
 
+java:
+	ant compile
+
 jcc:
 	python -m jcc \
 	    --jar konlpy/java/jhannanum-0.8.4.jar \
