@@ -12,6 +12,12 @@ Below are a set of example tasks using KoNLPy.
 
 .. container:: example
 
+    :doc:`examples/corpus`
+
+    .. figure:: examples/heap_thumb.png
+
+.. container:: example
+
     :doc:`examples/collocations`
 
     .. figure:: examples/shoes.png
@@ -39,12 +45,6 @@ Below are a set of example tasks using KoNLPy.
     :doc:`examples/multithreading`
 
     .. figure:: examples/multithreading.png
-
-.. container:: example
-
-    :doc:`examples/corpus`
-
-    .. figure:: examples/heap_thumb.png
 
 
 Contents
