@@ -138,7 +138,7 @@ Don't hesitate to ask.
 .. _start:
 
 Getting started
-===============
+---------------
 
 .. toctree::
   :glob:
@@ -149,7 +149,7 @@ Getting started
 .. _guide:
 
 User guide
-==========
+----------
 
 .. toctree::
   :glob:
@@ -165,7 +165,7 @@ User guide
 .. _api:
 
 API
-===
+---
 
 .. toctree::
   :glob:
@@ -174,7 +174,7 @@ API
 
 
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
 * :ref:`modindex`
