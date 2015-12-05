@@ -2,9 +2,7 @@ package kr.lucypark.jhannanum.comm;
 
 /* Copyright 2014 Lucy Park <me@lucypark.kr> */
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 import kr.ac.kaist.swrc.jhannanum.comm.Eojeol;
 import kr.ac.kaist.swrc.jhannanum.comm.Sentence;
@@ -19,7 +17,7 @@ public class HannanumInterface {
     private Workflow wfPos22 = null;
 
     public String morphAnalyzer(String phrase) {
-        if (phrase == null || phrase == "" || phrase.length() == 0) {
+        if (phrase == null || Objects.equals(phrase, "") || phrase.length() == 0) {
             return null;
         }
         try {
@@ -28,7 +26,7 @@ public class HannanumInterface {
                 wfMorph.activateWorkflow(false);
             }
             wfMorph.analyze(phrase);
-            return wfMorph.getResultOfDocument().toString();
+            return wfMorph.getResultOfDocument();
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -38,9 +36,8 @@ public class HannanumInterface {
     }
 
     public String[] extractNoun(String phrase) throws ResultTypeException {
-        if (phrase == null || phrase == "" || phrase.length() == 0) {
-            String[] tmp = new String[] { "" };
-            return tmp;
+        if (phrase == null || Objects.equals(phrase, "") || phrase.length() == 0) {
+            return new String[] { "" };
         }
         try {
             if (wfNoun == null) {
@@ -49,19 +46,17 @@ public class HannanumInterface {
             }
             wfNoun.analyze(phrase);
             LinkedList<Sentence> resultList = wfNoun.getResultOfDocument(new Sentence(0, 0, false));
-            List<String> list = new ArrayList<String>();
+            List<String> list = new ArrayList<>();
             for (Sentence s : resultList) {
                 Eojeol[] eojeolArray = s.getEojeols();
-                for (int i = 0; i < eojeolArray.length; i++) {
-                    if (eojeolArray[i].length > 0) {
-                        String[] morphemes = eojeolArray[i].getMorphemes();
-                        for (int j = 0; j < morphemes.length; j++) {
-                            list.add(morphemes[j]);
-                        }
+                for (Eojeol anEojeolArray : eojeolArray) {
+                    if (anEojeolArray.length > 0) {
+                        String[] morphemes = anEojeolArray.getMorphemes();
+                        Collections.addAll(list, morphemes);
                     }
                 }
             }
-            return list.toArray(new String[0]);
+            return list.toArray(new String[list.size()]);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -71,7 +66,7 @@ public class HannanumInterface {
     }
 
     public String simplePos09(String phrase) {
-        if (phrase == null || phrase == "" || phrase.length() == 0) {
+        if (phrase == null || Objects.equals(phrase, "") || phrase.length() == 0) {
             return null;
         }
         try {
@@ -80,7 +75,7 @@ public class HannanumInterface {
                 wfPos09.activateWorkflow(false);
             }
             wfPos09.analyze(phrase);
-            return wfPos09.getResultOfDocument().toString();
+            return wfPos09.getResultOfDocument();
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -90,7 +85,7 @@ public class HannanumInterface {
     }
 
     public String simplePos22(String phrase) {
-        if (phrase == null || phrase == "" || phrase.length() == 0) {
+        if (phrase == null || Objects.equals(phrase, "") || phrase.length() == 0) {
             return null;
         }
         try {
@@ -99,7 +94,7 @@ public class HannanumInterface {
                 wfPos22.activateWorkflow(false);
             }
             wfPos22.analyze(phrase);
-            return wfPos22.getResultOfDocument().toString();
+            return wfPos22.getResultOfDocument();
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -117,8 +112,8 @@ public class HannanumInterface {
 
         // Test extractNoun
         String[] nouns = hi.extractNoun("");
-        for (int i = 0; i < nouns.length; i++) {
-            System.out.println(nouns[i]);
+        for (String noun : nouns) {
+            System.out.println(noun);
         }
 
         // Test SimplePOS
@@ -130,6 +125,5 @@ public class HannanumInterface {
 
     private void closeWorkFlow(Workflow workflow) {
         workflow.close();
-        workflow = null;
     }
 }
