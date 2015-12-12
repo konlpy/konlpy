@@ -2,7 +2,11 @@ package kr.lucypark.jhannanum.comm;
 
 /* Copyright 2014 Lucy Park <me@lucypark.kr> */
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Objects;
 
 import kr.ac.kaist.swrc.jhannanum.comm.Eojeol;
 import kr.ac.kaist.swrc.jhannanum.comm.Sentence;
@@ -37,7 +41,7 @@ public class HannanumInterface {
 
     public String[] extractNoun(String phrase) throws ResultTypeException {
         if (phrase == null || Objects.equals(phrase, "") || phrase.length() == 0) {
-            return new String[] { "" };
+            return new String[]{""};
         }
         try {
             if (wfNoun == null) {
