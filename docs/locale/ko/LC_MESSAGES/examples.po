@@ -23,11 +23,11 @@ msgstr "다음은 KoNLPy를 이용해 수행할 수 있는 몇몇 사용 예시�
 msgid ":doc:`examples/explore`"
 msgstr ""
 
-#: ../../examples.rst:33
+#: ../../examples.rst:39
 msgid ":doc:`examples/wordcloud`"
 msgstr ""
 
-#: ../../examples.rst:15
+#: ../../examples.rst:21
 msgid ":doc:`examples/collocations`"
 msgstr ""
 
@@ -102,7 +102,7 @@ msgstr ""
 msgid "Contents"
 msgstr "목록보기"
 
-#: ../../examples.rst:27
+#: ../../examples.rst:33
 msgid ":doc:`examples/generate`"
 msgstr ""
 
@@ -219,7 +219,7 @@ msgstr ""
 "한 걸음 더 나아가기 위해서는 `언어 모델 <http://en.wikipedia.org/wiki/Language_model>`_ 을 "
 "이용해 생성한 랜덤 텍스트가 통계적인 관점에서 얼마나 말이 되는지 평가해볼 수 있습니다."
 
-#: ../../examples.rst:39
+#: ../../examples.rst:45
 msgid ":doc:`examples/multithreading`"
 msgstr ""
 
@@ -257,7 +257,7 @@ msgid ""
 "-python-and-cloud>`_, 2011."
 msgstr ""
 
-#: ../../examples.rst:21
+#: ../../examples.rst:27
 msgid ":doc:`examples/chunking`"
 msgstr ""
 
@@ -303,7 +303,7 @@ msgid ""
 " it into several higher level multitoken sequences, or \"chunks\"."
 msgstr ":doc:`문장에 품사를 부착한 후에는 </morph>` 품사들을 조금 더 큰 단위의 묶음, 즉 구문으로 묶을 수 있습니다."
 
-#: ../../examples.rst:45
+#: ../../examples.rst:15
 msgid ":doc:`examples/corpus`"
 msgstr ""
 

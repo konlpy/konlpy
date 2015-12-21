@@ -81,31 +81,31 @@ msgid ""
 " participate!"
 msgstr "KoNLPy는 완벽하지 않습니다. 하지만 조금씩 지속적으로 발전시킬 예정이며, 누구나 개발 과정에 참여할 수 있습니다."
 
-#: ../../index.rst:136
+#: ../../index.rst:152
 msgid "User guide"
 msgstr "사용하기"
 
-#: ../../index.rst:152
+#: ../../index.rst:168
 msgid "API"
 msgstr "API"
 
-#: ../../index.rst:161
+#: ../../index.rst:177
 msgid "Indices and tables"
 msgstr "인덱스와 표"
 
-#: ../../index.rst:163
+#: ../../index.rst:179
 msgid ":ref:`genindex`"
 msgstr ":ref:`genindex`"
 
-#: ../../index.rst:164
+#: ../../index.rst:180
 msgid ":ref:`modindex`"
 msgstr ":ref:`modindex`"
 
-#: ../../index.rst:165
+#: ../../index.rst:181
 msgid ":ref:`search`"
 msgstr ":ref:`search`"
 
-#: ../../index.rst:166
+#: ../../index.rst:182
 msgid ":doc:`changelog`"
 msgstr ":doc:`changelog`"
 
@@ -145,7 +145,7 @@ msgstr ""
 "무엇보다, 질문하는 것만으로도 엄청난 기여라는 점을 알아주세요! 질문은 개발 커뮤니티에 피드백을 주는 가장 직접적이면서도 쉬운 방법이고,"
 " 아이디어의 원천도 됩니다."
 
-#: ../../index.rst:125
+#: ../../index.rst:141
 msgid "Getting started"
 msgstr "시작하기"
 
