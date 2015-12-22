@@ -49,8 +49,8 @@ jcc:
 	    --build --install
 
 testall:
-	python -m pytest --cov konlpy test/*
-	python3 -m pytest --cov konlpy test/*
+	python -m pytest --cov=konlpy test/
+	python3 -m pytest --cov=konlpy test/
 
 init_i18n:
 	pip install mock sphinx sphinx-intl
