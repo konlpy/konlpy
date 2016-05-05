@@ -15,278 +15,291 @@ msgstr ""
 msgid "Change logs"
 msgstr ""
 
-#: ../../changelog.rst:48
+#: ../../changelog.rst:54
 msgid "Released on Sep 7, 2014."
 msgstr ""
 
-#: ../../changelog.rst:50
+#: ../../changelog.rst:56
 msgid "Added Python 3 support [:issue:`17` by :committer:`hyeshik`]"
 msgstr ""
 
-#: ../../changelog.rst:51
+#: ../../changelog.rst:57
 msgid ""
 "Created `KoNLPy mailing list at Google Groups "
 "<https://groups.google.com/forum/#!forum/konlpy>`_"
 msgstr ""
 
-#: ../../changelog.rst:56 ../../changelog.rst:66
+#: ../../changelog.rst:62 ../../changelog.rst:72
 msgid "Released on Sep 4, 2014."
 msgstr ""
 
-#: ../../changelog.rst:58
+#: ../../changelog.rst:64
 msgid ""
 "Fixed JPype class loading error for Mac OS X [:issue:`6` by "
 ":committer:`combacsa`]"
 msgstr ""
 
-#: ../../changelog.rst:59
+#: ../../changelog.rst:65
 msgid "JPype 0.5.5.4 is not compatible with JDK 1.7 in Mac OS X 10.9"
 msgstr ""
 
-#: ../../changelog.rst:61
+#: ../../changelog.rst:67
 msgid ""
 "Fixed Kkma memory error for Mac OS X [:issue:`13` by :committer:`combacsa`]"
 msgstr ""
 
-#: ../../changelog.rst:61
+#: ../../changelog.rst:67
 msgid "`java.lang.OutOfMemoryError` in Mac OS X if heap memory is too small"
 msgstr ""
 
-#: ../../changelog.rst:68
+#: ../../changelog.rst:74
 msgid "Added MeCab installer script"
 msgstr ""
 
-#: ../../changelog.rst:69
+#: ../../changelog.rst:75
 msgid "Fixed Morph modules to handle strings with whitespaces only"
 msgstr ""
 
-#: ../../changelog.rst:70
+#: ../../changelog.rst:76
 msgid "Fixed data inclusion error for Hannanum"
 msgstr ""
 
-#: ../../changelog.rst:71
+#: ../../changelog.rst:77
 msgid "Modified tagger filenames with underscore prefixes"
 msgstr ""
 
-#: ../../changelog.rst:72
+#: ../../changelog.rst:78
 msgid "Modified concordance function not to print results by default"
 msgstr ""
 
-#: ../../changelog.rst:73
+#: ../../changelog.rst:79
 msgid "Modified Hannanum `morph` method to `analyze`"
 msgstr ""
 
-#: ../../changelog.rst:74
+#: ../../changelog.rst:80
 msgid "Uploaded `KoNLPy to PyPI <https://pypi.python.org/pypi/konlpy>`_"
 msgstr ""
 
-#: ../../changelog.rst:79
+#: ../../changelog.rst:85
 msgid "Released on Aug 25, 2014."
 msgstr ""
 
-#: ../../changelog.rst:81
+#: ../../changelog.rst:87
 msgid "Changed API by automatically initializing JVM for Hannanum, Kkma"
 msgstr ""
 
-#: ../../changelog.rst:82
+#: ../../changelog.rst:88
 msgid "Added Kkma module with Kkma 2.0"
 msgstr ""
 
-#: ../../changelog.rst:83
+#: ../../changelog.rst:89
 msgid "Added documents using Sphinx and Read the Docs"
 msgstr ""
 
-#: ../../changelog.rst:84
+#: ../../changelog.rst:90
 msgid "Added license: GPL v3 or above"
 msgstr ""
 
-#: ../../changelog.rst:85
+#: ../../changelog.rst:91
 msgid "Added pretty print function for Unicode"
 msgstr ""
 
-#: ../../changelog.rst:86
+#: ../../changelog.rst:92
 msgid "Added noun extractor to Mecab"
 msgstr ""
 
-#: ../../changelog.rst:87
+#: ../../changelog.rst:93
 msgid ""
 "Fixed Hannanum, Kkma module bug where it couldn't handle empty input strings"
 msgstr ""
 
-#: ../../changelog.rst:91
+#: ../../changelog.rst:97
 msgid ""
 "The versions below do not have documents available, and are not backwards-"
 "compatible."
 msgstr ""
 
-#: ../../changelog.rst:96
+#: ../../changelog.rst:102
 msgid "Released on Aug 1, 2014."
 msgstr ""
 
-#: ../../changelog.rst:98
+#: ../../changelog.rst:104
 msgid "Changed API by explicitly initializing JVM for Hannanum"
 msgstr ""
 
-#: ../../changelog.rst:99
+#: ../../changelog.rst:105
 msgid "Added Mecab module with MeCab-0.996-ko-0.9.1"
 msgstr ""
 
-#: ../../changelog.rst:100
+#: ../../changelog.rst:106
 msgid "Added unit tests"
 msgstr ""
 
-#: ../../changelog.rst:101
+#: ../../changelog.rst:107
 msgid "Added test automation with Travis CI"
 msgstr ""
 
-#: ../../changelog.rst:102
+#: ../../changelog.rst:108
 msgid "Fixed Hannanum module parsing error when '/', '+' are in text"
 msgstr ""
 
-#: ../../changelog.rst:103
+#: ../../changelog.rst:109
 msgid ""
 "Fixed Hannanum module text indexing error (where results get truncated)"
 msgstr ""
 
-#: ../../changelog.rst:108
+#: ../../changelog.rst:114
 msgid "Released on Jun 15, 2014. Initial release of KoNLPy."
 msgstr ""
 
-#: ../../changelog.rst:111
+#: ../../changelog.rst:117
 msgid ""
 "Inspired by Heewon Jeon's `KoNLP <https://github.com/haven-jeon/KoNLP>`_ "
 "project, a wrapper of the Hannanum analyzer for R. The name KoNLPy, comes "
 "from this project."
 msgstr ""
 
-#: ../../changelog.rst:112
+#: ../../changelog.rst:118
 msgid "Added Hannanum module with JHannanum 0.8.3"
 msgstr ""
 
-#: ../../changelog.rst:41
+#: ../../changelog.rst:47
 msgid ""
 "Change dependency version of mecab-python from 0.993 to 0.996 [:issue:`19` "
 "with comments by Yong-woon Lee]"
 msgstr ""
 
-#: ../../changelog.rst:38
+#: ../../changelog.rst:44
 msgid "Added nonflattened results for POS taggers"
 msgstr ""
 
-#: ../../changelog.rst:42
+#: ../../changelog.rst:48
 msgid "Fixed concordance bug for Python2 [:commit:`6caa929`]"
 msgstr ""
 
-#: ../../changelog.rst:31
+#: ../../changelog.rst:37
 msgid ""
 "`Version 0.4.0 <https://github.com/konlpy/konlpy/releases/tag/v0.4.0>`_"
 msgstr ""
 
-#: ../../changelog.rst:33
+#: ../../changelog.rst:39
 msgid "Released on Jan 18, 2015."
 msgstr ""
 
-#: ../../changelog.rst:35
+#: ../../changelog.rst:41
 msgid "Added :py:mod:`.data`, :py:mod:`.downloader` [:issue:`4`]"
 msgstr ""
 
-#: ../../changelog.rst:36
+#: ../../changelog.rst:42
 msgid "Added :py:func:`.utils.csvread`, :py:func:`.utils.csvwrite`"
 msgstr ""
 
-#: ../../changelog.rst:37
+#: ../../changelog.rst:43
 msgid "Added :py:func:`.utils.read_txt()`"
 msgstr ""
 
-#: ../../changelog.rst:39
+#: ../../changelog.rst:45
 msgid "Added Komoran module with KOMORAN 2.4"
 msgstr ""
 
-#: ../../changelog.rst:40
+#: ../../changelog.rst:46
 msgid "Change dependency version of JPype1 to 0.5.7+"
 msgstr ""
 
-#: ../../changelog.rst:43
+#: ../../changelog.rst:49
 msgid "Fixed pprint bug on Windows [:issue:`37`]"
 msgstr ""
 
-#: ../../changelog.rst:46
+#: ../../changelog.rst:52
 msgid ""
 "`Version 0.3.3 <https://github.com/konlpy/konlpy/releases/tag/v0.3.3>`_"
 msgstr ""
 
-#: ../../changelog.rst:54
+#: ../../changelog.rst:60
 msgid ""
 "`Version 0.3.2 <https://github.com/konlpy/konlpy/releases/tag/v0.3.2>`_"
 msgstr ""
 
-#: ../../changelog.rst:64
+#: ../../changelog.rst:70
 msgid ""
 "`Version 0.3.1 <https://github.com/konlpy/konlpy/releases/tag/v0.3.1>`_"
 msgstr ""
 
-#: ../../changelog.rst:77
+#: ../../changelog.rst:83
 msgid ""
 "`Version 0.3.0 <https://github.com/konlpy/konlpy/releases/tag/v0.3.0>`_"
 msgstr ""
 
-#: ../../changelog.rst:94
+#: ../../changelog.rst:100
 msgid "`Version 0.2 <https://github.com/konlpy/konlpy/releases/tag/v0.2>`_"
 msgstr ""
 
-#: ../../changelog.rst:106
+#: ../../changelog.rst:112
 msgid "`Version 0.1 <https://github.com/konlpy/konlpy/releases/tag/v0.1>`_"
 msgstr ""
 
-#: ../../changelog.rst:24
+#: ../../changelog.rst:30
 msgid "Added :py:class:`.tag.Twitter`"
 msgstr ""
 
-#: ../../changelog.rst:26
+#: ../../changelog.rst:32
 msgid "Fixed bash script syntax error [:issue:`42` by :committer:`re4lfl0w`]"
 msgstr ""
 
-#: ../../changelog.rst:20
+#: ../../changelog.rst:26
 msgid ""
 "`Version 0.4.1 <https://github.com/konlpy/konlpy/releases/tag/v0.4.1>`_"
 msgstr ""
 
-#: ../../changelog.rst:15 ../../changelog.rst:22
+#: ../../changelog.rst:21 ../../changelog.rst:28
 msgid "Released on Feb 25, 2015."
 msgstr ""
 
-#: ../../changelog.rst:27
+#: ../../changelog.rst:33
 msgid "Fixed pip3 installation error [:issue:`43`]"
 msgstr ""
 
-#: ../../changelog.rst:25
+#: ../../changelog.rst:31
 msgid "Added wheel files to pypi [:issue:`48`]"
 msgstr ""
 
-#: ../../changelog.rst:28
+#: ../../changelog.rst:34
 msgid "Include Komoran dictionaries in package [:commit:`796c156`]"
 msgstr ""
 
-#: ../../changelog.rst:13
+#: ../../changelog.rst:19
 msgid ""
 "`Version 0.4.2 <https://github.com/konlpy/konlpy/releases/tag/v0.4.2>`_"
 msgstr ""
 
-#: ../../changelog.rst:17
+#: ../../changelog.rst:23
 msgid "Update Korean documents (i.e., include missing .mo files)"
 msgstr ""
 
-#: ../../changelog.rst:5
+#: ../../changelog.rst:12
 msgid ""
 "`Version 0.4.3 <https://github.com/konlpy/konlpy/releases/tag/v0.4.3>`_"
 msgstr ""
 
-#: ../../changelog.rst:7
+#: ../../changelog.rst:14
 msgid "Released on Feb 27, 2015."
 msgstr ""
 
-#: ../../changelog.rst:9
+#: ../../changelog.rst:16
 msgid "Fix conditional requirement bug for pip3 [:issue:`50`]"
+msgstr ""
+
+#: ../../changelog.rst:5
+msgid ""
+"`Version 0.4.4 <https://github.com/konlpy/konlpy/releases/tag/v0.4.4>`_"
+msgstr ""
+
+#: ../../changelog.rst:7
+msgid "Released on Oct 25, 2015."
+msgstr ""
+
+#: ../../changelog.rst:9
+msgid "Include tagsets for each morpheme analyzer [:commit:`26a39d7`]"
 msgstr ""
 
 #~ msgid "Version in development."

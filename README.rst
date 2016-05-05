@@ -5,7 +5,7 @@ KoNLPy
    :alt: Join the chat at https://gitter.im/konlpy/konlpy
    :target: https://gitter.im/konlpy/konlpy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
-.. image:: https://travis-ci.org/konlpy/konlpy.svg?branch=master
+.. image:: https://img.shields.io/travis/konlpy/konlpy.svg
     :target: https://travis-ci.org/konlpy/konlpy
     :alt: Build Status
 
@@ -13,15 +13,15 @@ KoNLPy
     :target: https://readthedocs.org/projects/konlpy/?badge=latest
     :alt: Documentation Status
 
-.. image:: https://coveralls.io/repos/konlpy/konlpy/badge.png
+.. image:: https://img.shields.io/coveralls/konlpy/konlpy.svg
     :target: https://coveralls.io/r/konlpy/konlpy
     :alt: Coverage Status
 
-.. image:: https://pypip.in/status/konlpy/badge.svg
+.. image:: https://img.shields.io/pypi/status/konlpy.svg
     :target: https://pypi.python.org/pypi/konlpy/
     :alt: Development Status
 
-.. image:: https://pypip.in/license/konlpy/badge.svg
+.. image:: https://img.shields.io/badge/licence-GPL-blue.svg
     :target: http://www.gnu.org/copyleft/gpl.html
     :alt: License
 
@@ -32,3 +32,8 @@ KoNLPy is a Python package for natural language processing of the Korean languag
 
 - English documentation: http://konlpy.org/en
 - 한국어 문서: http://konlpy.org/ko
+
+Links
+------
+
+- KoNLPy was rewrapped using Py4J by `Steven Han <https://github.com/nazgul33>`_: https://github.com/nazgul33/konlpy
