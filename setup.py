@@ -4,7 +4,7 @@
 import os
 import sys
 from setuptools import find_packages, setup
-from konlpy import __version__
+from description import __version__
 
 def requirements():
     def _openreq(reqfile):
