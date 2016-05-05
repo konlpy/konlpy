@@ -3,10 +3,15 @@
 
 import os
 import sys
+import platform
 from setuptools import find_packages, setup
 from description import __version__
 
 def requirements():
+    # both JPype1 and JPype1-py3 doesn't support Windows. see http://konlpy.org/en/v0.4.4/install/.
+    if platform.system() == 'Windows':
+        return []
+
     def _openreq(reqfile):
         with open(os.path.join(os.path.dirname(__file__), reqfile)) as f:
             return f.read().splitlines()
