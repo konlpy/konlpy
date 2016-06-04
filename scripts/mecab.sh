@@ -42,6 +42,7 @@ cd /tmp
 curl -LO https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-1.6.1-20140814.tar.gz
 tar zxfv mecab-ko-dic-1.6.1-20140814.tar.gz
 cd mecab-ko-dic-1.6.1-20140814
+./autogen.sh
 ./configure
 sudo ldconfig
 make
