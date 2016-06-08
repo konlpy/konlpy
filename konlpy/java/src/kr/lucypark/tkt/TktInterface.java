@@ -34,6 +34,12 @@ public class TktInterface {
         }
         return list;
     }
+    
+    public CharSequence normalize(String string) {
+        processor = new TwitterKoreanProcessorJava.Builder().build();
+        
+        return processor.normalize(string);
+    }
 
     public List<CharSequence> phrases(String string) {
         processor = new TwitterKoreanProcessorJava.Builder()

@@ -66,6 +66,10 @@ class Twitter():
         """Phrase extractor."""
 
         return [p for p in self.jki.phrases(phrase).toArray()]
+    
+    def normalize(self, phrase):
+        text = self.jki.normalize(phrase)
+        return text
 
     def __init__(self, jvmpath=None):
         if not jpype.isJVMStarted():
