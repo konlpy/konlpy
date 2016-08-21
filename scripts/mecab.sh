@@ -48,13 +48,9 @@ make
 sudo sh -c 'echo "dicdir=/usr/local/lib/mecab/dic/mecab-ko-dic" > /usr/local/etc/mecabrc'
 sudo make install
 
-# install mecab-python
-cd /tmp
-git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
-cd mecab-python-0.996
-
-python setup.py build
-sudo python setup.py install
-# TODO: check if python3 is installed
-python3 setup.py build
-sudo python3 setup.py install
+if python -c 'import sys; sys.exit(1 if sys.hexversion<0x03000000 else 0)'
+then
+  pip3 install mecab-python3==0.7
+else
+  pip install mecab-python===0.996
+fi
