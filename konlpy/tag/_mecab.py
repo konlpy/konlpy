@@ -5,7 +5,7 @@ import sys
 
 try:
     from MeCab import Tagger
-except ImportError:
+except ImportError as e:
     pass
 from .. import utils
 
@@ -103,3 +103,6 @@ class Mecab():
             self.tagset = utils.read_json('%s/data/tagset/mecab.json' % utils.installpath)
         except RuntimeError:
             raise Exception('Invalid MeCab dictionary path: "%s"\nInput the correct path when initiializing class: "Mecab(\'/some/dic/path\')"' % dicpath)
+        except NameError as e:
+            message = "%s. Perhaps you haven't installed MeCab and it's dependencies. See this link. http://konlpy.org/en/latest/install/" % e
+            raise NameError(message)
