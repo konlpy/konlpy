@@ -83,7 +83,7 @@ class Mecab():
                 result = self.tagger.parse(phrase)
                 return parse(result)
             else:
-                return [parse(self.tagger.parse(eojeol).decode('utf-8'))
+                return [parse(self.tagger.parse(eojeol))
                         for eojeol in phrase.split()]
 
     def morphs(self, phrase):
