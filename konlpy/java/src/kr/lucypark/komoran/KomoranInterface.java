@@ -16,6 +16,18 @@ public class KomoranInterface {
 			komoran = new Komoran(dicpath);
 		}
 	}
+
+	public void setUserDic(String user_dic){
+		if(komoran != null){
+            komoran.setUserDic(user_dic);
+        }
+	}
+
+	public void setFWDic(String fwd_file){
+		if(komoran != null){
+            komoran.setFWDic(fwd_file);
+        }
+	}
 	
     public List<ArrayList<String>> analyzeMorphs(String phrase, String dicpath) {
 		initKomoran(dicpath);
