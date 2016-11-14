@@ -36,13 +36,14 @@ KoNLPy는 오픈소스 프로젝트입니다.
     3. 커밋 로그는 설명력 있게 작성
 - 코드 작성을 완료한 후 코드가 모든 테스트를 통과하는지 확인해주세요.
     1. 자바 코드를 수정한 경우::
-    
+
         # Install `Apache Ant <http://ant.apache.org/manual/install.html>`_
         make java
-        
+
     1. 코드를 단 한 줄이라도 수정한 모든 경우::
 
         pip install -r requirements-dev.txt
+        pip3 install -r requirements-dev.txt
         make build      # create tar.gz
         make check      # check code styles
         make testall    # run tests
