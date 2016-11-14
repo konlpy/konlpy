@@ -103,3 +103,5 @@ class Mecab():
             self.tagset = utils.read_json('%s/data/tagset/mecab.json' % utils.installpath)
         except RuntimeError:
             raise Exception('Invalid MeCab dictionary path: "%s"\nInput the correct path when initiializing class: "Mecab(\'/some/dic/path\')"' % dicpath)
+        except NameError:
+            raise Exception('Install MeCab in order to use it: http://konlpy.org/en/latest/install/')
