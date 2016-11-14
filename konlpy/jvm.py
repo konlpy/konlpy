@@ -40,7 +40,7 @@ def init_jvm(jvmpath=None):
     jvmpath = jvmpath or jpype.getDefaultJVMPath()
 
     # NOTE: Temporary patch for Issue #76. Erase when possible.
-    if sys.platform=='darwin'\
+    if sys.platform == 'darwin'\
             and jvmpath.find('1.8.0') > 0\
             and jvmpath.endswith('libjvm.dylib'):
         jvmpath = '%s/lib/jli/libjli.dylib' % jvmpath.split('/lib/')[0]
