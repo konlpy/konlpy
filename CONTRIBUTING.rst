@@ -35,9 +35,11 @@ KoNLPy는 오픈소스 프로젝트입니다.
     2. 문서에서 특별히 언급되지 않은 사항은 일단 코드의 다른 부분들을 참고해서 작성 (+ 다른 분들의 편의를 위해 이 문서를 업데이트 해주세요)
     3. 커밋 로그는 설명력 있게 작성
 - 코드 작성을 완료한 후 코드가 모든 테스트를 통과하는지 확인해주세요.
-    1. 자바 코드를 수정한 경우
-        1. Install `Apache Ant <http://ant.apache.org/manual/install.html>`_
-        1. ``make java``
+    1. 자바 코드를 수정한 경우::
+    
+        # Install `Apache Ant <http://ant.apache.org/manual/install.html>`_
+        make java
+        
     1. 코드를 단 한 줄이라도 수정한 모든 경우::
 
         pip install -r requirements-dev.txt
