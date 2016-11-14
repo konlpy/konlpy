@@ -39,16 +39,21 @@ sudo make install
 
 # install mecab-ko-dic
 ## install requirement automake1.11
+# TODO: if not [automake --version]
 cd /tmp
 curl -LO http://ftpmirror.gnu.org/automake/automake-1.11.tar.gz
-tar -zxvf automake-1.15.tar.gz
+tar -zxvf automake-*.tar.gz
+cd automake-*
+./configure
+make
+sudo make install
 
+cd /tmp
 curl -LO https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.0.1-20150920.tar.gz
 tar -zxvf mecab-ko-dic-2.0.1-*.tar.gz
-
 cd mecab-ko-dic-2.0.1-*
+./autogen.sh
 ./configure
-# if make fails, follow instructions at https://bitbucket.org/eunjeon/mecab-ko-dic/overview
 make
 sudo sh -c 'echo "dicdir=/usr/local/lib/mecab/dic/mecab-ko-dic" > /usr/local/etc/mecabrc'
 sudo make install
