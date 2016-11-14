@@ -3,21 +3,23 @@
 
 import os
 import sys
+import platform
 from setuptools import find_packages, setup
-from konlpy import __version__
+from description import __version__
 
 def requirements():
+    # both JPype1 and JPype1-py3 don't support Windows. see http://konlpy.org/en/v0.4.4/install/.
+    if platform.system() == 'Windows':
+        return []
+
     def _openreq(reqfile):
         with open(os.path.join(os.path.dirname(__file__), reqfile)) as f:
             return f.read().splitlines()
 
-    def _genver(major, minorlist):
-        return ':%s' % ' or '.join('python_version=="%s.%s"' % (major, i) for i in minorlist)
-
-    return {
-        _genver(2, [6,7]): _openreq('requirements.txt'),
-        _genver(3, range(5)): _openreq('requirements-py3.txt')
-    }
+    if sys.version_info >= (3, ):
+        return _openreq('requirements-py3.txt')
+    else:
+        return _openreq('requirements.txt')
 
 setup(name='konlpy',
     version=__version__,
@@ -65,4 +67,4 @@ KoNLPy is not just to create another, but to unify and build upon their shoulder
         'java/bin/kr/lucypark/*/*.class',
         'java/bin/kr/lucypark/*/*/*.class',
         ]},
-    extras_require=requirements())
+    install_requires=requirements())
