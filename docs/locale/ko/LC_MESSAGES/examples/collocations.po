@@ -1,0 +1,24 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../examples/collocations.rst:2
+msgid "Finding collocations"
+msgstr "연어(collocation) 찾기"
+
+#: ../../examples/collocations.rst:4
+msgid "We can find collocations with the help of `NLTK <http://nltk.org>`_."
+msgstr "`NLTK <http://nltk.org>`_ 의 힘을 빌어 연어를 찾아봅시다."
+
+#: ../../examples/collocations.rst:9
+msgid "Console::"
+msgstr "콘솔::"

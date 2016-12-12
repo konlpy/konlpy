@@ -1,9 +1,9 @@
 KoNLPy: Korean NLP in Python
 ============================
 
-.. image:: https://travis-ci.org/e9t/konlpy.svg?branch=master
+.. image:: https://travis-ci.org/konlpy/konlpy.svg?branch=master
     :alt: Build status
-    :target: https://travis-ci.org/e9t/konlpy
+    :target: https://travis-ci.org/konlpy/konlpy
     :height: 18px
 
 .. image:: https://readthedocs.org/projects/konlpy/badge/?version=latest
@@ -13,6 +13,10 @@ KoNLPy: Korean NLP in Python
 
 KoNLPy (pronounced *"ko en el PIE"*) is a Python package for natural language processing (NLP) of the Korean language.
 For installation directions, see :doc:`here <install>`.
+
+For users new to NLP, go to :ref:`start`.
+For step-by-step instructions, follow the :ref:`guide`.
+For specific descriptions of each module, go see the :ref:`api` documents.
 
 .. sourcecode:: python
 
@@ -48,7 +52,6 @@ For installation directions, see :doc:`here <install>`.
      (!, SF),
      (^^, EMO)]
 
-For more on how to use KoNLPy, go see the :ref:`api`.
 
 Standing on the shoulders of giants
 -----------------------------------
@@ -62,15 +65,33 @@ It is built particularly in the `Python (programming) language <http://python.or
 The three main philosophies of this project are:
 
 - Keep it simple.
-- Make it easy. For humans. [#]_
+- Make it easy. For humans.
 - :ref:`"Democracy on the web works." <contribute>`
 
-Please `report <https://github.com/e9t/konlpy/issues>`_ when you think any have gone stale.
+Please `report <https://github.com/konlpy/konlpy/issues>`_ when you think any have gone stale.
 
 License
 -------
 
-- `GPL v3 or above <http://gnu.org/licenses/gpl.html>`_ [#]_
+KoNLPy is Open Source Software, and is released under the license below:
+
+- `GPL v3 or above <http://gnu.org/licenses/gpl.html>`_
+
+You are welcome to use the code under the terms of the license, however please acknowledge its use with a citation.
+
+- Eunjeong L. Park, Sungzoon Cho. "`KoNLPy: Korean natural language processing in Python <http://dmlab.snu.ac.kr/~lucypark/docs/2014-10-10-hclt.pdf>`_", Proceedings of the 26th Annual Conference on Human & Cognitive Language Technology, Chuncheon, Korea, Oct 2014.
+
+Here is a BibTeX entry.::
+
+    @inproceedings{park2014konlpy,
+      title={KoNLPy: Korean natural language processing in Python},
+      author={Park, Eunjeong L. and Cho, Sungzoon},
+      booktitle={Proceedings of the 26th Annual Conference on Human & Cognitive Language Technology},
+      address={Chuncheon, Korea},
+      month={October},
+      year={2014}
+    }
+
 
 .. _contribute:
 
@@ -82,24 +103,53 @@ but it will continuously evolve and you are invited to participate!
 
 Found a bug?
 Have a good idea for improving KoNLPy?
-Visit the `KoNLPy GitHub page <https://github.com/e9t/konlpy>`_
-and `suggest an idea <https://github.com/e9t/konlpy/issues>`_
-or `make a pull request <https://github.com/e9t/konlpy/pulls>`_.
+Visit the `KoNLPy GitHub page <https://github.com/konlpy/konlpy>`_
+and `suggest an idea <https://github.com/konlpy/konlpy/issues>`_
+or `make a pull request <https://github.com/konlpy/konlpy/pulls>`_.
 
 You are also welcome to join
-the ``#koreannlp`` channel at the `Ozinger IRC Network <http://ozinger.org>`_,
+our `gitter <https://gitter.im/konlpy/konlpy>`_
 and the `mailing list <https://groups.google.com/forum/#!forum/konlpy>`_.
-The IRC channel is more focused on development discussions
-and the mailing list is a better place to ask questions,
+Gitter is more focused on development discussions
+while the mailing list is a better place to ask questions,
 but nobody stops you from going the other way around.
 
 Please note that
 *asking questions through these channels is also a great contribution*,
-because it give the community feedback as well as ideas.
+because it gives the community feedback as well as ideas.
 Don't hesitate to ask.
 
+.. raw:: html
+
+    <iframe id="forum_embed"
+      src="javascript:void(0)"
+      scrolling="no"
+      frameborder="0"
+      width="660"
+      height="400">
+    </iframe>
+    <script type="text/javascript">
+      document.getElementById('forum_embed').src =
+         'https://groups.google.com/forum/embed/?place=forum/konlpy'
+         + '&showsearch=true&showpopout=true&showtabs=false'
+         + '&parenturl=' + encodeURIComponent(window.location.href);
+    </script>
+
+.. _start:
+
+Getting started
+---------------
+
+.. toctree::
+  :glob:
+  :maxdepth: 2
+
+  start
+
+.. _guide:
+
 User guide
-==========
+----------
 
 .. toctree::
   :glob:
@@ -115,7 +165,7 @@ User guide
 .. _api:
 
 API
-===
+---
 
 .. toctree::
   :glob:
@@ -124,13 +174,9 @@ API
 
 
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
 * :doc:`changelog`
-
-
-.. [#] With `clear and brief <http://echojuliett.tumblr.com/post/32108001510/clarity-brevity>`_ documents.
-.. [#] No, I'm not extremely fond of this either. However, some important depedencies - such as Hannanum, Kkma, MeCab-ko - are GPL licensed, and we want to honor their licenses. (It is also an inevitable choice. We hope things may change in the future.)

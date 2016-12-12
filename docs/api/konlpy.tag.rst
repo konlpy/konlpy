@@ -22,15 +22,32 @@ tag Package
     :undoc-members:
     :show-inheritance:
 
+:class:`Komoran` Class
+----------------------
+
+.. automodule:: konlpy.tag._komoran
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 :class:`Mecab` Class
 --------------------
 
-.. warning:: Mecab is not supported for Python 3 and Windows 7.
+.. warning:: ``Mecab()`` is not supported on ``Windows 7``.
 
 .. automodule:: konlpy.tag._mecab
     :members:
     :undoc-members:
     :show-inheritance:
+
+:class:`Twitter` Class
+----------------------
+
+.. automodule:: konlpy.tag._twitter
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 
 .. seealso::
     `Korean POS tags comparison chart <https://docs.google.com/spreadsheets/d/1OGAjUvalBuX-oZvZ_-9tEfYD2gQe7hTGsgUpiiBSXI8/edit#gid=0>`_

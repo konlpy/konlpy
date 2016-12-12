@@ -1,0 +1,5 @@
+check-manifest>=0.34
+pep8>=1.7.0
+pyroma>=2.2
+pytest-cov>=1.8.1
+pytest>=2.6.4

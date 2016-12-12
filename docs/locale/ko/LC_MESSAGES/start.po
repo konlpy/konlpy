@@ -1,0 +1,152 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-17 20:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../start.rst:2
+msgid "What is NLP?"
+msgstr "NLP란 무엇인가요?"
+
+#: ../../start.rst:6
+msgid "We have various NLP applications in our lives. For example:"
+msgstr "우리 일상에도 다양한 NLP 응용사례가 있습니다. 가령:"
+
+#: ../../start.rst:8
+msgid "Text summarization (ex: `Summly <http://www.summly.com/index.html>`_)"
+msgstr "텍스트 요약 (ex: `Summly <http://www.summly.com/index.html>`_)"
+
+
+#: ../../start.rst:9
+msgid ""
+"Question answering (ex: `Wolfram Alpha "
+"<http://www.wolframalpha.com/input/?i=what+is+the+meaning+of+life&lk=4&num=1>`_)"
+msgstr "자동 질의응답 시스템 (ex: `Wolfram Alpha "
+"<http://www.wolframalpha.com/input/?i=what+is+the+meaning+of+life&lk=4&num=1>`_)"
+
+#: ../../start.rst:10
+msgid "Dialogue systems (ex: `Apple Siri <https://www.apple.com/ios/siri/>`_)"
+msgstr "대화 시스템 (ex: `Apple Siri <https://www.apple.com/ios/siri/>`_)"
+
+
+#: ../../start.rst:11
+msgid ""
+"Machine translation (ex: `Google Translate <http://translate.google.com>`_)"
+msgstr "기계 번역 (ex: `Google Translate <http://translate.google.com>`_)"
+
+
+#: ../../start.rst:13
+msgid ""
+"And obviously information retrieval systems such as Web search engines. For "
+"a better understanding of NLP techniques, consider referring the so-called "
+"\"bibles\":"
+msgstr "그리고 물론, 검색엔진과 같은 정보검색 시스템 등이 있습니다. NLP의 기초에 대해 더 자세히 알기 위해서는 아래 책들을 참고하시기 바랍니다."
+
+#: ../../start.rst:16
+msgid ""
+"Jurafsky et al., `Speech and Language Processing "
+"<https://www.goodreads.com/book/show/908048>`_, 2nd Edition, 2008."
+msgstr ""
+
+#: ../../start.rst:17
+msgid ""
+"Manning and Schutze, `Foundations of Statistical Natural Language Processing"
+" <https://www.goodreads.com/book/show/776349>`_, 1999."
+msgstr ""
+
+#: ../../start.rst:19
+msgid ""
+"KoNLPy will help you to actually carry out some fundamental NLP tasks with "
+"Korean text. In case you're interested in handling English text, check out "
+"`NLTK <http://nltk.org>`_."
+msgstr "KoNLPy는 여러분이 한국어 텍스트를 이용하여 기초적인 NLP 작업을 수행하는데 도움을 드릴 것입니다. 영어 텍스트를 다루는 것에 관심 있으신 경우, `NLTK <http://nltk.org>`_ 를 참고해주시기 바랍니다."
+
+#: ../../start.rst:24
+msgid "What do I need to get started?"
+msgstr "이제 무엇을 준비하면 되나요?"
+
+#: ../../start.rst:26
+msgid "You have some prerequisites to use KoNLPy."
+msgstr "KoNLPy를 사용하기 전에 다음의 몇 가지 준비가 필요합니다."
+
+#: ../../start.rst:28
+msgid ""
+"Deep interest in natural languages and some familiarity with the Korean "
+"language"
+msgstr "언어에 대한 깊은 관심과 한국어에 대한 어느 정도의 이해"
+
+#: ../../start.rst:29
+msgid "Understanding of basic Python programming [#]_"
+msgstr "기본적인 파이썬 프로그래밍 방법 [#]_"
+
+#: ../../start.rst:30
+msgid "A \"good\" text editor and terminal (or Python IDE) [#]_"
+msgstr "좋은 텍스트 에디터와 터미널 (또는 파이썬 IDE) [#]_"
+
+#: ../../start.rst:31
+msgid ""
+"A `Python installation "
+"<https://wiki.python.org/moin/BeginnersGuide/Download>`_"
+msgstr "`파이썬이 설치된 컴퓨터 <https://wiki.python.org/moin/BeginnersGuide/Download>`_"
+ 
+#: ../../start.rst:32
+msgid "`pip <https://pypi.python.org/pypi/pip>`_, the Python package manager"
+msgstr "파이썬 패키지 매니저 `pip <https://pypi.python.org/pypi/pip>`_"
+
+#: ../../start.rst:38
+msgid ""
+"Many use `Sublime Text 2 <http://www.sublimetext.com/>`_ for Python "
+"programming. Some others use Vim and Terminal. But other than these, there "
+"are numerous great `text editors <http://tutorialzine.com/2012/07/battle-of-"
+"the-tools-which-is-the-best-code-editor/>`_ and `Python IDEs "
+"<http://pedrokroger.net/choosing-best-python-ide/>`_ out there, so take your"
+" pick!"
+msgstr "많은 분들이 파이썬 프로그래밍을 할 때 `Sublime Text 2 <http://www.sublimetext.com/>`_ 을 사용하십니다. 또 다른 분들은 Vim과 터미널을 사용하는 것을 즐깁니다. 그 뿐 아니라 파이썬 프로그래밍이 가능한 `수많은 텍스트 에디터 <http://tutorialzine.com/2012/07/battle-of-"
+"the-tools-which-is-the-best-code-editor/>`_ 와 `파이썬 IDE <http://pedrokroger.net/choosing-best-python-ide/>`_ 가 있으니, 마음에 드는 것을 골라잡으세요!"
+
+#: ../../start.rst:34
+msgid "Got 'em all? Then let's go."
+msgstr "준비되셨나요? 이제 시작해봅시다."
+
+#: ../../start.rst:4
+msgid ""
+"NLP (Natural Language Processing) is a set of techniques for analyzing and "
+"extracting, and understanding meaningful information text."
+msgstr "NLP (Natural Language Processing, 자연어처리)는 텍스트에서 의미있는 정보를 분석, 추출하고 이해하는 일련의 기술집합입니다."
+
+#: ../../start.rst:37
+msgid ""
+"If you're new to Python, this tutorial should get you through in minutes: "
+"http://learnxinyminutes.com/docs/python/. If you're up to putting in some "
+"more time, try `The Hitchhiker's Guide <http://docs.python-"
+"guide.org/en/latest/>`_ or `Learn Python the hard way "
+"<http://learnpythonthehardway.org/book/>`_."
+msgstr "파이썬을 처음 접하시나요? 이미 다른 프로그래밍 언어를 사용할 줄 아는 경우 http://learnxinyminutes.com/docs/python/ 를 빠르게 훑거나, 프로그래밍이 처음이거나 시간을 조금 더 들일 용의가 있다면 `The Hitchhiker's Guide <http://docs.python-"
+"guide.org/en/latest/>`_ 또는 `Learn Python the hard way "
+"<http://learnpythonthehardway.org/book/>`_ 를 살펴보시기 바랍니다. 특히 마지막 링크의 경우 \"깐깐하게 배우는 파이썬\"이라는 이름으로 국내에 출판되었으니 참고하세요!"
+
+#~ msgid ""
+#~ "If you're new to Python, this tutorial should get you through in minutes: "
+#~ "http://learnxinyminutes.com/docs/python/. If you're up to putting in some "
+#~ "more time, try `The Hitchhiker's Guide <http://docs.python-"
+#~ "guide.org/en/latest/>`_ or `How to Think Like a Computer Scientist "
+#~ "<http://openbookproject.net/thinkcs/python/english2e/>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NLP (Natural Language Processing) is a set of techniques for analyzing and "
+#~ "extracting, and understanding meaninful information text."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We assume you have some knowledge of Python and programming, but no "
+#~ "knowledge whatsoever of data science, machine learning, or predictive "
+#~ "modeling. (But some familiarity to statistics will help.)"
+#~ msgstr ""

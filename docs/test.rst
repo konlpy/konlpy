@@ -11,14 +11,10 @@ To perform a test, use the code below.
     $ python -m pytest test/* # for Python 2.x
     $ python3 -m pytest test/* # for Python 3.x
 
-KoNLPy was tested on the below environments:
+.. note::
 
-- Mac OS X 10.9 with Sun/Oracle 1.6.0
-- Ubuntu 12.04 with openjdk-7-jdk
-- Ubuntu 13.10 with openjdk-7-jdk
-- Ubuntu 14.04 with openjdk-7-jdk
-- Window 7 with Sun/Oracle JDK 1.7.0
+    To see testing logs on KoNLPy, see `here <https://docs.google.com/spreadsheets/d/1Ii_L9NF9gSLbsJOGqsf-zfqTtyhhthmJWNC2kgUDIsU/edit?usp=sharing>`_.
 
 .. note::
 
-    To see known bugs/issues, see `here <https://github.com/e9t/konlpy/labels/bug>`_.
+    To see known bugs/issues, see `here <https://github.com/konlpy/konlpy/labels/bug>`_.

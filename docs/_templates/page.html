@@ -1,0 +1,8 @@
+{% extends "!page.html" %}
+
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+{% set script_files = ["_static/jquery-1.11.2.min.js"] + script_files[1:] + ["_static/bootstrap-affix.min.js"] %}
+
+{%- block body %}
+    {{ super() }}
+{%- endblock %}

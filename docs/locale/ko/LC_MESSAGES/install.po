@@ -1,0 +1,116 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../install.rst:2
+msgid "Installation"
+msgstr "설치하기"
+
+#: ../../install.rst:103
+msgid "Windows"
+msgstr "윈도우"
+
+#: ../../install.rst:125
+msgid "From the command prompt, install KoNLPy."
+msgstr "마지막으로, 명령프롬프트에서 KoNLPy를 설치합니다."
+
+#: ../../install.rst:6
+msgid ""
+"For troubleshooting information, see these pages: `Linux "
+"<https://github.com/konlpy/konlpy/issues?q=label%3Alinux>`_. `Mac OS "
+"<https://github.com/konlpy/konlpy/issues?q=label%3A\"mac+os\">`_. `Windows "
+"<https://github.com/konlpy/konlpy/issues?q=label%3Awindows>`_. Please record"
+" a `\"New Issue\" <https://github.com/konlpy/konlpy/issues/new>`_ if you "
+"have an error that is not listed. You can also see testing logs `here "
+"<https://docs.google.com/spreadsheets/d/1Ii_L9NF9gSLbsJOGqsf-"
+"zfqTtyhhthmJWNC2kgUDIsU/edit#gid=0>`_."
+msgstr ""
+"설치 및 사용 도중 문제가 발생하는 경우 다음 페이지들을 참고해주세요: `리눅스 "
+"<https://github.com/konlpy/konlpy/issues?q=label%3Alinux>`_. `맥 OS "
+"<https://github.com/konlpy/konlpy/issues?q=label%3A\"mac+os\">`_. `윈도우 "
+"<https://github.com/konlpy/konlpy/issues?q=label%3Awindows>`_. 발생한 문제가 어디에도 "
+"없는 경우 `\"New Issue\" <https://github.com/konlpy/konlpy/issues/new>`_ 버튼을 눌러 "
+"새로운 이슈를 생성해주시기 바랍니다. 각 머신 별 테스팅 로그는 `이 곳 "
+"<https://docs.google.com/spreadsheets/d/1Ii_L9NF9gSLbsJOGqsf-"
+"zfqTtyhhthmJWNC2kgUDIsU/edit#gid=0>`_ 에서 보실 수 있습니다."
+
+#: ../../install.rst:32 ../../install.rst:70 ../../install.rst:95
+msgid "Install MeCab (*optional*)"
+msgstr "MeCab 설치하기 (*선택사항*)"
+
+#: ../../install.rst:79
+msgid "Mac OS"
+msgstr "맥 OS"
+
+#: ../../install.rst:117
+msgid ""
+"Set `JAVA_HOME "
+"<http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html>`_."
+msgstr ""
+"`JAVA_HOME을 설정 "
+"<http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html>`_"
+" 합니다."
+
+#: ../../install.rst:15
+msgid "Ubuntu"
+msgstr "우분투"
+
+#: ../../install.rst:133
+msgid "KoNLPy's ``Mecab()`` class is not supported on Windows machines."
+msgstr "KoNLPy의 ``Mecab()`` 클래스는 윈도우에서 지원되지 않습니다."
+
+#: ../../install.rst:106
+msgid "How to check your Windows bit version"
+msgstr "윈도우 비트 수 확인하는 법"
+
+#: ../../install.rst:111
+msgid "How to check your Python bit version"
+msgstr "파이썬 비트 수 확인하는 법"
+
+#: ../../install.rst:17 ../../install.rst:43 ../../install.rst:81
+msgid "Install dependencies"
+msgstr ""
+
+#: ../../install.rst:25 ../../install.rst:63 ../../install.rst:88
+msgid "Install KoNLPy"
+msgstr ""
+
+#: ../../install.rst:41
+msgid "CentOS"
+msgstr ""
+
+#: ../../install.rst:114
+msgid ""
+"Does your Python installation's \"bit version\" match your Windows OS? If "
+"you're using a 64 bit Windows you need a 64 bit Python, and if you have a 32"
+" bit Windows, you need a 32 bit Python. Reinstall your Python if your bit "
+"versions do not match."
+msgstr "내 시스템에 설치된 파이썬의 \"비트 수\"가 OS의 비트 수와 일치하는지 확인해주세요. 예를 들어, 64비트 윈도우를 사용하고 있다면 64비트 파이썬이, 32비트 윈도우를 사용하고 있다면 32비트 파이썬이 설치되어 있어야 합니다. 비트 수가 서로 일치하지 않는다면 OS에 맞게 파이썬을 재설치합니다."
+
+#: ../../install.rst:116
+msgid ""
+"Do you have a Java of version 1.7 or above installed, that matches your OS "
+"bit version? If not, `download and install a JDK "
+"<http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_. Note"
+" again, that the bit versions must match."
+msgstr "OS와 비트 수가 일치하고, 버젼이 1.7 이상인 자바가 설치되어 있나요? 만일 그렇지 않다면 `JDK를 설치 <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ 합니다. 자바와 OS의 비트 수가 꼭 일치하도록 해주세요."
+
+#: ../../install.rst:118
+msgid ""
+"Download and install the `JPype1 (>=0.5.7) "
+"<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ that matches your bit "
+"version: `win32` for 32 bit and `win-amd64` for 64 bit. You may have to "
+"`upgrade your pip <https://pip.pypa.io/en/stable/installing.html#upgrade-"
+"pip>`_ in order to install the downloaded `.whl` file."
+msgstr "OS의 비트 수와 일치하는 `JPype1 (>=0.5.7) "
+"<http://www.lfd.uci.edu/~gohlke/pythonlibs/#jpype>`_ 를 설치해주세요."
+" 32비트 OS에는 `win32`, 64비트 OS에는 `win-amd64` 파일을 사용하면 됩니다. whl 파일로 설치하는 경우에는 다음과 같이 명령프롬프트에서 `pip을 업그레이드 <https://pip.pypa.io/en/stable/installing.html#upgrade-pip>`_ 해주세요. (명령프롬프트는 Windows + r을 누른 후 실행창에서 cmd를 입력하면 띄울 수 있습니다.)"

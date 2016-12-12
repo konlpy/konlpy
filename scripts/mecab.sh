@@ -15,9 +15,21 @@
 # limitations under the License.
 #
 
+
+os=$(uname)
+if [ $os == "Linux" ]; then
+    echo "Installing MeCab-ko"
+elif [ $os == "Darwin" ]; then
+    echo "Installing MeCab-ko"
+else
+    echo "This script does not support this OS."
+    echo "Try consulting https://github.com/konlpy/konlpy/blob/master/scripts/mecab.sh"
+    exit 0
+fi
+
 # install mecab-ko
 cd /tmp
-wget https://bitbucket.org/eunjeon/mecab-ko/downloads/mecab-0.996-ko-0.9.1.tar.gz
+curl -LO https://bitbucket.org/eunjeon/mecab-ko/downloads/mecab-0.996-ko-0.9.1.tar.gz
 tar zxfv mecab-0.996-ko-0.9.1.tar.gz
 cd mecab-0.996-ko-0.9.1
 ./configure
@@ -26,12 +38,22 @@ make check
 sudo make install
 
 # install mecab-ko-dic
+## install requirement automake1.11
+# TODO: if not [automake --version]
 cd /tmp
-wget https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-1.6.1-20140814.tar.gz
-tar zxfv mecab-ko-dic-1.6.1-20140814.tar.gz
-cd mecab-ko-dic-1.6.1-20140814
+curl -LO http://ftpmirror.gnu.org/automake/automake-1.11.tar.gz
+tar -zxvf automake-*.tar.gz
+cd automake-*
 ./configure
-sudo ldconfig
+make
+sudo make install
+
+cd /tmp
+curl -LO https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.0.1-20150920.tar.gz
+tar -zxvf mecab-ko-dic-2.0.1-*.tar.gz
+cd mecab-ko-dic-2.0.1-*
+./autogen.sh
+./configure
 make
 sudo sh -c 'echo "dicdir=/usr/local/lib/mecab/dic/mecab-ko-dic" > /usr/local/etc/mecabrc'
 sudo make install
@@ -40,7 +62,12 @@ sudo make install
 cd /tmp
 git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
 cd mecab-python-0.996
+
 python setup.py build
-sudo python setup.py install
-python3 setup.py build
-sudo python3 setup.py install
+python setup.py install
+
+if hash "python3" &>/dev/null
+then
+    python3 setup.py build
+    python3 setup.py install
+fi

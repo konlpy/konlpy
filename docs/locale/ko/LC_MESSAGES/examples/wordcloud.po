@@ -1,0 +1,36 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../examples/wordcloud.rst:2
+msgid "Drawing a word cloud"
+msgstr ""
+
+#: ../../examples/wordcloud.rst:4
+msgid ""
+"Below shows a code example that crawls a National Assembly bill from the "
+"web, extract nouns and draws a word cloud - from head to tail in Python."
+msgstr ""
+
+#: ../../examples/wordcloud.rst:6
+msgid ""
+"You can change the bill number (i.e., ``bill_num``), and see how the word "
+"clouds differ per bill. (ex: '1904882', '1904883', 'ZZ19098', etc)"
+msgstr ""
+
+#: ../../examples/wordcloud.rst:13
+msgid ""
+"The `PyTagCloud <https://pypi.python.org/pypi/pytagcloud>`_ installed in "
+"PyPI may not be sufficient for drawing wordclouds in Korean. You may add "
+"eligible fonts - that support the Korean language - manually, or install the"
+" Korean supported version `here <https://github.com/e9t/PyTagCloud>`_."
+msgstr ""

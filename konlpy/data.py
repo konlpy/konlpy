@@ -11,6 +11,7 @@ except:
 
 from . import utils
 
+
 #: A dictionary describing the formats that are supported by
 #: ``konlpy.data.load()``.
 #: Keys are format names and values are format descriptions.
@@ -32,26 +33,29 @@ if os.path.expanduser('~/') != '~/':
 # Windows common locations
 if sys.platform.startswith('win'):
     path += [
-            r'C:\konlpy_data', r'D:\konlpy_data', r'E:konlpy_data',
-            os.path.join(sys.prefix, 'konlpy_data'),
-            os.path.join(sys.prefix, 'lib', 'konlpy_data'),
-            os.path.join(os.environ.get('APPDATA', 'C:\\'), 'konlpy_data')]
+        r'C:\konlpy_data', r'D:\konlpy_data', r'E:\konlpy_data',
+        os.path.join(sys.prefix, 'konlpy_data'),
+        os.path.join(sys.prefix, 'lib', 'konlpy_data'),
+        os.path.join(os.environ.get('APPDATA', 'C:\\'), 'konlpy_data')]
 
 # UNIX & OS X common locations
 else:
     path += [
-            '/usr/share/konlpy_data',
-            '/usr/local/share/konlpy_data',
-            '/usr/lib/konlpy_data',
-            '/usr/local/lib/konlpy_data']
+        '/usr/share/konlpy_data',
+        '/usr/local/share/konlpy_data',
+        '/usr/lib/konlpy_data',
+        '/usr/local/lib/konlpy_data']
 
 # Include KoNLPy installpath
 path += ['%s/data' % utils.installpath]
 
+
 def find(resource_url):
-    """Find the path of a given resource URL by searching through directories
-    in ``konlpy.data.path``.
-    If the given resource is not found, raise a ``LookupError``, whose message gives a pointer to the installation instructions for ``konlpy.download()``.
+    """Find the path of a given resource URL by searching through
+    directories in ``konlpy.data.path``.
+    If the given resource is not found, raise a ``LookupError``,
+    whose message gives a pointer to the installation instructions
+    for ``konlpy.download()``.
 
     :type resource_url: str
     :param resource_url: The URL of the resource to search for.
@@ -66,14 +70,15 @@ def find(resource_url):
             return FileSystemPathPointer(f)
 
     # Display message if the resource wasn't found
-    sep = '*'*70
+    sep = '*' * 70
     msg = textwrap.fill(
-            'Resource %s not found. Please use the KoNLPy data downloader to obtain the resource: >>> konlpy.download()' % resource_url,
-            initial_indent='  ',
-            subsequent_indent='  ',
-            width=66)
+        'Resource %s not found. Please use the KoNLPy data downloader to obtain the resource: >>> konlpy.download()' % resource_url,
+        initial_indent='  ',
+        subsequent_indent='  ',
+        width=66)
     msg += '\n  Searched in:' + ''.join('\n  - %s' % p for p in path)
     raise LookupError('\n%s\n%s\n%s' % (sep, msg, sep))
+
 
 def load(resource_url, format='auto'):
     """Load a given resource from the KoNLPy data package.
@@ -86,12 +91,12 @@ def load(resource_url, format='auto'):
     :param format: Format type of resource.
     """
 
-    if format=='auto':
+    if format == 'auto':
         format = os.path.splitext(resource_url)[-1].strip('.')
 
-    if format=='pickle':
+    if format == 'pickle':
         resource_val = pickle.load(find(resource_url))
-    elif format=='raw':
+    elif format == 'raw':
         resource_val = find(resource_url).open()
     else:
         assert format not in FORMATS
@@ -99,14 +104,17 @@ def load(resource_url, format='auto'):
 
     return resource_val
 
+
 class PathPointer(object):
     """An abstract base class for path pointers. One subclass exists:
     1. ``FileSystemPathPointer``: Identifies a file by an absolute path.
     """
     def open(self, encoding='utf-8'):
         raise NotImplementedError('Abstract base class')
+
     def file_size(self):
         raise NotImplementedError('Abstract base class')
+
 
 class FileSystemPathPointer(PathPointer, str):
     """A path pointer that identifies a file by an absolute path."""
@@ -119,9 +127,11 @@ class FileSystemPathPointer(PathPointer, str):
 
     def open(self, encoding='utf-8'):
         return utils.load_txt(self.path)
+
     def file_size(self):
         return os.stat(self.path).st_size
 
 
-__all__ = ['find', 'load',
-        'path', 'FileSystemPathPointer', 'PathPointer']
+__all__ = [
+    'find', 'load',
+    'path', 'FileSystemPathPointer', 'PathPointer']

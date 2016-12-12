@@ -1,0 +1,50 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-16 23:07\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Lucy Park <me@lucypark.kr>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../_templates/sidebar-footer.rst:2
+msgid "Donate"
+msgstr "후원하기"
+
+#: ../../_templates/sidebar-footer.rst:4
+msgid ""
+"If you love KoNLPy, consider supporting the author `on Gittip "
+"<https://www.gittip.com/echojuliett/>`_:"
+msgstr "KoNLPy가 마음에 드셨다면, `Gratipay <https://www.gratipay.com/echojuliett/>`_ 를 통한 후원을 고려해주세요."
+
+#: ../../_templates/sidebar-footer.rst:10
+msgid "Translations"
+msgstr "다른 언어로 보기"
+
+#: ../../_templates/sidebar-footer.rst:12
+msgid "`English <http://konlpy.readthedocs.org/en>`_"
+msgstr ""
+
+#: ../../_templates/sidebar-footer.rst:13
+msgid "`한국어 <http://konlpy.readthedocs.org/ko>`_"
+msgstr ""
+
+#: ../../_templates/sidebar-footer.rst:16
+msgid "Useful Links"
+msgstr "유용한 링크"
+
+#: ../../_templates/sidebar-footer.rst:18
+msgid "`KoNLPy @ GitHub <http://github.com/e9t/konlpy>`_"
+msgstr "깃헙에서 KoNLPy 보기"
+
+#: ../../_templates/sidebar-footer.rst:19
+msgid "`Issue tracker <http://github.com/e9t/konlpy/issues>`_"
+msgstr "이슈트래커"
+
+#: ../../_templates/sidebar-header.rst:6
+msgid "KoNLPy is a Python package for Korean natural language processing."
+msgstr "KoNLPy는 한국어 NLP를 위한 파이썬 패키지입니다."

@@ -29,7 +29,7 @@ sys.modules.update((mod, Mock) for mod in ['jpype'])
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 
 sys.path.insert(0, os.path.abspath('..'))
-from konlpy import __version__
+from description import __version__
 
 # -- General configuration -----------------------------------------------------
 
@@ -55,12 +55,13 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'KoNLPy'
+url = u'http://konlpy.org'
+
 author = u'Lucy Park'
 author_url = u'http://lucypark.kr'
-curyear = datetime.today().year
 
-copyright = u'%s, <a href="%s">%s</a>' % (curyear, author_url, author)
-url = u'http://konlpy.readthedocs.org'
+curyear = datetime.today().year
+copyright = u'2014-%s, %s (GPL license)' % (curyear, project)
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -153,8 +154,8 @@ html_style = 'konlpy.css'
 
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
-    'index': ['github-banner.html', 'sidebar-header.html', 'localtoc.html', 'sidebar-footer.html', 'searchbox.html'],
-    '**'   : ['github-banner.html', 'localtoc.html', 'relations.html', 'searchbox.html']
+    'index': ['github-banner.html', 'sidebar-header.html', 'localtoc.html', 'translations.html', 'sidebar-footer.html', 'searchbox.html'],
+    '**'   : ['github-banner.html', 'localtoc.html', 'translations.html', 'relations.html']
 }
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
@@ -266,12 +267,15 @@ texinfo_documents = [
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'http://docs.python.org/': None}
+intersphinx_mapping = {
+    'nltk': ('http://nltk.org', None),
+    'python': ('http://docs.python.org/', None),
+}
 
 extlinks = {
-    'commit': ('https://github.com/e9t/konlpy/commit/%s', ''),
+    'commit': ('https://github.com/konlpy/konlpy/commit/%s', ''),
     'committer': ('https://github.com/%s', ''),
-    'issue': ('https://github.com/e9t/konlpy/issues/%s', '#'),
+    'issue': ('https://github.com/konlpy/konlpy/issues/%s', '#'),
 }
 
 # i18n

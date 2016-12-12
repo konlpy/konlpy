@@ -1,0 +1,150 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/konlpy.tag.rst:2
+msgid "tag Package"
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:6
+msgid ""
+"Initial runs of each class method may require some time to load dictionaries"
+" (< 1 *min*). Second runs should be faster."
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:10
+msgid ":class:`Hannanum` Class"
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum:1
+msgid ""
+"Wrapper for `JHannanum "
+"<http://semanticweb.kaist.ac.kr/home/index.php/HanNanum>`_."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum:3
+msgid ""
+"JHannanum is a morphological analyzer and POS tagger written in Java, and "
+"developed by the `Semantic Web Research Center (SWRC) "
+"<http://semanticweb.kaist.ac.kr/>`_ at KAIST since 1999."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum:15 ../../../konlpy/tag/_kkma.pydocstring of
+#: konlpy.tag._kkma.Kkma:15
+msgid "The path of the JVM passed to :py:func:`.init_jvm`."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum.analyze:1
+msgid "Phrase analyzer."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum.analyze:3
+msgid ""
+"This analyzer returns various morphological candidates for each token. It "
+"consists of two parts: 1) Dictionary search (chart), 2) Unclassified term "
+"segmentation."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum.morphs:1
+#: ../../../konlpy/tag/_kkma.pydocstring of konlpy.tag._kkma.Kkma.morphs:1
+#: ../../../konlpy/tag/_mecab.pydocstring of konlpy.tag._mecab.Mecab.morphs:1
+msgid "Parse phrase to morphemes."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum.nouns:1 ../../../konlpy/tag/_kkma.pydocstring
+#: of konlpy.tag._kkma.Kkma.nouns:1 ../../../konlpy/tag/_mecab.pydocstring of
+#: konlpy.tag._mecab.Mecab.nouns:1
+msgid "Noun extractor."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum.pos:1 ../../../konlpy/tag/_kkma.pydocstring
+#: of konlpy.tag._kkma.Kkma.pos:1 ../../../konlpy/tag/_mecab.pydocstring of
+#: konlpy.tag._mecab.Mecab.pos:1
+msgid "POS tagger."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum.pos:3
+msgid "This tagger is HMM based, and calculates the probability of tags."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum.pos:5
+msgid "The number of tags. It can be either 9 or 22."
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:18
+msgid ":class:`Kkma` Class"
+msgstr ""
+
+#: ../../../konlpy/tag/_kkma.pydocstring of konlpy.tag._kkma.Kkma:1
+msgid "Wrapper for `Kkma <http://kkma.snu.ac.kr>`_."
+msgstr ""
+
+#: ../../../konlpy/tag/_kkma.pydocstring of konlpy.tag._kkma.Kkma:3
+msgid ""
+"Kkma is a morphological analyzer and natural language processing system "
+"written in Java, developed by the Intelligent Data Systems (IDS) Laboratory "
+"at `SNU <http://snu.ac.kr>`_."
+msgstr ""
+
+#: ../../../konlpy/tag/_kkma.pydocstring of konlpy.tag._kkma.Kkma.sentences:1
+msgid "Sentence detection."
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:26
+msgid ":class:`Mecab` Class"
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:28
+msgid "Mecab is not supported for Python 3 and Windows 7."
+msgstr ""
+
+#: ../../../konlpy/tag/_mecab.pydocstring of konlpy.tag._mecab.Mecab:1
+msgid "Wrapper for MeCab-ko morphological analyzer."
+msgstr ""
+
+#: ../../../konlpy/tag/_mecab.pydocstring of konlpy.tag._mecab.Mecab:3
+msgid ""
+"`MeCab`_, originally a Japanese morphological analyzer and a POS tagger "
+"developed by the Graduate School of Informatics in Kyoto University, was "
+"modified to MeCab-ko by the `Eunjeon Project`_ to adapt to the Korean "
+"language."
+msgstr ""
+
+#: ../../../konlpy/tag/_mecab.pydocstring of konlpy.tag._mecab.Mecab:5
+msgid ""
+"In order to use MeCab-ko within KoNLPy, follow the directions in :ref"
+":`optional-installations`."
+msgstr ""
+
+#: ../../../konlpy/tag/_mecab.pydocstring of konlpy.tag._mecab.Mecab:18
+msgid "The path of the MeCab-ko dictionary."
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:36
+msgid ""
+"`Korean POS tags comparison chart <https://docs.google.com/spreadsheets/d"
+"/1OGAjUvalBuX-oZvZ_-9tEfYD2gQe7hTGsgUpiiBSXI8/edit#gid=0>`_"
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:38
+msgid "Compare POS tags between several Korean analytic projects. (In Korean)"
+msgstr ""

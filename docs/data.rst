@@ -1,9 +1,6 @@
 Data
 ====
 
-Files with astericks (*) are installed by default.
-Other files can be installed with :py:func:`.download`.
-
 .. _corpora:
 
 Corpora
@@ -11,19 +8,25 @@ Corpora
 
 The following corpora are currently available:
 
-*kolaw*
-'''''''
+1. ``kolaw``: Korean law corpus.
+    - constitution.txt
+2. ``kobill``: Korean National Assembly bill corpus. The file ID corresponds to the bill number.
+    - 1809890.txt - 1809899.txt
 
-Korean law corpus.
+For more detailed usage of the corpora, see the :doc:`api/konlpy.corpus`.
 
-- constitution.txt*
+.. code-block:: python
 
-*kobill*
-''''''''
+    >>> from konlpy.corpus import kolaw
+    >>> c = kolaw.open('constitution.txt').read()
+    >>> print c[:10]
+    대한민국 헌법
 
-Korean National Assembly bill corpus. The file ID corresponds to the bill number.
-
-- 1809890.txt - 1809899.txt*
+    유구한 역사와
+    >>> from konlpy.corpus import kobill
+    >>> d = kobill.open('1809890.txt').read()
+    >>> print d[:15]
+    지방공무원법 일부개정법률안
 
 
 .. _dictionaries:
@@ -117,4 +120,4 @@ To add your own terms, see `here <https://bitbucket.org/eunjeon/mecab-ko-dic/src
     You can add new words either to the system dictionaries or user dictionaries. However, there is a slight difference in the two choices.:
 
     - *Adding to the system dictionary*: When dictionary updates are not frequent, when you do not want to drop the analysis speed.
-    - *Adding to the user dictionary*: When dictionary updates are not frequent, when you do not have ``root`` access.
+    - *Adding to the user dictionary*: When dictionary updates are frequent, when you do not have ``root`` access.

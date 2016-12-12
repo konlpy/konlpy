@@ -1,0 +1,24 @@
+Hannanum,Kkma,Komoran,Mecab,Twitter
+아이폰 / N,아이 / NNG,아이폰 / NNP,아이폰 / NNP,아이폰 / Noun
+기다리 / P,폰 / NNG,기다리 / VV,기다리 / VV,기다리 / Verb
+다 / E,기다리 / VV,다 / EC,다 / EC,다 / Eomi
+지치 / P,다 / ECS,지치 / VV,지쳐 / VV+EC,지쳐 / Verb
+어 / E,지치 / VV,어 / EC,애플 / NNP,애플 / Noun
+애플공홈 / N,어 / ECS,애플 / NNP,공 / NNG,공홈 / Noun
+에서 / J,애플 / NNP,공 / NNG,홈 / NNG,에서 / Josa
+언락폰질러버렸다 / N,공 / NNG,홈 / NNG,에서 / JKB,언락폰 / Noun
+6+ / N,홈 / NNG,에서 / JKB,언락 / NNG,질 / Verb
+128기가실벜 / N,에서 / JKM,언 / NNG,폰 / NNG,러 / Eomi
+,언락 / NNG,락 / NNG,질러버렸 / VV+EC+VX+EP,버렸 / Verb
+,폰 / NNG,폰 / NNG,다 / EC,다 / Eomi
+,질르 / VV,지르 / VV,6 / SN,6 / Number
+,어 / ECS,어 / EC,\+ / SY,\+ / Punctuation
+,버리 / VXV,버리 / VX,128 / SN,128 / Number
+,었 / EPT,었 / EP,기 / NNG,기 / Noun
+,다 / ECS,다 / EC,가 / JKS,가 / Josa
+,6 / NR,6 / SN,실버 / NNP,실버 / Noun
+,\+ / SW,\+ / SW,ㅋ / UNKNOWN,ㅋ / KoreanParticle
+,128 / NR,128기가실벜 / NA,,
+,기가 / NNG,,,
+,실버 / NNG,,,
+,ㅋ / UN,,,

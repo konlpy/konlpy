@@ -1,7 +1,9 @@
-#! /usr/bin/python2.7
+#! /usr/bin/python
 # -*- coding: utf-8 -*-
 
+from __future__ import unicode_literals
 import io
+import json
 import os
 import pprint as pp
 import sys
@@ -9,31 +11,37 @@ import sys
 
 installpath = os.path.dirname(os.path.realpath(__file__))
 replace_set = [
-        (u'·', u'/'), # \xb7
-        (u'․', u'/'), # \u2024
-        (u'ㆍ', u'/'), # \u318d (hangul letter araea)
-        (u'･', u'/'), # \uff65 (katakana)
-        (u'～', u'~'), # \uff5e
-        (u'❑', u'-'), # \u2751
-        (u'‘', u"'"), # \u2018
-        (u'’', u"'"), # \u2019
-        (u'“', u'"'), # \u201c
-        (u'”', u'"'), # \u201d
-        (u'「', u'<'), # \u300c
-        (u'」', u'>')] # \u300d
+    ('·', '/'),     # \xb7
+    ('․', '/'),     # \u2024
+    ('ㆍ', '/'),    # \u318d (hangul letter araea)
+    ('･', '/'),     # \uff65 (katakana)
+    ('～', '~'),    # \uff5e
+    ('❑', '-'),     # \u2751
+    ('‘', "'"),     # \u2018
+    ('’', "'"),     # \u2019
+    ('“', '"'),     # \u201c
+    ('”', '"'),     # \u201d
+    ('「', '<'),    # \u300c
+    ('」', '>')]    # \u300d
+
 
 if sys.version_info[0] < 3:
     class UnicodePrinter(pp.PrettyPrinter):
         def format(self, object, context, maxlevels, level):
             """Overrided method to enable Unicode pretty print."""
             if isinstance(object, unicode):
-                return (object.encode('utf8'), True, False)
+                encoding = sys.stdout.encoding or 'utf-8'
+                return (object.encode(encoding), True, False)
             return pp.PrettyPrinter.format(self, object, context, maxlevels, level)
+
 
 def concordance(phrase, text, show=False):
     """Find concordances of a phrase in a text.
 
-    The farmost left numbers are indices, that indicate the location of the phrase in the text (by means of tokens). The following string, is part of the text surrounding the phrase for the given index.
+    The farmost left numbers are indices, that indicate the location
+    of the phrase in the text (by means of tokens).
+    The following string, is part of the text surrounding the phrase
+    for the given index.
 
     :param phrase: Phrase to search in the document.
     :param text: Target document.
@@ -65,12 +73,42 @@ def concordance(phrase, text, show=False):
     indexes = [i for i, term in enumerate(terms) if phrase in term]
     if show:
         for i in indexes:
-            print(i, ' '.join(terms[max(0, i-3):i+3]))
+            print('%d\t%s' % (i, ' '.join(terms[max(0, i - 3):i + 3])))
     return indexes
 
-def concat(phrase):
-    """Concatenates lines into a unified string."""
-    return phrase.replace(os.linesep, ' ')
+
+if sys.version_info[0] < 3:
+    from . import csvutils
+
+    def csvread(f, encoding='utf-8'):
+        """Reads a csv file.
+
+        :param f: File object.
+
+        .. code-block:: python
+
+            >>> from konlpy.utils import csvread
+            >>> with open('some.csv', 'r') as f:
+                    print csvread(f)
+            [[u'\uc774 / NR', u'\ucc28 / NNB'], [u'\ub098\uac00 / VV', u'\ub124 / EFN']]
+        """
+        reader = csvutils.UnicodeReader(f)
+        return [row for row in reader]
+
+    def csvwrite(data, f):
+        """Writes a csv file.
+
+        :param data: A list of list.
+
+        .. code-block:: python
+
+            >>> from konlpy.utils import csvwrite
+            >>> d = [[u'\uc774 / NR', u'\ucc28 / NNB'], [u'\ub098\uac00 / VV', u'\ub124 / EFN']]
+            >>> with open('some.csv', 'w') as f:
+                    csvwrite(d, f)
+        """
+        return csvutils.UnicodeWriter(f).writerows(data)
+
 
 def partition(list_, indices):
     """Partitions a list to several parts using indices.
@@ -78,7 +116,7 @@ def partition(list_, indices):
     :param list_: The target list.
     :param indices: Indices to partition the target list.
     """
-    return [list_[i:j] for i, j in zip([0]+indices, indices+[None])]
+    return [list_[i:j] for i, j in zip([0] + indices, indices + [None])]
 
 if sys.version_info[0] < 3:
     def pprint(obj):
@@ -96,12 +134,6 @@ if sys.version_info[0] < 3:
 else:
     pprint = pp.pprint
 
-def preprocess(phrase):
-    """Preprocesses a phrase in the following steps:.
-
-    - :py:func:`.concat`
-    """
-    return select(concat(phrase).strip())
 
 def select(phrase):
     """Replaces some ambiguous punctuation marks to simpler ones."""
@@ -123,8 +155,10 @@ def char2hex(c):
     """
     return hex(ord(c))
 
+
 if sys.version_info[0] >= 3:
     unichr = chr
+
 
 def hex2char(h):
     """Converts a hex character to unicode.
@@ -138,13 +172,21 @@ def hex2char(h):
     """
     return unichr(int(h, 16))
 
+
 def load_txt(filename, encoding='utf-8'):
     """Text file loader.
     To read a file, use ``read_txt()``instead.
     """
     return io.open(filename, 'r', encoding=encoding)
 
+
 def read_txt(filename, encoding='utf-8'):
     """Text file reader."""
     with io.open(filename, 'r', encoding=encoding) as f:
         return f.read()
+
+
+def read_json(filename, encoding='utf-8'):
+    """JSON file reader."""
+    with io.open(filename, 'r', encoding=encoding) as f:
+        return json.load(f)

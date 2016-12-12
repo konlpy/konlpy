@@ -3,15 +3,16 @@ package kr.lucypark.jhannanum.comm;
 /* Copyright 2014 Lucy Park <me@lucypark.kr> */
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 import kr.ac.kaist.swrc.jhannanum.comm.Eojeol;
 import kr.ac.kaist.swrc.jhannanum.comm.Sentence;
 import kr.ac.kaist.swrc.jhannanum.exception.ResultTypeException;
 import kr.ac.kaist.swrc.jhannanum.hannanum.Workflow;
 import kr.lucypark.jhannanum.hannanum.WorkflowFactory;
-
 
 public class HannanumInterface {
     private Workflow wfMorph = null;
@@ -20,98 +21,90 @@ public class HannanumInterface {
     private Workflow wfPos22 = null;
 
     public String morphAnalyzer(String phrase) {
-        if (phrase == null || phrase == "" || phrase.length()==0) { return null; }
-        if (wfMorph == null) {
-            wfMorph = WorkflowFactory.getPredefinedWorkflow(WorkflowFactory.WORKFLOW_MORPH_ANALYZER);
-            try {
-                wfMorph.activateWorkflow(false);
-            } catch (Exception e) {
-                e.printStackTrace();
-                wfMorph.close();
-                wfMorph = null;
-                return null;
-            }
+        if (phrase == null || Objects.equals(phrase, "") || phrase.length() == 0) {
+            return null;
         }
-        String morphs = null;
-        wfMorph.analyze(phrase);
-        morphs = wfMorph.getResultOfDocument();
-        wfMorph.close();
-        return morphs;
+        try {
+            if (wfMorph == null) {
+                wfMorph = WorkflowFactory.getPredefinedWorkflow(WorkflowFactory.WORKFLOW_MORPH_ANALYZER);
+                wfMorph.activateWorkflow(false);
+            }
+            wfMorph.analyze(phrase);
+            return wfMorph.getResultOfDocument();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            closeWorkFlow(wfMorph);
+        }
     }
 
     public String[] extractNoun(String phrase) throws ResultTypeException {
-        if (phrase == null || phrase == "" || phrase.length()==0) {
-            String[] tmp = new String[] {""};
-            return tmp;
+        if (phrase == null || Objects.equals(phrase, "") || phrase.length() == 0) {
+            return new String[]{""};
         }
-        if (wfNoun == null) {
-            wfNoun = WorkflowFactory.getPredefinedWorkflow(WorkflowFactory.WORKFLOW_NOUN_EXTRACTOR);
-            try {
+        try {
+            if (wfNoun == null) {
+                wfNoun = WorkflowFactory.getPredefinedWorkflow(WorkflowFactory.WORKFLOW_NOUN_EXTRACTOR);
                 wfNoun.activateWorkflow(false);
-            } catch (Exception e) {
-                e.printStackTrace();
-                wfNoun.close();
-                wfNoun = null;
-                return null;
             }
-        }
-        wfNoun.analyze(phrase);
-
-        LinkedList<Sentence> resultList = wfNoun.getResultOfDocument(new Sentence(0, 0, false));
-        List<String> list = new ArrayList<String>();
-        for (Sentence s : resultList) {
-            Eojeol[] eojeolArray = s.getEojeols();
-            for (int i = 0; i < eojeolArray.length; i++) {
-                if (eojeolArray[i].length > 0) {
-                    String[] morphemes = eojeolArray[i].getMorphemes();
-                    for (int j = 0; j < morphemes.length; j++) {
-                        list.add(morphemes[j]);
+            wfNoun.analyze(phrase);
+            LinkedList<Sentence> resultList = wfNoun.getResultOfDocument(new Sentence(0, 0, false));
+            List<String> list = new ArrayList<>();
+            for (Sentence s : resultList) {
+                Eojeol[] eojeolArray = s.getEojeols();
+                for (Eojeol anEojeolArray : eojeolArray) {
+                    if (anEojeolArray.length > 0) {
+                        String[] morphemes = anEojeolArray.getMorphemes();
+                        Collections.addAll(list, morphemes);
                     }
                 }
             }
+            return list.toArray(new String[list.size()]);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            closeWorkFlow(wfMorph);
         }
-        wfNoun.close();
-        return list.toArray(new String[0]);
     }
 
     public String simplePos09(String phrase) {
-        if (phrase == null || phrase == "" || phrase.length()==0) { return null; }
-        if (wfPos09 == null) {
-            wfPos09 = WorkflowFactory.getPredefinedWorkflow(WorkflowFactory.WORKFLOW_HMM_POS_TAGGER_09);
-            try {
-                wfPos09.activateWorkflow(false);
-            } catch (Exception e) {
-                e.printStackTrace();
-                wfPos09.close();
-                wfPos09 = null;
-                return null;
-            }
+        if (phrase == null || Objects.equals(phrase, "") || phrase.length() == 0) {
+            return null;
         }
-        String morphs = null;
-        wfPos09.analyze(phrase);
-        morphs = wfPos09.getResultOfDocument();
-        wfPos09.close();
-        return morphs;
+        try {
+            if (wfPos09 == null) {
+                wfPos09 = WorkflowFactory.getPredefinedWorkflow(WorkflowFactory.WORKFLOW_HMM_POS_TAGGER_09);
+                wfPos09.activateWorkflow(false);
+            }
+            wfPos09.analyze(phrase);
+            return wfPos09.getResultOfDocument();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            closeWorkFlow(wfPos09);
+        }
     }
 
     public String simplePos22(String phrase) {
-        if (phrase == null || phrase == "" || phrase.length()==0) { return null; }
-        if (wfPos22 == null) {
-            wfPos22 = WorkflowFactory.getPredefinedWorkflow(WorkflowFactory.WORKFLOW_HMM_POS_TAGGER_22);
-            try {
-                wfPos22.activateWorkflow(false);
-            } catch (Exception e) {
-                e.printStackTrace();
-                wfPos22.close();
-                wfPos22 = null;
-                return null;
-            }
+        if (phrase == null || Objects.equals(phrase, "") || phrase.length() == 0) {
+            return null;
         }
-        String morphs = null;
-        wfPos22.analyze(phrase);
-        morphs = wfPos22.getResultOfDocument();
-        wfPos22.close();
-        return morphs;
+        try {
+            if (wfPos22 == null) {
+                wfPos22 = WorkflowFactory.getPredefinedWorkflow(WorkflowFactory.WORKFLOW_HMM_POS_TAGGER_22);
+                wfPos22.activateWorkflow(false);
+            }
+            wfPos22.analyze(phrase);
+            return wfPos22.getResultOfDocument();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            closeWorkFlow(wfPos22);
+        }
     }
 
     public static void main(String[] args) throws Exception {
@@ -123,8 +116,8 @@ public class HannanumInterface {
 
         // Test extractNoun
         String[] nouns = hi.extractNoun("");
-        for (int i=0; i<nouns.length; i++) {
-            System.out.println(nouns[i]);
+        for (String noun : nouns) {
+            System.out.println(noun);
         }
 
         // Test SimplePOS
@@ -132,5 +125,9 @@ public class HannanumInterface {
         System.out.println(pos09);
         String pos22 = hi.simplePos22("성긴털제비꽃은 근무중이다.");
         System.out.println(pos22);
+    }
+
+    private void closeWorkFlow(Workflow workflow) {
+        workflow.close();
     }
 }

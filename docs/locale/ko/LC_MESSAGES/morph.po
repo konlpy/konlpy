@@ -1,0 +1,671 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../morph.rst:2
+msgid "Morphological analysis and POS tagging"
+msgstr "형태소 분석 및 품사 태깅"
+
+#: ../../morph.rst:4
+msgid ""
+"*Morphological analysis* is the identification of the structure of morphemes"
+" and other linguistic units, such as root words, affixes, or parts of "
+"speech."
+msgstr ""
+"**형태소 분석** 이란 형태소를 비롯하여, 어근, 접두사/접미사, 품사(POS, part-of-speech) 등 다양한 언어적 속성의 "
+"구조를 파악하는 것입니다."
+
+#: ../../morph.rst:6
+msgid ""
+"*POS (part-of-speech) tagging* is the process of marking up morphemes in a "
+"phrase, based on their definitions and contexts. For example.::"
+msgstr "**품사 태깅** 은 형태소의 뜻과 문맥을 고려하여 그것에 마크업을 하는 일입니다. 예를 들어:"
+
+#: ../../morph.rst:14
+msgid ""
+"In KoNLPy, there are several different options you can choose for POS "
+"tagging. All have the same input-output structure; the input is a phrase, "
+"and the output is a list of tagged morphemes."
+msgstr ""
+"KoNLPy에는 품사 태깅을 하기 위한 옵션이 여럿 있는데, 이들은 모두 문구(phrase)를 입력받아 태깅된 형태소를 출력하는 동일한 "
+"입출력 구조를 가집니다."
+
+#: ../../morph.rst:17
+msgid "For detailed usage instructions see the :doc:`api/konlpy.tag`."
+msgstr "더 자세한 설명을 보기 위해서는 :doc:`api/konlpy.tag` 를 참고해주시기 바랍니다."
+
+#: ../../morph.rst:20
+msgid ""
+"`Korean POS tags comparison chart <https://docs.google.com/spreadsheets/d"
+"/1OGAjUvalBuX-oZvZ_-9tEfYD2gQe7hTGsgUpiiBSXI8/edit#gid=0>`_"
+msgstr ""
+"`한국어 품사 태그 비교표 <https://docs.google.com/spreadsheets/d/1OGAjUvalBuX-oZvZ_-"
+"9tEfYD2gQe7hTGsgUpiiBSXI8/edit#gid=0>`_"
+
+#: ../../morph.rst:22
+msgid "Compare POS tags between several Korean analytic projects. (In Korean)"
+msgstr "각종 한국어 형태소 분석기의 품사 태그를 비교해 보세요."
+
+#: ../../morph.rst:54
+msgid "Performance analysis"
+msgstr "성능 분석"
+
+#: ../../morph.rst:56
+msgid ""
+"The performance evaluation is replaced with result comparisons for several "
+"sample sentences."
+msgstr "성능 검증은 몇 개의 샘플 문장을 비교하는 것으로 대체합니다."
+
+#: ../../morph-1.csv:1 ../../morph-1.csv:1 ../../morph-1.csv:1
+#: ../../morph-2.csv:1 ../../morph-2.csv:1
+msgid "는 / JX"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-2.csv:1
+msgid "는 / J"
+msgstr ""
+
+#: ../../morph-0.csv:1 ../../morph-0.csv:1
+msgid "아버지 / NNG"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "아버지가방에들어가 / N"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "가방 / NNG"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "이 / J"
+msgstr ""
+
+#: ../../morph-0.csv:1 ../../morph-3.csv:1
+msgid "가 / JKS"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "에 / JKM"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "방 / NNG"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "에 / JKB"
+msgstr ""
+
+#: ../../morph-0.csv:1 ../../morph-0.csv:1
+msgid "들어가 / VV"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "시 / EPH"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "시ㄴ다 / E"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "ㄴ다 / EFN"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "신다 / EP+EC"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "에서 / JKM"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "에서 / J"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "에서 / JKB"
+msgstr ""
+
+#: ../../morph.rst:25
+msgid "Comparison between POS tagging classes"
+msgstr "품사 태깅 클래스 간 비교"
+
+#: ../../morph.rst:12
+msgid "POS tagging with KoNLPy"
+msgstr "KoNLPy로 품사 태깅하기"
+
+#: ../../morph.rst:32
+msgid "*Loading time*: Class loading time, including dictionary loads."
+msgstr "로딩 시간: 사전 로딩을 포함하여 클래스를 로딩하는 시간."
+
+#: ../../morph.rst:38
+msgid ":py:class:`.Mecab`: 0.0007 *secs*"
+msgstr ""
+
+#: ../../morph.rst:40
+msgid ""
+"*Execution time*: Time for executing the ``pos`` method for each class, with"
+" 100K characters."
+msgstr "실행시간: 10만 문자의 문서를 대상으로 각 클래스의 ``pos`` 메소드를 실행하는데 소요되는 시간."
+
+#: ../../morph.rst:48
+msgid ""
+"If we test among a various number of characters, all classes' execution "
+"times increase in an exponential manner."
+msgstr "문자의 개수를 늘려감에 따라 모든 클래스의 실행 시간은 기하급수적으로 증가합니다."
+
+#: ../../morph.rst:58
+msgid "*\"아버지가방에들어가신다\"*"
+msgstr ""
+
+#: ../../morph-0.csv:1 ../../morph-1.csv:1 ../../morph-2.csv:1
+#: ../../morph-3.csv:1
+msgid "Hannanum"
+msgstr ""
+
+#: ../../morph-0.csv:1 ../../morph-1.csv:1 ../../morph-2.csv:1
+#: ../../morph-3.csv:1
+msgid "Kkma"
+msgstr ""
+
+#: ../../morph-0.csv:1 ../../morph-1.csv:1 ../../morph-2.csv:1
+#: ../../morph-3.csv:1
+msgid "Komoran"
+msgstr ""
+
+#: ../../morph-0.csv:1 ../../morph-1.csv:1 ../../morph-2.csv:1
+#: ../../morph-3.csv:1
+msgid "Mecab"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "아버지가방에들어가신다 / NNP"
+msgstr ""
+
+#: ../../morph.rst:66
+msgid "*\"나는 밥을 먹는다\" vs \"하늘을 나는 자동차\"*"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-2.csv:1
+msgid "나 / N"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-1.csv:1 ../../morph-1.csv:1
+#: ../../morph-2.csv:1 ../../morph-2.csv:1
+msgid "나 / NP"
+msgstr ""
+
+#: ../../morph-1.csv:1
+msgid "밥 / N"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-1.csv:1 ../../morph-1.csv:1
+msgid "밥 / NNG"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-2.csv:1
+msgid "을 / J"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-1.csv:1 ../../morph-1.csv:1
+#: ../../morph-2.csv:1 ../../morph-2.csv:1 ../../morph-2.csv:1
+msgid "을 / JKO"
+msgstr ""
+
+#: ../../morph-1.csv:1
+msgid "먹 / P"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-1.csv:1 ../../morph-1.csv:1
+msgid "먹 / VV"
+msgstr ""
+
+#: ../../morph-1.csv:1
+msgid "는다 / E"
+msgstr ""
+
+#: ../../morph-1.csv:1
+msgid "는 / EPT"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-1.csv:1
+msgid "는다 / EC"
+msgstr ""
+
+#: ../../morph-1.csv:1
+msgid "다 / EFN"
+msgstr ""
+
+#: ../../morph-2.csv:1
+msgid "하늘 / N"
+msgstr ""
+
+#: ../../morph-2.csv:1 ../../morph-2.csv:1 ../../morph-2.csv:1
+msgid "하늘 / NNG"
+msgstr ""
+
+#: ../../morph-2.csv:1
+msgid "날 / VV"
+msgstr ""
+
+#: ../../morph-2.csv:1
+msgid "는 / ETD"
+msgstr ""
+
+#: ../../morph-2.csv:1
+msgid "자동차 / N"
+msgstr ""
+
+#: ../../morph-2.csv:1 ../../morph-2.csv:1 ../../morph-2.csv:1
+msgid "자동차 / NNG"
+msgstr ""
+
+#: ../../morph.rst:78
+msgid "*\"아이폰 기다리다 지쳐 애플공홈에서 언락폰질러버렸다 6+ 128기가실버ㅋ\"*"
+msgstr ""
+
+#: ../../morph.rst:80
+msgid ""
+"How do each of the analyzers deal with slang, or terms that are not included"
+" in the dictionary?"
+msgstr "각 분석기가 사전에 포함되지 않은 단어를 어떻게 해결하는지 확인해볼까요?"
+
+#: ../../morph-3.csv:1
+msgid "아이폰 / N"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "아이 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "아이폰 / NNP"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "기다리 / P"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1 ../../morph-3.csv:1
+#: ../../morph-3.csv:1
+msgid "폰 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "기다리 / VV"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "다 / E"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1 ../../morph-3.csv:1
+#: ../../morph-3.csv:1
+msgid "다 / EC"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "지치 / P"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "다 / ECS"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "지치 / VV"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "지쳐 / VV+EC"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "어 / E"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "어 / EC"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "애플 / NNP"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "애플공홈 / N"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "어 / ECS"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "공 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "홈 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "언락폰질러버렸다 / N"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "6+ / N"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "언락 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "128기가실벜 / N"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "언 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "락 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "질러버렸 / VV+EC+VX+EP"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "질르 / VV"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "지르 / VV"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "6 / SN"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "버리 / VXV"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "버리 / VX"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "128 / SN"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "었 / EPT"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "었 / EP"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "기 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "6 / NR"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "실버 / NNP"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "ㅋ / UNKNOWN"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "128 / NR"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "128기가실벜 / NA"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "기가 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "실버 / NNG"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "ㅋ / UN"
+msgstr ""
+
+#: ../../morph.rst:27
+msgid ""
+"Now, we do time and performation analysis for executing the ``pos`` method "
+"for each of the classes in the :doc:`api/konlpy.tag`. The experiments were "
+"carried out on a Intel i7 CPU with 4 cores, Python 2.7, and KoNLPy 0.4.1."
+msgstr ""
+"이제 :doc:`api/konlpy.tag` 에 있는 태거들의 성능을 확인해볼까요? 실험은 4개의 코어가 있는 인텔 i7 CPU, 파이썬"
+" 2.7, KoNLPy 0.4.1을 이용해 수행되었습니다."
+
+#: ../../morph.rst:34
+msgid ":py:class:`.Kkma`: 5.6988 *secs*"
+msgstr ""
+
+#: ../../morph.rst:35
+msgid ":py:class:`.Komoran`: 5.4866  *secs*"
+msgstr ""
+
+#: ../../morph.rst:36
+msgid ":py:class:`.Hannanum`: 0.6591  *secs*"
+msgstr ""
+
+#: ../../morph.rst:37
+msgid ":py:class:`.Twitter`: 1.4870 *secs*"
+msgstr ""
+
+#: ../../morph.rst:42
+msgid ":py:class:`.Kkma`: 35.7163 *secs*"
+msgstr ""
+
+#: ../../morph.rst:43
+msgid ":py:class:`.Komoran`: 25.6008 *secs*"
+msgstr ""
+
+#: ../../morph.rst:44
+msgid ":py:class:`.Hannanum`: 8.8251 *secs*"
+msgstr ""
+
+#: ../../morph.rst:45
+msgid ":py:class:`.Twitter`: 2.4714 *secs*"
+msgstr ""
+
+#: ../../morph.rst:46
+msgid ":py:class:`.Mecab`: 0.2838 *secs*"
+msgstr ""
+
+#: ../../morph-0.csv:1 ../../morph-1.csv:1 ../../morph-2.csv:1
+#: ../../morph-3.csv:1
+msgid "Twitter"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "아버지 / Noun"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "가방 / Noun"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "에 / Josa"
+msgstr ""
+
+#: ../../morph-0.csv:1
+msgid "들어가신 / Verb"
+msgstr ""
+
+#: ../../morph-0.csv:1 ../../morph-1.csv:1 ../../morph-3.csv:1
+#: ../../morph-3.csv:1
+msgid "다 / Eomi"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-2.csv:1
+msgid "나 / Noun"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-2.csv:1
+msgid "는 / Josa"
+msgstr ""
+
+#: ../../morph-1.csv:1
+msgid "밥 / Noun"
+msgstr ""
+
+#: ../../morph-1.csv:1 ../../morph-2.csv:1
+msgid "을 / Josa"
+msgstr ""
+
+#: ../../morph-1.csv:1
+msgid "먹는 / Verb"
+msgstr ""
+
+#: ../../morph-2.csv:1
+msgid "하늘 / Noun"
+msgstr ""
+
+#: ../../morph-2.csv:1
+msgid "자동차 / Noun"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "아이폰 / Noun"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "기다리 / Verb"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "지쳐 / Verb"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "애플 / Noun"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "공홈 / Noun"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "에서 / Josa"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "언락폰 / Noun"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "질 / Verb"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "러 / Eomi"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "버렸 / Verb"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "6 / Number"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "\\+ / SY"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "\\+ / Punctuation"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "128 / Number"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "기 / Noun"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "가 / Josa"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "실버 / Noun"
+msgstr ""
+
+#: ../../morph-3.csv:1 ../../morph-3.csv:1
+msgid "\\+ / SW"
+msgstr ""
+
+#: ../../morph-3.csv:1
+msgid "ㅋ / KoreanParticle"
+msgstr ""
+
+#: ../../morph.rst:30
+msgid "Time analysis [#]_"
+msgstr ""
+
+#: ../../morph.rst:90
+msgid ""
+"Please note that these are comparisons among KoNLPy classes, and not the "
+"original distributions."
+msgstr "각 형태소 분석기 배포판이 아닌, KoNLPy 내부 모듈 간 비교임에 유의해주시기 바랍니다."
+
+#: ../../morph.rst:88
+msgid ""
+"If you would like to run the experiments yourself, run `this code "
+"<https://github.com/konlpy/konlpy/blob/master/docs/morph.py>`_ from your "
+"local machine."
+msgstr ""
+"`이 코드를 "
+"<https://github.com/konlpy/konlpy/blob/master/docs/morph.py>`_ 컴퓨터에서 실행하시면 위 비교 실험을 직접 수행하실 수 있습니다."
+
+#: ../../morph.rst:60
+msgid ""
+"We can check the spacing algorithm through this example. Desirably, an "
+"analyzer would parse this sentence to ``아버지가 + 방에 + 들어가신다`` (My father "
+"enters the room), rather than ``아버지 + 가방에 + 들어가신다`` (My father goes in the "
+"bag). :py:class:`.Hannanum` and :py:class:`.Komoran` are careful in spacing "
+"uncertain terms, and defaults the whole phrase to nouns. :py:class:`.Kkma` "
+"is more confident, but gets undesirable results. For this result, "
+":py:class:`.Mecab` shows the best results."
+msgstr "이 예시를 통해 띄어쓰기 알고리즘의 성능을 확인해볼 수 있습니다. 이상적인 경우, 이 예시에 대해서는 ``아버지 + 가방에 + 들어가신다`` 보다는 ``아버지가 + 방에 + 들어가신다`` 로 해석하는 것이 더 바람직하겠지요."
+
+#: ../../morph.rst:68
+msgid ""
+"If we focus on \"나는\" in both sentences, we can see whether an analyzer "
+"considers the context of words. \"나는\" in the first sentence should be ``나/N"
+" + 는/J``, and in the second sentence ``나(-ㄹ다)/V + 는/E``. :py:class:`.Kkma` "
+"properly understands the latter \"나는\" as a verb, wheras the rest observe it"
+" as nouns."
+msgstr "두 문장에서 \"나는\"에 집중해서 본다면, 각 분석기가 태깅할 때 단어의 의미와 주변부를 잘 살피는지 확인해볼 수 있습니다. 첫번째 문장에서 \"나는\"은 ``나/N + 는/J``, 두번째 문장에서는 ``나(-ㄹ다)/V + 는/E`` 이 되는 것이 바람직합니다."

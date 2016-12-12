@@ -3,16 +3,23 @@
 
 import os
 import sys
+import platform
 from setuptools import find_packages, setup
-from konlpy import __version__
+from description import __version__
 
 def requirements():
-    with open(os.path.join(os.path.dirname(__file__), 'requirements.txt')) as f:
-        requirements_text = f.read()
-        if sys.version_info[0] >= 3:
-            requirements_text = requirements_text.replace('JPype1', 'JPype1-py3')
+    # both JPype1 and JPype1-py3 don't support Windows. see http://konlpy.org/en/v0.4.4/install/.
+    if platform.system() == 'Windows':
+        return []
 
-        return requirements_text.splitlines()
+    def _openreq(reqfile):
+        with open(os.path.join(os.path.dirname(__file__), reqfile)) as f:
+            return f.read().splitlines()
+
+    if sys.version_info >= (3, ):
+        return _openreq('requirements-py3.txt')
+    else:
+        return _openreq('requirements.txt')
 
 setup(name='konlpy',
     version=__version__,
@@ -21,7 +28,7 @@ setup(name='konlpy',
 Korean, the 13th most widely spoken language in the world, is a beautiful, yet complex language. Myriad Korean NLP engines were built by numerous researchers, to computationally extract meaningful features from the labyrinthine text.
 
 KoNLPy is not just to create another, but to unify and build upon their shoulders, and see one step further. It is built particularly in the Python (programming) language, not only because of its its simplicity and elegance, but its powerful string processing modules and applicability to various tasks - including crawling, Web programming, and data analysis.""",
-    url='http://konlpy.readthedocs.org',
+    url='http://konlpy.org',
     author='Lucy Park',
     author_email='me@lucypark.kr',
     keywords=['Korean', 'CJK',
@@ -35,6 +42,8 @@ KoNLPy is not just to create another, but to unify and build upon their shoulder
         'Intended Audience :: Science/Research',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
         'Topic :: Scientific/Engineering',
         'Topic :: Scientific/Engineering :: Artificial Intelligence',
         'Topic :: Scientific/Engineering :: Human Machine Interfaces',
@@ -44,13 +53,18 @@ KoNLPy is not just to create another, but to unify and build upon their shoulder
         'Topic :: Text Processing :: General',
         'Topic :: Text Processing :: Indexing',
         'Topic :: Text Processing :: Linguistic',
+        'Development Status :: 4 - Beta',
+        'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
         ],
+    license='GPL v3+',
     packages=find_packages(),
     package_data={'konlpy': [
-        'data/*/*/*.txt',
+        'data/corpus/*/*.txt',
+        'data/tagset/*.json',
         'java/conf/plugin/*/*/*.json',
         'java/data/*/*',
-        'java/jhannanum-0.8.4.jar', 'java/bin/kr/lucypark/jhannanum/*/*.class',
-        'java/kkma-2.0.jar', 'java/bin/kr/lucypark/kkma/*.class',
+        'java/*.jar',
+        'java/bin/kr/lucypark/*/*.class',
+        'java/bin/kr/lucypark/*/*/*.class',
         ]},
     install_requires=requirements())

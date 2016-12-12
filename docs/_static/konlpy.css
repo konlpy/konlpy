@@ -1,7 +1,35 @@
 @import url(flasky.css);
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Myeongjo';
+  font-style: normal;
+  font-weight: 600;
+  src: url(//fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Bold.eot);
+  src: url(//fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Bold.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Bold.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Bold.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Bold.ttf) format('truetype');
+}
 
 body {
-    font-family: Georgia, serif;
+    font-family: 'PT Sans', 'Helvetica Neue', 'Arial', 'Nanum Gothic', sans-serif;
+}
+
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5 {
+    font-family: 'Garamond', 'Georgia', 'Nanum Myeongjo', serif;
 }
 
 a.reference.image-reference {
@@ -11,6 +39,10 @@ a.reference.image-reference {
 
 a.reference.image-reference:hover {
     border-bottom: none;
+}
+
+div.sphinxsidebar #searchbox input[type="submit"] {
+    width: inherit;
 }
 
 table.docutils {
@@ -56,6 +88,18 @@ table.footnote td.label {
     top: 0;
 }
 
+.language {
+    background-color: rgba(186,96,187,0.4);
+    border: 1px solid rgb(186,96,187);
+    font-size: 70%;
+    margin: 0 2px;
+    padding: 1px 3px;
+}
+
+.language:hover {
+    background-color: rgba(186,96,187,0.7);
+}
+
 .license {
     background-color: rgba(86,196,187,0.4);
     border: 1px solid rgb(86,196,187);
@@ -66,4 +110,24 @@ table.footnote td.label {
 
 .license:hover {
     background-color: rgba(86,196,187,0.7);
+}
+
+#disqus_thread {
+    margin-top: 50px;
+}
+
+#related-pages.affix-top {
+    position: static;
+    margin-top: 0px;
+    width: 200px;
+}
+
+#related-pages.affix {
+    position: fixed;
+    top: 0px;
+    width: 200px;
+}
+
+.affix, .affix-top {
+   position: static;
 }

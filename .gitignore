@@ -1,9 +1,11 @@
 *.classpath
 *.coverage
+*.DS_Store
 *.egg-info/
 *.log
 *.project
 *.pyc
+*.settings/
 build/
 dist/
 docs/_build/

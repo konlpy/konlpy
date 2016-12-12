@@ -1,0 +1,498 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api.rst:2
+msgid "API"
+msgstr ""
+
+#: ../../api/konlpy.rst:2
+msgid "konlpy Package"
+msgstr ""
+
+#: ../../api/konlpy.rst:5
+msgid "Subpackages"
+msgstr ""
+
+#: ../../api/konlpy.rst:13
+msgid ":mod:`data` Module"
+msgstr ""
+
+#: ../../../konlpy/data.pydocstring of konlpy.data.find:1
+msgid ""
+"Find the path of a given resource URL by searching through directories in "
+"``konlpy.data.path``. If the given resource is not found, raise a "
+"``LookupError``, whose message gives a pointer to the installation "
+"instructions for ``konlpy.download()``."
+msgstr ""
+
+#: ../../../konlpy/data.pydocstring of konlpy.data.find:8
+msgid ""
+"The URL of the resource to search for. URLs are posix-style relative path "
+"names, such as ``corpora/kolaw``. In particular, directory names should "
+"always be separated by the forward slash character (i.e., '/'), which will "
+"be automatically converted to a platform-appropriate path separator by "
+"KoNLPy."
+msgstr ""
+
+#: ../../../konlpy/data.pydocstring of konlpy.data.load:1
+msgid ""
+"Load a given resource from the KoNLPy data package. If no format is "
+"specified, ``load()`` will attempt to determine a format based on the "
+"resource name's file extension. If that fails, ``load()`` will raise a "
+"``ValueError`` exception."
+msgstr ""
+
+#: ../../../konlpy/data.pydocstring of konlpy.data.load:7
+msgid "A URL specifying where the resource should be loaded from."
+msgstr ""
+
+#: ../../../konlpy/data.pydocstring of konlpy.data.load:8
+msgid "Format type of resource."
+msgstr ""
+
+#: ../../../konlpy/data.pydocstring of konlpy.data.path:1
+msgid ""
+"A list of directories where the KoNLPy data package might reside. These "
+"directories will be checked in order when looking for a resource. Note that "
+"this allows users to substitute their own versions of resources."
+msgstr ""
+
+#: ../../<autodoc>:1
+msgid "Bases: :class:`konlpy.data.PathPointer`, :class:`str`"
+msgstr ""
+
+#: ../../../konlpy/data.pydocstring of konlpy.data.FileSystemPathPointer:1
+msgid "A path pointer that identifies a file by an absolute path."
+msgstr ""
+
+#: ../../<autodoc>:1 ../../<autodoc>:1
+msgid "Bases: :class:`object`"
+msgstr ""
+
+#: ../../../konlpy/data.pydocstring of konlpy.data.PathPointer:1
+msgid ""
+"An abstract base class for path pointers. One subclass exists: 1. "
+"``FileSystemPathPointer``: Identifies a file by an absolute path."
+msgstr ""
+
+#: ../../api/konlpy.rst:21
+msgid ":mod:`downloader` Module"
+msgstr ""
+
+#: ../../../konlpy/downloader.pydocstring of
+#: konlpy.downloader.Downloader.download:1
+msgid ""
+"The KoNLPy data downloader. With this module you can download corpora, "
+"models and other data packages that can be used with KoNLPy."
+msgstr ""
+
+#: ../../api/konlpy.rst:29
+msgid ":mod:`jvm` Module"
+msgstr ""
+
+#: ../../../konlpy/jvm.pydocstring of konlpy.jvm.init_jvm:1
+msgid "Initializes the Java virtual machine (JVM)."
+msgstr ""
+
+#: ../../../konlpy/jvm.pydocstring of konlpy.jvm.init_jvm:3
+msgid ""
+"The path of the JVM. If left empty, inferred by "
+":py:func:`jpype.getDefaultJVMPath`."
+msgstr ""
+
+#: ../../api/konlpy.rst:37
+msgid ":mod:`utils` Module"
+msgstr ""
+
+#: ../../<autodoc>:1
+msgid "Bases: :class:`pprint.PrettyPrinter`"
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.UnicodePrinter.format:1
+msgid "Overrided method to enable Unicode pretty print."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.char2hex:1
+msgid "Converts a unicode character to hex."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.concordance:1
+msgid "Find concordances of a phrase in a text."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.concordance:3
+msgid ""
+"The farmost left numbers are indices, that indicate the location of the "
+"phrase in the text (by means of tokens). The following string, is part of "
+"the text surrounding the phrase for the given index."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.concordance:8
+msgid "Phrase to search in the document."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.concordance:9
+msgid "Target document."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.concordance:10
+msgid "If ``True``, shows locations of the phrase on the console."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.hex2char:1
+msgid "Converts a hex character to unicode."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.load_txt:1
+msgid "Text file loader. To read a file, use ``read_txt()``instead."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.partition:1
+msgid "Partitions a list to several parts using indices."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.partition:3
+msgid "The target list."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.partition:4
+msgid "Indices to partition the target list."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.pprint:1
+msgid "Unicode pretty printer."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.read_txt:1
+msgid "Text file reader."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.select:1
+msgid "Replaces some ambiguous punctuation marks to simpler ones."
+msgstr ""
+
+#: ../../api/konlpy.corpus.rst:2
+msgid "corpus Package"
+msgstr ""
+
+#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader:1
+msgid ""
+"Loader for corpora. For a complete list of corpora available in KoNLPy, "
+"refer to :ref:`corpora`."
+msgstr ""
+
+#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader.abspath:1
+msgid ""
+"Absolute path of corpus file. If ``filename`` is *None*, returns absolute "
+"path of corpus."
+msgstr ""
+
+#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader.abspath:4
+#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader.open:4
+msgid "Name of a particular file in the corpus."
+msgstr ""
+
+#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader.fileids:1
+msgid "List of file IDs in the corpus."
+msgstr ""
+
+#: ../../../konlpy/corpus.pydocstring of konlpy.corpus.CorpusLoader.open:1
+msgid "Method to open a file in the corpus. Returns a file object."
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:2
+msgid "tag Package"
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:6
+msgid ""
+"Initial runs of each class method may require some time to load dictionaries"
+" (< 1 *min*). Second runs should be faster."
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:10
+msgid ":class:`Hannanum` Class"
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum:1
+msgid ""
+"Wrapper for `JHannanum "
+"<http://semanticweb.kaist.ac.kr/home/index.php/HanNanum>`_."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum:3
+msgid ""
+"JHannanum is a morphological analyzer and POS tagger written in Java, and "
+"developed by the `Semantic Web Research Center (SWRC) "
+"<http://semanticweb.kaist.ac.kr/>`_ at KAIST since 1999."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum:21 ../../../konlpy/tag/_kkma.pydocstring of
+#: konlpy.tag._kkma.Kkma:24 ../../../konlpy/tag/_komoran.pydocstring of
+#: konlpy.tag._komoran.Komoran:16 ../../../konlpy/tag/_twitter.pydocstring of
+#: konlpy.tag._twitter.Twitter:23
+msgid "The path of the JVM passed to :py:func:`.init_jvm`."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum.analyze:1
+msgid "Phrase analyzer."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum.analyze:3
+msgid ""
+"This analyzer returns various morphological candidates for each token. It "
+"consists of two parts: 1) Dictionary search (chart), 2) Unclassified term "
+"segmentation."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum.morphs:1
+#: ../../../konlpy/tag/_kkma.pydocstring of konlpy.tag._kkma.Kkma.morphs:1
+#: ../../../konlpy/tag/_komoran.pydocstring of
+#: konlpy.tag._komoran.Komoran.morphs:1 ../../../konlpy/tag/_mecab.pydocstring
+#: of konlpy.tag._mecab.Mecab.morphs:1
+#: ../../../konlpy/tag/_twitter.pydocstring of
+#: konlpy.tag._twitter.Twitter.morphs:1
+msgid "Parse phrase to morphemes."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum.nouns:1 ../../../konlpy/tag/_kkma.pydocstring
+#: of konlpy.tag._kkma.Kkma.nouns:1 ../../../konlpy/tag/_komoran.pydocstring
+#: of konlpy.tag._komoran.Komoran.nouns:1
+#: ../../../konlpy/tag/_mecab.pydocstring of konlpy.tag._mecab.Mecab.nouns:1
+#: ../../../konlpy/tag/_twitter.pydocstring of
+#: konlpy.tag._twitter.Twitter.nouns:1
+msgid "Noun extractor."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum.pos:1 ../../../konlpy/tag/_kkma.pydocstring
+#: of konlpy.tag._kkma.Kkma.pos:1 ../../../konlpy/tag/_komoran.pydocstring of
+#: konlpy.tag._komoran.Komoran.pos:1 ../../../konlpy/tag/_mecab.pydocstring of
+#: konlpy.tag._mecab.Mecab.pos:1
+msgid "POS tagger."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum.pos:3
+msgid "This tagger is HMM based, and calculates the probability of tags."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum.pos:5
+msgid "The number of tags. It can be either 9 or 22."
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:18
+msgid ":class:`Kkma` Class"
+msgstr ""
+
+#: ../../../konlpy/tag/_kkma.pydocstring of konlpy.tag._kkma.Kkma:1
+msgid "Wrapper for `Kkma <http://kkma.snu.ac.kr>`_."
+msgstr ""
+
+#: ../../../konlpy/tag/_kkma.pydocstring of konlpy.tag._kkma.Kkma:3
+msgid ""
+"Kkma is a morphological analyzer and natural language processing system "
+"written in Java, developed by the Intelligent Data Systems (IDS) Laboratory "
+"at `SNU <http://snu.ac.kr>`_."
+msgstr ""
+
+#: ../../../konlpy/tag/_kkma.pydocstring of konlpy.tag._kkma.Kkma.sentences:1
+msgid "Sentence detection."
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:34
+msgid ":class:`Mecab` Class"
+msgstr ""
+
+#: ../../../konlpy/tag/_mecab.pydocstring of konlpy.tag._mecab.Mecab:1
+msgid "Wrapper for MeCab-ko morphological analyzer."
+msgstr ""
+
+#: ../../../konlpy/tag/_mecab.pydocstring of konlpy.tag._mecab.Mecab:8
+msgid ""
+"In order to use MeCab-ko within KoNLPy, follow the directions in :ref"
+":`optional-installations`."
+msgstr ""
+
+#: ../../../konlpy/tag/_mecab.pydocstring of konlpy.tag._mecab.Mecab:24
+msgid "The path of the MeCab-ko dictionary."
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:53
+msgid ""
+"`Korean POS tags comparison chart <https://docs.google.com/spreadsheets/d"
+"/1OGAjUvalBuX-oZvZ_-9tEfYD2gQe7hTGsgUpiiBSXI8/edit#gid=0>`_"
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:55
+msgid "Compare POS tags between several Korean analytic projects. (In Korean)"
+msgstr ""
+
+#: ../../../konlpy/downloader.pydocstring of konlpy.downloader.Downloader:1
+msgid ""
+"A class used to access the KoNLPy data server, which can be used to download"
+" packages."
+msgstr ""
+
+#: ../../../konlpy/downloader.pydocstring of
+#: konlpy.downloader.Downloader.download:8
+msgid ""
+"Individual packages can be downloaded by passing a single argument, the "
+"package identifier for the package that should be downloaded:"
+msgstr ""
+
+#: ../../../konlpy/downloader.pydocstring of
+#: konlpy.downloader.Downloader.download:14
+msgid ""
+"To download all packages, simply call ``download`` with the argument 'all':"
+msgstr ""
+
+#: ../../../konlpy/downloader.pydocstring of
+#: konlpy.downloader.default_download_dir:1
+msgid ""
+"Returns the directory to which packages will be downloaded by default. This "
+"value can be overriden using the constructor, or on a case-by-case basis "
+"using the ``download_dir`` argument when calling ``download()``."
+msgstr ""
+
+#: ../../../konlpy/downloader.pydocstring of
+#: konlpy.downloader.default_download_dir:6
+msgid ""
+"On Windows, the default download directory is ``PYTHONHOME/lib/konlpy``, "
+"where *PYTHONHOME* is the directory containing Python e.g., "
+"``C:\\Python27``."
+msgstr ""
+
+#: ../../../konlpy/downloader.pydocstring of
+#: konlpy.downloader.default_download_dir:9
+msgid ""
+"On all other platforms, the default directory is the first of the following "
+"which exists or which can be created with write permission: "
+"``/usr/share/konlpy_data``, ``/usr/local/share/konlpy_data``, "
+"``/usr/lib/konlpy_data``, ``/usr/local/lib/konlpy_data``, ``~/konlpy_data``."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.csvread:1
+msgid "Reads a csv file."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.csvread:3
+msgid "File object."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.csvwrite:1
+msgid "Writes a csv file."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.csvwrite:3
+msgid "A list of list."
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:26
+msgid ":class:`Komoran` Class"
+msgstr ""
+
+#: ../../../konlpy/tag/_komoran.pydocstring of konlpy.tag._komoran.Komoran:1
+msgid ""
+"Wrapper for `KOMORAN <http://shineware.tistory.com/entry/KOMORAN-ver-24>`_."
+msgstr ""
+
+#: ../../../konlpy/tag/_komoran.pydocstring of konlpy.tag._komoran.Komoran:3
+msgid ""
+"KOMORAN is a relatively new open source Korean morphological analyzer "
+"written in Java, developed by `Shineware <http://shineware.co.kr>`_, since "
+"2013."
+msgstr ""
+
+#: ../../../konlpy/tag/_komoran.pydocstring of konlpy.tag._komoran.Komoran:17
+msgid ""
+"The path of dictionary files. The KOMORAN system dictionary is loaded by "
+"default."
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:36
+msgid "``Mecab()`` is not supported on ``Windows 7``."
+msgstr ""
+
+#: ../../../konlpy/tag/_hannanum.pydocstring of
+#: konlpy.tag._hannanum.Hannanum.pos:6 ../../../konlpy/tag/_kkma.pydocstring
+#: of konlpy.tag._kkma.Kkma.pos:3 ../../../konlpy/tag/_komoran.pydocstring of
+#: konlpy.tag._komoran.Komoran.pos:3 ../../../konlpy/tag/_mecab.pydocstring of
+#: konlpy.tag._mecab.Mecab.pos:3
+msgid "If False, preserves eojeols."
+msgstr ""
+
+#: ../../api/konlpy.tag.rst:44
+msgid ":class:`Twitter` Class"
+msgstr ""
+
+#: ../../../konlpy/tag/_twitter.pydocstring of konlpy.tag._twitter.Twitter:1
+msgid ""
+"Wrapper for `Twitter Korean Text <https://github.com/twitter/twitter-korean-"
+"text>`_."
+msgstr ""
+
+#: ../../../konlpy/tag/_twitter.pydocstring of konlpy.tag._twitter.Twitter:3
+msgid ""
+"Twitter Korean Text is an open source Korean tokenizer written in Scala, "
+"developed by Will Hohyon Ryu."
+msgstr ""
+
+#: ../../../konlpy/tag/_twitter.pydocstring of
+#: konlpy.tag._twitter.Twitter.phrases:1
+msgid "Phrase extractor."
+msgstr ""
+
+#: ../../../konlpy/tag/_twitter.pydocstring of
+#: konlpy.tag._twitter.Twitter.pos:1
+msgid ""
+"POS tagger. In contrast to other classes in this subpackage, this POS tagger"
+" doesn't have a `flatten` option, but has `norm` and `stem` options. Check "
+"the parameter list below."
+msgstr ""
+
+#: ../../../konlpy/tag/_twitter.pydocstring of
+#: konlpy.tag._twitter.Twitter.pos:7
+msgid "If True, normalize tokens."
+msgstr ""
+
+#: ../../../konlpy/tag/_twitter.pydocstring of
+#: konlpy.tag._twitter.Twitter.pos:8
+msgid "If True, stem tokens."
+msgstr ""
+
+#: ../../../konlpy/utils.pydocstring of konlpy.utils.read_json:1
+msgid "JSON file reader."
+msgstr ""
+
+#: ../../../konlpy/tag/_mecab.pydocstring of konlpy.tag._mecab.Mecab:3
+msgid ""
+"`MeCab`_, originally a Japanese morphological analyzer and POS tagger "
+"developed by the Graduate School of Informatics in Kyoto University, was "
+"modified to MeCab-ko by the `Eunjeon Project`_ to adapt to the Korean "
+"language."
+msgstr ""
+
+#: ../../../konlpy/tag/_kkma.pydocstring of konlpy.tag._kkma.Kkma:22
+msgid ""
+"There are reports that ``Kkma()`` is weak for long strings with no spaces "
+"between words. See issue :issue:`73` for details."
+msgstr ""

@@ -1,11 +1,9 @@
-#! /usr/bin/python2.7
+#! /usr/bin/python
 # -*- coding: utf-8 -*-
 
 import re
-try:
-    import jpype
-except ImportError:
-    pass
+
+import jpype
 
 from .. import jvm
 from .. import utils
@@ -17,17 +15,26 @@ __all__ = ['Kkma']
 class Kkma():
     """Wrapper for `Kkma <http://kkma.snu.ac.kr>`_.
 
-    Kkma is a morphological analyzer and natural language processing system written in Java, developed by the Intelligent Data Systems (IDS) Laboratory at `SNU <http://snu.ac.kr>`_.
+    Kkma is a morphological analyzer and natural language processing
+    system written in Java, developed by the Intelligent Data Systems (IDS)
+    Laboratory at `SNU <http://snu.ac.kr>`_.
 
     .. code-block:: python
 
-        from konlpy.tag import Kkma
+        >>> from konlpy.tag import Kkma
+        >>> kkma = Kkma()
+        >>> print(kkma.morphs(u'공부를 하면할수록 모르는게 많다는 것을 알게 됩니다.'))
+        ['공부', '를', '하', '면', '하', 'ㄹ수록', '모르', '는', '것', '이', '많', '다는', '것', '을', '알', '게', '되', 'ㅂ니다', '.']
+        >>> print(kkma.nouns(u'대학에서 DB, 통계학, 이산수학 등을 배웠지만...'))
+        ['대학', '통계학', '이산', '이산수학', '수학', '등']
+        >>> print(kkma.pos(u'다 까먹어버렸네요?ㅋㅋ'))
+        [('다', 'MAG'), ('까먹', 'VV'), ('어', 'ECD'), ('버리', 'VXV'), ('었', 'EPT'), ('네요', 'EFN'), ('?', 'SF'), ('ㅋㅋ', 'EMO')]
+        >>> print(kkma.sentences(u'그래도 계속 공부합니다. 재밌으니까!'))
+        ['그래도 계속 공부합니다.', '재밌으니까!']
 
-        kkma = Kkma()
-        print kkma.sentences(u'저는 대학생이구요. 소프트웨어 관련학과 입니다.')
-        print kkma.nouns(u'대학에서 DB, 통계학, 이산수학 등을 배웠지만...')
-        print kkma.morph(u'자주 사용을 안하다보니 모두 까먹은 상태입니다.')
-        print kkma.pos(u'어쩌면 좋죠?')
+    .. warning::
+
+        There are reports that ``Kkma()`` is weak for long strings with no spaces between words. See issue :issue:`73` for details.
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
     """
@@ -35,26 +42,31 @@ class Kkma():
     def nouns(self, phrase):
         """Noun extractor."""
 
-        phrase = utils.preprocess(phrase)
         nouns = self.jki.extractNoun(phrase)
         if not nouns: return []
         return [nouns.get(i).getString() for i in range(nouns.size())]
 
-    def pos(self, phrase):
-        """POS tagger."""
+    def pos(self, phrase, flatten=True):
+        """POS tagger.
 
-        phrase = utils.preprocess(phrase)
+        :param flatten: If False, preserves eojeols."""
+
         sentences = self.jki.morphAnalyzer(phrase)
         morphemes = []
-        if not sentences: return morphemes
+        if not sentences:
+            return morphemes
 
         for i in range(sentences.size()):
             sentence = sentences.get(i)
             for j in range(sentence.size()):
                 eojeol = sentence.get(j)
-                for k in range(eojeol.size()):
-                    morpheme = eojeol.get(k)
-                    morphemes.append((morpheme.getString(), morpheme.getTag()))
+                if flatten:
+                    for k in range(eojeol.size()):
+                        morpheme = eojeol.get(k)
+                        morphemes.append((morpheme.getString(), morpheme.getTag()))
+                else:
+                    morphemes.append([(eojeol.get(k).getString(), eojeol.get(k).getTag())
+                                     for k in range(eojeol.size())])
 
         return morphemes
 
@@ -66,11 +78,9 @@ class Kkma():
     def sentences(self, phrase):
         """Sentence detection."""
 
-        phrase = utils.preprocess(phrase)
         sentences = self.jki.morphAnalyzer(phrase)
         if not sentences: return []
         return [sentences.get(i).getSentence() for i in range(sentences.size())]
-
 
     def __init__(self, jvmpath=None):
         if not jpype.isJVMStarted():
@@ -78,4 +88,5 @@ class Kkma():
 
         kkmaJavaPackage = jpype.JPackage('kr.lucypark.kkma')
         KkmaInterfaceJavaClass = kkmaJavaPackage.KkmaInterface
-        self.jki = KkmaInterfaceJavaClass() # Java instance
+        self.jki = KkmaInterfaceJavaClass()  # Java instance
+        self.tagset = utils.read_json('%s/data/tagset/kkma.json' % utils.installpath)
