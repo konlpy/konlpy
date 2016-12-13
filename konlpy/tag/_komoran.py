@@ -49,10 +49,16 @@ class Komoran():
     :param dicpath: The path of dictionary files. The KOMORAN system dictionary is loaded by default.
     """
 
-    def pos(self, phrase, flatten=True):
+    def pos(self, phrase, flatten=True, user_dic=None, fwd_file=None):
         """POS tagger.
 
         :param flatten: If False, preserves eojeols."""
+
+        if user_dic:
+            self.jki.setUserDic(user_dic)
+
+        if fwd_file:
+            self.jki.setFWDic(fwd_file)
 
         if sys.version_info[0] < 3:
             result = self.jki.analyzeMorphs(phrase, self.dicpath)
