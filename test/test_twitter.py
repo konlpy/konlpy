@@ -33,6 +33,10 @@ def test_tkorean_pos_3(tkorean_instance, string):
     assert tkorean_instance.pos(string, stem=True, norm=True) ==\
         [(u'\uaf43', u'Noun'), (u'\uac00\ub9c8', u'Noun'), (u'\ud0c0\uace0', u'Noun'), (u'\uac15\ub0a8', u'Noun'), (u'\uac00\ub098', u'Noun'), (u'\uc694', u'Josa'), (u'\u314b\u314b', u'KoreanParticle')]
 
+def test_tkorean_pos_join(tkorean_instance, string):
+    assert tkorean_instance.pos(string, join=True) ==\
+        [u'\uaf43/Noun', u'\uac00\ub9c8/Noun', u'\ud0c0\uace0/Noun', u'\uac15\ub0a8/Noun', u'\uac00\ub098/Noun', u'\uc6ac/Noun', u'\u314b\u314b\u314b\u314b/KoreanParticle']
+
 def test_tkorean_nouns(tkorean_instance, string):
     assert tkorean_instance.nouns(string) ==\
         [u'\uaf43', u'\uac00\ub9c8', u'\ud0c0\uace0', u'\uac15\ub0a8', u'\uac00\ub098', u'\uc6ac']

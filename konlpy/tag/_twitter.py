@@ -34,7 +34,7 @@ class Twitter():
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
     """
 
-    def pos(self, phrase, norm=False, stem=False):
+    def pos(self, phrase, norm=False, stem=False, join=False):
         """POS tagger.
         In contrast to other classes in this subpackage,
         this POS tagger doesn't have a `flatten` option,
@@ -43,13 +43,17 @@ class Twitter():
 
         :param norm: If True, normalize tokens.
         :param stem: If True, stem tokens.
+        :param join: If True, returns joined sets of morph and tag.
         """
 
         tokens = self.jki.tokenize(
                     phrase,
                     jpype.java.lang.Boolean(norm),
                     jpype.java.lang.Boolean(stem)).toArray()
-        return [tuple(t.rsplit('/', 1)) for t in tokens]
+        if join:
+            return [t for t in tokens]
+        else:
+            return [tuple(t.rsplit('/', 1)) for t in tokens]
 
     def nouns(self, phrase):
         """Noun extractor."""
