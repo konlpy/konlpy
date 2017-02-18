@@ -24,6 +24,16 @@ def test_mecab_pos_43(mecab_instance, string):
          (u'\uc790', u'EF'),
          (u'!', u'SF')]
 
+def test_mecab_pos_join(mecab_instance, string):
+    assert mecab_instance.pos(string, join=True) ==\
+        [u'\uaf43\uac00\ub9c8/NNG',
+         u'\ud0c0/VV',
+         u'\uace0/EC',
+         u'\uac15\ub0a8/NNP',
+         u'\uac00/VV',
+         u'\uc790/EF',
+         u'!/SF']
+
 def test_mecab_morphs(mecab_instance, string):
     assert mecab_instance.morphs(string) ==\
         [u'\uaf43\uac00\ub9c8',

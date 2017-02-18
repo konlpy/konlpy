@@ -15,14 +15,20 @@ from .. import internals
 __all__ = ['Komoran']
 
 
-def parse(result, flatten):
-    def _parse(token):
-        return [tuple(s[1:].rsplit('/', 1)) for s in re.findall('\+.+?/[A-Z]+', token)]
+def parse(result, flatten, join=False):
+    def _parse(token, join=False):
+        if join:
+            return [s[1:] for s in re.findall('\+.+?/[A-Z]+', token)]
+        else:
+            return [tuple(s[1:].rsplit('/', 1)) for s in re.findall('\+.+?/[A-Z]+', token)]
 
     if sys.version_info[0] < 3:
-        parsed = [[tuple(r.rsplit('/', 1)) for r in sublist] for sublist in result]
+        if join:
+            parsed = [[r for r in sublist] for sublist in result]
+        else:
+            parsed = [[tuple(r.rsplit('/', 1)) for r in sublist] for sublist in result]
     else:
-        parsed = [_parse(i) for i in result[1:-1].split(', ')]
+        parsed = [_parse(i, join=join) for i in result[1:-1].split(', ')]
 
     if flatten:
         return sum(parsed, [])
@@ -49,17 +55,19 @@ class Komoran():
     :param dicpath: The path of dictionary files. The KOMORAN system dictionary is loaded by default.
     """
 
-    def pos(self, phrase, flatten=True):
+    def pos(self, phrase, flatten=True, join=False):
         """POS tagger.
 
-        :param flatten: If False, preserves eojeols."""
+        :param flatten: If False, preserves eojeols.
+        :param join: If True, returns joined sets of morph and tag.
+        """
 
         if sys.version_info[0] < 3:
             result = self.jki.analyzeMorphs(phrase, self.dicpath)
         else:
             result = self.jki.analyzeMorphs3(phrase, self.dicpath).toString()
 
-        return parse(result, flatten)
+        return parse(result, flatten, join=join)
 
     def nouns(self, phrase):
         """Noun extractor."""

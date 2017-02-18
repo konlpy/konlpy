@@ -46,10 +46,12 @@ class Kkma():
         if not nouns: return []
         return [nouns.get(i).getString() for i in range(nouns.size())]
 
-    def pos(self, phrase, flatten=True):
+    def pos(self, phrase, flatten=True, join=False):
         """POS tagger.
 
-        :param flatten: If False, preserves eojeols."""
+        :param flatten: If False, preserves eojeols.
+        :param join: If True, returns joined sets of morph and tag.
+        """
 
         sentences = self.jki.morphAnalyzer(phrase)
         morphemes = []
@@ -63,10 +65,17 @@ class Kkma():
                 if flatten:
                     for k in range(eojeol.size()):
                         morpheme = eojeol.get(k)
-                        morphemes.append((morpheme.getString(), morpheme.getTag()))
+                        if join:
+                            morphemes.append(morpheme.getString() + '/' + morpheme.getTag())
+                        else:
+                            morphemes.append((morpheme.getString(), morpheme.getTag()))
                 else:
-                    morphemes.append([(eojeol.get(k).getString(), eojeol.get(k).getTag())
-                                     for k in range(eojeol.size())])
+                    if join:
+                        morphemes.append([eojeol.get(k).getString() + '/' + eojeol.get(k).getTag()
+                                         for k in range(eojeol.size())])
+                    else:
+                        morphemes.append([(eojeol.get(k).getString(), eojeol.get(k).getTag())
+                                         for k in range(eojeol.size())])
 
         return morphemes
 

@@ -34,3 +34,13 @@ else:
              (u'\uac00', u'VV'),
              (u'\uc790', u'EF'),
              (u'!', u'SF')]
+
+    def test_komoran_pos_join(komoran_instance, string):
+        assert komoran_instance.pos(string, join=True) ==\
+            [u'\uaf43\uac00\ub9c8/NNG',
+             u'\ud0c0/VV',
+             u'\uace0/EC',
+             u'\uac15\ub0a8/NNP',
+             u'\uac00/VV',
+             u'\uc790/EF',
+             u'!/SF']

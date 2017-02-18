@@ -16,9 +16,12 @@ __all__ = ['Hannanum']
 tag_re = '(.+?\\/\\w+)\\+?'
 
 
-def parse(result, flatten=False):
-    def parse_opt(opt):
-        return [tuple(u.rsplit('/', 1)) for u in re.findall(tag_re, opt.strip())]
+def parse(result, flatten=False, join=False):
+    def parse_opt(opt, join=False):
+        if join:
+            return [u for u in re.findall(tag_re, opt.strip())]
+        else:
+            return [tuple(u.rsplit('/', 1)) for u in re.findall(tag_re, opt.strip())]
 
     if not result:
         return []
@@ -28,10 +31,10 @@ def parse(result, flatten=False):
     parts = utils.partition(elems, index)
 
     if flatten:
-        return sum([parse_opt(opt) for part in parts
+        return sum([parse_opt(opt, join=join) for part in parts
                     for opt in list(filter(None, part))[1:]], [])
     else:
-        return [[parse_opt(opt) for opt in list(filter(None, part))[1:]]
+        return [[parse_opt(opt, join=join) for opt in list(filter(None, part))[1:]]
                 for part in parts]
 
 
@@ -71,13 +74,15 @@ class Hannanum():
         result = self.jhi.morphAnalyzer(phrase)
         return parse(result)
 
-    def pos(self, phrase, ntags=9, flatten=True):
+    def pos(self, phrase, ntags=9, flatten=True, join=False):
         """POS tagger.
 
         This tagger is HMM based, and calculates the probability of tags.
 
         :param ntags: The number of tags. It can be either 9 or 22.
-        :param flatten: If False, preserves eojeols."""
+        :param flatten: If False, preserves eojeols.
+        :param join: If True, returns joined sets of morph and tag.
+        """
 
         if ntags == 9:
             result = self.jhi.simplePos09(phrase)
@@ -85,7 +90,7 @@ class Hannanum():
             result = self.jhi.simplePos22(phrase)
         else:
             raise Exception('ntags in [9, 22]')
-        return parse(result, flatten=flatten)
+        return parse(result, flatten=flatten, join=join)
 
     def nouns(self, phrase):
         """Noun extractor."""
