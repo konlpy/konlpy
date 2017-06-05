@@ -23,20 +23,34 @@ KoNLPy는 오픈소스 프로젝트입니다.
 2. 같은 이슈가 이미 제기되었고,
     - 이슈가 해결되었다면(closed): 최신 릴리즈에서 문제가 해결되었을 가능성이 높습니다. 쓰레드에서 다른 분들이 어떻게 해결했는지 파악해보는 것도 좋은 방법입니다.
     - 이슈가 아직 해결되지 않았다면(open): 댓글로 문제 상황을 설명해주세요. 같은 상황을 겪고 있는 사람들이 많이 모일수록 문제는 빠르게 해결될 수 있습니다.
-3. 같은 이슈가 아직 제기되지 않았다면, "New Issue" 버튼을 눌러 이슈를 새로 생성해주시면 됩니다. 이슈를 새로 생성하시는 경우에는 사용하는 OS나 패키지 버젼 등을 같이 적어주시면 문제를 빠르게 해결하는데 도움이 됩니다. 
+3. 같은 이슈가 아직 제기되지 않았다면, "New Issue" 버튼을 눌러 이슈를 새로 생성해주시면 됩니다. 이슈를 새로 생성하시는 경우에는 사용하는 OS나 패키지 버젼 등을 같이 적어주시면 문제를 빠르게 해결하는데 도움이 됩니다.
 
 
 3. 이슈 제안/해결하기
 ---------------------
 
 - `깃헙 이슈 <https://github.com/konlpy/konlpy/issues>`_ 에 코드를 개선할 수 있는 방법을 제안하거나, 제안된 이슈에 대해 토론/해결하실 수 있습니다.
-- 기여하신 부분에 대해 정확한 attribution을 할 수 있도록, 가능하다면 pull request를 보내주시기 바랍니다.
 - 코드를 작성할 때는 다음에 유의해주세요.
     1. 탭 대신 공백 4개 사용
     2. 문서에서 특별히 언급되지 않은 사항은 일단 코드의 다른 부분들을 참고해서 작성 (+ 다른 분들의 편의를 위해 이 문서를 업데이트 해주세요)
     3. 커밋 로그는 설명력 있게 작성
-    4. PR을 보내면 해당 코드는 KoNLPy의 오픈소스 라이센스를 따름
-    5. PR를 보낸 후 코드의 일부를 변경하도록 요청될 경우, ``git commit --amend`` 로 커밋을 수정
+- 코드 작성을 완료한 후 코드가 모든 테스트를 통과하는지 확인해주세요.
+    1. 자바 코드를 수정한 경우::
+
+        # Install `Apache Ant <http://ant.apache.org/manual/install.html>`_
+        make java
+
+    1. 코드를 단 한 줄이라도 수정한 모든 경우::
+
+        pip install -r requirements-dev.txt
+        pip3 install -r requirements-dev.txt
+        make build      # create tar.gz
+        make check      # check code styles
+        make testall    # run tests
+
+- PR을 보내기 전 다음을 확인해주세요.
+    1. PR을 보내면 해당 코드는 KoNLPy의 오픈소스 라이센스를 따름
+    1. PR를 보낸 후 코드의 일부를 변경하도록 요청될 경우, ``git commit --amend`` 로 커밋을 수정
 
 
 4. 문서 수정하기
@@ -55,7 +69,7 @@ Setup docs
 1. Fork and clone KoNLPy::
 
     git clone git@github.com:[your_github_id]/konlpy.git
-    
+
 2. Include the following lines in your `~/.bashrc`::
 
     export LC_ALL=en_US.UTF-8
