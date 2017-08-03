@@ -64,7 +64,7 @@ class Twitter():
     def morphs(self, phrase, norm=False, stem=False):
         """Parse phrase to morphemes."""
 
-        return [s for s, t in self.pos(phrase)]
+        return [s for s, t in self.pos(phrase, norm=norm, stem=stem)]
 
     def phrases(self, phrase):
         """Phrase extractor."""
