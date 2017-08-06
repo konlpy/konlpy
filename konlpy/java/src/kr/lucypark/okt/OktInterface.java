@@ -1,4 +1,4 @@
-package kr.lucypark.tkt;
+package kr.lucypark.okt;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import org.openkoreantext.processor.OpenKoreanTextProcessorJava;
 import org.openkoreantext.processor.tokenizer.KoreanTokenizer.KoreanToken;
 import org.openkoreantext.processor.phrase_extractor.KoreanPhraseExtractor;
 
-public class TktInterface {
+public class OktInterface {
 
     public List<String> tokenize(String string, Boolean norm, Boolean stem) {
         final CharSequence charSeq = (norm) ? OpenKoreanTextProcessorJava.normalize(string) : string;
@@ -45,7 +45,7 @@ public class TktInterface {
     }
 
     public static void main(String[] args) throws Exception {
-        TktInterface ti = new TktInterface();
+        OktInterface ti = new OktInterface();
 
         List<String> tokens = ti.tokenize("아버지가 방에 들어가신다.", false, false);
         for (String token : tokens) {
