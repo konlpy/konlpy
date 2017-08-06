@@ -3,45 +3,45 @@ package kr.lucypark.tkt;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.twitter.penguin.korean.TwitterKoreanProcessorJava;
-import com.twitter.penguin.korean.tokenizer.KoreanTokenizer;
+import scala.collection.Seq;
+import scala.collection.Iterator;
+import scala.collection.JavaConverters;
 
+import org.openkoreantext.processor.util.KoreanPos;
+import org.openkoreantext.processor.OpenKoreanTextProcessorJava;
+import org.openkoreantext.processor.tokenizer.KoreanTokenizer.KoreanToken;
+import org.openkoreantext.processor.phrase_extractor.KoreanPhraseExtractor;
 
 public class TktInterface {
 
-    TwitterKoreanProcessorJava processor = null;
-
     public List<String> tokenize(String string, Boolean norm, Boolean stem) {
+        final CharSequence charSeq = (norm) ? OpenKoreanTextProcessorJava.normalize(string) : string;
 
-        if (norm && stem) {
-            processor = new TwitterKoreanProcessorJava.Builder().build();
-        } else if (norm && ! stem) {
-            processor = new TwitterKoreanProcessorJava.Builder().disableStemmer().build();
-        } else if (! norm && stem) {
-            processor = new TwitterKoreanProcessorJava.Builder().disableNormalizer().build();
-        } else if (! norm && ! stem) {
-            processor = new TwitterKoreanProcessorJava.Builder()
-                        .disableStemmer().disableNormalizer()
-                        .build();
-        }
-
-        List<KoreanTokenizer.KoreanToken> tokens = processor.tokenize(string);
+        final Seq<KoreanToken> seqTokens = OpenKoreanTextProcessorJava.tokenize(charSeq);
+        Iterator<KoreanToken> tokenized = seqTokens.iterator();
 
         List<String> list = new ArrayList<>();
-        for (KoreanTokenizer.KoreanToken token: tokens) {
-        	String str = token.text() + '/' + token.pos();
-        	list.add(str);
+        while (tokenized.hasNext()) {
+            final KoreanToken token = tokenized.next();
+            if ( token.pos() == KoreanPos.Space() ) continue;
+            final String text = (stem && !token.stem().isEmpty() ) ? token.stem().get() : token.text();
+            final String str = text + '/' + token.pos();
+            list.add(str);
         }
         return list;
     }
 
     public List<CharSequence> phrases(String string) {
-        processor = new TwitterKoreanProcessorJava.Builder()
-            .disableNormalizer()
-            .disableStemmer()
-            .enablePhraseExtractorSpamFilter()
-            .build();
-        return processor.extractPhrases(string);
+        final CharSequence charSeq = string;
+        final Seq<KoreanToken> tokens = OpenKoreanTextProcessorJava.tokenize(charSeq);
+        List<KoreanPhraseExtractor.KoreanPhrase> phrases = OpenKoreanTextProcessorJava.extractPhrases(tokens, false, false);
+
+        List<CharSequence> list = new ArrayList<>();
+        for (KoreanPhraseExtractor.KoreanPhrase phrase : phrases) {
+            final CharSequence tmpCharSeq = phrase.text();
+            list.add(tmpCharSeq);
+        }
+        return list;
     }
 
     public static void main(String[] args) throws Exception {
