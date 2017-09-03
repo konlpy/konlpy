@@ -27,11 +27,11 @@ def test_tkorean_pos_1(tkorean_instance, string):
 
 def test_tkorean_pos_2(tkorean_instance, string):
     assert tkorean_instance.pos(string, norm=True) ==\
-        [(u'\uaf43', u'Noun'), (u'\uac00\ub9c8', u'Noun'), (u'\ud0c0\uace0', u'Noun'), (u'\uac15\ub0a8', u'Noun'), (u'\uac00\ub098', u'Noun'), (u'\uc694', u'Josa'), (u'\u314b\u314b', u'KoreanParticle')]
+        [(u'\uaf43', u'Noun'), (u'\uac00\ub9c8', u'Noun'), (u'\ud0c0\uace0', u'Noun'), (u'\uac15\ub0a8', u'Noun'), (u'\uac00\ub098', u'Noun'), (u'\uc694', u'Josa'), (u'\u314b\u314b\u314b', u'KoreanParticle')]
 
 def test_tkorean_pos_3(tkorean_instance, string):
     assert tkorean_instance.pos(string, stem=True, norm=True) ==\
-        [(u'\uaf43', u'Noun'), (u'\uac00\ub9c8', u'Noun'), (u'\ud0c0\uace0', u'Noun'), (u'\uac15\ub0a8', u'Noun'), (u'\uac00\ub098', u'Noun'), (u'\uc694', u'Josa'), (u'\u314b\u314b', u'KoreanParticle')]
+        [(u'\uaf43', u'Noun'), (u'\uac00\ub9c8', u'Noun'), (u'\ud0c0\uace0', u'Noun'), (u'\uac15\ub0a8', u'Noun'), (u'\uac00\ub098', u'Noun'), (u'\uc694', u'Josa'), (u'\u314b\u314b\u314b', u'KoreanParticle')]
 
 def test_tkorean_pos_join(tkorean_instance, string):
     assert tkorean_instance.pos(string, join=True) ==\
@@ -43,7 +43,7 @@ def test_tkorean_nouns(tkorean_instance, string):
 
 def test_tkorean_phrases(tkorean_instance, string):
     assert tkorean_instance.phrases(string) ==\
-        [u'\uaf43\uac00\ub9c8 \ud0c0\uace0 \uac15\ub0a8 \uac00\ub098', u'\ud0c0\uace0 \uac15\ub0a8 \uac00\ub098', u'\uac15\ub0a8 \uac00\ub098', u'\uac00\ub9c8', u'\ud0c0\uace0', u'\uac15\ub0a8', u'\uac00\ub098']
+        [u'\uaf43\uac00\ub9c8', u'\uaf43\uac00\ub9c8 \ud0c0\uace0', u'\uaf43\uac00\ub9c8 \ud0c0\uace0 \uac15\ub0a8', u'\uaf43\uac00\ub9c8 \ud0c0\uace0 \uac15\ub0a8 \uac00\ub098\uc6ac', u'\uac00\ub9c8', u'\ud0c0\uace0', u'\uac15\ub0a8', u'\uac00\ub098']
 
 def test_tkorean_morphs(tkorean_instance, string):
     assert tkorean_instance.morphs(string) ==\

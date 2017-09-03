@@ -12,7 +12,8 @@
         <mkdir dir="${bin}"/>
         <javac srcdir="${src}"
                destdir="${bin}"
-               includeantruntime="false">
+               includeantruntime="false"
+               encoding="utf-8">
             <classpath refid="master-classpath" />
         </javac>
     </target>
