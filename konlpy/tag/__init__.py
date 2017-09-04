@@ -8,4 +8,5 @@ try:
     from ._mecab import Mecab
 except ImportError:
     pass
-from ._twitter import Twitter
+from ._okt import Twitter
+from ._okt import Okt

@@ -7,29 +7,39 @@ from .. import jvm
 from .. import utils
 
 
-class Twitter():
+def Twitter(jvmpath=None):
+    """
+    Twitter Korean Text name changed to Open Korean Text
+    Check <https://github.com/konlpy/konlpy/issues/141> 
+    """
+
+    from warnings import warn
+    warn("Twitter Class changed to Okt")
+    return Okt(jvmpath)
+
+
+class Okt():
     """
     Wrapper for `Open Korean Text <https://github.com/open-korean-text/open-korean-text>`_.
 
-    Twitter Korean Text name changed to Open Korean Text <https://github.com/konlpy/konlpy/issues/141> 
     Open Korean Text is an open source Korean tokenizer written in Scala,
     developed by Will Hohyon Ryu.
 
     .. code-block:: python
 
         >>> from konlpy.tag import Twitter
-        >>> twitter = Twitter()
-        >>> print(twitter.morphs(u'단독입찰보다 복수입찰의 경우'))
+        >>> okt = Okt()
+        >>> print(okt.morphs(u'단독입찰보다 복수입찰의 경우'))
         ['단독', '입찰', '보다', '복수', '입찰', '의', '경우']
-        >>> print(twitter.nouns(u'유일하게 항공기 체계 종합개발 경험을 갖고 있는 KAI는'))
+        >>> print(okt.nouns(u'유일하게 항공기 체계 종합개발 경험을 갖고 있는 KAI는'))
         ['항공기', '체계', '종합', '개발', '경험']
-        >>> print(twitter.phrases(u'날카로운 분석과 신뢰감 있는 진행으로'))
+        >>> print(okt.phrases(u'날카로운 분석과 신뢰감 있는 진행으로'))
         ['날카로운 분석', '날카로운 분석과 신뢰감', '날카로운 분석과 신뢰감 있는 진행', '분석', '신뢰', '진행']
-        >>> print(twitter.pos(u'이것도 되나욬ㅋㅋ'))
+        >>> print(okt.pos(u'이것도 되나욬ㅋㅋ'))
         [('이', 'Determiner'), ('것', 'Noun'), ('도', 'Josa'), ('되나욬', 'Noun'), ('ㅋㅋ', 'KoreanParticle')]
-        >>> print(twitter.pos(u'이것도 되나욬ㅋㅋ', norm=True))
+        >>> print(okt.pos(u'이것도 되나욬ㅋㅋ', norm=True))
         [('이', 'Determiner'), ('것', 'Noun'), ('도', 'Josa'), ('되나요', 'Verb'), ('ㅋㅋ', 'KoreanParticle')]
-        >>> print(twitter.pos(u'이것도 되나욬ㅋㅋ', norm=True, stem=True))
+        >>> print(okt.pos(u'이것도 되나욬ㅋㅋ', norm=True, stem=True))
         [('이', 'Determiner'), ('것', 'Noun'), ('도', 'Josa'), ('되다', 'Verb'), ('ㅋㅋ', 'KoreanParticle')]
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.

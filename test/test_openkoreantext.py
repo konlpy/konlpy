@@ -9,8 +9,8 @@ import pytest
 
 @pytest.fixture
 def tkorean_instance():
-    from konlpy.tag import Twitter
-    t = Twitter()
+    from konlpy.tag import Okt
+    t = Okt()
     return t
 
 @pytest.fixture
