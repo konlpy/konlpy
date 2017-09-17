@@ -42,16 +42,16 @@ sudo make install
 # TODO: if not [automake --version]
 cd /tmp
 curl -LO http://ftpmirror.gnu.org/automake/automake-1.11.tar.gz
-tar -zxvf automake-*.tar.gz
-cd automake-*
+tar -zxvf automake-1.11.tar.gz
+cd automake-1.11
 ./configure
 make
 sudo make install
 
 cd /tmp
 curl -LO https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.0.1-20150920.tar.gz
-tar -zxvf mecab-ko-dic-2.0.1-*.tar.gz
-cd mecab-ko-dic-2.0.1-*
+tar -zxvf mecab-ko-dic-2.0.1-20150920.tar.gz
+cd mecab-ko-dic-2.0.1-20150920
 ./autogen.sh
 ./configure
 make
