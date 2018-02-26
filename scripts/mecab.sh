@@ -68,6 +68,6 @@ python setup.py install
 
 if hash "python3" &>/dev/null
 then
-    python3 setup.py build
-    python3 setup.py install
+    sudo python3 setup.py build
+    sudo python3 setup.py install
 fi
