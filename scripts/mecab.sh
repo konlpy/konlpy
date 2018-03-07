@@ -47,7 +47,7 @@ $SUDO make install
 ## install requirement automake1.11
 # TODO: if not [automake --version]
 if [ "$os" == "Linux" ]; then
-    $SUDO apt-get install automake
+    $SUDO apt-get update && $SUDO apt-get install -y automake
 elif [ "$os" == "Darwin" ]; then
     brew install automake
 fi
