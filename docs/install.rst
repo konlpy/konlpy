@@ -18,9 +18,8 @@ Ubuntu
 
     .. sourcecode:: bash
 
-        $ sudo apt-get install g++ openjdk-7-jdk python-dev python3-dev   # Install Java 1.7 or up
-        $ pip install JPype1        # Python 2.x
-        $ pip3 install JPype1-py3   # Python 3.x
+        # Install Java 1.7 or up
+        $ sudo apt-get install g++ openjdk-7-jdk python-dev python3-dev
 
 2. Install KoNLPy
 
@@ -57,9 +56,6 @@ CentOS
         $ make # Build
         $ sudo make altinstall
 
-        $ pip install JPype1        # Python 2.x
-        $ pip3 install JPype1-py3   # Python 3.x
-
 2. Install KoNLPy
 
     .. sourcecode:: bash
@@ -78,21 +74,14 @@ CentOS
 Mac OS
 ------
 
-1. Install dependencies
-
-    .. sourcecode:: bash
-
-       $ pip install JPype1         # Python 2.x
-       $ pip3 install JPype1-py3    # Python 3.x
-
-2. Install KoNLPy
+1. Install KoNLPy
 
     .. sourcecode:: bash
 
        $ pip install konlpy         # Python 2.x
        $ pip3 install konlpy        # Python 3.x
 
-3. Install MeCab (*optional*)
+2. Install MeCab (*optional*)
 
     .. sourcecode:: bash
 

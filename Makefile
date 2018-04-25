@@ -11,11 +11,14 @@
 #
 # TODO: use flake8 and/or pylint
 
+build:
+	python setup.py sdist --formats=gztar,zip
+
 check:
 	check-manifest
 	pyroma dist/konlpy-*tar.gz
-	pep8 --ignore==E501 konlpy/*.py
-	pep8 --ignore==E501 konlpy/*/*.py
+	pep8 --ignore=E501 konlpy/*.py
+	pep8 --ignore=E501 konlpy/*/*.py
 
 testpypi:
 	sudo python setup.py register -r pypitest
