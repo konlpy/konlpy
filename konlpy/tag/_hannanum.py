@@ -1,13 +1,12 @@
-#! /usr/bin/python
 # -*- coding: utf-8 -*-
-
+from __future__ import absolute_import
 from __future__ import unicode_literals
+
 import re
 
 import jpype
 
-from .. import jvm
-from .. import utils
+from konlpy import jvm, utils
 
 
 __all__ = ['Hannanum']

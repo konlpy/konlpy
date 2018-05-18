@@ -1,5 +1,5 @@
-#! /usr/bin/python
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
 
 import logging
 import os
@@ -9,7 +9,7 @@ try:
 except ImportError:
     pass
 
-from . import utils
+from konlpy import utils
 
 
 def init_jvm(jvmpath=None):

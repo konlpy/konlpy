@@ -1,5 +1,5 @@
-#! /usr/bin/python
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
 
 import os
 import re
@@ -7,9 +7,7 @@ import sys
 
 import jpype
 
-from .. import jvm
-from .. import utils
-from .. import internals
+from konlpy import jvm, utils, internals
 
 
 __all__ = ['Komoran']

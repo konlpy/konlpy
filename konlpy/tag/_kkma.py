@@ -1,12 +1,10 @@
-#! /usr/bin/python
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
 
 import re
-
 import jpype
 
-from .. import jvm
-from .. import utils
+from konlpy import jvm, utils
 
 
 __all__ = ['Kkma']

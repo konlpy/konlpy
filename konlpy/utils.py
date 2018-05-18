@@ -1,7 +1,7 @@
-#! /usr/bin/python
 # -*- coding: utf-8 -*-
-
+from __future__ import absolute_import
 from __future__ import unicode_literals
+
 import io
 import json
 import os
@@ -78,7 +78,7 @@ def concordance(phrase, text, show=False):
 
 
 if sys.version_info[0] < 3:
-    from . import csvutils
+    from konlpy import csvutils
 
     def csvread(f, encoding='utf-8'):
         """Reads a csv file.

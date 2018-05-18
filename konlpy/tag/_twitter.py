@@ -1,10 +1,9 @@
-#! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
 
 import jpype
 
-from .. import jvm
-from .. import utils
+from konlpy import jvm, utils
 
 
 class Twitter():
