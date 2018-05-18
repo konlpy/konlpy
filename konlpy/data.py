@@ -1,15 +1,16 @@
-#! /usr/bin/python
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
 
 import os
 import sys
 import textwrap
-try:
-    import cPickle as pickle
-except:
-    import pickle
 
-from . import utils
+if sys.version_info[0] >= 3:
+    import pickle
+else:
+    import cPickle as pickle
+
+from konlpy import utils
 
 
 #: A dictionary describing the formats that are supported by
