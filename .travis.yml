@@ -5,6 +5,8 @@ python:
     - "2.7"
     - "3.3"
     - "3.4"
+    - "3.5"
+    - "3.6"
 
 before_install:
     - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then pip install -r requirements.txt; fi
