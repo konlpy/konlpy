@@ -6,6 +6,7 @@
 *.project
 *.pyc
 *.settings/
+.cache
 build/
 dist/
 docs/_build/
