@@ -5,7 +5,7 @@ import os
 import sys
 import platform
 from setuptools import find_packages, setup
-from description import __version__
+from konlpy import __version__
 
 def requirements():
     # both JPype1 and JPype1-py3 don't support Windows. see http://konlpy.org/en/v0.4.4/install/.
