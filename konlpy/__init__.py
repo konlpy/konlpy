@@ -1,10 +1,6 @@
 from __future__ import absolute_import
 
-__title__ = 'KoNLPy'
-__author__ = 'Team KoNLPy'
-__license__ = 'GPL v3'
-__copyright__ = 'Copyright 2018 Team KoNLPy'
-__version__ = '0.4.5'
+from konlpy.about import *
 
 try:
     from konlpy.downloader import download
