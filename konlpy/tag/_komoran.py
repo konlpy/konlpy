@@ -69,6 +69,15 @@ class Komoran():
 
         return [s for s, t in self.pos(phrase)]
 
+    def add_userdic_file(self, dicpath):
+        """
+        Arguments
+        ---------
+        dicpath : str
+            dictionary file path
+        """
+        self.jki.setUserDic(dicpath)
+
     def __init__(self, jvmpath=None, dicpath=None):
         if not jpype.isJVMStarted():
             jvm.init_jvm(jvmpath)
