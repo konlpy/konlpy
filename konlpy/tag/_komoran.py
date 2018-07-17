@@ -78,21 +78,21 @@ class Komoran():
         """
         self.jki.setUserDic(dicpath)
 
-    def __init__(self, jvmpath=None, dicpath=None):
+    def __init__(self, jvmpath=None, modelpath=None):
         if not jpype.isJVMStarted():
             jvm.init_jvm(jvmpath)
 
-        if dicpath:
-            self.dicpath = dicpath
+        if modelpath:
+            self.modelpath = modelpath
         else:
             # FIXME: Cannot execute without sudoing
             # java.lang.NoClassDefFoundErrorPyRaisable: java.lang.NoClassDefFoundError: kr/co/shineware/nlp/komoran/core/analyzer/Komoran
-            self.dicpath = os.path.join(utils.installpath, 'java', 'data', 'models')
+            self.modelpath = os.path.join(utils.installpath, 'java', 'data', 'models')
         self.tagset = utils.read_json('%s/data/tagset/komoran.json' % utils.installpath)
 
         komoranJavaPackage = jpype.JPackage('kr.co.shineware.nlp.komoran.core')
 
         try:
-            self.jki = komoranJavaPackage.Komoran(self.dicpath)
+            self.jki = komoranJavaPackage.Komoran(self.modelpath)
         except TypeError:  # Package kr.lucypark.komoran.KomoranInterface is not Callable
             raise IOError("Cannot access komoran-dic. Please leave an issue at https://github.com/konlpy/konlpy/issues")
