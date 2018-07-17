@@ -94,4 +94,4 @@ class Komoran():
             # FIXME: Cannot execute without sudoing
             # java.lang.NoClassDefFoundErrorPyRaisable: java.lang.NoClassDefFoundError: kr/co/shineware/nlp/komoran/core/analyzer/Komoran
             self.dicpath = os.path.join(utils.installpath, 'java', 'data', 'models')
-            self.tagset = utils.read_json('%s/data/tagset/komoran.json' % utils.installpath)
+        self.tagset = utils.read_json('%s/data/tagset/komoran.json' % utils.installpath)
