@@ -13,28 +13,8 @@ from konlpy import jvm, utils, internals
 __all__ = ['Komoran']
 
 
-def parse(result, flatten, join=False):
-    def _parse(token, join=False):
-        if join:
-            return [s[1:] for s in re.findall('\+.+?/[A-Z]+', token)]
-        else:
-            return [tuple(s[1:].rsplit('/', 1)) for s in re.findall('\+.+?/[A-Z]+', token)]
-
-    if sys.version_info[0] < 3:
-        if join:
-            parsed = [[r for r in sublist] for sublist in result]
-        else:
-            parsed = [[tuple(r.rsplit('/', 1)) for r in sublist] for sublist in result]
-    else:
-        parsed = [_parse(i, join=join) for i in result[1:-1].split(', ')]
-
-    if flatten:
-        return sum(parsed, [])
-    return parsed
-
-
 class Komoran():
-    """Wrapper for `KOMORAN <http://shineware.tistory.com/entry/KOMORAN-ver-24>`_.
+    """Wrapper for `KOMORAN <https://github.com/shin285/KOMORAN>`_.
 
     KOMORAN is a relatively new open source Korean morphological analyzer written in Java, developed by `Shineware <http://shineware.co.kr>`_, since 2013.
 
@@ -60,12 +40,23 @@ class Komoran():
         :param join: If True, returns joined sets of morph and tag.
         """
 
-        if sys.version_info[0] < 3:
-            result = self.jki.analyzeMorphs(phrase, self.dicpath)
-        else:
-            result = self.jki.analyzeMorphs3(phrase, self.dicpath).toString()
+        sentences = phrase.split('\n')
+        morphemes = []
+        if not sentences:
+            return morphemes
 
-        return parse(result, flatten, join=join)
+        for sentence in sentences:
+            result = self.jki.analyze(sentence).getTokenList()
+            result = [(token.getMorph(), token.getPos()) for token in result]
+
+            if join:
+                result = ['{}/{}'.format(morph, pos) for morph, pos in result]
+
+            morphemes.append(result)
+
+        if flatten:
+            return sum(morphemes, [])
+        return morphemes
 
     def nouns(self, phrase):
         """Noun extractor."""
@@ -81,12 +72,6 @@ class Komoran():
     def __init__(self, jvmpath=None, dicpath=None):
         if not jpype.isJVMStarted():
             jvm.init_jvm(jvmpath)
-        komoranJavaPackage = jpype.JPackage('kr.lucypark.komoran')
-        KomoranInterfaceJavaClass = komoranJavaPackage.KomoranInterface
-        try:
-            self.jki = KomoranInterfaceJavaClass()
-        except TypeError:  # Package kr.lucypark.komoran.KomoranInterface is not Callable
-            raise IOError("Cannot access komoran-dic. Please leave an issue at https://github.com/konlpy/konlpy/issues")
 
         if dicpath:
             self.dicpath = dicpath
@@ -95,3 +80,10 @@ class Komoran():
             # java.lang.NoClassDefFoundErrorPyRaisable: java.lang.NoClassDefFoundError: kr/co/shineware/nlp/komoran/core/analyzer/Komoran
             self.dicpath = os.path.join(utils.installpath, 'java', 'data', 'models')
         self.tagset = utils.read_json('%s/data/tagset/komoran.json' % utils.installpath)
+
+        komoranJavaPackage = jpype.JPackage('kr.co.shineware.nlp.komoran.core')
+
+        try:
+            self.jki = komoranJavaPackage.Komoran(self.dicpath)
+        except TypeError:  # Package kr.lucypark.komoran.KomoranInterface is not Callable
+            raise IOError("Cannot access komoran-dic. Please leave an issue at https://github.com/konlpy/konlpy/issues")
