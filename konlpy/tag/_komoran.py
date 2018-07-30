@@ -75,6 +75,16 @@ class Komoran():
         ---------
         dicpath : str
             dictionary file path
+
+            사용자 사전은 한 줄에 하나의 단어 (혹은 구)를 입력합니다.
+            구는 띄어쓰기를 포함하는 연속된 단어입니다.
+
+            단어 뒤에 tap 을 넣은 뒤 해당 단어의 품사를 지정할 수 있습니다.
+            품사를 지정하지 않으면 NNP 로 인식합니다.
+
+            바람과 함께 사라지다	NNG
+            바람과 함께	NNP
+            자연어	NNG
         """
         self.jki.setUserDic(dicpath)
 
