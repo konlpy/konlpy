@@ -23,7 +23,7 @@ class Komoran():
         오픈소스	NNG
         바람과 함께 사라지다	NNP
         >>> from konlpy.tag import Komoran
-        >>> komoran = Komoran(dicpath='/tmp/dic.txt')
+        >>> komoran = Komoran(userdic='/tmp/dic.txt')
         >>> print(komoran.morphs(u'우왕 코모란도 오픈소스가 되었어요'))
         ['우왕', '코모란', '도', '오픈소스', '가', '되', '었', '어요']
         >>> print(komoran.nouns(u'오픈소스에 관심 많은 멋진 개발자님들!'))
@@ -32,7 +32,7 @@ class Komoran():
         [('혹시', 'MAG'), ('바람과 함께 사라지다', 'NNP'), ('보', 'VV'), ('았', 'EP'), ('어', 'EF'), ('?', 'SF')]
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
-    :param dicpath: The path to the user dictionary.
+    :param userdic: The path to the user dictionary.
 
         This enables the user to enter custom tokens or phrases, that are mandatorily assigned to tagged as a particular POS.
         Each line of the dictionary file should consist of a token or phrase, followed by a POS tag, which are delimited with a `<tab>` character.
@@ -85,7 +85,7 @@ class Komoran():
 
         return [s for s, t in self.pos(phrase)]
 
-    def __init__(self, jvmpath=None, dicpath=None, modelpath=None):
+    def __init__(self, jvmpath=None, userdic=None, modelpath=None):
         if not jpype.isJVMStarted():
             jvm.init_jvm(jvmpath)
 
@@ -104,5 +104,5 @@ class Komoran():
         except TypeError:  # Package kr.lucypark.komoran.KomoranInterface is not Callable
             raise IOError("Cannot access komoran-dic. Please leave an issue at https://github.com/konlpy/konlpy/issues")
 
-        if dicpath:
-            self.jki.setUserDic(dicpath)
+        if userdic:
+            self.jki.setUserDic(userdic)
