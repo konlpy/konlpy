@@ -89,9 +89,9 @@ class Kkma():
         if not sentences: return []
         return [sentences.get(i).getSentence() for i in range(sentences.size())]
 
-    def __init__(self, jvmpath=None):
+    def __init__(self, jvmpath=None, max_heap_size=1024):
         if not jpype.isJVMStarted():
-            jvm.init_jvm(jvmpath)
+            jvm.init_jvm(jvmpath, max_heap_size)
 
         kkmaJavaPackage = jpype.JPackage('kr.lucypark.kkma')
         KkmaInterfaceJavaClass = kkmaJavaPackage.KkmaInterface

@@ -12,7 +12,7 @@ except ImportError:
 from konlpy import utils
 
 
-def init_jvm(jvmpath=None):
+def init_jvm(jvmpath=None, max_heap_size=1024):
     """Initializes the Java virtual machine (JVM).
 
     :param jvmpath: The path of the JVM. If left empty, inferred by :py:func:`jpype.getDefaultJVMPath`.
@@ -62,6 +62,6 @@ def init_jvm(jvmpath=None):
     if jvmpath:
         jpype.startJVM(jvmpath, '-Djava.class.path=%s' % classpath,
                                 '-Dfile.encoding=UTF8',
-                                '-ea', '-Xmx1024m')
+                                '-ea', '-Xmx{}m'.format(max_heap_size))
     else:
         raise ValueError("Please specify the JVM path.")

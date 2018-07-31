@@ -85,9 +85,9 @@ class Komoran():
 
         return [s for s, t in self.pos(phrase)]
 
-    def __init__(self, jvmpath=None, userdic=None, modelpath=None):
+    def __init__(self, jvmpath=None, userdic=None, modelpath=None, max_heap_size=1024):
         if not jpype.isJVMStarted():
-            jvm.init_jvm(jvmpath)
+            jvm.init_jvm(jvmpath, max_heap_size)
 
         if modelpath:
             self.modelpath = modelpath

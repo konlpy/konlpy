@@ -81,9 +81,9 @@ class Okt():
 
         return [p for p in self.jki.phrases(phrase).toArray()]
 
-    def __init__(self, jvmpath=None):
+    def __init__(self, jvmpath=None, max_heap_size=1024):
         if not jpype.isJVMStarted():
-            jvm.init_jvm(jvmpath)
+            jvm.init_jvm(jvmpath, max_heap_size)
 
         oktJavaPackage = jpype.JPackage('kr.lucypark.okt')
         OktInterfaceJavaClass = oktJavaPackage.OktInterface

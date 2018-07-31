@@ -102,9 +102,9 @@ class Hannanum():
 
         return [s for s, t in self.pos(phrase)]
 
-    def __init__(self, jvmpath=None):
+    def __init__(self, jvmpath=None, max_heap_size=1024):
         if not jpype.isJVMStarted():
-            jvm.init_jvm(jvmpath)
+            jvm.init_jvm(jvmpath, max_heap_size)
 
         jhannanumJavaPackage = jpype.JPackage('kr.lucypark.jhannanum.comm')
         HannanumInterfaceJavaClass = jhannanumJavaPackage.HannanumInterface
