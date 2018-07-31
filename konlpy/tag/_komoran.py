@@ -18,17 +18,35 @@ class Komoran():
 
     .. code-block:: python
 
+        >>> cat /tmp/dic.txt  # Place a file in a location of your choice
+        코모란	NNP
+        오픈소스	NNG
+        바람과 함께 사라지다	NNP
         >>> from konlpy.tag import Komoran
-        >>> komoran = Komoran()
+        >>> komoran = Komoran(dicpath='/tmp/dic.txt')
         >>> print(komoran.morphs(u'우왕 코모란도 오픈소스가 되었어요'))
-        ['우왕', '코', '모란', '도', '오픈소스', '가', '되', '었', '어요']
+        ['우왕', '코모란', '도', '오픈소스', '가', '되', '었', '어요']
         >>> print(komoran.nouns(u'오픈소스에 관심 많은 멋진 개발자님들!'))
         ['오픈소스', '관심', '개발자']
-        >>> print(komoran.pos(u'원칙이나 기체 설계와 엔진·레이더·항법장비 등'))
-        [('원칙', 'NNG'), ('이나', 'JC'), ('기체', 'NNG'), ('설계', 'NNG'), ('와', 'JC'), ('엔진', 'NNG'), ('·', 'SP'), ('레이더', 'NNG'), ('·', 'SP'), ('항법', 'NNP'), ('장비', 'NNG'), ('등', 'NNB')]
+        >>> print(komoran.pos(u'혹시 바람과 함께 사라지다 봤어?'))
+        [('혹시', 'MAG'), ('바람과 함께 사라지다', 'NNP'), ('보', 'VV'), ('았', 'EP'), ('어', 'EF'), ('?', 'SF')]
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
-    :param dicpath: The path of dictionary files. The KOMORAN system dictionary is loaded by default.
+    :param dicpath: The path to the user dictionary.
+
+        This enables the user to enter custom tokens or phrases, that are mandatorily assigned to tagged as a particular POS.
+        Each line of the dictionary file should consist of a token or phrase, followed by a POS tag, which are delimited with a `<tab>` character.
+
+        An example of the file format is as follows:
+
+        .. code-block:: python
+
+            바람과 함께 사라지다	NNG
+            바람과 함께	NNP
+            자연어	NNG
+
+        If a particular POS is not assigned for a token or phrase, it will be tagged as NNP.
+    :param modelpath: The path to the Komoran HMM model.
     """
 
     def pos(self, phrase, flatten=True, join=False):
@@ -68,21 +86,20 @@ class Komoran():
         return [s for s, t in self.pos(phrase)]
 
     def add_userdic_file(self, dicpath):
-        """
-        Arguments
-        ---------
-        dicpath : str
-            dictionary file path
+        """Add user dictionary file.
 
-            사용자 사전은 한 줄에 하나의 단어 (혹은 구)를 입력합니다.
-            구는 띄어쓰기를 포함하는 연속된 단어입니다.
+        This enables the user to enter custom tokens or phrases, that are mandatorily assigned to tagged as a particular POS.
+        Each line of the dictionary file should consist of a token or phrase, followed by a POS tag, which are delimited with a `<tab>` character.
 
-            단어 뒤에 tap 을 넣은 뒤 해당 단어의 품사를 지정할 수 있습니다.
-            품사를 지정하지 않으면 NNP 로 인식합니다.
+        An example of the file format is as follows:
+
+        .. code-block:: python
 
             바람과 함께 사라지다	NNG
             바람과 함께	NNP
             자연어	NNG
+
+        If a particular POS is not assigned for a token or phrase, it will be tagged as NNP.
         """
         self.jki.setUserDic(dicpath)
 
