@@ -29,20 +29,21 @@ def init_jvm(jvmpath=None):
         # Java sources
         '{0}{1}bin',
         '{0}{1}*',
-         # Hannanum
+        # Hannanum
         '{0}{1}jhannanum-0.8.4.jar',
-         # Kkma
+        # Kkma
         '{0}{1}kkma-2.0.jar',
         # Komoran3
         '{0}{1}aho-corasick.jar',
         '{0}{1}shineware-common-1.0.jar',
         '{0}{1}shineware-ds-1.0.jar',
         '{0}{1}komoran-3.0.jar',
-        # Twitter
+        # Twitter (Okt)
         '{0}{1}snakeyaml-1.12.jar',
-        '{0}{1}scala-library-2.11.4.jar',
-        '{0}{1}twitter-korean-text-2.4.3.jar',
-        '{0}{1}twitter-text-1.10.1.jar'
+        '{0}{1}scala-library-2.12.3.jar',
+        '{0}{1}open-korean-text-2.1.0.jar',
+        '{0}{1}twitter-text-1.14.7.jar',
+        '{0}{1}*'
     ]
 
     javadir = '%s%sjava' % (utils.installpath, os.sep)

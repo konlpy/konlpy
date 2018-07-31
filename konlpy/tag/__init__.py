@@ -12,4 +12,5 @@ try:
 except ImportError:
     pass
 
-from konlpy.tag._twitter import Twitter
+from konlpy.tag._okt import Twitter
+from konlpy.tag._okt import Okt
