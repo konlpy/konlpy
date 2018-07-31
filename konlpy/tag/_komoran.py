@@ -85,25 +85,7 @@ class Komoran():
 
         return [s for s, t in self.pos(phrase)]
 
-    def add_userdic_file(self, dicpath):
-        """Add user dictionary file.
-
-        This enables the user to enter custom tokens or phrases, that are mandatorily assigned to tagged as a particular POS.
-        Each line of the dictionary file should consist of a token or phrase, followed by a POS tag, which are delimited with a `<tab>` character.
-
-        An example of the file format is as follows:
-
-        .. code-block:: python
-
-            바람과 함께 사라지다	NNG
-            바람과 함께	NNP
-            자연어	NNG
-
-        If a particular POS is not assigned for a token or phrase, it will be tagged as NNP.
-        """
-        self.jki.setUserDic(dicpath)
-
-    def __init__(self, jvmpath=None, modelpath=None):
+    def __init__(self, jvmpath=None, dicpath=None, modelpath=None):
         if not jpype.isJVMStarted():
             jvm.init_jvm(jvmpath)
 
@@ -121,3 +103,6 @@ class Komoran():
             self.jki = komoranJavaPackage.Komoran(self.modelpath)
         except TypeError:  # Package kr.lucypark.komoran.KomoranInterface is not Callable
             raise IOError("Cannot access komoran-dic. Please leave an issue at https://github.com/konlpy/konlpy/issues")
+
+        if dicpath:
+            self.jki.setUserDic(dicpath)
