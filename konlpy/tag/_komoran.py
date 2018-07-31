@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
-from __future__ import absolute_import
+from __future__ import absolute_import, unicode_literals
 
 import os
-import re
-import sys
 
 import jpype
 
-from konlpy import jvm, utils, internals
+from konlpy import jvm, utils
 
 
 __all__ = ['Komoran']
