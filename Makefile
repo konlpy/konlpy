@@ -62,7 +62,13 @@ init_i18n:
 
 show_docs:
 	cd docs\
-		&& make html\
+		&& make html \
+		&& cd _build/html \
+		&& python -m SimpleHTTPServer
+
+show_docs_ko:
+	cd docs\
+		&& make -e SPHINXOPTS="-D language='ko'" html \
 		&& cd _build/html \
 		&& python -m SimpleHTTPServer
 
