@@ -60,6 +60,12 @@ init_i18n:
 	git submodule init
 	git submodule update
 
+show_docs:
+	cd docs\
+		&& make html\
+		&& cd _build/html \
+		&& python -m SimpleHTTPServer
+
 extract_i18n:
 	cd docs\
 	    && make gettext\
