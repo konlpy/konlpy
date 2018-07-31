@@ -8,12 +8,12 @@ from konlpy import jvm, utils
 
 def Twitter(jvmpath=None):
     """
-    Twitter Korean Text name changed to Open Korean Text
-    Check <https://github.com/konlpy/konlpy/issues/141> 
+    "Twitter Korean Text" has changed to "Open Korean Text" since KoNLPy v0.4.5.
+    Check <https://github.com/konlpy/konlpy/issues/141>.
     """
 
     from warnings import warn
-    warn("Twitter Class changed to Okt")
+    warn('"Twitter" has changed to "Okt" since KoNLPy v0.4.5.')
     return Okt(jvmpath)
 
 
@@ -26,7 +26,7 @@ class Okt():
 
     .. code-block:: python
 
-        >>> from konlpy.tag import Twitter
+        >>> from konlpy.tag import Okt
         >>> okt = Okt()
         >>> print(okt.morphs(u'단독입찰보다 복수입찰의 경우'))
         ['단독', '입찰', '보다', '복수', '입찰', '의', '경우']
