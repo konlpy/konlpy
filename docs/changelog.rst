@@ -1,26 +1,46 @@
 Change logs
 ===========
 
+`Version 0.4.5 <https://github.com/konlpy/konlpy/releases/tag/v0.4.5>`_
+-----------------------------------------------------------------------
+
+Released on Aug 1, 2018.
+
+- Added userdic to Komoran [:issue:`87` by :committer:`lovit`]
+- Added `stream` parameter to pprint [:issue:`179` by :committer:`jaejunh`]
+- Added `join` parameter to POS taggers [:issue:`135` by :committer:`pinetree408`]
+- Fix JPype-related installation error [:issue:`94` by :committer:`shaynekang`]
+- Moved description.py to konlpy/about.py [:issue:`194`]
+- Refactor Java code [:issue:`86` by :committer:`mwkang`]
+- Replaced wildcard expansion in `mecab.sh` [:issue:`161` by :committer:`j-min`]
+- Updated Komoran from 2.4 to 3.0 and add userdic [:issue:`198` by :committer:`lovit`]
+- Updated Twitter from 2.4.3 to okt-2.1.0 [:issue:`156` by :committer:`zsef123`]
+
+.. warning::
+
+    Previous `dicpath` in Komoran's API is now `modelpath`.
+    The name was changed to prevent confusion with the newly added `userdic`.
+
 `Version 0.4.4 <https://github.com/konlpy/konlpy/releases/tag/v0.4.4>`_
 -----------------------------------------------------------------------
 
 Released on Oct 25, 2015.
 
-- Include tagsets for each morpheme analyzer [:commit:`26a39d7`]
+- Included tagsets for each morpheme analyzer [:commit:`26a39d7`]
 
 `Version 0.4.3 <https://github.com/konlpy/konlpy/releases/tag/v0.4.3>`_
 -----------------------------------------------------------------------
 
 Released on Feb 27, 2015.
 
-- Fix conditional requirement bug for pip3 [:issue:`50`]
+- Fixed conditional requirement bug for pip3 [:issue:`50`]
 
 `Version 0.4.2 <https://github.com/konlpy/konlpy/releases/tag/v0.4.2>`_
 -----------------------------------------------------------------------
 
 Released on Feb 25, 2015.
 
-- Update Korean documents (i.e., include missing .mo files)
+- Updated Korean documents (i.e., include missing .mo files)
 
 `Version 0.4.1 <https://github.com/konlpy/konlpy/releases/tag/v0.4.1>`_
 -----------------------------------------------------------------------
