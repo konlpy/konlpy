@@ -8,7 +8,6 @@ Installation
     `Mac OS <https://github.com/konlpy/konlpy/issues?q=label%3A"mac+os">`_.
     `Windows <https://github.com/konlpy/konlpy/issues?q=label%3Awindows>`_.
     Please record a `"New Issue" <https://github.com/konlpy/konlpy/issues/new>`_ if you have an error that is not listed.
-    You can also see testing logs `here <https://docs.google.com/spreadsheets/d/1Ii_L9NF9gSLbsJOGqsf-zfqTtyhhthmJWNC2kgUDIsU/edit#gid=0>`_.
 
 
 Ubuntu
