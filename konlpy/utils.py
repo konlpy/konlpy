@@ -119,7 +119,7 @@ def partition(list_, indices):
     return [list_[i:j] for i, j in zip([0] + indices, indices + [None])]
 
 if sys.version_info[0] < 3:
-    def pprint(obj,**kwargs):     #quick patch to use sys.stderr stream
+    def pprint(obj, **kwargs):
         """Unicode pretty printer.
 
         .. code-block:: python
@@ -129,7 +129,11 @@ if sys.version_info[0] < 3:
             [u'Print', u'\uc720\ub2c8\ucf54\ub4dc', u'easily']
             >>> konlpy.utils.pprint([u"Print", u"유니코드", u"easily"])
             ['Print', '유니코드', 'easily']
+
+        :param stream: Option to stream to a particular destination. Can be either sys.stdout (default) or sys.stderr. See #179 for details.
         """
+
+        # quick patch to use sys.stderr stream
         if 'stream' in kwargs.keys():
             return UnicodePrinter(stream=kwargs['stream']).pprint(obj)
         return UnicodePrinter().pprint(obj)
