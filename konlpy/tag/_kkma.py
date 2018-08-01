@@ -35,6 +35,7 @@ class Kkma():
         There are reports that ``Kkma()`` is weak for long strings with no spaces between words. See issue :issue:`73` for details.
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
+    :param max_heap_size: Maximum memory usage limitation (Megabyte) :py:func:`.init_jvm`.
     """
 
     def nouns(self, phrase):
@@ -89,9 +90,9 @@ class Kkma():
         if not sentences: return []
         return [sentences.get(i).getSentence() for i in range(sentences.size())]
 
-    def __init__(self, jvmpath=None):
+    def __init__(self, jvmpath=None, max_heap_size=1024):
         if not jpype.isJVMStarted():
-            jvm.init_jvm(jvmpath)
+            jvm.init_jvm(jvmpath, max_heap_size)
 
         kkmaJavaPackage = jpype.JPackage('kr.lucypark.kkma')
         KkmaInterfaceJavaClass = kkmaJavaPackage.KkmaInterface

@@ -60,6 +60,7 @@ class Hannanum():
         [('웃', 'P'), ('으면', 'E'), ('더', 'M'), ('행복', 'N'), ('하', 'X'), ('ㅂ니다', 'E'), ('!', 'S')]
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
+    :param max_heap_size: Maximum memory usage limitation (Megabyte) :py:func:`.init_jvm`.
     """
 
     def analyze(self, phrase):
@@ -102,9 +103,9 @@ class Hannanum():
 
         return [s for s, t in self.pos(phrase)]
 
-    def __init__(self, jvmpath=None):
+    def __init__(self, jvmpath=None, max_heap_size=1024):
         if not jpype.isJVMStarted():
-            jvm.init_jvm(jvmpath)
+            jvm.init_jvm(jvmpath, max_heap_size)
 
         jhannanumJavaPackage = jpype.JPackage('kr.lucypark.jhannanum.comm')
         HannanumInterfaceJavaClass = jhannanumJavaPackage.HannanumInterface

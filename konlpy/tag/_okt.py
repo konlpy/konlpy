@@ -42,6 +42,7 @@ class Okt():
         [('이', 'Determiner'), ('것', 'Noun'), ('도', 'Josa'), ('되다', 'Verb'), ('ㅋㅋ', 'KoreanParticle')]
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
+    :param max_heap_size: Maximum memory usage limitation (Megabyte) :py:func:`.init_jvm`.
     """
 
     def pos(self, phrase, norm=False, stem=False, join=False):
@@ -81,9 +82,9 @@ class Okt():
 
         return [p for p in self.jki.phrases(phrase).toArray()]
 
-    def __init__(self, jvmpath=None):
+    def __init__(self, jvmpath=None, max_heap_size=1024):
         if not jpype.isJVMStarted():
-            jvm.init_jvm(jvmpath)
+            jvm.init_jvm(jvmpath, max_heap_size)
 
         oktJavaPackage = jpype.JPackage('kr.lucypark.okt')
         OktInterfaceJavaClass = oktJavaPackage.OktInterface

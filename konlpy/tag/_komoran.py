@@ -47,6 +47,7 @@ class Komoran():
 
         If a particular POS is not assigned for a token or phrase, it will be tagged as NNP.
     :param modelpath: The path to the Komoran HMM model.
+    :param max_heap_size: Maximum memory usage limitation (Megabyte) :py:func:`.init_jvm`.
     """
 
     def pos(self, phrase, flatten=True, join=False):
@@ -85,9 +86,9 @@ class Komoran():
 
         return [s for s, t in self.pos(phrase)]
 
-    def __init__(self, jvmpath=None, userdic=None, modelpath=None):
+    def __init__(self, jvmpath=None, userdic=None, modelpath=None, max_heap_size=1024):
         if not jpype.isJVMStarted():
-            jvm.init_jvm(jvmpath)
+            jvm.init_jvm(jvmpath, max_heap_size)
 
         if modelpath:
             self.modelpath = modelpath
