@@ -22,7 +22,7 @@ check:
 
 testpypi:
 	python setup.py register -r pypitest
-	python setup.py sdist --formats=gztar,zip upload -r pypitest
+	python setup.py sdist --formats=gztar upload -r pypitest
 	python setup.py bdist_wheel upload -r pypitest
 	# Execute below manually
 	# 	cd /tmp
@@ -37,7 +37,7 @@ testpypi:
 
 pypi:
 	python setup.py register -r pypi
-	python setup.py sdist --formats=gztar,zip upload -r pypi
+	python setup.py sdist --formats=gztar upload -r pypi
 	python setup.py bdist_wheel upload -r pypi
 
 java:
