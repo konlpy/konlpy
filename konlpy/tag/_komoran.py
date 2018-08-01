@@ -47,6 +47,7 @@ class Komoran():
 
         If a particular POS is not assigned for a token or phrase, it will be tagged as NNP.
     :param modelpath: The path to the Komoran HMM model.
+    :param max_heap_size: The path of the JVM passed to :py:func:`.init_jvm`.
     """
 
     def pos(self, phrase, flatten=True, join=False):

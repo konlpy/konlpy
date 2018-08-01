@@ -60,6 +60,7 @@ class Hannanum():
         [('웃', 'P'), ('으면', 'E'), ('더', 'M'), ('행복', 'N'), ('하', 'X'), ('ㅂ니다', 'E'), ('!', 'S')]
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
+    :param max_heap_size: The path of the JVM passed to :py:func:`.init_jvm`.
     """
 
     def analyze(self, phrase):
