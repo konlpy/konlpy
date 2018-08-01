@@ -42,6 +42,7 @@ class Okt():
         [('이', 'Determiner'), ('것', 'Noun'), ('도', 'Josa'), ('되다', 'Verb'), ('ㅋㅋ', 'KoreanParticle')]
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
+    :param max_heap_size: Maximum memory usage limitation (Megabyte) :py:func:`.init_jvm`.
     """
 
     def pos(self, phrase, norm=False, stem=False, join=False):
