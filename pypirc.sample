@@ -9,6 +9,6 @@ username: <username>
 password: <password>
 
 [pypi]
-repository: https://pypi.org/
+repository: https://upload.pypi.org/legacy/
 username: <username>
 password: <password>
