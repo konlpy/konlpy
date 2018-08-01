@@ -1,7 +1,7 @@
 Change logs
 ===========
 
-`Version 0.4.5 <https://github.com/konlpy/konlpy/releases/tag/v0.4.5>`_
+`Version 0.5.0 <https://github.com/konlpy/konlpy/releases/tag/v0.5.0>`_
 -----------------------------------------------------------------------
 
 Released on Aug 1, 2018.
