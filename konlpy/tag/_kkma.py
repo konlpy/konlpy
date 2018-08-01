@@ -35,7 +35,7 @@ class Kkma():
         There are reports that ``Kkma()`` is weak for long strings with no spaces between words. See issue :issue:`73` for details.
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
-    :param max_heap_size: The path of the JVM passed to :py:func:`.init_jvm`.
+    :param max_heap_size: Maximum memory usage limitation (Megabyte) :py:func:`.init_jvm`.
     """
 
     def nouns(self, phrase):
