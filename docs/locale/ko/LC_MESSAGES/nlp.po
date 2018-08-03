@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, <a href="http://lucypark.kr">Lucy Park</a>
+# This file is distributed under the same license as the KoNLPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: KoNLPy 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-17 19:00+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+# 86fd44715e5145e595ff738ac4e4f457
+#: ../../nlp.rst:2
+msgid "What is NLP?"
+msgstr ""
+
+# 8a4752db9df14ce396658401173fc286
+#: ../../nlp.rst:4
+msgid ""
+"NLP (Natural Language Processing) is a set of techniques for analyzing "
+"and extracting, and understanding meaninful information text."
+msgstr ""
+
+# ba15160cb92d40d39bd3598a3bee4a3d
+#: ../../nlp.rst:7
+msgid "What does KoNLPy do?"
+msgstr ""
+
+# 47c8b9e46a074fdf86604dd03238154f
+#: ../../nlp.rst:8
+msgid ""
+"KoNLPy will help you to get started with some fundamental analytic tasks "
+"with Korean text."
+msgstr ""
+
+# 5dd15782bb3a4591bc056f7076068d15
+#: ../../nlp.rst:11
+msgid "What makes KoNLPy unique?"
+msgstr ""
+
+# f00f7057ef994ed6a91098eab3f108f6
+#: ../../nlp.rst:13
+msgid "http://www.lucypark.kr/slides/2014-pyconkr/#17"
+msgstr ""
+
+# 047815dcc54b42419a39fa0a1bc82c00
+#: ../../nlp.rst:16
+msgid "Before you get started"
+msgstr ""
+
+# ae0a81ea548e4aa0bf2720644793115d
+#: ../../nlp.rst:18
+msgid "In order to use KoNLPy, you need some basic tools."
+msgstr ""
+
+# 80038dddbf2c41969d63f1cf1702a196
+#: ../../nlp.rst:20
+msgid "A text editor, or IDE for Python programming"
+msgstr ""
+
+# f8a424263a2b4e54ade3a2d1c710fca7
+#: ../../nlp.rst:22
+msgid ""
+"We assume you have some knowledge of Python and programming, but no "
+"knowledge whatsoever of data science, machine learning, or predictive "
+"modeling (or, heck, even statistics). To the extent there is a target "
+"audience, it's probably hacker types who learn best by doing."
+msgstr ""
+
+# 16730e46982f4c0abe1cf5df5169e5af
+#: ../../nlp.rst:26
+msgid ""
+"All the codes here (as well as the documents) are available on {{ github "
+"}}."
+msgstr ""
+
