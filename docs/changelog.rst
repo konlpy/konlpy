@@ -1,6 +1,12 @@
 Change logs
 ===========
 
+`Version 0.5.1 <https://github.com/konlpy/konlpy/releases/tag/v0.5.1>`_
+
+Released on Aug 3, 2018.
+
+- Added JVM memory option to backends [:issue:`199` by :committer:`lovit`]
+
 `Version 0.5.0 <https://github.com/konlpy/konlpy/releases/tag/v0.5.0>`_
 -----------------------------------------------------------------------
 
@@ -9,9 +15,9 @@ Released on Aug 1, 2018.
 - Added userdic to Komoran [:issue:`87` by :committer:`lovit`]
 - Added `stream` parameter to pprint [:issue:`179` by :committer:`jaejunh`]
 - Added `join` parameter to POS taggers [:issue:`135` by :committer:`pinetree408`]
-- Fix JPype-related installation error [:issue:`94` by :committer:`shaynekang`]
+- Fixed JPype-related installation error [:issue:`94` by :committer:`shaynekang`]
 - Moved description.py to konlpy/about.py [:issue:`194`]
-- Refactor Java code [:issue:`86` by :committer:`mwkang`]
+- Refactored Java code [:issue:`86` by :committer:`mwkang`]
 - Replaced wildcard expansion in `mecab.sh` [:issue:`161` by :committer:`j-min`]
 - Updated Komoran from 2.4 to 3.0 and add userdic [:issue:`198` by :committer:`lovit`]
 - Updated Twitter from 2.4.3 to okt-2.1.0 [:issue:`156` by :committer:`zsef123`]
@@ -110,6 +116,7 @@ Released on Aug 25, 2014.
 - Added license: GPL v3 or above
 - Added pretty print function for Unicode
 - Added noun extractor to Mecab
+- Enabled installation via ``pip``
 - Fixed Hannanum, Kkma module bug where it couldn't handle empty input strings
 
 .. warning::
@@ -124,7 +131,7 @@ Released on Aug 1, 2014.
 - Changed API by explicitly initializing JVM for Hannanum
 - Added Mecab module with MeCab-0.996-ko-0.9.1
 - Added unit tests
-- Added test automation with Travis CI 
+- Added test automation with Travis CI
 - Fixed Hannanum module parsing error when '/', '+' are in text
 - Fixed Hannanum module text indexing error (where results get truncated)
 
