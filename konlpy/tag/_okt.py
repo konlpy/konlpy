@@ -8,8 +8,8 @@ from konlpy import jvm, utils
 
 def Twitter(jvmpath=None):
     """
-    "Twitter Korean Text" has changed to "Open Korean Text" since KoNLPy v0.4.5.
-    Check <https://github.com/konlpy/konlpy/issues/141>.
+    The ``Twitter()`` backend has changed to ``Okt()`` since KoNLPy v0.5.0.
+    See :issue:`141` for details.
     """
 
     from warnings import warn
