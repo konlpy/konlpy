@@ -63,6 +63,8 @@ class Komoran():
             return morphemes
 
         for sentence in sentences:
+            if not sentence:
+                continue
             result = self.jki.analyze(sentence).getTokenList()
             result = [(token.getMorph(), token.getPos()) for token in result]
 
