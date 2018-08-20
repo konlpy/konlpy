@@ -28,9 +28,9 @@ else
 fi
 
 if hash "sudo" &>/dev/null; then
-    SUDO="sudo"
+    sudo="sudo"
 else
-    SUDO=""
+    sudo=""
 fi
 
 # install mecab-ko
@@ -41,13 +41,13 @@ cd mecab-0.996-ko-0.9.1
 ./configure
 make
 make check
-$SUDO make install
+$sudo make install
 
 # install mecab-ko-dic
 ## install requirement automake1.11
 # TODO: if not [automake --version]
 if [ "$os" == "Linux" ]; then
-    $SUDO apt-get update && $SUDO apt-get install -y automake
+    $sudo apt-get update && $sudo apt-get install -y automake
 elif [ "$os" == "Darwin" ]; then
     brew install automake
 fi
@@ -59,8 +59,8 @@ cd mecab-ko-dic-2.0.1-*
 ./autogen.sh
 ./configure
 make
-$SUDO sh -c 'echo "dicdir=/usr/local/lib/mecab/dic/mecab-ko-dic" > /usr/local/etc/mecabrc'
-$SUDO make install
+$sudo sh -c 'echo "dicdir=/usr/local/lib/mecab/dic/mecab-ko-dic" > /usr/local/etc/mecabrc'
+$sudo make install
 
 # install mecab-python
 cd /tmp
@@ -68,10 +68,10 @@ git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
 cd mecab-python-0.996
 
 python setup.py build
-$SUDO python setup.py install
+$sudo python setup.py install
 
 if hash "python3" &>/dev/null
 then
     python3 setup.py build
-    $SUDO python3 setup.py install
+    $sudo python3 setup.py install
 fi
