@@ -47,7 +47,51 @@ $sudo make install
 ## install requirement automake1.11
 # TODO: if not [automake --version]
 if [ "$os" == "Linux" ]; then
-    $sudo apt-get update && $sudo apt-get install -y automake
+    if [ "$(grep -Ei 'debian|buntu|mint' /etc/*release)" ]; then
+        $sudo apt-get update && $sudo apt-get install -y automake
+    elif [ "$(grep -Ei 'fedora|redhat' /etc/*release)" ]; then
+        $sudo yum install -y automake
+    else
+        ##
+        # Autoconf
+        #
+        # stage directory
+        builddir=`mktemp -d` && cd $builddir
+
+        # download and extract source
+        curl -LO http://ftpmirror.gnu.org/autoconf/autoconf-latest.tar.gz
+        tar -zxvf autoconf-*
+
+        # configure, make, install --prefix=/usr/local
+        cd autoconf*
+        ./configure
+        make
+        $sudo make install
+
+        # erase stage dir
+        rm -rf $builddir
+
+
+        ##
+        # Automake
+        #
+        # stage directory
+        builddir=`mktemp -d` && cd $builddir
+
+        # download and extract source
+        curl -LO http://ftpmirror.gnu.org/automake/automake-1.11.tar.gz
+        tar -zxvf automake-1.11.tar.gz
+
+        # configure, make, install --prefix=/usr/local
+        cd automake-1.11
+        ./configure
+        make
+        $sudo make install
+
+        # erase stage dir
+        rm -rf $builddir
+    fi
+
 elif [ "$os" == "Darwin" ]; then
     brew install automake
 fi
