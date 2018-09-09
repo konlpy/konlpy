@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from datetime import datetime
 from bs4 import BeautifulSoup, SoupStrainer
 from konlpy.stream import BaseStreamer
