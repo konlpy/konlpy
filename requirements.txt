@@ -1,3 +1,4 @@
 JPype1>=0.5.7
 colorama
 tweepy
+beautifulsoup4
