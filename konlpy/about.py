@@ -15,11 +15,7 @@ __all__ = [
 ]
 
 __title__ = 'KoNLPy'
-<<<<<<< master
 __version__ = '0.5.2'
-=======
-__version__ = '0.5.1'
->>>>>>> Revert "update experimental streaming interface from koshort"
 
 __author__ = 'Team KoNLPy'
 __email__ = 'konlpy@googlegroups.com'
