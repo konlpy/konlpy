@@ -40,6 +40,8 @@ class BaseStreamer(object):
 
     def __init__(self, is_async=True):
         self.is_async = is_async
+        self.retry = 3
+        self.recursion = 0
 
     def get_parser(self):
         """customized argument parser to set various parameters
@@ -75,6 +77,10 @@ class BaseStreamer(object):
         except KeyboardInterrupt:
             print("User has interrupted.")
             return False
-        except BaseException:
+        except:
             print("Error has raised but continue to stream.")
-            self.stream()
+            if self.recursion < self.retry:
+                self.recursion += 1
+                self.stream()
+            else:
+                raise
