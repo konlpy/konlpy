@@ -3,9 +3,15 @@ from __future__ import print_function
 from __future__ import absolute_import
 from __future__ import division
 
+import sys
+
 from argparse import ArgumentParser
 from konlpy.utils import PropagatingThread
-import urllib3
+
+if sys.version_info[0] >= 3:
+    import urllib3 as urllib
+else:
+    import urllib2 as urllib
 
 
 __all__ = ['KonlpyStreamerError', 'BaseStreamer']
@@ -61,7 +67,7 @@ class BaseStreamer(object):
                 self._thread.join()
             else:
                 self.job()
-        except urllib3.exceptions.ProtocolError:
+        except urllib.exceptions.ProtocolError:
             print("ProtocolError has raised but continue to stream.")
             self.stream(is_async=self.is_async)
         except RecursionError:
