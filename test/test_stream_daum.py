@@ -6,12 +6,10 @@ from __future__ import division
 from konlpy.stream.daum import DaumStreamer
 from konlpy.constants import DATA_DIR
 import glob
-import pytest
 
 
-@pytest.mark.parametrize("is_async", [(True), (False)])
-def test_daum_streamer(is_async):
-    daum = DaumStreamer(is_async=is_async)
+def test_daum_streamer():
+    daum = DaumStreamer()
     daum.options.n_limits = 1
     daum.options.display_rank = True
     daum.options.verbose = True

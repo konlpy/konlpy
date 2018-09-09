@@ -77,4 +77,4 @@ class BaseStreamer(object):
             return False
         except BaseException:
             print("Error has raised but continue to stream.")
-            self.stream(is_async=self.is_async)
+            self.stream()

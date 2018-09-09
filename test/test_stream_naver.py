@@ -6,12 +6,10 @@ from __future__ import division
 from konlpy.stream.naver import NaverStreamer
 from konlpy.constants import DATA_DIR
 import glob
-import pytest
 
 
-@pytest.mark.parametrize("is_async", [(True), (False)])
-def test_naver_streamer(is_async):
-    naver = NaverStreamer(is_async=is_async)
+def test_naver_streamer():
+    naver = NaverStreamer()
     naver.options.n_limits = 1
     naver.options.display_rank = True
     naver.options.verbose = True
