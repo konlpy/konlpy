@@ -3,6 +3,7 @@ from __future__ import print_function
 from __future__ import absolute_import
 from __future__ import division
 
+import io
 import time
 import tweepy
 import colorama  # Colorama streaming verbosity.
@@ -66,7 +67,7 @@ class CorpusListener(tweepy.StreamListener):
                 self.options.output_extension
             )
 
-            n_word_file = open(filename, 'a', encoding='utf-8')
+            n_word_file = io.open(filename, 'a', encoding='utf-8')
             n_word_file.write(tweet)
             n_word_file.write("\n")
 

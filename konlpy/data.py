@@ -2,6 +2,7 @@
 from __future__ import absolute_import
 
 import os
+import io
 import sys
 import glob
 import textwrap
@@ -190,14 +191,14 @@ class CorpusReader(object):
         """
 
         for filename in self.items:
-            reader = open(filename, mode='r+', encoding='utf-8')
+            reader = io.open(filename, mode='r+', encoding='utf-8')
             self.corpus[os.path.basename(filename)] = reader.read()
 
 
 class StringWriter(object):
     def __init__(self, filename):
         make_dir()
-        self.writer = open(DATA_DIR + filename, mode='a', encoding='utf-8')
+        self.writer = io.open(DATA_DIR + filename, mode='a', encoding='utf-8')
 
     def write(self, string):
         self.writer.write(string)
@@ -205,5 +206,6 @@ class StringWriter(object):
 
 
 __all__ = [
-    'find', 'load',
-    'path', 'FileSystemPathPointer', 'PathPointer']
+    'find', 'load', 'listdir', 'clear', 
+    'path', 'FileSystemPathPointer', 'PathPointer',
+    'CorpusReader', 'StringWriter',]
