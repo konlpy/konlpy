@@ -3,7 +3,13 @@ from __future__ import print_function
 from __future__ import absolute_import
 from __future__ import division
 
-from urllib.request import urlopen
+import sys
+
+if sys.version_info[0] >= 3:
+    from urllib.request import urlopen
+else:
+    from urllib import urlopen
+
 from bs4 import BeautifulSoup
 from argparse import ArgumentParser
 from time import sleep
