@@ -70,4 +70,11 @@ setup(name='konlpy',
           'java/bin/kr/lucypark/*/*.class',
           'java/bin/kr/lucypark/*/*/*.class',
       ]},
+      entry_points={'console_scripts': [
+          'stream_twitter = konlpy.stream.twitter:main',
+          'stream_naver = konlpy.stream.naver:main',
+          'stream_daum = konlpy.stream.daum:main',
+          'stream_google = konlpy.stream.google_trend:main',
+          'stream_dcinside = konlpy.stream.dcinside:main',
+      ]},
       install_requires=requirements())

@@ -3,6 +3,7 @@ from __future__ import absolute_import
 
 import os
 import sys
+import glob
 import textwrap
 
 if sys.version_info[0] >= 3:
@@ -11,6 +12,7 @@ else:
     import cPickle as pickle
 
 from konlpy import utils
+from konlpy.constants import DATA_DIR, make_dir
 
 
 #: A dictionary describing the formats that are supported by
@@ -131,6 +133,75 @@ class FileSystemPathPointer(PathPointer, str):
 
     def file_size(self):
         return os.stat(self.path).st_size
+
+
+def clear():
+    """clear the konlpy output data directory
+
+    .. code-block:: python
+
+        >>> import konlpy
+        >>> konlpy.clear()
+
+    """
+
+    items = os.listdir(DATA_DIR + "*")
+    for item in items:
+        os.remove(item)
+
+
+def listdir():
+    """list konlpy default data directory.
+
+    .. code-block:: python
+
+        >>> import konlpy
+        >>> konlpy.listdir()
+
+    """
+
+    print(os.listdir(DATA_DIR))
+
+
+class CorpusReader(object):
+    def __init__(self, extension='.txt'):
+        """CorpusReader reads corpuses in konlpy data directory.
+            extension (str, optional): Defaults to '.txt'. extension of corpus to load.
+
+        .. code-block:: python
+
+            >>> from konlpy.data import CorpusReader
+            >>> reader = CorpusReader()
+            >>> reader.read()
+            >>> reader.corpus
+            {...}
+            >>> reader.items = ["data/specific_corpus.txt"]
+            >>> reader.read()
+            >>> reader.corpus['specific_corpus.txt']
+            content of corpus
+        """
+
+        self.items = glob.glob(DATA_DIR + "*" + extension)
+        self.corpus = {}
+
+    def read(self):
+        """read method reads all files included
+        in items attr and save it into corpus dictionary.
+        """
+
+        for filename in self.items:
+            reader = open(filename, mode='r+', encoding='utf-8')
+            self.corpus[os.path.basename(filename)] = reader.read()
+
+
+class StringWriter(object):
+    def __init__(self, filename):
+        make_dir()
+        self.writer = open(DATA_DIR + filename, mode='a', encoding='utf-8')
+
+    def write(self, string):
+        self.writer.write(string)
+        self.writer.write('\n')
 
 
 __all__ = [

@@ -11,6 +11,7 @@ from konlpy.jvm import init_jvm
 from konlpy import (
     corpus,
     data,
+    stream,
     internals,
     tag
 )
