@@ -67,11 +67,11 @@ class BaseStreamer(object):
                 self._thread.join()
             else:
                 self.job()
-        except urllib.exceptions.ProtocolError:
-            print("ProtocolError has raised but continue to stream.")
-            self.stream(is_async=self.is_async)
         except RecursionError:
             return False
         except KeyboardInterrupt:
             print("User has interrupted.")
             return False
+        except BaseException:
+            print("Error has raised but continue to stream.")
+            self.stream(is_async=self.is_async)
