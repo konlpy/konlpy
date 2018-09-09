@@ -11,8 +11,16 @@ if sys.version_info[0] >= 3:
 else:
     import cPickle as pickle
 
+<<<<<<< master
 from konlpy import utils
 from konlpy.constants import DATA_DIR, make_dir
+=======
+<<<<<<< HEAD
+from . import utils
+=======
+from konlpy import utils
+>>>>>>> parent of 82368b6... update experimental streaming interface from koshort
+>>>>>>> Revert "update experimental streaming interface from koshort"
 
 
 #: A dictionary describing the formats that are supported by
