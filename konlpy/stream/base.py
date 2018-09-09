@@ -13,6 +13,9 @@ if sys.version_info[0] >= 3:
 else:
     import urllib2 as urllib
 
+    class RecursionError(Exception):
+        pass
+
 
 __all__ = ['KonlpyStreamerError', 'BaseStreamer']
 
