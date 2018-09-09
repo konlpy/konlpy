@@ -16,7 +16,7 @@ from time import sleep
 
 from konlpy.data import StringWriter
 from konlpy.stream import BaseStreamer
-from konlpy.utils import PropagatingThread
+from konlpy.utils import PropagatingThread, pprint
 
 
 def get_current_trend():
@@ -62,6 +62,7 @@ class DaumStreamer(BaseStreamer):
     """
 
     def __init__(self, is_async=True):
+        super(DaumStreamer, self).__init__(is_async=is_async)
         self.is_async = is_async
 
         parser = self.get_parser()
@@ -100,13 +101,13 @@ class DaumStreamer(BaseStreamer):
                 pair = "{}.{}".format(count, keyword)
                 self.writer.write(pair)
                 if self.options.verbose:
-                    print(pair)
+                    pprint(pair)
 
         else:
             for keyword in keywords:
                 self.writer.write(keyword)
                 if self.options.verbose:
-                    print(keyword)
+                    pprint(keyword)
 
     def job(self):
         """Streaming job with intervals.

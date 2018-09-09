@@ -6,7 +6,7 @@ from __future__ import division
 import sys
 
 from argparse import ArgumentParser
-from konlpy.utils import PropagatingThread
+from konlpy.utils import PropagatingThread, pprint
 
 if sys.version_info[0] >= 3:
     import urllib3 as urllib
@@ -62,7 +62,7 @@ class BaseStreamer(object):
         """Print out options available and predefined values."""
 
         for attr, value in sorted(vars(self.options).items()):
-            print("{} = {}".format(attr, value))
+            pprint("{} = {}".format(attr, value))
 
     def stream(self):
         try:
@@ -75,11 +75,11 @@ class BaseStreamer(object):
         except RecursionError:
             return False
         except KeyboardInterrupt:
-            print("User has interrupted.")
+            pprint("User has interrupted.")
             return False
         except:
-            print("Error has raised but continue to stream.")
             if self.recursion < self.retry:
+                pprint("Error has raised but continue to stream.")
                 self.recursion += 1
                 self.stream()
             else:

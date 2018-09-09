@@ -19,6 +19,7 @@ class GoogleTrendStreamer(BaseStreamer):
     """
 
     def __init__(self, markup='lxml', is_async=True):
+        super(GoogleTrendStreamer, self).__init__(is_async=is_async)
         self.is_async = is_async
 
         parser = self.get_parser()
@@ -80,7 +81,7 @@ class GoogleTrendStreamer(BaseStreamer):
             # Site's anti-bot policy may block crawling & you can consider gentle crawling
             time.sleep(self.options.interval)
             response = self.request_trend(date)
-            print(response.status_code)
+            pprint(response.status_code)
             response.raise_for_status()
             trend = self.parse_trend(response.content)
 
@@ -121,16 +122,16 @@ class GoogleTrendStreamer(BaseStreamer):
             for content in result:
                 if not self.options.metadata_to_dict:
                     if self.options.verbose:
-                        print(Fore.CYAN + content['date'] + Fore.RESET)
-                        print(Fore.CYAN + Style.DIM + content['title'] + Style.RESET_ALL + Fore.RESET)
-                        print(Fore.CYAN + Style.DIM * 2 + content['traffic'] + Style.RESET_ALL + Fore.RESET)
+                        pprint(Fore.CYAN + content['date'] + Fore.RESET)
+                        pprint(Fore.CYAN + Style.DIM + content['title'] + Style.RESET_ALL + Fore.RESET)
+                        pprint(Fore.CYAN + Style.DIM * 2 + content['traffic'] + Style.RESET_ALL + Fore.RESET)
                     writer.write("@date:" + content['date'])
                     writer.write("@title:" + content['title'])
                     writer.write("@traffic:" + content['traffic'])
                 else:
                     output = '\t'.join([content['date'], content['title'], content['traffic']])
                     if self.options.verbose:
-                        print(output)
+                        pprint(output)
                     writer.write(output)
 
         def get_date_range(start_date, end_date):

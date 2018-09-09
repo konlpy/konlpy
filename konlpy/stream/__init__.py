@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """konlpy.stream is a high-level streaming interfaces
  for various websites and services brought from the original project koshort by nyanye(iam@nyanye.com)"""
 

@@ -18,6 +18,7 @@ class DCInsideStreamer(BaseStreamer):
     """
 
     def __init__(self, markup='lxml', is_async=True):
+        super(DCInsideStreamer, self).__init__(is_async=is_async)
         self.is_async = is_async
 
         parser = self.get_parser()
@@ -177,9 +178,9 @@ class DCInsideStreamer(BaseStreamer):
         def summary(result):
             if not self.options.metadata_to_dict:
                 if self.options.verbose:
-                    print(Fore.CYAN + result['title'] + Fore.RESET)
-                    print(Fore.CYAN + Style.DIM + result['written_at'] + Style.RESET_ALL + Fore.RESET)
-                    print(result['body'])
+                    pprint(Fore.CYAN + result['title'] + Fore.RESET)
+                    pprint(Fore.CYAN + Style.DIM + result['written_at'] + Style.RESET_ALL + Fore.RESET)
+                    pprint(result['body'])
                 writer.write("@title:" + result['title'])
                 writer.write("@written_at:" + result['written_at'])
                 writer.write("@body:" + result['body'])

@@ -10,7 +10,7 @@ import colorama  # Colorama streaming verbosity.
 
 from konlpy.constants import DATA_DIR, ALPHABET, make_dir
 from konlpy.stream import BaseStreamer
-from konlpy.utils import delete_links, delete_mentions
+from konlpy.utils import delete_links, delete_mentions, pprint
 
 
 class CorpusListener(tweepy.StreamListener):
@@ -75,7 +75,7 @@ class CorpusListener(tweepy.StreamListener):
                 for word in self.words:
                     tweet = (colorama.Fore.CYAN + word).join(tweet.split(word))
                     tweet = (word + colorama.Fore.RESET).join(tweet.split(word))
-                print(word_count, tweet)
+                pprint(word_count, tweet)
 
         if self.options.filter_retweets:
             if not "RT @" in tweet:
@@ -106,6 +106,7 @@ class TwitterStreamer(BaseStreamer):
     """
 
     def __init__(self, dirname=DATA_DIR, word_list=ALPHABET, is_async=True):
+        super(TwitterStreamer, self).__init__(is_async=is_async)
         self.is_async = is_async
 
         parser = self.get_parser()
@@ -187,7 +188,7 @@ class TwitterStreamer(BaseStreamer):
                 flag = 1
 
         if flag is not None:
-            print("You have to provide valid consumer key, consumer_secret, access_token, access_token_secret.")
+            pprint("You have to provide valid consumer key, consumer_secret, access_token, access_token_secret.")
 
         # Parse wordlist from custom argument
         self.dirname = dirname

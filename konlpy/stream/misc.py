@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
 from time import sleep
 from konlpy.stream import BaseStreamer, TwitterStreamer
 from konlpy.stream.naver import get_current_trend
+from konlpy.utils import pprint
 
 
 class NavtterStreamer(BaseStreamer):
@@ -32,6 +34,7 @@ class NavtterStreamer(BaseStreamer):
     """
 
     def __init__(self, is_async=True):
+        super(NavtterStreamer, self).__init__(is_async=is_async)
         self.is_async = is_async
 
         parser = self.get_parser()
@@ -49,7 +52,7 @@ class NavtterStreamer(BaseStreamer):
     def get_trend(self):
         _, self.trend = get_current_trend()
         if self.options.verbose:
-            print(self.trend)
+            pprint(self.trend)
 
     def job(self):
         self.get_trend()

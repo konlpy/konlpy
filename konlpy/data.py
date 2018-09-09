@@ -161,7 +161,7 @@ def listdir():
 
     """
 
-    print(os.listdir(DATA_DIR))
+    utils.pprint(os.listdir(DATA_DIR))
 
 
 class CorpusReader(object):
