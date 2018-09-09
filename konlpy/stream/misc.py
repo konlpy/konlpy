@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+from __future__ import print_function
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import unicode_literals
+
 from time import sleep
 from konlpy.stream import BaseStreamer, TwitterStreamer
 from konlpy.stream.naver import get_current_trend
