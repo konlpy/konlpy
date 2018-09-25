@@ -15,7 +15,7 @@ __all__ = [
 ]
 
 __title__ = 'KoNLPy'
-__version__ = '0.5.1'
+__version__ = '0.5.2'
 
 __author__ = 'Team KoNLPy'
 __email__ = 'konlpy@googlegroups.com'
