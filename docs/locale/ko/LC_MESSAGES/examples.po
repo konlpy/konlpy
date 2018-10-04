@@ -1,15 +1,16 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: KoNLPy 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-19 15:22+0900\n"
+"POT-Creation-Date: 2018-08-03 22:53+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../examples.rst:2
 msgid "Examples"
@@ -23,12 +24,81 @@ msgstr "다음은 KoNLPy를 이용해 수행할 수 있는 몇몇 사용 예시�
 msgid ":doc:`examples/explore`"
 msgstr ""
 
-#: ../../examples.rst:39
-msgid ":doc:`examples/wordcloud`"
+#: ../../examples.rst:15
+msgid ":doc:`examples/corpus`"
 msgstr ""
 
 #: ../../examples.rst:21
 msgid ":doc:`examples/collocations`"
+msgstr ""
+
+#: ../../examples.rst:27
+msgid ":doc:`examples/chunking`"
+msgstr ""
+
+#: ../../examples.rst:33
+msgid ":doc:`examples/generate`"
+msgstr ""
+
+#: ../../examples.rst:39
+msgid ":doc:`examples/wordcloud`"
+msgstr ""
+
+#: ../../examples.rst:45
+msgid ":doc:`examples/multithreading`"
+msgstr ""
+
+#: ../../examples.rst:51
+msgid "Contents"
+msgstr "목록보기"
+
+#: ../../examples/chunking.rst:2
+msgid "Chunking"
+msgstr "구문 분석"
+
+#: ../../examples/chunking.rst:4
+msgid ""
+"After :doc:`tagging a sentence with part of speech </morph>`, we can "
+"segment it into several higher level multitoken sequences, or \"chunks\"."
+msgstr ":doc:`문장에 품사를 부착한 후에는 </morph>` 품사들을 조금 더 큰 단위의 묶음, 즉 구문으로 묶을 수 있습니다."
+
+#: ../../examples/chunking.rst:6
+msgid ""
+"Here we demonstrate a way to easily chunk a sentence, and find noun, verb"
+" and adjective phrases in Korean text, using "
+":py:class:`nltk:nltk.chunk.regexp.RegexpParser`."
+msgstr ""
+"이곳에서는 형태소 분석된 결과와 :py:class:`nltk:nltk.chunk.regexp.RegexpParser` 를 이용하여 "
+"간단하게 한국어 문장에서 명사구, 동사구, 형용사구를 찾는 법을 살펴보도록 하겠습니다."
+
+#: ../../examples/chunking.rst:11
+msgid ""
+"According to the chunk grammer defined above, we have three rules to "
+"extracted phrases from our sentence. First, we have a rule to extract "
+"noun phrases (NP), where our chunker finds a serial of nouns, followed "
+"with an optional Suffix. (Note that these rules can be modified for your "
+"purpose, and that they should differ for each morphological analyzer.) "
+"Then we have two more rules, each defining verb phrases (VP) and "
+"adjective phrases (AP)."
+msgstr ""
+"여기에서는 세 가지 구문 문법(chunk grammar)을 정의해보았습니다. 먼저, 명사가 연속적으로 등장한 후 "
+"접미사(suffix)가 선택적으로 붙은 경우를 명사구(NP)로 정의하였습니다. (목적에 따라, 또 어떤 형태소 분석기를 사용하느냐에"
+" 따라 이 문법 규칙은 바뀌어야겠죠.) 마찬가지 방식으로 동사구(VP)와 형용사구(AP)를 정의하였습니다."
+
+#: ../../examples/chunking.rst:15
+msgid ""
+"The result is a tree, which we can print on the console, or display "
+"graphically as follows."
+msgstr "결과물은 트리(tree) 형태로 콘솔에 출력하거나, 이미지로 출력할 수 있습니다."
+
+#: ../../examples/chunking.rst:17 ../../examples/collocations.rst:11
+#: ../../examples/explore.rst:13 ../../examples/generate.rst:43
+#: ../../examples/multithreading.rst:12
+msgid "Console::"
+msgstr "출력 결과::"
+
+#: ../../examples/chunking.rst:39
+msgid "chunking.png"
 msgstr ""
 
 #: ../../examples/collocations.rst:2
@@ -39,11 +109,48 @@ msgstr "연어(collocation) 찾기"
 msgid "We can find collocations with the help of `NLTK <http://nltk.org>`_."
 msgstr "`NLTK <http://nltk.org>`_ 를 같이 활용하여 연어(collocation)을 찾을 수 있습니다."
 
-#: ../../examples/chunking.rst:17 ../../examples/collocations.rst:11
-#: ../../examples/explore.rst:13 ../../examples/generate.rst:43
-#: ../../examples/multithreading.rst:12
-msgid "Console::"
-msgstr "출력 결과::"
+#: ../../examples/collocations.rst:6
+msgid ""
+"In order to find trigram collocations, replace `BigramAssocMeasures` with"
+" `TrigramAssocMeasures`, and `BigramCollocationFinder` with "
+"`TrigramCollocationFinder`."
+msgstr ""
+"3 음절 연어를 찾기 위해서는 `BigramAssocMeasures` 를 `TrigramAssocMeasures` 로 바꾸고, "
+"`BigramCollocationFinder` 를 `TrigramCollocationFinder` 로 바꾸시면 됩니다."
+
+#: ../../examples/corpus.rst:2
+msgid "Exploring a corpus"
+msgstr "말뭉치 탐색하기"
+
+#: ../../examples/corpus.rst:4
+msgid "A corpus is a set of documents."
+msgstr "말뭉치(corpus)는 여러 문서의 집합체입니다."
+
+#: ../../examples/corpus.rst:6
+msgid ""
+"Below is a way of exploring unique tokens of a corpus, namely the `Heap's"
+" Law <http://en.wikipedia.org/wiki/Heaps%27_law>`_."
+msgstr ""
+"다음은 말뭉치의 크기를 늘려갈수록 등장하는 토큰의 개수가 로그함수적으로 늘어간다는 `힙의 법칙(Heap's Law) "
+"<http://en.wikipedia.org/wiki/Heaps%27_law>`_ 을 관찰하는 방법입니다."
+
+#: ../../examples/corpus.rst:14
+msgid "heap.png:"
+msgstr ""
+
+#: ../../examples/corpus.rst:16
+msgid ""
+"But why is our image not log-function shaped, as generally known? That is"
+" because the corpus we used is very small, and contains only 10 "
+"documents. To observe the Heap's law's log-function formatted curve, try "
+"experimenting with a larger corpus. Below is an image drawn from 1,000 "
+"Korean news articles. Of course, the curve will become smoother with a "
+"much larger corpus."
+msgstr ""
+
+#: ../../examples/corpus.rst:24
+msgid "heap-1000.png:"
+msgstr ""
 
 #: ../../examples/explore.rst:2
 msgid "Exploring a document"
@@ -69,52 +176,6 @@ msgstr "용례 찾기"
 msgid "zipf.png:"
 msgstr ""
 
-#: ../../examples/wordcloud.rst:2
-msgid "Drawing a word cloud"
-msgstr "워드클라우드 그리기"
-
-#: ../../examples/wordcloud.rst:4
-msgid ""
-"Below shows a code example that crawls a National Assembly bill from the "
-"web, extract nouns and draws a word cloud - from head to tail in Python."
-msgstr "다음은 파이썬만으로 웹에서 국회 의안의 내용을 수집해서 이용해 명사를 추출한 후, 워드클라우드를 그리는 예시입니다."
-
-#: ../../examples/wordcloud.rst:6
-msgid ""
-"You can change the bill number (i.e., ``bill_num``), and see how the word "
-"clouds differ per bill. (ex: '1904882', '1904883', 'ZZ19098', etc)"
-msgstr ""
-"의안 번호(i.e., ``bill_num``)를 바꿔가며 워드클라우드가 어떻게 달라지는지 확인할수도 있습니다. (ex: "
-"'1904882', '1904883', 'ZZ19098', etc)"
-
-#: ../../examples/wordcloud.rst:13
-msgid ""
-"The `PyTagCloud <https://pypi.python.org/pypi/pytagcloud>`_ installed in "
-"PyPI may not be sufficient for drawing wordclouds in Korean. You may add "
-"eligible fonts - that support the Korean language - manually, or install the"
-" Korean supported version `here <https://github.com/e9t/PyTagCloud>`_."
-msgstr ""
-"PyPI에 업로드되어 있는 `PyTagCloud <https://pypi.python.org/pypi/pytagcloud>`_ 를 "
-"이용하면 워드클라우드에 한글이 제대로 표시되지 않을 수 있습니다. 이 경우, 직접 소스코드에 한글 폰트를 추가하거나, `이 곳 "
-"<https://github.com/e9t/PyTagCloud>`_ 에서 미리 폰트가 추가된 버젼을 다운받아 사용하시면 됩니다."
-
-#: ../../examples.rst:51
-msgid "Contents"
-msgstr "목록보기"
-
-#: ../../examples.rst:33
-msgid ":doc:`examples/generate`"
-msgstr ""
-
-#: ../../examples/collocations.rst:6
-msgid ""
-"In order to find trigram collocations, replace `BigramAssocMeasures` with "
-"`TrigramAssocMeasures`, and `BigramCollocationFinder` with "
-"`TrigramCollocationFinder`."
-msgstr ""
-"3 음절 연어를 찾기 위해서는 `BigramAssocMeasures` 를 `TrigramAssocMeasures` 로 바꾸고, "
-"`BigramCollocationFinder` 를 `TrigramCollocationFinder` 로 바꾸시면 됩니다."
-
 #: ../../examples/generate.rst:2
 msgid "Generating random text"
 msgstr "랜덤 텍스트 생성하기"
@@ -123,12 +184,57 @@ msgstr "랜덤 텍스트 생성하기"
 msgid "Say you want to generate random text in Korean. How would you do it?"
 msgstr "한국어로 랜덤 텍스트를 생성해봅시다. 어떻게 할 수 있을까요?"
 
+#: ../../examples/generate.rst:7
+msgid ""
+"The easiest way would probably be to have your cat walk across your "
+"keyboard which would result in something like this [#]_::"
+msgstr "가장 간단하게는 고양이 한 마리가 키보드를 밟고 지나가게 할 수 있습니다. 그렇게 하면 이와 유사한 결과가 나오겠죠 [#]_::"
+
+#: ../../examples/generate.rst:12
+msgid ""
+"However a sequence of random letters like this does not make any sense. "
+"Normally, Korean text is formed with a sequence of words, formed by a "
+"sequence of syllables, which are each formed with two to three types of "
+"the keyboard, each uniquely called choseong, jungseong, jongseong [#]_. "
+"(though in casual chatting, just one type of the keyboard is common as "
+"well, ex: \"ㅋㅋㅋ\") So now we educate our cat to type syllables::"
+msgstr ""
+"하지만 이렇게 글자를 무작위로 나열하는 것은 아무런 의미를 가지지 않습니다.  일반적으로 한국어 텍스트는 초성, 중성, 종성으로 "
+"구성된 낱개의 음절들이 모여 단어를 이루고 [#]_ 이 단어들이 다시 모여 문장을 이루는데, 글자들을 랜덤으로 타이핑해서는 음절이나"
+" 단어를 이룰 수 있는 확률은 극히 희박하겠죠. 그래서 이번에는 고양이에게 음절을 타이핑하는 방법을 (어떻게든) 가르쳐봅니다::"
+
+#: ../../examples/generate.rst:19
+msgid ""
+"Then we notice that in Korean, the syllable '이' is more frequently used "
+"than '앙' and definitely much more than '꿻' or '굷'. If our cat knew that, "
+"he would have typed something like this::"
+msgstr ""
+"이렇게 하고 보니, 한국어에서 일반적으로 보기 힘든 음절들이 자주 등장했다는 사실을 알게 됩니다. 보통 한국어에서는 '이'가 "
+"'앙'보다는, 특히 '꿻'이나 '굷' 같은 음절보다 훨씬 빈번하게 등장하죠. 이번에는 일반적인 사용 빈도가 높은 음절들을 더 자주 "
+"등장시키도록 고양이를 다시 교육시킵니다::"
+
+#: ../../examples/generate.rst:24
+msgid ""
+"But then, this still doesn't make any sense because the syllables don't "
+"form words. Rather than generating each syllable independently, we can "
+"generate a syllable base on its precedent so that after '하' follows '다', "
+"and after '그' we get '리' and '고'. In mathematical terms, this process is "
+"better known as a `Markov chain "
+"<http://en.wikipedia.org/wiki/Markov_chain>`_::"
+msgstr ""
+"그렇게 해도 얻은 문자열이 온전한 문장이 되지는 않습니다. 그렇다면 각의 음절을 독립적으로(independently) 생성하지 "
+"말고, 선행하는 음절이 무엇이냐에 따라 현재의 음절을 생성해보면 어떨까요? 그러면 '하' 다음에는 '다'가 자주 등장할 것이고, "
+"'그' 다음에는 '리'와 '고'가 연속적으로 등장할 가능성이 높아질테니 우리가 실제로 쓰는 단어도 나올 수 있지 않을까요? 이런 "
+"과정을 수학적 용어로는 `마코프 체인 <http://en.wikipedia.org/wiki/Markov_chain>`_ 이라고 "
+"합니다::"
+
 #: ../../examples/generate.rst:30
 msgid ""
-"Our \"sentence\" above was generated with \"bigrams\", or \"2-grams\". If we"
-" wish to make more sense out of it, we could try \"3-grams\" (better known "
-"as trigrams) or \"4-grams\". Or, we could extend the same idea to longer "
-"sequences of letters, such as morphemes. Let's try this with actual code."
+"Our \"sentence\" above was generated with \"bigrams\", or \"2-grams\". If"
+" we wish to make more sense out of it, we could try \"3-grams\" (better "
+"known as trigrams) or \"4-grams\". Or, we could extend the same idea to "
+"longer sequences of letters, such as morphemes. Let's try this with "
+"actual code."
 msgstr ""
 "직전의 음절 하나가 무엇이냐에 따라 현재의 음절을 생성한 위의 \"문장\"은 \"bigram\" 또는 \"2-그램\"으로 생성된 "
 "것이지만, 만일 더 말이 되는 문장을 만들고 싶다면 직전 음절 여러개를 보는 \"3-그램\" 또는 \"4-그램\"을 시도해볼 수도 "
@@ -139,24 +245,24 @@ msgid ""
 "The code below works with Python3, and not with Python2! You can run the "
 "code by typing `python3 generate.py` on your terminal."
 msgstr ""
-"아래 코드는 파이썬3로 작동하고 파이썬2에서는 작동하지 않습니다. 터미널에서 `python3 generate.py` 를 입력하면 실행할 "
-"수 있습니다."
+"아래 코드는 파이썬3로 작동하고 파이썬2에서는 작동하지 않습니다. 터미널에서 `python3 generate.py` 를 입력하면 "
+"실행할 수 있습니다."
 
 #: ../../examples/generate.rst:51
 msgid ""
 "Well, that's a lot better than the random string typed by our cat! The "
 "sentences look a bit ugly because there are whitespaces between all "
-"morphemes, whereas in actual Korean text, they would be stuck together. Also"
-" note that this text generation model was built from a single document. If "
-"you were to build a model with a much larger corpus, you wouldn't even have "
-"to do morpheme analysis because you would have enough data for any potential"
-" `initstr`. Other than that, there are much more ways to improve this model!"
-" Feel free to experiment."
+"morphemes, whereas in actual Korean text, they would be stuck together. "
+"Also note that this text generation model was built from a single "
+"document. If you were to build a model with a much larger corpus, you "
+"wouldn't even have to do morpheme analysis because you would have enough "
+"data for any potential `initstr`. Other than that, there are much more "
+"ways to improve this model! Feel free to experiment."
 msgstr ""
-"아직 많이 부족하지만 처음에 고양이가 타이핑했던 것보다는 훨씬 나아졌네요! 특히 형태소와 형태소 사이에 공백이 있어서 덜 예뻐보이지만, "
-"그 정도는 충분히 개선할 수 있을 것 같아요. 게다가 이 모델은 단 하나의 문서를 기반으로 구축한 것이지만, 보다 큰 말뭉치를 이용하는 "
-"경우에는 굳이 형태소 분석도 필요하지 않을테고요. 그 외에도 이 모델을 발전시킬 수 있는 여지는 무궁무진하게 많습니다! 상상력을 발휘하여"
-" 다양하게 실험해보세요."
+"아직 많이 부족하지만 처음에 고양이가 타이핑했던 것보다는 훨씬 나아졌네요! 특히 형태소와 형태소 사이에 공백이 있어서 덜 "
+"예뻐보이지만, 그 정도는 충분히 개선할 수 있을 것 같아요. 게다가 이 모델은 단 하나의 문서를 기반으로 구축한 것이지만, 보다 큰"
+" 말뭉치를 이용하는 경우에는 굳이 형태소 분석도 필요하지 않을테고요. 그 외에도 이 모델을 발전시킬 수 있는 여지는 무궁무진하게 "
+"많습니다! 상상력을 발휘하여 다양하게 실험해보세요."
 
 #: ../../examples/generate.rst:58
 msgid ""
@@ -167,48 +273,6 @@ msgstr ""
 "텍스트 생성에 대한 더 자세한 설명은 존 벤틀리의 `생각하는 프로그래밍 (15장 3절) <http://www.cs.bell-"
 "labs.com/cm/cs/pearls/sec153.html>`_ 의 내용을 참고해주세요."
 
-#: ../../examples/generate.rst:68
-msgid ""
-"Please refer to the Hangul Jamo in `Unicode character code charts "
-"<http://www.unicode.org/charts/>`_."
-msgstr "`유니코드 문자 코드표 <http://www.unicode.org/charts/>`_"
-
-#: ../../examples/generate.rst:12
-msgid ""
-"However a sequence of random letters like this does not make any sense. "
-"Normally, Korean text is formed with a sequence of words, formed by a "
-"sequence of syllables, which are each formed with two to three types of the "
-"keyboard, each uniquely called choseong, jungseong, jongseong [#]_. (though "
-"in casual chatting, just one type of the keyboard is common as well, ex: "
-"\"ㅋㅋㅋ\") So now we educate our cat to type syllables::"
-msgstr ""
-"하지만 이렇게 글자를 무작위로 나열하는 것은 아무런 의미를 가지지 않습니다.  일반적으로 한국어 텍스트는 초성, 중성, 종성으로 구성된 "
-"낱개의 음절들이 모여 단어를 이루고 [#]_ 이 단어들이 다시 모여 문장을 이루는데, 글자들을 랜덤으로 타이핑해서는 음절이나 단어를 이룰"
-" 수 있는 확률은 극히 희박하겠죠. 그래서 이번에는 고양이에게 음절을 타이핑하는 방법을 (어떻게든) 가르쳐봅니다::"
-
-#: ../../examples/generate.rst:19
-msgid ""
-"Then we notice that in Korean, the syllable '이' is more frequently used than"
-" '앙' and definitely much more than '꿻' or '굷'. If our cat knew that, he "
-"would have typed something like this::"
-msgstr ""
-"이렇게 하고 보니, 한국어에서 일반적으로 보기 힘든 음절들이 자주 등장했다는 사실을 알게 됩니다. 보통 한국어에서는 '이'가 "
-"'앙'보다는, 특히 '꿻'이나 '굷' 같은 음절보다 훨씬 빈번하게 등장하죠. 이번에는 일반적인 사용 빈도가 높은 음절들을 더 자주 "
-"등장시키도록 고양이를 다시 교육시킵니다::"
-
-#: ../../examples/generate.rst:24
-msgid ""
-"But then, this still doesn't make any sense because the syllables don't form"
-" words. Rather than generating each syllable independently, we can generate "
-"a syllable base on its precedent so that after '하' follows '다', and after "
-"'그' we get '리' and '고'. In mathematical terms, this process is better known "
-"as a `Markov chain <http://en.wikipedia.org/wiki/Markov_chain>`_::"
-msgstr ""
-"그렇게 해도 얻은 문자열이 온전한 문장이 되지는 않습니다. 그렇다면 각의 음절을 독립적으로(independently) 생성하지 말고, "
-"선행하는 음절이 무엇이냐에 따라 현재의 음절을 생성해보면 어떨까요? 그러면 '하' 다음에는 '다'가 자주 등장할 것이고, '그' 다음에는"
-" '리'와 '고'가 연속적으로 등장할 가능성이 높아질테니 우리가 실제로 쓰는 단어도 나올 수 있지 않을까요? 이런 과정을 수학적 용어로는"
-" `마코프 체인 <http://en.wikipedia.org/wiki/Markov_chain>`_ 이라고 합니다::"
-
 #: ../../examples/generate.rst:60
 msgid ""
 "Furthermore, if you use `language models "
@@ -216,12 +280,21 @@ msgid ""
 "random texts and figure out whether they actually make sense in a "
 "statistical point of view."
 msgstr ""
-"한 걸음 더 나아가기 위해서는 `언어 모델 <http://en.wikipedia.org/wiki/Language_model>`_ 을 "
-"이용해 생성한 랜덤 텍스트가 통계적인 관점에서 얼마나 말이 되는지 평가해볼 수 있습니다."
+"한 걸음 더 나아가기 위해서는 `언어 모델 <http://en.wikipedia.org/wiki/Language_model>`_ 을"
+" 이용해 생성한 랜덤 텍스트가 통계적인 관점에서 얼마나 말이 되는지 평가해볼 수 있습니다."
 
-#: ../../examples.rst:45
-msgid ":doc:`examples/multithreading`"
+#: ../../examples/generate.rst:63
+msgid ""
+"This story would actually feature a monkey instead of a cat. Namely by "
+"the `Infinite monkey theorem "
+"<http://en.wikipedia.org/wiki/Infinite_monkey_theorem>`_."
 msgstr ""
+
+#: ../../examples/generate.rst:64
+msgid ""
+"Please refer to the Hangul Jamo in `Unicode character code charts "
+"<http://www.unicode.org/charts/>`_."
+msgstr "`유니코드 문자 코드표 <http://www.unicode.org/charts/>`_"
 
 #: ../../examples/multithreading.rst:2
 msgid "Multithreading with KoNLPy"
@@ -229,13 +302,13 @@ msgstr "KoNLPy를 이용한 멀티쓰레딩"
 
 #: ../../examples/multithreading.rst:4
 msgid ""
-"Sometimes it gets boring to wait for tagging jobs to end. How about using "
-"some concurrency tricks? Python supports multithreading and multiprocessing "
-"out-of-the-box, and you can use them with KoNLPy as well. Here's an example "
-"using multithreading."
+"Sometimes it gets boring to wait for tagging jobs to end. How about using"
+" some concurrency tricks? Python supports multithreading and "
+"multiprocessing out-of-the-box, and you can use them with KoNLPy as well."
+" Here's an example using multithreading."
 msgstr ""
-"시간이 오래 걸리는 태깅 작업을 수행하다보면 지루해지곤합니다. 그럴 때는 병렬처리 기법을 적용해보면 어떨까요? 파이썬은 멀티쓰레딩과 "
-"멀티프로세싱을 지원하며, 물론 그를 KoNLPy에 적용할 수 있습니다. 다음은 멀티쓰레딩을 활용한 예시입니다."
+"시간이 오래 걸리는 태깅 작업을 수행하다보면 지루해지곤합니다. 그럴 때는 병렬처리 기법을 적용해보면 어떨까요? 파이썬은 멀티쓰레딩과"
+" 멀티프로세싱을 지원하며, 물론 그를 KoNLPy에 적용할 수 있습니다. 다음은 멀티쓰레딩을 활용한 예시입니다."
 
 #: ../../examples/multithreading.rst:22
 msgid "Check out how much faster it gets!"
@@ -248,7 +321,7 @@ msgstr "파이썬 병렬처리와 관련된 좋은 레퍼런스 몇 개:"
 #: ../../examples/multithreading.rst:26
 msgid ""
 "장혜식, `\"파이썬은 멀티코어 줘도 쓰잘데기가 없나요?\"에 대한 파이썬 2.6의 대답 "
-"<http://openlook.org/blog/2008/06/28/python-multiprocessing/>`_, 2008."
+"<http://highthroughput.org/wp/python-multiprocessing/>`_, 2008."
 msgstr ""
 
 #: ../../examples/multithreading.rst:27
@@ -257,100 +330,39 @@ msgid ""
 "-python-and-cloud>`_, 2011."
 msgstr ""
 
-#: ../../examples.rst:27
-msgid ":doc:`examples/chunking`"
-msgstr ""
+#: ../../examples/wordcloud.rst:2
+msgid "Drawing a word cloud"
+msgstr "워드클라우드 그리기"
 
-#: ../../examples/chunking.rst:2
-msgid "Chunking"
-msgstr "구문 분석"
-
-#: ../../examples/chunking.rst:6
+#: ../../examples/wordcloud.rst:4
 msgid ""
-"Here we demonstrate a way to easily chunk a sentence, and find noun, verb "
-"and adjective phrases in Korean text, using "
-":py:class:`nltk:nltk.chunk.regexp.RegexpParser`."
-msgstr ""
-"이곳에서는 형태소 분석된 결과와 :py:class:`nltk:nltk.chunk.regexp.RegexpParser` 를 이용하여 "
-"간단하게 한국어 문장에서 명사구, 동사구, 형용사구를 찾는 법을 살펴보도록 하겠습니다."
+"Below shows a code example that crawls a National Assembly bill from the "
+"web, extract nouns and draws a word cloud - from head to tail in Python."
+msgstr "다음은 파이썬만으로 웹에서 국회 의안의 내용을 수집해서 이용해 명사를 추출한 후, 워드클라우드를 그리는 예시입니다."
 
-#: ../../examples/chunking.rst:11
+#: ../../examples/wordcloud.rst:6
 msgid ""
-"According to the chunk grammer defined above, we have three rules to "
-"extracted phrases from our sentence. First, we have a rule to extract noun "
-"phrases (NP), where our chunker finds a serial of nouns, followed with an "
-"optional Suffix. (Note that these rules can be modified for your purpose, "
-"and that they should differ for each morphological analyzer.) Then we have "
-"two more rules, each defining verb phrases (VP) and adjective phrases (AP)."
+"You can change the bill number (i.e., ``bill_num``), and see how the word"
+" clouds differ per bill. (ex: '1904882', '1904883', 'ZZ19098', etc)"
 msgstr ""
-"여기에서는 세 가지 구문 문법(chunk grammar)을 정의해보았습니다. 먼저, 명사가 연속적으로 등장한 후 접미사(suffix)가 "
-"선택적으로 붙은 경우를 명사구(NP)로 정의하였습니다. (목적에 따라, 또 어떤 형태소 분석기를 사용하느냐에 따라 이 문법 규칙은 "
-"바뀌어야겠죠.) 마찬가지 방식으로 동사구(VP)와 형용사구(AP)를 정의하였습니다."
+"의안 번호(i.e., ``bill_num``)를 바꿔가며 워드클라우드가 어떻게 달라지는지 확인할수도 있습니다. (ex: "
+"'1904882', '1904883', 'ZZ19098', etc)"
 
-#: ../../examples/chunking.rst:15
+#: ../../examples/wordcloud.rst:13
 msgid ""
-"The result is a tree, which we can print on the console, or display "
-"graphically as follows."
-msgstr "결과물은 트리(tree) 형태로 콘솔에 출력하거나, 이미지로 출력할 수 있습니다."
-
-#: ../../examples/chunking.rst:39
-msgid "chunking.png"
+"The `PyTagCloud <https://pypi.python.org/pypi/pytagcloud>`_ installed in "
+"PyPI may not be sufficient for drawing wordclouds in Korean. You may add "
+"eligible fonts - that support the Korean language - manually, or install "
+"the Korean supported version `here <https://github.com/e9t/PyTagCloud>`_."
 msgstr ""
+"PyPI에 업로드되어 있는 `PyTagCloud <https://pypi.python.org/pypi/pytagcloud>`_ 를 "
+"이용하면 워드클라우드에 한글이 제대로 표시되지 않을 수 있습니다. 이 경우, 직접 소스코드에 한글 폰트를 추가하거나, `이 곳 "
+"<https://github.com/e9t/PyTagCloud>`_ 에서 미리 폰트가 추가된 버젼을 다운받아 사용하시면 됩니다."
 
-#: ../../examples/chunking.rst:4
-msgid ""
-"After :doc:`tagging a sentence with part of speech </morph>`, we can segment"
-" it into several higher level multitoken sequences, or \"chunks\"."
-msgstr ":doc:`문장에 품사를 부착한 후에는 </morph>` 품사들을 조금 더 큰 단위의 묶음, 즉 구문으로 묶을 수 있습니다."
+#~ msgid ""
+#~ "장혜식, `\"파이썬은 멀티코어 줘도 쓰잘데기가 없나요?\"에 "
+#~ "대한 파이썬 2.6의 대답 "
+#~ "<http://openlook.org/blog/2008/06/28/python-multiprocessing/>`_,"
+#~ " 2008."
+#~ msgstr ""
 
-#: ../../examples.rst:15
-msgid ":doc:`examples/corpus`"
-msgstr ""
-
-#: ../../examples/corpus.rst:2
-msgid "Exploring a corpus"
-msgstr "말뭉치 탐색하기"
-
-#: ../../examples/corpus.rst:4
-msgid "A corpus is a set of documents."
-msgstr "말뭉치(corpus)는 여러 문서의 집합체입니다."
-
-#: ../../examples/corpus.rst:6
-msgid ""
-"Below is a way of exploring unique tokens of a corpus, namely the `Heap's "
-"Law <http://en.wikipedia.org/wiki/Heaps%27_law>`_."
-msgstr ""
-"다음은 말뭉치의 크기를 늘려갈수록 등장하는 토큰의 개수가 로그함수적으로 늘어간다는 `힙의 법칙(Heap's Law) "
-"<http://en.wikipedia.org/wiki/Heaps%27_law>`_ 을 관찰하는 방법입니다."
-
-#: ../../examples/corpus.rst:14
-msgid "heap.png:"
-msgstr ""
-
-#: ../../examples/corpus.rst:16
-msgid ""
-"But why is our image not log-function shaped, as generally known? That is "
-"because the corpus we used is very small, and contains only 10 documents. To"
-" observe the Heap's law's log-function formatted curve, try experimenting "
-"with a larger corpus. Below is an image drawn from 1,000 Korean news "
-"articles. Of course, the curve will become smoother with a much larger "
-"corpus."
-msgstr ""
-
-#: ../../examples/corpus.rst:24
-msgid "heap-1000.png:"
-msgstr ""
-
-#: ../../examples/generate.rst:7
-msgid ""
-"The easiest way would probably be to have your cat walk across your keyboard"
-" which would result in something like this [#]_::"
-msgstr ""
-"가장 간단하게는 고양이 한 마리가 키보드를 밟고 지나가게 할 수 있습니다. 그렇게 하면 이와 유사한 결과가 나오겠죠 [#]_::"
-
-#: ../../examples/generate.rst:67
-msgid ""
-"This story would actually feature a monkey instead of a cat. Namely by the "
-"`Infinite monkey theorem "
-"<http://en.wikipedia.org/wiki/Infinite_monkey_theorem>`_."
-msgstr ""

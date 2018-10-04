@@ -35,9 +35,9 @@ fi
 
 # install mecab-ko
 cd /tmp
-curl -LO https://bitbucket.org/eunjeon/mecab-ko/downloads/mecab-0.996-ko-0.9.1.tar.gz
-tar zxfv mecab-0.996-ko-0.9.1.tar.gz
-cd mecab-0.996-ko-0.9.1
+curl -LO https://bitbucket.org/eunjeon/mecab-ko/downloads/mecab-0.996-ko-0.9.2.tar.gz
+tar zxfv mecab-0.996-ko-0.9.2.tar.gz
+cd mecab-0.996-ko-0.9.2
 ./configure
 make
 make check
@@ -97,9 +97,9 @@ elif [ "$os" == "Darwin" ]; then
 fi
 
 cd /tmp
-curl -LO https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.0.1-20150920.tar.gz
-tar -zxvf mecab-ko-dic-2.0.1-*.tar.gz
-cd mecab-ko-dic-2.0.1-*
+curl -LO https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.1.1-20180720.tar.gz
+tar -zxvf mecab-ko-dic-2.1.1-20180720.tar.gz
+cd mecab-ko-dic-2.1.1-20180720
 ./autogen.sh
 ./configure
 make

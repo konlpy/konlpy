@@ -1,5 +1,5 @@
-#! /usr/bin/python
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
 
 import sys
 
@@ -7,7 +7,8 @@ try:
     from MeCab import Tagger
 except ImportError:
     pass
-from .. import utils
+
+from konlpy import utils
 
 
 __all__ = ['Mecab']

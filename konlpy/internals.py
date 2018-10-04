@@ -1,11 +1,10 @@
-#! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
-
+from __future__ import absolute_import
 
 import os
 import stat
 
-from . import data
+from konlpy import data
 
 
 def get_datadir():

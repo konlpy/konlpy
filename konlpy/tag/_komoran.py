@@ -1,58 +1,53 @@
-#! /usr/bin/python
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import, unicode_literals
 
 import os
-import re
-import sys
 
 import jpype
 
-from .. import jvm
-from .. import utils
-from .. import internals
+from konlpy import jvm, utils
 
 
 __all__ = ['Komoran']
 
 
-def parse(result, flatten, join=False):
-    def _parse(token, join=False):
-        if join:
-            return [s[1:] for s in re.findall('\+.+?/[A-Z]+', token)]
-        else:
-            return [tuple(s[1:].rsplit('/', 1)) for s in re.findall('\+.+?/[A-Z]+', token)]
-
-    if sys.version_info[0] < 3:
-        if join:
-            parsed = [[r for r in sublist] for sublist in result]
-        else:
-            parsed = [[tuple(r.rsplit('/', 1)) for r in sublist] for sublist in result]
-    else:
-        parsed = [_parse(i, join=join) for i in result[1:-1].split(', ')]
-
-    if flatten:
-        return sum(parsed, [])
-    return parsed
-
-
 class Komoran():
-    """Wrapper for `KOMORAN <http://shineware.tistory.com/entry/KOMORAN-ver-24>`_.
+    """Wrapper for `KOMORAN <https://github.com/shin285/KOMORAN>`_.
 
     KOMORAN is a relatively new open source Korean morphological analyzer written in Java, developed by `Shineware <http://shineware.co.kr>`_, since 2013.
 
     .. code-block:: python
 
+        >>> cat /tmp/dic.txt  # Place a file in a location of your choice
+        코모란	NNP
+        오픈소스	NNG
+        바람과 함께 사라지다	NNP
         >>> from konlpy.tag import Komoran
-        >>> komoran = Komoran()
+        >>> komoran = Komoran(userdic='/tmp/dic.txt')
         >>> print(komoran.morphs(u'우왕 코모란도 오픈소스가 되었어요'))
-        ['우왕', '코', '모란', '도', '오픈소스', '가', '되', '었', '어요']
+        ['우왕', '코모란', '도', '오픈소스', '가', '되', '었', '어요']
         >>> print(komoran.nouns(u'오픈소스에 관심 많은 멋진 개발자님들!'))
         ['오픈소스', '관심', '개발자']
-        >>> print(komoran.pos(u'원칙이나 기체 설계와 엔진·레이더·항법장비 등'))
-        [('원칙', 'NNG'), ('이나', 'JC'), ('기체', 'NNG'), ('설계', 'NNG'), ('와', 'JC'), ('엔진', 'NNG'), ('·', 'SP'), ('레이더', 'NNG'), ('·', 'SP'), ('항법', 'NNP'), ('장비', 'NNG'), ('등', 'NNB')]
+        >>> print(komoran.pos(u'혹시 바람과 함께 사라지다 봤어?'))
+        [('혹시', 'MAG'), ('바람과 함께 사라지다', 'NNP'), ('보', 'VV'), ('았', 'EP'), ('어', 'EF'), ('?', 'SF')]
 
     :param jvmpath: The path of the JVM passed to :py:func:`.init_jvm`.
-    :param dicpath: The path of dictionary files. The KOMORAN system dictionary is loaded by default.
+    :param userdic: The path to the user dictionary.
+
+        This enables the user to enter custom tokens or phrases, that are mandatorily assigned to tagged as a particular POS.
+        Each line of the dictionary file should consist of a token or phrase, followed by a POS tag, which are delimited with a `<tab>` character.
+
+        An example of the file format is as follows:
+
+        .. code-block:: python
+
+            바람과 함께 사라지다	NNG
+            바람과 함께	NNP
+            자연어	NNG
+
+        If a particular POS is not assigned for a token or phrase, it will be tagged as NNP.
+    :param modelpath: The path to the Komoran HMM model.
+    :param max_heap_size: Maximum memory usage limitation (Megabyte) :py:func:`.init_jvm`.
     """
 
     def pos(self, phrase, flatten=True, join=False):
@@ -62,12 +57,25 @@ class Komoran():
         :param join: If True, returns joined sets of morph and tag.
         """
 
-        if sys.version_info[0] < 3:
-            result = self.jki.analyzeMorphs(phrase, self.dicpath)
-        else:
-            result = self.jki.analyzeMorphs3(phrase, self.dicpath).toString()
+        sentences = phrase.split('\n')
+        morphemes = []
+        if not sentences:
+            return morphemes
 
-        return parse(result, flatten, join=join)
+        for sentence in sentences:
+            if not sentence:
+                continue
+            result = self.jki.analyze(sentence).getTokenList()
+            result = [(token.getMorph(), token.getPos()) for token in result]
+
+            if join:
+                result = ['{}/{}'.format(morph, pos) for morph, pos in result]
+
+            morphemes.append(result)
+
+        if flatten:
+            return sum(morphemes, [])
+        return morphemes
 
     def nouns(self, phrase):
         """Noun extractor."""
@@ -80,20 +88,24 @@ class Komoran():
 
         return [s for s, t in self.pos(phrase)]
 
-    def __init__(self, jvmpath=None, dicpath=None):
+    def __init__(self, jvmpath=None, userdic=None, modelpath=None, max_heap_size=1024):
         if not jpype.isJVMStarted():
-            jvm.init_jvm(jvmpath)
-        komoranJavaPackage = jpype.JPackage('kr.lucypark.komoran')
-        KomoranInterfaceJavaClass = komoranJavaPackage.KomoranInterface
-        try:
-            self.jki = KomoranInterfaceJavaClass()
-        except TypeError:  # Package kr.lucypark.komoran.KomoranInterface is not Callable
-            raise IOError("Cannot access komoran-dic. Please leave an issue at https://github.com/konlpy/konlpy/issues")
+            jvm.init_jvm(jvmpath, max_heap_size)
 
-        if dicpath:
-            self.dicpath = dicpath
+        if modelpath:
+            self.modelpath = modelpath
         else:
             # FIXME: Cannot execute without sudoing
             # java.lang.NoClassDefFoundErrorPyRaisable: java.lang.NoClassDefFoundError: kr/co/shineware/nlp/komoran/core/analyzer/Komoran
-            self.dicpath = os.path.join(utils.installpath, 'java', 'data', 'models')
-            self.tagset = utils.read_json('%s/data/tagset/komoran.json' % utils.installpath)
+            self.modelpath = os.path.join(utils.installpath, 'java', 'data', 'models')
+        self.tagset = utils.read_json('%s/data/tagset/komoran.json' % utils.installpath)
+
+        komoranJavaPackage = jpype.JPackage('kr.co.shineware.nlp.komoran.core')
+
+        try:
+            self.jki = komoranJavaPackage.Komoran(self.modelpath)
+        except TypeError:  # Package kr.lucypark.komoran.KomoranInterface is not Callable
+            raise IOError("Cannot access komoran-dic. Please leave an issue at https://github.com/konlpy/konlpy/issues")
+
+        if userdic:
+            self.jki.setUserDic(userdic)

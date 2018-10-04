@@ -6,6 +6,15 @@
 *.project
 *.pyc
 *.settings/
+.cache
 build/
 dist/
+<<<<<<< HEAD
 docs/_build/
+<<<<<<< master
+data/
+=======
+=======
+docs/_build/
+>>>>>>> parent of 82368b6... update experimental streaming interface from koshort
+>>>>>>> Revert "update experimental streaming interface from koshort"
