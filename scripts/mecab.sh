@@ -27,6 +27,12 @@ else
     exit 0
 fi
 
+if hash "sudo" &>/dev/null; then
+    sudo="sudo"
+else
+    sudo=""
+fi
+
 # install mecab-ko
 cd /tmp
 curl -LO https://bitbucket.org/eunjeon/mecab-ko/downloads/mecab-0.996-ko-0.9.2.tar.gz
@@ -35,18 +41,60 @@ cd mecab-0.996-ko-0.9.2
 ./configure
 make
 make check
-sudo make install
+$sudo make install
 
 # install mecab-ko-dic
 ## install requirement automake1.11
 # TODO: if not [automake --version]
-cd /tmp
-curl -LO http://ftpmirror.gnu.org/automake/automake-1.11.tar.gz
-tar -zxvf automake-1.11.tar.gz
-cd automake-1.11
-./configure
-make
-sudo make install
+if [ "$os" == "Linux" ]; then
+    if [ "$(grep -Ei 'debian|buntu|mint' /etc/*release)" ]; then
+        $sudo apt-get update && $sudo apt-get install -y automake
+    elif [ "$(grep -Ei 'fedora|redhat' /etc/*release)" ]; then
+        $sudo yum install -y automake
+    else
+        ##
+        # Autoconf
+        #
+        # stage directory
+        builddir=`mktemp -d` && cd $builddir
+
+        # download and extract source
+        curl -LO http://ftpmirror.gnu.org/autoconf/autoconf-latest.tar.gz
+        tar -zxvf autoconf-*
+
+        # configure, make, install --prefix=/usr/local
+        cd autoconf*
+        ./configure
+        make
+        $sudo make install
+
+        # erase stage dir
+        rm -rf $builddir
+
+
+        ##
+        # Automake
+        #
+        # stage directory
+        builddir=`mktemp -d` && cd $builddir
+
+        # download and extract source
+        curl -LO http://ftpmirror.gnu.org/automake/automake-1.11.tar.gz
+        tar -zxvf automake-1.11.tar.gz
+
+        # configure, make, install --prefix=/usr/local
+        cd automake-1.11
+        ./configure
+        make
+        $sudo make install
+
+        # erase stage dir
+        rm -rf $builddir
+    fi
+
+elif [ "$os" == "Darwin" ]; then
+    brew install automake
+fi
 
 cd /tmp
 curl -LO https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.1.1-20180720.tar.gz
@@ -55,8 +103,8 @@ cd mecab-ko-dic-2.1.1-20180720
 ./autogen.sh
 ./configure
 make
-sudo sh -c 'echo "dicdir=/usr/local/lib/mecab/dic/mecab-ko-dic" > /usr/local/etc/mecabrc'
-sudo make install
+$sudo sh -c 'echo "dicdir=/usr/local/lib/mecab/dic/mecab-ko-dic" > /usr/local/etc/mecabrc'
+$sudo make install
 
 # install mecab-python
 cd /tmp
@@ -64,10 +112,10 @@ git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
 cd mecab-python-0.996
 
 python setup.py build
-python setup.py install
+$sudo python setup.py install
 
 if hash "python3" &>/dev/null
 then
     python3 setup.py build
-    python3 setup.py install
+    $sudo python3 setup.py install
 fi
