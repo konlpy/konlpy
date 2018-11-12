@@ -10,4 +10,5 @@
 의미	ncpa
 이신목	nqpc
 자동사	ncn
+트랜잭션 ncn
 ·	sy
