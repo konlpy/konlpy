@@ -102,6 +102,7 @@ install_automake(){
 }
 
 install_mecab_ko_dic(){
+    echo "Install mecab-ko-dic"
     cd /tmp
     curl -LO https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.1.1-20180720.tar.gz
     tar -zxvf mecab-ko-dic-2.1.1-20180720.tar.gz
@@ -115,10 +116,10 @@ install_mecab_ko_dic(){
 
 install_mecab_python(){
     cd /tmp
-    git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
-    cd mecab-python-0.996
-    $python setup.py build
-    $sudo $python setup.py install
+    if [[ ! -d "mecab-python-0.996" ]]; then
+        git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
+    fi
+    pip install /tmp/mecab-python-0.996
 }
 
 
@@ -147,6 +148,5 @@ else
     echo "Install mecab-python"
     install_mecab_python
 fi
-    echo "Using $(which python)"
 
 echo "Done."
