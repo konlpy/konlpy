@@ -15,8 +15,9 @@
 # limitations under the License.
 #
 
-
+python=$(which python)
 os=$(uname)
+
 if [ $os == "Linux" ]; then
     echo "Installing MeCab-ko"
 elif [ $os == "Darwin" ]; then
@@ -111,11 +112,5 @@ cd /tmp
 git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
 cd mecab-python-0.996
 
-python setup.py build
-$sudo python setup.py install
-
-if hash "python3" &>/dev/null
-then
-    python3 setup.py build
-    $sudo python3 setup.py install
-fi
+$python setup.py build
+$sudo $python setup.py install
