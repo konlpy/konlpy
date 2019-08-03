@@ -115,10 +115,11 @@ install_mecab_ko_dic(){
 }
 
 install_mecab_python(){
-    cd /tmp
+    pushd /tmp
     if [[ ! -d "mecab-python-0.996" ]]; then
         git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
     fi
+    popd
     pip install /tmp/mecab-python-0.996
 }
 
