@@ -1,4 +1,4 @@
-JPype1>=0.5.7
+JPype1==0.6.3
 colorama
 tweepy
 beautifulsoup4==4.6.0
