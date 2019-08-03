@@ -15,15 +15,15 @@
 # limitations under the License.
 #
 
-python=$(which python)
-os=$(uname)
+# Set mecab related variable(s)
+mecab_dicdir="/usr/local/lib/mecab/dic/mecab-ko-dic"
+
+# Exit as soon as we fail
+set -e
 
 # Determine OS
-if [ $os == "Linux" ]; then
-    echo "Installing MeCab-ko"
-elif [ $os == "Darwin" ]; then
-    echo "Installing MeCab-ko"
-else
+os=$(uname)
+if [[ ! $os == "Linux" ]] && [[ ! $os == "Darwin" ]]; then
     echo "This script does not support this OS."
     echo "Try consulting https://github.com/konlpy/konlpy/blob/master/scripts/mecab.sh"
     exit 0
@@ -122,7 +122,31 @@ install_mecab_python(){
 }
 
 
-install_automake
-install_mecab_ko
-install_mecab_ko_dic
-install_mecab_python
+if ! hash "automake" &>/dev/null; then
+    echo "Installing automake (A dependency for mecab-ko)"
+    install_automake
+fi
+
+if hash "mecab" &>/dev/null; then
+    echo "mecab-ko is already installed"
+else
+    echo "Install mecab-ko-dic"
+    install_mecab_ko
+fi
+
+if [[ -d $mecab_dicdir ]]; then
+    echo "mecab-ko-dic is already installed"
+else
+    echo "Install mecab-ko-dic"
+    install_mecab_ko_dic
+fi
+
+if [[ $(python -c 'import pkgutil; print(1 if pkgutil.find_loader("MeCab") else 0)') == "0" ]]; then
+    echo "mecab-python is already installed"
+else
+    echo "Install mecab-python"
+    install_mecab_python
+fi
+    echo "Using $(which python)"
+
+echo "Done."
