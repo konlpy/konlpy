@@ -31,6 +31,10 @@ public class OktInterface {
         return list;
     }
 
+    public CharSequence normalize(String string) {
+        return OpenKoreanTextProcessorJava.normalize(string);
+    }
+
     public List<CharSequence> phrases(String string) {
         final CharSequence charSeq = string;
         final Seq<KoreanToken> tokens = OpenKoreanTextProcessorJava.tokenize(charSeq);
