@@ -1,5 +1,0 @@
-JPype1-py3>=0.5.5.1
-colorama
-tweepy>=3.7.0
-beautifulsoup4==4.6.0
-lxml>=4.1.0
