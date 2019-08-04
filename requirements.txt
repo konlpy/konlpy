@@ -2,4 +2,5 @@ JPype1>=0.7.0
 beautifulsoup4==4.6.0
 colorama
 lxml>=4.1.0
+numpy>=1.6
 tweepy
