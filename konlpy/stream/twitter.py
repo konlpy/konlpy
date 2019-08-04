@@ -216,7 +216,7 @@ class TwitterStreamer(BaseStreamer):
     def job(self):
         # FIXME: argument named "async" cannot be used in python3.7
         try:
-            self.streamer.filter(track=self.word_list, async=self.is_async)
+            self.streamer.filter(track=self.word_list, is_async=self.is_async)
         except ValueError:
             raise ValueError("Please provide decent access token, secret, consumer key and secret")
 
