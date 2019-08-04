@@ -14,3 +14,8 @@ except ImportError:
 
 from konlpy.tag._okt import Twitter
 from konlpy.tag._okt import Okt
+
+try:
+    from konlpy.tag._khaiii import Khaiii
+except ImportError:
+    pass
