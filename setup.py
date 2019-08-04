@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import os
-import sys
 import platform
 from setuptools import find_packages, setup
 
@@ -24,10 +23,7 @@ def requirements():
         with open(os.path.join(os.path.dirname(__file__), reqfile)) as f:
             return f.read().splitlines()
 
-    if sys.version_info >= (3, ):
-        return _openreq('requirements-py3.txt')
-    else:
-        return _openreq('requirements.txt')
+    return _openreq('requirements.txt')
 
 
 about = get_about()

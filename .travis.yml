@@ -5,8 +5,7 @@ python:
     - "3.6"
 
 before_install:
-    - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then pip install -r requirements.txt; fi
-    - if [[ $TRAVIS_PYTHON_VERSION == 3* ]]; then pip install -r requirements-py3.txt; fi
+    - pip install -r requirements.txt
     - pip install coveralls
     - pip install pytest-cov
 
