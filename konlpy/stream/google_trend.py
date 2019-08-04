@@ -161,7 +161,9 @@ class GoogleTrendStreamer(BaseStreamer):
             if(trend['date'] == target_date):
                 return trend['trendingSearches'], trend['date']
 
-        return trends_list[0]['trendingSearches'], trends_list[0]['date']  # default, most recently
+        if trends_list:
+            return trends_list[0]['trendingSearches'], trends_list[0]['date']  # default, most recently
+        return [], []
 
 
 def main():

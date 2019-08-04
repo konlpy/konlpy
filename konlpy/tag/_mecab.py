@@ -110,3 +110,13 @@ class Mecab():
             raise Exception('The MeCab dictionary does not exist at "%s". Is the dictionary correctly installed?\nYou can also try entering the dictionary path when initializing the Mecab class: "Mecab(\'/some/dic/path\')"' % dicpath)
         except NameError:
             raise Exception('Install MeCab in order to use it: http://konlpy.org/en/latest/install/')
+
+    def __setstate__(self, state):
+        """just reinitialize."""
+
+        self.__init__(*state['args'])
+
+    def __getstate__(self):
+        """store arguments."""
+
+        return {'args': self.args}
