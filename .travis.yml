@@ -19,4 +19,4 @@ after_success:
     - coveralls
 
 script:
-    - coverage run --source=konlpy -m py.test -k 'not (komoran)'
+    - coverage run --source=konlpy -m py.test -k 'not (komoran or mecab)'
