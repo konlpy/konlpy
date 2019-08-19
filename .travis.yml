@@ -8,6 +8,8 @@ before_install:
     - pip install -r requirements.txt
     - pip install coveralls
     - pip install pytest-cov
+    - sudo apt-get install curl
+    - bash <(curl -s https://raw.githubusercontent.com/shurain/konlpy/khaiii/scripts/khaiii.sh)
 
 install:
     - python setup.py -q install

@@ -34,6 +34,13 @@ Ubuntu
         $ sudo apt-get install curl
         $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
 
+4. Install Khaiii (*optional*)
+
+   .. sourcecode:: bash
+
+        $ sudo apt-get install curl
+        $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/khaiii.sh))
+
 
 CentOS
 ------
@@ -49,7 +56,7 @@ CentOS
         $ sudo easy_install pip
 
         $ wget https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz  # Python 3.x
-        $ tar xf Python-3.* 
+        $ tar xf Python-3.*
         $ cd Python-3.*
         $ ./configure
         $ make # Build
@@ -69,6 +76,13 @@ CentOS
         $ sudo yum install curl
         $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
 
+4. Install Khaiii (*optional*)
+
+   .. sourcecode:: bash
+
+        $ sudo yum install curl
+        $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/khaiii.sh))
+
 
 Mac OS
 ------
@@ -85,6 +99,12 @@ Mac OS
     .. sourcecode:: bash
 
         $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
+
+3. Install Khaiii (*optional*)
+
+   .. sourcecode:: bash
+
+        $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/khaiii.sh))
 
 
 Windows
@@ -119,3 +139,4 @@ Windows
 .. warning::
 
     - KoNLPy's ``Mecab()`` class is not supported on Windows machines.
+    - KoNLPy's ``Khaiii()`` class is not supported on Windows machines.
