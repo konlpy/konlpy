@@ -119,22 +119,6 @@ Please note that
 because it gives the community feedback as well as ideas.
 Don't hesitate to ask.
 
-.. raw:: html
-
-    <iframe id="forum_embed"
-      src="javascript:void(0)"
-      scrolling="no"
-      frameborder="0"
-      width="660"
-      height="400">
-    </iframe>
-    <script type="text/javascript">
-      document.getElementById('forum_embed').src =
-         'https://groups.google.com/forum/embed/?place=forum/konlpy'
-         + '&showsearch=true&showpopout=true&showtabs=false'
-         + '&parenturl=' + encodeURIComponent(window.location.href);
-    </script>
-
 .. _start:
 
 Getting started

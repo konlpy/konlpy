@@ -33,17 +33,19 @@ tag Package
 :class:`Mecab` Class
 --------------------
 
-.. warning:: ``Mecab()`` is not supported on ``Windows 7``.
+.. warning:: ``Mecab()`` is not supported on ``Windows``.
 
 .. automodule:: konlpy.tag._mecab
     :members:
     :undoc-members:
     :show-inheritance:
 
-:class:`Twitter` Class
+:class:`Okt` Class
 ----------------------
 
-.. automodule:: konlpy.tag._twitter
+.. warning:: ``Twitter()`` has changed to ``Okt()`` since v0.5.0.
+
+.. automodule:: konlpy.tag._okt
     :members:
     :undoc-members:
     :show-inheritance:

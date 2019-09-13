@@ -1,15 +1,18 @@
-__title__ = 'KoNLPy'
-__version__ = '0.4.4'
-__author__ = 'Lucy Park'
-__license__ = 'GPL v3'
-__copyright__ = 'Copyright 2015 Lucy Park'
+# -*- coding: utf-8 -*-
+from __future__ import absolute_import
+
+from konlpy.about import *
 
 try:
-    from .downloader import download
+    from konlpy.downloader import download
 except IOError:
     pass
-from .jvm import init_jvm
-from . import corpus
-from . import data
-from . import internals
-from . import tag
+
+from konlpy.jvm import init_jvm
+from konlpy import (
+    corpus,
+    data,
+    stream,
+    internals,
+    tag
+)

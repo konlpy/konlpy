@@ -1,9 +1,8 @@
-#! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
+from konlpy import utils
 
 import os
-
-from . import utils
 
 
 class CorpusLoader():

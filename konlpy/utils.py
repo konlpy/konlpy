@@ -1,12 +1,14 @@
-#! /usr/bin/python
 # -*- coding: utf-8 -*-
-
+from __future__ import absolute_import
 from __future__ import unicode_literals
+
 import io
 import json
 import os
+import re
 import pprint as pp
 import sys
+from threading import Thread
 
 
 installpath = os.path.dirname(os.path.realpath(__file__))
@@ -78,7 +80,7 @@ def concordance(phrase, text, show=False):
 
 
 if sys.version_info[0] < 3:
-    from . import csvutils
+    from konlpy import csvutils
 
     def csvread(f, encoding='utf-8'):
         """Reads a csv file.
@@ -119,7 +121,7 @@ def partition(list_, indices):
     return [list_[i:j] for i, j in zip([0] + indices, indices + [None])]
 
 if sys.version_info[0] < 3:
-    def pprint(obj):
+    def pprint(obj, **kwargs):
         """Unicode pretty printer.
 
         .. code-block:: python
@@ -129,7 +131,13 @@ if sys.version_info[0] < 3:
             [u'Print', u'\uc720\ub2c8\ucf54\ub4dc', u'easily']
             >>> konlpy.utils.pprint([u"Print", u"유니코드", u"easily"])
             ['Print', '유니코드', 'easily']
+
+        :param stream: Option to stream to a particular destination. Can be either sys.stdout (default) or sys.stderr. See #179 for details.
         """
+
+        # quick patch to use sys.stderr stream
+        if 'stream' in kwargs.keys():
+            return UnicodePrinter(stream=kwargs['stream']).pprint(obj)
         return UnicodePrinter().pprint(obj)
 else:
     pprint = pp.pprint
@@ -190,3 +198,57 @@ def read_json(filename, encoding='utf-8'):
     """JSON file reader."""
     with io.open(filename, 'r', encoding=encoding) as f:
         return json.load(f)
+
+
+def delete_links(string):
+    """Delete links from input string
+
+    Args:
+        string (str): string to delete links
+
+    Returns:
+        str: string without links
+    """
+
+    return re.sub(r'http\S+', '', string)
+
+
+def delete_mentions(string):
+    """Delete at marks from input string
+
+    Args:
+        string (str): string to delete at marks
+
+    Returns:
+        str: string without at marks.
+    """
+
+    return re.sub(r'@\S+', '', string)
+
+
+class PropagatingThread(Thread):
+    """PropagatingThread is just a fancy wrapper for Thread to manage exceptions.
+
+    Raises:
+        self.exception: Exception defined in higher-level.
+
+    Returns:
+        self.ret: Thread target object.
+    """
+
+    def run(self):
+        self.exception = None
+        try:
+            if hasattr(self, '_Thread__target'):
+                # Thread uses name mangling prior to Python 3.
+                self.ret = self._Thread__target(*self._Thread__args, **self._Thread__kwargs)
+            else:
+                self.ret = self._target(*self._args, **self._kwargs)
+        except BaseException as e:
+            self.exception = e
+
+    def join(self):
+        super(PropagatingThread, self).join()
+        if self.exception:
+            raise self.exception
+        return self.ret

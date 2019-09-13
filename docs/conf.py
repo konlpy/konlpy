@@ -29,7 +29,7 @@ sys.modules.update((mod, Mock) for mod in ['jpype'])
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 
 sys.path.insert(0, os.path.abspath('..'))
-from description import __version__
+from konlpy.about import __version__
 
 # -- General configuration -----------------------------------------------------
 

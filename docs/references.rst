@@ -77,6 +77,7 @@ Others
 Corpora
 -------
 
+- `Korean Universal Dependency (UD) Treebank <https://github.com/UniversalDependencies/UD_Korean>`_, 2013.
 - Korea University Korean Corpus, 1995.
     - 10M tokens of Korean of 1970-90s
 - `HANTEC 2.0 <http://www.kristalinfo.com/download/#hantec>`_, KISTI & 충남대, 1998-2003.

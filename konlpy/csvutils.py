@@ -1,9 +1,15 @@
-#! /usr/bin/python
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
 
+import sys
 import csv
 import codecs
-import cStringIO
+
+# Python 2 & 3 Compatibility
+if sys.version_info[0] >= 3:
+    from io import StringIO as cStringIO
+else:
+    import cStringIO
 
 
 def _stringify(s, encoding="utf-8"):
