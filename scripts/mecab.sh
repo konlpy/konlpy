@@ -64,7 +64,8 @@ install_automake(){
 
             # download and extract source
             curl -LO http://ftpmirror.gnu.org/autoconf/autoconf-latest.tar.gz
-            tar -zxvf autoconf-*
+            tar -zxvf autoconf-latest.tar.gz
+            rm autoconf-latest.tar.gz
 
             # configure, make, install --prefix=/usr/local
             cd autoconf*
