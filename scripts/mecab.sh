@@ -64,7 +64,8 @@ install_automake(){
 
             # download and extract source
             curl -LO http://ftpmirror.gnu.org/autoconf/autoconf-latest.tar.gz
-            tar -zxvf autoconf-*
+            tar -zxvf autoconf-latest.tar.gz
+            rm autoconf-latest.tar.gz
 
             # configure, make, install --prefix=/usr/local
             cd autoconf*
@@ -109,6 +110,7 @@ install_mecab_ko_dic(){
     cd mecab-ko-dic-2.1.1-20180720
     ./autogen.sh
     ./configure
+    $sudo ldconfig
     make
     $sudo sh -c 'echo "dicdir=/usr/local/lib/mecab/dic/mecab-ko-dic" > /usr/local/etc/mecabrc'
     $sudo make install
