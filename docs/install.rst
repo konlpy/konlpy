@@ -119,3 +119,19 @@ Windows
 .. warning::
 
     - KoNLPy's ``Mecab()`` class is not supported on Windows machines.
+
+
+Docker
+------
+
+If you are familiar to docker, it is easy to install `konlpy` and `java-1.7-openjdk` on `python:3` image.
+
+    .. sourcecode:: docker
+
+        > FROM python:3
+
+        > ENV JAVA_HOME /usr/lib/jvm/java-1.7-openjdk/jre
+        > RUN apt-get update && apt-get install -y g++ default-jdk
+        > RUN pip install konlpy
+
+        > # Write left part as you want
