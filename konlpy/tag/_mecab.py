@@ -103,6 +103,7 @@ class Mecab():
         return [s for s, t in tagged if t.startswith('N')]
 
     def __init__(self, dicpath='/usr/local/lib/mecab/dic/mecab-ko-dic'):
+        self.dicpath = dicpath
         try:
             self.tagger = Tagger('-d %s' % dicpath)
             self.tagset = utils.read_json('%s/data/tagset/mecab.json' % utils.installpath)
@@ -114,9 +115,9 @@ class Mecab():
     def __setstate__(self, state):
         """just reinitialize."""
 
-        self.__init__(*state['args'])
+        self.__init__(dicpath=state['dicpath'])
 
     def __getstate__(self):
         """store arguments."""
 
-        return {'args': self.args}
+        return {'dicpath': self.dicpath}
