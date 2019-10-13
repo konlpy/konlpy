@@ -41,7 +41,7 @@ pypi:
 	python setup.py bdist_wheel upload -r pypi
 
 java:
-	ant compile
+	ant clean compile
 
 jcc:
 	python -m jcc \

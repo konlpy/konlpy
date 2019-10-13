@@ -10,6 +10,11 @@
             <include name="*.jar" />
         </fileset>
     </path>
+    <target name="clean">
+        <delete failonerror="false">
+            <fileset dir="${bin}" includes="**/*"/>
+        </delete>
+    </target>
     <target name="compile">
         <mkdir dir="${bin}"/>
         <javac srcdir="${src}"
