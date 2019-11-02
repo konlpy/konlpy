@@ -48,3 +48,7 @@ def test_tkorean_phrases(tkorean_instance, string):
 def test_tkorean_morphs(tkorean_instance, string):
     assert tkorean_instance.morphs(string) ==\
         [u'\uaf43', u'\uac00\ub9c8', u'\ud0c0\uace0', u'\uac15\ub0a8', u'\uac00\ub098', u'\uc6ac', u'\u314b\u314b\u314b\u314b']
+
+def test_tkorean_normalize(tkorean_instance, string):
+    assert tkorean_instance.normalize(string) ==\
+        u'\uaf43\uac00\ub9c8 \ud0c0\uace0 \uac15\ub0a8 \uac00\ub098\uc694\u314b\u314b\u314b'
