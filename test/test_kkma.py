@@ -19,7 +19,7 @@ def test_kkma_nouns(kkma_instance, string):
         [u'\uaf43\uac00\ub9c8', u'\ud0c0\uace0', u'\uac15\ub0a8',
          u'\uac00\uc790']
 
-def test_kkma_nouns(kkma_instance, string):
+def test_kkma_morphs(kkma_instance, string):
     assert kkma_instance.morphs(string) ==\
         [u'\uaf43\uac00\ub9c8',
          u'\ud0c0\uace0',
