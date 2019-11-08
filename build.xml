@@ -3,11 +3,18 @@
     <property name="bin" value="konlpy/java/bin" />
     <property name="lib" value="konlpy/java" />
     <property name="src" value="konlpy/java/src" />
+    <property name="ant.build.javac.source" value="1.7" />
+    <property name="ant.build.javac.target" value="1.7" />
     <path id="master-classpath">
         <fileset dir="${lib}">
             <include name="*.jar" />
         </fileset>
     </path>
+    <target name="clean">
+        <delete failonerror="false">
+            <fileset dir="${bin}" includes="**/*"/>
+        </delete>
+    </target>
     <target name="compile">
         <mkdir dir="${bin}"/>
         <javac srcdir="${src}"
