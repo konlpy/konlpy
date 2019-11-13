@@ -4,69 +4,68 @@ Installation
 .. note::
 
     For troubleshooting information, see these pages:
-    `Linux <https://github.com/konlpy/konlpy/issues?q=label%3Alinux>`_.
-    `Mac OS <https://github.com/konlpy/konlpy/issues?q=label%3A"mac+os">`_.
-    `Windows <https://github.com/konlpy/konlpy/issues?q=label%3Awindows>`_.
+    `Linux <https://github.com/konlpy/konlpy/issues?q=label%3AOS%2FLinux>`_.
+    `Mac OS <https://github.com/konlpy/konlpy/issues?q=label%3AOS%2FMacOS>`_.
+    `Windows <https://github.com/konlpy/konlpy/issues?q=label%3AOS%2FWindows>`_.
     Please record a `"New Issue" <https://github.com/konlpy/konlpy/issues/new>`_ if you have an error that is not listed.
+
+.. Warning::
+
+    Python 2 End of Life Announced as January 1st 2020.
+
+    This page covers Python 3 only.  The last-known version for Python 2 is v0.5.2, install it via `pip install konlpy==v0.5.2`.
 
 
 Ubuntu
 ------
 
+Supported: Xenial(16.04.3 LTS), Bionic(18.04.3 LTS), Disco(19.04), Eoan(19.10)
+
 1. Install dependencies
 
     .. sourcecode:: bash
 
-        # Install Java 1.7 or up
-        $ sudo apt-get install g++ openjdk-7-jdk python-dev python3-dev
+        # Install Java 1.8 or up
+        $ sudo apt-get install g++ openjdk-8-jdk python3-dev python3-pip curl
 
 2. Install KoNLPy
 
     .. sourcecode:: bash
 
-        $ pip install konlpy        # Python 2.x
-        $ pip3 install konlpy       # Python 3.x
+        $ python3 -m pip install --upgrade pip
+        $ python3 -m pip install konlpy       # Python 3.x
 
 3. Install MeCab (*optional*)
 
     .. sourcecode:: bash
 
-        $ sudo apt-get install curl
+        $ sudo apt-get install curl git
         $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
 
 
 CentOS
 ------
 
+Supported: CentOS 7, 8
+
 1. Install dependencies
 
     .. sourcecode:: bash
 
-        $ sudo yum install gcc-c++ java-1.7.0-openjdk-devel python-devel
-
-        $ wget http://peak.telecommunity.com/dist/ez_setup.py               # Python 2.x
-        $ sudo python ez_setup.py
-        $ sudo easy_install pip
-
-        $ wget https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz  # Python 3.x
-        $ tar xf Python-3.* 
-        $ cd Python-3.*
-        $ ./configure
-        $ make # Build
-        $ sudo make altinstall
+        $ sudo yum install gcc-c++ java-1.8.0-openjdk-devel python3 python3-devel python3-pip make diffutils
 
 2. Install KoNLPy
 
     .. sourcecode:: bash
 
-        $ pip install konlpy        # Python 2.x
-        $ pip3.4 install konlpy     # Python 3.x
+        $ python3 -m pip install --upgrade pip
+        $ python3 -m pip install konlpy     # Python 3.x
 
 3. Install MeCab (*optional*)
 
     .. sourcecode:: bash
 
-        $ sudo yum install curl
+        $ sudo yum install curl git
         $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
 
 
@@ -77,8 +76,8 @@ Mac OS
 
     .. sourcecode:: bash
 
-       $ pip install konlpy         # Python 2.x
-       $ pip3 install konlpy        # Python 3.x
+       $ python3 -m pip install --upgrade pip
+       $ python3 -m pip install konlpy        # Python 3.x
 
 2. Install MeCab (*optional*)
 

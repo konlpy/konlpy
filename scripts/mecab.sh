@@ -36,6 +36,32 @@ else
     sudo=""
 fi
 
+# Determine python
+# TODO: Prefer python3 and Respect pyenv
+python="python3"
+if hash "pyenv" &>/dev/null; then
+    python="python"
+fi
+
+# Determine python site location are writable.
+check_python_site_location_is_writable(){
+    $python - <<EOF
+import site, os
+found = False
+for dir in site.getsitepackages():
+    if not os.path.isdir(dir):
+        continue
+    if os.access(dir, os.W_OK | os.X_OK):
+        found = True
+        break
+print(1 if found else 0)
+EOF
+}
+at_user_site=""
+if [[ "$(check_python_site_location_is_writable)" == "0" ]]; then
+    at_user_site="--user"
+fi
+
 install_mecab_ko(){
     cd /tmp
     curl -LO https://bitbucket.org/eunjeon/mecab-ko/downloads/mecab-0.996-ko-0.9.2.tar.gz
@@ -54,7 +80,7 @@ install_automake(){
         if [ "$(grep -Ei 'debian|buntu|mint' /etc/*release)" ]; then
             $sudo apt-get update && $sudo apt-get install -y automake
         elif [ "$(grep -Ei 'fedora|redhat' /etc/*release)" ]; then
-            $sudo yum install -y automake
+            $sudo yum install -y automake diffutils make
         else
             ##
             # Autoconf
@@ -98,6 +124,11 @@ install_automake(){
         fi
 
     elif [ "$os" == "Darwin" ]; then
+        if [[ $(command -v brew) == "" ]]; then
+            echo "This script require Homebrew!"
+            echo "Try https://brew.sh/"
+            exit 0
+        fi
         brew install automake
     fi
 }
@@ -110,7 +141,10 @@ install_mecab_ko_dic(){
     cd mecab-ko-dic-2.1.1-20180720
     ./autogen.sh
     ./configure
-    $sudo ldconfig
+    if [[ $os == "Linux" ]]; then
+        mecab-config --libs-only-L | $sudo tee /etc/ld.so.conf.d/mecab.conf  # XXX: Resolve #271, #182, #133
+        $sudo ldconfig
+    fi
     make
     $sudo sh -c 'echo "dicdir=/usr/local/lib/mecab/dic/mecab-ko-dic" > /usr/local/etc/mecabrc'
     $sudo make install
@@ -122,7 +156,7 @@ install_mecab_python(){
         git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
     fi
     popd
-    pip install /tmp/mecab-python-0.996
+    $python -m pip install $at_user_site /tmp/mecab-python-0.996
 }
 
 
@@ -145,7 +179,7 @@ else
     install_mecab_ko_dic
 fi
 
-if [[ $(python -c 'import pkgutil; print(1 if pkgutil.find_loader("MeCab") else 0)') == "1" ]]; then
+if [[ $($python -c 'import pkgutil; print(1 if pkgutil.find_loader("MeCab") else 0)') == "1" ]]; then
     echo "mecab-python is already installed"
 else
     echo "Install mecab-python"
