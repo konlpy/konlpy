@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KoNLPy 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-03 22:53+0900\n"
+"POT-Creation-Date: 2019-11-13 19:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../api.rst:2
 msgid "API"
@@ -42,8 +42,7 @@ msgstr ""
 #: konlpy.tag._kkma.Kkma konlpy.tag._kkma.Kkma.pos konlpy.tag._komoran.Komoran
 #: konlpy.tag._komoran.Komoran.pos konlpy.tag._mecab.Mecab
 #: konlpy.tag._mecab.Mecab.pos konlpy.tag._okt.Okt konlpy.tag._okt.Okt.pos
-#: konlpy.utils.concordance konlpy.utils.csvread konlpy.utils.csvwrite
-#: konlpy.utils.partition konlpy.utils.pprint of
+#: konlpy.utils.concordance konlpy.utils.partition of
 msgid "Parameters"
 msgstr ""
 
@@ -72,6 +71,14 @@ msgstr ""
 msgid "Format type of resource."
 msgstr ""
 
+#: konlpy.data.listdir:1 of
+msgid "list konlpy default data directory."
+msgstr ""
+
+#: konlpy.data.clear:1 of
+msgid "clear the konlpy output data directory"
+msgstr ""
+
 #: konlpy.data.path:1 of
 msgid ""
 "A list of directories where the KoNLPy data package might reside. These "
@@ -87,7 +94,11 @@ msgstr ""
 msgid "A path pointer that identifies a file by an absolute path."
 msgstr ""
 
-#: konlpy.data.PathPointer:1 konlpy.downloader.Downloader:1 of
+#: konlpy.corpus.CorpusLoader:1 konlpy.data.CorpusReader:1
+#: konlpy.data.PathPointer:1 konlpy.data.StringWriter:1
+#: konlpy.downloader.Downloader:1 konlpy.tag._hannanum.Hannanum:1
+#: konlpy.tag._kkma.Kkma:1 konlpy.tag._komoran.Komoran:1
+#: konlpy.tag._mecab.Mecab:1 konlpy.tag._okt.Okt:1 of
 msgid "Bases: :class:`object`"
 msgstr ""
 
@@ -95,6 +106,12 @@ msgstr ""
 msgid ""
 "An abstract base class for path pointers. One subclass exists: 1. "
 "``FileSystemPathPointer``: Identifies a file by an absolute path."
+msgstr ""
+
+#: konlpy.data.CorpusReader.read:1 of
+msgid ""
+"read method reads all files included in items attr and save it into "
+"corpus dictionary."
 msgstr ""
 
 #: ../../api/konlpy.rst:21
@@ -107,19 +124,19 @@ msgid ""
 "download packages."
 msgstr ""
 
-#: konlpy.downloader.Downloader.download:1 of
+#: konlpy.downloader.Downloader.download:1 konlpy.downloader.download:1 of
 msgid ""
 "The KoNLPy data downloader. With this module you can download corpora, "
 "models and other data packages that can be used with KoNLPy."
 msgstr ""
 
-#: konlpy.downloader.Downloader.download:8 of
+#: konlpy.downloader.Downloader.download:8 konlpy.downloader.download:8 of
 msgid ""
 "Individual packages can be downloaded by passing a single argument, the "
 "package identifier for the package that should be downloaded:"
 msgstr ""
 
-#: konlpy.downloader.Downloader.download:14 of
+#: konlpy.downloader.Downloader.download:14 konlpy.downloader.download:14 of
 msgid ""
 "To download all packages, simply call ``download`` with the argument "
 "'all':"
@@ -174,12 +191,79 @@ msgstr ""
 msgid ":mod:`utils` Module"
 msgstr ""
 
-#: konlpy.utils.UnicodePrinter:1 of
-msgid "Bases: :class:`pprint.PrettyPrinter`"
+#: konlpy.utils.PropagatingThread:1 of
+msgid "Bases: :class:`threading.Thread`"
 msgstr ""
 
-#: konlpy.utils.UnicodePrinter.format:1 of
-msgid "Overrided method to enable Unicode pretty print."
+#: konlpy.utils.PropagatingThread:1 of
+msgid "PropagatingThread is just a fancy wrapper for Thread to manage exceptions."
+msgstr ""
+
+#: konlpy.utils.PropagatingThread:4 of
+msgid "Raises:"
+msgstr ""
+
+#: konlpy.utils.PropagatingThread:4 of
+msgid "self.exception: Exception defined in higher-level."
+msgstr ""
+
+#: konlpy.utils.PropagatingThread:8 konlpy.utils.delete_links:6
+#: konlpy.utils.delete_mentions:6 of
+msgid "Returns:"
+msgstr ""
+
+#: konlpy.utils.PropagatingThread:7 of
+msgid "self.ret: Thread target object."
+msgstr ""
+
+#: konlpy.utils.PropagatingThread.join:1 of
+msgid "Wait until the thread terminates."
+msgstr ""
+
+#: konlpy.utils.PropagatingThread.join:3 of
+msgid ""
+"This blocks the calling thread until the thread whose join() method is "
+"called terminates -- either normally or through an unhandled exception or"
+" until the optional timeout occurs."
+msgstr ""
+
+#: konlpy.utils.PropagatingThread.join:7 of
+msgid ""
+"When the timeout argument is present and not None, it should be a "
+"floating point number specifying a timeout for the operation in seconds "
+"(or fractions thereof). As join() always returns None, you must call "
+"is_alive() after join() to decide whether a timeout happened -- if the "
+"thread is still alive, the join() call timed out."
+msgstr ""
+
+#: konlpy.utils.PropagatingThread.join:13 of
+msgid ""
+"When the timeout argument is not present or None, the operation will "
+"block until the thread terminates."
+msgstr ""
+
+#: konlpy.utils.PropagatingThread.join:16 of
+msgid "A thread can be join()ed many times."
+msgstr ""
+
+#: konlpy.utils.PropagatingThread.join:18 of
+msgid ""
+"join() raises a RuntimeError if an attempt is made to join the current "
+"thread as that would cause a deadlock. It is also an error to join() a "
+"thread before it has been started and attempts to do so raises the same "
+"exception."
+msgstr ""
+
+#: konlpy.utils.PropagatingThread.run:1 of
+msgid "Method representing the thread's activity."
+msgstr ""
+
+#: konlpy.utils.PropagatingThread.run:3 of
+msgid ""
+"You may override this method in a subclass. The standard run() method "
+"invokes the callable object passed to the object's constructor as the "
+"target argument, if any, with sequential and keyword arguments taken from"
+" the args and kwargs arguments, respectively."
 msgstr ""
 
 #: konlpy.utils.char2hex:1 of
@@ -209,20 +293,32 @@ msgstr ""
 msgid "If ``True``, shows locations of the phrase on the console."
 msgstr ""
 
-#: konlpy.utils.csvread:1 of
-msgid "Reads a csv file."
+#: konlpy.utils.delete_links:1 of
+msgid "Delete links from input string"
 msgstr ""
 
-#: konlpy.utils.csvread:3 of
-msgid "File object."
+#: konlpy.utils.delete_links:4 konlpy.utils.delete_mentions:4 of
+msgid "Args:"
 msgstr ""
 
-#: konlpy.utils.csvwrite:1 of
-msgid "Writes a csv file."
+#: konlpy.utils.delete_links:4 of
+msgid "string (str): string to delete links"
 msgstr ""
 
-#: konlpy.utils.csvwrite:3 of
-msgid "A list of list."
+#: konlpy.utils.delete_links:7 of
+msgid "str: string without links"
+msgstr ""
+
+#: konlpy.utils.delete_mentions:1 of
+msgid "Delete at marks from input string"
+msgstr ""
+
+#: konlpy.utils.delete_mentions:4 of
+msgid "string (str): string to delete at marks"
+msgstr ""
+
+#: konlpy.utils.delete_mentions:7 of
+msgid "str: string without at marks."
 msgstr ""
 
 #: konlpy.utils.hex2char:1 of
@@ -243,16 +339,6 @@ msgstr ""
 
 #: konlpy.utils.partition:4 of
 msgid "Indices to partition the target list."
-msgstr ""
-
-#: konlpy.utils.pprint:1 of
-msgid "Unicode pretty printer."
-msgstr ""
-
-#: konlpy.utils.pprint:11 of
-msgid ""
-"Option to stream to a particular destination. Can be either sys.stdout "
-"(default) or sys.stderr. See #179 for details."
 msgstr ""
 
 #: konlpy.utils.read_json:1 of
@@ -568,5 +654,33 @@ msgstr ""
 #~ "Twitter Korean Text is an open "
 #~ "source Korean tokenizer written in "
 #~ "Scala, developed by Will Hohyon Ryu."
+#~ msgstr ""
+
+#~ msgid "Bases: :class:`pprint.PrettyPrinter`"
+#~ msgstr ""
+
+#~ msgid "Overrided method to enable Unicode pretty print."
+#~ msgstr ""
+
+#~ msgid "Reads a csv file."
+#~ msgstr ""
+
+#~ msgid "File object."
+#~ msgstr ""
+
+#~ msgid "Writes a csv file."
+#~ msgstr ""
+
+#~ msgid "A list of list."
+#~ msgstr ""
+
+#~ msgid "Unicode pretty printer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Option to stream to a particular "
+#~ "destination. Can be either sys.stdout "
+#~ "(default) or sys.stderr. See #179 for"
+#~ " details."
 #~ msgstr ""
 
