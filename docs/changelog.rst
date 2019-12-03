@@ -1,7 +1,30 @@
 Change logs
 ===========
 
+`Version 0.5.2 <https://github.com/konlpy/konlpy/releases/tag/v0.5.2>`_
+-----------------------------------------------------------------------
+
+Released on Dec 3, 2019.
+
+- Added normalize method to Okt [:issue:`100` by :committer:`lifefeel`]
+- Added data acquisition features from Koshort [:issue:`211` by :committer:`nyanye`]
+- Added docker installation steps [:issue:`252` by :committer:`raccoonyy`]
+- Updated Mecab to mecab-0.996-ko-0.9.2 and mecab-ko-dic-2.1.1-20180720 [:issue:`214` by :committer:`rickiepark`]
+- Added Python 2 warning at the install.rst [:issue:`277` by :committer:`minhoryang`]
+- Added methods to make Mecab picklable [:issue:`234` by :committer:`rickiepark`] [:issue:`258` by :committer:`rickiepark`]
+- Added tests for coverage [:issue:`261` by :committer:`minhoryang`] [:issue:`262` by :committer:`minhoryang`]
+- Fixed Komoran not to POS tag empty sentences [:issue:`201` by :committer:`lovit`]
+- Fixed JPype usage by adding numpy as dependency [:issue:`246` by :committer:`e9t`]
+- Fixed to use tweepy 3.7.0+ to avoid collision with Python 3.7+ [:issue:`243` by :committer:`shurain`]
+- Fixed to use JPype 0.7.0+ to remove warning message [:issue:`245` by :committer:`e9t`]
+- Fixed to use lxml 4.1.0+ to avoid installation errors [:issue:`242` by :committer:`shurain`]
+- Fixed stream.google_trend test fail [:issue:`244` by :committer:`shurain`]
+- Fixed by removing .decode in Mecab.pos for Python3 usage [:issue:`108` by :committer:`ty91`]
+- Updated Mecab installation script [:issue:`158` by :committer:`HaebinShin`], [:issue:`247` by :committer:`e9t`], [:issue:`255` by :committer:`HaebinShin`], [:issue:`277` by :committer:`minhoryang`]
+- Lower-bound Java Compile Version [:issue:`259` by :committer:`e9t`]
+
 `Version 0.5.1 <https://github.com/konlpy/konlpy/releases/tag/v0.5.1>`_
+-----------------------------------------------------------------------
 
 Released on Aug 3, 2018.
 
