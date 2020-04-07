@@ -1,7 +1,7 @@
 Running tests
 =============
 
-KoNLPy has tests to evaulate its quality.
+KoNLPy has tests to evaluate its quality.
 To perform a test, use the code below.
 
 .. code-block:: bash

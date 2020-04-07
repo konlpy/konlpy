@@ -123,7 +123,7 @@ Windows
 Docker
 ------
 
-If you are familiar to docker, it is easy to install `konlpy` and `java-1.7-openjdk` on `python:3` image.
+If you are familiar with Docker, it is easy to install `konlpy` and `java-1.7-openjdk` on `python:3` image.
 
     .. sourcecode:: docker
 
