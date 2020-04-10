@@ -10,7 +10,7 @@ We have various NLP applications in our lives. For example:
 - Machine translation (ex: `Google Translate <http://translate.google.com>`_)
 
 And obviously information retrieval systems such as Web search engines.
-For a better understanding of NLP techniques, consider referring the so-called "bibles":
+For a better understanding of NLP techniques, consider referring to the so-called "bibles":
 
 - Jurafsky et al., `Speech and Language Processing <https://www.goodreads.com/book/show/908048>`_, 2nd Edition, 2008.
 - Manning and Schutze, `Foundations of Statistical Natural Language Processing <https://www.goodreads.com/book/show/776349>`_, 1999.
