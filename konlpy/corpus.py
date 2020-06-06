@@ -52,5 +52,37 @@ class CorpusLoader():
             self.name = name
 
 
+class StopwordLoader(CorpusLoader):
+    """Loader for stopwords.
+    For a complete list of stopwords available in KoNLPy,
+    refer to :ref:`corpora`.
+
+    .. code-block:: python
+
+        >>> from konlpy.corpus import stopwords
+        >>> print(stopwords.words())
+        대한민국헌법
+        >>> print(stopwords.morphs())
+        대한민국헌법
+        >>> stopwords.include(['헐', '네'])
+        >>> stopwords.exclude(['진짜'])
+    """
+
+    def __init__(self, name='stopwords'):
+        if not name:
+            raise Exception("You need to input the name of the corpus")
+        else:
+            self.name = name
+        with self.open('%s.txt' % name) as fp:
+            self.word_list = [buf.rstrip().split('\t')[0] for buf in fp]
+
+    def words(self):
+        return self.word_list
+
+    def morphs(self, analyzer='kkma'):
+        return self.morphs
+
+
 kolaw = CorpusLoader('kolaw')
 kobill = CorpusLoader('kobill')
+stopwords = StopwordLoader()
