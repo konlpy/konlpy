@@ -52,37 +52,67 @@ class CorpusLoader():
             self.name = name
 
 
-class StopwordLoader(CorpusLoader):
+class StopwordsLoader(CorpusLoader):
     """Loader for stopwords.
     For a complete list of stopwords available in KoNLPy,
-    refer to :ref:`corpora`.
+    refer to :ref:`stopwords`.
 
     .. code-block:: python
 
         >>> from konlpy.corpus import stopwords
-        >>> print(stopwords.words())
-        대한민국헌법
-        >>> print(stopwords.morphs())
-        대한민국헌법
-        >>> stopwords.include(['헐', '네'])
-        >>> stopwords.exclude(['진짜'])
+        >>> stopwords.words()
+        ['!', '"', '$', ... ]
+        >>> stopwords.morphs(analyzer='kkma')
+        ['가/VV', '가지/VV', '같/VA', ... ]
+        >>> stopwords.include('word', ['헐', '네'])
+        >>> stopwords.exclude('word', ['진짜'])
     """
 
-    def __init__(self, name='stopwords'):
+    def load_stopwords(self, filename, stype='word'):
+        stopwords_obj = self.open(filename)
+        stopwords = stopwords_obj.read().split('\n')
+        if stype == 'morph':
+            n_stopwords = [[] for _ in range(len(stopwords[0].split('\t')))]
+            for stopword in stopwords:
+                for idx, word in enumerate(stopword.split('\t')):
+                    if word == '':
+                        continue
+                    n_stopwords[idx].extend(word.split(','))
+            stopwords = {stopwords[0]: stopwords[1:] for stopwords in n_stopwords}
+        return stopwords
+
+    def __init__(self, name):
         if not name:
             raise Exception("You need to input the name of the corpus")
         else:
             self.name = name
-        with self.open('%s.txt' % name) as fp:
-            self.word_list = [buf.rstrip().split('\t')[0] for buf in fp]
+
+        self.base_morphs = self.load_stopwords('stopwords.morph.txt', 'morph')
+        self.base_words = self.load_stopwords('stopwords.word.txt', 'word')
+        self.include_morphs = []
+        self.include_words = []
+        self.exclude_morphs = []
+        self.exclude_words = []
 
     def words(self):
-        return self.word_list
+        return list(set(self.base_words) | set(self.include_words) - set(self.exclude_words))
 
-    def morphs(self, analyzer='kkma'):
+    def morphs(self, analyzer):
+        if analyzer not in self.base_morphs:
+            raise Exception("You need to set the valid analyzer")
+        else:
+            return list(set(self.base_morphs[analyzer]) | set(self.include_morphs) - set(self.exclude_morphs))
+
+    def include(self, unit, words):
+        if unit == 'word':
+            self.include_word = words
+        else:
+            self.include_morph = words
+
+    def exclude(self, analyzer='kkma'):
         return self.morphs
 
 
 kolaw = CorpusLoader('kolaw')
 kobill = CorpusLoader('kobill')
-stopwords = StopwordLoader()
+stopwords = StopwordsLoader('stopwords')
