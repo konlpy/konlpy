@@ -12,5 +12,10 @@ try:
 except ImportError:
     pass
 
+try:
+    from konlpy.tag._deeq import Deeq
+except ImportError:
+    pass
+
 from konlpy.tag._okt import Twitter
 from konlpy.tag._okt import Okt
