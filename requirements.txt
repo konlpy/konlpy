@@ -4,3 +4,4 @@ colorama
 lxml>=4.1.0
 numpy>=1.6
 tweepy>=3.7.0
+grpcio==1.28.1
