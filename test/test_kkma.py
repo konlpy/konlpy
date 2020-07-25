@@ -46,3 +46,9 @@ def test_kkma_pos_join(kkma_instance, string):
 def test_kkma_sentences(kkma_instance, string):
     assert kkma_instance.sentences(string) ==\
         [u'\uaf43\uac00\ub9c8 \ud0c0\uace0 \uac15\ub0a8 \uac00\uc790!']
+
+def test_kkma_typechecking(kkma_instance):
+    try:
+        kkma_instance.pos([])
+    except AssertionError:
+        pass
