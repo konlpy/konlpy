@@ -4,6 +4,7 @@ from __future__ import absolute_import
 import jpype
 
 from konlpy import jvm, utils
+from konlpy.tag._common import validate_phrase_inputs
 
 
 def Twitter(jvmpath=None):
@@ -56,6 +57,7 @@ class Okt():
         :param stem: If True, stem tokens.
         :param join: If True, returns joined sets of morph and tag.
         """
+        validate_phrase_inputs()
 
         tokens = self.jki.tokenize(
                     phrase,

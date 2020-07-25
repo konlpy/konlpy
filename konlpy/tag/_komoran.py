@@ -6,6 +6,7 @@ import os
 import jpype
 
 from konlpy import jvm, utils
+from konlpy.tag._common import validate_phrase_inputs
 
 
 __all__ = ['Komoran']
@@ -56,6 +57,7 @@ class Komoran():
         :param flatten: If False, preserves eojeols.
         :param join: If True, returns joined sets of morph and tag.
         """
+        validate_phrase_inputs()
 
         sentences = phrase.split('\n')
         morphemes = []

@@ -9,6 +9,7 @@ except ImportError:
     pass
 
 from konlpy import utils
+from konlpy.tag._common import validate_phrase_inputs
 
 
 __all__ = ['Mecab']
@@ -74,6 +75,7 @@ class Mecab():
         :param flatten: If False, preserves eojeols.
         :param join: If True, returns joined sets of morph and tag.
         """
+        validate_phrase_inputs()
 
         if sys.version_info[0] < 3:
             phrase = phrase.encode('utf-8')

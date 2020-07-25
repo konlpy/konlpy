@@ -7,6 +7,7 @@ import re
 import jpype
 
 from konlpy import jvm, utils
+from konlpy.tag._common import validate_phrase_inputs
 
 
 __all__ = ['Hannanum']
@@ -83,6 +84,7 @@ class Hannanum():
         :param flatten: If False, preserves eojeols.
         :param join: If True, returns joined sets of morph and tag.
         """
+        validate_phrase_inputs()
 
         if ntags == 9:
             result = self.jhi.simplePos09(phrase)
