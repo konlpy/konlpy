@@ -75,7 +75,7 @@ class Mecab():
         :param flatten: If False, preserves eojeols.
         :param join: If True, returns joined sets of morph and tag.
         """
-        validate_phrase_inputs()
+        validate_phrase_inputs(phrase)
 
         if sys.version_info[0] < 3:
             phrase = phrase.encode('utf-8')

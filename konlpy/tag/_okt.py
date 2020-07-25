@@ -57,7 +57,7 @@ class Okt():
         :param stem: If True, stem tokens.
         :param join: If True, returns joined sets of morph and tag.
         """
-        validate_phrase_inputs()
+        validate_phrase_inputs(phrase)
 
         tokens = self.jki.tokenize(
                     phrase,

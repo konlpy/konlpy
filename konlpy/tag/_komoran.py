@@ -57,7 +57,7 @@ class Komoran():
         :param flatten: If False, preserves eojeols.
         :param join: If True, returns joined sets of morph and tag.
         """
-        validate_phrase_inputs()
+        validate_phrase_inputs(phrase)
 
         sentences = phrase.split('\n')
         morphemes = []

@@ -84,7 +84,7 @@ class Hannanum():
         :param flatten: If False, preserves eojeols.
         :param join: If True, returns joined sets of morph and tag.
         """
-        validate_phrase_inputs()
+        validate_phrase_inputs(phrase)
 
         if ntags == 9:
             result = self.jhi.simplePos09(phrase)
