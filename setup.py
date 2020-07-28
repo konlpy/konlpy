@@ -26,7 +26,7 @@ def requirements():
 
     req = _openreq('requirements.txt')
     if sys.version_info[0] < 3:
-        req[0] = req[0].replace(">=", "")
+        req[0] = req[0].replace(">=", "==")
 
     return 
 
