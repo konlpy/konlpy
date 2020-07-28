@@ -5,6 +5,7 @@ import re
 import jpype
 
 from konlpy import jvm, utils
+from konlpy.tag._common import validate_phrase_inputs
 
 
 __all__ = ['Kkma']
@@ -51,6 +52,7 @@ class Kkma():
         :param flatten: If False, preserves eojeols.
         :param join: If True, returns joined sets of morph and tag.
         """
+        validate_phrase_inputs(phrase)
 
         sentences = self.jki.morphAnalyzer(phrase)
         morphemes = []
