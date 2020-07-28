@@ -46,6 +46,15 @@ class Okt():
     :param max_heap_size: Maximum memory usage limitation (Megabyte) :py:func:`.init_jvm`.
     """
 
+    def __init__(self, jvmpath=None, max_heap_size=1024):
+        if not jpype.isJVMStarted():
+            jvm.init_jvm(jvmpath, max_heap_size)
+
+        oktJavaPackage = jpype.JPackage('kr.lucypark.okt')
+        OktInterfaceJavaClass = oktJavaPackage.OktInterface
+        self.jki = OktInterfaceJavaClass()
+        self.tagset = utils.read_json('%s/data/tagset/twitter.json' % utils.installpath)
+
     def pos(self, phrase, norm=False, stem=False, join=False):
         """POS tagger.
         In contrast to other classes in this subpackage,
@@ -87,12 +96,3 @@ class Okt():
     def normalize(self, phrase):
         text = self.jki.normalize(phrase)
         return text
-
-    def __init__(self, jvmpath=None, max_heap_size=1024):
-        if not jpype.isJVMStarted():
-            jvm.init_jvm(jvmpath, max_heap_size)
-
-        oktJavaPackage = jpype.JPackage('kr.lucypark.okt')
-        OktInterfaceJavaClass = oktJavaPackage.OktInterface
-        self.jki = OktInterfaceJavaClass()
-        self.tagset = utils.read_json('%s/data/tagset/twitter.json' % utils.installpath)

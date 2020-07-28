@@ -61,6 +61,9 @@ class Downloader(object):
     NOT_INSTALLED = 'not installed'
     STALE = 'corrupt or out of date'
 
+    def __init__(self, download_dir=None):
+        self._download_dir = download_dir
+
     def download(self, id=None, download_dir=None):
         """The KoNLPy data downloader.
         With this module you can download corpora, models and other data packages
@@ -220,8 +223,6 @@ class Downloader(object):
         else:
             raise ValueError("Could not find a matching item to download")
 
-    def __init__(self, download_dir=None):
-        self._download_dir = download_dir
 
 # Aliases
 _downloader = Downloader(default_download_dir())

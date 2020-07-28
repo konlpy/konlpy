@@ -39,6 +39,15 @@ class Kkma():
     :param max_heap_size: Maximum memory usage limitation (Megabyte) :py:func:`.init_jvm`.
     """
 
+    def __init__(self, jvmpath=None, max_heap_size=1024):
+        if not jpype.isJVMStarted():
+            jvm.init_jvm(jvmpath, max_heap_size)
+
+        kkmaJavaPackage = jpype.JPackage('kr.lucypark.kkma')
+        KkmaInterfaceJavaClass = kkmaJavaPackage.KkmaInterface
+        self.jki = KkmaInterfaceJavaClass()  # Java instance
+        self.tagset = utils.read_json('%s/data/tagset/kkma.json' % utils.installpath)
+
     def nouns(self, phrase):
         """Noun extractor."""
 
@@ -91,12 +100,3 @@ class Kkma():
         sentences = self.jki.morphAnalyzer(phrase)
         if not sentences: return []
         return [sentences.get(i).getSentence() for i in range(sentences.size())]
-
-    def __init__(self, jvmpath=None, max_heap_size=1024):
-        if not jpype.isJVMStarted():
-            jvm.init_jvm(jvmpath, max_heap_size)
-
-        kkmaJavaPackage = jpype.JPackage('kr.lucypark.kkma')
-        KkmaInterfaceJavaClass = kkmaJavaPackage.KkmaInterface
-        self.jki = KkmaInterfaceJavaClass()  # Java instance
-        self.tagset = utils.read_json('%s/data/tagset/kkma.json' % utils.installpath)
