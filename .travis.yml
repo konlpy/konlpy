@@ -6,6 +6,7 @@ python:
     - "3.7"
 
 before_install:
+    - if [ "$TRAVIS_PYTHON_VERSION" == "2.7" ]; then pip install -r requirements2.txt; else pip install -r requirements.txt fi
     - pip install coveralls
     - pip install pytest-cov
 
