@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+import sys
 import platform
 from setuptools import find_packages, setup
 
@@ -23,7 +24,11 @@ def requirements():
         with open(os.path.join(os.path.dirname(__file__), reqfile)) as f:
             return f.read().splitlines()
 
-    return _openreq('requirements.txt')
+    req = _openreq('requirements.txt')
+    if sys.version_info[0] < 3:
+        req[0] = req[0].replace(">=", "")
+
+    return 
 
 
 about = get_about()
