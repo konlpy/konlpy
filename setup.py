@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+import sys
 import platform
 from setuptools import find_packages, setup
 
@@ -22,6 +23,9 @@ def requirements():
     def _openreq(reqfile):
         with open(os.path.join(os.path.dirname(__file__), reqfile)) as f:
             return f.read().splitlines()
+
+    if sys.version_info[0] < 3:
+        return _openreq('requirements2.txt')
 
     return _openreq('requirements.txt')
 

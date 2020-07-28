@@ -56,7 +56,7 @@ testall:
 	python3 -m pytest --cov=konlpy test/
 
 init_i18n:
-	pip install mock sphinx sphinx-intl tweepy colorama bs4
+	pip install mock sphinx sphinx-intl
 	git submodule init
 	git submodule update
 
