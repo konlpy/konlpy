@@ -24,11 +24,10 @@ def requirements():
         with open(os.path.join(os.path.dirname(__file__), reqfile)) as f:
             return f.read().splitlines()
 
-    req = _openreq('requirements.txt')
     if sys.version_info[0] < 3:
-        req[0] = req[0].replace(">=", "==")
+        return _openreq('requirements2.txt')
 
-    return 
+    return _openreq('requirements.txt')
 
 
 about = get_about()
