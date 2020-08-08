@@ -7,6 +7,7 @@ import re
 import jpype
 
 from konlpy import jvm, utils
+from konlpy.tag._common import validate_phrase_inputs
 
 
 __all__ = ['Hannanum']
@@ -63,6 +64,15 @@ class Hannanum():
     :param max_heap_size: Maximum memory usage limitation (Megabyte) :py:func:`.init_jvm`.
     """
 
+    def __init__(self, jvmpath=None, max_heap_size=1024):
+        if not jpype.isJVMStarted():
+            jvm.init_jvm(jvmpath, max_heap_size)
+
+        jhannanumJavaPackage = jpype.JPackage('kr.lucypark.jhannanum.comm')
+        HannanumInterfaceJavaClass = jhannanumJavaPackage.HannanumInterface
+        self.jhi = HannanumInterfaceJavaClass()  # Java instance
+        self.tagset = utils.read_json('%s/data/tagset/hannanum.json' % utils.installpath)
+
     def analyze(self, phrase):
         """Phrase analyzer.
 
@@ -83,6 +93,7 @@ class Hannanum():
         :param flatten: If False, preserves eojeols.
         :param join: If True, returns joined sets of morph and tag.
         """
+        validate_phrase_inputs(phrase)
 
         if ntags == 9:
             result = self.jhi.simplePos09(phrase)
@@ -102,12 +113,3 @@ class Hannanum():
         """Parse phrase to morphemes."""
 
         return [s for s, t in self.pos(phrase)]
-
-    def __init__(self, jvmpath=None, max_heap_size=1024):
-        if not jpype.isJVMStarted():
-            jvm.init_jvm(jvmpath, max_heap_size)
-
-        jhannanumJavaPackage = jpype.JPackage('kr.lucypark.jhannanum.comm')
-        HannanumInterfaceJavaClass = jhannanumJavaPackage.HannanumInterface
-        self.jhi = HannanumInterfaceJavaClass()  # Java instance
-        self.tagset = utils.read_json('%s/data/tagset/hannanum.json' % utils.installpath)
