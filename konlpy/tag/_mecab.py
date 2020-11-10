@@ -2,6 +2,8 @@
 from __future__ import absolute_import
 
 import sys
+import os
+import subprocess
 
 try:
     from MeCab import Tagger
@@ -68,7 +70,19 @@ class Mecab():
     .. _Eunjeon Project: http://eunjeon.blogspot.kr/
     """
 
-    def __init__(self, dicpath='/usr/local/lib/mecab/dic/mecab-ko-dic'):
+    def get_default_dicpath():
+        default_dicpath = '/usr/local/lib/mecab/dic/mecab-ko-dic'
+
+        mecab_config_path = os.path.join(sys.prefix, 'bin', 'mecab-config')
+        if os.path.isfile(mecab_config_path):
+            mecab_ko_dic_path = subprocess.check_output([
+                mecab_config_path, '--dicdir']).decode('utf-8').strip() + '/mecab-ko-dic'
+            if os.path.isdir(mecab_ko_dic_path):
+                default_dicpath = mecab_ko_dic_path
+
+        return default_dicpath
+
+    def __init__(self, dicpath=get_default_dicpath()):
         self.dicpath = dicpath
         try:
             self.tagger = Tagger('-d %s' % dicpath)
