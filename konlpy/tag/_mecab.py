@@ -68,10 +68,13 @@ class Mecab():
     .. _Eunjeon Project: http://eunjeon.blogspot.kr/
     """
 
-    def __init__(self, dicpath='/usr/local/lib/mecab/dic/mecab-ko-dic'):
+    def __init__(self, dicpath=''):
         self.dicpath = dicpath
         try:
-            self.tagger = Tagger('-d %s' % dicpath)
+            argument = ''
+            if dicpath != '':
+                argument = '-d %s' % dicpath
+            self.tagger = Tagger(argument)
             self.tagset = utils.read_json('%s/data/tagset/mecab.json' % utils.installpath)
         except RuntimeError:
             raise Exception('The MeCab dictionary does not exist at "%s". Is the dictionary correctly installed?\nYou can also try entering the dictionary path when initializing the Mecab class: "Mecab(\'/some/dic/path\')"' % dicpath)
