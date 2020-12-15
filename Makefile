@@ -15,7 +15,12 @@ build:
 	python setup.py sdist --formats=gztar,zip
 
 check:
-	check-manifest
+	check-manifest \
+	--ignore \
+	.gitmodules,CONTRIBUTING*,LICENSE,Makefile,build.xml,pypirc.sample,reinstall,requirements-dev.txt,\
+	docs/**,konlpy/java/src/**,scripts/** \
+	--ignore-bad-ideas *.mo
+
 	pyroma dist/konlpy-*tar.gz
 	pep8 --ignore=E501 konlpy/*.py
 	pep8 --ignore=E501 konlpy/*/*.py
