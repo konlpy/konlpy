@@ -207,6 +207,6 @@ class StringWriter(object):
 
 
 __all__ = [
-    'find', 'load', 'listdir', 'clear', 
+    'find', 'load', 'listdir', 'clear',
     'path', 'FileSystemPathPointer', 'PathPointer',
-    'CorpusReader', 'StringWriter',]
+    'CorpusReader', 'StringWriter']
