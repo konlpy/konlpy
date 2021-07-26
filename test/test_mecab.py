@@ -47,3 +47,9 @@ def test_mecab_morphs(mecab_instance, string):
 def test_mecab_nouns(mecab_instance, string):
     assert mecab_instance.nouns(string) ==\
         [u'\uaf43\uac00\ub9c8', u'\uac15\ub0a8']
+
+def test_mecab_typechecking(mecab_instance):
+    try:
+        mecab_instance.pos([])
+    except AssertionError:
+        pass

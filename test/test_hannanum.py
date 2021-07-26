@@ -78,3 +78,9 @@ def test_hannanum_pos_join(hannanum_instance, string):
          u'\uac00/P',
          u'\uc790/E',
          u'!/S']
+
+def test_hannanum_typechecking(hannanum_instance):
+    try:
+        hannanum_instance.pos([])
+    except AssertionError:
+        pass

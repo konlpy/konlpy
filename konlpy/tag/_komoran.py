@@ -6,6 +6,7 @@ import os
 import jpype
 
 from konlpy import jvm, utils
+from konlpy.tag._common import validate_phrase_inputs
 
 
 __all__ = ['Komoran']
@@ -50,12 +51,35 @@ class Komoran():
     :param max_heap_size: Maximum memory usage limitation (Megabyte) :py:func:`.init_jvm`.
     """
 
+    def __init__(self, jvmpath=None, userdic=None, modelpath=None, max_heap_size=1024):
+        if not jpype.isJVMStarted():
+            jvm.init_jvm(jvmpath, max_heap_size)
+
+        if modelpath:
+            self.modelpath = modelpath
+        else:
+            # FIXME: Cannot execute without sudoing
+            # java.lang.NoClassDefFoundErrorPyRaisable: java.lang.NoClassDefFoundError: kr/co/shineware/nlp/komoran/core/analyzer/Komoran
+            self.modelpath = os.path.join(utils.installpath, 'java', 'data', 'models')
+        self.tagset = utils.read_json('%s/data/tagset/komoran.json' % utils.installpath)
+
+        komoranJavaPackage = jpype.JPackage('kr.co.shineware.nlp.komoran.core')
+
+        try:
+            self.jki = komoranJavaPackage.Komoran(self.modelpath)
+        except TypeError:  # Package kr.lucypark.komoran.KomoranInterface is not Callable
+            raise IOError("Cannot access komoran-dic. Please leave an issue at https://github.com/konlpy/konlpy/issues")
+
+        if userdic:
+            self.jki.setUserDic(userdic)
+
     def pos(self, phrase, flatten=True, join=False):
         """POS tagger.
 
         :param flatten: If False, preserves eojeols.
         :param join: If True, returns joined sets of morph and tag.
         """
+        validate_phrase_inputs(phrase)
 
         sentences = phrase.split('\n')
         morphemes = []
@@ -87,25 +111,3 @@ class Komoran():
         """Parse phrase to morphemes."""
 
         return [s for s, t in self.pos(phrase)]
-
-    def __init__(self, jvmpath=None, userdic=None, modelpath=None, max_heap_size=1024):
-        if not jpype.isJVMStarted():
-            jvm.init_jvm(jvmpath, max_heap_size)
-
-        if modelpath:
-            self.modelpath = modelpath
-        else:
-            # FIXME: Cannot execute without sudoing
-            # java.lang.NoClassDefFoundErrorPyRaisable: java.lang.NoClassDefFoundError: kr/co/shineware/nlp/komoran/core/analyzer/Komoran
-            self.modelpath = os.path.join(utils.installpath, 'java', 'data', 'models')
-        self.tagset = utils.read_json('%s/data/tagset/komoran.json' % utils.installpath)
-
-        komoranJavaPackage = jpype.JPackage('kr.co.shineware.nlp.komoran.core')
-
-        try:
-            self.jki = komoranJavaPackage.Komoran(self.modelpath)
-        except TypeError:  # Package kr.lucypark.komoran.KomoranInterface is not Callable
-            raise IOError("Cannot access komoran-dic. Please leave an issue at https://github.com/konlpy/konlpy/issues")
-
-        if userdic:
-            self.jki.setUserDic(userdic)

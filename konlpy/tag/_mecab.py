@@ -9,6 +9,7 @@ except ImportError:
     pass
 
 from konlpy import utils
+from konlpy.tag._common import validate_phrase_inputs
 
 
 __all__ = ['Mecab']
@@ -67,6 +68,26 @@ class Mecab():
     .. _Eunjeon Project: http://eunjeon.blogspot.kr/
     """
 
+    def __init__(self, dicpath='/usr/local/lib/mecab/dic/mecab-ko-dic'):
+        self.dicpath = dicpath
+        try:
+            self.tagger = Tagger('-d %s' % dicpath)
+            self.tagset = utils.read_json('%s/data/tagset/mecab.json' % utils.installpath)
+        except RuntimeError:
+            raise Exception('The MeCab dictionary does not exist at "%s". Is the dictionary correctly installed?\nYou can also try entering the dictionary path when initializing the Mecab class: "Mecab(\'/some/dic/path\')"' % dicpath)
+        except NameError:
+            raise Exception('Install MeCab in order to use it: http://konlpy.org/en/latest/install/')
+
+    def __setstate__(self, state):
+        """just reinitialize."""
+
+        self.__init__(dicpath=state['dicpath'])
+
+    def __getstate__(self):
+        """store arguments."""
+
+        return {'dicpath': self.dicpath}
+
     # TODO: check whether flattened results equal non-flattened
     def pos(self, phrase, flatten=True, join=False):
         """POS tagger.
@@ -74,6 +95,7 @@ class Mecab():
         :param flatten: If False, preserves eojeols.
         :param join: If True, returns joined sets of morph and tag.
         """
+        validate_phrase_inputs(phrase)
 
         if sys.version_info[0] < 3:
             phrase = phrase.encode('utf-8')
@@ -101,23 +123,3 @@ class Mecab():
 
         tagged = self.pos(phrase)
         return [s for s, t in tagged if t.startswith('N')]
-
-    def __init__(self, dicpath='/usr/local/lib/mecab/dic/mecab-ko-dic'):
-        self.dicpath = dicpath
-        try:
-            self.tagger = Tagger('-d %s' % dicpath)
-            self.tagset = utils.read_json('%s/data/tagset/mecab.json' % utils.installpath)
-        except RuntimeError:
-            raise Exception('The MeCab dictionary does not exist at "%s". Is the dictionary correctly installed?\nYou can also try entering the dictionary path when initializing the Mecab class: "Mecab(\'/some/dic/path\')"' % dicpath)
-        except NameError:
-            raise Exception('Install MeCab in order to use it: http://konlpy.org/en/latest/install/')
-
-    def __setstate__(self, state):
-        """just reinitialize."""
-
-        self.__init__(dicpath=state['dicpath'])
-
-    def __getstate__(self):
-        """store arguments."""
-
-        return {'dicpath': self.dicpath}

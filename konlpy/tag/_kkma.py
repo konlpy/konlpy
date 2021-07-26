@@ -5,6 +5,7 @@ import re
 import jpype
 
 from konlpy import jvm, utils
+from konlpy.tag._common import validate_phrase_inputs
 
 
 __all__ = ['Kkma']
@@ -38,6 +39,15 @@ class Kkma():
     :param max_heap_size: Maximum memory usage limitation (Megabyte) :py:func:`.init_jvm`.
     """
 
+    def __init__(self, jvmpath=None, max_heap_size=1024):
+        if not jpype.isJVMStarted():
+            jvm.init_jvm(jvmpath, max_heap_size)
+
+        kkmaJavaPackage = jpype.JPackage('kr.lucypark.kkma')
+        KkmaInterfaceJavaClass = kkmaJavaPackage.KkmaInterface
+        self.jki = KkmaInterfaceJavaClass()  # Java instance
+        self.tagset = utils.read_json('%s/data/tagset/kkma.json' % utils.installpath)
+
     def nouns(self, phrase):
         """Noun extractor."""
 
@@ -51,6 +61,7 @@ class Kkma():
         :param flatten: If False, preserves eojeols.
         :param join: If True, returns joined sets of morph and tag.
         """
+        validate_phrase_inputs(phrase)
 
         sentences = self.jki.morphAnalyzer(phrase)
         morphemes = []
@@ -89,12 +100,3 @@ class Kkma():
         sentences = self.jki.morphAnalyzer(phrase)
         if not sentences: return []
         return [sentences.get(i).getSentence() for i in range(sentences.size())]
-
-    def __init__(self, jvmpath=None, max_heap_size=1024):
-        if not jpype.isJVMStarted():
-            jvm.init_jvm(jvmpath, max_heap_size)
-
-        kkmaJavaPackage = jpype.JPackage('kr.lucypark.kkma')
-        KkmaInterfaceJavaClass = kkmaJavaPackage.KkmaInterface
-        self.jki = KkmaInterfaceJavaClass()  # Java instance
-        self.tagset = utils.read_json('%s/data/tagset/kkma.json' % utils.installpath)
