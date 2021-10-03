@@ -29,7 +29,10 @@ attrs = ['tags',        # 품사 태그
 def parse(result, allattrs=False, join=False):
     def split(elem, join=False):
         if not elem: return ('', 'SY')
-        s, t = elem.split('\t')
+        splited = elem.split('\t', 1)
+        if len(splited) != 2:
+            return ('', 'SY')
+        s, t = splited
         if join:
             return s + '/' + t.split(',', 1)[0]
         else:
