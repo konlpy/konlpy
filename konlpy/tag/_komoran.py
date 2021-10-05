@@ -87,7 +87,7 @@ class Komoran():
             return morphemes
 
         for sentence in sentences:
-            if not sentence:
+            if not sentence.strip():
                 continue
             result = self.jki.analyze(sentence).getTokenList()
             result = [(token.getMorph(), token.getPos()) for token in result]
@@ -104,10 +104,10 @@ class Komoran():
     def nouns(self, phrase):
         """Noun extractor."""
 
-        tagged = self.pos(phrase)
+        tagged = self.pos(phrase.strip())
         return [s for s, t in tagged if t.startswith('NN')]
 
     def morphs(self, phrase):
         """Parse phrase to morphemes."""
 
-        return [s for s, t in self.pos(phrase)]
+        return [s for s, t in self.pos(phrase.strip())]
