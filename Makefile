@@ -15,10 +15,20 @@ build:
 	python setup.py sdist --formats=gztar,zip
 
 check:
-	check-manifest
+	check-manifest \
+	--ignore \
+	.gitmodules,CONTRIBUTING*,LICENSE,Makefile,build.xml,pypirc.sample,reinstall,requirements-dev.txt,\
+	docs/**,konlpy/java/src/**,scripts/** \
+	--ignore-bad-ideas *.mo
+
 	pyroma dist/konlpy-*tar.gz
-	pep8 --ignore=E501 konlpy/*.py
-	pep8 --ignore=E501 konlpy/*/*.py
+
+	# E126: Continuation line over-indented
+	# E402: Module level import not at top of file
+	# E501: Line too long
+	# E701: Multiple statements on one line(colon)
+	pep8 --ignore=E501,E402 konlpy/*.py
+	pep8 --ignore=E501,E701,E126 konlpy/*/*.py
 
 testpypi:
 	python setup.py register -r pypitest

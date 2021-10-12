@@ -50,7 +50,7 @@ def init_jvm(jvmpath=None, max_heap_size=1024):
     javadir = '%s%sjava' % (utils.installpath, os.sep)
 
     args = [javadir, os.sep]
-    classpath = os.pathsep.join(f.format(*args) for f in folder_suffix)
+    classpath = [f.format(*args) for f in folder_suffix]
 
     jvmpath = jvmpath or jpype.getDefaultJVMPath()
 
@@ -61,9 +61,9 @@ def init_jvm(jvmpath=None, max_heap_size=1024):
         jvmpath = '%s/lib/jli/libjli.dylib' % jvmpath.split('/lib/')[0]
 
     if jvmpath:
-        jpype.startJVM(jvmpath, '-Djava.class.path=%s' % classpath,
-                                '-Dfile.encoding=UTF8',
+        jpype.startJVM(jvmpath, '-Dfile.encoding=UTF8',
                                 '-ea', '-Xmx{}m'.format(max_heap_size),
+                                classpath=classpath,
                                 convertStrings=True)
     else:
         raise ValueError("Please specify the JVM path.")
