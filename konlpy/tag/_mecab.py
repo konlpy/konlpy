@@ -28,10 +28,12 @@ attrs = ['tags',        # 품사 태그
 
 def parse(result, allattrs=False, join=False, split_inflect=False):
     def split(elem, join=False, split_inflect=False):
+        print("elem", elem)
         if not elem: return ('', 'SY')
         splited = elem.split('\t', 1)
         if len(splited) != 2:
-            return ('', 'SY')
+            print("return (``, SY)")
+            return [('', 'SY')]
         s, t = splited
         features = t.split(',')
 
@@ -52,6 +54,7 @@ def parse(result, allattrs=False, join=False, split_inflect=False):
             if join:
                 return [s + '/' + tag]
             else:
+                print("return", [(s, tag)])
                 return [(s, tag)]
 
     if split_inflect:
@@ -135,6 +138,7 @@ class Mecab():
         else:
             if flatten:
                 result = self.tagger.parse(phrase)
+                print("result", result)
                 return parse(result, join=join, split_inflect=split_inflect)
             else:
                 return [parse(self.tagger.parse(eojeol), join=join, split_inflect=split_inflect)
@@ -142,7 +146,7 @@ class Mecab():
 
     def morphs(self, phrase):
         """Parse phrase to morphemes."""
-
+        print("self.pos: ", self.pos(phrase))
         return [s for s, t in self.pos(phrase)]
 
     def nouns(self, phrase):
