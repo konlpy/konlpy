@@ -143,7 +143,11 @@ install_mecab_ko_dic(){
     ./configure
     if [[ $os == "Linux" ]]; then
         mecab-config --libs-only-L | $sudo tee /etc/ld.so.conf.d/mecab.conf  # XXX: Resolve #271, #182, #133
-        $sudo ldconfig
+        
+        check_amazon=$(cat /etc/system-release) # Check Amazon Linux os
+        if [[ $check_amazon != "Amazon Linux release 2 (Karoo)" ]]; then
+            $sudo ldconfig
+        fi
     fi
     make
     $sudo sh -c 'echo "dicdir=/usr/local/lib/mecab/dic/mecab-ko-dic" > /usr/local/etc/mecabrc'
