@@ -31,9 +31,8 @@ check:
 	pep8 --ignore=E501,E701,E126 konlpy/*/*.py
 
 testpypi:
-	python setup.py register -r pypitest
-	python setup.py sdist --formats=gztar upload -r pypitest
-	python setup.py bdist_wheel upload -r pypitest
+	python setup.py sdist bdist_wheel
+	twine upload --repository testpypi dist/*
 	# Execute below manually
 	# 	cd /tmp
 	# 	virtualenv venv
@@ -46,9 +45,8 @@ testpypi:
 	# 	deactivate
 
 pypi:
-	python setup.py register -r pypi
-	python setup.py sdist --formats=gztar upload -r pypi
-	python setup.py bdist_wheel upload -r pypi
+	python setup.py sdist bdist_wheel
+	twine upload --repository pypi dist/*
 
 java:
 	ant clean compile

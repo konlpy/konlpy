@@ -1,9 +1,9 @@
 [distutils]
 index-servers =
     pypi
-    pypitest
+    testpypi
 
-[pypitest]
+[testpypi]
 repository: https://test.pypi.org/legacy/
 username: <username>
 password: <password>
