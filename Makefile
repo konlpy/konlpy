@@ -1,6 +1,6 @@
 # Deployment instructions
 # 0. Fill in `pypirc.sample`, and `cp pypirc.sample ~/.pypirc`
-# 1. Check changelogs.rst and check if documents are up-to-date (make show_docs, make show_docs_ko will help you out)
+# 1. Check changelogs.rst and check if documents are up-to-date (Make show_docs, make show_docs_ko will help you out. Requirements can be installed by `git submodule init; git submodule update`.)
 # 2. Check translations at docs/locale/ko/LC_MESSAGES/*.po
 # 3. Check version at konlpy/konlpy/about.py
 # 4. $ make testpypi
@@ -74,13 +74,13 @@ show_docs:
 	cd docs\
 		&& make html \
 		&& cd _build/html \
-		&& python -m SimpleHTTPServer
+		&& python -m http.server
 
 show_docs_ko:
 	cd docs\
 		&& make -e SPHINXOPTS="-D language='ko'" html \
 		&& cd _build/html \
-		&& python -m SimpleHTTPServer
+		&& python -m http.server
 
 extract_i18n:
 	cd docs\
