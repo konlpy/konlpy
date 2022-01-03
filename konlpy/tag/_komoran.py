@@ -67,7 +67,7 @@ class Komoran():
 
         try:
             self.jki = komoranJavaPackage.Komoran(self.modelpath)
-        except TypeError:  # Package kr.lucypark.komoran.KomoranInterface is not Callable
+        except TypeError:  # Package kr.co.shineware.nlp.komoran.core.Komoran is not Callable
             raise IOError("Cannot access komoran-dic. Please leave an issue at https://github.com/konlpy/konlpy/issues")
 
         if userdic:
