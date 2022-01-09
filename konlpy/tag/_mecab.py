@@ -26,19 +26,42 @@ attrs = ['tags',        # 품사 태그
          'indexed']     # 인덱스 표현
 
 
-def parse(result, allattrs=False, join=False):
-    def split(elem, join=False):
-        if not elem: return ('', 'SY')
-        splited = elem.split('\t', 1)
-        if len(splited) != 2:
-            return ('', 'SY')
-        s, t = splited
-        if join:
-            return s + '/' + t.split(',', 1)[0]
-        else:
-            return (s, t.split(',', 1)[0])
+def parse(result, allattrs=False, join=False, split_inflect=False):
+    def split(elem, join=False, split_inflect=False) -> []:
+        if not elem: return [('', 'SY')]
+        segments = elem.split('\t', 1)
+        if len(segments) != 2:
+            return [('', 'SY')]
+        s, t = segments
+        features = t.split(',')
 
-    return [split(elem, join=join) for elem in result.splitlines()[:-1]]
+        if split_inflect and features[4] == 'Inflect':
+            original = features[7]
+            tokens = original.split('+')
+            tokens = [token.split('/') for token in tokens]
+
+            res = []
+            for token in tokens:
+                if join:
+                    res.append(token[0] + '/' + token[1])
+                else:
+                    res.append((token[0], token[1]))
+            return res
+        else:
+            tag = features[0]
+            if join:
+                return [s + '/' + tag]
+            else:
+                return [(s, tag)]
+
+    if split_inflect:
+        res = []
+        for elem in result.splitlines()[:-1]:
+            morphs = split(elem, join=join, split_inflect=split_inflect)
+            res.extend(morphs)
+        return res
+    else:
+        return [split(elem, join=join)[0] for elem in result.splitlines()[:-1]]
 
 
 class Mecab():
@@ -92,11 +115,12 @@ class Mecab():
         return {'dicpath': self.dicpath}
 
     # TODO: check whether flattened results equal non-flattened
-    def pos(self, phrase, flatten=True, join=False):
+    def pos(self, phrase, flatten=True, join=False, split_inflect=False):
         """POS tagger.
 
         :param flatten: If False, preserves eojeols.
         :param join: If True, returns joined sets of morph and tag.
+        :param split_inflect: If True, splits 'Inflect' type words into multiple morphs.
         """
         validate_phrase_inputs(phrase)
 
@@ -104,16 +128,16 @@ class Mecab():
             phrase = phrase.encode('utf-8')
             if flatten:
                 result = self.tagger.parse(phrase).decode('utf-8')
-                return parse(result, join=join)
+                return parse(result, join=join, split_inflect=split_inflect)
             else:
-                return [parse(self.tagger.parse(eojeol).decode('utf-8'), join=join)
+                return [parse(self.tagger.parse(eojeol).decode('utf-8'), join=join, split_inflect=split_inflect)
                         for eojeol in phrase.split()]
         else:
             if flatten:
                 result = self.tagger.parse(phrase)
-                return parse(result, join=join)
+                return parse(result, join=join, split_inflect=split_inflect)
             else:
-                return [parse(self.tagger.parse(eojeol), join=join)
+                return [parse(self.tagger.parse(eojeol), join=join, split_inflect=split_inflect)
                         for eojeol in phrase.split()]
 
     def morphs(self, phrase):
