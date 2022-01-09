@@ -168,7 +168,7 @@ fi
 if hash "mecab" &>/dev/null; then
     echo "mecab-ko is already installed"
 else
-    echo "Install mecab-ko-dic"
+    echo "Install mecab-ko"
     install_mecab_ko
 fi
 
