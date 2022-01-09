@@ -156,7 +156,7 @@ install_mecab_python(){
         git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
     fi
     popd
-    $python -m pip install $at_user_site /tmp/mecab-python-0.996
+    CFLAGS=-stdlib=libc++ $python -m pip install $at_user_site /tmp/mecab-python-0.996
 }
 
 
