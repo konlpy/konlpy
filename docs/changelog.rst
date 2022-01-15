@@ -1,6 +1,19 @@
 Change logs
 ===========
 
+`Version 0.6.0 <https://github.com/konlpy/konlpy/releases/tag/v0.6.0>`_
+-----------------------------------------------------------------------
+
+Released on Jan 2, 2022.
+
+- Added English version of `CONTRIBUTING.rst` [:issue:`302` by :committer:`gabrielacorona`]
+- Enhanced jpype compatibility for Windows [:issue:`370` by :committer:`hexists`]
+- Fixed parsing issue for Mecab [:issue:`360` by :committer:`swyo`]
+- Fixed `make check` for in `Makefile` [:issue:`340` by :committer:`kwonmha`]
+- Fixed errors in documentation [:issue:`299` by :committer:`hdatteln`], [:issue:`308` by :committer:`hdatteln`]
+- Refactored code [:issue:`323` by :committer:`nyanye`]
+- Removed koshort [:issue:`318` by :committer:`nyanye`]
+
 `Version 0.5.2 <https://github.com/konlpy/konlpy/releases/tag/v0.5.2>`_
 -----------------------------------------------------------------------
 

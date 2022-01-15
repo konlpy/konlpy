@@ -67,7 +67,7 @@ class Komoran():
 
         try:
             self.jki = komoranJavaPackage.Komoran(self.modelpath)
-        except TypeError:  # Package kr.lucypark.komoran.KomoranInterface is not Callable
+        except TypeError:  # Package kr.co.shineware.nlp.komoran.core.Komoran is not Callable
             raise IOError("Cannot access komoran-dic. Please leave an issue at https://github.com/konlpy/konlpy/issues")
 
         if userdic:
@@ -87,7 +87,7 @@ class Komoran():
             return morphemes
 
         for sentence in sentences:
-            if not sentence:
+            if not sentence.strip():
                 continue
             result = self.jki.analyze(sentence).getTokenList()
             result = [(token.getMorph(), token.getPos()) for token in result]
@@ -104,10 +104,10 @@ class Komoran():
     def nouns(self, phrase):
         """Noun extractor."""
 
-        tagged = self.pos(phrase)
+        tagged = self.pos(phrase.strip())
         return [s for s, t in tagged if t.startswith('NN')]
 
     def morphs(self, phrase):
         """Parse phrase to morphemes."""
 
-        return [s for s, t in self.pos(phrase)]
+        return [s for s, t in self.pos(phrase.strip())]

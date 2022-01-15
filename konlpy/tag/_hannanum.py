@@ -96,9 +96,9 @@ class Hannanum():
         validate_phrase_inputs(phrase)
 
         if ntags == 9:
-            result = self.jhi.simplePos09(phrase)
+            result = self.jhi.simplePos09(phrase.strip())
         elif ntags == 22:
-            result = self.jhi.simplePos22(phrase)
+            result = self.jhi.simplePos22(phrase.strip())
         else:
             raise Exception('ntags in [9, 22]')
         return parse(result, flatten=flatten, join=join)
@@ -106,10 +106,10 @@ class Hannanum():
     def nouns(self, phrase):
         """Noun extractor."""
 
-        tagged = self.pos(phrase)
+        tagged = self.pos(phrase.strip())
         return [s for s, t in tagged if t.startswith('N')]
 
     def morphs(self, phrase):
         """Parse phrase to morphemes."""
 
-        return [s for s, t in self.pos(phrase)]
+        return [s for s, t in self.pos(phrase.strip())]

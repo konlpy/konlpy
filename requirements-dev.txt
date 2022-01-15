@@ -1,6 +1,9 @@
 check-manifest>=0.34
+mock>=4.0.3
 pep8>=1.7.0
 pyroma>=2.2
 pytest-cov>=1.8.1
 pytest>=2.6.4
+sphinx>=4.3.2
+twine>=3.7.1
 wheel>=0.31.1

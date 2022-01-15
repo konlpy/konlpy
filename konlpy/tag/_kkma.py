@@ -63,7 +63,7 @@ class Kkma():
         """
         validate_phrase_inputs(phrase)
 
-        sentences = self.jki.morphAnalyzer(phrase)
+        sentences = self.jki.morphAnalyzer(phrase.strip())
         morphemes = []
         if not sentences:
             return morphemes
@@ -92,11 +92,11 @@ class Kkma():
     def morphs(self, phrase):
         """Parse phrase to morphemes."""
 
-        return [s for s, t in self.pos(phrase)]
+        return [s for s, t in self.pos(phrase.strip())]
 
     def sentences(self, phrase):
         """Sentence detection."""
 
-        sentences = self.jki.morphAnalyzer(phrase)
+        sentences = self.jki.morphAnalyzer(phrase.strip())
         if not sentences: return []
         return [sentences.get(i).getSentence() for i in range(sentences.size())]
