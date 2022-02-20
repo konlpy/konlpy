@@ -40,7 +40,7 @@ Supported: Xenial(16.04.3 LTS), Bionic(18.04.3 LTS), Disco(19.04), Eoan(19.10)
     .. sourcecode:: bash
 
         $ sudo apt-get install curl git
-        $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
+        $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/release/scripts/mecab.sh)
 
 
 CentOS
@@ -66,7 +66,7 @@ Supported: CentOS 7, 8
     .. sourcecode:: bash
 
         $ sudo yum install curl git
-        $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
+        $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/release/scripts/mecab.sh)
 
 
 Mac OS
@@ -83,7 +83,7 @@ Mac OS
 
     .. sourcecode:: bash
 
-        $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
+        $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/release/scripts/mecab.sh)
 
 
 Windows

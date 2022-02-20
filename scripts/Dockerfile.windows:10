@@ -23,7 +23,7 @@ RUN choco install -y git.install
 RUN & 'C:\Program Files\Git\bin\git.exe' clone https://github.com/konlpy/konlpy konlpy.git
 WORKDIR konlpy.git
 
-RUN & 'C:\Program Files\Git\bin\git.exe' checkout master
+RUN & 'C:\Program Files\Git\bin\git.exe' checkout release
 RUN py -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ konlpy==0.5.2-rc.2
 RUN py -m pip install -r .\requirements-dev.txt
 CMD py -m pytest -v .

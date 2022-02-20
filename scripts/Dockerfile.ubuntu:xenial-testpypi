@@ -11,6 +11,6 @@ RUN curl -s https://raw.githubusercontent.com/minhoryang/konlpy/issues/271/scrip
 RUN apt-get install -y git
 RUN git clone https://github.com/konlpy/konlpy konlpy.git
 WORKDIR konlpy.git
-RUN git checkout master
+RUN git checkout release
 RUN python3 -m pip install -r requirements-dev.txt
 CMD python3 -m pytest -v .
