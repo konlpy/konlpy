@@ -20,8 +20,7 @@ def parse(result, flatten=False, join=False):
     def parse_opt(opt, join=False):
         if join:
             return [u for u in re.findall(tag_re, opt.strip())]
-        else:
-            return [tuple(u.rsplit('/', 1)) for u in re.findall(tag_re, opt.strip())]
+        return [tuple(u.rsplit('/', 1)) for u in re.findall(tag_re, opt.strip())]
 
     if not result:
         return []
@@ -33,9 +32,8 @@ def parse(result, flatten=False, join=False):
     if flatten:
         return sum([parse_opt(opt, join=join) for part in parts
                     for opt in list(filter(None, part))[1:]], [])
-    else:
-        return [[parse_opt(opt, join=join) for opt in list(filter(None, part))[1:]]
-                for part in parts]
+    return [[parse_opt(opt, join=join) for opt in list(filter(None, part))[1:]]
+            for part in parts]
 
 
 class Hannanum():

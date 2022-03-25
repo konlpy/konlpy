@@ -74,8 +74,7 @@ class Okt():
                     jpype.java.lang.Boolean(stem)).toArray()
         if join:
             return [t for t in tokens]
-        else:
-            return [tuple(t.rsplit('/', 1)) for t in tokens]
+        return [tuple(t.rsplit('/', 1)) for t in tokens]
 
     def nouns(self, phrase):
         """Noun extractor."""

@@ -36,8 +36,7 @@ class CorpusLoader():
         basedir = '%s/data/corpus/%s' % (utils.installpath, self.name)
         if filename:
             return '%s/%s' % (basedir, filename)
-        else:
-            return '%s/' % basedir
+        return '%s/' % basedir
 
     def fileids(self):
         """List of file IDs in the corpus."""
