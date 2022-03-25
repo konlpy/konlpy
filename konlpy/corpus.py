@@ -24,8 +24,7 @@ class CorpusLoader():
     def __init__(self, name=None):
         if not name:
             raise Exception("You need to input the name of the corpus")
-        else:
-            self.name = name
+        self.name = name
 
     def abspath(self, filename=None):
         """Absolute path of corpus file.
