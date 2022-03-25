@@ -220,8 +220,7 @@ class Downloader(object):
         self.index = json.loads(urllib.urlopen(self.INDEX_URL).read().decode())
         if self.index.get(id):
             return self.index.get(id)
-        else:
-            raise ValueError("Could not find a matching item to download")
+        raise ValueError("Could not find a matching item to download")
 
 
 # Aliases
