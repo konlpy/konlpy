@@ -136,7 +136,7 @@ if sys.version_info[0] < 3:
         """
 
         # quick patch to use sys.stderr stream
-        if 'stream' in kwargs.keys():
+        if 'stream' in kwargs:
             return UnicodePrinter(stream=kwargs['stream']).pprint(obj)
         return UnicodePrinter().pprint(obj)
 else:
