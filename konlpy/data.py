@@ -111,7 +111,7 @@ def load(resource_url, format='auto'):
     return resource_val
 
 
-class PathPointer(object):
+class PathPointer:
     """An abstract base class for path pointers. One subclass exists:
     1. ``FileSystemPathPointer``: Identifies a file by an absolute path.
     """
@@ -166,7 +166,7 @@ def listdir():
     utils.pprint(os.listdir(DATA_DIR))
 
 
-class CorpusReader(object):
+class CorpusReader:
     def __init__(self, extension='.txt'):
         """CorpusReader reads corpuses in konlpy data directory.
             extension (str, optional): Defaults to '.txt'. extension of corpus to load.
@@ -197,7 +197,7 @@ class CorpusReader(object):
             self.corpus[os.path.basename(filename)] = reader.read()
 
 
-class StringWriter(object):
+class StringWriter:
     def __init__(self, filename):
         make_dir()
         self.writer = io.open(DATA_DIR + filename, mode='a', encoding='utf-8')

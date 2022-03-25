@@ -48,7 +48,7 @@ def default_download_dir():
     return os.path.join(homedir, 'konlpy_data')
 
 
-class Downloader(object):
+class Downloader:
     """
     A class used to access the KoNLPy data server, which can be used to download packages.
     """
