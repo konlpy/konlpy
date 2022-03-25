@@ -104,7 +104,8 @@ def load(resource_url, format='auto'):
     elif format == 'raw':
         resource_val = find(resource_url).open()
     else:
-        assert format not in FORMATS
+        if format in FORMATS:
+            raise AssertionError
         raise ValueError('Unknown format type: %s' % format)
 
     return resource_val
