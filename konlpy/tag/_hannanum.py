@@ -19,7 +19,7 @@ tag_re = '(.+?\\/\\w+)\\+?'
 def parse(result, flatten=False, join=False):
     def parse_opt(opt, join=False):
         if join:
-            return [u for u in re.findall(tag_re, opt.strip())]
+            return list(re.findall(tag_re, opt.strip()))
         return [tuple(u.rsplit('/', 1)) for u in re.findall(tag_re, opt.strip())]
 
     if not result:
