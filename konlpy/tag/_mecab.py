@@ -47,12 +47,10 @@ def parse(result, allattrs=False, join=False, split_inflect=False):
                 else:
                     res.append((token[0], token[1]))
             return res
-        else:
-            tag = features[0]
-            if join:
-                return [s + '/' + tag]
-            else:
-                return [(s, tag)]
+        tag = features[0]
+        if join:
+            return [s + '/' + tag]
+        return [(s, tag)]
 
     if split_inflect:
         res = []
@@ -60,8 +58,7 @@ def parse(result, allattrs=False, join=False, split_inflect=False):
             morphs = split(elem, join=join, split_inflect=split_inflect)
             res.extend(morphs)
         return res
-    else:
-        return [split(elem, join=join)[0] for elem in result.splitlines()[:-1]]
+    return [split(elem, join=join)[0] for elem in result.splitlines()[:-1]]
 
 
 class Mecab():
@@ -129,16 +126,14 @@ class Mecab():
             if flatten:
                 result = self.tagger.parse(phrase).decode('utf-8')
                 return parse(result, join=join, split_inflect=split_inflect)
-            else:
-                return [parse(self.tagger.parse(eojeol).decode('utf-8'), join=join, split_inflect=split_inflect)
-                        for eojeol in phrase.split()]
+            return [parse(self.tagger.parse(eojeol).decode('utf-8'), join=join, split_inflect=split_inflect)
+                    for eojeol in phrase.split()]
         else:
             if flatten:
                 result = self.tagger.parse(phrase)
                 return parse(result, join=join, split_inflect=split_inflect)
-            else:
-                return [parse(self.tagger.parse(eojeol), join=join, split_inflect=split_inflect)
-                        for eojeol in phrase.split()]
+            return [parse(self.tagger.parse(eojeol), join=join, split_inflect=split_inflect)
+                    for eojeol in phrase.split()]
 
     def morphs(self, phrase):
         """Parse phrase to morphemes."""
