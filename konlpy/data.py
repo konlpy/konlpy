@@ -166,7 +166,7 @@ def listdir():
     utils.pprint(os.listdir(DATA_DIR))
 
 
-class CorpusReader:
+class CorpusReader(object):
     def __init__(self, extension='.txt'):
         """CorpusReader reads corpuses in konlpy data directory.
             extension (str, optional): Defaults to '.txt'. extension of corpus to load.
@@ -197,7 +197,7 @@ class CorpusReader:
             self.corpus[os.path.basename(filename)] = reader.read()
 
 
-class StringWriter:
+class StringWriter(object):
     def __init__(self, filename):
         make_dir()
         self.writer = io.open(DATA_DIR + filename, mode='a', encoding='utf-8')
