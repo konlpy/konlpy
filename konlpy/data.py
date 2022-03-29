@@ -111,7 +111,7 @@ def load(resource_url, format='auto'):
     return resource_val
 
 
-class PathPointer:
+class PathPointer(object):
     """An abstract base class for path pointers. One subclass exists:
     1. ``FileSystemPathPointer``: Identifies a file by an absolute path.
     """
