@@ -24,8 +24,7 @@ class CorpusLoader():
     def __init__(self, name=None):
         if not name:
             raise Exception("You need to input the name of the corpus")
-        else:
-            self.name = name
+        self.name = name
 
     def abspath(self, filename=None):
         """Absolute path of corpus file.
@@ -36,8 +35,7 @@ class CorpusLoader():
         basedir = '%s/data/corpus/%s' % (utils.installpath, self.name)
         if filename:
             return '%s/%s' % (basedir, filename)
-        else:
-            return '%s/' % basedir
+        return '%s/' % basedir
 
     def fileids(self):
         """List of file IDs in the corpus."""

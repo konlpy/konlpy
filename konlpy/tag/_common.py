@@ -17,4 +17,5 @@ def validate_phrase_inputs(phrase):
         phrase (str): phrase input
     """
     msg = "phrase input should be string, not %s" % type(phrase)
-    assert isinstance(phrase, basestring), msg
+    if not isinstance(phrase, basestring):
+        raise AssertionError(msg)

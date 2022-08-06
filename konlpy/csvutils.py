@@ -15,11 +15,11 @@ else:
 def _stringify(s, encoding="utf-8"):
     if s is None:
         return ''
-    elif isinstance(s, unicode):
+    if isinstance(s, unicode):
         return s.encode(encoding)
-    elif isinstance(s, (int, float)):
+    if isinstance(s, (int, float)):
         return s  # let csv.QUOTE_NONNUMERIC do its thing
-    elif not isinstance(s, str):
+    if not isinstance(s, str):
         return str(s)
     return s
 

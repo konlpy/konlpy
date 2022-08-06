@@ -95,7 +95,7 @@ if sys.version_info[0] < 3:
             [[u'\uc774 / NR', u'\ucc28 / NNB'], [u'\ub098\uac00 / VV', u'\ub124 / EFN']]
         """
         reader = csvutils.UnicodeReader(f)
-        return [row for row in reader]
+        return list(reader)
 
     def csvwrite(data, f):
         """Writes a csv file.
@@ -136,7 +136,7 @@ if sys.version_info[0] < 3:
         """
 
         # quick patch to use sys.stderr stream
-        if 'stream' in kwargs.keys():
+        if 'stream' in kwargs:
             return UnicodePrinter(stream=kwargs['stream']).pprint(obj)
         return UnicodePrinter().pprint(obj)
 else:
