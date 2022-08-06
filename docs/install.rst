@@ -68,7 +68,7 @@ Supported: CentOS 7, 8
     .. code-block:: bash
         :substitutions:
 
-        $ sudo apt-get install curl git
+        $ sudo yum install curl git
         $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/|release|/scripts/mecab.sh)
 
 

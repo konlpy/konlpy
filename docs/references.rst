@@ -6,7 +6,7 @@ References
 .. role:: language
 
 .. note::
-    Please `modify this document <https://github.com/konlpy/konlpy/blob/release/docs/references.rst>`_ if anything is erroneous or not included.
+    Please `modify this document <https://github.com/konlpy/konlpy/blob/master/docs/references.rst>`_ if anything is erroneous or not included.
     Last updated at |today|.
 
 .. _engines:

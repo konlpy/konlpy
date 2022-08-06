@@ -25,7 +25,7 @@ set -e
 os=$(uname)
 if [[ ! $os == "Linux" ]] && [[ ! $os == "Darwin" ]]; then
     echo "This script does not support this OS."
-    echo "Try consulting https://github.com/konlpy/konlpy/blob/release/scripts/mecab.sh"
+    echo "Try consulting https://github.com/konlpy/konlpy/blob/master/scripts/mecab.sh"
     exit 0
 fi
 

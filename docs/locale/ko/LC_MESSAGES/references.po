@@ -19,7 +19,7 @@ msgstr "참고문헌"
 #: ../../references.rst:9
 msgid ""
 "Please `modify this document "
-"<https://github.com/konlpy/konlpy/blob/release/docs/references.rst>`_ if "
+"<https://github.com/konlpy/konlpy/blob/master/docs/references.rst>`_ if "
 "anything is erroneous or not included. Last updated at |today|."
 msgstr ""
 

@@ -85,6 +85,6 @@ The performance evaluation is replaced with result comparisons for several sampl
 
 .. note::
 
-    If you would like to run the experiments yourself, run `this code <https://github.com/konlpy/konlpy/blob/release/docs/morph.py>`_ from your local machine.
+    If you would like to run the experiments yourself, run `this code <https://github.com/konlpy/konlpy/blob/master/docs/morph.py>`_ from your local machine.
 
 .. [#] Please note that these are comparisons among KoNLPy classes, and not the original distributions.
