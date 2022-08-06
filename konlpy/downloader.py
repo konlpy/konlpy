@@ -91,12 +91,11 @@ class Downloader(object):
 
         if id is None:
             raise ValueError("Please specify a package to download. To download all available packages, pass 'all' to the argument: ``konlpy.download('all')``.")
-        elif id == 'all':
+        if id == 'all':
             raise NotImplementedError("This function is not implemented yet. Please download each package individually until further notice.")
-        else:
-            info = self._get_info(id)
-            for msg in self._download_package(info, download_dir):
-                print(msg)
+        info = self._get_info(id)
+        for msg in self._download_package(info, download_dir):
+            print(msg)
 
     def status(self, info_or_id=None, download_dir=None):
         self.index = json.loads(urllib.urlopen(self.INDEX_URL).read().decode())
@@ -220,8 +219,7 @@ class Downloader(object):
         self.index = json.loads(urllib.urlopen(self.INDEX_URL).read().decode())
         if self.index.get(id):
             return self.index.get(id)
-        else:
-            raise ValueError("Could not find a matching item to download")
+        raise ValueError("Could not find a matching item to download")
 
 
 # Aliases
