@@ -37,10 +37,12 @@ Supported: Xenial(16.04.3 LTS), Bionic(18.04.3 LTS), Disco(19.04), Eoan(19.10)
 
 3. Install MeCab (*optional*)
 
-    .. sourcecode:: bash
+    .. code-block:: bash
+        :substitutions:
 
         $ sudo apt-get install curl git
-        $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
+        $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/|release|/scripts/mecab.sh)
+
 
 
 CentOS
@@ -63,10 +65,11 @@ Supported: CentOS 7, 8
 
 3. Install MeCab (*optional*)
 
-    .. sourcecode:: bash
+    .. code-block:: bash
+        :substitutions:
 
         $ sudo yum install curl git
-        $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
+        $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/|release|/scripts/mecab.sh)
 
 
 Mac OS
@@ -81,9 +84,10 @@ Mac OS
 
 2. Install MeCab (*optional*)
 
-    .. sourcecode:: bash
+    .. code-block:: bash
+        :substitutions:
 
-        $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
+        $ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/|release|/scripts/mecab.sh)
 
 
 Windows
