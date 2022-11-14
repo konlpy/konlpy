@@ -1,0 +1,46 @@
+sejong	sejong 설명	Twitter	komoran	mecab	kkma	hannanum
+NNG	일반 명사	Noun	NNG	NNG	NNG	N,NC
+NNP	고유 명사	Noun	NNP	NNP	NNP	N,NQ
+NNB	의존 명사	Noun	NNB	NNB,NNBC	NNB,NNM	N,NB
+NR	수사	Noun	NR	NR	NR	N,NN
+NP	대명사	Noun	NP	NP	NP	N,NP
+VV	동사	Verb	VV	VV	VV	P,PV
+VA	형용사	Adjective	VA	VA	VA	P,PA
+VX	보조 용언		VX	VX	VXV,VXA	P,PX
+VCP	긍정 지정사		VCP	VCP	VCP	P
+VCN	부정 지정사		VCN	VCN	VCN	P
+MM	관형사	Determiner	MM	MM	MDN,MDT	M,MM
+MAG	일반 부사	Adverb	MAG	MAG	MAG	M,MA
+MAJ	접속 부사	Conjunction	MAJ	MAJ	MAC	M
+IC	감탄사	Exclamation	IC	IC	IC	I,II
+JKS	주격 조사	Josa	JKS	JKS	JKS	J,JC
+JKC	보격 조사	Josa	JKC	JKC	JKC	J,JC
+JKG	관형격 조사	Josa	JKG	JKG	JKG	J,JC
+JKO	목적격 조사	Josa	JKO	JKO	JKO	J,JC
+JKB	부사격 조사	Josa	JKB	JKB	JKB	J,JC
+JKV	호격 조사	Josa	JKV	JKV	JKV	J,JC
+JKQ	인용격 조사	Josa	JKQ	JKQ	JKQ	J,JC
+JC	접속 조사	Josa	JC	JC	JC	J,JC
+JX	보조사	Josa	JX	JX	JX	J,JX
+EP	선어말어미	PreEomi	EP	EP	EPH,EPT,EPP	E,EP
+EF	종결 어미	Eomi	EF	EF	EFN,EFQ,EFO,EFA,EFI,EFR	E,EF
+EC	연결 어미	Eomi	EC	EC	ECE,ECS,ECD	E,EC
+ETN	명사형 전성 어미	Eomi	ETN	ETN	ETN	E,ET
+ETM	관형형 전성 어미	Eomi	ETM	ETM	ETM	E,ET
+XPN	체언 접두사		XPN	XPN	XPN	X,XP
+XSN	명사파생 접미사	Suffix	XSN	XSN	XSN	X,XS
+XSV	동사 파생 접미사		XSV	XSV	XSV	X,XS
+XSA	형용사 파생 접미사		XSA	XSA	XSA	X,XS
+XR	어근		XR	XR	XR	X,XS
+SF	마침표, 물음표, 느낌표	Punctuation	SF	SF	SF	S
+SE	줄임표	Punctuation	SE	SE	SE	S
+SS	따옴표,괄호표,줄표	Punctuation	SS	SSO,SSC	SS	S
+SP	쉼표,가운뎃점,콜론,빗금	Punctuation	SP	SC	SP	S
+SO	붙임표(물결,숨김,빠짐)	Punctuation	SO	SY	SO	S
+SW	기타기호 (논리수학기호,화폐기호)	Foreign	SW	SY	SW	S
+SH	한자	Foreign	SH	SH	OH	
+SL	외국어	Foreign,Alpha	SL	SL	OL	F
+SN	숫자	Number	SN	SN	ON	
+NF	명사추정범주	Unknown	NF		UN	
+NV	용언추정범주	Unknown	NV			
+NA	분석불능범주	Unknown	NA			
