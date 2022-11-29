@@ -6,7 +6,10 @@ import sys
 try:
     from MeCab import Tagger
 except ImportError:
-    pass
+    try:
+        from _mecab import Tagger
+    except ImportError:
+        pass
 
 from konlpy import utils
 from konlpy.tag._common import validate_phrase_inputs
