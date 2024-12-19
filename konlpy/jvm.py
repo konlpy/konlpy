@@ -54,6 +54,9 @@ def init_jvm(jvmpath=None, max_heap_size=1024):
 
     jvmpath = jvmpath or jpype.getDefaultJVMPath()
 
+    if isinstance(jvmpath, bytes):
+        jvmpath = str(jvmpath, 'utf-8')
+
     # NOTE: Temporary patch for Issue #76. Erase when possible.
     if sys.platform == 'darwin'\
             and jvmpath.find('1.8.0') > 0\
